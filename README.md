@@ -2,6 +2,8 @@
 
 This repository accompanies the proposal "Is Knowledge Accumulating? An AI-Built Map of What a Literature Has Established" (Organization Science special issue on AI-enabled frontiers). It contains the coded data and code behind the acquisition analysis reported in the proposal. The rest of the evidence base (about 8,000 papers across five topics) will be released as the project develops.
 
+**Demo video:** [`video/extraction_demo.mp4`](video/extraction_demo.mp4) shows one open-access paper read field by field, next to the sentence or table cell each field came from.
+
 ## Quick start
 
 Run `./reproduce.sh` to rerun every analysis and compare it with `expected/`. Then open `CLAIMS.md`, which maps each number in the proposal to the file and line that produces it. `AGENTS.md` gives the same steps for an AI agent.
