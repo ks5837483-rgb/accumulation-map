@@ -16,7 +16,8 @@ Run `./reproduce.sh` to rerun every analysis and compare it with `expected/`. Th
 | `analysis/_work_measure/` | The kind of cause in each claim through an information mechanism, coded by AI with `prompts/info_measure_type_prompt.txt` (used by `measured_info.py`). |
 | `analysis/_work_dd/` | Labels marking which cause, mechanism, and outcome names refer to due diligence. |
 | `analysis/silo/`, `analysis/market/`, `analysis/market_pivot/` | The scripts that produce every number in the proposal, and their outputs (`RESULTS_internal.txt`, `RESULTS_external.txt`, `RESULTS_measured.txt`, `RESULTS.txt`). |
-| `data/papers/` | One JSON file per paper (541 files) with four coded layers merged: mechanism, context, measures, and future directions. The effect-size and interaction-effect layers are not released. Every verbatim field from the papers is removed, and any remaining text field that shares an 8-word run with the paper's full text is replaced with `[withheld: wording matches the source]` (6.1% of text fields). |
+| `data/papers/` | One JSON file per paper (541 files) with four coded layers merged: mechanism, context, measures, and future directions. The effect-size and interaction-effect layers are not released. The future-direction layer is the least precise: in an audit of 300 papers, 13.2% of its records were interpretations of results rather than directions for future research. Every verbatim field from the papers is removed, and any remaining text field that shares an 8-word run with the paper's full text is replaced with `[withheld: wording matches the source]` (6.1% of text fields). |
+| (placeholders) | The claims file has empty columns for contextual attributes (for example `hhi`, `rd_intensity`, `uncertainty`, `interdependence`, `variance`). They are placeholders for the attribute layer that the proposal plans to fill (Section 9). |
 | `data/selection_1558.csv` | The AI selection decision for each of the 1,558 empirical acquisition papers (whether a firm is evaluated through an information mechanism, and by whom). 541 are included. |
 | `prompts/` | The prompts of record used to code the papers and run each step, with 16-character SHA-256 fingerprints in `SHA256_16.txt`. |
 | `video/extraction_demo.mp4` | A short narrated video showing one paper (Testoni 2021, Strategic Management Journal, open access under CC BY 4.0) read field by field, next to the sentence or table cell each field came from. |
@@ -42,7 +43,7 @@ The scripts are deterministic and use no AI. CSV numbers are written with 10 sig
 - `internal_by_silo.py` answers the first question (is a mechanism solid where it was tested?) for each field.
 - `external_lr.py` answers the second question (does it hold in other settings?) across five contexts.
 - `measured_info.py` counts how often the information mechanism itself is measured (6 of 891 claims, 0.7%).
-- `analysis_eval.py` compares firms and investors as evaluators, including the 88% vs. 78% result.
+- `analysis_eval.py` compares firms and investors as evaluators, including the 88% vs. 77% result for the 8 information mechanisms.
 
 ## What is not here, and why
 

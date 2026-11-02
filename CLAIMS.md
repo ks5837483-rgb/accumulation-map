@@ -27,6 +27,7 @@ Run `./reproduce.sh` first. It regenerates every file below and compares it with
 | 7 | Gap smaller under causal designs, few papers | `RESULTS.txt` lines 52, 53 |
 | Appendix E | Table A4 (main rows: 8 information mechanisms; other rows: all 14 and looser or stricter rules) | `RESULTS.txt` lines 11–29 and 50–57 |
 | Appendix E | Firms better on hidden information, investors on public signals | `RESULTS.txt` lines 35, 47, 48 give the gaps; calling these mechanisms hidden or public is our reading of the mechanism names |
+| Appendix D | Due diligence measured in 0 of 16 claims, information asymmetry in 1 of 407 | `analysis/findings_eval_tax.csv`, columns `mech_g` and `mechanism_measured` |
 | Appendix E | 60% firm or deal proxies, 5% direct information attributes | `RESULTS_measured.txt` lines 5–11 |
 
 ## From project records (not reproducible from this repository)
@@ -41,3 +42,9 @@ These numbers describe the full corpus or the audits. They need the papers, whic
 | 8 | 90 of 91 checkable papers had no effect-size error | Effect-size audits of 100 papers (effect sizes are not released) |
 | 7, 9 | 2,031 newer papers in the same journals | Bibliographic records from Crossref |
 | Appendix E | Private targets bring higher returns in 17 of 17 papers | Incidental-control analysis |
+| Appendix A | 6,239 papers found by the keyword search | Corpus records |
+| Appendix C | 0 of 1,764 chains not in the paper; 493 of 496 numbered hypotheses; setting errors 0.5%; outcome-label errors 2.3%; future-direction misfiling 13.2% | Audit round R005 |
+| Appendix C | 139 of 143 effect-size rows correct in the third audit round | Effect-size audit records |
+| 6, Appendix C | 40-paper pilot of the selection rule | Selection records |
+| Appendix F | 6.1% of JSON text fields and 3,594 claims-file cells withheld by the 8-word rule | Release build log (the release script needs the papers' full text) |
+| Appendix E | 3,213 claims with an effect size (not released) | Effect-size store |
