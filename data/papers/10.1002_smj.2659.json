@@ -1,0 +1,730 @@
+{
+ "paper_id": "10.1002_smj.2659",
+ "title": "Foreshadowing as Impression Management: Illuminating the Path for Security Analysts",
+ "journal": "SMJ",
+ "year": 2017,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "impression management theory",
+  "voluntary disclosure theory",
+  "information asymmetry",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreshadowing",
+      "relation": "decreases",
+      "to": "analyst_surprise",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "analyst_surprise",
+      "relation": "increases",
+      "to": "analyst_downgrades",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "foreshadowing",
+      "relation": "decreases",
+      "to": "cognitive_burden",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cognitive_burden",
+      "relation": "increases",
+      "to": "analyst_downgrades",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "analyst_surprise",
+    "cognitive_burden"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the effect is driven simply by issuing an SEO, irrespective of any mention of acquisitions (i.e., the SEO itself, not foreshadowing, drives fewer downgrades)",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreshadowing",
+      "relation": "decreases",
+      "to": "analyst_surprise",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "analyst_surprise",
+      "relation": "increases",
+      "to": "analyst_downgrades",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "foreshadowing",
+      "relation": "decreases",
+      "to": "cognitive_burden",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cognitive_burden",
+      "relation": "increases",
+      "to": "analyst_downgrades",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "analyst_surprise",
+    "cognitive_burden"
+   ],
+   "moderators": [
+    {
+     "construct": "analyst_recommendation_dispersion",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "cognitive_burden",
+     "moderated_from": "foreshadowing",
+     "moderated_to": "analyst_downgrades",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the effect is driven simply by issuing an SEO, irrespective of any mention of acquisitions (i.e., the SEO itself, not foreshadowing, drives fewer downgrades)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "foreshadowing",
+      "relation": "increases",
+      "to": "mutual_influence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "mutual_influence",
+      "relation": "increases",
+      "to": "subsequent_acquisition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "mutual_influence"
+   ],
+   "moderators": [
+    {
+     "construct": "analyst_downgrades_after_seo",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "mutual_influence",
+     "moderated_from": "foreshadowing",
+     "moderated_to": "subsequent_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "foreshadowing is endogenous: omitted factors jointly influence both whether a firm foreshadows and whether it later announces an acquisition (selection/omitted-variable bias), rather than a causal effect of foreshadowing"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded firms), excluding firms primarily in the commodities or financial sectors",
+  "country_region": "United States",
+  "time_period": "2000-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "490 observations across 332 firms (matched acquisition sample for H1/H2); 2,336 SEOs (likelihood-of-acquisition sample for H3)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson-Reuters SDC Platinum New Issues database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEO prospectus \"Use of Funds\" section",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Lexis Nexis (PR Newswire and Business Wire press releases)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Investor magazine \"All Star\" analyst awards",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, column \"Hypothesis 1\" (zero-inflated negative binomial)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "matched acquisitions sample: 490 observations across 332 firms (245 issued an SEO, 245 did not; 104 SEO-issuers foreshadowed), U.S. publicly traded firms making 100% acquisitions 2000-2012, nearest-neighbor propensity-score matched",
+    "dv": {
+     "name": "Analyst downgrades after acquisition announcement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition foreshadowing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEO prospectus \"Use of Funds\" section"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relatedness",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Cash-financed",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "M&A experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Public target",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Subsidiary",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Run-up returns CAR (-30,-5)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAR [-1,+1]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Shelf offering",
+      "source": "Thomson-Reuters SDC Platinum New Issues database"
+     },
+     {
+      "name": "SEO but no foreshadow",
+      "source": "SEO prospectus \"Use of Funds\" section"
+     },
+     {
+      "name": "Analysts downgrading after the SEO",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt-to-equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Mean bid-ask spread",
+      "source": "CRSP"
+     },
+     {
+      "name": "CEO tenure",
+      "source": ""
+     },
+     {
+      "name": "CEO contingent pay",
+      "source": ""
+     },
+     {
+      "name": "Analysts following",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Buy percentage",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Buy increase",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Analyst reputation",
+      "source": "Institutional Investor magazine \"All Star\" analyst awards"
+     },
+     {
+      "name": "Press releases (-1,+1)",
+      "source": "Lexis Nexis (PR Newswire and Business Wire press releases)"
+     },
+     {
+      "name": "Total articles",
+      "source": "Lexis Nexis (PR Newswire and Business Wire press releases)"
+     },
+     {
+      "name": "PR (press release) foreshadowing",
+      "source": "Lexis Nexis (PR Newswire and Business Wire press releases)"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, column \"Hypothesis 2\" (zero-inflated negative binomial, moderation)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "matched acquisitions sample: 490 observations across 332 firms",
+    "dv": {
+     "name": "Analyst downgrades after acquisition announcement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition foreshadowing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEO prospectus \"Use of Funds\" section"
+     },
+     {
+      "name": "Analyst recommendation dispersion (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relatedness",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Cash-financed",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "M&A experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Public target",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Subsidiary",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Run-up returns CAR (-30,-5)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAR [-1,+1]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Shelf offering",
+      "source": "Thomson-Reuters SDC Platinum New Issues database"
+     },
+     {
+      "name": "SEO but no foreshadow",
+      "source": "SEO prospectus \"Use of Funds\" section"
+     },
+     {
+      "name": "Analysts downgrading after the SEO",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt-to-equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Mean bid-ask spread",
+      "source": "CRSP"
+     },
+     {
+      "name": "CEO tenure",
+      "source": ""
+     },
+     {
+      "name": "CEO contingent pay",
+      "source": ""
+     },
+     {
+      "name": "Analysts following",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Buy percentage",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Buy increase",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Analyst reputation",
+      "source": "Institutional Investor magazine \"All Star\" analyst awards"
+     },
+     {
+      "name": "Press releases (-1,+1)",
+      "source": "Lexis Nexis (PR Newswire and Business Wire press releases)"
+     },
+     {
+      "name": "Total articles",
+      "source": "Lexis Nexis (PR Newswire and Business Wire press releases)"
+     },
+     {
+      "name": "PR (press release) foreshadowing",
+      "source": "Lexis Nexis (PR Newswire and Business Wire press releases)"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, column \"Hypothesis 3\" (two-stage treatment effects probit)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "likelihood-of-acquisition SEO sample: 2,336 SEOs (first-stage n=2,365); all SEO-issuing firms 2000-2012",
+    "dv": {
+     "name": "Acquisition announcement following an SEO",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition foreshadowing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEO prospectus \"Use of Funds\" section"
+     },
+     {
+      "name": "Analyst downgrades after the SEO (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Run-up CAR (-30,-5)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt-to-equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Total assets",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Mean bid-ask spread",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Analyst mean recommendation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Analyst dispersion",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Analyst \"buy\" percentage",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Hazard Lambda (selection correction term)",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Supplementary (Appendix S2): analyst-level multilevel probit robustness for H1 and H2",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "every analyst covering every firm in the sample (analyst nested within firms); multilevel probit",
+    "dv": {
+     "name": "Individual analyst downgrade",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition foreshadowing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEO prospectus \"Use of Funds\" section"
+     },
+     {
+      "name": "Analyst recommendation dispersion (moderator)",
+      "measure": "standard deviation of the recommendations",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Whether that analyst downgraded following the SEO",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "proprietary costs",
+    "information disclosure",
+    "foreshadowing"
+   ],
+   "mechanism_named": "proprietary costs",
+   "proposed_edge": {
+    "from": "proprietary costs",
+    "relation": "affects",
+    "to": "information disclosure"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "costs of revealing information",
+    "impression management techniques"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "costs of revealing information",
+    "relation": "affects",
+    "to": "impression management techniques"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "foreshadowing",
+    "positive analyst reactions",
+    "commitment to a future acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "foreshadowing",
+    "relation": "affects",
+    "to": "commitment to a future acquisition"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "foreshadowing",
+    "SEO prospectuses"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "foreshadowing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "foreshadowing",
+    "acquisition announcements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "foreshadowing",
+    "SEOs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "foreshadowing",
+    "acquisitions",
+    "security analysts"
+   ],
+   "mechanism_named": "impression management",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "foreshadowing",
+    "strategic noise",
+    "impression offsetting"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_mediator",
+   "section": "discussion",
+   "constructs": [
+    "foreshadowing",
+    "expectancy violation",
+    "expectations of investors"
+   ],
+   "mechanism_named": "expectancy violation",
+   "proposed_edge": {
+    "from": "foreshadowing",
+    "relation": "decreases",
+    "to": "expectancy violation"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "foreshadowing",
+    "security analysts",
+    "investors",
+    "consumers",
+    "stakeholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

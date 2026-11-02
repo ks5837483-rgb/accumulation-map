@@ -1,0 +1,598 @@
+{
+ "paper_id": "10.1016_j.jacceco.2017.11.011",
+ "title": "Earnings management, audit adjustments, and the financing of corporate acquisitions: Evidence from China",
+ "journal": "JAE",
+ "year": 2018,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "earnings management theory",
+  "audit monitoring theory",
+  "efficient markets theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financed_acquisition",
+      "relation": "increases",
+      "to": "earnings_overstatement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_overstatement",
+      "relation": "increases",
+      "to": "downward_audit_adjustments",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_overstatement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "accidental reporting errors (rather than intentional earnings overstatement)"
+   ]
+  },
+  {
+   "hypothesis": "P_audit_opinions",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financed_acquisition",
+      "relation": "increases",
+      "to": "earnings_overstatement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_overstatement",
+      "relation": "increases",
+      "to": "unclean_audit_opinion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_overstatement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "greater auditor conservatism"
+   ]
+  },
+  {
+   "hypothesis": "P_regulatory_sanctions",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "downward_audit_adjustments",
+      "relation": "increases",
+      "to": "financial_misreporting",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_misreporting",
+      "relation": "increases",
+      "to": "regulatory_sanctions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_misreporting"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "auditors being overly conservative when requiring downward adjustments"
+   ]
+  },
+  {
+   "hypothesis": "P_accruals",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financed_acquisition",
+      "relation": "increases",
+      "to": "earnings_overstatement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_overstatement",
+      "relation": "increases",
+      "to": "income_increasing_accruals",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_overstatement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "stronger growth opportunities of stock-financed acquirers (not earnings management)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded Chinese companies; industry fixed effects controlled)",
+  "country_region": "China",
+  "time_period": "2007-2013 (M&A deals announced; MOF audit-adjustment data 2006-2014)",
+  "sample_description": "M&A deals from the CSMAR database with pre-audit/audited earnings data from the Ministry of Finance (MOF) database; stock-financed vs. cash-financed acquirers (publicly traded Chinese firms), one obs. before and one after each deal",
+  "sample_size": "4,522 company-year observations (2,261 deals: 2,035 cash-financed, 226 stock-financed)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CSMAR database (China Stock Market and Accounting Research)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "MOF (Ministry of Finance) audit adjustment database filed to the Inspection Bureau of the MOF (pre-audit and audited earnings)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "CSRC regulatory sanctions (accounting and disclosure irregularities), read and coded by the authors",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (univariate difference-in-differences test for H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "absolute downward audit adjustment |ADJ_DN|",
+     "measure": "[withheld: wording matches the source]",
+     "source": "MOF audit adjustment database"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x BEFORE (treatment interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Col. (1) (tobit difference-in-differences, downward adjustments, eq. 1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "absolute downward audit adjustment |ADJ_DN|",
+     "measure": "[withheld: wording matches the source]",
+     "source": "MOF audit adjustment database"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x BEFORE (treatment interaction)",
+      "measure": "interaction term STOCKi x BEFOREt (predicted coefficient a3 > 0)",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (company size)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "MB (market-to-book ratio)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "LEV (leverage)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "SOE (state-owned enterprise indicator)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "IN_DIR (proportion of independent directors)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "BD_SIZE (board size)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "BHRET (annual buy-and-hold stock returns)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "CASH (cash to total assets)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "AGE (company age)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "BIG10 (Big 10 audit firm indicator)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "AUDCH (audit firm change indicator)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Col. (2) (tobit difference-in-differences, upward adjustments, eq. 2)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "absolute upward audit adjustment |ADJ_UP|",
+     "measure": "[withheld: wording matches the source]",
+     "source": "MOF audit adjustment database"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x BEFORE (treatment interaction)",
+      "measure": "interaction term STOCKi x BEFOREt (no signed prediction)",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (company size)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "MB (market-to-book ratio)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "LEV (leverage)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "SOE (state-owned enterprise indicator)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "IN_DIR (proportion of independent directors)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "BD_SIZE (board size)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "BHRET (annual buy-and-hold stock returns)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "CASH (cash to total assets)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "AGE (company age)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "BIG10 (Big 10 audit firm indicator)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "AUDCH (audit firm change indicator)",
+      "source": "CSMAR database"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel D (logistic regression of subsequent regulatory sanctions on downward adjustments)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "IRREG (subsequent regulatory sanction)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CSRC regulatory sanctions"
+    },
+    "key_ivs": [
+     {
+      "name": "|ADJ_DN| (absolute downward audit adjustment)",
+      "measure": "absolute magnitude of downward audit adjustment |ADJ_DNit|",
+      "source": "MOF audit adjustment database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control variables as Table 4 (SIZE, MB, LEV, SOE, IN_DIR, BD_SIZE, BHRET, CASH, AGE, BIG10, AUDCH, industry and year fixed effects)",
+      "source": "CSMAR database"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel C Col. (1)-(3) (difference-in-differences logit/multinomial logit for audit opinions, eqs. 3 and 4)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "UNCLEAN / OPINION (audit opinion)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CSMAR database"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x BEFORE (treatment interaction)",
+      "measure": "interaction term STOCKi x BEFOREt",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as Tables 4 and 5 plus ROA (return on assets)",
+      "source": "CSMAR database"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A/B (difference-in-differences tobit for accruals: performance-matched and modified-Jones discretionary accruals)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "pre-audit and audited accruals (PMA, DA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CSMAR database"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x BEFORE (treatment interaction)",
+      "measure": "interaction term STOCKi x BEFOREt",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control variables as Table 4",
+      "source": "CSMAR database"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (propensity-score-matched difference-in-differences re-test of H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "propensity-score-matched sample: 904 observations (226 stock-financed acquirers matched to 226 cash-financed acquirers, pre- and post-periods)",
+    "dv": {
+     "name": "absolute downward audit adjustment |ADJ_DN|",
+     "measure": "[withheld: wording matches the source]",
+     "source": "MOF audit adjustment database"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x BEFORE (treatment interaction)",
+      "measure": "interaction term STOCKi x BEFOREt on the propensity-score-matched sample",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control variables as Table 4",
+      "source": "CSMAR database"
+     }
+    ]
+   },
+   {
+    "label": "Appendix B (first-stage logit predicting stock vs. cash financing for propensity-score matching)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "2,248 acquisitions (13 cash-financed acquisitions dropped due to industry perfectly predicting financing method)",
+    "dv": {
+     "name": "STOCK (stock vs. cash financing)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CSMAR database"
+    },
+    "key_ivs": [
+     {
+      "name": "pre-acquisition firm characteristics (year t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Fig. 2 (parallel trends test for the difference-in-differences design)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "M&A deals announced 2009-2013 (year -2 corresponds to 2006, when audit adjustment data first become available)",
+    "dv": {
+     "name": "mean downward audit adjustments across event years -2, -1, 0, +1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "MOF audit adjustment database"
+    },
+    "key_ivs": [
+     {
+      "name": "treatment group (stock-financed vs. cash-financed) x event year",
+      "measure": "comparison of mean downward adjustments between treatment and control groups over event years",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 5.6 (untabulated difference-in-differences audit fee model)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "audit fees",
+     "measure": "audit fee model estimated with a difference-in-differences research design similar to the main analyses (untabulated)",
+     "source": "CSMAR database"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x BEFORE (treatment interaction)",
+      "measure": "interaction term STOCKi x BEFOREt",
+      "source": "CSMAR database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "unclean audit opinions",
+    "accounting problems"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "accruals variables",
+    "earnings overstatements"
+   ],
+   "mechanism_named": "noisy proxies",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "government",
+    "principal shareholder"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "audit fees",
+    "stock-financed acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "China",
+    "jurisdictions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "legal liability",
+    "earnings overstatements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "legal liability",
+    "relation": "decreases",
+    "to": "earnings overstatements"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "audit adjustments",
+    "earnings overstatements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "audit adjustments",
+    "relation": "decreases",
+    "to": "earnings overstatements"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

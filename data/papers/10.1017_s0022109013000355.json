@@ -1,0 +1,750 @@
+{
+ "paper_id": "10.1017_s0022109013000355",
+ "title": "Corporate Pension Plans as Takeover Deterrents",
+ "journal": "JFQA",
+ "year": 2013,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "asymmetric information theory",
+  "signaling theory",
+  "adverse selection"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "defined_benefit_pension_plan",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "defined_benefit_pension_plan",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "debt overhang (Myers 1977): DB firms are more highly levered and existing debt discourages acquisition, not information asymmetry"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "defined_benefit_pension_plan",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "takeover_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "defined_benefit_pension_plan",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "debt overhang (Myers 1977): the higher leverage of DB firms, not information asymmetry, deters acquirers",
+    "pension trustees demand cash contributions from acquirers, deterring debt-financed (LBO/private-equity) bidders rather than deterrence via information asymmetry"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "defined_benefit_pension_plan",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "cash_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "asymmetric information arising from sources other than the DB pension plan (e.g. stock return volatility, ownership concentration)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proportion_of_cash",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "pension_deficit",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "proportion_of_cash",
+     "moderated_to": "announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proportion_of_cash",
+      "relation": "increases",
+      "to": "signaling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signaling",
+      "relation": "increases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signaling"
+   ],
+   "moderators": [
+    {
+     "construct": "pension_deficit",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "information_asymmetry",
+     "moderated_from": "proportion_of_cash",
+     "moderated_to": "announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "defined_benefit_pension_plan",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "equity_issuance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "overvaluation (Franzoni and Marin 2006): DB firms are overvalued and acquirers know it, so they do not bid",
+    "debt overhang (Myers 1977): DB firms' higher leverage, not information asymmetry, deters equity issuance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United Kingdom",
+  "time_period": "2002-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,463 firm-year observations (319 firms)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Worldscope",
+    "category": "worldscope",
+    "kind": "archival_database"
+   },
+   {
+    "name": "annual reports (footnotes) - hand-collected pension data",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Securities Data Company (SDC) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 (Univariate Tests: firms with vs without DB pension plans)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1,463 firm-years (Panel A, complete sample); 1,098 excluding financial companies (Panel B)",
+    "dv": {
+     "name": "M&A activity variables (takeover chance, completed takeover, acquisition cash) and firm variables",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum / Worldscope"
+    },
+    "key_ivs": [
+     {
+      "name": "DB pension plan sponsorship (grouping variable)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 (Likelihood of a Takeover, probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Full sample 1,463 (cols 1-2), 1,256 (cols 3-4), 125 firm-years with takeover chance=1 (cols 5-6); Panel B excludes financial firms (1,098 / 942 / 107)",
+    "dv": {
+     "name": "Takeover chance / Completed takeover",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "DB DUMMY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "PENSION DEFICIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (log of total assets)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "total leverage (short+long-term debt plus pension deficit, over total assets)",
+      "source": "Worldscope / annual reports"
+     },
+     {
+      "name": "cash holdings (cash over total assets)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA (EBIT over beginning-of-period book assets)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (Means of Payment in Acquisitions, Tobit)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition cash",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "DB DUMMY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "PENSION DEFICIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Worldscope"
+     },
+     {
+      "name": "total leverage",
+      "source": "Worldscope / annual reports"
+     },
+     {
+      "name": "cash holdings",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA",
+      "source": "Worldscope"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Announcement Effects for Acquirers, OLS on CARs)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "467 acquirer firm-years (cols 1-2); 366 excluding bottom-quartile/small acquisitions (cols 3-6); 329 also excluding financial firms (cols 5-6)",
+    "dv": {
+     "name": "CAR (acquirer)",
+     "measure": "cumulative abnormal returns for the acquiring firm; CAR[-1,+1] and CAR[-2,+2] around the announcement date, abnormal return = daily return on firm's share minus daily return on the FTSE 350 index",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "PENSION DEFICIT x CASH (interaction, the key regressor)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes) / SDC Platinum"
+     },
+     {
+      "name": "PENSION DEFICIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "CASH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(deal value)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "firm size",
+      "source": "Worldscope"
+     },
+     {
+      "name": "total leverage",
+      "source": "Worldscope / annual reports"
+     },
+     {
+      "name": "cash holdings",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA",
+      "source": "Worldscope"
+     },
+     {
+      "name": "DB DUMMY",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Announcement Effects for Targets, OLS on CARs)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "51 target firm-years (cols 1-2); 44 excluding financial firms (cols 3-4)",
+    "dv": {
+     "name": "CAR (target)",
+     "measure": "cumulative abnormal return for the target firms; CAR[-1,+1] and CAR[-2,+2] around the announcement date",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "CASH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "PENSION DEFICIT",
+      "measure": "the size of the deficit of the DB pension plan of the target, scaled by market capitalization",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "PENSION DEFICIT x CASH (interaction)",
+      "measure": "interaction of pension deficit and proportion of cash used",
+      "source": "annual reports (footnotes) / SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Worldscope"
+     },
+     {
+      "name": "DB DUMMY",
+      "source": "annual reports (footnotes)"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (SEO Decision, probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Full sample 1,463 (cols 1-2, 5-6); 1,098 excluding financial firms (cols 3-4)",
+    "dv": {
+     "name": "SEO dummy / SEO common shares dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "DB DUMMY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "PENSION DEFICIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Worldscope"
+     },
+     {
+      "name": "total leverage",
+      "source": "Worldscope / annual reports"
+     },
+     {
+      "name": "cash holdings",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA",
+      "source": "Worldscope"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (Proceeds from SEOs, Tobit)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Full sample 1,463 (cols 1-2, 5-6); 1,098 excluding financial firms (cols 3-4)",
+    "dv": {
+     "name": "SEO total proceeds / SEO common shares proceeds",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "DB DUMMY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "PENSION DEFICIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Worldscope"
+     },
+     {
+      "name": "total leverage",
+      "source": "Worldscope / annual reports"
+     },
+     {
+      "name": "cash holdings",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA",
+      "source": "Worldscope"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10 (Robustness with additional control variables)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "takeover chance / completed takeover / acquisition cash / CAR[-1,+1] / SEO dummy",
+     "measure": "five separate DVs across columns 1-5 (probit in cols 1,2,5; Tobit in col 3; OLS in col 4)",
+     "source": "SDC Platinum / Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "DB DUMMY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "PENSION DEFICIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports (footnotes)"
+     },
+     {
+      "name": "PENSION DEFICIT x CASH (CAR column only)",
+      "measure": "interaction of pension deficit and proportion of cash used",
+      "source": "annual reports (footnotes) / SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Worldscope"
+     },
+     {
+      "name": "total leverage",
+      "source": "Worldscope / annual reports"
+     },
+     {
+      "name": "cash holdings",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA",
+      "source": "Worldscope"
+     },
+     {
+      "name": "market-to-book ratio",
+      "source": "Worldscope"
+     },
+     {
+      "name": "asset tangibility (PPE over total assets)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "price volatility (return volatility over previous year)",
+      "source": "Worldscope / Datastream"
+     },
+     {
+      "name": "closely held shares (proportion held by insiders and 5%+ owners)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section IV.C (Alternative explanations: private-equity/LBO takeover completion)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "28 firms targeted by private equity investors, 12 of these attempted takeovers successful",
+    "dv": {
+     "name": "successful takeover among private-equity/LBO targets",
+     "measure": "probability of a successful takeover conditional on being attempted, compared for LBO vs other acquirers of firms with and without DB pension plans",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "DB pension plan sponsorship of target",
+      "measure": "whether the target firm sponsors a DB pension plan",
+      "source": "annual reports (footnotes)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "pension deficit",
+    "cars"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "proportion of cash",
+    "target’s share price response",
+    "competition for the bidder"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "proportion of cash",
+    "relation": "affects",
+    "to": "target’s share price response"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

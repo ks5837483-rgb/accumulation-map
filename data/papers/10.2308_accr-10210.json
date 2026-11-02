@@ -1,0 +1,480 @@
+{
+ "paper_id": "10.2308/accr-10210",
+ "title": "Does Investment-Related Pressure Lead to Misreporting? An Analysis of Reporting Following M&amp;A Transactions",
+ "journal": "AR",
+ "year": 2012,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "fraud triangle theory",
+  "career concerns theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_a_announcement_return",
+      "relation": "decreases",
+      "to": "investment_related_pressure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investment_related_pressure",
+      "relation": "increases",
+      "to": "financial_misreporting",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investment_related_pressure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "unintentional reporting errors",
+    "pre-merger reporting incentives"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_a_announcement_return",
+      "relation": "decreases",
+      "to": "revelation_of_poor_managerial_decision",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "revelation_of_poor_managerial_decision",
+      "relation": "increases",
+      "to": "ceo_turnover",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "revelation_of_poor_managerial_decision"
+   ],
+   "moderators": [
+    {
+     "construct": "financial_misreporting",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "revelation_of_poor_managerial_decision",
+     "moderated_from": "m_a_announcement_return",
+     "moderated_to": "ceo_turnover",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    },
+    {
+     "construct": "forecast_optimism",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "revelation_of_poor_managerial_decision",
+     "moderated_from": "m_a_announcement_return",
+     "moderated_to": "ceo_turnover",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_a_announcement_return",
+      "relation": "decreases",
+      "to": "investment_related_pressure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investment_related_pressure",
+      "relation": "increases",
+      "to": "forecast_optimism",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investment_related_pressure"
+   ],
+   "moderators": [
+    {
+     "construct": "financial_misreporting",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "disclosure_channel_substitution",
+     "moderated_from": "m_a_announcement_return",
+     "moderated_to": "forecast_optimism",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sample selection bias"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public acquirers; industry fixed effects used, no focal sector)",
+  "country_region": "United States",
+  "time_period": "1996-2007",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,293 M&A firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP Daily Stock Price and Returns file",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "First Call’s Actuals database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (Panel B): Univariate test of difference in restatement frequency, Low minus High CAR_MA firms",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "RESTATE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "CAR_MA (market reaction group: low/medium/high)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4: Multivariate Analysis of Post-M&A Restatements (Equation 1, logistic regression)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "RESTATE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "CAR_MA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV (leverage, ratio of total liabilities to total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "TARG_PUB (target is a public company)",
+      "source": "SDC"
+     },
+     {
+      "name": "TARG_DOM (target is a domestic company)",
+      "source": "SDC"
+     },
+     {
+      "name": "STOCK_MA (at least 50 percent of consideration is stock)",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERS_MA (diversifying acquisition, different two-digit SIC codes)",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "ICD (significant deficiency or material weakness in internal controls)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "TIME_EFFECTS (year fixed effects)",
+      "source": ""
+     },
+     {
+      "name": "IND_EFFECTS (industry fixed effects)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "smaller sample of firms with CEO turnover data from ExecuComp (n=595)",
+    "dv": {
+     "name": "CEO turnover",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ExecuComp"
+    },
+    "key_ivs": [
+     {
+      "name": "CAR_MA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "RESTATE - CAR_MA (interaction of misreporting indicator and M&A announcement return)",
+      "measure": "interaction term between the misreporting indicator (RESTATE) and the M&A announcement return (CAR_MA)",
+      "source": "Audit Analytics / CRSP"
+     },
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RET (Pre-M&A)",
+      "source": "CRSP"
+     },
+     {
+      "name": "RET (Post-M&A)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA (Post-M&A)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZEMV (Post-M&A)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "DEAL_SIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TARG_PUB",
+      "source": "SDC"
+     },
+     {
+      "name": "TARG_DOM",
+      "source": "SDC"
+     },
+     {
+      "name": "STOCK_MA",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERS_MA",
+      "source": "SDC"
+     },
+     {
+      "name": "CEO_AGE",
+      "source": "ExecuComp"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample of firms with management guidance data (First Call CIG)",
+    "dv": {
+     "name": "F_ERROR (management forecast optimism)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call CIG and Actuals databases"
+    },
+    "key_ivs": [
+     {
+      "name": "CAR_MA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAR_MA x RESTATE (association allowed to vary by whether firm issued misstated financials)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP / Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LONG_HZ (forecast horizon)",
+      "source": "First Call CIG"
+     },
+     {
+      "name": "PRECISION (whether forecast is a range or point estimate)",
+      "source": "First Call CIG"
+     },
+     {
+      "name": "LOSS (whether forecasted earnings are a loss)",
+      "source": "First Call CIG"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "sample of firms with management guidance data and CEO turnover data",
+    "dv": {
+     "name": "CEO turnover",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ExecuComp"
+    },
+    "key_ivs": [
+     {
+      "name": "CAR_MA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAR_MA x F_ERROR_IND (coefficient on CAR_MA allowed to vary by optimistic-forecast status)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP / First Call CIG"
+     },
+     {
+      "name": "F_ERROR_IND",
+      "measure": "[withheld: wording matches the source]",
+      "source": "First Call CIG and Actuals databases"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "opportunistic reporting",
+    "manager’s termination"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "opportunistic reporting",
+    "relation": "decreases",
+    "to": "manager’s termination"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "optimistic forecasts",
+    "misstated financials",
+    "investment-related pressure"
+   ],
+   "mechanism_named": "substitutes or complements",
+   "proposed_edge": {
+    "from": "optimistic forecasts and misstated financials",
+    "relation": "unspecified",
+    "to": "investment-related pressure"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "optimistic forecasts",
+    "misstated financials"
+   ],
+   "mechanism_named": "substitutes or complements",
+   "proposed_edge": {
+    "from": "optimistic forecasts",
+    "relation": "unspecified",
+    "to": "misstated financials"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

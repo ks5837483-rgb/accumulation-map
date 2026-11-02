@@ -1,0 +1,794 @@
+{
+ "paper_id": "10.1177_0001839214531719",
+ "title": "Picking a (Poor) Partner",
+ "journal": "ASQ",
+ "year": 2014,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "relational perspective",
+  "embeddedness theory",
+  "homophily",
+  "information economics",
+  "social network theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_clients",
+      "relation": "increases",
+      "to": "biased_beliefs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "biased_beliefs",
+      "relation": "increases",
+      "to": "target_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "common_clients",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "target_acquisition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "common_clients",
+      "relation": "increases",
+      "to": "trust",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "trust",
+      "relation": "increases",
+      "to": "target_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "biased_beliefs",
+    "adverse_selection",
+    "trust"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_clients",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "target_acquisition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "geographic_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "common_clients",
+     "moderated_to": "target_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "industry_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "common_clients",
+     "moderated_to": "target_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_clients",
+      "relation": "increases",
+      "to": "lax_due_diligence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "lax_due_diligence",
+      "relation": "decreases",
+      "to": "post_merger_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "common_clients",
+      "relation": "increases",
+      "to": "partner_homogeneity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "partner_homogeneity",
+      "relation": "decreases",
+      "to": "post_merger_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "lax_due_diligence",
+    "partner_homogeneity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquired targets were replacing lost clients with more prestigious or profitable ones, so the client decline is intentional churn rather than performance loss",
+    "lost clients migrated from the acquired target to the acquirer, so the apparent client loss is not a real performance decline",
+    "mergers aimed at controlling costs / efficiency gains rather than expanding revenue, which would explain the performance pattern"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "global advertising industry",
+  "country_region": "worldwide (global)",
+  "time_period": "1995-2003",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "37 acquisitions (of 67 identified); 324 observations (37 cases + 287 controls) in the partner-selection analysis"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Corporate Affiliations database, published by Lexis Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model 1 (conditional logit / McFadden choice model, partner selection baseline)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "324 observations: 37 cases and 287 controls (CEM-matched potential targets)",
+    "dv": {
+     "name": "acquisition (target choice)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "geographic distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks (agency headquarters)"
+     },
+     {
+      "name": "shared industries",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     }
+    ],
+    "controls": [
+     {
+      "name": "billings per employee (target's annual billings per employee ratio)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year founded (of target firm)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "industry concentration (Herfindahl index of the industry concentration of the target's client relationships)",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "count of clients (count of accounts/relationships)",
+      "source": "The Redbooks"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2 (conditional logit, partner selection with common clients)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "324 observations: 37 cases and 287 controls",
+    "dv": {
+     "name": "acquisition (target choice)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "common clients (third-party ties)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "geographic distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks (agency headquarters)"
+     },
+     {
+      "name": "shared industries",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     }
+    ],
+    "controls": [
+     {
+      "name": "billings per employee (target's annual billings per employee ratio)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year founded (of target firm)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "industry concentration (Herfindahl index)",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "client concentration (Herfindahl index)",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "count of clients",
+      "source": "The Redbooks"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (conditional logit, common-clients interactions with proximity)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "324 observations: 37 cases and 287 controls",
+    "dv": {
+     "name": "acquisition (target choice)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "common clients (third-party ties)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "common clients x geographic distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "common clients x shared industries",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     }
+    ],
+    "controls": [
+     {
+      "name": "geographic distance",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "shared industries",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "billings per employee",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year founded",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "industry concentration (Herfindahl index)",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "client concentration (Herfindahl index)",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "count of clients",
+      "source": "The Redbooks"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 4 (fixed effects Poisson, account terminations, diff-in-diff)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "1,169 observations; target firms and matched controls (client-retention sample: 107 cases, 1,062 controls)",
+    "dv": {
+     "name": "client account terminations",
+     "measure": "the cumulative count of client accounts terminated (following the merger)",
+     "source": "The Redbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "merged (treatment indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "post-merger (period indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / The Redbooks"
+     },
+     {
+      "name": "merged x post-merger (diff-in-diff)",
+      "measure": "the interaction of the merged and post-merger indicators",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "exposure term (number of client accounts/relationships)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "case-control-group fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 5 (fixed effects Poisson, account terminations, triple differences)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "1,169 observations; acquired targets and matched controls",
+    "dv": {
+     "name": "client account terminations",
+     "measure": "the cumulative count of client accounts terminated (following the merger)",
+     "source": "The Redbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "common clients x merged x post-merger (triple differences; primary variable of interest)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "common clients",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "merged",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "post-merger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / The Redbooks"
+     }
+    ],
+    "controls": [
+     {
+      "name": "exposure term (number of client accounts/relationships)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "case-control-group fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 6 (fixed effects Poisson, relationship terminations, diff-in-diff)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "1,169 observations; target firms and matched controls",
+    "dv": {
+     "name": "client relationship terminations",
+     "measure": "the cumulative count of client relationships terminated (following the merger)",
+     "source": "The Redbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "merged (treatment indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "post-merger (period indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / The Redbooks"
+     },
+     {
+      "name": "merged x post-merger (diff-in-diff)",
+      "measure": "the interaction of the merged and post-merger indicators",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "exposure term (number of client relationships)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "case-control-group fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 7 (fixed effects Poisson, relationship terminations, triple differences)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "1,169 observations; acquired targets and matched controls",
+    "dv": {
+     "name": "client relationship terminations",
+     "measure": "the cumulative count of client relationships terminated (following the merger)",
+     "source": "The Redbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "common clients x merged x post-merger (triple differences; primary variable of interest)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "common clients",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "merged",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "post-merger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / The Redbooks"
+     }
+    ],
+    "controls": [
+     {
+      "name": "exposure term (number of client relationships)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "case-control-group fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 8 (fixed effects Poisson, accounts added; replacement robustness/placebo)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "849 observations",
+    "dv": {
+     "name": "client accounts added",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Redbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "common clients x merged x post-merger (triple differences)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "common clients",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "merged",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "post-merger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / The Redbooks"
+     }
+    ],
+    "controls": [
+     {
+      "name": "count of accounts (t-1) (logged), to control for differences in scale",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "case-control-group fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Model 9 (fixed effects linear regression, billings per client, diff-in-diff)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "1,097 firm-years; combined merged entities (acquirer + target) matched to synthetic counterfactual mergers",
+    "dv": {
+     "name": "billings per client",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Redbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "merged (treatment indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "post-merger (period indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / The Redbooks"
+     },
+     {
+      "name": "merged x post-merger (diff-in-diff)",
+      "measure": "the interaction of the merged and post-merger indicators",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "billings per client (t-1) (lagged dependent variable)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "case-control-group fixed effects (clustered standard errors on these groupings)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Model 10 (fixed effects linear regression, billings per client, triple differences)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "1,097 firm-years; combined merged entities matched to synthetic counterfactual mergers",
+    "dv": {
+     "name": "billings per client",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Redbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "common clients x merged x post-merger (triple differences)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "common clients",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Redbooks / Corporate Affiliations"
+     },
+     {
+      "name": "merged",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "post-merger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / The Redbooks"
+     }
+    ],
+    "controls": [
+     {
+      "name": "billings per client (t-1) (lagged dependent variable)",
+      "source": "The Redbooks"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "case-control-group fixed effects (clustered standard errors)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "common clients",
+    "third-party ties"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "common clients",
+    "third-party ties"
+   ],
+   "mechanism_named": "attenuation bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "merger",
+    "clients"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "advertising industry",
+    "third-party ties"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "common ownership",
+    "performance",
+    "mergers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "common ownership",
+    "relation": "affects",
+    "to": "merger performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "third-party ties",
+    "partner choice"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "relationships",
+    "choices",
+    "learning"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

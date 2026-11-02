@@ -1,0 +1,968 @@
+{
+ "paper_id": "10.1287_mnsc.2023.4890",
+ "title": "Acquisitions and Technology Value Revision",
+ "journal": "MNSC",
+ "year": 2024,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "acquisition probability hypothesis",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "baseline",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technology_closeness",
+      "relation": "increases",
+      "to": "information_transmission",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_transmission",
+      "relation": "increases",
+      "to": "peer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_transmission"
+   ],
+   "moderators": [
+    {
+     "construct": "acquisition_premium",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_transmission",
+     "moderated_from": "technology_closeness",
+     "moderated_to": "peer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 3.5 (Table 4 Panel C)"
+    },
+    {
+     "construct": "technology_dependence_rnd",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_transmission",
+     "moderated_from": "technology_closeness",
+     "moderated_to": "peer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 3.5 (Table 4 Panel C, High R&D Dummy)"
+    },
+    {
+     "construct": "technology_dependence_patent_value",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_transmission",
+     "moderated_from": "technology_closeness",
+     "moderated_to": "peer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 3.5 (Table 4 Panel C, High Patent-Value Dummy)"
+    },
+    {
+     "construct": "acquirer_target_technology_overlap",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_transmission",
+     "moderated_from": "technology_closeness",
+     "moderated_to": "peer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 3.5 (Table 4 Panel C, Acquirer-Target Same Technology-Space Dummy)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "technology links merely proxy other economic relations (product-market rivalry, supply chains, geographic proximity)",
+    "the technology-closeness effect is a spurious artifact of correlated firm groupings"
+   ]
+  },
+  {
+   "hypothesis": "acquisition-probability hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_announcement",
+      "relation": "increases",
+      "to": "expected_technology_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_technology_synergies",
+      "relation": "increases",
+      "to": "peer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquisition_announcement",
+      "relation": "increases",
+      "to": "acquisition_probability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_probability",
+      "relation": "increases",
+      "to": "peer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_technology_synergies",
+    "acquisition_probability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "enhanced-investment hypothesis (value revision driven by increased R&D/innovation, not acquisition prospects)",
+    "competition-balance hypothesis (value revision driven by shifts in product-market competition)"
+   ]
+  },
+  {
+   "hypothesis": "acquisition-probability: technology peer's future acquisition likelihood",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "previous_peer_acquisition",
+      "relation": "increases",
+      "to": "expected_technology_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_technology_synergies",
+      "relation": "increases",
+      "to": "firm_acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_technology_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "acquisition-probability: acquisition vulnerability and peer returns",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_vulnerability",
+      "relation": "increases",
+      "to": "merger_prospects",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "merger_prospects",
+      "relation": "increases",
+      "to": "peer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "merger_prospects"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "acquisition-probability: declining acquisition intensity",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "declining_acquisition_intensity",
+      "relation": "decreases",
+      "to": "acquisition_prospects",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_prospects",
+      "relation": "increases",
+      "to": "peer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_prospects"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "enhanced-investment hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "previous_peer_acquisition",
+      "relation": "increases",
+      "to": "rnd_investment",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "rnd_investment",
+      "relation": "increases",
+      "to": "peer_abnormal_returns",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "rnd_investment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "competition-balance hypothesis",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_synergies",
+      "relation": "increases",
+      "to": "rival_efficiency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "rival_efficiency",
+      "relation": "decreases",
+      "to": "peer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "anticompetitive_market_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticompetitive_market_power",
+      "relation": "increases",
+      "to": "peer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "rival_efficiency",
+    "anticompetitive_market_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market-power / killer-acquisition channel (anticompetitive rents to product-market rivals)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S.-listed firms, excluding financial and utilities sectors; acquisition targets concentrated in innovative FF-48 industries: business services, electronic equipment, medical equipment, computers, pharmaceutical products)",
+  "country_region": "United States",
+  "time_period": "1984-2010",
+  "sample_description": "Acquisitions of listed bidders and targets from the Thomson SDC M&A database (mergers or acquisitions of majority interests), excluding targets and acquirers from the financial (SIC 6000-6999) and utilities (SIC 4900-4999) sectors, with transaction values greater than $10 million; technology-peer candidates drawn from Compustat-CRSP listed firms with USPTO patent data (Kogan et al. 2017)",
+  "sample_size": "1,257 acquisition targets (peer portfolios) in the main CAAR analysis; 1,307 targets with patent data"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Patent data compiled by Kogan et al. (2017): USPTO patents, USPC classes, issue dates, and estimated patent market values",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson SDC Platinum mergers and acquisitions (M&A) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson/CDA Spectrum",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters Institutional (13f) Holdings",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bureau of Economic Analysis (input-output matrix / Customer Input Coefficient)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "FRED (Consumer Price Index)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Hostile Takeover Index from Prof. Stephen McKeon's website (Cain et al. 2017)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Prof. Kenneth French's website (Fama-French 48 industry definitions)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 (baseline event study: CAARs on peer and target portfolios)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Cumulative average abnormal return (CAAR) on technology-peer portfolios and target firms",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Technology-Peer Dummy / Technology Proximity Score",
+      "measure": "a firm is a technology peer if its Technology Proximity Score with the target is greater than the 98th percentile; the score is the cosine similarity between two firms' technology, proxied by a vector of USPC patent-class values over the previous 60 months (Jaffe 1986); Panel C uses the Mahalanobis Distance and Knowledge-Base Overlap Ratio alternatives",
+      "source": "Patent data compiled by Kogan et al. (2017)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 (comparison between technology and alternative spillover effects)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "portfolios of peer candidates sorted by their relation to their corresponding target firms",
+    "dv": {
+     "name": "CAAR (-2,+2) on peer-candidate portfolios",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Technology Peer Dummy",
+      "measure": "equals one if the peer candidate is in the target's technology space (Technology Proximity Score above the 98th percentile)",
+      "source": "Patent data compiled by Kogan et al. (2017)"
+     },
+     {
+      "name": "Product Market / Same SIC-3 / Same FF-48 / Same TNIC-3 / Same State / Supplier / Customer Dummies",
+      "measure": "binary indicators of whether the peer candidate shares product market, three-digit SIC industry, Fama-French 48 industry, TNIC-3 industry, headquarters state, or supply-chain (supplier/customer) relations with the target",
+      "source": "Compustat, CRSP, Bureau of Economic Analysis, Hoberg and Phillips website"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Panel A (multivariate determinants of peer-candidate CARs)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "all peer candidates of the acquisition targets with valid data; standard errors clustered by deal",
+    "dv": {
+     "name": "Peer candidate's cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Technology Proximity Score",
+      "measure": "cosine similarity between two firms' technology based on USPC patent-class values over the previous 60 months (Jaffe 1986)",
+      "source": "Patent data compiled by Kogan et al. (2017)"
+     },
+     {
+      "name": "Technology-Peer Dummy",
+      "measure": "one if the firm's Technology Proximity Score with the target is above the 98th percentile of all possible firm pairs",
+      "source": "Patent data compiled by Kogan et al. (2017)"
+     },
+     {
+      "name": "Product Proximity Score",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Sales Increase",
+      "source": "Compustat"
+     },
+     {
+      "name": "Closely Held Shares",
+      "source": "Datastream"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "Same State Dummy",
+      "source": "Compustat and Augmented 10-X Header Data"
+     },
+     {
+      "name": "Supplier Dummy",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "Customer Dummy",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B (alternative definitions of target technology peers)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Peer candidate's cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Mahalanobis Peer Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Patent data compiled by Kogan et al. (2017)"
+     },
+     {
+      "name": "Knowledge-Base Peer Dummy",
+      "measure": "one if the firm's Knowledge-Base Overlap Ratio with the target is above the 98th percentile; the ratio of patents in the Common Knowledge Space to total cited patents over the past 60 months (Bena and Li 2014, Ma 2020)",
+      "source": "Patent data compiled by Kogan et al. (2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product Proximity Score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Increase",
+      "source": "Compustat"
+     },
+     {
+      "name": "Closely Held Shares",
+      "source": "Datastream"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel C (cross-sectional interactions: technology dependence, premium, tech overlap)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Peer candidate's cumulative abnormal return (CAR)",
+     "measure": "a peer candidate's CAR over the window (-2,+2), market model with the value-weighted CRSP market index",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "High Acquisition-Premium Dummy x Technology Proximity Score",
+      "measure": "interaction of the Technology Proximity Score with a dummy equal to one if the deal's acquisition premium (five-day (-2,+2) market-model abnormal return of the target) exceeds the year median",
+      "source": "Patent data compiled by Kogan et al. (2017); CRSP"
+     },
+     {
+      "name": "High Patent-Value Dummy x Technology Proximity Score",
+      "measure": "interaction with a dummy equal to one if the ratio of the peer's total patent value over the prior five years to its market value of assets exceeds the year median",
+      "source": "Patent data compiled by Kogan et al. (2017); Compustat"
+     },
+     {
+      "name": "High R&D Dummy x Technology Proximity Score",
+      "measure": "interaction with a dummy equal to one if the peer's R&D expense scaled by sales exceeds the year median",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer-Target Same Technology-Space Dummy x Technology Proximity Score",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Patent data compiled by Kogan et al. (2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product Proximity Score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Increase",
+      "source": "Compustat"
+     },
+     {
+      "name": "Closely Held Shares",
+      "source": "Datastream"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "all firm-years (excluding financial and utilities sectors and firms without patents in the prior five years) in the Compustat-CRSP merged database, 1984-2010; standard errors clustered by firm",
+    "dv": {
+     "name": "Acquisition-target indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous-Acquisition Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC Platinum M&A database; Patent data compiled by Kogan et al. (2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M/B Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "PPE",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Blockholder Dummy",
+      "source": "Thomson/CDA Spectrum"
+     },
+     {
+      "name": "Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Age",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Age Squared",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Hostile Takeover Index",
+      "source": "Prof. Stephen McKeon's website"
+     },
+     {
+      "name": "Industry and year fixed effects / industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (acquisition vulnerability and abnormal returns on technology peers)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Technology peer's cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition Vulnerability",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat; CRSP; Thomson SDC Platinum M&A database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product Proximity Score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Increase",
+      "source": "Compustat"
+     },
+     {
+      "name": "Closely Held Shares",
+      "source": "Datastream"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "all firm-years (excluding financial and utilities sectors and firms without patents in the past five years) in the Compustat-CRSP merged database, 1984-2010; standard errors clustered by firm",
+    "dv": {
+     "name": "R&D investment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous-Acquisition Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC Platinum M&A database; Patent data compiled by Kogan et al. (2017)"
+     },
+     {
+      "name": "Previous-Acquisition Dummy x Large-Size Dummy",
+      "measure": "interaction with a dummy equal to one if log market capitalization is above the sample median in a year",
+      "source": "Compustat"
+     },
+     {
+      "name": "Previous-Acquisition Dummy x Market Cap",
+      "measure": "interaction with log market value of equity (inflation adjusted)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Large-Size Dummy",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "Lagged R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "Vdshock",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "Age",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "PPE",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Net Working Capital",
+      "source": "Compustat"
+     },
+     {
+      "name": "P/E Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Dividend-Payment Dummy",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional Ownership",
+      "source": "Thomson Reuters Institutional (13f) Holdings"
+     },
+     {
+      "name": "Industry and year fixed effects / industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Technology peer's cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D Increase",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat; Thomson SDC Platinum M&A database"
+     },
+     {
+      "name": "R&D Increase x Large-Size Dummy",
+      "measure": "interaction of R&D Increase with a dummy equal to one if log market capitalization is above the sample median",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Large-Size Dummy",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product Proximity Score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Increase",
+      "source": "Compustat"
+     },
+     {
+      "name": "Closely Held Shares",
+      "source": "Datastream"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (abnormal returns on customers of acquiring firms; competition-balance test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "FTC antitrust review threshold (killer-acquisition test, Cunningham et al. 2021)",
+    "sample": "customers of acquiring firms",
+    "dv": {
+     "name": "CAAR on portfolios of customers of acquiring firms",
+     "measure": "cumulative average abnormal returns on portfolios of generic/main/reliant/small/regional customers of acquiring firms at the deal announcement, split by high- vs low-competition (sales-based HHI) industries (Panel A) and by proximity to the FTC antitrust review threshold (Panel B)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Customer relation, industry competition, and antitrust-threshold proximity",
+      "measure": "customer type (generic/main/reliant/small/regional) via Customer Input Coefficient; high- vs low-competition industry by sales-based HHI; deals falling 5% or 10% below vs above the FTC antitrust review thresholds",
+      "source": "Bureau of Economic Analysis; Compustat"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "expected acquisition probability",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "peers’ short-term CARs",
+    "long-term CAR"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

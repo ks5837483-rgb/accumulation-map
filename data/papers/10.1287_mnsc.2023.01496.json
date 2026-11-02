@@ -1,0 +1,782 @@
+{
+ "paper_id": "10.1287_mnsc.2023.01496",
+ "title": "Weak Credit Covenants",
+ "journal": "MNSC",
+ "year": 2025,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "financial contracting theory",
+  "creditor governance / covenant theory",
+  "information asymmetry",
+  "agency theory of debt",
+  "reaching-for-yield / inattention theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_value_transfer_loan",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_optional_clauses",
+      "relation": "increases",
+      "to": "expected_value_transfer_from_creditors_to_equity_holders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_value_transfer_from_creditors_to_equity_holders",
+      "relation": "decreases",
+      "to": "senior_secured_loan_price",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_value_transfer_from_creditors_to_equity_holders"
+   ],
+   "moderators": [
+    {
+     "construct": "operational_distress",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "expected_value_transfer_from_creditors_to_equity_holders",
+     "moderated_from": "number_of_optional_clauses",
+     "moderated_to": "senior_secured_loan_price",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_value_transfer_loan"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "previously used measures of contractual weakness (number of financial covenants, cov-lite indicator) capture the price adjustment"
+   ]
+  },
+  {
+   "hypothesis": "P2_value_transfer_stock",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_optional_clauses",
+      "relation": "increases",
+      "to": "expected_value_transfer_from_creditors_to_equity_holders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_value_transfer_from_creditors_to_equity_holders",
+      "relation": "increases",
+      "to": "equity_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_value_transfer_from_creditors_to_equity_holders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "debt overhang resolution (a positive stock reaction consistent with solving debt overhang rather than a pure value transfer)"
+   ]
+  },
+  {
+   "hypothesis": "P3_lbo_weakening",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_sponsor_backing",
+      "relation": "increases",
+      "to": "borrower_contracting_expertise_and_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "borrower_contracting_expertise_and_bargaining_power",
+      "relation": "increases",
+      "to": "number_of_optional_clauses",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "financial_sponsor_backing",
+      "relation": "increases",
+      "to": "repeat_business_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "repeat_business_bargaining_power",
+      "relation": "increases",
+      "to": "number_of_optional_clauses",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "borrower_contracting_expertise_and_bargaining_power",
+    "repeat_business_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sponsor-backed firms are safer for creditors, leading creditors to offer more contractual flexibility (rather than sponsors extracting it)",
+    "sponsors have higher reputational capital that leads lenders to forfeit control"
+   ]
+  },
+  {
+   "hypothesis": "P4_sponsor_credit_expertise",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sponsor_credit_expertise",
+      "relation": "increases",
+      "to": "capacity_to_sort_through_contractual_terms",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capacity_to_sort_through_contractual_terms",
+      "relation": "increases",
+      "to": "number_of_optional_clauses",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capacity_to_sort_through_contractual_terms"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5_bank_skin_in_the_game",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "arranging_bank_skin_in_the_game",
+      "relation": "increases",
+      "to": "bank_screening_and_monitoring_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_screening_and_monitoring_incentives",
+      "relation": "decreases",
+      "to": "number_of_optional_clauses",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_screening_and_monitoring_incentives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6_reaching_for_yield",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "contractual_weakness",
+      "relation": "increases",
+      "to": "risk_knowingly_borne_by_creditors",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_knowingly_borne_by_creditors",
+      "relation": "increases",
+      "to": "loan_issuance_spread",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_knowingly_borne_by_creditors"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7_renegotiation_costs",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "loan_size",
+      "relation": "decreases",
+      "to": "renegotiation_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "renegotiation_cost",
+      "relation": "increases",
+      "to": "number_of_optional_clauses",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "renegotiation_cost"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8_asymmetric_information",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "asymmetric_information",
+      "relation": "increases",
+      "to": "conflict_between_lenders_and_borrowers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "conflict_between_lenders_and_borrowers",
+      "relation": "decreases",
+      "to": "number_of_optional_clauses",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "conflict_between_lenders_and_borrowers"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (leveraged loan credit agreements in the U.S. leveraged loan market; industry fixed effects at the two-digit SIC level)",
+  "country_region": "United States",
+  "time_period": "2011-2016",
+  "sample_description": "Loan packages, each covered by a given credit agreement (unit of analysis); contractual-term data from StreetDiligence (built from SEC filings), merged with loan issuance characteristics from DealScan and borrower financial data from Compustat",
+  "sample_size": "1,240 credit agreements (loan packages); 1,857 facilities"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "StreetDiligence",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "DealScan",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Markit",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Fitch Covenant Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Intelligize (credit agreements downloaded from Electronic Data Gathering, Analysis, and Retrieval / EDGAR)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3. Alternative Measures of Covenant Weakness (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,240 packages (377/369 obs for slack measures with lower coverage)",
+    "dv": {
+     "name": "contractual weakness measures",
+     "measure": "[withheld: wording matches the source]",
+     "source": "StreetDiligence"
+    },
+    "key_ivs": [
+     {
+      "name": "covlite_deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Standard and Poor's LCD"
+     },
+     {
+      "name": "count_fincov",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "debt_ebitda_slack",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt_ebitda_slack_sc",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "No. of negative covenants fixed effects",
+      "source": "StreetDiligence"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "June 12, 2017 J.Crew amendment proposal/announcement (transfer of intellectual property to an unrestricted subsidiary)",
+    "sample": "leveraged loans in the sample with Markit daily loan price data (402 obs)",
+    "dv": {
+     "name": "change in loan price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "1(Investments deductible)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "1(Restricted Payments deductible)",
+      "measure": "indicator for a deductible on the restricted payments covenant",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "1(Indebtedness deductible)",
+      "measure": "indicator for a deductible on the indebtedness covenant",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "1(Asset Sale deductible)",
+      "measure": "indicator for a deductible on the asset sale covenant",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "1(Liens deductible)",
+      "measure": "indicator for a deductible on the liens covenant",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "1(Affiliated Transactions deductible)",
+      "measure": "indicator for a deductible on the affiliated transactions covenant",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "Number of Carve-outs",
+      "measure": "the total number of carve-outs over all negative covenants",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "Number of Deductibles",
+      "measure": "the total number of deductibles over all negative covenants",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "Operating Distress Proxy × Number of Deductibles",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Number Financial Covenants",
+      "source": "DealScan"
+     },
+     {
+      "name": "Cov-lite Deal",
+      "source": "Standard and Poor's LCD"
+     },
+     {
+      "name": "Remaining Maturity (in years)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "measures of contractual optionality",
+     "measure": "[withheld: wording matches the source]",
+     "source": "StreetDiligence"
+    },
+    "key_ivs": [
+     {
+      "name": "Buyout",
+      "measure": "an indicator for leveraged buyouts",
+      "source": "DealScan"
+     },
+     {
+      "name": "Leveraged",
+      "measure": "indicator for loans in the leveraged loan segment (DealScan classification)",
+      "source": "DealScan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "No. of negative covenants fixed effects",
+      "source": "StreetDiligence"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "reduced due to lender data availability (1,087 / 972 obs)",
+    "dv": {
+     "name": "measures of contractual optionality",
+     "measure": "[withheld: wording matches the source]",
+     "source": "StreetDiligence"
+    },
+    "key_ivs": [
+     {
+      "name": "Institutional (Inst. Indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "Instit. Share",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "Instit. Share (TL)",
+      "measure": "institutional share measured relative to the total term loan amount",
+      "source": "DealScan"
+     },
+     {
+      "name": "Lead Share",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Buyout",
+      "source": "DealScan"
+     },
+     {
+      "name": "Log (# of Lenders)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Log(Amount)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Leveraged",
+      "source": "DealScan"
+     },
+     {
+      "name": "Highly Leveraged",
+      "source": "DealScan"
+     },
+     {
+      "name": "Log (Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "No. of covenants fixed effects",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8. Renegotiation Costs (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,206 / 1,074 obs",
+    "dv": {
+     "name": "measures of contractual optionality",
+     "measure": "[withheld: wording matches the source]",
+     "source": "StreetDiligence"
+    },
+    "key_ivs": [
+     {
+      "name": "Log (Loan Amount)",
+      "measure": "log of loan amount (proxy for fixed component of renegotiation cost)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Log (# of Lenders)",
+      "measure": "log of the number of lenders (renegotiation complexity)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Bond Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Intangible Assets / Total Assets",
+      "measure": "intangibles as a share of assets (proxy for asymmetric information, per Garleanu and Zwiebel 2008)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Leveraged",
+      "source": "DealScan"
+     },
+     {
+      "name": "Highly Leveraged",
+      "source": "DealScan"
+     },
+     {
+      "name": "No. of negative covenants fixed effects",
+      "source": "StreetDiligence"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Figure 9. Reaching-for-yield: issuance spread on contractual weakness (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "all-in-drawn spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "proxies of contractual weakness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "StreetDiligence"
+     }
+    ],
+    "controls": [
+     {
+      "name": "standard borrower and transaction characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "loan terms typically studied in the literature",
+      "source": "DealScan"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Figure 8. Post-J.Crew evolution: yearly OLS of credit spreads on number of carve-outs",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "J.Crew episode (2017)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "credit spreads",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of carve-outs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Intelligize (EDGAR credit agreements)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "liquidity of leveraged loans",
+    "downward price reaction"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "proxy of covenant weakness",
+    "stock reaction"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "stock price",
+    "contractual optionality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "contract design",
+    "price of such clauses"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "creditors",
+    "risk",
+    "premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "contractual optionality",
+    "issuance spreads"
+   ],
+   "mechanism_named": "unobservable selection effect",
+   "proposed_edge": {
+    "from": "contractual optionality",
+    "relation": "increases",
+    "to": "issuance spreads"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "sponsor-backed companies",
+    "contractual flexibility"
+   ],
+   "mechanism_named": "debt overhang",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

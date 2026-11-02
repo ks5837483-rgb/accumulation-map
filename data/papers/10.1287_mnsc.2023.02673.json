@@ -1,0 +1,440 @@
+{
+ "paper_id": "10.1287_mnsc.2023.02673",
+ "title": "Business Acquisition Disclosures: The Effect of Identifying Intangible Assets on Investors’ Judgments",
+ "journal": "MNSC",
+ "year": 2025,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "mental simulation theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disclosure_of_benefit_plans",
+      "relation": "increases",
+      "to": "mental_simulation",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "mental_simulation",
+      "relation": "increases",
+      "to": "investment_judgments",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "mental_simulation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "separate_identification_of_intangibles",
+      "relation": "increases",
+      "to": "mental_simulation",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "mental_simulation",
+      "relation": "increases",
+      "to": "investment_judgments",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "mental_simulation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "separate_identification_of_intangibles",
+      "relation": "increases",
+      "to": "mental_simulation",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "mental_simulation",
+      "relation": "increases",
+      "to": "investment_judgments",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "mental_simulation"
+   ],
+   "moderators": [
+    {
+     "construct": "disclosure_of_benefit_plans",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "mental_simulation",
+     "moderated_from": "separate_identification_of_intangibles",
+     "moderated_to": "investment_judgments",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "both a disclosure with plans AND separately identified intangibles are necessary for investors to appreciate the benefits (complementarity account, implying a different interaction shape)",
+    "the results are driven by investors' views of management (competence, trustworthiness, transparency) rather than mental simulation"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "consumer goods (experimental case: a hypothetical all-cash acquisition of one consumer goods company by another — a headphone maker acquiring a footwear maker)",
+  "country_region": "",
+  "time_period": "",
+  "sample_description": "Experiment one: 120 individuals currently enrolled in full-time graduate business programs, in the role of prospective investors. Experiment two: 241 individuals from the Prolific online platform, also in the role of prospective investors.",
+  "sample_size": "120 (experiment one); 241 (experiment two)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "participants—in the role of prospective investors (experimental case materials on Sterling's acquisition of Kit Shoes)",
+    "category": "experiment",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 Panel C: ANCOVA on average investment judgment (Experiment 1)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "lab_experiment",
+    "shock_or_instrument": "",
+    "sample": "Experiment 1, ~120 participants (2x2 between-subjects)",
+    "dv": {
+     "name": "average investment judgment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "experiment"
+    },
+    "key_ivs": [
+     {
+      "name": "disclosure type",
+      "measure": "[withheld: wording matches the source]",
+      "source": "experiment"
+     },
+     {
+      "name": "intangible identification",
+      "measure": "manipulated between subjects: goodwill only condition vs. goodwill with separately identified intangibles condition (goodwill plus six other intangible assets: trade name, trademarks, trade secrets, in-process R&D, customer relationships, customer database)",
+      "source": "experiment"
+     }
+    ],
+    "controls": [
+     {
+      "name": "premanipulation judgment (covariate)",
+      "source": "experiment"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel C: ANOVA on average mental simulation measure (Experiment 1 process measure)",
+    "hypotheses": [],
+    "identification": "lab_experiment",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "average mental simulation measure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "experiment"
+    },
+    "key_ivs": [
+     {
+      "name": "disclosure type",
+      "measure": "manipulated: acquisition disclosure with plans vs. without plans",
+      "source": "experiment"
+     },
+     {
+      "name": "intangible identification",
+      "measure": "manipulated: goodwill only vs. goodwill with separately identified intangibles",
+      "source": "experiment"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 4.3.2 Mediation Analysis: moderated mediation (PROCESS macro model 8, 5,000 bootstrap samples, 90% CIs)",
+    "hypotheses": [],
+    "identification": "lab_experiment",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "average investment judgment",
+     "measure": "unit-weighted average of four investment-related judgments (range 0 to 100)",
+     "source": "experiment"
+    },
+    "key_ivs": [
+     {
+      "name": "disclosure type x intangible identification interaction",
+      "measure": "moderated mediation of the disclosure type x intangible identification interaction on average investment judgment through average mental simulation as the mediator (index of moderated mediation)",
+      "source": "experiment"
+     },
+     {
+      "name": "average mental simulation (mediator)",
+      "measure": "unit-weighted average mental simulation measure entered as the statistical mediator",
+      "source": "experiment"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel B: ANCOVA on average investment judgment (Experiment 2)",
+    "hypotheses": [],
+    "identification": "lab_experiment",
+    "shock_or_instrument": "",
+    "sample": "Experiment 2, n = 241 participants (three between-subjects conditions: n = 79 / 80 / 82)",
+    "dv": {
+     "name": "average investment judgment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "experiment"
+    },
+    "key_ivs": [
+     {
+      "name": "separate identification (three-level asset identification manipulation)",
+      "measure": "manipulated between subjects across three conditions: baseline (no separate identification), intangible assets identified, and both tangible and intangible assets identified",
+      "source": "experiment"
+     }
+    ],
+    "controls": [
+     {
+      "name": "premanipulation judgment (covariate)",
+      "source": "experiment"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "separate identification of intangibles"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "measurement",
+    "recognition",
+    "separate identification of intangibles"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "measurement and recognition",
+    "on_path": [
+     "separate identification of intangibles",
+     "investment judgments"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "intangible asset measurements",
+    "separately identifiable intangibles",
+    "judgments about the acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "intangible asset measurements",
+    "on_path": [
+     "separately identifiable intangibles",
+     "judgments about the acquisition"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "measurement",
+    "recognition",
+    "acquired intangibles"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "recognition",
+    "on_path": [
+     "measurement",
+     "judgments about the acquisition"
+    ]
+   }
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "identification",
+    "measurement",
+    "recognition"
+   ],
+   "mechanism_named": "disaggregation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "acquisition disclosures",
+    "disclosure with plans",
+    "acquired intangibles"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "disclosure with plans",
+    "separately identified intangibles"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "acquired intangibles",
+    "disclosure with plans",
+    "investor reaction",
+    "how component of the disclosure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "disclosure of what was acquired",
+    "how an acquisition will benefit the acquirer"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "identifying intangibles",
+    "disclosure of plans to benefit from the acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "product offerings",
+    "guess why the acquisition occurred"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "separate identification of intangibles",
+     "investment judgments"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "business or industry experiences",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "business or industry experiences",
+    "on_path": [
+     "separate identification of intangibles",
+     "[withheld: wording matches the source]"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,375 @@
+{
+ "paper_id": "10.1111/j.1911-3846.1991.tb00833.x",
+ "title": "The differential information content of earnings announcements: The case of merger*",
+ "journal": "CAR",
+ "year": 1991,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "differential information content hypothesis",
+  "efficient markets / event-study framework"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "variance_decreasing_merger",
+      "relation": "decreases",
+      "to": "future_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "future_uncertainty",
+      "relation": "increases",
+      "to": "information_content",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "future_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "pair-matched non-merger control firms (secular / market-wide decline in return variability rather than the merger's reduction in future uncertainty)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "variance_increasing_merger",
+      "relation": "increases",
+      "to": "future_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "future_uncertainty",
+      "relation": "increases",
+      "to": "information_content",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "variance_increasing_merger",
+      "relation": "increases",
+      "to": "reporting_noise",
+      "from_measured": false,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "reporting_noise",
+      "relation": "decreases",
+      "to": "information_content",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "future_uncertainty",
+    "reporting_noise"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unrelated_merger",
+      "relation": "decreases",
+      "to": "future_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "future_uncertainty",
+      "relation": "increases",
+      "to": "information_content",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "future_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "related_merger",
+      "relation": "increases",
+      "to": "future_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "future_uncertainty",
+      "relation": "increases",
+      "to": "information_content",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "related_merger",
+      "relation": "increases",
+      "to": "reporting_noise",
+      "from_measured": false,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "reporting_noise",
+      "relation": "decreases",
+      "to": "information_content",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "future_uncertainty",
+    "reporting_noise"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (merger firms spanning many two-digit SIC industries; banks and utilities excluded)",
+  "country_region": "",
+  "time_period": "1977-1984",
+  "sample_description": "Acquiring firms that experienced significant mergers (acquired firm's premerger sales at least 10 percent of the acquiring firm's), collected from Mergers and Acquisitions (M&A); banks and utilities excluded; firms required on the Industrial Compustat and CRSP tapes with annual earnings announcement dates in the Wall Street Journal Index; plus 102 matched-pair nonmerger control firms",
+  "sample_size": "102 merger firms (and 102 matched control firms)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Mergers and Acquisitions (M&A)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Industrial Compustat tapes",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP tapes",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal Index (WSJI)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Descriptive statistics (firm characteristics changes before and after merger)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "102 merger firms and 102 matched control firms",
+    "dv": {
+     "name": "firm characteristics (size, asset turnover, leverage, dividend payout, ROE)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Industrial Compustat tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "merger status and period (merger vs control firms; before vs after merger)",
+      "measure": "102 merger firms compared with 102 matched control firms; firm characteristics compared before vs after merger, tested with two-tailed t-test and Wilcoxon matched-pairs signed-rank test",
+      "source": "Mergers and Acquisitions (M&A); Industrial Compustat tapes"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Return variability of merger firms and control firms (total sample)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "102 merger firms and 102 matched control firms",
+    "dv": {
+     "name": "return variability (RV) / information content of earnings announcement",
+     "measure": "squared value of standardized excess return used as a return variability (RV) measure; daily excess returns computed using the one-factor market model with Scholes and Williams (1977) beta, standardized following Patell (1976), over the 11 days (t = -5 to +5) surrounding the annual earnings announcement date",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "merger status and period (merger vs pair-matched control; year before vs year after merger)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergers and Acquisitions (M&A); CRSP tapes"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel A - Return variability of variance-decreasing firms",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "54 variance-decreasing merger firms and matched control firms",
+    "dv": {
+     "name": "return variability (RV) / information content of earnings announcement",
+     "measure": "squared standardized excess return (RV) over 11 days (t=-5 to +5) around annual earnings announcement, change from pre- to post-merger",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "change in firm variance after merger (variance-decreasing)",
+      "measure": "premerger stock return variance computed over 150-day period ending 60 days before initial merger announcement; postmerger variance over 150-day period starting at merger completion date; firms classified variance-decreasing if variance declined after merger",
+      "source": "CRSP tapes"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel B - Return variability of variance-increasing firms",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "48 variance-increasing merger firms and matched control firms",
+    "dv": {
+     "name": "return variability (RV) / information content of earnings announcement",
+     "measure": "squared standardized excess return (RV) over 11 days (t=-5 to +5) around annual earnings announcement, change from pre- to post-merger",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "change in firm variance after merger (variance-increasing)",
+      "measure": "premerger stock return variance computed over 150-day period ending 60 days before initial merger announcement; postmerger variance over 150-day period starting at merger completion date; firms classified variance-increasing if variance rose after merger",
+      "source": "CRSP tapes"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel A - Return variability of unrelated mergers",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "return variability (RV) / information content of earnings announcement",
+     "measure": "squared standardized excess return (RV) over 11 days (t=-5 to +5) around annual earnings announcement, change from pre- to post-merger period",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "merger type (unrelated merger)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel B - Return variability of related mergers",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "return variability (RV) / information content of earnings announcement",
+     "measure": "squared standardized excess return (RV) over 11 days (t=-5 to +5) around annual earnings announcement, change from pre- to post-merger period",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "merger type (related merger)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "noisiness of accounting signals",
+    "firm's future uncertainty",
+    "information content"
+   ],
+   "mechanism_named": "Choi and Salamon's (1989) model",
+   "proposed_edge": {
+    "from": "noisiness of accounting signals",
+    "relation": "unspecified",
+    "to": "information content"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "Choi and Salamon model"
+   ],
+   "mechanism_named": "Choi and Salamon model",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

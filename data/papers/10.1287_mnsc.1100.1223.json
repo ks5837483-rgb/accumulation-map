@@ -1,0 +1,621 @@
+{
+ "paper_id": "10.1287_mnsc.1100.1223",
+ "title": "Target Age and the Acquisition of Innovation in High-Technology Industries",
+ "journal": "MNSC",
+ "year": 2010,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "real options theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_age",
+      "relation": "decreases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "increases",
+      "to": "value_captured_by_buyer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_age",
+      "relation": "decreases",
+      "to": "flexibility_of_growth_options",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "flexibility_of_growth_options",
+      "relation": "increases",
+      "to": "value_captured_by_buyer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_uncertainty",
+    "flexibility_of_growth_options"
+   ],
+   "moderators": [
+    {
+     "construct": "recent_patent_indicator",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "flexibility_of_growth_options",
+     "moderated_from": "target_age",
+     "moderated_to": "value_captured_by_buyer",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "private_status",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "valuation_uncertainty",
+     "moderated_from": "target_age",
+     "moderated_to": "value_captured_by_buyer",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target age is merely a proxy for other target characteristics rather than a causal driver via the auction mechanisms",
+    "sample selection bias (the age-return relation is an artifact of which firms are acquired)"
+   ]
+  },
+  {
+   "hypothesis": "H4a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "independent_signals_of_higher_quality",
+      "relation": "decreases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "decreases",
+      "to": "probability_of_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "access_to_capital_and_resources",
+      "relation": "decreases",
+      "to": "opportunity_for_private_valuations",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "opportunity_for_private_valuations",
+      "relation": "increases",
+      "to": "probability_of_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "opportunity_for_private_valuations"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "telecommunications industry (equipment manufacturers), a high-technology environment",
+  "country_region": "",
+  "time_period": "1995-2001",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "140 acquisitions (primary buyer-profit/event-study analysis); 377 firms (140 acquired + 237 not acquired) for the survival analysis"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson ONE Banker database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Patent and Trademark Office",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "Factiva database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "market trading data",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 Panel A: Cumulative Buyer Abnormal Returns, whole sample",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "whole sample of 140 acquisition announcements",
+    "dv": {
+     "name": "buyer abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "market trading data"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 2 Panel B: abnormal returns, younger targets (age below median)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "buyer abnormal return",
+     "measure": "day 0 mean abnormal return (%) (market model and market adjusted return)",
+     "source": "market trading data"
+    },
+    "key_ivs": [
+     {
+      "name": "target age",
+      "measure": "target age below median (younger targets)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 Panel C: abnormal returns, older targets (age above median)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "buyer abnormal return",
+     "measure": "day 0 mean abnormal return (%) (market model and market adjusted return)",
+     "source": "market trading data"
+    },
+    "key_ivs": [
+     {
+      "name": "target age",
+      "measure": "target age above median (older targets)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4a",
+     "H4b"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "20,057 monthly observations of 377 potential target firms",
+    "dv": {
+     "name": "risk (likelihood) of acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "target technical quality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "U.S. Patent and Trademark Office"
+     },
+     {
+      "name": "target venture capital funding",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson ONE Banker database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "early mover (1 if before 1/1996)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "post bubble (1 if after 3/2000)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target employees (ln)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 2: Heckman two-stage regression, target age main effect",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "first-stage (selection) variables: venture capital funding, target technical quality, target employees",
+    "sample": "140 acquisitions (buyer profit sample); Heckman first stage on 377 firms",
+    "dv": {
+     "name": "day 0 abnormal return",
+     "measure": "single day (day 0) market adjusted abnormal return; standardized",
+     "source": "market trading data"
+    },
+    "key_ivs": [
+     {
+      "name": "target age",
+      "measure": "natural log of years since company inception (start dates obtained from VC database, press releases, news archives, and company filings); standardized",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "buyer market value (US$)",
+      "source": "market trading data"
+     },
+     {
+      "name": "buyer leverage (debt/assets)",
+      "source": ""
+     },
+     {
+      "name": "buyer acquisition experience (ln of prior acquisitions)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "buyer free cash intensity (free cash/sales)",
+      "source": ""
+     },
+     {
+      "name": "buyer R&D intensity (R&D/sales)",
+      "source": ""
+     },
+     {
+      "name": "early mover (pre-1996)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "post bubble (post-March 2000)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquisition value (ln US$)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "payment method (1 if stock, 0 if cash)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "first-stage (selection) variables: venture capital funding, target technical quality, target employees",
+    "sample": "140 acquisitions (buyer profit sample); Heckman first stage on 377 firms",
+    "dv": {
+     "name": "day 0 abnormal return",
+     "measure": "single day (day 0) market adjusted abnormal return; standardized",
+     "source": "market trading data"
+    },
+    "key_ivs": [
+     {
+      "name": "target age",
+      "measure": "natural log of years since company inception; standardized",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target age x target recent patent (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "U.S. Patent and Trademark Office"
+     },
+     {
+      "name": "target age x target private status (interaction)",
+      "measure": "interaction of ln target age with public/private status (1 if target was private, 0 if public)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "buyer market value (US$)",
+      "source": "market trading data"
+     },
+     {
+      "name": "buyer leverage (debt/assets)",
+      "source": ""
+     },
+     {
+      "name": "buyer acquisition experience (ln of prior acquisitions)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "buyer free cash intensity (free cash/sales)",
+      "source": ""
+     },
+     {
+      "name": "buyer R&D intensity (R&D/sales)",
+      "source": ""
+     },
+     {
+      "name": "early mover (pre-1996)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "post bubble (post-March 2000)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquisition value (ln US$)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "payment method (1 if stock, 0 if cash)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquisition weight (acq. val./buyer val.)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "cross citations (ln)",
+      "source": "U.S. Patent and Trademark Office"
+     },
+     {
+      "name": "target popular visibility (Factiva mentions/employees)",
+      "source": "Factiva database"
+     },
+     {
+      "name": "target venture capital funding (ln US$)",
+      "source": "Thomson ONE Banker database"
+     },
+     {
+      "name": "target technical quality (ln patent citations/employees)",
+      "source": "U.S. Patent and Trademark Office"
+     },
+     {
+      "name": "target employees (ln)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target private (1 if yes, 0 if no)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target recent patent (1 if yes, 0 if no)",
+      "source": "U.S. Patent and Trademark Office"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "seller’s best response",
+    "optimal time to sell"
+   ],
+   "mechanism_named": "static",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "amounts bid by potential buyers",
+    "expectations of the future"
+   ],
+   "mechanism_named": "static model",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "buyer’s and seller’s best response",
+    "optimal reservation price",
+    "optimal bid",
+    "target age"
+   ],
+   "mechanism_named": "dynamic framework",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "market evaluations",
+    "true value"
+   ],
+   "mechanism_named": "event study methods",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "advantages of acquiring early",
+    "long-term and sustainable competitive advantage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "advantages of acquiring early",
+    "relation": "affects",
+    "to": "long-term and sustainable competitive advantage"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "long-term acquisition performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "age affect"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "target quality",
+    "patent citation metric"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "recent patent",
+    "private status"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "decision to patent",
+    "remain private",
+    "value from subsequent acquisitions"
+   ],
+   "mechanism_named": "strategic choices",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "sample selection biases"
+   ],
+   "mechanism_named": "residual sample selection biases",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "telecommunications industry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "single industry focus",
+    "boundary conditions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "other industries"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

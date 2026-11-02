@@ -1,0 +1,646 @@
+{
+ "paper_id": "10.1017_s0022109012000361",
+ "title": "It Pays to Follow the Leader: Acquiring Targets Picked by Private Equity",
+ "journal": "JFQA",
+ "year": 2012,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "private value-common value paradigm",
+  "auction theory",
+  "certification",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_bidder_competition",
+      "relation": "increases",
+      "to": "target_common_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_common_value",
+      "relation": "increases",
+      "to": "corporate_acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_common_value"
+   ],
+   "moderators": [
+    {
+     "construct": "follower_status",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "target_common_value",
+     "moderated_from": "financial_bidder_competition",
+     "moderated_to": "corporate_acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "follow-the-leader (unnumbered)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "superior acquirer ability (acquirers competing with financial bidders are innately better acquirers)",
+    "more favorable deal terms (lower premia / more cash)"
+   ]
+  },
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_bidder_competition",
+      "relation": "increases",
+      "to": "acquirer_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_ability",
+      "relation": "increases",
+      "to": "corporate_acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_bidder_competition",
+      "relation": "increases",
+      "to": "favorable_deal_terms",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "favorable_deal_terms",
+      "relation": "increases",
+      "to": "corporate_acquirer_returns",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_deal_terms"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "certification (unnumbered)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "competing_bid_from_financial_bidder",
+      "relation": "increases",
+      "to": "acquisition_value_certification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_value_certification",
+      "relation": "increases",
+      "to": "corporate_acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_value_certification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. mergers and tender offers across sectors)",
+  "country_region": "United States (target and bidder both U.S. firms)",
+  "time_period": "1980-2007",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "100,697 merger/tender offer announcements (Competing Bidders sample = 4,471)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) / SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel A: Univariate CARs of corporate acquirers, All Bidders",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "All corporate bidders (133 Financial vs 982 Corporate Competition)",
+    "dv": {
+     "name": "Acquirer cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Financial Competition sample vs Corporate Competition sample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, Panel B: Univariate CARs, Winning Bidders",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Winning corporate acquirers (76 Financial vs 545 Corporate Competition)",
+    "dv": {
+     "name": "Winning acquirer CAR",
+     "measure": "Mean CARs over (-2,+2), (-20,+120), (-20,+180) windows; acquirer return minus value-weighted market index",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Financial Competition vs Corporate Competition sample",
+      "measure": "winning corporate acquirers who won against financial vs other corporate bidders",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, Panel C: Univariate CARs, Losing Bidders",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Losing corporate bidders (58 Financial vs 443 Corporate Competition)",
+    "dv": {
+     "name": "Losing acquirer CAR",
+     "measure": "Mean CARs over (-2,+2), (-20,+120), (-20,+180) windows; acquirer return minus value-weighted market index",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Financial Competition vs Corporate Competition sample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, Panel D: Target Returns",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Target firms (37 Financial vs 245 Corporate Competition)",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Financial Competition vs Corporate Competition sample",
+      "measure": "targets receiving bids in Financial vs Corporate Competition samples",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Corporate acquirers who made the first bid",
+    "dv": {
+     "name": "First-bidder acquirer CAR at competing-bid announcement",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Competing bid from financial bidder vs corporate bidder",
+      "measure": "identity of the subsequent competing bidder (financial vs corporate)",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4: Univariate CARs of First Movers and Followers",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Winning corporate acquirers split into First Mover (27/144) and Follower (49/401) subgroups",
+    "dv": {
+     "name": "Winning acquirer CAR",
+     "measure": "Mean CARs over (-2,+2), (-20,+120), (-20,+180) windows; acquirer return minus value-weighted market index; significance via bootstrapped t-statistics",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Financial Competition vs Corporate Competition sample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "First Mover vs Follower",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5: Bidder, Target, and Deal Characteristics (univariate difference-in-means)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Competed deals by corporate acquirers, 1980-2007",
+    "dv": {
+     "name": "Deal, bidder, and target characteristics compared across samples",
+     "measure": "e.g., PERCENTAGE CASH, PURE CASH DEALS, TENDER OFFERS, TOEHOLD, TTERMF, DEBT FINANCING ($mln and %), PREMIUM, TV, RELATIVE SIZE, book/market assets, leverage, ROA, market-to-book, institutional/insider/management ownership, option awards",
+     "source": "SDC/Compustat/Thomson Reuters/ExecuComp"
+    },
+    "key_ivs": [
+     {
+      "name": "Financial Competition vs Corporate Competition sample",
+      "measure": "3,321 all-corporate competed deals vs 547 competed deals facing at least 1 financial bidder",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Winning corporate acquirers in Financial and Corporate Competition samples; Columns 4-5 split first movers vs followers",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "FINCOMP (financial competition dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CASH (pure cash dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQ SIZE (log acquirer market value of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RELSIZE (TV / acquirer market value of assets)",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "POISON (target poison pill dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD (>5% target stock held by first bidder)",
+      "source": "SDC"
+     },
+     {
+      "name": "TPUB (target public firm dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "TTERMF (target termination fee / TV)",
+      "source": "SDC"
+     },
+     {
+      "name": "DAYS (days from announcement to completion)",
+      "source": "SDC"
+     },
+     {
+      "name": "SAMEIND (same 4-digit SIC dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "PREMIUM (premium over target price 4 weeks prior)",
+      "source": "SDC"
+     },
+     {
+      "name": "DEBT FINANCING ($ debt financing)",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel A: CARs Controlling for Acquirer Characteristics (OLS)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Winning corporate acquirers (All and Follower subsample)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "FINCOMP (financial competition dummy)",
+      "measure": "dummy = 1 if acquirer faced financial-bidder competition, 0 if corporate-bidder competition",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CASH, ACQ SIZE, RELSIZE, POISON, TOEHOLD, TPUB, TTERMF, DAYS, SAMEIND",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Acquirer market-to-book (AMB)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer asset turnover",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer cash to net assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer cash flow margin",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer quick ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer institutional ownership",
+      "source": "Thomson Reuters"
+     },
+     {
+      "name": "Acquirer insider ownership",
+      "source": "Thomson Reuters"
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel B: CARs Controlling for Target Characteristics (OLS)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Winning corporate acquirers (All and Follower subsample)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "FINCOMP (financial competition dummy)",
+      "measure": "dummy = 1 if acquirer faced financial-bidder competition, 0 if corporate-bidder competition",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CASH, POISON, TOEHOLD, TPUB, TTERMF, DAYS, SAMEIND",
+      "source": "SDC"
+     },
+     {
+      "name": "Target asset turnover",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target cash to net assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target cash flow margin",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target quick ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Single Bidder sample deals by corporate acquirers, 1980-2007",
+    "dv": {
+     "name": "Acquirer CAR on single-bidder deals",
+     "measure": "Mean CARs over the (-2,+2), (-20,+120), (-20,+180) event windows; acquirer return minus value-weighted market index",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Single-bidder deals by acquirers who competed with financial bidders vs benchmark no-competition sample",
+      "measure": "Col 1 = prior single-bidder acquisitions by Financial Competition acquirers; Col 2 = any single-bidder acquisition by those acquirers; Col 3 = benchmark single-bidder acquirers who never competed with financial bidders",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Untabulated: ex ante probability of becoming a takeover target (Palepu 1986 predictive logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Target probability",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Palepu (1986) predictive explanatory variables",
+      "measure": "explanatory variables described in the Appendix of Palepu (1986)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "divestitures",
+    "corporate competition sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "acquirer management ownership"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "ownership",
+    "compensation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target options awards"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "premium paid",
+    "debt financing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

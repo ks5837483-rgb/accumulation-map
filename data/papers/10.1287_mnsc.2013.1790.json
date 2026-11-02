@@ -1,0 +1,654 @@
+{
+ "paper_id": "10.1287_mnsc.2013.1790",
+ "title": "Do Private Equity Returns Result from Wealth Transfers and Short-Termism? Evidence from a Comprehensive Sample of Large Buyouts",
+ "journal": "MNSC",
+ "year": 2014,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "free cash flow theory",
+  "adverse selection",
+  "financial constraints theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "wealth_transfer_debt_holders",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "special_dividend_to_sponsor",
+      "relation": "decreases",
+      "to": "portfolio_company_cash",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "portfolio_company_cash",
+      "relation": "decreases",
+      "to": "bankruptcy_probability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "portfolio_company_cash"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sponsors take excessive payouts that harm debt holders in special-case, poorly-performing portfolio companies"
+   ]
+  },
+  {
+   "hypothesis": "wealth_transfer_strategic_buyers",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_deal_size",
+      "relation": "increases",
+      "to": "overpayment",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "overpayment",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overpayment"
+   ],
+   "moderators": [
+    {
+     "construct": "board_independence",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "overpayment",
+     "moderated_from": "relative_deal_size",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "governance_moderation"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sponsors transfer wealth from poorly-governed strategic buyers whose insider-dominated boards let them overpay"
+   ]
+  },
+  {
+   "hypothesis": "short_termism_investment_level",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_equity_ownership",
+      "relation": "increases",
+      "to": "financial_constraint",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_constraint",
+      "relation": "decreases",
+      "to": "investment_level",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_constraint"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "lower portfolio-company investment reflects sponsor selection of low-capital-expenditure firms, not inefficient underinvestment"
+   ]
+  },
+  {
+   "hypothesis": "short_termism_investment_cash_flow_sensitivity",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_equity_ownership",
+      "relation": "increases",
+      "to": "financial_constraint",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_constraint",
+      "relation": "increases",
+      "to": "investment_cash_flow_sensitivity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_constraint"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "cash flow proxies for investment opportunities rather than financial constraints"
+   ]
+  },
+  {
+   "hypothesis": "long_run_underperformance",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_of_sponsor_portfolio_company",
+      "relation": "increases",
+      "to": "overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overpayment",
+      "relation": "decreases",
+      "to": "long_run_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "long-run underperformance is generic to all acquirers rather than specific to buying private-equity portfolio firms"
+   ]
+  },
+  {
+   "hypothesis": "secondary_buyout_firm_type",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_portfolio_company_status",
+      "relation": "increases",
+      "to": "firm_type_suitability_for_private_ownership",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "firm_type_suitability_for_private_ownership",
+      "relation": "increases",
+      "to": "secondary_buyout_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_type_suitability_for_private_ownership"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "secondary_buyout_last_resort",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "time_held",
+      "relation": "increases",
+      "to": "inability_to_arrange_timely_exit",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "inability_to_arrange_timely_exit",
+      "relation": "increases",
+      "to": "secondary_buyout_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inability_to_arrange_timely_exit"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "poor portfolio company performance drives exit via secondary buyout"
+   ]
+  },
+  {
+   "hypothesis": "secondary_buyout_lemons",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_portfolio_company_status",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "financial_distress",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (large private equity leveraged/management buyouts and going-private transactions across a broad array of industries)",
+  "country_region": "United States",
+  "time_period": "1993-2006 (main buyout sample 1993-2001; portfolio companies with public debt bought out 1996-2006)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "877 buyouts (main sample); 216 portfolio companies with public debt for the while-private/investment analyses"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Thomson Financial's SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT (including COMPUSTAT segments database)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RiskMetrics/IRRC",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings (and foreign filings)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Factiva (business press articles)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hoover's business directory",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bloomberg",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Ken French's website (Fama-French factors data library)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 (pre/post-buyout industry-adjusted capital expenditures, operating margins, and ROA, split by special dividend)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "change in industry-adjusted operating performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Capital IQ; Compustat segments (industry adjustment)"
+    },
+    "key_ivs": [
+     {
+      "name": "special dividend",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 (Bankruptcy Logit Regressions), models (1)-(3)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "216 portfolio companies with public debt",
+    "dv": {
+     "name": "bankrupt",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected / Capital IQ / Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "special dividend dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "special dividend/equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "total dividends/equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "initial leverage",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "postbuyout industry-adjusted capital expenditures",
+      "source": "Capital IQ; Compustat"
+     },
+     {
+      "name": "postbuyout industry-adjusted ROA",
+      "source": "Capital IQ; Compustat"
+     },
+     {
+      "name": "postbuyout industry-adjusted operating margin",
+      "source": "Capital IQ; Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Investment-Cash-Flow Sensitivity Regressions), columns (1)-(3)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "capital expenditures scaled by assets",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Capital IQ"
+    },
+    "key_ivs": [
+     {
+      "name": "EBITDA/assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "Postbuyout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "Postbuyout x EBITDA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "Paid_special_dividend",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "Special_dividend x EBITDA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry_median_q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales_growth",
+      "source": "Capital IQ"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "191 public strategic acquirers of private equity portfolio companies (columns 3-4 restricted to 157 deals with disclosed transaction value)",
+    "dv": {
+     "name": "CAR (strategic buyer announcement return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP daily file"
+    },
+    "key_ivs": [
+     {
+      "name": "relsize",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Capital IQ / news articles (transaction value); CRSP (mktcap)"
+     },
+     {
+      "name": "Relsize x Ind_board",
+      "measure": "relsize interacted with the majority-independent-board indicator",
+      "source": "RiskMetrics/IRRC; SDC/Capital IQ"
+     },
+     {
+      "name": "Relsize x Board_size",
+      "measure": "relsize interacted with acquirer board size",
+      "source": "RiskMetrics/IRRC"
+     },
+     {
+      "name": "Relsize x Eindex",
+      "measure": "relsize interacted with the managerial entrenchment index",
+      "source": "RiskMetrics/IRRC; SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(mktcap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC / Capital IQ / news articles"
+     },
+     {
+      "name": "Q",
+      "source": "Compustat / Datastream (foreign)"
+     },
+     {
+      "name": "Time_held",
+      "source": "SDC / Capital IQ / hand-collected"
+     },
+     {
+      "name": "Board_size",
+      "source": "RiskMetrics/IRRC"
+     },
+     {
+      "name": "Indep_board",
+      "source": "RiskMetrics/IRRC"
+     },
+     {
+      "name": "Eindex",
+      "source": "RiskMetrics/IRRC; SEC filings"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "171 monthly observations; long-short portfolio rebalanced monthly, acquirers held for 36 months; domestic acquirers and foreign acquirers listed on a U.S. exchange or with ADRs",
+    "dv": {
+     "name": "monthly excess portfolio returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; Ken French's website (factors)"
+    },
+    "key_ivs": [
+     {
+      "name": "Alpha",
+      "measure": "the intercept (alpha) of the Fama-French factor regression",
+      "source": "CRSP; Ken French"
+     },
+     {
+      "name": "MktRF, HML, SMB",
+      "measure": "the Fama-French factors",
+      "source": "Ken French's website"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 9 (Analysis of Exit Types), multinomial logistic regression",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "877 portfolio companies",
+    "dv": {
+     "name": "buyout exit type",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected / Capital IQ / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Previously_portfolio_co",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Factiva / hand-collected"
+     },
+     {
+      "name": "Previously_other_private",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Factiva / hand-collected"
+     },
+     {
+      "name": "Previously_subsidiary",
+      "measure": "a dummy indicating the company was an operating subsidiary of a nonbuyout firm",
+      "source": "SDC / Factiva / hand-collected"
+     },
+     {
+      "name": "Time_held",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Capital IQ / hand-collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(lbovalue)",
+      "source": "SDC / Capital IQ"
+     },
+     {
+      "name": "ROA (industry median)",
+      "source": "Compustat segments"
+     },
+     {
+      "name": "Sales_growth (industry median)",
+      "source": "Compustat segments"
+     },
+     {
+      "name": "Log(sales) (industry median)",
+      "source": "Compustat segments"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "control firms",
+    "portfolio companies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sensitivity of investment to investment opportunities",
+    "control group"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

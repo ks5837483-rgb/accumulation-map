@@ -1,0 +1,22 @@
+EFFECT-SIZE SCHEMA (effect-size-1.0, pilot) — for meta-analysis. 2026-06-25.
+One record per TESTED relationship (tie to the mechanism graph by from/to). Numbers are VISION-read from the
+table grid; CONTEXT is read from the methods TEXT. "No number without a grounded cell."
+
+{
+ "from": "...", "to": "...",                              # the relationship (matches mechanism endpoints)
+ "effect_value": <number>,
+ "metric_type": "correlation|OLS_beta_std|OLS_beta_unstd|logit_logodds|marginal_effect|cohens_d|elasticity|percent|mean_diff|other",
+ "precision": {"type":"SE|t|CI|p","value":<number>},      # PREFER SE or t; p only as fallback
+ "n": <int>,
+ "sd_x": <number|null>, "sd_y": <number|null>,            # only if standardizing a beta / from descriptives table
+ # CONTEXT (makes pooling honest — the LATE / "not the same parameter" problem):
+ "x_measure":"...", "y_measure":"...",                    # exact operationalization
+ "sample":"...",                                          # population / industry / geo / unit of analysis
+ "time_period":"...",
+ "identification":"OLS|FE|DiD|IV|natural_experiment|RDD|matching|event_study|descriptive|other",
+ "specification":"...",                                   # which model / key controls
+ # GROUNDING:
+ "source":"Table X, p.Y", "evidence_span":"<verbatim cell/quote with the number + variable label>"
+}
+RULE: read each number from the VISIBLE cell attached to its row label; never guess (write "unclear").
+PREFER the descriptives-and-correlation table (r + N) when present — correlations are poolable, SE=1/sqrt(N-3).

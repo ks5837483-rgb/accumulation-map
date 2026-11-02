@@ -1,0 +1,566 @@
+{
+ "paper_id": "10.1177_0149206305280108",
+ "title": "Managing Uncertainty in a Formal Standards-Based Industry: A Real Options Perspective on Acquisition Timing",
+ "journal": "JOM",
+ "year": 2006,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "real options theory",
+  "growth options theory",
+  "information economics",
+  "resource-based view",
+  "absorptive capacity"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_technical_knowledge",
+      "relation": "increases",
+      "to": "internal_development_feasibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "internal_development_feasibility",
+      "relation": "decreases",
+      "to": "early_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "internal_development_feasibility"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_technical_patents",
+      "relation": "decreases",
+      "to": "technical_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "technical_uncertainty",
+      "relation": "decreases",
+      "to": "early_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technical_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_alliance",
+      "relation": "decreases",
+      "to": "technical_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "technical_uncertainty",
+      "relation": "decreases",
+      "to": "early_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technical_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "equity_alliance",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "early_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1995-2000",
+  "sample_description": "Acquisitions in the ITC industry, constrained to hardware targets only and to firms with single or dominant technologies; acquisition lists from EuroLAN Research and the Converge Network Digest; firm financial data from the Compustat database",
+  "sample_size": "163 acquisitions (basic data set); N = 148 in the main logistic regression"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "EuroLAN Research",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Converge Network Digest",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Delphion Patent Network",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LEXIS-NEXIS",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model A (controls only)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "163 acquisitions in ITC/networking industry 1995-2000; N=148 after 15 dropped for missing data",
+    "dv": {
+     "name": "acquisition timing (early vs. late)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EuroLAN Research / Converge Network Digest"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "RD/employee",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Month-end capitalization",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Month-end P/E",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Prior acquisition",
+      "source": "EuroLAN Research / Converge Network Digest"
+     },
+     {
+      "name": "Ln moving average of patents",
+      "source": "Delphion Patent Network"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model B (covariates)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3a"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition timing (early vs. late)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EuroLAN Research / Converge Network Digest"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer patent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Delphion Patent Network"
+     },
+     {
+      "name": "Target patent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Delphion Patent Network"
+     },
+     {
+      "name": "Alliance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RD/employee",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Month-end capitalization",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Month-end P/E",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Prior acquisition",
+      "source": "EuroLAN Research / Converge Network Digest"
+     },
+     {
+      "name": "Ln moving average of patents",
+      "source": "Delphion Patent Network"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model C (equity vs. nonequity alliances)",
+    "hypotheses": [
+     "H3b"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition timing (early vs. late)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EuroLAN Research / Converge Network Digest"
+    },
+    "key_ivs": [
+     {
+      "name": "Equity alliance",
+      "measure": "whether the acquirer had an equity alliance (equity position) in the target prior to acquisition; derived from search of financial officer reports and LEXIS-NEXIS trade journals",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Nonequity alliance",
+      "measure": "whether the acquirer had a nonequity alliance with the target prior to acquisition; derived from LEXIS-NEXIS search",
+      "source": "LEXIS-NEXIS"
+     },
+     {
+      "name": "Acquirer patent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Delphion Patent Network"
+     },
+     {
+      "name": "Target patent",
+      "measure": "possession of patents by target firms; dichotomous",
+      "source": "Delphion Patent Network"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RD/employee",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Month-end capitalization",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Month-end P/E",
+      "source": "Compustat database"
+     },
+     {
+      "name": "Prior acquisition",
+      "source": "EuroLAN Research / Converge Network Digest"
+     },
+     {
+      "name": "Ln moving average of patents",
+      "source": "Delphion Patent Network"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "pace of technological change",
+    "acquisition decision"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "pace of technological change",
+    "relation": "affects",
+    "to": "acquisition decision"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "acquisitions",
+    "alternative governance modes",
+    "strategic alliances",
+    "joint ventures",
+    "licensing",
+    "technical knowledge"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "single industry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "generalizability"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "single industry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "postacquisition performance",
+    "technology acquirers",
+    "acquisition timing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition timing",
+    "relation": "affects",
+    "to": "postacquisition performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "performance implications",
+    "acquisitions",
+    "diversified organizations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "performance implications",
+    "acquisition timing",
+    "asset complementarity",
+    "risk/reward trade-offs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "asset complementarity",
+    "on_path": [
+     "acquisition timing",
+     "performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "internal versus external r&d",
+    "portfolio or venture approach",
+    "performance",
+    "acquirers",
+    "internal developers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "internal versus external R&D",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "internal development"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "internal development",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "growth options",
+    "internal development",
+    "acquisition"
+   ],
+   "mechanism_named": "growth options",
+   "proposed_edge": {
+    "from": "internal development",
+    "relation": "affects",
+    "to": "economical creation of growth options"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "acquisition and development approach",
+    "firm survival",
+    "returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition and development approach",
+    "relation": "affects",
+    "to": "firm survival and returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "acquisition experience",
+    "first-time acquirers",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition experience",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "early acquisition",
+    "learning mechanism",
+    "subsequent failure"
+   ],
+   "mechanism_named": "learning mechanism",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "performance of subsequent acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "valuable learning",
+    "relation": "affects",
+    "to": "performance of subsequent acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "performance consequences",
+    "acquisition timing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition timing",
+    "relation": "affects",
+    "to": "performance consequences"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

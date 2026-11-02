@@ -1,0 +1,41 @@
+CANONICAL EXTRACTION PROMPT — mechanism-middle extraction (schema mechanism-triples-1.4)
+Prompt of record for the out_mechanism/ layer (5_mechanism/out_mechanism/). Placeholders in {BRACES}.
+The substantive rules live in mechanism_spec.txt; this wrapper only points the model at the spec + the paper.
+
+---
+You recover the UNMEASURED MECHANISM MIDDLE of each hypothesis in ONE paper, from your own careful FULL
+reading. Faithfulness to the paper's OWN words and OWN signs is the entire point — you are not improving
+the paper's logic, you are transcribing its causal chain.
+
+1. Read the spec: {SPEC} — follow it EXACTLY. In one breath: per hypothesis emit a strict 2-step chain
+   IV --[sign1]--> MECHANISM --[sign2]--> DV; relation is ONLY increases|decreases; the MECHANISM is the
+   unmeasured mediating construct, named in the paper's OWN wording and NEVER flipped to its opposite
+   (information_asymmetry stays information_asymmetry — the first edge MAY be "decreases"); EVERY edge and
+   EVERY mechanism carries a VERBATIM evidence_span (copy exactly, never paraphrase — no quote, no edge);
+   moderation goes in the "moderators" field, NEVER as a fabricated slope node; compute net = sign1 x sign2
+   and VALIDATE it against the hypothesis's stated_direction, FLAGGING conflicts (never force a sign, never
+   drop a record); AND per hypothesis record the TESTED outcome support_status (supported|rejected|mixed|
+   not_reported) with a VERBATIM results-sentence support_evidence_span (rule 12) — the DATA's verdict, read
+   from the results and kept INDEPENDENT of the predicted direction; classify each MODERATOR's role
+   (mechanism_probe|competing_contingency|atheoretical) + is_boundary_condition (rule 13); and per hypothesis
+   record alternatives_addressed (yes|no) + grounded alternatives_detail = did the paper rule out a NAMED rival
+   explanation for this relationship (rule 14).
+
+2. Read the FULL paper: {PAPER_TEXT}. Capture EVERY hypothesis that carries a causal mechanism. Use ONLY
+   the paper's own constructs and the directions it states. Every evidence_span MUST be an exact substring;
+   if you cannot quote a link's direction exactly, mark that edge "derived": true (sign forced by the other
+   two facts) or drop the edge — do not paraphrase a quote into existence.
+
+3. SCOPE: extract the causal claims the paper empirically TESTS — numbered (H1) OR unnumbered predictions it
+   tests against data (finance/econ empirical work often isn't numbered; do NOT require a number). Return
+   "mechanism_triples": [] ONLY if the paper does not empirically test causal claims at all: a formal-
+   modeling/theory paper, a review/meta-analysis, or a qualitative theory-BUILDING case study. Do NOT
+   manufacture a hypothesis from model prose. (See spec rule 11.)
+
+Write ONLY the JSON object (schema "mechanism-triples-1.4", paper_id "{PAPER_ID}"). No prose.
+---
+
+Model of record: claude-opus-4-8 (Opus 4.8). Decoding: provider defaults (temperature NOT pinned to 0).
+Input of record: the pre-stitched full text at 1_data/_fulltext{,_ie,_alliance}/<key>.txt, selected per the
+INPUT CONTRACT in 6_rule/MECHANISM_DESIGN.md (resolve by DOI; reject empty/cover-page text; eyeball N=5).
+Worked example (target output shape): 6_rule/_mech_onepaper/...(Reuer et al., 2012)...259_CORRECTED.json.

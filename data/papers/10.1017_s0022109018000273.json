@@ -1,0 +1,748 @@
+{
+ "paper_id": "10.1017_s0022109018000273",
+ "title": "Empirical Evidence of Overbidding in M&amp;A Contests",
+ "journal": "JFQA",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "hubris hypothesis",
+  "agency theory",
+  "auction theory",
+  "behavioral corporate finance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bid_premium",
+      "relation": "increases",
+      "to": "target_shareholder_reaction",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "target_shareholder_reaction",
+      "relation": "increases",
+      "to": "probability_of_deal_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_shareholder_reaction"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bid_premium",
+      "relation": "increases",
+      "to": "synergies_conceded_to_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergies_conceded_to_target",
+      "relation": "decreases",
+      "to": "bidder_profit",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergies_conceded_to_target"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bidder private information revelation (revelation effect) inflating the negative bidder return"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_past_performance",
+      "relation": "increases",
+      "to": "glamour_firm_overvaluation",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "glamour_firm_overvaluation",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "glamour_firm_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_entrenchment",
+      "relation": "increases",
+      "to": "agency_conflict",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "agency_conflict",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_conflict"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "competitive_pressure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_pressure",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_pressure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_leverage",
+      "relation": "decreases",
+      "to": "agency_conflict",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_conflict",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_conflict"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "toehold",
+      "relation": "decreases",
+      "to": "bidding_aggressiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidding_aggressiveness",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidding_aggressiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "negotiation",
+      "relation": "decreases",
+      "to": "winners_curse",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "winners_curse",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "winners_curse"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_narcissism",
+      "relation": "increases",
+      "to": "bidding_aggressiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidding_aggressiveness",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidding_aggressiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P10",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "winning_the_acquisition_contest",
+      "relation": "increases",
+      "to": "failure_to_account_for_winners_curse",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "failure_to_account_for_winners_curse",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "failure_to_account_for_winners_curse"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "exogenous deal failure (e.g., regulatory intervention) rather than winner’s-curse awareness"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A transactions between U.S.-listed bidders and targets)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1994-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,935"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Company (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings DEFM 14A and S-4 (mergers) and 14D (tender offers) — INITIATION and NEGOTIATION collected by hand",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 — Probability of Deal Completion (probit, equation (6))",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "PROBABILITY_OF_SUCCESS / probability of deal completion",
+     "measure": "probit model PROBABILITY_OF_SUCCESS = PROBIT(X'β); dependent variable = 1 if the acquisition attempt is completed (percentage of completed transactions)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "8_WEEK_BID_PREMIUM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (offer price) / CRSP (share price)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TARGET_SIZE (log target market value 42 days before announcement)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "NYSE_AMEX",
+      "source": "CRSP"
+     },
+     {
+      "name": "TURNOVER",
+      "source": "CRSP"
+     },
+     {
+      "name": "POISON_PILL",
+      "source": "SDC"
+     },
+     {
+      "name": "52_WEEK_HIGH",
+      "source": "CRSP"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "LISTED_BIDDER",
+      "source": "SDC"
+     },
+     {
+      "name": "HORIZONTAL (same 4-digit SIC code)",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER_OFFER",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "YEAR_1990S (announced 1994–1999)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, cols 1 & 3 — SUR bidder-profit equation (3) + FOC overbidding cross-equation test (eq. 5)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "1,935 completed transactions 1994–2014, U.S.-listed bidders and targets, deal size ≥ US$100 million (jointly estimated by SUR with eq. 4; FOC test uses Savor and Lu (2009) and Wang (2018) failure-cost estimates)",
+    "dv": {
+     "name": "BIDDER_SCALED_CAR (proxy for bidder's profit)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (scaled by probit-estimated probability of success)"
+    },
+    "key_ivs": [
+     {
+      "name": "8_WEEK_BID_PREMIUM (BID)",
+      "measure": "8_WEEK_BID_PREMIUM = OFFER_PRICE / PRICE_{t−42} − 1; offer price divided by the target share price 42 days before announcement (raw in col 1; winsorized 1st/99th pct in col 3)",
+      "source": "SDC (offer price) / CRSP (share price)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DEAL_SCALED_CAR (proxy for SYNERGIES)",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "TARGET_RUNUP",
+      "source": "CRSP"
+     },
+     {
+      "name": "BIDDER_SIZE",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "TARGET_INDUSTRY_LIQUIDITY (Schlingemann, Stulz, Walkling 2002, SIC 2-digit)",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "RELATIVE_SIZE (target to bidder)",
+      "source": "CRSP/Compustat/SDC"
+     },
+     {
+      "name": "HORIZONTAL",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "BIDDER_PRIVATE_R2 (market model residual price nonsynchronicity)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BIDDER_PRIVATE_AMIHUD (Amihud 2002 private information ratio)",
+      "source": "CRSP"
+     },
+     {
+      "name": "INITIATION (target initiated the transaction)",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "NEGOTIATION (one-to-one negotiation vs auction)",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "MULTIPLE_BIDDER",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, cols 2 & 4 — SUR probability-of-success equation (4)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "1,935 completed transactions 1994–2014 (jointly estimated by SUR with eq. 3)",
+    "dv": {
+     "name": "PROBABILITY_OF_SUCCESS (probability of deal completion)",
+     "measure": "estimated ex ante probability of deal completion from the probit model (equation (6)); Bhagat et al. (2005) probability scaling method",
+     "source": "SDC/CRSP (probit-estimated)"
+    },
+    "key_ivs": [
+     {
+      "name": "8_WEEK_BID_PREMIUM (BID)",
+      "measure": "OFFER_PRICE / PRICE_{t−42} − 1; offer price divided by the target share price 42 days before announcement (raw in col 2; winsorized 1st/99th pct in col 4)",
+      "source": "SDC (offer price) / CRSP (share price)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DEAL_SCALED_CAR (proxy for SYNERGIES)",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "TARGET_RUNUP",
+      "source": "CRSP"
+     },
+     {
+      "name": "BIDDER_SIZE",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "TARGET_INDUSTRY_LIQUIDITY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "CRSP/Compustat/SDC"
+     },
+     {
+      "name": "HORIZONTAL",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "BIDDER_PRIVATE_R2",
+      "source": "CRSP"
+     },
+     {
+      "name": "BIDDER_PRIVATE_AMIHUD",
+      "source": "CRSP"
+     },
+     {
+      "name": "INITIATION",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "NEGOTIATION",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "MULTIPLE_BIDDER",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Agency determinants of overbidding (subsample of 805 deals)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsample of 805 deals for which the additional (governance/CEO) information could be collected",
+    "dv": {
+     "name": "overbidding (DEAL_FOC / FOC test value)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/SDC (derived)"
+    },
+    "key_ivs": [
+     {
+      "name": "bidder past performance",
+      "measure": "",
+      "source": ""
+     },
+     {
+      "name": "bidder CEO entrenchment",
+      "measure": "",
+      "source": ""
+     },
+     {
+      "name": "leverage",
+      "measure": "",
+      "source": ""
+     },
+     {
+      "name": "toehold",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HORIZONTAL (horizontal merger)",
+      "source": "SDC"
+     },
+     {
+      "name": "relative target-to-bidder size",
+      "source": "CRSP/Compustat/SDC"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "NEGOTIATION",
+      "source": "SEC filings (hand-collected)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "governance mechanisms",
+    "agency conflicts",
+    "overbidding"
+   ],
+   "mechanism_named": "the challenging issue of identification",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "overbidding",
+    "governance mechanisms"
+   ],
+   "mechanism_named": "the classic endogenous omitted variables issue",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "bidder car",
+    "bidder transaction-specific value effect"
+   ],
+   "mechanism_named": "measurement error",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "probability of completion"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ceo narcissism",
+    "overbidding"
+   ],
+   "mechanism_named": "cognitive bias",
+   "proposed_edge": {
+    "from": "ceo narcissism",
+    "relation": "affects",
+    "to": "overbidding"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "director ownership",
+    "overbidding"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "director ownership",
+    "relation": "affects",
+    "to": "overbidding"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "overbidding",
+    "hostile transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

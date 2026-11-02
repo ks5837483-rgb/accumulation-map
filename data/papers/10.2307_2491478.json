@@ -1,0 +1,776 @@
+{
+ "paper_id": "10.2307_2491478",
+ "title": "The Effect of Taxes on the Structure of Corporate Acquisitions",
+ "journal": "JAR",
+ "year": 1998,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "tax-based capital structure theory (DeAngelo and Masulis)",
+  "Scholes-Wolfson tax planning framework",
+  "tax exhaustion hypothesis",
+  "debt capacity / moral hazard theory (Myers)",
+  "pecking order / overvaluation theory (Myers and Majluf)",
+  "financial distress cost theory",
+  "corporate control agency theory (Amihud, Lev, and Travlos)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquiring_firm_tax_rate",
+      "relation": "increases",
+      "to": "value_of_debt_tax_shields",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_of_debt_tax_shields",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_of_debt_tax_shields"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquiring_firm_net_operating_loss",
+      "relation": "increases",
+      "to": "tax_exhaustion",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "tax_exhaustion",
+      "relation": "decreases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "tax_exhaustion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_shareholder_capital_gains_tax_liability",
+      "relation": "increases",
+      "to": "cost_of_taxable_acquisition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_taxable_acquisition",
+      "relation": "decreases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_taxable_acquisition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_net_operating_loss",
+      "relation": "increases",
+      "to": "value_of_preserving_target_nols",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "value_of_preserving_target_nols",
+      "relation": "decreases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "target_net_operating_loss",
+      "relation": "increases",
+      "to": "value_of_offsetting_stepup_recapture_taxes",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_of_offsetting_stepup_recapture_taxes",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_of_preserving_target_nols",
+    "value_of_offsetting_stepup_recapture_taxes"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "net_step_up_tax_benefit",
+      "relation": "increases",
+      "to": "future_depreciation_tax_deductions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "future_depreciation_tax_deductions",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "future_depreciation_tax_deductions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_market_to_book",
+      "relation": "decreases",
+      "to": "debt_capacity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "debt_capacity",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquirer_market_to_book",
+      "relation": "increases",
+      "to": "equity_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "equity_overvaluation",
+      "relation": "decreases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "debt_capacity",
+    "equity_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_leverage",
+      "relation": "increases",
+      "to": "financial_distress_likelihood",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_distress_likelihood",
+      "relation": "decreases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_distress_likelihood"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_size",
+      "relation": "decreases",
+      "to": "default_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "default_risk",
+      "relation": "decreases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "acquirer_size",
+      "relation": "increases",
+      "to": "access_to_debt_markets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_debt_markets",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "default_risk",
+    "access_to_debt_markets"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_ownership",
+      "relation": "increases",
+      "to": "management_control_dilution_concern",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "management_control_dilution_concern",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "management_control_dilution_concern"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P10",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "multiple_bidders",
+      "relation": "increases",
+      "to": "cost_of_sec_registration_delay",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "cost_of_sec_registration_delay",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_sec_registration_delay"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P11",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "not_reported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hostile_takeover",
+      "relation": "increases",
+      "to": "cost_of_sec_registration_delay",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "cost_of_sec_registration_delay",
+      "relation": "increases",
+      "to": "debt_financed_taxable_transaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_sec_registration_delay"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. corporations, excluding financial services firms)",
+  "country_region": "United States",
+  "time_period": "1985-88",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "340"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergerstat Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers & Acquisitions",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "1994 Compustat tapes",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital Adjustments, Capital Changes Reporter",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Standard & Poor's Stock Guide",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Spectrum 6",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "firm proxy statements",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "acquiring/target firm statement of cash flows, footnotes, and tax footnotes",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - Tax variables by transaction tax status (univariate mean comparisons, Panels A-D)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "340 corporate acquisitions completed during 1985-88",
+    "dv": {
+     "name": "transaction tax status (taxable vs. tax-free)",
+     "measure": "transactions categorized by tax status (approximately 29.1% tax-free and 70.9% taxable)",
+     "source": "Capital Adjustments, Capital Changes Reporter, Mergers & Acquisitions, Wall Street Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqTriRate (acquirer trichotomous tax rate)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "CapGAIN (target shareholder capital gains)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "target firm stock price data"
+     },
+     {
+      "name": "TarINST% (target institutional ownership)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Standard & Poor's Stock Guide"
+     },
+     {
+      "name": "TarNOL (target NOL tax benefits)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "target firm tax footnotes"
+     },
+     {
+      "name": "STEP-UP / RECAPTURE / NetSTEP-UP (basis step-up tax benefits)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "target firm tax footnotes; 1994 Compustat tapes"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel A - Binomial logit, AcqTriRate tax proxy (N=249)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "debt-financed 100% cash taxable transaction (vs. 100% stock tax-free transaction)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqTriRate (acquirer trichotomous tax rate)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1994 Compustat tapes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CapGAIN (target shareholder capital gains)",
+      "source": "target firm stock price data"
+     },
+     {
+      "name": "TarNOL (target NOL tax benefits)",
+      "source": "target firm tax footnotes"
+     },
+     {
+      "name": "NetSTEP-UP (net basis step-up tax benefits)",
+      "source": "target firm tax footnotes; 1994 Compustat tapes"
+     },
+     {
+      "name": "AcqMTB (acquirer market-to-book ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "AcqD/E (acquirer debt-to-equity ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MANAGE% (percentage of acquiring firm stock owned by board and management)",
+      "source": "Spectrum 6; firm proxy statements"
+     },
+     {
+      "name": "AcqMVE (acquirer market value of equity, size control)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MULTI (multiple bidders dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "HOSTILE (hostile transaction dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B - Binomial logit, AcqNOL tax proxy (N=249)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N=249 estimated",
+    "dv": {
+     "name": "debt-financed 100% cash taxable transaction (vs. 100% stock tax-free transaction)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqNOL (acquirer NOL dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1994 Compustat tapes; firm tax footnotes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CapGAIN (target shareholder capital gains)",
+      "source": "target firm stock price data"
+     },
+     {
+      "name": "TarNOL (target NOL tax benefits)",
+      "source": "target firm tax footnotes"
+     },
+     {
+      "name": "NetSTEP-UP (net basis step-up tax benefits)",
+      "source": "target firm tax footnotes; 1994 Compustat tapes"
+     },
+     {
+      "name": "AcqMTB (acquirer market-to-book ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "AcqD/E (acquirer debt-to-equity ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MANAGE% (percentage of acquiring firm stock owned by board and management)",
+      "source": "Spectrum 6; firm proxy statements"
+     },
+     {
+      "name": "AcqMVE (acquirer market value of equity, size control)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MULTI (multiple bidders dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "HOSTILE (hostile transaction dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel C - Binomial logit, AcqTriRate tax proxy, alternate capital-gains proxy (N=252)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N=252 estimated",
+    "dv": {
+     "name": "debt-financed 100% cash taxable transaction (vs. 100% stock tax-free transaction)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqTriRate (acquirer trichotomous tax rate)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1994 Compustat tapes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TarINST% (target institutional ownership)",
+      "source": "Standard & Poor's Stock Guide"
+     },
+     {
+      "name": "TarNOL (target NOL tax benefits)",
+      "source": "target firm tax footnotes"
+     },
+     {
+      "name": "NetSTEP-UP (net basis step-up tax benefits)",
+      "source": "target firm tax footnotes; 1994 Compustat tapes"
+     },
+     {
+      "name": "AcqMTB (acquirer market-to-book ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "AcqD/E (acquirer debt-to-equity ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MANAGE% (percentage of acquiring firm stock owned by board and management)",
+      "source": "Spectrum 6; firm proxy statements"
+     },
+     {
+      "name": "AcqMVE (acquirer market value of equity, size control)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MULTI (multiple bidders dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "HOSTILE (hostile transaction dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel D - Binomial logit, AcqNOL tax proxy, alternate capital-gains proxy (N=252)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N=252 estimated",
+    "dv": {
+     "name": "debt-financed 100% cash taxable transaction (vs. 100% stock tax-free transaction)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqNOL (acquirer NOL dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1994 Compustat tapes; firm tax footnotes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TarINST% (target institutional ownership)",
+      "source": "Standard & Poor's Stock Guide"
+     },
+     {
+      "name": "TarNOL (target NOL tax benefits)",
+      "source": "target firm tax footnotes"
+     },
+     {
+      "name": "NetSTEP-UP (net basis step-up tax benefits)",
+      "source": "target firm tax footnotes; 1994 Compustat tapes"
+     },
+     {
+      "name": "AcqMTB (acquirer market-to-book ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "AcqD/E (acquirer debt-to-equity ratio)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MANAGE% (percentage of acquiring firm stock owned by board and management)",
+      "source": "Spectrum 6; firm proxy statements"
+     },
+     {
+      "name": "AcqMVE (acquirer market value of equity, size control)",
+      "source": "1994 Compustat tapes"
+     },
+     {
+      "name": "MULTI (multiple bidders dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "HOSTILE (hostile transaction dummy)",
+      "source": "Mergerstat Review; Mergers & Acquisitions; Wall Street Journal"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

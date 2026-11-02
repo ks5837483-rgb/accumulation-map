@@ -1,0 +1,480 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1987.tb03922.x",
+ "title": "The Pricing Effects of Interfirm Cash Tender Offers",
+ "journal": "JF",
+ "year": 1987,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "option pricing theory",
+  "synergy theory of corporate takeovers",
+  "capital asset pricing model",
+  "information risk pricing",
+  "hubris hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_tender_offer",
+      "relation": "increases",
+      "to": "put_option",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "put_option",
+      "relation": "decreases",
+      "to": "portfolio_beta",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "cash_tender_offer",
+      "relation": "increases",
+      "to": "put_option",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "put_option",
+      "relation": "decreases",
+      "to": "portfolio_standard_deviation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "put_option"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a prospective merger with another firm lowering the target firm's beta (the 'merger explanation')"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "williams_act",
+      "relation": "increases",
+      "to": "offer_duration",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "offer_duration",
+      "relation": "increases",
+      "to": "put_option_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "offer_duration"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_overbidding",
+      "relation": "increases",
+      "to": "wealth_transfer_to_target",
+      "from_measured": false,
+      "to_measured": true
+     },
+     {
+      "from": "wealth_transfer_to_target",
+      "relation": "decreases",
+      "to": "bidder_value",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "wealth_transfer_to_target"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "unique synergies between bidder and target (the synergy hypothesis, as opposed to overbidding) as the source of the put premium"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_tender_offer",
+      "relation": "increases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "increases",
+      "to": "underlying_stock_standard_deviation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "portfolio_beta",
+      "relation": "increases",
+      "to": "capm_required_return",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_required_return",
+      "relation": "increases",
+      "to": "abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_required_return"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "mismeasured market-model benchmarks (e.g., abnormally negative returns in the pre- and post-event estimation periods, or a negative realized market return)"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_uncertainty",
+      "relation": "increases",
+      "to": "information_risk_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_risk_premium",
+      "relation": "increases",
+      "to": "abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_risk_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sample selection bias from excluding tender offers with targets under litigation, which might have offsetting negative returns"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE- or AMEX-listed U.S. target firms receiving cash tender offers)",
+  "country_region": "United States (NYSE and AMEX)",
+  "time_period": "July 1962-December 1980",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "295 cash tender offers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP Daily Returns File (daily CRSP tape)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal (WSJ)",
+    "category": "hand_collected",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "Hypothesis One",
+     "Hypothesis Two"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "295 pre-event, 286 tender period, 182 post-event",
+    "dv": {
+     "name": "beta and standard deviation of the target firm's common stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Daily Returns File (daily CRSP tape)"
+    },
+    "key_ivs": [
+     {
+      "name": "tender-offer event interval (pre-event vs tender vs post-event period)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "subsample of 86 firms meeting criteria; 85 cases with unique convergence used",
+    "dv": {
+     "name": "estimated underlying stock price and fractional put value of the target firm",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ)"
+    },
+    "key_ivs": [
+     {
+      "name": "tender-offer announcement / offer terms",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal (WSJ)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Pre- vs post-Williams Act comparison of put value as a percentage of pre-offer price (difference-in-means t-test)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "Williams Act (passed 1968, amended 1970)",
+    "sample": "85 firms (40 pre-1970, 45 for 1970-1980)",
+    "dv": {
+     "name": "put option value as a percentage of the pre-offer stock price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ)"
+    },
+    "key_ivs": [
+     {
+      "name": "Williams Act regime (prior to 1970 vs 1970 through 1980)",
+      "measure": "Prior to 1970 (forty observations) vs the period 1970 through 1980 (forty-five observations)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "85 observations from the period 1962 through 1980",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "tender-period standard deviation of the underlying stock, and as a percentage of the pre-tender-period standard deviation (day -170 to day -21); paired t, Wilcoxon, and sign tests against the pre-tender standard deviation",
+     "source": "Wall Street Journal (WSJ)"
+    },
+    "key_ivs": [
+     {
+      "name": "tender period vs pre-tender period",
+      "measure": "tender-period underlying-stock standard deviation compared to the pre-tender-period standard deviation of the stock",
+      "source": "CRSP Daily Returns File (daily CRSP tape)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section III.D: Testing for Systematic Overbidding (correlation between bidder announcement-period abnormal return and value of puts given to target)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidding firm's announcement-period abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Daily Returns File (daily CRSP tape)"
+    },
+    "key_ivs": [
+     {
+      "name": "value of put options given to target shareholders",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal (WSJ)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "295 (pre-event benchmark), 182 (post-event benchmark)",
+    "dv": {
+     "name": "cumulative abnormal return (CAR) of target firm common stock over the tender period",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Daily Returns File (daily CRSP tape)"
+    },
+    "key_ivs": [
+     {
+      "name": "benchmark estimation period (pre-event vs post-event market model)",
+      "measure": "market model estimated over the pre-event period (day -170 to -21) versus the post-event period (day +21 to +170)",
+      "source": "CRSP Daily Returns File (daily CRSP tape)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "pre-event benchmark: 56/56/109/74; post-event benchmark: 43/42/69/28",
+    "dv": {
+     "name": "cumulative abnormal return (CAR) of target firm common stock",
+     "measure": "mean CAR over the tender period by calendar subperiod, for pre-event and post-event benchmarks; ANOVA F-statistic tests whether mean CARs in the four subperiods are equal",
+     "source": "CRSP Daily Returns File (daily CRSP tape)"
+    },
+    "key_ivs": [
+     {
+      "name": "calendar subperiod",
+      "measure": "four subperiods: 1962-66, 1967-71, 1972-76, 1977-80",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section IV: Correlation between CAR and change in standard deviation of the underlying stock (information-risk pricing test)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "eighty-five",
+    "dv": {
+     "name": "cumulative abnormal return (CAR) of target firm common stock during the tender period",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Daily Returns File (daily CRSP tape)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in standard deviation of the underlying stock (proxy for information uncertainty)",
+      "measure": "the ratio of the estimated tender-period underlying-stock standard deviation to the pre-tender standard deviation; and the change in standard deviation (tender-period minus pre-tender-period standard deviation of the underlying stock)",
+      "source": "Wall Street Journal (WSJ)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "pricing of this type of risk",
+    "information risk"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "iterative technique",
+    "black-scholes put valuation formula"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "announcement-period returns",
+    "value to the bidder of the merger",
+    "bidding firm's earnings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "announcement period returns",
+    "actual value of the tender offer"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "information uncertainty"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

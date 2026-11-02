@@ -1,0 +1,7 @@
+VARIABLE ASSIGNMENT — prompt of record (varassign-1.0, 2026-10-01)
+Stage 2. You are given taxonomy_<side>.jsonl (the agreed list of distinct constructs, with definitions) and an input file of construct
+names from the vargroup-1.0 pass, each with its paper count and original variable names. For EACH input line output ONE JSON line:
+{"construct": <copy>, "tax_id": <the taxonomy entry it belongs to, exactly as written in the taxonomy; or "NEW:<snake_case>" if none fits>,
+"polarity": "same" | "reverse" | "na" (relative to the taxonomy entry's definition), "confidence": high|medium|low, "note": one sentence}.
+STRICT JUDGMENT RULE: judge every line yourself; do NOT write or run any program, script, regex, keyword list, lookup table or default to
+assign fields. The only code you may run reads the inputs and writes your composed JSON lines, one per input line, same order.

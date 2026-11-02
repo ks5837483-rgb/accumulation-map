@@ -1,0 +1,479 @@
+{
+ "paper_id": "10.1016_0304-405x(83)90005-3",
+ "title": "Merger bids, uncertainty, and stockholder returns",
+ "journal": "JFE",
+ "year": 1983,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "market for corporate control",
+  "efficient markets hypothesis",
+  "synergy theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_bid_announcement",
+      "relation": "increases",
+      "to": "probability_of_merger",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_merger",
+      "relation": "increases",
+      "to": "target_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_merger"
+   ],
+   "moderators": [
+    {
+     "construct": "merger_bid_success",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "probability_of_merger",
+     "moderated_from": "merger_bid_announcement",
+     "moderated_to": "target_firm_abnormal_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "successful_merger_bid_progress",
+      "relation": "increases",
+      "to": "probability_of_merger",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_merger",
+      "relation": "increases",
+      "to": "target_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "unsuccessful_merger_bid_progress",
+      "relation": "decreases",
+      "to": "probability_of_merger",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_merger",
+      "relation": "increases",
+      "to": "target_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_merger"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "merger_bid_announcement",
+      "relation": "increases",
+      "to": "probability_of_merger",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_merger",
+      "relation": "increases",
+      "to": "bidding_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_merger"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_bidding_process",
+      "relation": "decreases",
+      "to": "bidding_firm_management_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidding_firm_management_quality",
+      "relation": "increases",
+      "to": "bidding_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidding_firm_management_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_anticipation_of_target",
+      "relation": "increases",
+      "to": "probability_of_merger",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_merger",
+      "relation": "decreases",
+      "to": "target_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_merger"
+   ],
+   "moderators": [
+    {
+     "construct": "information_leakage",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "probability_of_merger",
+     "moderated_from": "market_anticipation_of_target",
+     "moderated_to": "target_firm_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_completion",
+      "relation": "increases",
+      "to": "target_unique_resource_synergy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_unique_resource_synergy",
+      "relation": "increases",
+      "to": "target_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "merger_completion",
+      "relation": "decreases",
+      "to": "target_management_inefficiency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_management_inefficiency",
+      "relation": "decreases",
+      "to": "target_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_unique_resource_synergy",
+    "target_management_inefficiency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "stockholder gains are a wealth transfer from bondholders rather than real gains"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE-listed firms engaged in merger bids)",
+  "country_region": "United States (NYSE-listed firms)",
+  "time_period": "1962-1976",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "211 successful target firms and 196 successful bidding firms; 91 unsuccessful target firms and 89 unsuccessful bidding firms"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "daily CRSP excess return tape at the University of Chicago",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "NYSE delistings of securities (examined for mergers, July 1962 to December 1976)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "The Wall Street Journal (merger bids reported)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Average daily cumulative excess returns, pre-press date period (t=-480 to -20 days)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "211 successful target and 196 successful bidding firms; 91 unsuccessful target and 89 unsuccessful bidding firms; NYSE-listed target merger bids 1962-1976",
+    "dv": {
+     "name": "cumulative excess returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP excess return tape at the University of Chicago"
+    },
+    "key_ivs": [
+     {
+      "name": "merger bid outcome (successful vs unsuccessful)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NYSE delistings of securities (examined for mergers, July 1962 to December 1976)"
+     },
+     {
+      "name": "firm role (target vs bidding firm)",
+      "measure": "target firm vs bidding (acquiring) firm classification of the merger bid",
+      "source": "NYSE delistings of securities (examined for mergers, July 1962 to December 1976)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Announcement/press-date market reaction (section 4.3-4.4)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative excess returns",
+     "measure": "average excess returns and cumulative excess returns (CER) around the merger bid press/announcement date",
+     "source": "daily CRSP excess return tape at the University of Chicago"
+    },
+    "key_ivs": [
+     {
+      "name": "merger bid announcement",
+      "measure": "excess returns measured relative to the merger bid announcement (press) date event",
+      "source": "The Wall Street Journal (merger bids reported)"
+     },
+     {
+      "name": "merger bid outcome (successful vs unsuccessful)",
+      "measure": "successful = completed merger; unsuccessful = abandoned bid",
+      "source": "NYSE delistings of securities (examined for mergers, July 1962 to December 1976)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Outcome-date market reaction (section 4.5)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative excess returns",
+     "measure": "average and cumulative excess returns (CER) around the merger bid outcome date",
+     "source": "daily CRSP excess return tape at the University of Chicago"
+    },
+    "key_ivs": [
+     {
+      "name": "merger bid outcome event",
+      "measure": "excess returns measured relative to the outcome (completion or abandonment) date of the merger bid",
+      "source": "NYSE delistings of securities (examined for mergers, July 1962 to December 1976)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Post-outcome one-year period (section 4.6)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative excess returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP excess return tape at the University of Chicago"
+    },
+    "key_ivs": [
+     {
+      "name": "merger bid outcome (successful vs unsuccessful)",
+      "measure": "successful vs unsuccessful merger bid classification",
+      "source": "NYSE delistings of securities (examined for mergers, July 1962 to December 1976)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Trading-suspended firms subset (section 4.7)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "small subset of sample firms with NYSE trading suspended on the press day",
+    "dv": {
+     "name": "cumulative excess returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP excess return tape at the University of Chicago"
+    },
+    "key_ivs": [
+     {
+      "name": "NYSE trading suspension on press day",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NYSE delistings of securities (examined for mergers, July 1962 to December 1976)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "stock price behavior",
+    "merged firms",
+    "post-outcome period"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "stock price reaction",
+    "merger",
+    "negative excess returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "excess returns",
+    "merged firms",
+    "equity value"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "stock price behavior",
+    "post-outcome period"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "negative excess returns",
+    "unsuccessful bidding firms",
+    "subsequent events"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target firm abnormal stock price changes",
+    "excess returns",
+    "merger bid"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

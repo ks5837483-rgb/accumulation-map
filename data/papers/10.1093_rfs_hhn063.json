@@ -1,0 +1,1130 @@
+{
+ "paper_id": "10.1093_rfs_hhn063",
+ "title": "Bank Debt and Corporate Governance",
+ "journal": "RFS",
+ "year": 2008,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "financial intermediation theory",
+  "information economics",
+  "market for corporate control",
+  "corporate governance theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relationship_bank_lending_intensity",
+      "relation": "increases",
+      "to": "bank_information_production",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_information_production",
+      "relation": "increases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_information_production"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "an investment banking explanation (universal banks' M&A/underwriting activity) rather than a commercial bank lending channel"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relationship_bank_client_base",
+      "relation": "increases",
+      "to": "pool_of_potential_acquirers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "pool_of_potential_acquirers",
+      "relation": "increases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "pool_of_potential_acquirers"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "larger banks simply have larger client networks and are more active in the takeover market (bank size confound)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relationship_bank_lending_intensity",
+      "relation": "increases",
+      "to": "bank_information_production",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_information_production",
+      "relation": "increases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_information_production"
+   ],
+   "moderators": [
+    {
+     "construct": "shared_relationship_bank",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "bank_information_production",
+     "moderated_from": "relationship_bank_lending_intensity",
+     "moderated_to": "takeover_probability",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relationship_bank_switch",
+      "relation": "increases",
+      "to": "private_information_about_target",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "private_information_about_target",
+      "relation": "increases",
+      "to": "acquisition_of_new_bank_client",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_about_target"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "switching is induced by sweetened (lower-spread) loan terms from the new bank rather than by information transfer"
+   ]
+  },
+  {
+   "hypothesis": "default_risk_motive",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relationship_bank_lending_intensity",
+      "relation": "increases",
+      "to": "bank_information_production",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_information_production",
+      "relation": "increases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_information_production"
+   ],
+   "moderators": [
+    {
+     "construct": "credit_quality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "bank_information_production",
+     "moderated_from": "relationship_bank_lending_intensity",
+     "moderated_to": "takeover_probability",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "default_risk_motive"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "financing motive (bank benefits from financing the takeover) and merger advisory fee motive as the driver of the bank's information transfer"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1992-2005",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "28,234 firm observations including 1,454 takeover targets"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Loan Pricing Corporation's (LPC) DealScan database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thompson/CDA Spectrum",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Executive Compensation (Execucomp)",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions magazine",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1,454 takeover targets and 28,234 firm observations, 1992-2005, excluding financials (SIC 60-64); column 6 = 330 unsolicited/hostile targets (11,355 obs)",
+    "dv": {
+     "name": "Takeover target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Loan intensity (Exposure)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Loan intensity (N)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (Exposure)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional blockholder",
+      "source": "Thompson/CDA Spectrum"
+     },
+     {
+      "name": "Rated",
+      "source": "Compustat"
+     },
+     {
+      "name": "High yield",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bad z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bank dependence",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Short maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (Alternative control sample: propensity-score matching, H1 robustness)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "2,113 paired observations (all takeovers) / 426 (unsolicited); nearest-neighbor propensity-score match at 0.1 caliper, matched by 2-digit SIC and year",
+    "dv": {
+     "name": "Takeover target",
+     "measure": "paired mean comparison of bank lending intensity between takeover target firms and their propensity-score-matched nontarget firms",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Loan intensity (N)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROA (adj.) (propensity-score match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.) (match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.) (match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets) (match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE) (match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash (match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage (match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bad z-score (model 2 match variable)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Two-digit SIC Code and year (match variables)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "5,314 obs / 337 targets (Execucomp-covered S&P index firms); columns 4-6 = unsolicited subsample (1,038 obs, 103 targets)",
+    "dv": {
+     "name": "Takeover target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Managerial ownership (total)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Executive Compensation (Execucomp)"
+     },
+     {
+      "name": "Managerial ownership (CEO)",
+      "measure": "the fraction of shares held by CEO",
+      "source": "Compustat Executive Compensation (Execucomp)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional blockholder",
+      "source": "Thompson/CDA Spectrum"
+     },
+     {
+      "name": "Rated",
+      "source": "Compustat"
+     },
+     {
+      "name": "High yield",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bad z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bank dependence",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Short maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (Exposure)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "excludes top ten M&A banks per Mergers and Acquisitions magazine (cols 1/3) or top ten securities underwriters per SDC (cols 2/4); cols 3-4 = hostile subsample",
+    "dv": {
+     "name": "Takeover target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (Exposure)",
+      "measure": "dollar exposure loaned to the target by its relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional blockholder",
+      "source": "Thompson/CDA Spectrum"
+     },
+     {
+      "name": "Rated",
+      "source": "Compustat"
+     },
+     {
+      "name": "High yield",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bad z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bank dependence",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Short maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "column 1 excludes all commercial-paper backup loans; 28,234 obs / 1,454 targets; columns 4-6 = unsolicited (11,355 obs, 330 targets)",
+    "dv": {
+     "name": "Takeover target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (Exposure)",
+      "measure": "dollar exposure loaned to the target by its relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "CP rating x Relation intensity (N)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CP rating",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional blockholder",
+      "source": "Thompson/CDA Spectrum"
+     },
+     {
+      "name": "Rated",
+      "source": "Compustat"
+     },
+     {
+      "name": "High yield",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bad z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bank dependence",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Short maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "28,234 obs / 1,454 targets (all takeovers); column 3 = hostile subsample (11,355 obs, 330 targets)",
+    "dv": {
+     "name": "Takeover target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank net",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Bank size",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional blockholder",
+      "source": "Thompson/CDA Spectrum"
+     },
+     {
+      "name": "Rated",
+      "source": "Compustat"
+     },
+     {
+      "name": "High yield",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bad z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bank dependence",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Short maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (Exposure)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Bank link",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Loan Pricing Corporation's (LPC) DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Bank net",
+      "measure": "logarithm of the number of potential acquirers sharing the same relationship bank as the target (2-digit SIC and asset-size selected), over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Bank size",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional blockholder",
+      "source": "Thompson/CDA Spectrum"
+     },
+     {
+      "name": "Rated",
+      "source": "Compustat"
+     },
+     {
+      "name": "High yield",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bad z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bank dependence",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Short maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (Exposure)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "acquirer switching to a new relationship bank (switching experiment; switch treated as exogenous of the decision to acquire a client of the new bank)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Bidder is switching firm",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Loan Pricing Corporation's (LPC) DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "After switch",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "28,234 obs / 1,454 targets (all takeovers); column 2 = hostile (11,355 obs, 330 targets)",
+    "dv": {
+     "name": "Takeover target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Relation intensity (N) x Bad z-score",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (N)",
+      "measure": "frequency of borrowing (number of loans) from a relationship bank over a three-year window",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Bad z-score",
+      "measure": "dummy of 1 if the Altman (1968) z-score falls below the threshold value of z = 1.81 (bad creditworthiness/high default probability region)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry M&A intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market/Book assets (adj.)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset structure (PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional blockholder",
+      "source": "Thompson/CDA Spectrum"
+     },
+     {
+      "name": "Rated",
+      "source": "Compustat"
+     },
+     {
+      "name": "High yield",
+      "source": "Compustat"
+     },
+     {
+      "name": "Short maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Bank dependence",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Relation intensity (Exposure)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ]
+   },
+   {
+    "label": "Table 11 (Bank's motives: difference-in-means comparison of acquirer vs target credit quality and performance)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "107 targets vs 98 acquirers in the linked (shared relationship bank) subsample; panel C: 14 advisor=1 vs 69 advisor=0 (83 cases with advisor info)",
+    "dv": {
+     "name": "Target vs acquirer credit quality and performance",
+     "measure": "t-ratio difference-in-means tests comparing z-score, S&P senior debt rating, ROA (adj.), ROE (adj.), net profit margin (adj.), and Market/Book (adj.) between targets and acquirers (and by relationship-bank advisor status)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Firm role (target vs acquirer) in the linked-bank sample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Relationship bank is merger advisor (Advisor = 1 vs 0)",
+      "measure": "whether the relationship bank was also serving as advisor to the bidder",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Footnote 37 (AISD loan-spread regression - test of switching 'sweetener')",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "loans of switching firms (first loan from new bank vs last loan from old bank)",
+    "dv": {
+     "name": "All-in-spread drawn (AISD over LIBOR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Loan Pricing Corporation's (LPC) DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "New/switched loan (dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Loan amount)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan database"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "shared lending relationship",
+    "bank information channel",
+    "takeover bids"
+   ],
+   "mechanism_named": "the bank information channel",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "switching observations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bank switching",
+    "probability of extending a takeover bid"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "switching",
+    "sweetened loan terms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "informational role for banks",
+    "information transmission"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "acquirers",
+    "poorly performing targets"
+   ],
+   "mechanism_named": "bad “debt transfer”",
+   "proposed_edge": {
+    "from": "acquirers",
+    "relation": "affects",
+    "to": "poorly performing targets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "financing motive",
+    "bank’s decision to channel information"
+   ],
+   "mechanism_named": "the financing motive",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

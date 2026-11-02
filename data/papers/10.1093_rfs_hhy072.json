@@ -1,0 +1,672 @@
+{
+ "paper_id": "10.1093/rfs/hhy072",
+ "title": "Informed Trading by Advisor Banks: Evidence from Options Holdings",
+ "journal": "RFS",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "informed trading theory",
+  "market microstructure"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_bank_relationship",
+      "relation": "increases",
+      "to": "information_leakage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_leakage",
+      "relation": "increases",
+      "to": "informed_trading_in_target_options",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_leakage"
+   ],
+   "moderators": [
+    {
+     "construct": "options_volume_over_stock_volume",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "feasibility of trading in options",
+     "moderated_from": "advisor_bank_relationship",
+     "moderated_to": "informed_trading_in_target_options",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1a"
+    },
+    {
+     "construct": "high_options_institution",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "[withheld: wording matches the source]",
+     "moderated_from": "advisor_bank_relationship",
+     "moderated_to": "informed_trading_in_target_options",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1b"
+    },
+    {
+     "construct": "same_advisor_before",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "[withheld: wording matches the source]",
+     "moderated_from": "advisor_bank_relationship",
+     "moderated_to": "informed_trading_in_target_options",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1c"
+    },
+    {
+     "construct": "bank_governance_structure",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "[withheld: wording matches the source]",
+     "moderated_from": "advisor_bank_relationship",
+     "moderated_to": "informed_trading_in_target_options",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1d"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_bank_relationship",
+      "relation": "increases",
+      "to": "information_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_advantage",
+      "relation": "increases",
+      "to": "informed_put_trading_in_acquirer_options",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_advantage"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_deal_size",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "[withheld: wording matches the source]",
+     "moderated_from": "advisor_bank_relationship",
+     "moderated_to": "informed_put_trading_in_acquirer_options",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "nonsignificant",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "advisor_bank_relationship",
+      "relation": "increases",
+      "to": "preference_for_options_over_stock",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "preference_for_options_over_stock",
+      "relation": "decreases",
+      "to": "informed_trading_in_target_stock",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "preference_for_options_over_stock"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cessation_of_proprietary_trading",
+      "relation": "decreases",
+      "to": "capacity_to_trade_on_private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capacity_to_trade_on_private_information",
+      "relation": "increases",
+      "to": "informed_trading_in_target_options",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capacity_to_trade_on_private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_bank_relationship",
+      "relation": "increases",
+      "to": "information_about_deal_specific_terms",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_about_deal_specific_terms",
+      "relation": "increases",
+      "to": "informed_trading_in_target_options",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_about_deal_specific_terms"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_net_call_ratio",
+      "relation": "increases",
+      "to": "information_diffusion_from_options_to_stock_market",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_diffusion_from_options_to_stock_market",
+      "relation": "increases",
+      "to": "target_firm_run_up",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_diffusion_from_options_to_stock_market"
+   ],
+   "moderators": [
+    {
+     "construct": "advisor_status",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "advisors' options positions are informed",
+     "moderated_from": "advisor_net_call_ratio",
+     "moderated_to": "target_firm_run_up",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P6a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. mergers and acquisitions with publicly traded targets that have publicly listed options; spanning Fama-French industry groups)",
+  "country_region": "United States",
+  "time_period": "2000-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "912 mergers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "OptionMetrics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "13F filings on EDGAR",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Thomson Reuters (compiled 13F holdings)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Probit propensity-score model for selecting matched control firms (Figure 2 / used for Table 4)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Target firm indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "log(market capitalization)",
+      "measure": "log(market capitalization)",
+      "source": "CRSP"
+     },
+     {
+      "name": "volatility",
+      "measure": "volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(options volume)",
+      "measure": "log(options volume)",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "log(share volume)",
+      "measure": "log(share volume)",
+      "source": "CRSP"
+     },
+     {
+      "name": "quarterly return",
+      "measure": "quarterly return",
+      "source": "CRSP"
+     },
+     {
+      "name": "leverage",
+      "measure": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "industry merger activity",
+      "measure": "industry merger activity",
+      "source": "Thomson Financial"
+     }
+    ],
+    "controls": [
+     {
+      "name": "calendar quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Fama-French 48 industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2 (Advisor bank trading in target firms; Col 1 Call Ratio, Col 2 Put Ratio, Col 3 Net Call Ratio)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Options holdings ratios",
+     "measure": "[withheld: wording matches the source]",
+     "source": "13F filings on EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Quarter -1",
+      "measure": "Quarter -1 dummy (options holdings relative to benchmark period of Quarters -6 through -3)",
+      "source": "13F filings on EDGAR"
+     },
+     {
+      "name": "Quarter -2",
+      "measure": "Quarter -2 dummy",
+      "source": "13F filings on EDGAR"
+     },
+     {
+      "name": "Target Advisor x Quarter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial"
+     },
+     {
+      "name": "Acquirer Advisor x Quarter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial"
+     }
+    ],
+    "controls": [
+     {
+      "name": "stock volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "options volume",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "market capitalization",
+      "source": "CRSP"
+     },
+     {
+      "name": "industry merger activity",
+      "source": "Thomson Financial"
+     },
+     {
+      "name": "Merger Rumor",
+      "source": "Thomson Financial"
+     },
+     {
+      "name": "lagged dependent variable",
+      "source": "13F filings on EDGAR"
+     },
+     {
+      "name": "bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "calendar quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (Volcker Rule / cessation of proprietary trading test; Col 1 ceased-trading mergers, Col 2 full-period bank sample, Col 4 hedge funds)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "Volcker Rule (Dodd-Frank Act provision banning bank proprietary trading)",
+    "sample": "Col 1: 395 mergers over 2010-2016 with advisor(s) that had ceased proprietary trading; Col 2: advisor banks over entire 2000-2016 period; Col 4: hedge funds x target firms x six calendar quarters prior to merger announcement",
+    "dv": {
+     "name": "Net Call Ratio",
+     "measure": "advisors' net call ratios (call relative to put option holdings) in target firms",
+     "source": "13F filings on EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Quarter -1",
+      "measure": "Quarter -1 dummy",
+      "source": "13F filings on EDGAR"
+     },
+     {
+      "name": "Bank Ceases Proprietary Trading x Quarter -1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected (Online Appendix A1 bank cessation dates)"
+     },
+     {
+      "name": "Post 2011 x Quarter -1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F filings on EDGAR"
+     }
+    ],
+    "controls": [
+     {
+      "name": "stock volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "options volume",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "market capitalization",
+      "source": "CRSP"
+     },
+     {
+      "name": "industry merger activity",
+      "source": "Thomson Financial"
+     },
+     {
+      "name": "Merger Rumor",
+      "source": "Thomson Financial"
+     },
+     {
+      "name": "calendar quarter dummies",
+      "source": ""
+     },
+     {
+      "name": "bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (Advisor holdings in target vs propensity-score matched control firms; Call Ratio, Put Ratio, Net Call Ratio)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Main sample of 912 mergers plus propensity-score matched control firms; six quarters prior to merger announcement",
+    "dv": {
+     "name": "Options holdings ratios",
+     "measure": "[withheld: wording matches the source]",
+     "source": "13F filings on EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Quarter -1",
+      "measure": "Quarter -1 dummy",
+      "source": "13F filings on EDGAR"
+     },
+     {
+      "name": "Quarter -2",
+      "measure": "Quarter -2 dummy",
+      "source": "13F filings on EDGAR"
+     },
+     {
+      "name": "Target Firm x Quarter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial"
+     }
+    ],
+    "controls": [
+     {
+      "name": "stock volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "options volume",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "market capitalization",
+      "source": "CRSP"
+     },
+     {
+      "name": "industry merger activity",
+      "source": "Thomson Financial"
+     },
+     {
+      "name": "Merger Rumor",
+      "source": "Thomson Financial"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "firm characteristics",
+    "merger returns",
+    "options holdings"
+   ],
+   "mechanism_named": "sample selection issues",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "net call ratio",
+    "exercise prices",
+    "expiration dates"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "13F filings",
+    "exercise prices",
+    "exercise dates",
+    "options written"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "advisor banks",
+    "call option holdings",
+    "options written"
+   ],
+   "mechanism_named": "market makers",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "net call ratio",
+    "informed trading"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "non-advisors",
+    "informed trading",
+    "options positions"
+   ],
+   "mechanism_named": "synthetic stock position",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "short positions",
+    "put options"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "long positions",
+    "informed trading"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

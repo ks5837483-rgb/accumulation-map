@@ -1,0 +1,745 @@
+{
+ "paper_id": "10.1111_joms.12959",
+ "title": "Investors’ Reactions to Alliance‐Engendered Acquisition Ambiguity: Evidence from U.S. Technology Deals",
+ "journal": "JMS",
+ "year": 2023,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "behavioural finance",
+  "ambiguity aversion",
+  "resource redeployment theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_alliances",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "investors_reactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_firm_alliances",
+      "relation": "increases",
+      "to": "resource_redeployment_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "resource_redeployment_uncertainty",
+      "relation": "decreases",
+      "to": "investors_reactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "resource_redeployment_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "confounding corporate events in the announcement window, not the target’s alliances, produce the abnormal returns"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_alliances",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "investors_reactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "international_alliances",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "target_firm_alliances",
+     "moderated_to": "investors_reactions",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_alliances",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "investors_reactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "relevant_acquisition_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "target_firm_alliances",
+     "moderated_to": "investors_reactions",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "US technology-driven industries: biopharmaceuticals, computer equipment, and medical devices",
+  "country_region": "United States (publicly traded US acquirers; public or private US targets)",
+  "time_period": "1990-2021",
+  "sample_description": "US technology acquisitions by publicly traded US firms, drawn from Refinitiv SDC Mergers and Acquisitions database (deals increasing acquirer ownership from <50% to >=50%; targets public or private US firms; excluding acquisitions of business units or assets); stock/return data from CRSP, alliance data from SDC Platinum Joint Ventures/Alliances, financials from SDC Platinum, Compustat, SEC Edgar and Mergent Intelligence, patents from USPTO",
+  "sample_size": "908 technology acquisitions (event-study sample; 454 deals with target alliances matched to 454 without); 1679 deals in the initial dataset"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Joint Ventures/Alliances database in SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC Edgar filings",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Mergent Intelligence",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "US Patent and Trademark Office (USPTO)",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "interviews_case",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Event study - CAR estimation (Fama-French three-factor model)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Matched-sample construction (nearest-neighbour matching on deal year, three-digit SIC industry, and firm size)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target firm's alliances (treatment vs control)",
+      "measure": "acquisitions involving target firms with alliances (treatment) vs otherwise similar acquisitions without alliances (control)",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal year",
+      "source": "SDC"
+     },
+     {
+      "name": "industry (three-digit SIC codes)",
+      "source": "SDC"
+     },
+     {
+      "name": "firm size (total assets of acquirers and targets)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Heckman-type selection correction (Inverse Mills ratio)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Inverse Mills ratio",
+      "measure": "Inverse Mills ratio included in the second stage to account for possible selection bias (first-stage coefficient beta = 0.097; p = 0.001; not significant in any model)",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table III, Model 1 (control variables only)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "SEC Edgar filings"
+     },
+     {
+      "name": "Acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer liquidity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer prior acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer prior alliances",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     },
+     {
+      "name": "Target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target age",
+      "source": "SEC Edgar filings"
+     },
+     {
+      "name": "Target public",
+      "source": "SDC"
+     },
+     {
+      "name": "Target patents",
+      "source": "USPTO"
+     },
+     {
+      "name": "Deal value",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal premium",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal value missing",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal premium missing",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal paid with cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal paid with stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "Size difference",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior tie",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     },
+     {
+      "name": "Same industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "SDC"
+     },
+     {
+      "name": "Year dummies",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "SDC"
+     },
+     {
+      "name": "Inverse Mills ratio",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table III, Model 2 (target firm's alliances main effect)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target firm's alliances",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables (acquirer/target/deal/dyadic controls, year and industry dummies, Inverse Mills ratio)",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   },
+   {
+    "label": "Table III, Model 3 (interaction: target alliances x relevant acquisition experience)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target firm's alliances",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     },
+     {
+      "name": "Relevant acquisition experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm's alliances x Relevant acquisition experience (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   },
+   {
+    "label": "Table III, Model 6 (international vs domestic alliances)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "International alliances",
+      "measure": "number of a target firm's alliances whose partner was located outside the US",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     },
+     {
+      "name": "Domestic alliances",
+      "measure": "number of a target firm's alliances whose partner was located inside the US",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   },
+   {
+    "label": "Table III, Model 9 (interaction: international alliances x relevant acquisition experience)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "International alliances",
+      "measure": "number of a target firm's alliances with partners located outside the US; log-transformed",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     },
+     {
+      "name": "International alliances x Relevant acquisition experience (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   },
+   {
+    "label": "Table IV, Models 1-4 (sensitivity: non-log count measures; five-year observation windows)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target's alliances / relevant acquisition experience (alternative operationalizations)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   },
+   {
+    "label": "Table IV, Models 5-8 (sensitivity: alternative event windows for investors' reactions)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR, alternative windows)",
+     "measure": "cumulative abnormal returns re-estimated over five-day (Models 5-6) and 12-day (Models 7-8) event windows",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target firm's alliances",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   },
+   {
+    "label": "Table IV, Models 9-10 (sensitivity: subsample excluding confounding events)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsample excluding acquisitions with confounding events (acquisition, alliance, or other major corporate event in the five-day window around the focal announcement); reduces sample by 217 deals",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target firm's alliances",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Investors' reactions (CAR)",
+     "measure": "three-day cumulative abnormal returns [t-1; t + 1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target firm's alliances by functional area",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Joint Ventures/Alliances database in SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Model 1 control variables",
+      "source": "Compustat / SDC / SEC Edgar / USPTO"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "nature and value of alliances",
+    "[withheld: wording matches the source]",
+    "reactions in the stock market"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "timing of alliances",
+    "provisions for dissolution",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "short-­term performance differences",
+    "targets’ alliances",
+    "longer time horizons"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "targets’ alliances",
+    "relation": "affects",
+    "to": "short-­term performance differences"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "long-­term stock market reactions",
+    "analysts’ and investors’ perceptions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "differences in investors’ reactions",
+    "alternative performance indicators",
+    "tobin’s q"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "target alliances",
+     "investors’ reactions"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "synergistic opportunities",
+    "alliance portfolio complementarity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "alliance portfolio complementarity",
+    "on_path": [
+     "synergistic opportunities",
+     "investors’ reactions"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "stock market responses",
+    "other corporate events",
+    "acquisitions of ‘opaque’ state-­owned firms",
+    "nested acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

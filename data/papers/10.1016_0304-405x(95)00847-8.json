@@ -1,0 +1,471 @@
+{
+ "paper_id": "10.1016_0304-405x(95)00847-8",
+ "title": "The influence of professional investors on the failure of management buyout attempts",
+ "journal": "JFE",
+ "year": 1996,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "market for corporate control",
+  "monitoring by blockholders"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "block_acquisition_by_professional_investors",
+      "relation": "increases",
+      "to": "detection_of_managerial_self_dealing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "detection_of_managerial_self_dealing",
+      "relation": "increases",
+      "to": "buyout_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "block_acquisition_by_professional_investors",
+      "relation": "increases",
+      "to": "credible_bidding_signal_to_other_bidders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credible_bidding_signal_to_other_bidders",
+      "relation": "increases",
+      "to": "buyout_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "detection_of_managerial_self_dealing",
+    "credible_bidding_signal_to_other_bidders"
+   ],
+   "moderators": [
+    {
+     "construct": "alignment_of_pre_existing_blockholders_with_management",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "effect_derived": true,
+     "mechanism": "detection_of_managerial_self_dealing",
+     "moderated_from": "block_acquisition_by_professional_investors",
+     "moderated_to": "buyout_premium",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "arbitrage / inside-information motive (investors trade on advance information about higher offers rather than causing them)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "block_acquisition_by_active_control_specialist",
+      "relation": "increases",
+      "to": "escalation_of_buyout_contest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "escalation_of_buyout_contest",
+      "relation": "increases",
+      "to": "successful_outside_party_takeover",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "block_acquisition_by_active_control_specialist",
+      "relation": "increases",
+      "to": "superior_restructuring_plan",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "superior_restructuring_plan",
+      "relation": "increases",
+      "to": "successful_outside_party_takeover",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "escalation_of_buyout_contest",
+    "superior_restructuring_plan"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_existing_institutional_blockholdings",
+      "relation": "increases",
+      "to": "monitoring_and_negotiation_during_contest",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "monitoring_and_negotiation_during_contest",
+      "relation": "increases",
+      "to": "higher_offer_outcome",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring_and_negotiation_during_contest"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (public firms with management buyout (MBO) attempts)",
+  "country_region": "United States",
+  "time_period": "1984-1987",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "111 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "firm's proxy statement",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Dow Jones News Wire",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "111 firms with a management buyout attempt, 1984 to 1987",
+    "dv": {
+     "name": "MBO outcome",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Dow Jones News Wire / Wall Street Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "buyout initiator",
+      "measure": "Management-initiated buyouts (management made the first offer) vs outside-party-initiated buyouts (an outside party made the first offer)",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 - Chronology of events and stock price reaction (three-day abnormal returns)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "contest event type",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "block acquired",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Dow Jones News Wire / Wall Street Journal; firm's proxy statement (old blockholders)"
+    },
+    "key_ivs": [
+     {
+      "name": "blockholder recency/status",
+      "measure": "New pre-offer blockholders vs new post-offer blockholders vs old blockholders",
+      "source": "firm's proxy statement; Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Number of types of blockholders (chi-square association tests)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "blockholder type",
+     "measure": "[withheld: wording matches the source]",
+     "source": "firm's proxy statement; Dow Jones News Wire / Wall Street Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "block acquisition timing / recency / activity",
+      "measure": "Association tests among: new vs old blockholder; block acquired pre-offer vs post-offer; active vs passive participation (chi-square tests of association)",
+      "source": "firm's proxy statement; Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Types of actions taken by blockholders (chi-square cross-tabulation)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "new post-offer blockholders (Panel A); new pre-offer blockholders",
+    "dv": {
+     "name": "blockholder action type",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Dow Jones News Wire / Wall Street Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "blockholder type",
+      "measure": "Blockholder type (equity-holding company, frequent acquirer, miscellaneous corporation, investment counsel firm, miscellaneous financial services firm); association between bidding and other actions tested by chi-square",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 (Spearman rank correlations) - higher offer after MBO vs ownership structure and contest events",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "111 firms; firm characteristics measured 12 months prior to the MBO offer to the higher offer (or to buyout completion / 24 months after the MBO offer for failed buyouts)",
+    "dv": {
+     "name": "higher offer after MBO offer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Dow Jones News Wire / Wall Street Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Managerial resistance to takeover",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "Independent directors reject management's bid",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "Minority shareholder litigation",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Inside holdings (measured 12 months prior to the MBO offer)",
+      "source": "firm's proxy statement"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (logit regression) - dummy for higher offer after MBO on ownership structure and contest events",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "111 firms; firm characteristics measured 12 months prior to the MBO offer to the higher offer (or buyout completion / 24 months for failed buyouts)",
+    "dv": {
+     "name": "higher offer after MBO offer (dummy)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Dow Jones News Wire / Wall Street Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Managerial resistance to takeover",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "Independent directors reject management's bid",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "Minority shareholder litigation",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "Size (total equity value)",
+      "source": ""
+     },
+     {
+      "name": "Inside holdings",
+      "source": "firm's proxy statement"
+     },
+     {
+      "name": "Institutional holdings",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Old 13D holdings",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "New pre-offer blockholder is a corporation",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "New post-offer blockholder is a corporation",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ]
+   },
+   {
+    "label": "Section 3.3 - correlations between new block acquisitions and pre-existing blockholdings",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "new block acquisition (pre-offer / post-offer)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Dow Jones News Wire / Wall Street Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "old 13D outside blockholdings",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     },
+     {
+      "name": "institutional holdings",
+      "measure": "total percentage of shares outstanding held by institutions",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "new pre-offer blockholdings",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Wire / Wall Street Journal"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "major corporate events",
+    "outside ownership concentration"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "types of blockholders",
+    "monitoring various types of managerial activities",
+    "comparative advantages"
+   ],
+   "mechanism_named": "comparative advantages in monitoring",
+   "proposed_edge": {
+    "from": "types of blockholders",
+    "relation": "affects",
+    "to": "monitoring various types of managerial activities"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

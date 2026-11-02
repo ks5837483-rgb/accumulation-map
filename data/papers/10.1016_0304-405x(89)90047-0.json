@@ -1,0 +1,386 @@
+{
+ "paper_id": "10.1016_0304-405x(89)90047-0",
+ "title": "The effects of management buyouts on operating performance and value",
+ "journal": "JFE",
+ "year": 1989,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "free cash flow theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "reduced-agency-cost / new-incentive hypothesis (operating-income channel)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout",
+      "relation": "decreases",
+      "to": "agency_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs",
+      "relation": "decreases",
+      "to": "operating_income",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection bias (only atypically successful buyouts appear in the post-buyout data sample)"
+   ]
+  },
+  {
+   "hypothesis": "reduced-agency-cost / free-cash-flow hypothesis (capital-expenditure channel)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout",
+      "relation": "decreases",
+      "to": "agency_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs",
+      "relation": "increases",
+      "to": "capital_expenditures",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "employee-wealth-transfer hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout",
+      "relation": "increases",
+      "to": "employee_layoffs",
+      "from_measured": true,
+      "to_measured": true,
+      "derived": true
+     },
+     {
+      "from": "employee_layoffs",
+      "relation": "increases",
+      "to": "operating_income",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "employee_layoffs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "information-advantage or underpricing hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_private_information",
+      "relation": "increases",
+      "to": "underpricing",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "underpricing",
+      "relation": "increases",
+      "to": "post_buyout_investor_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "underpricing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "managerial information advantage / underpricing as the source of buyout investor gains"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (public companies going private via management buyout)",
+  "country_region": "United States",
+  "time_period": "1980-1986",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "76 management buyouts (48 with post-buyout financial data)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "10-K reports filed with the SEC",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "initial public offering (IPO) prospectuses",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Standard and Poor's Daily Stock Price Record",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "W.T. Grimm's Mergerstat Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Disclosure and IPO Reporter (list of SEC filing companies)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "76 management buyouts completed 1980-1986",
+    "dv": {
+     "name": "buyout premium to pre-buyout shareholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "proxy, 13-E, and 14-D statements; Standard and Poor's Daily Stock Price Record"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "management buyout (going-private transaction)",
+    "sample": "48 management buyouts with post-buyout financial information",
+    "dv": {
+     "name": "operating income (before depreciation)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "post-buyout financial statements (10-K), proxy statements, IPO prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "management buyout (pre- vs post-buyout change)",
+      "measure": "change from year -1 (fiscal year ending prior to buyout completion) to years +1, +2, +3 of post-buyout operations",
+      "source": "proxy statements / 10-K reports / IPO prospectuses"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "industry control firms"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Effect of management buyouts on capital expenditures",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "management buyout (going-private transaction)",
+    "sample": "48 management buyouts with post-buyout financial information",
+    "dv": {
+     "name": "capital expenditures",
+     "measure": "[withheld: wording matches the source]",
+     "source": "post-buyout financial statements (10-K), proxy statements, IPO prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "management buyout (pre- vs post-buyout change)",
+      "measure": "change from year -1 to years +1, +2, +3",
+      "source": "proxy statements / 10-K reports / IPO prospectuses"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry-adjusted change (industry median change)",
+      "source": "industry control firms"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "management buyout (going-private transaction)",
+    "sample": "47 management buyouts (one company with negative year -1 net cash flow excluded)",
+    "dv": {
+     "name": "net cash flow",
+     "measure": "[withheld: wording matches the source]",
+     "source": "post-buyout financial statements (10-K), proxy statements, IPO prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "management buyout (pre- vs post-buyout change)",
+      "measure": "change from year -1 to years +1, +2, +3",
+      "source": "proxy statements / 10-K reports / IPO prospectuses"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry-adjusted change (industry median change)",
+      "source": "industry control firms"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Estimates of selection bias: operating income by post-buyout data source",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "48 management buyouts split by post-buyout data source (10-K vs IPO/sale)",
+    "dv": {
+     "name": "operating income",
+     "measure": "[withheld: wording matches the source]",
+     "source": "10-K statements / IPO prospectuses / proxy statements"
+    },
+    "key_ivs": [
+     {
+      "name": "post-buyout data source (10-K vs IPO/sale companies)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filing source classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry-adjusted change (industry median change)",
+      "source": "industry control firms"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Estimates of selection bias: net cash flow by post-buyout data source",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "48 (47) management buyouts split by post-buyout data source (one negative year -1 cash flow excluded)",
+    "dv": {
+     "name": "net cash flow",
+     "measure": "[withheld: wording matches the source]",
+     "source": "10-K statements / IPO prospectuses / proxy statements"
+    },
+    "key_ivs": [
+     {
+      "name": "post-buyout data source (10-K vs IPO/sale companies)",
+      "measure": "10-K vs IPO/sale company classification based on post-buyout SEC filing type",
+      "source": "SEC filing source classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry-adjusted change (industry median change)",
+      "source": "industry control firms"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "management buyout announcement",
+    "sample": "25 management buyouts that have a post-buyout valuation",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Standard and Poor's Daily Stock Price Record; proxy / 10-K filings; value-weighted index"
+    },
+    "key_ivs": [
+     {
+      "name": "management buyout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Standard and Poor's Daily Stock Price Record; proxy / 10-K filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "portfolio with the same systematic risk (market/beta adjustment)",
+      "source": "value-weighted index; Ibbotson (1977) beta estimate"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "operating change",
+    "market-adjusted returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "hostile pressure",
+    "hostile activity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

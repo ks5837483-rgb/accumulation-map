@@ -1,0 +1,816 @@
+{
+ "paper_id": "10.1111_1475-679x.12256",
+ "title": "The Disciplinary Role of Financial Statements: Evidence from Mergers and Acquisitions of Privately Held Targets",
+ "journal": "JAR",
+ "year": 2019,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "free cash flow theory",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mandatory_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "mandatory_disclosure",
+      "relation": "increases",
+      "to": "monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "monitoring"
+   ],
+   "moderators": [
+    {
+     "construct": "information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "mandatory_disclosure",
+     "moderated_to": "acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2a"
+    },
+    {
+     "construct": "operating_volatility",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "monitoring",
+     "moderated_from": "mandatory_disclosure",
+     "moderated_to": "acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    },
+    {
+     "construct": "alternative_disciplining_mechanisms",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "managerial_discipline",
+     "moderated_from": "mandatory_disclosure",
+     "moderated_to": "acquisition_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "relative size of the target",
+    "correlated omitted variable",
+    "monitoring from blockholders",
+    "voluntary disclosure",
+    "auditing"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. private-target M&A acquisitions across sectors, classified by two-digit SIC)",
+  "country_region": "United States (main sample of U.S. private targets; U.K. private-target and U.S. public-target samples used in falsification tests)",
+  "time_period": "1997-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,615 private-target acquisitions (main-regression N = 1,374 for CAR3)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC's EDGAR filing database (hand-collected target financial-statement disclosure from 8-K/A, S-4, and proxy statements)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Zephyr database supplied by Bureau van Dijk (U.K. M&A transactions and private targets' accounting information)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Column 1 - Acquisition Performance (CAR3), test of H1",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "Regulation S-X Rule 3-05(b) mandatory disclosure threshold (20% significance test for private-target audited financial statements)",
+    "sample": "U.S. private target acquisitions, 1997-2009 (base sample; SDC intersected with Compustat and CRSP)",
+    "dv": {
+     "name": "CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "THRESHOLD (deal value / acquirer total assets, investment-test proxy)",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "THRESHOLD^2",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "THRESHOLD^3",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "TRG_SIZE (natural log of deal value)",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQ_SIZE (acquirer firm size, natural log of market value)",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "LEV (leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA (profitability)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TOBIN (Tobin's Q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASH (method of payment)",
+      "source": "SDC"
+     },
+     {
+      "name": "STOCK (method of payment)",
+      "source": "SDC"
+     },
+     {
+      "name": "DIFFIND (different two-digit SIC industry)",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 2 - Acquisition Performance (change in ROA), test of H1",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X Rule 3-05(b) 20% disclosure threshold",
+    "sample": "",
+    "dv": {
+     "name": "Delta ROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "THRESHOLD, THRESHOLD^2, THRESHOLD^3",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "TRG_SIZE (ln deal value)",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQ_SIZE (ln market value)",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "TOBIN",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASH, STOCK (method of payment)",
+      "source": "SDC"
+     },
+     {
+      "name": "DIFFIND",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 3 - Acquisition Performance (industry-adjusted change in ROA), test of H1",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X Rule 3-05(b) 20% disclosure threshold",
+    "sample": "",
+    "dv": {
+     "name": "Delta ROA_IND",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "THRESHOLD, THRESHOLD^2, THRESHOLD^3",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "TOBIN",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASH, STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "DIFFIND",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 4 - Acquisition Performance (BHAR), test of H1",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X Rule 3-05(b) 20% disclosure threshold",
+    "sample": "",
+    "dv": {
+     "name": "BHAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "THRESHOLD, THRESHOLD^2, THRESHOLD^3",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "TOBIN",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASH, STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "DIFFIND",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A - Falsification test: U.K. private target acquisitions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X 20% significance-test thresholds applied as a counterfactual to U.K. private targets (whose financials are ex ante public)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition performance (CAR3, Delta ROA, Delta ROA_IND, BHAR)",
+     "measure": "the four acquisition-performance measures (three-day announcement CAR, three-year change in ROA, industry-adjusted change in ROA, three-year buy-and-hold abnormal return)",
+     "source": "CRSP, Compustat, Zephyr"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Zephyr (Bureau van Dijk)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "THRESHOLD, THRESHOLD^2, THRESHOLD^3",
+      "source": "Zephyr"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "Zephyr"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "Zephyr"
+     },
+     {
+      "name": "LEV",
+      "source": "Zephyr"
+     },
+     {
+      "name": "ROA",
+      "source": "Zephyr"
+     },
+     {
+      "name": "TOBIN",
+      "source": "Zephyr"
+     },
+     {
+      "name": "CASH, STOCK, DIFFIND",
+      "source": "Zephyr"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B - U.K. vs. U.S. private acquisitions, below threshold",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X 20% disclosure threshold (U.S.) vs. mandatory U.K. private-firm disclosure regime",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition performance (CAR3, Delta ROA, Delta ROA_IND, BHAR)",
+     "measure": "the four acquisition-performance measures",
+     "source": "CRSP, Compustat, Zephyr"
+    },
+    "key_ivs": [
+     {
+      "name": "UK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Zephyr, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control Variables (same acquirer/deal-level set as main model)",
+      "source": "SDC, Compustat, CRSP, Zephyr"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel C - U.K. vs. U.S. private acquisitions, above threshold",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X 20% disclosure threshold (U.S.) vs. mandatory U.K. private-firm disclosure regime",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition performance (CAR3, Delta ROA, Delta ROA_IND, BHAR)",
+     "measure": "the four acquisition-performance measures",
+     "source": "CRSP, Compustat, Zephyr"
+    },
+    "key_ivs": [
+     {
+      "name": "UK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Zephyr, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control Variables (same acquirer/deal-level set as main model)",
+      "source": "SDC, Compustat, CRSP, Zephyr"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B - Falsification test: U.S. public target acquisitions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X 20% disclosure threshold applied to U.S. public targets (whose financials are always public) as a placebo",
+    "sample": "U.S. public target acquisitions",
+    "dv": {
+     "name": "acquisition performance (CAR3, Delta ROA, Delta ROA_IND, BHAR)",
+     "measure": "the four acquisition-performance measures",
+     "source": "CRSP, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control Variables (same acquirer/deal-level set as main model)",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel C - U.S. public target acquisitions, matched on relative target size",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "Regulation S-X 20% disclosure threshold (placebo on public targets)",
+    "sample": "matched sample: each private-target acquisition matched (with replacement) to the public-target acquisition closest in relative target size",
+    "dv": {
+     "name": "acquisition performance (CAR3, Delta ROA, Delta ROA_IND, BHAR)",
+     "measure": "the four acquisition-performance measures",
+     "source": "CRSP, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "disclosure indicator from EDGAR search",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control Variables (same acquirer/deal-level set as main model)",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Observations around the disclosure threshold (narrow THRESHOLD window)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "Regulation S-X 20% investment-test disclosure threshold (comparison of transactions marginally above vs. below the 20% threshold, similar to a discontinuity design)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR3 (CAR3_10,25 and CAR3_15,25)",
+     "measure": "acquirer's three-day (-1, 1) announcement cumulative abnormal return, estimated within a narrow relative-size window (THRESHOLD between 10% and 25%, and between 15% and 25%)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "disclosure indicator (=1 if acquirer files private target's audited financial statements) collected from SEC EDGAR",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "THRESHOLD, THRESHOLD^2, THRESHOLD^3",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "TRG_SIZE, ACQ_SIZE, LEV, ROA, TOBIN, CASH, STOCK, DIFFIND",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel A - Cross-sectional test: costly/difficult monitoring (H2)",
+    "hypotheses": [
+     "H2a",
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X 20% disclosure threshold",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance (CAR3, Delta ROA, Delta ROA_IND, BHAR)",
+     "measure": "the four acquisition-performance measures",
+     "source": "CRSP, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC x SPREAD",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected), CRSP"
+     },
+     {
+      "name": "DISC x STDRET",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected), CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DISC main effect, SPREAD/STDRET main effect",
+      "source": "SEC EDGAR, CRSP"
+     },
+     {
+      "name": "Acquirer/deal-level control set as in main model",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel B - Cross-sectional test: weak alternative disciplining mechanisms (H3)",
+    "hypotheses": [
+     "H3a",
+     "H3b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Regulation S-X 20% disclosure threshold",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance (CAR3, Delta ROA, Delta ROA_IND, BHAR)",
+     "measure": "the four acquisition-performance measures",
+     "source": "CRSP, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC x NOBLOCK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected), institutional ownership data"
+     },
+     {
+      "name": "DISC x LOWCSCORE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings (hand-collected), Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DISC main effect, NOBLOCK/LOWCSCORE main effect",
+      "source": "SEC EDGAR, Compustat"
+     },
+     {
+      "name": "Acquirer/deal-level control set as in main model",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.2 - Corroboration: postacquisition goodwill impairments and divestitures (logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "Regulation S-X 20% disclosure threshold",
+    "sample": "",
+    "dv": {
+     "name": "postacquisition goodwill write-down / divestiture",
+     "measure": "indicator of postacquisition goodwill impairment (indicative of overpayment/negative-NPV acquisitions) and, separately, postacquisition divestiture (indicative of poorer acquisition-investment decisions)",
+     "source": "Compustat, SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "DISC",
+      "measure": "disclosure indicator (=1 if acquirer files private target's audited financial statements)",
+      "source": "SEC EDGAR filings (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer/deal-level control set as in main model",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "auditing",
+    "public disclosure",
+    "acquisition performance"
+   ],
+   "mechanism_named": "auditing",
+   "proposed_edge": {
+    "from": "auditing",
+    "relation": "affects",
+    "to": "acquisition performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "audit quality",
+    "disclosure",
+    "acquisition performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "audit quality",
+    "on_path": [
+     "disclosure",
+     "acquisition performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "screening",
+    "audited financial statements"
+   ],
+   "mechanism_named": "screening",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "audited financial statements",
+    "significance thresholds"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "audited financial statements",
+    "relation": "unspecified",
+    "to": "significance thresholds"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "limitations",
+   "constructs": [
+    "costs",
+    "benefits",
+    "mandatory disclosure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "firms that frequently engage in M&As"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "private firm data availability",
+    "empirical design choices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "endogeneity",
+    "omitted variable"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

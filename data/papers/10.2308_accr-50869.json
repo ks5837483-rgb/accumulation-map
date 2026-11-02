@@ -1,0 +1,900 @@
+{
+ "paper_id": "10.2308_accr-50869",
+ "title": "The Economic Consequences of Financial Restatements: Evidence from the Market for Corporate Control",
+ "journal": "AR",
+ "year": 2014,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection",
+  "agency theory",
+  "signaling theory",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "RQ1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "takeover_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "information_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_risk",
+      "relation": "decreases",
+      "to": "takeover_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "agency_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs",
+      "relation": "increases",
+      "to": "takeover_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection",
+    "information_risk",
+    "agency_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "restatement_information_risk_relevance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_risk",
+     "moderated_from": "financial_restatements",
+     "moderated_to": "takeover_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "RQ1 (LEASE/BACKDATING vs OTHER)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "litigation risk",
+    "internal control weaknesses",
+    "CEO turnover"
+   ]
+  },
+  {
+   "hypothesis": "RQ2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "information_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_risk",
+      "relation": "increases",
+      "to": "withdrawal_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "withdrawal_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_risk",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "RQ2b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "information_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_risk",
+      "relation": "increases",
+      "to": "time_to_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "due_diligence_effort",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "due_diligence_effort",
+      "relation": "increases",
+      "to": "time_to_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_risk",
+    "due_diligence_effort"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "RQ3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "information_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_risk",
+      "relation": "decreases",
+      "to": "deal_valuation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "financial_restatements",
+      "relation": "increases",
+      "to": "cost_of_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_capital",
+      "relation": "decreases",
+      "to": "deal_valuation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_risk",
+    "cost_of_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market misvaluation of the target"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded firms covered in Compustat / public takeover targets in SDC)",
+  "country_region": "",
+  "time_period": "2001-2009 (restatements 2001-2008; takeover bids 2002-2009)",
+  "sample_description": "Two samples from SDC, Audit Analytics, and Compustat: (1) a propensity-score matched sample of restating vs. non-restating firm-years for the takeover-likelihood test; (2) takeover bids in which the acquirer seeks 100 percent of a public target, coded RESTATE=1 if the target filed a restatement in the prior 12 months",
+  "sample_size": "1,963 matched pairs of restating/non-restating firms (takeover-likelihood test); 2,271 takeover bids (withdrawal and valuation tests)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Securities Class Action Clearinghouse at Stanford University",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel B, Column (1) — Takeover likelihood (Model 1)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "1,963 pairs of propensity-score-matched restating and non-restating firms, 2001-2008",
+    "dv": {
+     "name": "TAKEOVER",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (log of market value)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BM (book-to-market)",
+      "source": "Compustat"
+     },
+     {
+      "name": "EP (earnings-to-price ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "SGROW (sales growth)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "TANG (tangibility of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "GRDUMMY (growth-resource dummy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST (percentage of institutional ownership)",
+      "source": ""
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B, Column (2) — Restatement type (LEASE/BACKDATING vs OTHER)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "1,963 matched pairs; 304 firm-years with lease/backdating restatements",
+    "dv": {
+     "name": "TAKEOVER",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "LEASE/BACKDATING",
+      "measure": "indicator for restatements related to leases or stock options backdating (304 firm-years)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "OTHER",
+      "measure": "indicator for all other restatements",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Model (1) controls (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B, Column (3) — Restatement severity (ERROR / IRREGULARITY / FRAUD)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "989 matched pairs (756 errors, 190 irregularities, 43 fraud), 2001-2006",
+    "dv": {
+     "name": "TAKEOVER",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "ERROR",
+      "measure": "indicator for restatements classified as accounting errors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "IRREGULARITY",
+      "measure": "indicator for restatements classified as accounting irregularities",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "FRAUD",
+      "measure": "indicator for restatements classified as fraud",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Model (1) controls (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column (1) — Litigation risk (LITI / NOLITI)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "TAKEOVER",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "LITI",
+      "measure": "indicator for restating firms subject to litigation from one year prior to one year after the event date",
+      "source": "Securities Class Action Clearinghouse at Stanford University"
+     },
+     {
+      "name": "NOLITI",
+      "measure": "indicator for restating firms not subject to litigation over the same window",
+      "source": "Securities Class Action Clearinghouse at Stanford University"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Model (1) controls (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column (2) — Internal control weaknesses (WEAKIC)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "2,884 (1,442 pairs) firm-years, 2004-2008",
+    "dv": {
+     "name": "TAKEOVER",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "WEAKIC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "WEAKIC x RESTATE",
+      "measure": "interaction of WEAKIC and RESTATE",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Model (1) controls (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column (3) — CEO turnover (TURNOVER)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "673 pairs matched on ExecuComp-covered firms",
+    "dv": {
+     "name": "TAKEOVER",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "TURNOVER",
+      "measure": "indicator for CEO turnover in the event year",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "TURNOVER x RESTATE",
+      "measure": "interaction of TURNOVER and RESTATE",
+      "source": "ExecuComp"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Model (1) controls (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B — Likelihood of takeover withdrawal (Model 2)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "2,271 takeover bids, 2002-2009 (Column 2: 1,654 obs)",
+    "dv": {
+     "name": "WITHDRAW",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "BM",
+      "source": "Compustat"
+     },
+     {
+      "name": "EP",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "SGROW",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "TANG",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "GRDUMMY",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "INSIDER (insider holdings)",
+      "source": ""
+     },
+     {
+      "name": "DIV (diversifying takeover)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "MBID (multiple bidders)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "HOST (hostile bid)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "TENDER (tender offer)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "PCTSTOCK (percentage of stock used as payment)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "ATERM (acquirer termination fee clause)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "TTERM (target termination fee clause)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "Dechow et al. (2011) misstatement determinants (Column 2 only)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 — Time to deal completion (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,595 obs (Column 2: 1,122 obs), 2002-2009",
+    "dv": {
+     "name": "TIME",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "BM",
+      "source": "Compustat"
+     },
+     {
+      "name": "EP",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "SGROW",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "TANG",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "GRDUMMY",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "INSIDER",
+      "source": ""
+     },
+     {
+      "name": "MBID",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "HOST",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "DIV",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "TENDER",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "PCTSTOCK",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "Dechow et al. (2011) misstatement determinants (Column 2 only)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel B — Deal valuation: Deal Value/EBITDA (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,448 obs (Column 2: 1,056 obs) with deal value/EBITDA data",
+    "dv": {
+     "name": "Deal Value/EBITDA",
+     "measure": "deal value excluding assumed liabilities to EBITDA",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target characteristics (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST, INSIDER)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal characteristics (MBID, HOST, DIV, TENDER, PCTSTOCK)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "Dechow et al. (2011) misstatement determinants (Column 2 only)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel C — Deal valuation: Deal Value/Sales (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,993 obs (Column 2: 1,451 obs) with deal value/sales data",
+    "dv": {
+     "name": "Deal Value/Sales",
+     "measure": "deal value excluding assumed liabilities to sales",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target characteristics (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST, INSIDER)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal characteristics (MBID, HOST, DIV, TENDER, PCTSTOCK)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "Dechow et al. (2011) misstatement determinants (Column 2 only)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel D — Deal valuation: Offer Price/Book Value (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,816 acquisitions with offer price/book value data",
+    "dv": {
+     "name": "Offer Price/Book Value",
+     "measure": "offer price to book value per share",
+     "source": "Securities Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RESTATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target characteristics (SIZE, BM, EP, ROA, SGROW, LEVERAGE, TANG, LIQUIDITY, GRDUMMY, INST, INSIDER)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal characteristics (MBID, HOST, DIV, TENDER, PCTSTOCK)",
+      "source": "Securities Data Corporation (SDC) database"
+     },
+     {
+      "name": "Dechow et al. (2011) misstatement determinants (Column 2 only)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "deal value to ebitda",
+    "deal value multiple"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "inverted ratio",
+    "deal value multiple"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "deal multiples",
+    "valuation of restating firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

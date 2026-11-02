@@ -1,0 +1,719 @@
+{
+ "paper_id": "10.1016_j.jfineco.2015.02.007",
+ "title": "Costs and benefits of friendly boards during mergers and acquisitions",
+ "journal": "JFE",
+ "year": 2015,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "theory of friendly boards",
+  "information exchange between CEO and board (Adams and Ferreira, 2007)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H_advice",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_director_social_ties",
+      "relation": "increases",
+      "to": "information_exchange_between_ceo_and_board",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_exchange_between_ceo_and_board",
+      "relation": "increases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "information_exchange_between_ceo_and_board",
+      "relation": "increases",
+      "to": "quality_of_board_advice",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "quality_of_board_advice",
+      "relation": "increases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_exchange_between_ceo_and_board",
+    "quality_of_board_advice"
+   ],
+   "moderators": [
+    {
+     "construct": "value_of_board_advice",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_exchange_between_ceo_and_board",
+     "moderated_from": "ceo_director_social_ties",
+     "moderated_to": "bidder_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H_advice"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "outside representation (regulatory definition of board independence) captures the effect rather than social ties"
+   ]
+  },
+  {
+   "hypothesis": "H_monitor",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_director_social_ties",
+      "relation": "decreases",
+      "to": "board_willingness_to_discipline_the_ceo",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_willingness_to_discipline_the_ceo",
+      "relation": "increases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_willingness_to_discipline_the_ceo"
+   ],
+   "moderators": [
+    {
+     "construct": "monitoring_needs",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "board_willingness_to_discipline_the_ceo",
+     "moderated_from": "ceo_director_social_ties",
+     "moderated_to": "bidder_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H_monitor"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "outside representation (regulatory definition of board independence) rather than social ties drives the monitoring effect"
+   ]
+  },
+  {
+   "hypothesis": "H_prob_acquisition",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_director_social_ties",
+      "relation": "decreases",
+      "to": "board_opposition_to_ceo_merger_plans",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_opposition_to_ceo_merger_plans",
+      "relation": "decreases",
+      "to": "probability_of_an_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_opposition_to_ceo_merger_plans"
+   ],
+   "moderators": [
+    {
+     "construct": "monitoring_needs",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "board_opposition_to_ceo_merger_plans",
+     "moderated_from": "ceo_director_social_ties",
+     "moderated_to": "probability_of_an_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H_prob_acquisition"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H_target_share",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_director_social_ties",
+      "relation": "decreases",
+      "to": "board_willingness_to_discipline_the_ceo",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_willingness_to_discipline_the_ceo",
+      "relation": "decreases",
+      "to": "targets_share_of_merger_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_willingness_to_discipline_the_ceo"
+   ],
+   "moderators": [
+    {
+     "construct": "monitoring_needs",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "board_willingness_to_discipline_the_ceo",
+     "moderated_from": "ceo_director_social_ties",
+     "moderated_to": "targets_share_of_merger_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H_target_share"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H_turnover",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_director_social_ties",
+      "relation": "decreases",
+      "to": "board_willingness_to_discipline_the_ceo",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_willingness_to_discipline_the_ceo",
+      "relation": "increases",
+      "to": "probability_of_ceo_dismissal",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_willingness_to_discipline_the_ceo"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (mergers and acquisitions by publicly traded US bidders across all industries)",
+  "country_region": "United States",
+  "time_period": "2000-2011",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "6,857 mergers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 (average bidder announcement returns by sample, split by social ties)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder announcement returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder announcement returns (CAR)",
+     "measure": "three-day cumulative abnormal returns computed around merger announcement dates (market model, daily CRSP value-weighted index as market proxy, estimation 230 to 11 days before announcement)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties",
+      "measure": "dummy = one if % Friendly Board > 0, zero otherwise",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties x Advice Factor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties x Monitor Factor",
+      "measure": "Social Ties interacted with Monitor Factor (first monitor factor from principal-component factor analysis of monitoring-need proxies)",
+      "source": "BoardEx"
+     },
+     {
+      "name": "% Outside Dirs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size (total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's q (industry median market-to-book, using all Compustat companies)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage (industry median)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Price Run-up (bidder buy-and-hold abnormal return 230 to 11 days before announcement)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Connections to Target (log average number of connections between acquirer and target)",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Board Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Target type (Public, Private, Subsidiary)",
+      "source": "SDC"
+     },
+     {
+      "name": "Medium of payment (Cash Only, Stock Deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target type x payment interactions",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Deal Size (deal value over acquirer market value at prior fiscal year end)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (serial acquirers subsample and directors appointed prior to the CEO)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "serial acquirers categorized by number of acquisitions (largest acquisition per firm; firms with >=3 deals); and social ties to outside directors appointed prior to the CEO",
+    "dv": {
+     "name": "bidder announcement returns (CAR)",
+     "measure": "three-day cumulative abnormal returns around announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties x Monitor Factor",
+      "measure": "social ties indicator interacted with Monitor Factor",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties x Advice Factor",
+      "measure": "social ties indicator interacted with Advice Factor",
+      "source": "BoardEx"
+     },
+     {
+      "name": "% Friendly Board (Panel D)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties to directors appointed prior to the CEO (last column)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All firm and deal controls from Table 5 column 1 (firm size, Tobin's q, leverage, price run-up, connections to target, board size, target type, payment, relative deal size, year dummies)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (individual proxies for monitoring and advice interacted with social ties)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder announcement returns (CAR)",
+     "measure": "three-day cumulative abnormal returns around announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties x individual advice proxies (Panel A)",
+      "measure": "Social Ties interacted with External Connections, Board Centrality, Market Timers, Expert Board, Low R&D, an above-median advice-factor dummy, and a low-monitor-high-advice cluster indicator",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties x individual monitoring proxies (Panel B)",
+      "measure": "Social Ties interacted with individual monitoring-need characteristics (e.g., High Excess Cash, Pay-Performance Sensitivity, High E-index, Merger Wave, Diversifying x Low Inc, Institutional Ownership) and above-median monitor-factor / high-monitor-low-advice cluster indicators",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All controls displayed in the first column of Table 5",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 Panels A-C (calendar time portfolio abnormal returns)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "calendar time series of daily returns from the trading strategy",
+    "dv": {
+     "name": "long-term (calendar time) abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Friendly board calendar time strategy (Social Ties)",
+      "measure": "portfolio long acquirers with friendly boards and short those without; modified to condition on high monitor factor, high advice factor, and low-monitor-high-advice / high-monitor-low-advice clusters, and on individual monitoring/advising proxies",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Fama and French three factors (market, SMB, HML)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 Panel D (announcement returns on visibility proxies x social ties)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsamples based on relative importance of monitoring and advice",
+    "dv": {
+     "name": "bidder announcement returns (CAR)",
+     "measure": "three-day cumulative abnormal returns around announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties x Analyst Coverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties x Larger Deals",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Social Ties x Media Coverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "other"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Column 1 of Table 5",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10 (Heckman selectivity-corrected % Friendly Board regressions)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidder announcement returns (CAR)",
+     "measure": "three-day cumulative abnormal returns around announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "% Friendly Board x advice proxies (Panel A)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "% Friendly Board x monitoring proxies (Panel B)",
+      "measure": "% Friendly Board interacted with the individual monitoring-need characteristics and above-median monitor / high-monitor-low-advice cluster indicators",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Lambda (Heckman correction)",
+      "measure": "inverse Mills ratio from the first-stage probit for Pr(Social Ties = 1)",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All controls displayed in the first column of Table 5",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 11 Column 1 (probability of announcing an acquisition)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "actual mergers plus a matched control group of hypothetical mergers",
+    "dv": {
+     "name": "probability of announcing an acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties x Monitor Factor",
+      "measure": "social ties indicator interacted with the monitor factor",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties x Advice Factor",
+      "measure": "social ties indicator interacted with the advice factor",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Controls following Rhodes-Kropf and Robinson (2008)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 11 Column 2 (combined return of target and acquirer)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "combined return of the target and acquirer",
+     "measure": "combined value created by the merger for target and acquirer",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties (with monitor/advice interactions)",
+      "measure": "social ties dummy and its interactions with the monitor and advice factors",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as the main CAR regressions",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 11 Column 3 (target's share of the merger gain)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target's share of the merger gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties x Monitor Factor",
+      "measure": "social ties dummy interacted with monitoring needs",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties x Advice Factor",
+      "measure": "social ties dummy interacted with advisory benefits",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as the main CAR regressions",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 11 Columns 4-5 (employment connections)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder announcement returns (CAR)",
+     "measure": "three-day cumulative abnormal returns around announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Past employment connections dummy (Column 4)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Social Ties Only dummy (Column 5)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 5",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 11 Columns 6-8 (probability of CEO turnover)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "probability of CEO turnover",
+     "measure": "probit models of CEO turnover following the specification in Duchin and Schmidt (2013)",
+     "source": "BoardEx"
+    },
+    "key_ivs": [
+     {
+      "name": "Social Ties",
+      "measure": "social ties proxy",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Monitor Factor and Advice Factor with interactions",
+      "measure": "monitor and advice factors and their interactions with social ties",
+      "source": "BoardEx"
+     },
+     {
+      "name": "% Outside Dirs",
+      "measure": "proportion of outside directors on the board",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Specification following Duchin and Schmidt (2013)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "social ties",
+    "true board independence"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "social ties",
+    "interdependence between the ceo and board members",
+    "board independence"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

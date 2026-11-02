@@ -1,0 +1,793 @@
+{
+ "paper_id": "10.1287_mnsc.2022.01534",
+ "title": "Target Firm Advertising and Firm Value",
+ "journal": "MNSC",
+ "year": 2025,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "investor attention theory",
+  "behavioral finance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_premium",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "target_advertising",
+      "relation": "increases",
+      "to": "investor_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_attention",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "investor_attention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "behavioral investor attention (catering to behavioral biases) rather than rational information transmission"
+   ]
+  },
+  {
+   "hypothesis": "P2_target_probability",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "decreases",
+      "to": "search_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_costs",
+      "relation": "decreases",
+      "to": "probability_of_becoming_a_target",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "search_costs",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "search_costs",
+     "moderated_from": "target_advertising",
+     "moderated_to": "probability_of_becoming_a_target",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2_searchcost_interaction"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3_google_search",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "increases",
+      "to": "investor_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_attention",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_attention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4_deal_initiation",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "target_deal_initiation",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5_bid_competition",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "increases",
+      "to": "firm_profile",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_profile",
+      "relation": "increases",
+      "to": "bid_competition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_profile"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6_offer_revision",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "increases",
+      "to": "bid_competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bid_competition",
+      "relation": "increases",
+      "to": "upward_bid_revision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7_synergies",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "merger_synergies",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8_acquirer_returns",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "increases",
+      "to": "target_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining_power",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9_division_of_gains",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "increases",
+      "to": "target_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining_power",
+      "relation": "increases",
+      "to": "target_share_of_merger_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P10_deal_completion",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "increases",
+      "to": "target_attractiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_attractiveness",
+      "relation": "increases",
+      "to": "probability_of_deal_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_attractiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P11_withdrawn_revaluation",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_advertising",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "permanent_firm_revaluation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "behavioral biases / investor attention: any advertising-driven value increase should reverse if the acquisition fails"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded M&A targets and acquirers across Fama-French industries; widespread distribution with some concentration in business equipment (20.1%) and finance (22.8%) sectors)",
+  "country_region": "United States",
+  "time_period": "1986-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "7,827 deals"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Execucomp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "manually collected from annual proxies",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Google Trends / Google Search Volume Index (SVI)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel A: Acquisition premiums (conditional)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Models (1)-(3): all 7,827 deals 1986-2016; Models (4)-(5): 3,401 deals with publicly traded acquirer",
+    "dv": {
+     "name": "Acquisition premium",
+     "measure": "four-week final offer premium reported by the SDC",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Advertising spending",
+      "measure": "ln(1 + Advertising spending); annual advertising expenses (Compustat data item 45) at fiscal year end before merger announcement",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "private acquirer (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "cash-only payment (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "tender offer (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "hostile deal (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "multiple bidders (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "termination fee (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "lockup (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "diversifying deal (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "merger of equals (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "industry competition (Herfindahl-Hirschman index)",
+      "source": "Compustat"
+     },
+     {
+      "name": "target industry M&A liquidity index",
+      "source": "SDC"
+     },
+     {
+      "name": "one-year macroeconomic change (industrial production index)",
+      "source": "other"
+     },
+     {
+      "name": "log market value of equity (firm size)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "q",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "stock liquidity",
+      "source": "CRSP"
+     },
+     {
+      "name": "operating cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "prior year abnormal stock return",
+      "source": "CRSP"
+     },
+     {
+      "name": "acquirer characteristics (Models 4-5)",
+      "source": "CRSP/Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B: Unconditional premiums",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "205,511 firm-years with CRSP and Compustat data during fiscal years 1985-2015",
+    "dv": {
+     "name": "Acquisition premium (unconditional)",
+     "measure": "final offer premium reported by SDC, set to zero in nontakeover firm-years (Comment and Schwert 1995 method)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Advertising spending",
+      "measure": "ln(1 + Advertising spending)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Scaled advertising spending",
+      "measure": "advertising spending divided by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising intensity",
+      "measure": "advertising spending divided by firm's total sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising growth",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Q",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "OCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year market adjusted return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Herfindahl-Hirschman Index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry liquidity index",
+      "source": "SDC"
+     },
+     {
+      "name": "One-year macroeconomic change",
+      "source": "other"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A: Probability of becoming a target (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Target (0,1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Advertising spending",
+      "measure": "ln(1 + Advertising spending)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Scaled advertising spending",
+      "measure": "advertising spending divided by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising intensity",
+      "measure": "advertising spending divided by total sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising growth",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Q",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "OCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "CEO around retirement age (0,1)",
+      "source": "Execucomp/hand-collected proxies"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Execucomp/hand-collected proxies"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B: The impact of search costs",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "36,929 (Model 1); 30,936 (Model 2, low analyst coverage); 32,195 (Models 3-4, low trading volume / high bid-ask spread)",
+    "dv": {
+     "name": "Target (0,1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Advertising spending",
+      "measure": "ln(1 + Advertising spending)",
+      "source": "Compustat"
+     },
+     {
+      "name": "High search cost (0,1)",
+      "measure": "Low analyst coverage (bottom quartile of analysts, same year/industry); Low trading volume (bottom quartile); High bid-ask spread (top quartile)",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "interaction term",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP/Compustat/Execucomp"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "2,154 (Model 1) / 2,156 (Model 2) deals announced during 2005-2016",
+    "dv": {
+     "name": "Acquisition premium",
+     "measure": "final offer premium reported by SDC (as in Table 2 panel A)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ASVI using name",
+      "measure": "log of SVI during week one month before deal announcement minus log of median SVI during previous 48 weeks (firm name search)",
+      "source": "Google Trends / Google Search Volume Index"
+     },
+     {
+      "name": "ASVI using ticker",
+      "measure": "abnormal search volume index computed on firm ticker search",
+      "source": "Google Trends / Google Search Volume Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP/Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Deal initiation",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "5,314 M&A offers during 1993-2009 with deal background from SEC merger proxies; 2,326 bid contests",
+    "dv": {
+     "name": "Deal initiated by target (0,1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC merger proxies"
+    },
+    "key_ivs": [
+     {
+      "name": "Advertising spending",
+      "measure": "ln(1 + Advertising spending)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal, market, and firm characteristics as in prior analyses",
+      "source": "SDC/CRSP/Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "bid revisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

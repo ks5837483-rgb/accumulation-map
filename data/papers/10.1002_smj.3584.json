@@ -1,0 +1,716 @@
+{
+ "paper_id": "10.1002_smj.3584",
+ "title": "Caveat emptor as an obstacle to business transfers: Effect of product line liability exceptions on acquisitions, entry, and exit",
+ "journal": "SMJ",
+ "year": 2024,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market frictions theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "product_line_exception",
+      "relation": "decreases",
+      "to": "value_from_selling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_from_selling",
+      "relation": "increases",
+      "to": "acquisitions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "product_line_exception",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisitions",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_from_selling",
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "non_redeployability_of_physical_capital",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "value_from_selling",
+     "moderated_from": "product_line_exception",
+     "moderated_to": "acquisitions",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "redeployability_heterogeneity"
+    },
+    {
+     "construct": "establishment_age",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "accumulated_product_liabilities",
+     "moderated_from": "product_line_exception",
+     "moderated_to": "acquisitions",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "age_heterogeneity"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "pre-existing declining trend in acquisitions mistaken for the PLE effect",
+    "a coincident state-level shock (e.g., a more consumer-friendly government) that also drove PLE adoption"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "product_line_exception",
+      "relation": "decreases",
+      "to": "value_from_selling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_from_selling",
+      "relation": "decreases",
+      "to": "closures",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "product_line_exception",
+      "relation": "decreases",
+      "to": "value_from_continuing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_from_continuing",
+      "relation": "decreases",
+      "to": "closures",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_from_selling",
+    "value_from_continuing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "pre-existing rising trend in closures mistaken for the PLE effect",
+    "a coincident state-level shock (e.g., a more consumer-friendly government) affecting all businesses"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "product_line_exception",
+      "relation": "decreases",
+      "to": "expected_value_from_entering",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_value_from_entering",
+      "relation": "increases",
+      "to": "entry",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_value_from_entering"
+   ],
+   "moderators": [
+    {
+     "construct": "initial_firm_size",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "liability_exposure",
+     "moderated_from": "product_line_exception",
+     "moderated_to": "entry",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "size_heterogeneity"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a coincident state-level shock (e.g., a more consumer-friendly government) affecting all businesses"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US establishments across all sectors; manufacturing establishments in NAICS 31, 32, or 33 as the treated group vs. nonmanufacturing establishments as controls)",
+  "country_region": "United States",
+  "time_period": "1976-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "about 150 million establishment-year observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "census_gov",
+    "kind": "government_public"
+   },
+   {
+    "name": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)",
+    "category": "hand_collected",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (columns 1-4): Effect of PLE on probability of being acquired",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquired",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x Manufacturing (triple-difference term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log of total establishment employment (1-year lagged)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "log population (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "log GDP (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "average corporate tax rate (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "establishment fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry-by-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (columns 5-8): Effect of PLE on probability of closure",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Closed",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x Manufacturing (triple-difference term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log of total establishment employment (1-year lagged)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "average wage (payroll/employment, 1-year lagged)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "log population (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "log GDP (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "average corporate tax rate (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "establishment fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry-by-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Effect of PLE on business entry",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "State-industry-year level (aggregate entry), US Census LBD 1976-2014; includes all firms",
+    "dv": {
+     "name": "Entry rate / log number of new establishments",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x Manufacturing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log population (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "log GDP (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "average corporate tax rate (state-year, 1-year lagged)",
+      "source": ""
+     },
+     {
+      "name": "state fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry-by-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 & 4 (columns 5-8): Stacked DID robustness",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "State court adoption of the product line exception (PLE); staggered adoption addressed via stacked DID (Cengiz et al., 2019; Baker et al., 2022)",
+    "sample": "Same as baseline except samples exceeding ~100 million observations, for which only baseline estimates are provided (stacked DID not computationally feasible)",
+    "dv": {
+     "name": "Acquired / Closed / Entry rate / log new establishments",
+     "measure": "same DVs as baseline (Acquired, Closed, entry rate, log number of new establishments) re-estimated under a stacked DID design",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x Manufacturing (stacked DID)",
+      "measure": "four-step stacked DID: separate the six adopting states into five adoption-year groups, append duplicate never-adopter observations to each group, stack, then estimate with all fixed effects interacted with dataset dummies; standard errors clustered by state (Wing et al., 2021)",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same establishment/state-year controls as baseline",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "fixed effects interacted with stack-dataset dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Heterogeneity across industries (redeployability of physical capital)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "State court adoption of the product line exception (PLE)",
+    "sample": "Limited to manufacturing establishments (data availability; avoids a quadruple-difference specification)",
+    "dv": {
+     "name": "Acquired / Closed / Entry",
+     "measure": "probability of being acquired (Acquired), probability of closure (Closed), and entry (as defined in baseline)",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x resalability-adjusted capital intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log establishment employment (1-year lagged)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "average wage (1-year lagged)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "state-year controls (log population, log GDP, average corporate tax rate)",
+      "source": ""
+     },
+     {
+      "name": "fixed effects (establishment/state, industry-by-year)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Heterogeneity by initial firm size (entry by size class)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "State court adoption of the product line exception (PLE)",
+    "sample": "State-industry-year level entry, split by entrant size class; baseline and stacked DID specifications",
+    "dv": {
+     "name": "log number of entrants by size category",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x Manufacturing by size class",
+      "measure": "Product line exception x manufacturing interaction, estimated separately for each entrant size class",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "state-year controls",
+      "source": ""
+     },
+     {
+      "name": "state fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry-by-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Heterogeneity by firm age (life-cycle effects on acquisition/closure)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "State court adoption of the product line exception (PLE)",
+    "sample": "Establishment-level, manufacturing vs nonmanufacturing, split by young/old establishments",
+    "dv": {
+     "name": "Acquired / Closed",
+     "measure": "probability of being acquired (Acquired) and probability of closure (Closed), as defined in baseline",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x initial size interaction and PLE x old-establishment dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017); age from US Census LBD"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log establishment employment (1-year lagged)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "average wage (1-year lagged)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "state-year controls (log population, log GDP, average corporate tax rate)",
+      "source": ""
+     },
+     {
+      "name": "establishment and industry-by-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Impact on overall firm performance (firm closure, growth, entry)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "State court adoption of the product line exception (PLE)",
+    "sample": "Firm level (establishment data aggregated to firm), US Census LBD 1976-2014",
+    "dv": {
+     "name": "Firm closure / Firm growth / Firm entry",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x Manufacturing (firm level)",
+      "measure": "PLE adoption dummy interacted with manufacturing, on establishment data aggregated to the firm level (multiunit firms assigned to the state and industry with the most employment)",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "state-year controls (log population, log GDP, average corporate tax rate)",
+      "source": ""
+     },
+     {
+      "name": "firm/establishment and industry-by-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Online Appendix Table A3.8: Pre-trends / dynamic event-study check",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "State court adoption of the product line exception (PLE)",
+    "sample": "Establishment-level, manufacturing vs nonmanufacturing, time-binned around adoption",
+    "dv": {
+     "name": "Acquired / Closed",
+     "measure": "relative probability of acquisition and closure in manufacturing across time bins around PLE adoption; period more than 4 years before adoption is the omitted category",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "PLE x Manufacturing x time-since-adoption bins",
+      "measure": "detailed breakdown of time periods before and after PLE adoption (e.g., 4-year pre window, 4-year post window, beyond 4 years) interacted with manufacturing",
+      "source": "State court adoption years of the product line exception (PLE) (Table 1; constructed from Kuney, 2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "state-year controls",
+      "source": ""
+     },
+     {
+      "name": "establishment and industry-by-year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "ple",
+    "internalization of previously external costs",
+    "increased frictions",
+    "uncertainty",
+    "information asymmetry"
+   ],
+   "mechanism_named": "internalization of previously external costs",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "ple adoption",
+    "frictions",
+    "acquisitions",
+    "entry",
+    "exit",
+    "surplus available to the transacting parties"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "frictions",
+    "public information on early-stage patents"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "acquisitions",
+    "internal development",
+    "organic growth"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "determinants of acquisitions versus internal development",
+    "on_path": [
+     "acquisitions",
+     "growth"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "actual liabilities",
+    "liabilities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "actual liabilities",
+    "liabilities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "liabilities",
+    "product liability risk",
+    "r&d",
+    "patenting",
+    "strategic choices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "liabilities",
+    "relation": "affects",
+    "to": "strategic choices"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "spillover effects into neighboring states",
+    "ple"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ple",
+    "relation": "affects",
+    "to": "spillover effects into neighboring states"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "insurance against potential liabilities",
+    "ple"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "reduced business transfers",
+    "aggregate welfare",
+    "allocative efficiency",
+    "market power",
+    "concentration"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "reduced business transfers",
+    "relation": "affects",
+    "to": "aggregate welfare"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ple adoption",
+    "potential benefits",
+    "improved product safety"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ple adoption",
+    "relation": "affects",
+    "to": "improved product safety"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

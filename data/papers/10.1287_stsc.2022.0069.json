@@ -1,0 +1,819 @@
+{
+ "paper_id": "10.1287/stsc.2022.0069",
+ "title": "Innovation Disclosures and the Design of Technology Acquisition Contracts Evidence from the American Inventors Protection Act",
+ "journal": "SS",
+ "year": 2025,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "adverse selection"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "innovation_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "mac_exclusions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "innovation_disclosure",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "mac_exclusions",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "faster learning of acquirers and associated changes in target selection driving the results"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "innovation_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "contingent_earnouts",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "innovation_disclosure",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "contingent_earnouts",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "faster learning of acquirers and associated changes in target selection driving the results"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "innovation_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "firm_specific_mac_exclusions",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a generic, market-wide change in M&A contracting unrelated to firm-specific innovation information"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "innovation_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "technology_related_mac_exclusions",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a generic, non-technology-related effect of AIPA on acquisition contracting"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "U.S. bio-pharmaceutical (biotechnology / pharmaceutical) industry; a technology-intensive, patent-reliant high-tech sector",
+  "country_region": "United States",
+  "time_period": "1995-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "127 deals (95 unique acquirers), from 134 hand-collected acquisitions less 7 without MAC clauses"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "hand collected and coded acquisition contracts (of 134 acquisitions)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "NBER patent database (Hall et al. 2001)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "PatentsView patent database",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "USPTO (patent classes / patent grant lag)",
+    "category": "patents",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA); continuous treatment = Patent grant lag / binary treatment = Innovation disclosure",
+    "sample": "",
+    "dv": {
+     "name": "MAC Exclusions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-AIPA x Patent Grant Lag (DiD interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     },
+     {
+      "name": "Post-AIPA x Innovation Disclosure (DiD interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target VC funding",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Public target",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Core target",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Technology distance",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Prior ties",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Acquirer M&A experience",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA); continuous treatment = Patent grant lag / binary treatment = Innovation disclosure",
+    "sample": "",
+    "dv": {
+     "name": "Contingent Earnouts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-AIPA x Patent Grant Lag (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Patent grant lag (continuous treatment, average patent grant lag in months, weighted patent pendency of target firm)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     },
+     {
+      "name": "Post-AIPA x Innovation Disclosure (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Innovation disclosure (=1 if target's Patent grant lag is above industry average)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target VC funding",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Public target",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Core target",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Technology distance",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Prior ties",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Acquirer M&A experience",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Bivariate Probit Estimation Results (MAC Exclusions and Contingent Earnouts jointly, Models 1a/1b/2a/2b)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA); bivariate probit jointly estimating MAC exclusions and earnouts with correlated errors (rho)",
+    "sample": "N = 114 (full-control models)",
+    "dv": {
+     "name": "MAC Exclusions and Contingent Earnouts (two binary latent variables estimated jointly)",
+     "measure": "z1 = latent variable for MAC Exclusions (binary), z2 = latent variable for Contingent Earnouts (binary), estimated simultaneously with correlated disturbances rho",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-AIPA x Patent Grant Lag (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Patent grant lag (continuous treatment)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     },
+     {
+      "name": "Post-AIPA x Innovation Disclosure (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Innovation disclosure (binary treatment)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target VC funding",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Public target",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Core target",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Technology distance",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Prior ties",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Acquirer M&A experience",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA); OLS used because interaction effects are not straightforward in nonlinear count models",
+    "sample": "N = 114 (full-control models)",
+    "dv": {
+     "name": "Number of MAC Exclusions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-AIPA x Patent Grant Lag (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Patent grant lag (continuous treatment)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     },
+     {
+      "name": "Post-AIPA x Innovation Disclosure (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Innovation disclosure (binary treatment)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target VC funding",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Public target",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Core target",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Technology distance",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Prior ties",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Acquirer M&A experience",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA); exclusions split firm-specific vs market-wide per Denis and Macias (2013)",
+    "sample": "",
+    "dv": {
+     "name": "Firm-specific MAC exclusions and Market-wide MAC exclusions",
+     "measure": "counts of MAC exclusions categorized per Denis and Macias (2013)'s 14 subcategories into firm-specific (affecting a specific firm/group) versus market-wide (impacting all firms) exclusions",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-AIPA x Patent Grant Lag (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Patent grant lag (continuous treatment)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     },
+     {
+      "name": "Post-AIPA x Innovation Disclosure (DiD interaction)",
+      "measure": "interaction of Post-AIPA and Innovation disclosure (binary treatment)",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target VC funding",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Public target",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Core target",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Technology distance",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Prior ties",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Acquirer M&A experience",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Technology-related vs Non-technology-related MAC Exclusions",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA); mechanism test on technology-related exclusions",
+    "sample": "",
+    "dv": {
+     "name": "Technology-related and Non-technology-related MAC exclusions",
+     "measure": "MAC exclusions classified by whether they could be invoked due to changes in the technological landscape (two market-wide and five firm-specific exclusions coded technology-related; accounting/war/loss-of-customers etc. coded non-technology-related)",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-AIPA x Treatment (DiD interaction)",
+      "measure": "interaction of Post-AIPA with Patent grant lag / Innovation disclosure treatments",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target VC funding",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Public target",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Core target",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Technology distance",
+      "source": "NBER and PatentsView patent databases"
+     },
+     {
+      "name": "Prior ties",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Acquirer M&A experience",
+      "source": "Recombinant Capital (Recap)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Parallel-trends t tests (pre-AIPA differences in MAC exclusions and earnouts, high vs low patent grant lag)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA); series of t tests checking the parallel-trends assumption",
+    "sample": "pre-AIPA deals only",
+    "dv": {
+     "name": "Pre-AIPA use of MAC Exclusions and Contingent Earnouts",
+     "measure": "presence of MAC exclusions and contingent earnouts compared across high vs low Patent grant lag target groups in the pre-AIPA period",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "High vs low Patent grant lag group (pre-AIPA)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 9 - Placebo tests (placebo cutoffs 1998, 1999, 2000 on pre-AIPA deals) for MAC exclusions and earnouts",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA) placebo cutoffs (1998, 1999, 2000)",
+    "sample": "pre-AIPA deals only",
+    "dv": {
+     "name": "MAC Exclusions and Contingent Earnouts (placebo)",
+     "measure": "presence of MAC exclusions / contingent earnouts under placebo treatment cutoffs",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Placebo Post x Patent grant lag / Innovation disclosure",
+      "measure": "DiD interaction using placebo cutoff years 1998, 1999, and 2000 among pre-AIPA deals",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 10 - Placebo tests for different types (firm-specific/market-wide, tech/non-tech) of MAC exclusions",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "American Inventors Protection Act (AIPA) placebo cutoffs",
+    "sample": "pre-AIPA deals only",
+    "dv": {
+     "name": "Types of MAC Exclusions (placebo)",
+     "measure": "firm-specific/market-wide and technology-related/non-technology-related MAC exclusions under placebo cutoffs",
+     "source": "hand collected and coded acquisition contracts"
+    },
+    "key_ivs": [
+     {
+      "name": "Placebo Post x Treatment",
+      "measure": "DiD interaction using placebo cutoff years among pre-AIPA deals",
+      "source": "NBER and PatentsView patent databases / USPTO"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "information disclosure",
+    "design of m&a contracts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "information disclosure",
+    "relation": "affects",
+    "to": "design of M&A contracts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "bargaining power of targets",
+    "target-friendly contract provisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "bargaining power of targets",
+    "relation": "unspecified",
+    "to": "target-friendly contract provisions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "information disclosure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "mac exclusions",
+    "earnouts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "generalizability",
+    "high-tech industries"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "disclosures of other kinds by targets",
+    "reliance on contractual and other solutions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "disclosures of other kinds by targets",
+    "relation": "unspecified",
+    "to": "reliance on contractual and other solutions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "different types of information disclosure",
+    "acquisition contracts",
+    "international acquisitions",
+    "innovation disclosures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "different types of information disclosure",
+    "relation": "affects",
+    "to": "acquisition contracts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "information disclosures",
+    "mac exclusions",
+    "earnouts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "information disclosures",
+    "relation": "affects",
+    "to": "use of mac exclusions and earnouts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "antecedents",
+    "mac exclusions",
+    "earnouts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "specific antecedents",
+    "relation": "affects",
+    "to": "mac exclusions and earnouts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "bargaining power",
+    "founder incentives and preferences",
+    "conflicts of interest",
+    "m&a contracts",
+    "entrepreneurial ventures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "m&a contracts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "efficiency",
+    "performance implications of acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "disclosures and claims that targets make",
+    "due diligence processes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "negotiations",
+    "contracts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "contractual provisions",
+    "deal completion",
+    "abandonment",
+    "payment of earnouts",
+    "effective integration",
+    "postacquisition innovation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "contractual provisions",
+    "relation": "affects",
+    "to": "near-term and longer term implications"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

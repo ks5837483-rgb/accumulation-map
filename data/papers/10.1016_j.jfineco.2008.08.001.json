@@ -1,0 +1,483 @@
+{
+ "paper_id": "10.1016_j.jfineco.2008.08.001",
+ "title": "The underpricing of private targets",
+ "journal": "JFE",
+ "year": 2009,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "target valuation uncertainty hypothesis",
+  "prospect theory",
+  "information economics",
+  "partial adjustment effect"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_valuation_revision",
+      "relation": "increases",
+      "to": "target_valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_valuation_uncertainty",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_valuation_revision",
+      "relation": "increases",
+      "to": "negative_skewness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "negative_skewness",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_valuation_revision",
+      "relation": "decreases",
+      "to": "target_negotiation_aggressiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_negotiation_aggressiveness",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_valuation_uncertainty",
+    "negative_skewness",
+    "target_negotiation_aggressiveness"
+   ],
+   "moderators": [
+    {
+     "construct": "venture_capital_backing",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "target_valuation_uncertainty",
+     "moderated_from": "target_valuation_revision",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    },
+    {
+     "construct": "low_rank_underwriter",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "target_valuation_uncertainty",
+     "moderated_from": "target_valuation_revision",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3"
+    },
+    {
+     "construct": "time_between_ipo_filing_and_acquisition",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "target_valuation_uncertainty",
+     "moderated_from": "target_valuation_revision",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "lemons problem (adverse selection) strengthening the relation for large negative valuation revisions",
+    "spurious relation induced by Nasdaq bubble price movements",
+    "sample selection bias from observing only acquired (more successful) withdrawn IPOs"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "venture_capital_backing",
+      "relation": "decreases",
+      "to": "target_valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_valuation_uncertainty",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "venture_capital_backing",
+      "relation": "decreases",
+      "to": "target_underpricing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_underpricing",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_valuation_uncertainty",
+    "target_underpricing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "interim post-withdrawal VC valuations (not VC pricing expertise) driving the negative interaction"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (private-firm acquisitions; targets from 18 and acquirers from 22 different industries, roughly half of targets from Computer Software and Business Services)",
+  "country_region": "United States (withdrawn US IPOs; publicly traded US acquirers)",
+  "time_period": "1996-2005",
+  "sample_description": "68 private firms that filed an IPO registration statement with the SEC, withdrew, and were subsequently acquired by a publicly traded firm; drawn from Thomson SDC Platinum New Issues (withdrawn IPOs) matched to the Thomson SDC Mergers & Acquisitions database, with CRSP data required for acquirers",
+  "sample_size": "68 (main withdrawn-IPO sample); 194 in the confirming venture-capital-valuation sample"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson SDC Platinum's New Issues database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (univariate: Acquirer CAR by terciles of Valuation revision)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Valuation revision",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LexisNexis / SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 (regression: determinants of Log valuation revision)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Log valuation revision",
+     "measure": "the natural log of (1+Valuation revision)",
+     "source": "LexisNexis / SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "s(Price-to-assets multiple target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "s(Price-to-earnings multiple target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Debt to assets target",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Distressed target",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Industry return since last IPO filing",
+      "source": "Fama-French 49-industry returns"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (regression: Acquirer CAR on Log valuation revision, VC and interaction; main = column 2)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Log valuation revision",
+      "measure": "the natural log of (1+Valuation revision)",
+      "source": "LexisNexis / SEC filings"
+     },
+     {
+      "name": "VC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Log valuation revision x VC",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "LexisNexis / SDC"
+     },
+     {
+      "name": "Log acquirer size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC M&A"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Liquidity index target industry",
+      "source": "SDC M&A"
+     },
+     {
+      "name": "Industry return since last IPO filing",
+      "source": "Fama-French 49-industry returns"
+     },
+     {
+      "name": "Low rank underwriter",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Long time",
+      "source": "SEC filings / SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (robustness: bubble-period exclusion, small-target exclusion, positive vs negative revision split)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "col 1 excludes 17 takeovers with last IPO filing in 1999/2000 and acquisition after 2000 (n=51); col 2 excludes 7 with Relative size <1% (n=61); col 3 positive valuation revisions (n=21); col 4 negative valuation revisions (n=47)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Log valuation revision",
+      "measure": "the natural log of (1+Valuation revision)",
+      "source": "LexisNexis / SEC filings"
+     },
+     {
+      "name": "Log valuation revision x VC",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "LexisNexis / SDC"
+     },
+     {
+      "name": "Log acquirer size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC M&A"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Liquidity index target industry",
+      "source": "SDC M&A"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "investment bank reputation",
+    "target valuation",
+    "target performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "investment bank reputation",
+    "relation": "unspecified",
+    "to": "target valuation"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "VC"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "withdrawn IPOs that remain private"
+   ],
+   "mechanism_named": "sample bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "valuation uncertainty",
+    "behavioral biases"
+   ],
+   "mechanism_named": "valuation uncertainty or behavioral biases",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "main sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "private acquisitions",
+    "acquisitions of public targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "pricing effects",
+    "private acquisitions",
+    "negotiation outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "target underpricing",
+    "acquirer announcement returns",
+    "target valuation revisions",
+    "target valuation uncertainty"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

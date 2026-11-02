@@ -1,0 +1,780 @@
+{
+ "paper_id": "10.1002_smj.2944",
+ "title": "Cross‐border mergers and acquisitions amid political uncertainty: A bargaining perspective",
+ "journal": "SMJ",
+ "year": 2018,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "bargaining power theory",
+  "political uncertainty theory",
+  "real options theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "political_uncertainty",
+      "relation": "increases",
+      "to": "acquirer_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_bargaining_power",
+      "relation": "increases",
+      "to": "acquirer_share_of_acquisition_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "political_uncertainty",
+      "relation": "increases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "increases",
+      "to": "acquirer_share_of_acquisition_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_bargaining_power",
+    "valuation_uncertainty"
+   ],
+   "moderators": [
+    {
+     "construct": "close_election",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "valuation_uncertainty",
+     "moderated_from": "political_uncertainty",
+     "moderated_to": "acquirer_share_of_acquisition_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "contract_enforcement",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "contract_repudiation_risk",
+     "moderated_from": "political_uncertainty",
+     "moderated_to": "acquirer_share_of_acquisition_gains",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "acquirer_international_experience",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquirer_bargaining_power",
+     "moderated_from": "political_uncertainty",
+     "moderated_to": "acquirer_share_of_acquisition_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "political business cycle (PBC)",
+    "sample selection bias"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "political_uncertainty",
+      "relation": "increases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "decreases",
+      "to": "use_of_cash_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border M&A deals across sectors, four-digit SIC-coded)",
+  "country_region": "cross-border M&A deals among 43 countries (43 largest economies)",
+  "time_period": "1990-2011 (announced 1990-2011, completed by end of 2012)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "921 cross-border M&A deals"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "World Bank (GDP per capita)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "OECD (corporate tax rates)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "IMF (budget balance)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "The Penn World Table",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "International Country Risk Guide (ICRG)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Model 1 (baseline: deal-/macro-level variables + country/year fixed effects)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "DeltaGDP per capita",
+      "source": "World Bank"
+     },
+     {
+      "name": "DeltaStock market return",
+      "source": "Datastream"
+     },
+     {
+      "name": "DeltaReal FX return",
+      "source": "Datastream and The Penn World Table"
+     },
+     {
+      "name": "DeltaCorporate tax rate",
+      "source": "OECD"
+     },
+     {
+      "name": "Political checks (ln of DPI item CHECKS)",
+      "source": "DPI"
+     },
+     {
+      "name": "Diversifying M&A",
+      "source": "SDC"
+     },
+     {
+      "name": "Termination fee",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer-country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Target-country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 2 (adds firm-level controls)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Acquirer size (ln of acquirer market capitalization in US dollars)",
+      "source": "Compustat (US firms); Datastream (non-US firms)"
+     },
+     {
+      "name": "Target size (ln of target market capitalization in US dollars)",
+      "source": "Compustat (US firms); Datastream (non-US firms)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat (US firms); Datastream (non-US firms)"
+     },
+     {
+      "name": "Target M/B",
+      "source": "Compustat (US firms); Datastream (non-US firms)"
+     },
+     {
+      "name": "DeltaGDP per capita",
+      "source": "World Bank"
+     },
+     {
+      "name": "DeltaStock market return",
+      "source": "Datastream"
+     },
+     {
+      "name": "DeltaReal FX return",
+      "source": "Datastream and The Penn World Table"
+     },
+     {
+      "name": "DeltaCorporate tax rate",
+      "source": "OECD"
+     },
+     {
+      "name": "Political checks",
+      "source": "DPI"
+     },
+     {
+      "name": "Diversifying M&A",
+      "source": "SDC"
+     },
+     {
+      "name": "Termination fee",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 3 (introduces Election year; main test of H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "forthcoming national elections in the host (target) country (snap elections removed to preserve exogeneity)",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank DPI + hand-collected election data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Compustat/Datastream"
+     },
+     {
+      "name": "Target size",
+      "source": "Compustat/Datastream"
+     },
+     {
+      "name": "Acquirer M/B",
+      "source": "Compustat/Datastream"
+     },
+     {
+      "name": "Target M/B",
+      "source": "Compustat/Datastream"
+     },
+     {
+      "name": "DeltaGDP per capita",
+      "source": "World Bank"
+     },
+     {
+      "name": "DeltaStock market return",
+      "source": "Datastream"
+     },
+     {
+      "name": "DeltaReal FX return",
+      "source": "Datastream and The Penn World Table"
+     },
+     {
+      "name": "DeltaCorporate tax rate",
+      "source": "OECD"
+     },
+     {
+      "name": "Political checks",
+      "source": "DPI"
+     },
+     {
+      "name": "Diversifying M&A",
+      "source": "SDC"
+     },
+     {
+      "name": "Termination fee",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 4 (FGLS for heteroscedasticity)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "forthcoming national elections in the host (target) country",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank DPI + hand-collected election data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-level controls (Acquirer/Target size, Acquirer/Target M/B)",
+      "source": "Compustat/Datastream"
+     },
+     {
+      "name": "Macro-level controls (DeltaGDP per capita, DeltaStock market return, DeltaReal FX return, DeltaCorporate tax rate, Political checks)",
+      "source": "World Bank / Datastream / Penn World Table / OECD / DPI"
+     },
+     {
+      "name": "Deal-level controls (Diversifying M&A, Termination fee, Tender offer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 5 (opportunistic PBC: Election year x Budget balance)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "forthcoming national elections in the host (target) country",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     },
+     {
+      "name": "Election year x Budget balance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IMF (Budget balance)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Budget balance",
+      "source": "IMF"
+     },
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 6 (partisan PBC: Election year x Partisan shift)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "forthcoming national elections in the host (target) country",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     },
+     {
+      "name": "Election year x Partisan shift",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DPI (Partisan shift)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Partisan shift",
+      "source": "DPI"
+     },
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 1 (Election year x Close election)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "close national elections (vote margin <= 3 percentage points), harder to predict",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     },
+     {
+      "name": "Election year x Close election",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected election data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 2 (Election year x Contract enforcement)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "forthcoming national elections in the host (target) country",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     },
+     {
+      "name": "Election year x Contract enforcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "International Country Risk Guide (ICRG)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Contract enforcement",
+      "source": "ICRG"
+     },
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 3 (Election year x Experience)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "forthcoming national elections in the host (target) country",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     },
+     {
+      "name": "Election year x Experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 4 (presidential-elections subsample robustness)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "presidential elections (clearly exogenous)",
+    "sample": "countries with presidential elections (437 observations)",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 5 (US-target subsample robustness)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "forthcoming national elections in the host country (US targets)",
+    "sample": "cross-border deals with US targets (343 observations)",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 6 (Heckman two-step second stage; sample-selection correction)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "exclusion restriction: Partisan orientation (dummy = 1 if incumbent's partisan orientation is 'Left', 0 otherwise), excluded from second stage",
+    "sample": "",
+    "dv": {
+     "name": "Delta$CAR",
+     "measure": "target minus acquirer cumulative abnormal dollar returns over 7 days, scaled by summed market values 50 trading days prior",
+     "source": "CRSP (US firms); Datastream (non-US firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "Election year",
+      "measure": "dummy = 1 if forthcoming election in target country within one year after announcement, 0 otherwise",
+      "source": "World Bank DPI + hand-collected election data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Inverse Mill's ratio (from first-stage probit of deal announced in an election year)",
+      "source": ""
+     },
+     {
+      "name": "Firm-, macro-, and deal-level controls",
+      "source": "Compustat/Datastream/World Bank/OECD/DPI/SDC"
+     },
+     {
+      "name": "Acquirer-country / target-country / year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "heckman correction results"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "political activities between mnes and host governments",
+    "networking and lobbying",
+    "political uncertainty"
+   ],
+   "mechanism_named": "networking and lobbying",
+   "proposed_edge": {
+    "from": "political activities between mnes and host governments",
+    "relation": "affects",
+    "to": "political uncertainty"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "political channel",
+    "foreign investors' concerns about political uncertainty"
+   ],
+   "mechanism_named": "the political channel",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

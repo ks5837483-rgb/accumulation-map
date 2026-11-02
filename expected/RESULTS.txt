@@ -1,0 +1,57 @@
+=== S: rows 3529 | F rows 1414 | C rows 1242 (D 1116 E 64 U 62 )
+
+=== (a) ACCUMULATION WITHIN EACH MARKET (investor side = deal-triggered)
+F: finding cells (mechanism x outcome) 831 | tested by ONE paper 85.0% | by >=3 papers 5.5%
+C: finding cells (mechanism x outcome) 622 | tested by ONE paper 80.4% | by >=3 papers 8.2%
+F: mechanisms 286 | single-paper 158 | credible 43
+C: mechanisms 249 | single-paper 137 | credible 28
+credible in BOTH markets: 14 ['adverse_selection', 'asset_valuation_accuracy', 'bargaining_power', 'bidder_competition', 'fundamental_risk', 'information_asymmetry', 'information_processing_capacity', 'operating_synergy', 'ownership_control_value', 'private_information_access', 'signal_of_firm_quality', 'signal_of_private_value', 'transaction_cost', 'valuation_uncertainty']
+
+=== (b) CONNECT MARKETS — support, firms (F) vs investors (C), mechanisms credible in both; paper-level units
+MAIN (C = deal-triggered)                F 0.875 (n=309)  C 0.779 (n=232)  gap +0.096
+sens: C incl. unclear (D+U)              F 0.875 (n=309)  C 0.782 (n=240)  gap +0.092
+sens: C all investor outcomes (D+E+U)    F 0.875 (n=309)  C 0.786 (n=248)  gap +0.089
+sens: ALL mechanisms seen in both        F 0.839 (n=758)  C 0.730 (n=679)  gap +0.109
+sens: cutoffs looser (>=3 papers, >=.6, no causal req) [31 mech] F 0.858 (n=407)  C 0.771 (n=374)  gap +0.087
+sens: cutoffs stricter (>=6 papers, >=.7, causal) [11 mech] F 0.880 (n=290)  C 0.778 (n=215)  gap +0.102
+
+--- by design (credible-in-both mechanisms)
+design causal                            F 0.905 (n=76)  C 0.810 (n=43)  gap +0.094
+design non-causal                        F 0.865 (n=233)  C 0.772 (n=189)  gap +0.093
+--- by era
+era <2000                                F 0.863 (n=42)  C 0.788 (n=46)  gap +0.075
+era 2000s                                F 0.804 (n=70)  C 0.735 (n=59)  gap +0.070
+era 2010+                                F 0.902 (n=197)  C 0.796 (n=127)  gap +0.106
+--- by field
+field finance                            F 0.862 (n=112)  C 0.747 (n=145)  gap +0.114
+field strategy                           F 0.876 (n=125)  C 0.841 (n=45)  gap +0.034
+field accounting                         F 0.890 (n=47)  C 0.875 (n=24)  gap +0.015
+--- same paper, same mechanism, both markets: 35 pairs | F 0.945 C 0.873
+
+--- per mechanism (credible in both)
+                                  n          s         gap
+market                            C    F     C     F      
+mech_g                                                    
+signal_of_private_value          21    8  0.85  0.75 -0.10
+fundamental_risk                  6    4  0.83  0.75 -0.08
+information_processing_capacity   6    5  0.83  0.78 -0.05
+signal_of_firm_quality            9    9  0.83  0.83  0.00
+transaction_cost                  7   24  0.86  0.90  0.04
+operating_synergy                23    8  0.83  0.90  0.07
+bidder_competition                8   33  0.75  0.84  0.09
+bargaining_power                 27   18  0.76  0.86  0.10
+information_asymmetry            65  106  0.78  0.88  0.11
+ownership_control_value           5   10  0.70  0.82  0.12
+valuation_uncertainty             9   22  0.72  0.85  0.13
+asset_valuation_accuracy         10   10  0.72  0.88  0.16
+private_information_access       17   13  0.72  0.92  0.20
+adverse_selection                19   39  0.74  0.94  0.20
+
+=== (c) INFORMATION MECHANISMS ONLY: credible in both markets AND an information mechanism: 8 ['adverse_selection', 'asset_valuation_accuracy', 'information_asymmetry', 'information_processing_capacity', 'private_information_access', 'signal_of_firm_quality', 'signal_of_private_value', 'valuation_uncertainty']
+MAIN information mechanisms              F 0.883 (n=212)  C 0.774 (n=156)  gap +0.109
+design causal                            F 0.896 (n=45)  C 0.827 (n=27)  gap +0.069
+design non-causal                        F 0.879 (n=167)  C 0.763 (n=129)  gap +0.117
+field finance                            F 0.861 (n=61)  C 0.746 (n=99)  gap +0.115
+field strategy                           F 0.894 (n=98)  C 0.812 (n=30)  gap +0.082
+field accounting                         F 0.902 (n=35)  C 0.875 (n=16)  gap +0.027
+--- same paper, same mechanism, both markets: 24 pairs | F 0.941 C 0.898

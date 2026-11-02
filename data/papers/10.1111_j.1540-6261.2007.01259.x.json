@@ -1,0 +1,696 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2007.01259.x",
+ "title": "Corporate Governance and Acquirer Returns",
+ "journal": "JF",
+ "year": 2007,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "market for corporate control",
+  "free cash flow hypothesis",
+  "managerial entrenchment hypothesis",
+  "adverse selection (Myers and Majluf 1984)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "ATP value destruction hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "decreases",
+      "to": "market_for_corporate_control_discipline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_for_corporate_control_discipline",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "increases",
+      "to": "agency_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_for_corporate_control_discipline",
+    "agency_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "spurious correlation / omitted variable — bad (low-quality) CEOs both adopt ATPs to entrench themselves and make poor acquisitions"
+   ]
+  },
+  {
+   "hypothesis": "product market competition",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "product_market_competition",
+      "relation": "increases",
+      "to": "managerial_discipline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_discipline",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_discipline"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "CEO equity incentives",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_equity_incentives",
+      "relation": "decreases",
+      "to": "manager_shareholder_conflict",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "manager_shareholder_conflict",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "manager_shareholder_conflict"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "CEO/Chairman duality",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_chairman_duality",
+      "relation": "decreases",
+      "to": "board_monitoring_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_monitoring_effectiveness",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_monitoring_effectiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "method of payment (adverse selection)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "high-tech integration",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "high_tech_acquisition",
+      "relation": "increases",
+      "to": "integration_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "integration_difficulty",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "integration_difficulty"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_deal_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "integration_difficulty",
+     "moderated_from": "high_tech_acquisition",
+     "moderated_to": "acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "high-tech integration"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (large publicly traded U.S. firms covered by the IRRC database: S&P 500 members and the largest corporations listed by Fortune, Forbes, and BusinessWeek)",
+  "country_region": "United States",
+  "time_period": "1990-2003",
+  "sample_description": "Completed U.S. mergers and acquisitions from the SDC U.S. Mergers and Acquisitions database, made by acquirers with financial data on Compustat and stock returns on CRSP and covered by the IRRC antitakeover provision database",
+  "sample_size": "3,333 completed acquisitions made by 1,268 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II Panel A: Announcement Abnormal Returns (univariate CARs by subsample)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "3,333 acquisitions, split into whole sample, all cash, some stock, and public/private/subsidiary target subsamples",
+    "dv": {
+     "name": "acquirer 5-day CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table II Panel B: Antitakeover Provision Indices (correlation with CAR)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer 5-day CAR",
+     "measure": "5-day cumulative abnormal return over event days (−2, +2)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "GIM index",
+      "measure": "governance index equal to the number of the 24 antitakeover provisions (ATPs) a firm has in place",
+      "source": "IRRC"
+     },
+     {
+      "name": "BCF index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC"
+     },
+     {
+      "name": "Staggered board",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II Panel C: Differences in CARs (Democracy vs Dictatorship)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Democracy vs Dictatorship portfolios based on GIM index cutoffs",
+    "dv": {
+     "name": "acquirer 5-day CAR",
+     "measure": "5-day cumulative abnormal return over event days (−2, +2)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "GIM classification (Democracy vs Dictatorship)",
+      "measure": "Democracy = GIM index ≤ 5 (or ≤ 9); Dictatorship = index ≥ 14 (or ≥ 10)",
+      "source": "IRRC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer 5-day CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "GIM index",
+      "measure": "number of the 24 ATPs a firm has in place",
+      "source": "IRRC"
+     },
+     {
+      "name": "BCF index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC"
+     },
+     {
+      "name": "Staggered board",
+      "measure": "binary variable for whether a firm has a staggered board",
+      "source": "IRRC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry Tobin's q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry M&A",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "High tech",
+      "source": ""
+     },
+     {
+      "name": "High tech x relative deal size",
+      "source": ""
+     },
+     {
+      "name": "Public target",
+      "source": "SDC"
+     },
+     {
+      "name": "Private target",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer 5-day CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "GIM index",
+      "measure": "number of the 24 ATPs a firm has in place",
+      "source": "IRRC"
+     },
+     {
+      "name": "BCF index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC"
+     },
+     {
+      "name": "Staggered board",
+      "measure": "binary variable for whether a firm has a staggered board",
+      "source": "IRRC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock price runup",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry M&A",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "High tech",
+      "source": ""
+     },
+     {
+      "name": "High tech x relative deal size",
+      "source": ""
+     },
+     {
+      "name": "Diversifying acquisition",
+      "source": "Compustat"
+     },
+     {
+      "name": "Public target x stock deal (and other deal-category interactions of target status x method of payment)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VII: Controlling for Product Market Competition",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer 5-day CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "GIM index",
+      "measure": "number of the 24 ATPs a firm has in place",
+      "source": "IRRC"
+     },
+     {
+      "name": "BCF index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC"
+     },
+     {
+      "name": "Staggered board",
+      "measure": "binary variable for whether a firm has a staggered board",
+      "source": "IRRC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Log(total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock price runup",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry M&A",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "High tech and high tech x relative deal size",
+      "source": ""
+     },
+     {
+      "name": "Diversifying acquisition",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target status x method of payment deal categories",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "atps",
+    "bad acquisitions"
+   ],
+   "mechanism_named": "endogeneity",
+   "proposed_edge": {
+    "from": "atps",
+    "relation": "affects",
+    "to": "bad acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "empire building",
+    "unprofitable acquisitions",
+    "atps",
+    "market for corporate control"
+   ],
+   "mechanism_named": "reverse causality",
+   "proposed_edge": {
+    "from": "empire building",
+    "relation": "affects",
+    "to": "atps"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "unobservable bidder traits",
+    "takeover protection",
+    "profitability of its acquisitions"
+   ],
+   "mechanism_named": "omitted variable bias",
+   "proposed_edge": {
+    "from": "unobservable bidder traits",
+    "relation": "affects",
+    "to": "profitability of its acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "management quality",
+    "poor acquisitions",
+    "atps"
+   ],
+   "mechanism_named": "management quality",
+   "proposed_edge": {
+    "from": "management quality",
+    "relation": "affects",
+    "to": "atps"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "frequency of acquisitions",
+    "abnormal stock returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisitions",
+    "relation": "affects",
+    "to": "abnormal stock returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "governance premium",
+    "atps",
+    "bidder announcement returns"
+   ],
+   "mechanism_named": "governance premium",
+   "proposed_edge": {
+    "from": "atps",
+    "relation": "decreases",
+    "to": "bidder announcement returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "takeover protection",
+    "inefficient investment projects",
+    "performance"
+   ],
+   "mechanism_named": "market for corporate control",
+   "proposed_edge": {
+    "from": "takeover protection",
+    "relation": "decreases",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "stock market",
+    "acquisition activity"
+   ],
+   "mechanism_named": "perfect foresight",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

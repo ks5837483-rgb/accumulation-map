@@ -1,0 +1,12 @@
+outcome_evaluator v1 (2026-11-01) — prompt of record. Raw-outcome check of the firm-vs-investor market split (the group-level
+labels mixed both sides in at least one group: valuation_accuracy). Judge each RAW outcome name, using its example chain.
+side:
+  "F" = the outcome is a FIRM's evaluation of another firm or the decision/price/terms it sets: acquirer/bidder/target-board choices,
+        premiums paid, deal terms, completion, target selection, the buyer's valuation accuracy.
+  "C" = the outcome is INVESTORS'/markets' evaluation of a firm: stock returns, market value reactions, value relevance of reported
+        numbers, analysts, lenders' pricing, arbitrage spreads, trading.
+  "O" = neither (operating performance, innovation, employment, governance, reporting choices, executive turnover…).
+  "A" = genuinely ambiguous.
+If C, also deal_triggered: "D" (investors react to/price a deal or its accounting) | "E" (everyday, not deal-triggered) | "U" (unclear).
+STRICT JUDGMENT RULE: decide by reading; no scripts/regexes/keyword lists to assign fields. Code only to read/write files.
+Output one JSON per line: {"outcome","side","deal_triggered","confidence","note"} (deal_triggered null unless side=="C").

@@ -1,0 +1,649 @@
+{
+ "paper_id": "10.1002_sej.1371",
+ "title": "The performance of acquisitions of founder\n                    <scp>CEO</scp>\n                    firms: The effect of founder firm premium",
+ "journal": "SEJ",
+ "year": 2020,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "human capital theory",
+  "life cycle theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "founder_firm_premium",
+      "relation": "increases",
+      "to": "fungible_founder_human_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "fungible_founder_human_capital",
+      "relation": "increases",
+      "to": "founder_ceo_departure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "founder_firm_premium",
+      "relation": "increases",
+      "to": "non_replicable_retention_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "non_replicable_retention_incentives",
+      "relation": "increases",
+      "to": "founder_ceo_departure",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "fungible_founder_human_capital",
+    "non_replicable_retention_incentives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "founder CEOs departing after selling overvalued “lemons” based on inside information (adverse selection), rather than difficulty appropriating fungible human capital"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "founder_firm_premium",
+      "relation": "increases",
+      "to": "appropriation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "appropriation_uncertainty",
+      "relation": "decreases",
+      "to": "acquirer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "appropriation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the negative return being a wealth transfer to target shareholders from overpayment, rather than difficult-to-appropriate founder human capital"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquisitions of U.S. public founder-CEO and professional-CEO targets across a variety of industrial sectors; ~one third of founder-CEO firms in the tech sector)",
+  "country_region": "United States (acquirers headquartered in the U.S. and listed on a public stock exchange)",
+  "time_period": "1997-2013",
+  "sample_description": "M&A deals from the Thomson-Reuters SDC database; completed deals with acquirers in the S&P 1500 listed on a public U.S. stock exchange; public targets with book value of assets >=$100 million and target/acquirer BVA ratio >=1%; targets classified as founder-CEO firms via proxy statements; stock returns from CRSP",
+  "sample_size": "943 acquisition observations (157 founder-CEO targets, 786 professional-CEO targets)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Thomson-Reuters Securities Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings and the EDGAR database (proxy statements and merger documents)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Center for Research on Securities Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Internet / web-based search engines (hand-collected founder CEO departure and CEO compensation)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Summary statistics: difference-in-means, founder vs non-founder CEO samples",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "157 founder CEO targets vs 786 professional CEO targets",
+    "dv": {
+     "name": "Founder vs non-founder CEO target characteristics",
+     "measure": "two-tailed difference-in-means tests across CEO, target, and deal characteristics",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Founder CEO status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR proxy statements"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "Early Incorporation (firms incorporated prior to 1960)",
+    "sample": "full sample of 943 acquisitions",
+    "dv": {
+     "name": "Tobin's Q (Founder CEO status in first-stage probit, column 1)",
+     "measure": "Tobin's Q of the target; column (1) dependent variable is founder CEO status (1 = founder CEO, 0 = Professional CEO), columns (2)-(4) estimate Tobin's Q",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Founder CEO status",
+      "measure": "1 = founder CEO, 0 = Professional CEO",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "Early Incorporation (instrument)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "Ln(CEO compensation)",
+      "source": "hand_collected (web-based search engines, proxy statements, merger documents on EDGAR)"
+     },
+     {
+      "name": "Target firm size (log of assets)",
+      "source": ""
+     },
+     {
+      "name": "Target firm age (log of months since stock first listed)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Debt/Assets",
+      "source": ""
+     },
+     {
+      "name": "R&D intensity",
+      "source": ""
+     },
+     {
+      "name": "Capital Intensity",
+      "source": ""
+     },
+     {
+      "name": "Delaware incorporation (0,1)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "S&P 500 inclusion",
+      "source": ""
+     },
+     {
+      "name": "Operating margin",
+      "source": ""
+     },
+     {
+      "name": "Dividends/Book Equity",
+      "source": ""
+     },
+     {
+      "name": "Dual Class voting shares",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Sales growth",
+      "source": ""
+     },
+     {
+      "name": "Year & target industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Probit model of founder CEO departure (tests H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "157 founder CEO targets",
+    "dv": {
+     "name": "Founder CEO departure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand_collected (SEC merger documents + internet searches)"
+    },
+    "key_ivs": [
+     {
+      "name": "Founder Firm Premium",
+      "measure": "Founder Firm Premium = Q_Actual minus Q_Counterfactual; unique value embedded in founder CEO targets, estimated from the switching regression",
+      "source": "estimated (switching regression on Tobin's Q)"
+     },
+     {
+      "name": "Q Counterfactual",
+      "measure": "[withheld: wording matches the source]",
+      "source": "estimated (switching regression)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "Ln(CEO compensation)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Acquirer debt/assets",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Tobin's Q",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer acquisition experience (number of deals in prior 3 years)",
+      "source": "SDC"
+     },
+     {
+      "name": "All stock payment (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Bidder-initiated vs target-initiated deal",
+      "source": "hand_collected (merger documents)"
+     },
+     {
+      "name": "Diversifying deal (based on two-digit SIC)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer and target industry controls",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Models 1-3) - OLS regressions of acquirer abnormal returns on Founder Firm Premium (tests H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Early Incorporation (firms incorporated prior to 1960; used for the Model 2 treatment-effects/IV specification)",
+    "sample": "full sample of 943 (Models 1-2); 157 founder CEO targets (Model 3)",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Founder Firm Premium",
+      "measure": "Founder Firm Premium = Q_Actual minus Q_Counterfactual (switching regression estimate)",
+      "source": "estimated (switching regression)"
+     },
+     {
+      "name": "Founder CEO indicator (Model 2, instrumented, treatment-effects estimate)",
+      "measure": "founder CEO indicator instrumented with Early Incorporation variable, treatment-effects estimates",
+      "source": "SEC EDGAR proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "Ln(CEO compensation)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Debt/Assets",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Tobin's Q",
+      "source": ""
+     },
+     {
+      "name": "Acquirer's Prior Deals",
+      "source": "SDC"
+     },
+     {
+      "name": "All stock payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Bidder initiated",
+      "source": "hand_collected (merger documents)"
+     },
+     {
+      "name": "Diversifying deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Multiple bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative sizes of bidder and target",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Models 5-8) - Synergy returns robustness (wealth-transfer/overpayment falsification)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Synergy returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Founder Firm Premium",
+      "measure": "Founder Firm Premium = Q_Actual minus Q_Counterfactual (switching regression estimate)",
+      "source": "estimated (switching regression)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "SEC EDGAR proxy statements"
+     },
+     {
+      "name": "Ln(CEO compensation)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Debt/Assets",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Tobin's Q",
+      "source": ""
+     },
+     {
+      "name": "Acquirer's Prior Deals",
+      "source": "SDC"
+     },
+     {
+      "name": "All stock payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Bidder initiated",
+      "source": "hand_collected (merger documents)"
+     },
+     {
+      "name": "Diversifying deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Multiple bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative sizes of bidder and target",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "founder ceos",
+    "motives underlying these deals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "private founder ceo firms",
+    "performance of acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "founder ceo firms that are private",
+    "acquirers' returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "private founder ceo firms",
+    "relation": "affects",
+    "to": "acquirers' returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "founder firm premium",
+    "value contributed by founder ceos"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "founder firm premium",
+    "firm specific and generic components of founder human capital",
+    "acquisitions"
+   ],
+   "mechanism_named": "fungible nature of founder human capital",
+   "proposed_edge": {
+    "from": "firm specific and generic components of founder human capital",
+    "relation": "affects",
+    "to": "acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "departure of remaining top management team members",
+    "value in founder ceo acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "departure of remaining top management team members",
+    "relation": "decreases",
+    "to": "value in founder ceo acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "informal mechanisms",
+    "relational capital",
+    "retention"
+   ],
+   "mechanism_named": "building relational capital",
+   "proposed_edge": {
+    "from": "informal mechanisms",
+    "relation": "increases",
+    "to": "retention"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "founder ceo departure",
+    "transitions in environments",
+    "larger or older firm"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "transitions in environments",
+    "on_path": [
+     "acquisition",
+     "founder ceo departure"
+    ]
+   }
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "founder ceo firms",
+    "post-acquisition retention"
+   ],
+   "mechanism_named": "identity theory",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "nurturing specific identities through intrapreneurship",
+    "retaining entrepreneurial human capital"
+   ],
+   "mechanism_named": "intrapreneurship",
+   "proposed_edge": {
+    "from": "nurturing specific identities through intrapreneurship",
+    "relation": "increases",
+    "to": "retaining entrepreneurial human capital"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "founder ceo human capital",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "life cycle theories",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "differential paths of exit",
+    "founder identity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "differential paths of exit",
+    "relation": "affects",
+    "to": "founder identity"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,399 @@
+{
+ "paper_id": "10.1016_0304-405x(80)90014-8",
+ "title": "Merger proposals, management discretion and stockholder wealth",
+ "journal": "JFE",
+ "year": 1980,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "efficient markets hypothesis",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_proposal_announcement",
+      "relation": "increases",
+      "to": "expected_acquisition_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_acquisition_premium",
+      "relation": "increases",
+      "to": "target_stockholder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_acquisition_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_proposal_termination",
+      "relation": "decreases",
+      "to": "expected_acquisition_premium",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "expected_acquisition_premium",
+      "relation": "increases",
+      "to": "target_stockholder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_acquisition_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "incumbent_management_veto",
+      "relation": "increases",
+      "to": "anticipated_higher_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipated_higher_premium",
+      "relation": "increases",
+      "to": "target_share_revaluation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipated_higher_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "impending_merger_proposal",
+      "relation": "increases",
+      "to": "information_leakage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_leakage",
+      "relation": "increases",
+      "to": "pre_announcement_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_leakage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE-listed firms; merger proposals across sectors)",
+  "country_region": "United States (NYSE-listed firms)",
+  "time_period": "1971-1977",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "151 merger proposals (71 completed, 80 cancelled)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Moody's Industrial Manual",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Standard and Poor's Corporation Records",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - PE/CPE for 151 targets and 126 bidders, 40 days around first public announcement of the merger proposal",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "151 target firms and 126 bidder firms; NYSE merger proposals over the seven years ended December 31, 1977",
+    "dv": {
+     "name": "abnormal return to stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "merger proposal announcement (event)",
+      "measure": "day 0 = date the proposal is first publicly announced (first mentioned in the Wall Street Journal)",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "firm role",
+      "measure": "firms classified as either bidders or targets",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 - PE/CPE for 151 target firms split into 80 cancelled and 71 completed proposals, around first announcement",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "151 target firms: 80 cancelled and 71 completed merger proposals",
+    "dv": {
+     "name": "abnormal return to target stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "proposal outcome",
+      "measure": "proposals classified as later completed (71) versus later cancelled (80)",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 - PE/CPE for 126 bidder firms split into 66 cancelled and 60 completed proposals, around first announcement",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "126 bidder firms: 66 cancelled and 60 completed merger proposals",
+    "dv": {
+     "name": "abnormal return to bidder stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "proposal outcome",
+      "measure": "bidder firms in 66 cancelled versus 60 completed merger proposals",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - PE/CPE for 71 target and 60 bidder firms in completed mergers, 40 days around announcement of stockholder approval",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "71 target firms and 60 bidder firms in completed merger proposals",
+    "dv": {
+     "name": "abnormal return to stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "announcement of merger approval (outcome event)",
+      "measure": "day 0 = date of announcement of approval of the merger by target stockholders",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - PE/CPE for 80 target and 66 bidder firms around announcement of termination of merger proposals",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "80 target firms and 66 bidder firms in cancelled merger proposals",
+    "dv": {
+     "name": "abnormal return to stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "announcement of termination (outcome event)",
+      "measure": "day 0 = date of publication of the termination of merger negotiations in the Wall Street Journal",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - PE/CPE around termination for (A) proposals terminated by target management (N=26) vs (B) non-target management (N=54)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "80 cancelled proposals split into 26 target-management terminations and 54 non-target terminations",
+    "dv": {
+     "name": "abnormal return to target stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "terminating party (management discretion)",
+      "measure": "cancelled proposals classified as terminated by target management (veto, N=26) versus non-target/bidder management (N=54)",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - PE/CPE for 71 target firms in completed mergers, 250 days before (A) stockholder approval date vs (B) proposal announcement date (event-date-selection test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "71 target firms in completed mergers",
+    "dv": {
+     "name": "abnormal return to acquired (target) stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "choice of event date",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - summary of net cumulative abnormal returns over the full duration of the merger proposals",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "target and bidder firms across completed and cancelled merger proposals",
+    "dv": {
+     "name": "net cumulative abnormal return to stockholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "firm role and proposal outcome",
+      "measure": "target vs bidder firms in completed vs cancelled proposals over the duration of the proposal",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on a value-weighted market portfolio (market-model expected return)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "negative abnormal returns",
+    "stockholders of bidding firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

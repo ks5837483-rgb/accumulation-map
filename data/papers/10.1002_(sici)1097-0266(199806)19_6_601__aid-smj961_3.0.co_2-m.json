@@ -1,0 +1,532 @@
+{
+ "paper_id": "10.1002_(sici)1097-0266(199806)19_6_601__aid-smj961_3.0.co_2-m",
+ "title": "Linking corporate strategy to capital structure: diversification strategy, type and source of financing",
+ "journal": "SMJ",
+ "year": 1998,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "transaction cost economics",
+  "information economics",
+  "agency theory",
+  "resource-based view",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unrelated_diversification",
+      "relation": "decreases",
+      "to": "asset_specificity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_specificity",
+      "relation": "decreases",
+      "to": "debt_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asset_specificity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: a firm's capital structure influences the type of diversification sought, rather than diversification driving financing"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "related_diversification",
+      "relation": "increases",
+      "to": "asset_specificity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_specificity",
+      "relation": "decreases",
+      "to": "debt_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asset_specificity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: a firm's capital structure influences the type of diversification sought, rather than diversification driving financing"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "direct_entry",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "public_financing",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "direct_entry",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "public_financing",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "manufacturing",
+  "country_region": "United States",
+  "time_period": "1981-1982",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "187"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "COMPUSTAT tapes (incl. annual flow of funds statement and business segment tapes)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Directory of Corporate Financing",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Industrial Manual",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Spectrum 3",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "annual reports (examined for diversification-classification validity check)",
+    "category": "other",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Model 1a (Proportion of new debt financing; unrelated-system, Table 1)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Proportion of new debt financing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Change in unrelated diversification (nature of business entered)",
+      "measure": "the difference in the 1981 and 1982 unrelated diversification (DU) entropy indexes",
+      "source": "COMPUSTAT business segment tapes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Leverage (debt-to-equity ratio at end of 1981)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Bankruptcy risk (Altman's Z, end of 1981)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Model 1b (Proportion of new debt financing; related-system, Table 1)",
+    "hypotheses": [
+     "H1b"
+    ],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Proportion of new debt financing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Change in related diversification (nature of business entered)",
+      "measure": "the difference in the 1981 and 1982 related diversification (DR) entropy indexes",
+      "source": "COMPUSTAT business segment tapes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Leverage (debt-to-equity ratio at end of 1981)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Bankruptcy risk (Altman's Z, end of 1981)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Model 2a (Proportion of public financing; unrelated-system, Table 1)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Proportion of public financing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Directory of Corporate Financing; COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Mode of entry",
+      "measure": "the number of acquisitions completed in 1982",
+      "source": "Moody's Industrial Manual; Mergers and Acquisitions Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Systematic risk (end of 1981)",
+      "source": ""
+     },
+     {
+      "name": "Unsystematic risk (end of 1981)",
+      "source": ""
+     },
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Model 2b (Proportion of public financing; related-system, Table 1)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Proportion of public financing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Directory of Corporate Financing; COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Mode of entry",
+      "measure": "the number of acquisitions completed in 1982",
+      "source": "Moody's Industrial Manual; Mergers and Acquisitions Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Systematic risk (end of 1981)",
+      "source": ""
+     },
+     {
+      "name": "Unsystematic risk (end of 1981)",
+      "source": ""
+     },
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Model 3a (Change in diversification / nature of business entered; unrelated-system, Research Question 1, Table 1)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in unrelated diversification (nature of business entered)",
+     "measure": "the difference in the 1981 and 1982 unrelated diversification (DU) entropy indexes, obtained from COMPUSTAT business segment tapes",
+     "source": "COMPUSTAT business segment tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "Proportion of new debt financing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Mode of entry",
+      "measure": "the number of acquisitions completed in 1982",
+      "source": "Moody's Industrial Manual; Mergers and Acquisitions Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Model 3b (Change in diversification / nature of business entered; related-system, Research Question 1, Table 1)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in related diversification (nature of business entered)",
+     "measure": "the difference in the 1981 and 1982 related diversification (DR) entropy indexes, obtained from COMPUSTAT business segment tapes",
+     "source": "COMPUSTAT business segment tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "Proportion of new debt financing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Mode of entry",
+      "measure": "the number of acquisitions completed in 1982",
+      "source": "Moody's Industrial Manual; Mergers and Acquisitions Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Model 4a (Mode of entry; unrelated-system, Research Question 2, Table 1)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Mode of entry",
+     "measure": "the number of acquisitions completed in 1982",
+     "source": "Moody's Industrial Manual; Mergers and Acquisitions Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "Change in unrelated diversification (nature of business entered)",
+      "measure": "the difference in the 1981 and 1982 unrelated diversification (DU) entropy indexes",
+      "source": "COMPUSTAT business segment tapes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Model 4b (Mode of entry; related-system, Research Question 2, Table 1)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Mode of entry",
+     "measure": "the number of acquisitions completed in 1982",
+     "source": "Moody's Industrial Manual; Mergers and Acquisitions Journal"
+    },
+    "key_ivs": [
+     {
+      "name": "Change in related diversification (nature of business entered)",
+      "measure": "the difference in the 1981 and 1982 related diversification (DR) entropy indexes",
+      "source": "COMPUSTAT business segment tapes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Related entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Unrelated entropy index",
+      "source": "COMPUSTAT business segment tapes"
+     },
+     {
+      "name": "Institutional holding (institutional ownership at end of 1981)",
+      "source": "Spectrum 3"
+     },
+     {
+      "name": "Size (logarithm of firm assets at end of 1981)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

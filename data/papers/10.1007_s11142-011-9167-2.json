@@ -1,0 +1,521 @@
+{
+ "paper_id": "10.1007_s11142-011-9167-2",
+ "title": "Causes and consequences of goodwill impairment losses",
+ "journal": "RAS",
+ "year": 2011,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory",
+  "hubris hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "goodwill_impairment_loss",
+      "relation": "decreases",
+      "to": "investor_expectations_of_future_cash_flows",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_expectations_of_future_cash_flows",
+      "relation": "increases",
+      "to": "announcement_period_market_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_expectations_of_future_cash_flows"
+   ],
+   "moderators": [
+    {
+     "construct": "reporting_regime",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "news_value_of_impairment",
+     "moderated_from": "goodwill_impairment_loss",
+     "moderated_to": "announcement_period_market_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "concurrent restructuring charges, not the goodwill impairment itself, drive the announcement-period market reaction"
+   ]
+  },
+  {
+   "hypothesis": "H2(a)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "goodwill_impairment_loss",
+      "relation": "increases",
+      "to": "management_private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "management_private_information",
+      "relation": "decreases",
+      "to": "analysts_earnings_forecast_revisions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "management_private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2(b)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "goodwill_impairment_loss",
+      "relation": "increases",
+      "to": "unrealized_target_growth_expectations",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unrealized_target_growth_expectations",
+      "relation": "decreases",
+      "to": "sales_growth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "goodwill_impairment_loss",
+      "relation": "increases",
+      "to": "production_and_distribution_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "production_and_distribution_costs",
+      "relation": "decreases",
+      "to": "operating_profit_growth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unrealized_target_growth_expectations",
+    "production_and_distribution_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "overpayment_for_target",
+      "relation": "increases",
+      "to": "overstatement_of_goodwill_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overstatement_of_goodwill_value",
+      "relation": "increases",
+      "to": "goodwill_impairment_loss",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overstatement_of_goodwill_value"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_overvaluation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "overstatement_of_goodwill_value",
+     "moderated_from": "overpayment_for_target",
+     "moderated_to": "goodwill_impairment_loss",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms evenly distributed across industries, with higher concentration in electronics and business services)",
+  "country_region": "",
+  "time_period": "1996-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,584 announcements of goodwill impairment losses"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Factiva database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Corporation (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10K reports (goodwill impairment footnotes)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Panel B: market reaction (regression 1) of abnormal returns on unexpected impairment loss",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "pooled impairment and industry/size-matched control firms, 1996-2006 (N=1,584 impairment announcements)",
+    "dv": {
+     "name": "3-day abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "unexpected impairment loss (U-ILOSS)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Factiva database / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "earnings surprise (Surprise)",
+      "source": "Compustat / I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A: differential market reaction by reporting regime (pre-SFAS-142, transition, post-SFAS-142), with/without simultaneous restructuring charges",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "SFAS 121 / SFAS 142 regulatory regimes (sample split, not DiD)",
+    "sample": "full impairment + control sample split into pre-142 (477), transition (253), post-142 (854)",
+    "dv": {
+     "name": "3-day abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "unexpected impairment loss (U-ILOSS)",
+      "measure": "unexpected impairment loss scaled by Pt-2, with coefficients estimated separately for the three reporting regimes",
+      "source": "Factiva database / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "earnings surprise (Surprise)",
+      "source": "Compustat / I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B: market reaction estimated separately for impairment vs control (zero-impairment) samples within each regime",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "impairment vs industry/size/book-to-market-matched control (potentially impaired, zero-reported) firms",
+    "dv": {
+     "name": "3-day abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "unexpected impairment loss (U-ILOSS)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Factiva database / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "earnings surprise (Surprise)",
+      "source": "Compustat / I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B: analysts' forecast revision (regression 2) on unexpected impairment loss",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "I/B/E/S subsample with one-quarter-ahead forecasts (521 firms; 485 with revisions within 30 days)",
+    "dv": {
+     "name": "one-quarter-ahead forecast revision (REV)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "unexpected impairment loss (U-ILOSS)",
+      "measure": "unexpected impairment loss scaled by Pt-2 (total impairment loss, Beatty-Weber measure, and residual from impairment prediction model), coefficients estimated for pre-142, transition, and post-142",
+      "source": "Factiva database / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "earnings surprise (Surprise)",
+      "source": "Compustat / I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel A: Spearman correlations between impairment loss and 2-year-ahead sales growth and operating income growth",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "future sales growth and operating income growth (2 years ahead)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "impairment loss (ILOSS)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Factiva database / Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel B: multivariate regression of 2-year-ahead sales / operating income growth on scaled impairment loss",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "impairment firms with 2-year-ahead performance data; full and by-regime (SFAS 121 vs SFAS 142)",
+    "dv": {
+     "name": "average future growth in sales (operating income), subsequent 2 years",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "scaled impairment loss",
+      "measure": "scaled impairment loss (goodwill impairment loss net of tax, price-scaled)",
+      "source": "Factiva database / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "earnings surprise of the impairment quarter",
+      "source": "Compustat / I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel C: two-stage regression of abnormal returns on fitted value (future-performance component) and residual of impairment loss",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "impairment firms with subsequent 2-year performance and abnormal-return data; full and by regime",
+    "dv": {
+     "name": "3-day announcement-period abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Fitted Value of impairment loss",
+      "measure": "fitted value from first-stage regression of impairment loss on subsequent 2-year average sales growth and percentage change in operating expenses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Residual impairment loss",
+      "measure": "residual from the first-stage impairment-loss regression",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "313 acquirers and 476 acquisitions from SDC (acquisitions 1991-2005; averaging 1.52 acquisitions per acquirer over prior 5 years)",
+    "dv": {
+     "name": "goodwill impairment loss",
+     "measure": "goodwill impairment loss (scaled) as dependent variable in a Tobit regression (impairment loss equals zero for control firms)",
+     "source": "Factiva database / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Excess",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "Premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "CRSP / Compustat"
+     },
+     {
+      "name": "Multiple-bids",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "Focus (target same 2-digit SIC as acquirer)",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "Stock (% of consideration paid in stock)",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "Stock*acquirer-HMB",
+      "source": "Securities Data Corporation (SDC) / Compustat"
+     },
+     {
+      "name": "Acquirer-HMB (high market-to-book)",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Target size",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "Tender offer",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "Toehold",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "Termination fee",
+      "source": "Securities Data Corporation (SDC)"
+     },
+     {
+      "name": "1yrRet (prior 1-year return)",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "impairment",
+    "stock price performance",
+    "balance sheet values"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "potentially impaired goodwill",
+    "timely booking of an impairment loss"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "potentially impaired goodwill",
+    "accounting discretion",
+    "recognition of an impairment loss"
+   ],
+   "mechanism_named": "accounting discretion",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

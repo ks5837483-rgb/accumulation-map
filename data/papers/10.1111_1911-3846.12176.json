@@ -1,0 +1,515 @@
+{
+ "paper_id": "10.1111_1911-3846.12176",
+ "title": "The Role of Similar Accounting Standards in Cross‐Border Mergers and Acquisitions",
+ "journal": "CAR",
+ "year": 2015,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "information costs theory",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "gaap_similarity",
+      "relation": "decreases",
+      "to": "information_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_costs",
+      "relation": "decreases",
+      "to": "cross_border_m&a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "gaap_similarity",
+      "relation": "increases",
+      "to": "ability_to_evaluate_target_performance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ability_to_evaluate_target_performance",
+      "relation": "increases",
+      "to": "cross_border_m&a_activity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "gaap_similarity",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "cross_border_m&a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_costs",
+    "ability_to_evaluate_target_performance",
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "enforcement",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_costs",
+     "moderated_from": "gaap_similarity",
+     "moderated_to": "cross_border_m&a_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "gaap_similarity",
+      "relation": "decreases",
+      "to": "information_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_costs",
+      "relation": "decreases",
+      "to": "cross_border_m&a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "enforcement",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_costs",
+     "moderated_from": "gaap_similarity",
+     "moderated_to": "cross_border_m&a_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "32 countries (cross-border M&A country pairs; 32 acquirer countries and 32 target countries)",
+  "time_period": "1998-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "643 country pairs"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bae, Tan, and Welker's (2008) [21 accounting items / GAAP differences; based on Nobes 2001 survey]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Global Vantage database [firm-level accruals for Comparability metric; voluntary IAS/IFRS adoption control]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CEPII (2008) [geographic distances and official languages]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bhattacharya, Daouk, and Welker (2003) [earnings opacity metrics; accounting quality AQ]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hail and Leuz (2006) [securities regulation index]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (cols 1 & 3): OLS of cross-border M&A frequency on GAAP Similarity/Comparability (H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "643 country pairs (32 acquirer x 32 target countries), cross-border M&As 1998-2004",
+    "dv": {
+     "name": "Volume of cross-border M&A activity (frequency)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Similarity (GAAP similarity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bae, Tan, and Welker's (2008)"
+     },
+     {
+      "name": "Comparability (accruals comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Global Vantage database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Accounting quality (AQ, earnings transparency rank)",
+      "source": "Bhattacharya, Daouk, and Welker (2003)"
+     },
+     {
+      "name": "GDP per capita ratio (GDPC)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "GDP growth (GDPGR)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Inflation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Private bank credit (BANKCREDIT)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Common language dummy (DUMLANG)",
+      "source": "CEPII (2008)"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "CEPII (2008)"
+     },
+     {
+      "name": "Same religion",
+      "source": ""
+     },
+     {
+      "name": "Corporate tax rate ratio (Tax)",
+      "source": ""
+     },
+     {
+      "name": "Shareholder rights",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Creditor rights",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Legal enforcement",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Legal origin",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Foreign direct investment (FDI, openness)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "International trade (Trade, openness)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Cost of entry (openness)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer and target country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (cols 2 & 4): OLS of cross-border M&A dollar value on GAAP Similarity/Comparability (H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "643 country pairs, 1998-2004",
+    "dv": {
+     "name": "Volume of cross-border M&A activity (dollar value)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Similarity (GAAP similarity)",
+      "measure": "ratio of the sum of 'GAAP similar' scores across all 21 Bae et al. (2008) accounting items, scaled by 21; range 0 to 1",
+      "source": "Bae, Tan, and Welker's (2008)"
+     },
+     {
+      "name": "Comparability (accruals comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Global Vantage database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Accounting quality (AQ)",
+      "source": "Bhattacharya, Daouk, and Welker (2003)"
+     },
+     {
+      "name": "GDP per capita ratio (GDPC)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "GDP growth (GDPGR)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Inflation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Private bank credit (BANKCREDIT)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Common language dummy (DUMLANG)",
+      "source": "CEPII (2008)"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "CEPII (2008)"
+     },
+     {
+      "name": "Same religion",
+      "source": ""
+     },
+     {
+      "name": "Corporate tax rate ratio (Tax)",
+      "source": ""
+     },
+     {
+      "name": "Shareholder rights",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Creditor rights",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Legal enforcement",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Legal origin",
+      "source": "La Porta et al. (1998/2006)"
+     },
+     {
+      "name": "Foreign direct investment (FDI)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "International trade (Trade)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Cost of entry",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer and target country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A: subsample split by public enforcement (strong vs weak) with F-test on Similarity/Comparability coefficient difference (H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "strong public-enforcement subsample N=330 vs weak subsample N=313 (country pairs partitioned at median public enforcement)",
+    "dv": {
+     "name": "Volume of cross-border M&A activity (frequency and dollar value)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Similarity x public enforcement regime (partition)",
+      "measure": "GAAP Similarity index estimated separately for target countries above vs below the median public enforcement index; F-statistic tests the difference in the Similarity coefficient between strong and weak enforcement subsamples",
+      "source": "Bae et al. (2008) [Similarity]; La Porta et al. (2006) [public enforcement index]"
+     },
+     {
+      "name": "Comparability x public enforcement regime (partition)",
+      "measure": "accruals Comparability metric estimated separately for strong vs weak public-enforcement target-country subsamples; F-statistic tests coefficient difference",
+      "source": "Global Vantage database [Comparability]; La Porta et al. (2006) [public enforcement]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full Table 3 country-level control set (economic/capital-market development, cultural familiarity, tax, investor protection, accounting quality, openness)",
+      "source": "World Bank WDI (2009); CEPII (2008); La Porta et al. (1998/2006); Bhattacharya et al. (2003)"
+     },
+     {
+      "name": "Difference in public enforcement across the country pair",
+      "source": "La Porta et al. (2006)"
+     },
+     {
+      "name": "Acquirer and target country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B: subsample split by securities regulation (strong vs weak) with F-test on Similarity/Comparability coefficient difference (H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "country pairs partitioned at median securities regulation index into strong vs weak subsamples",
+    "dv": {
+     "name": "Volume of cross-border M&A activity (frequency and dollar value)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Similarity x securities regulation regime (partition)",
+      "measure": "GAAP Similarity index estimated separately for target countries above vs below the median securities regulation index; F-statistic tests the coefficient difference",
+      "source": "Bae et al. (2008) [Similarity]; Hail and Leuz (2006) [securities regulation index]"
+     },
+     {
+      "name": "Comparability x securities regulation regime (partition)",
+      "measure": "accruals Comparability estimated separately for strong vs weak securities-regulation subsamples; F-statistic tests coefficient difference",
+      "source": "Global Vantage database [Comparability]; Hail and Leuz (2006) [securities regulation]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full Table 3 country-level control set",
+      "source": "World Bank WDI (2009); CEPII (2008); La Porta et al. (1998/2006); Bhattacharya et al. (2003)"
+     },
+     {
+      "name": "Difference in securities regulation across the country pair",
+      "source": "Hail and Leuz (2006)"
+     },
+     {
+      "name": "Acquirer and target country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "IFRS mandatory-adoption time-series test: change in cross-border M&A activity around the 2005 mandatory IFRS adoption (identification / robustness for H1 causality)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "IFRS-adopting country pairs, time-series around 2005 (pre- vs post-adoption); public vs private target firms",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "cross-border M&A activity for country pairs, compared before and after the 2005 mandatory IFRS adoption; examined separately for public (listed) vs private (unlisted) targets",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Mandatory IFRS adoption (post-2005 period among adopting countries)",
+      "measure": "time-series indicator for the post-2005 period following widespread mandatory adoption of IFRS; effect examined most sharply for country pairs with low pre-adoption GAAP similarity",
+      "source": "Bae et al. (2008) [pre-adoption GAAP similarity]; SDC [M&A activity]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Country-level controls / country fixed effects (as in main models)",
+      "source": "World Bank WDI (2009); CEPII (2008); La Porta et al. (1998/2006)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "voluntary reporting choices",
+    "ﬁnancial reporting quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "accounting harmonization",
+    "total costs and beneﬁts of harmonization"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

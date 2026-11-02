@@ -1,0 +1,335 @@
+{
+ "paper_id": "10.1093_rfs_hhu052",
+ "title": "No News Is News: Do Markets Underreact to Nothing?",
+ "journal": "RFS",
+ "year": 2014,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "behavioral finance",
+  "underreaction",
+  "limited attention theory",
+  "limits to arbitrage",
+  "efficient markets hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hazard_rate_of_completion",
+      "relation": "increases",
+      "to": "market_underestimation_of_completion_probability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_underestimation_of_completion_probability",
+      "relation": "increases",
+      "to": "returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_underestimation_of_completion_probability"
+   ],
+   "moderators": [
+    {
+     "construct": "explicit_news_coverage",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "market_underestimation_of_completion_probability",
+     "moderated_from": "hazard_rate_of_completion",
+     "moderated_to": "returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "news_coverage"
+    },
+    {
+     "construct": "transaction_costs",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "limits_to_arbitrage",
+     "moderated_from": "hazard_rate_of_completion",
+     "moderated_to": "returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "limits_to_arbitrage"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "event-time variation in systematic risk (Fama-French factors) compensates for the return pattern",
+    "event-time variation in downside risk drives the return pattern",
+    "event-time variation in idiosyncratic risk drives the return pattern",
+    "event-time variation in market frictions and asymmetric information (selling pressure, liquidity) drives the return pattern",
+    "last day / delisting return frictions generate the return pattern"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (mergers of publicly traded U.S. firms, spanning all sectors with no focal industry)",
+  "country_region": "United States (U.S. targets for cash mergers; U.S. targets and acquirers for equity mergers)",
+  "time_period": "1970-2010",
+  "sample_description": "Mergers combining the Mitchell-Pulvino (MP) dataset (1970-2005) and the Thomson One / SDC (TO) dataset (1985-2010); restricted to all cash-financed or all equity-financed simple one-step mergers without a known expiration date, U.S. targets (and acquirers for equity deals) matched to CRSP returns, excluding tender offers, deals competing with a prior bid in the past three years, and deals where the target price exceeds the offer price after announcement",
+  "sample_size": "5,377 deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Figure 1 & Figure 2 (top panel) / Section 2: Empirical hazard rates of completion and withdrawal over event time",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "5,377 deals, 1970-2010",
+    "dv": {
+     "name": "hazard rate of completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "MP/TO merger data"
+    },
+    "key_ivs": [
+     {
+      "name": "event time (weeks after announcement)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "MP/TO merger data"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, Column 1: Test that weekly returns are constant across event weeks",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "observations at the merger by event week level; also run within subsamples (cash/equity, small/large target, low/high target price, diversifying/nondiversifying, early/late period, high/low news coverage)",
+    "dv": {
+     "name": "weekly return over event time",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "event week indicators",
+      "measure": "[withheld: wording matches the source]",
+      "source": "MP/TO merger data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "calendar year-month fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Column 2 (Section 4.3.1): Regression of weekly returns on completion hazard rates",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "weekly return over event time",
+     "measure": "weekly return from the merger arbitrage position (long target, short � acquirer shares for equity deals; long target for cash deals)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "completion hazard rate",
+      "measure": "hazard rates estimated from the aggregate sample (Nelson-Aalen)",
+      "source": "MP/TO merger data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "calendar year-month fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, row (4): Split-sample (lookahead-bias-free) regression of returns on hazard rates",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "hazards estimated pre-1991; returns from the second half of the sample (post-1991)",
+    "dv": {
+     "name": "weekly return over event time",
+     "measure": "weekly merger arbitrage return in the second half of the sample",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "completion hazard rate (out-of-sample)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "MP/TO merger data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "calendar year-month fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Column 3 (Section 4.3.2): Parametric estimate of the underreaction parameter theta",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "underreaction parameter theta",
+     "measure": "theta captures the degree of underreaction from beliefs h_hat(t)=(1-theta)h_bar + theta*h(t); estimated from data on hazards and returns and tested against theta=1 (full rationality)",
+     "source": "CRSP; MP/TO merger data"
+    },
+    "key_ivs": [
+     {
+      "name": "completion hazard rate",
+      "measure": "estimated true hazard rates h(t) and average hazard rate h_bar",
+      "source": "MP/TO merger data"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "full sample of mergers and subsamples conditioning on deal-group heterogeneity",
+    "dv": {
+     "name": "implied belief hazard rate curve vs. estimated true hazard rate curve",
+     "measure": "model-implied beliefs h_hat(t) chosen so that model-implied returns match observed average return in each event week, compared to estimated true hazard rates via the Cramer-Von Mises test (critical values from Klein and Moeschberger 2003)",
+     "source": "CRSP; MP/TO merger data"
+    },
+    "key_ivs": [
+     {
+      "name": "observed average weekly returns",
+      "measure": "observed average return in each event week used to back out implied beliefs",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panel A: Fama-French alphas of the three event-window portfolio strategies (full sample)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,989 monthly calendar-time observations, full sample",
+    "dv": {
+     "name": "strategy alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "event-window hazard strategy",
+      "measure": "portfolios invested only in deals active during specific event windows defined by the completion hazard rate: Low Hazard 1 (below mean), High Hazard (above mean), Low Hazard 2 (below mean); cutoff points at event weeks 11 and 39",
+      "source": "MP/TO merger data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Fama-French factors (systematic risk)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B: Strategy alphas (Late Sample, Early Hazards)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "late sample (post-1991) with event windows from pre-1991 hazards",
+    "dv": {
+     "name": "strategy alpha",
+     "measure": "Fama-French alphas of the three event-window strategies computed on the late sample",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "event-window hazard strategy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "MP/TO merger data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Fama-French factors (systematic risk)",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "buy-and-hold strategy",
+    "positive alpha"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sample of deals",
+    "pure cash and equity-financed deals",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "underreaction to no news",
+    "other contexts"
+   ],
+   "mechanism_named": "underreaction to no news",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

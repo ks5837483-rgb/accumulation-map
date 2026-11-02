@@ -1,0 +1,782 @@
+{
+ "paper_id": "10.1017_s002210902510255x",
+ "title": "CEO Compensation Changes Following Acquisitions",
+ "journal": "JFQA",
+ "year": 2026,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "adverse selection theory",
+  "signaling theory",
+  "agency theory",
+  "optimal contracting theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Agency Hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "all_stock_acquisition",
+      "relation": "increases",
+      "to": "managerial_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_power",
+      "relation": "increases",
+      "to": "ceo_compensation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_power"
+   ],
+   "moderators": [
+    {
+     "construct": "excess_ceo_compensation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_power",
+     "moderated_from": "all_stock_acquisition",
+     "moderated_to": "ceo_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Agency Hypothesis"
+    },
+    {
+     "construct": "board_capture",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_power",
+     "moderated_from": "all_stock_acquisition",
+     "moderated_to": "ceo_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Agency Hypothesis"
+    },
+    {
+     "construct": "classified_board",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "managerial_power",
+     "moderated_from": "all_stock_acquisition",
+     "moderated_to": "ceo_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Agency Hypothesis"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "mean reversion (firms with low prior excess compensation reverting to the mean)"
+   ]
+  },
+  {
+   "hypothesis": "Dual Adverse Selection Hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "all_stock_method_of_payment",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "ceo_equity_based_compensation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "all_stock_method_of_payment",
+      "relation": "increases",
+      "to": "ceo_compensation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ceo_compensation_risk",
+      "relation": "increases",
+      "to": "ceo_total_compensation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection",
+    "ceo_compensation_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_overvaluation_risk",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "all_stock_method_of_payment",
+     "moderated_to": "ceo_equity_based_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Dual Adverse Selection Hypothesis"
+    },
+    {
+     "construct": "acquisition_risk",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "all_stock_method_of_payment",
+     "moderated_to": "ceo_equity_based_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Dual Adverse Selection Hypothesis"
+    },
+    {
+     "construct": "ceo_stock_price_exposure",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "ceo_compensation_risk",
+     "moderated_from": "all_stock_method_of_payment",
+     "moderated_to": "ceo_equity_based_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Dual Adverse Selection Hypothesis"
+    },
+    {
+     "construct": "target_awareness_fiscal_year_timing",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "all_stock_method_of_payment",
+     "moderated_to": "ceo_total_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Dual Adverse Selection Hypothesis"
+    },
+    {
+     "construct": "ceo_change_announced_prior_to_acquisition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "all_stock_method_of_payment",
+     "moderated_to": "ceo_total_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Dual Adverse Selection Hypothesis"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "agency-cost / empire-building explanation",
+    "single-sided overvaluation (acquirers pay in overvalued stock and boost CEO equity pay to offset expected declines)",
+    "pre-vote certification of acquisition quality to shareholders"
+   ]
+  },
+  {
+   "hypothesis": "Credible-Signal Prediction (acquirer returns and equity-based pay)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_equity_based_compensation",
+      "relation": "increases",
+      "to": "credible_signal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credible_signal",
+      "relation": "increases",
+      "to": "acquirer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credible_signal"
+   ],
+   "moderators": [
+    {
+     "construct": "all_stock_method_of_payment",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "credible_signal",
+     "moderated_from": "ceo_equity_based_compensation",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Credible-Signal Prediction (acquirer returns and equity-based pay)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "overvaluation-signaling (greater equity pay signals greater overvaluation and predicts lower returns)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Compustat universe of U.S. public acquirers; industries defined by Fama–French 48 classifications)",
+  "country_region": "United States",
+  "time_period": "1993-2018",
+  "sample_description": "Firm-years from the Compustat universe of U.S. public acquirers, merged with acquisition data from Thomson Reuters SDC Platinum (mergers, acquisitions, acquisitions of majority interest, or acquisitions of assets with deal value >=5% of acquirer market value of equity), CEO compensation from Execucomp, returns from CRSP, implied volatility from Optionmetrics, and governance data from ISS",
+  "sample_size": "47,039 firm-year observations (including 5,344 5% acquisitions)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat universe of firms",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters SDC Platinum database (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Execucomp database",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Optionmetrics database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Shareholder Services' Governance database",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Summary Statistics (Panel A acquisition variables by period; Panel B univariate comparison of acquiring vs nonacquiring firm-years)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Compustat universe of firms 1993-2018 with CEO compensation data (47,039 firm-year obs); Panel A restricted to 5% acquisition firm-years",
+    "dv": {
+     "name": "Change in total CEO compensation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Execucomp"
+    },
+    "key_ivs": [
+     {
+      "name": "5% Acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "5% All stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "5% All cash",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "5% Mixed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm age",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in CEO",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO age",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO compensation (prior year total)",
+      "source": "Execucomp"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 - Multivariate Analysis of CEO Compensation (Models 1-4)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Models 1-2 include industry x year fixed effects; models 3-4 do not; all firm-years; standard errors clustered by firm",
+    "dv": {
+     "name": "Chg CEO Comp",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Execucomp"
+    },
+    "key_ivs": [
+     {
+      "name": "Announced 5% deal - completed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Announced 5% deal - withdrawn",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior year announced 5% deal - completed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior year announced 5% deal - withdrawn",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm age",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in CEO indicator",
+      "source": "Execucomp"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "industry x year fixed effects included; standard errors clustered at the firm level",
+    "dv": {
+     "name": "Change in component of CEO compensation (salary / bonus / equity / stock / options / other)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Execucomp"
+    },
+    "key_ivs": [
+     {
+      "name": "Announced 5% deal - completed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Announced 5% deal - withdrawn",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm age",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in CEO indicator",
+      "source": "Execucomp"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Models 1-2 include industry x year fixed effects; models 3-4 do not; all firm-years; standard errors clustered by firm",
+    "dv": {
+     "name": "Chg CEO Comp",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Execucomp"
+    },
+    "key_ivs": [
+     {
+      "name": "All-stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "All-cash",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Mixed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "All-stock x completed / All-stock x withdrawn (and same for all-cash and mixed)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm age",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in CEO indicator",
+      "source": "Execucomp"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Repeat Acquirers (Models 1-3)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Chg CEO Comp",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Execucomp"
+    },
+    "key_ivs": [
+     {
+      "name": "All-stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm age",
+      "source": "CRSP"
+     },
+     {
+      "name": "CEO age",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "industry x year fixed effects included; standard errors clustered at the firm level",
+    "dv": {
+     "name": "Change in component of CEO compensation (salary / bonus / equity / stock / options)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Execucomp"
+    },
+    "key_ivs": [
+     {
+      "name": "All-stock x completed / All-stock x withdrawn",
+      "measure": "interaction of all-stock method of payment (consideration at least 95% stock) with completed and withdrawn indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "All-cash x completed / All-cash x withdrawn",
+      "measure": "interaction of all-cash method of payment (consideration at least 95% cash) with completed and withdrawn indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "Mixed x completed / Mixed x withdrawn",
+      "measure": "interaction of mixed method of payment with completed and withdrawn indicators",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm age",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in CEO indicator",
+      "source": "Execucomp"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Chg CEO comp",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Execucomp"
+    },
+    "key_ivs": [
+     {
+      "name": "All-stock deal x Excess CEO compensation (Median)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Execucomp"
+     },
+     {
+      "name": "All-stock deal x CEO Delta (Median)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Execucomp / Optionmetrics"
+     },
+     {
+      "name": "All-stock deal x CEO Vega (Median)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Execucomp / Optionmetrics"
+     },
+     {
+      "name": "All-stock deal x Fraction of directors after CEO (Median)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISS Governance database"
+     },
+     {
+      "name": "All-stock deal x Classified board",
+      "measure": "interaction of all-stock deal indicator with Classified board indicator (Model 5)",
+      "source": "ISS Governance database"
+     },
+     {
+      "name": "All-stock deal x Investment grade",
+      "measure": "interaction of all-stock deal indicator with Investment grade indicator (Model 6)",
+      "source": "Compustat"
+     },
+     {
+      "name": "All-stock deal x Industry yearly M/B (Median)",
+      "measure": "interaction of all-stock deal indicator with Industry yearly M/B indicator (Model 7)",
+      "source": "Compustat"
+     },
+     {
+      "name": "All-stock deal x Excess chg imp vol (Median)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Optionmetrics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All-stock / All-cash / Mixed deal indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "Withdrawn acquisitions indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Log assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm age",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in CEO indicator",
+      "source": "Execucomp"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "compensation changes",
+    "credible commitment"
+   ],
+   "mechanism_named": "Dual Adverse Selection Hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "prevote certification of acquisition quality",
+    "increases in equity-based compensation following acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "prevote certification of acquisition quality",
+    "relation": "affects",
+    "to": "increases in equity-based compensation following acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "changes to ceo compensation",
+    "target’s adverse selection concerns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "ceo compensation",
+    "stock acquisitions"
+   ],
+   "mechanism_named": "Dual Adverse Selection Hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "agency considerations",
+    "compensation changes following acquisitions"
+   ],
+   "mechanism_named": "Agency Hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "dual adverse selection considerations",
+    "compensation changes following acquisitions",
+    "method of payment"
+   ],
+   "mechanism_named": "dual adverse selection problem",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

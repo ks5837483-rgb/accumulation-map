@@ -1,0 +1,598 @@
+{
+ "paper_id": "10.1016_j.jfineco.2010.08.002",
+ "title": "More insiders, more insider trading: Evidence from private-equity buyouts☆",
+ "journal": "JFE",
+ "year": 2010,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market microstructure theory of informed trading",
+  "information economics",
+  "economic theory of law enforcement"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_equity_stock",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_equity_participants",
+      "relation": "increases",
+      "to": "access_to_material_nonpublic_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_material_nonpublic_information",
+      "relation": "increases",
+      "to": "suspicious_stock_market_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_material_nonpublic_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the cross-sectional link is really a secular time-series trend: rising analyst following/arbitrage produced greater information acquisition over the sample period"
+   ]
+  },
+  {
+   "hypothesis": "P2_equity_options",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_equity_participants",
+      "relation": "increases",
+      "to": "access_to_material_nonpublic_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_material_nonpublic_information",
+      "relation": "increases",
+      "to": "suspicious_options_market_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_material_nonpublic_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "cross-market transmission: the options finding merely echoing insider trading located in the credit (CDS) market"
+   ]
+  },
+  {
+   "hypothesis": "P3_debt_cds",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_debt_participants",
+      "relation": "increases",
+      "to": "access_to_material_nonpublic_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_material_nonpublic_information",
+      "relation": "increases",
+      "to": "suspicious_cds_market_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_material_nonpublic_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4_debt_bond",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_debt_participants",
+      "relation": "increases",
+      "to": "access_to_material_nonpublic_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_material_nonpublic_information",
+      "relation": "increases",
+      "to": "suspicious_bond_market_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_material_nonpublic_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5_target_size",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_size",
+      "relation": "increases",
+      "to": "number_of_uncounted_insiders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "number_of_uncounted_insiders",
+      "relation": "increases",
+      "to": "suspicious_stock_market_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "number_of_uncounted_insiders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "2000-2006",
+  "sample_description": "Buyout bids of public U.S. companies by private financial buyers with bid value exceeding $100 million, from Thomson Financial (formerly SDC); the main sample is matched with CRSP, Compustat, and Loan Pricing Corporation's DealScan (LPC) syndicated-loan data",
+  "sample_size": "178 bids (Thomson-CRSP-Compustat-LPC matched sample; overall 178 bids over 2000-2006)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial (formerly SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Loan Pricing Corporation's DealScan database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "OptionMetrics database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "TRACE database",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Indicative end-of-day CDS quotes compiled by market-maker vendors",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 (top panel) - Equity/stock market regressions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "178 stock bid events",
+    "dv": {
+     "name": "unusual pre-bid stock market activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (lead banks)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 (bottom panel) - Equity options market regressions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "83 options bid events",
+    "dv": {
+     "name": "unusual pre-bid options market activity",
+     "measure": "MAX and SUM metrics applied to residuals of raw call volume and delta-weighted call volume, where expected volume is fit with a Heckman (1978) two-stage selection model to accommodate zero-volume days, over a five-day pre-bid window",
+     "source": "OptionMetrics"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (lead banks)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 (top panel) - CDS market regressions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "22 CDS bid events",
+    "dv": {
+     "name": "unusual pre-bid CDS market activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CDS vendor end-of-day quotes"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (lead banks)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 (bottom panel) - Corporate bond market regressions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "34 bond bid events",
+    "dv": {
+     "name": "unusual pre-bid corporate bond market activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "TRACE"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (lead banks)",
+      "measure": "number of lead banks in syndicated loans to the target; both all lead banks and post-bid lead banks specifications",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Equity/options market regressions with further controls",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "177 equity bid events and 83 options bid events",
+    "dv": {
+     "name": "unusual pre-bid equity and options volume",
+     "measure": "MAX and SUM measures of unusual pre-bid stock volume and delta-weighted call option volume, as described in Table 4",
+     "source": "CRSP / OptionMetrics"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (lead banks)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bid premium",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "book/market",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "volatility (sigma)",
+      "source": "CRSP"
+     },
+     {
+      "name": "beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "ILLIQ (Amihud 2002 illiquidity rank)",
+      "source": "CRSP"
+     },
+     {
+      "name": "turnover",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Credit market (CDS and bond) regressions with further controls",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "22 CDS bid events and 34 bond bid events",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "MAX and SUM measures of unusual pre-bid CDS log changes and negative corporate bond returns, as described in Table 5",
+     "source": "CDS vendor quotes / TRACE"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (LBO lead banks)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bid premium",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "book/market",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "volatility (sigma)",
+      "source": "CRSP"
+     },
+     {
+      "name": "beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "ILLIQ (Amihud 2002 illiquidity rank)",
+      "source": "CRSP"
+     },
+     {
+      "name": "turnover",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Alternate pre-bid window (10-day window, dates -11 through -2)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "178 stock, 83 options, 22 CDS, and 34 bond bid events",
+    "dv": {
+     "name": "unusual pre-bid trading activity (alternate window)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / OptionMetrics / CDS vendor quotes / TRACE"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (lead banks)",
+      "measure": "number of lead banks in syndicated loans (LBO lead banks for CDS and bonds)",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 10 - Effect of insiders in subsamples (cross-market segmentation test)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "unusual pre-bid trading activity in each market",
+     "measure": "MAX and SUM measures of unusual activity constructed using the conditional specifications (A2, B2, C2, D2, E2) over a five-day pre-bid window, per Table 4",
+     "source": "CRSP / OptionMetrics / CDS vendor quotes / TRACE"
+    },
+    "key_ivs": [
+     {
+      "name": "number of equity participants",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial (SDC)"
+     },
+     {
+      "name": "number of debt participants (lead banks)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's DealScan"
+     },
+     {
+      "name": "target size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "lead banks financing LBOs",
+    "information leakage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "debt syndicate measures",
+    "likelihood of insider trading"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "debt syndicate measures",
+    "relation": "affects",
+    "to": "likelihood of insider trading"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sample size"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "extent of insider activity",
+    "detectability"
+   ],
+   "mechanism_named": "detectability",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "imperfect competition among insiders",
+    "inefficient enforcement"
+   ],
+   "mechanism_named": "imperfect competition among insiders",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "dynamics of market liquidity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "these findings",
+    "relation": "affects",
+    "to": "dynamics of market liquidity"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

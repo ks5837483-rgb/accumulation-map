@@ -1,0 +1,733 @@
+{
+ "paper_id": "10.1287_mnsc.2022.4363",
+ "title": "Vertical Integration and Foreclosure: Evidence from Production Network Data",
+ "journal": "MNSC",
+ "year": 2023,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "theory of vertical foreclosure",
+  "raising rivals' cost theory",
+  "extending monopoly power theory",
+  "industrial organization"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "supplier_integration_with_buyers_competitor",
+      "relation": "increases",
+      "to": "foreclosure_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "foreclosure_incentive",
+      "relation": "increases",
+      "to": "buyer_supplier_link_breaking",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "supplier_integration_with_buyers_competitor",
+      "relation": "increases",
+      "to": "rivals_input_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "rivals_input_cost",
+      "relation": "increases",
+      "to": "buyer_supplier_link_breaking",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "supplier_integration_with_buyers_competitor",
+      "relation": "increases",
+      "to": "information_leakage_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_leakage_risk",
+      "relation": "increases",
+      "to": "buyer_supplier_link_breaking",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "foreclosure_incentive",
+    "rivals_input_cost",
+    "information_leakage_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "number_of_upstream_competitors",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "foreclosure_incentive",
+     "moderated_from": "supplier_integration_with_buyers_competitor",
+     "moderated_to": "buyer_supplier_link_breaking",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: vertical integration is a response to the relationship breaking or the threat thereof",
+    "unobserved shocks driving both integration and links breaking (compared against rumored integration events)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "supplier_integration_with_buyers_competitor",
+      "relation": "increases",
+      "to": "input_variable_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "input_variable_cost",
+      "relation": "decreases",
+      "to": "buyer_sales",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "input_variable_cost"
+   ],
+   "moderators": [
+    {
+     "construct": "number_of_alternative_suppliers",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "effect_derived": true,
+     "mechanism": "input_variable_cost",
+     "moderated_from": "supplier_integration_with_buyers_competitor",
+     "moderated_to": "buyer_sales",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "strong synergies from the merger force the downstream competitor to exit and break the link, rather than foreclosure"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (large U.S. and foreign firms across a large range of industries; potential foreclosure cases concentrated in computer and electronics manufacturing)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2003-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "180,192 firms (80,287 with at least one supplier link); main link-breaking regression N = 640,753 observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "FactSet Revere",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bureau Van Dijk's Zephyr database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bureau Van Dijk's Orbis database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "FactSet Fundamentals",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "buyer-supplier link breaks",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier vertically integrates",
+      "measure": "1{s vertically integrates}st",
+      "source": "FactSet Revere + Zephyr (M&A matched to buyer-seller network)"
+     },
+     {
+      "name": "supplier vertically integrates with competitor of buyer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr (M&A matched to competitor network)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of upstream customers",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "number of upstream competitors",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "age of the link",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "relation fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "relationship inactive (has broken)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "years since supplier's vertical integration with competitor vs. noncompetitor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relationship fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry-pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "buyer-supplier link breaks",
+     "measure": "1{LinkBreaks}bst",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier vertically integrates with competitor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     },
+     {
+      "name": "integration with competitor x number of upstream competitors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     },
+     {
+      "name": "integration with competitor x number of downstream competitors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of upstream competitors (Cst)",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "number of upstream customers",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "age of the link",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "relation fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "buyer-supplier link breaks",
+     "measure": "1{LinkBreaks}bst",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier vertically integrates (after MF outflow)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Zephyr + CRSP mutual funds database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr + CRSP mutual funds database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of upstream customers",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "age of the link",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "relation fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "generated instruments from a Poisson generating regression of the MFHS outflow event and MFHSEvent x ShareCustomersBCompetitors(t-1) (share of the supplier's customers that are competitors of the buyer)",
+    "sample": "",
+    "dv": {
+     "name": "buyer-supplier link breaks",
+     "measure": "1{LinkBreaks}bst",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier vertically integrates (instrumented)",
+      "measure": "1{s vertically integrates}st, instrumented by generated instruments from a Poisson generating regression",
+      "source": "Zephyr + CRSP mutual funds database"
+     },
+     {
+      "name": "supplier vertically integrates with competitor (instrumented)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr + CRSP mutual funds database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of upstream customers",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "age of the link",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "relation fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "buyer-supplier pairs where supplier sales growth (delta log Sales, t-1) is above zero (cols 1-3) or above the median of 3% (cols 4-6)",
+    "dv": {
+     "name": "buyer-supplier link breaks",
+     "measure": "1{LinkBreaks}bst",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier vertically integrates with competitor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     },
+     {
+      "name": "supplier vertically integrates",
+      "measure": "1{s vertically integrates}st",
+      "source": "Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of upstream customers and competitors",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "age of the link",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "relation fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "rumored mergers used as a placebo comparison group for actual vertical integration",
+    "sample": "rumored vertical integration events (excluding unfinished deals)",
+    "dv": {
+     "name": "buyer-supplier link breaks",
+     "measure": "1{LinkBreaks}bst",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier vertically integrates (rumor without unfinished)",
+      "measure": "1{s vertically integrates}st defined on rumored (not completed) vertical integration events, dated at the rumor date",
+      "source": "Zephyr (rumored deals)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr (rumored deals)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of upstream customers and competitors",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "age of the link",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "relation fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "rumored mergers as placebo comparison to actual mergers",
+    "sample": "",
+    "dv": {
+     "name": "relationship inactive (has broken)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "years since actual vs. rumored merger with buyer's competitor",
+      "measure": "dummies for years since the announcement date, estimated separately for actual mergers with competitors and rumored mergers with competitors",
+      "source": "FactSet Revere + Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relationship fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "sector-pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 12. International Relationships and Cross-Border Mergers (Equation (1) with cross-border interactions)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "buyer-supplier link breaks",
+     "measure": "1{LinkBreaks}bst",
+     "source": "FactSet Revere"
+    },
+    "key_ivs": [
+     {
+      "name": "integration with competitor x cross-border relationship",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     },
+     {
+      "name": "integration with competitor x cross-border merger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of upstream customers and competitors",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "age of the link",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FactSet Revere"
+     },
+     {
+      "name": "relation fixed effects",
+      "source": ""
+     },
+     {
+      "name": "buyer x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "country-pair x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 13. Impact on Sales (Equation (5), OLS with buyer and industry-year FE)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "buyer (log) sales",
+     "measure": "log Salesbt (log of buyer firm sales), constructed from accounting data",
+     "source": "Compustat / Orbis / FactSet Fundamentals"
+    },
+    "key_ivs": [
+     {
+      "name": "a supplier of the firm vertically integrates",
+      "measure": "1{A supplier vertically integrates}bt",
+      "source": "FactSet Revere + Zephyr"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere + Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "buyer fixed effect",
+      "source": ""
+     },
+     {
+      "name": "industry x year fixed effect",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "anticompetitive effects of vertical mergers",
+    "buyer-supplier relationship",
+    "prices offered by the bottleneck supplier"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "welfare cost of vertical foreclosure"
+   ],
+   "mechanism_named": "vertical foreclosure",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "mergers and acquisitions",
+    "antitrust authorities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sample",
+    "proposed mergers",
+    "average treatment effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "anticompetitive effects",
+    "overall welfare consequences",
+    "consumer prices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "anticompetitive effects",
+    "relation": "unspecified",
+    "to": "overall welfare consequences"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "sales variable"
+   ],
+   "mechanism_named": "classical measurement error",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "share",
+    "links breaking"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

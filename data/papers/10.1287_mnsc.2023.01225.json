@@ -1,0 +1,944 @@
+{
+ "paper_id": "10.1287_mnsc.2023.01225",
+ "title": "Measuring the Quality of Mergers and Acquisitions",
+ "journal": "MNSC",
+ "year": 2024,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "clean surplus accounting theory",
+  "synergy and overpayment theory of M&A",
+  "managerial overconfidence",
+  "agency theory",
+  "information uncertainty"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "overpayment_hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "implied_return_on_equity_improvement",
+      "relation": "increases",
+      "to": "overestimation_of_synergies_or_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overestimation_of_synergies_or_overpayment",
+      "relation": "decreases",
+      "to": "acquirer_post_m_a_roe_growth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overestimation_of_synergies_or_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "IRI merely captures known deal/firm characteristics used in prior studies rather than overpayment"
+   ]
+  },
+  {
+   "hypothesis": "ceo_overconfidence_raises_iri",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_overconfidence",
+      "relation": "increases",
+      "to": "overestimation_of_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overestimation_of_synergies",
+      "relation": "increases",
+      "to": "implied_return_on_equity_improvement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overestimation_of_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "ceo_incentive_misalignment_raises_iri",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_variable_pay",
+      "relation": "increases",
+      "to": "managerial_motivation_to_seek_high_quality_m_a",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_motivation_to_seek_high_quality_m_a",
+      "relation": "decreases",
+      "to": "implied_return_on_equity_improvement",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_motivation_to_seek_high_quality_m_a"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "financial_discipline_lowers_iri",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_financial_discipline",
+      "relation": "decreases",
+      "to": "overestimation_of_synergies_or_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overestimation_of_synergies_or_overpayment",
+      "relation": "increases",
+      "to": "implied_return_on_equity_improvement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overestimation_of_synergies_or_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "due_diligence_effort_lowers_iri",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "due_diligence_effort",
+      "relation": "decreases",
+      "to": "overestimation_of_synergies_or_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overestimation_of_synergies_or_overpayment",
+      "relation": "increases",
+      "to": "implied_return_on_equity_improvement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overestimation_of_synergies_or_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "information_uncertainty_raises_iri",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_uncertainty_about_the_target",
+      "relation": "increases",
+      "to": "difficulty_in_estimating_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "difficulty_in_estimating_synergies",
+      "relation": "increases",
+      "to": "implied_return_on_equity_improvement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "difficulty_in_estimating_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "iri_raises_operating_costs_channel",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "implied_return_on_equity_improvement",
+      "relation": "increases",
+      "to": "underestimated_operating_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "underestimated_operating_costs",
+      "relation": "decreases",
+      "to": "acquirer_post_m_a_roe_growth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "underestimated_operating_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "iri_reduces_liquidity_and_investment_channel",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "implied_return_on_equity_improvement",
+      "relation": "increases",
+      "to": "financial_constraints",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_constraints",
+      "relation": "decreases",
+      "to": "acquirer_post_m_a_roe_growth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_constraints"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "iri_raises_goodwill_impairment_channel",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "implied_return_on_equity_improvement",
+      "relation": "increases",
+      "to": "overpayment_for_target_net_assets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overpayment_for_target_net_assets",
+      "relation": "increases",
+      "to": "goodwill_impairment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overpayment_for_target_net_assets"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "iri_lowers_acquirer_stock_returns",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "implied_return_on_equity_improvement",
+      "relation": "increases",
+      "to": "overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overpayment",
+      "relation": "decreases",
+      "to": "acquirer_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "post-M&A stock underperformance is driven by book-to-market and other firm characteristics rather than deal quality"
+   ]
+  },
+  {
+   "hypothesis": "iri_lowers_acquirer_bond_returns",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "implied_return_on_equity_improvement",
+      "relation": "decreases",
+      "to": "acquirer_operating_performance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_operating_performance",
+      "relation": "increases",
+      "to": "acquirer_bond_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_operating_performance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public firms; acquirer and target industries controlled for, using Fama–French classifications)",
+  "country_region": "United States (mergers and acquisitions between U.S. public firms)",
+  "time_period": "1980-2018",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,352 M&As (final sample); 1,782 completed M&As in the baseline post-acquisition performance tests"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in acquirer ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Transaction value, log",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "All-cash deal",
+      "source": "SDC"
+     },
+     {
+      "name": "All-stock deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Bid premium",
+      "source": "SDC"
+     },
+     {
+      "name": "Combined ann. CARs",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, col (1): ROE excluding goodwill amortization",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in acquirer ROE (excl. goodwill amort.)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, col (2): Residual earnings ROE",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in acquirer residual earnings ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, col (3): Net operating ROE",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in acquirer net operating ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, col (4): Net operating margin",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in acquirer net operating margin",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, col (5): Change in acquirer M/B ratio",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in acquirer M/B ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, col (1): Quantile regression",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "quantile regression to reduce the influence of outliers",
+    "dv": {
+     "name": "Change in acquirer ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, col (2): Alternative window 5 years after acquisition",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "five-year post-acquisition window (5,760 obs)",
+    "dv": {
+     "name": "Change in acquirer ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, col (3): Alternative sample of larger deals",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Change in acquirer ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, col (4): Additional controls for all inputs for IRI",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in acquirer ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "ROE_Pre",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target B/M ratio",
+      "source": "CRSP, Compustat"
+     },
+     {
+      "name": "Weighted-avg. pre-M&A COE",
+      "source": "constructed (CRSP, Compustat)"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Horse race controlling for 19 characteristics used in prior studies",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "sample size varies by added characteristic (2,158-4,660 obs)",
+    "dv": {
+     "name": "Change in acquirer ROE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     },
+     {
+      "name": "Alternative measure of deal quality (one of 19 per model)",
+      "measure": "each model adds 1 of 19 firm/deal characteristics from prior studies, e.g. Target-Acquirer prod. similarity, Gain in product differentiation, Technological overlap, Human capital relatedness, % passive ownership, CEO network centrality ranks, Acquirer's organization capital, Acquirer's CSR score, In merger wave, Acquirer's abnormal accruals, Acquirer's E-index, Acquirer is cash-rich, EPS accretion/dilution, Overbidding, Combined ann. CARs",
+      "source": "hand-collected / prior studies (nine elite accounting and finance journals, 1990-2022)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline control set (per Table 2 panel B col 2)",
+      "source": "SDC, CRSP"
+     },
+     {
+      "name": "Acquirer industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "all M&As, completed and withdrawn",
+    "dv": {
+     "name": "Likelihood of deal completion",
+     "measure": "indicator for deal completion; logit regression of deal completion likelihood",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IRI (Implied ROE improvement)",
+      "measure": "Implied ROE improvement (IRI)",
+      "source": "constructed (SDC, Compustat, CRSP inputs)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "iri",
+    "financial synergies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "iri inputs",
+    "private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "iri",
+    "incremental costs",
+    "operating costs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "iri",
+    "relation": "increases",
+    "to": "incremental costs"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "iri",
+    "overestimated synergies",
+    "overpayment"
+   ],
+   "mechanism_named": "economic mechanisms",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "disclosed synergies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "choice to disclose synergies",
+    "iri"
+   ],
+   "mechanism_named": "financial discipline",
+   "proposed_edge": {
+    "from": "choice to disclose synergies",
+    "relation": "decreases",
+    "to": "iri"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

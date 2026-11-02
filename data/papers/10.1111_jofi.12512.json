@@ -1,0 +1,765 @@
+{
+ "paper_id": "10.1111_jofi.12512",
+ "title": "Selling Failed Banks",
+ "journal": "JF",
+ "year": 2017,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory with budget constraints",
+  "information economics",
+  "relationship banking theory",
+  "fire sales / asset misallocation"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "decreases",
+      "to": "willingness_to_pay",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "willingness_to_pay",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "decreases",
+      "to": "soft_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "soft_information",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "willingness_to_pay",
+    "soft_information"
+   ],
+   "moderators": [
+    {
+     "construct": "coefficient_of_dispersion",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "soft_information",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1-mod-COD"
+    },
+    {
+     "construct": "publicly_traded",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "soft_information",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1-mod-public"
+    },
+    {
+     "construct": "acquisition_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "acquisition_frictions",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_likelihood",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1-mod-experience"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "geographically distant failed banks also have worse or very specific assets, or state-level regulations affect which banks are located in a state"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "portfolio_distance",
+      "relation": "decreases",
+      "to": "willingness_to_pay",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "willingness_to_pay",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "willingness_to_pay"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_concentration_increase",
+      "relation": "increases",
+      "to": "willingness_to_pay",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "willingness_to_pay",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "willingness_to_pay"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_capitalization",
+      "relation": "increases",
+      "to": "ability_to_pay",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ability_to_pay",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ability_to_pay"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "capitalization proxies for geographic or portfolio distance from the failed bank"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "local_acquirer_capitalization",
+      "relation": "increases",
+      "to": "ability_to_pay",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ability_to_pay",
+      "relation": "decreases",
+      "to": "acquisition_by_distant_bank",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ability_to_pay"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "local_acquirer_capitalization",
+      "relation": "decreases",
+      "to": "failed_bank_misallocation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "failed_bank_misallocation",
+      "relation": "increases",
+      "to": "fdic_resolution_cost",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "local_acquirer_capitalization",
+      "relation": "increases",
+      "to": "bid_shading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bid_shading",
+      "relation": "increases",
+      "to": "fdic_resolution_cost",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "failed_bank_misallocation",
+    "bid_shading"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "the FDIC's eligibility criteria, rather than banks' bidding choices, determine failed bank allocation"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "banking industry (failed commercial and savings banks sold at FDIC auctions via Purchase and Assumption transactions)",
+  "country_region": "United States",
+  "time_period": "2007-2013",
+  "sample_description": "FDIC-receivership failed banks resolved via Purchase and Assumption (P&A) transactions, from SNL Financial (deal terms and resolution costs) and the quarterly Reports of Condition and Income filed with the FDIC (savings-bank data pre-2012 from SNL Financial), with bank location from the FDIC Summary of Deposits (SOD) database; excludes 25 liquidation cases with no bidders/below reservation value, six P&A deals marketing several subsidiaries of one holding company, the Washington Mutual and IndyMac deals, and the Independent Bankers' Bank of Springfield",
+  "sample_size": "467 P&A receiverships (of 492 FDIC receiverships); main descriptive sample of 438 failed banks"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SNL Financial",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Reports of Condition and Income (Call Reports filed with the FDIC)",
+    "category": "other_govt_db",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Google Geocoding",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "government_public"
+   },
+   {
+    "name": "MSA house price index",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "Size (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "Tier 1 Capital Ratio (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "Leverage ratio (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "% Core Deposits (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "% Residential / % CRE / % C&I Loans (acquirer)",
+      "measure": "the percentage of residential / commercial and real estate / commercial and industrial loans relative to total loans (RCFD2122)",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Liquidity Ratio",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "Unused Commitment ratio",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "% Consumer Loans",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "NPL Ratio",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "OREO Ratio",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Panel A: Willingness to Pay — Role of Distance (conditional/fixed-effect logit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "geographic distance (d_ijt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer asset size",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "loan composition",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "capitalization",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "failed bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer-quarter fixed effects (columns 2-3)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV: Role of Distance and Soft Information (COD interaction, conditional logit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "coefficient of dispersion (COD) in property assessments as plausibly exogenous variation in local soft information (Garmaise and Moskowitz 2004)",
+    "sample": "",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "distance x soft information (d_ij*COD_ij)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "MSA house price index"
+     },
+     {
+      "name": "alternative soft-information proxies",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "geographic distance (d_ijt)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "failed bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table V: Acquisition Experience and Distance (M&A experience, conditional logit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "potential acquirer M&A activity / acquisition intensity",
+      "measure": "whether the potential acquirer is active in the M&A market and its acquisition intensity, interacted with geographic distance",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "geographic distance (d_ijt)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "failed bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI, Panel A: Willingness to Pay — Role of Asset Specificity (portfolio distance, conditional logit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "portfolio distance (portfoliodistance_ijt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "geographic distance (d_ijt)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "failed bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VII: Willingness to Pay — Role of Market Concentration (delta HHI, conditional logit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "change in market concentration (delta HHI_ijt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "geographic distance (d_ijt)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "portfolio distance",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "failed bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VIII: Efficiency of Failed Banks and Acquirers (Panels A/B/C)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Failed banks measured on average from 2003 to 2007; Panel C is at the eventual-acquirer level, comparing pre- and post-acquisition efficiency",
+    "dv": {
+     "name": "bank efficiency",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition / change in market concentration",
+      "measure": "comparison of failed banks vs. other banks (Panel A) and vs. eventual acquirers (Panel B), and pre- vs. post-acquisition asset-weighted joint efficiency of acquirer and failed bank interacted with the change in market concentration (Panel C)",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table IX: Ability to Pay — Capitalization of Potential Acquirers (conditional logit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "potential acquirer capitalization",
+      "measure": "Tier 1 Capital Ratio (column 1) and Leverage Ratio (column 2)",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "geographic distance",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "portfolio distance",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     },
+     {
+      "name": "failed bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "distance x local capitalization (d_ij*local_capitalization_ijt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "geographic distance (d_ij)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "failed bank fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table XI: Local Acquirer Capitalization and FDIC Resolution Cost",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Failed-bank / resolution level (cost of resolution to the DIF)",
+    "dv": {
+     "name": "cost of resolution to the FDIC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "capitalization of local potential acquirers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "state fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section VI.A / Table XII: Robustness to Regional Shocks (IV for local acquirer capitalization)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "cost of resolution to the FDIC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "capitalization of local acquirers (instrumented)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reports of Condition and Income (Call Reports filed with the FDIC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "state fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "capitalization of potential acquirers",
+    "resolution costs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "capitalization of potential acquirers",
+    "relation": "increases",
+    "to": "resolution costs"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "capitalization of local potential acquirers",
+    "severity of regional shocks"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "capitalization of local potential acquirers"
+   ],
+   "mechanism_named": "attenuation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

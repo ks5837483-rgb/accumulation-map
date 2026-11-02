@@ -1,0 +1,720 @@
+{
+ "paper_id": "10.1093_rfs_13.4.841",
+ "title": "Toeholds, Bid Jumps, and Expected Payoffs in Takeovers",
+ "journal": "RFS",
+ "year": 2000,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "auction theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P_premium_deters",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "initial_bid_premium",
+      "relation": "increases",
+      "to": "signal_of_bidder_valuation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_bidder_valuation",
+      "relation": "increases",
+      "to": "single_bid_success",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_of_bidder_valuation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_cash_signal",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_payment_method",
+      "relation": "increases",
+      "to": "signal_by_high_valuation_bidder",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_by_high_valuation_bidder",
+      "relation": "increases",
+      "to": "single_bid_success",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_by_high_valuation_bidder"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_toehold_premium",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_toehold",
+      "relation": "decreases",
+      "to": "shares_purchased_at_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shares_purchased_at_premium",
+      "relation": "increases",
+      "to": "initial_offer_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shares_purchased_at_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_toehold_success",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_toehold",
+      "relation": "increases",
+      "to": "competitive_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_advantage",
+      "relation": "increases",
+      "to": "single_bid_success",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_toehold_resistance",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_toehold",
+      "relation": "increases",
+      "to": "competitive_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_advantage",
+      "relation": "decreases",
+      "to": "target_management_resistance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_toehold_runup",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_toehold",
+      "relation": "increases",
+      "to": "rumors_of_pending_bid",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "rumors_of_pending_bid",
+      "relation": "increases",
+      "to": "target_share_price_runup",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "rumors_of_pending_bid"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_toehold_target_payoff",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_toehold",
+      "relation": "increases",
+      "to": "single_bid_success",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "single_bid_success",
+      "relation": "decreases",
+      "to": "target_shareholder_payoff",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "single_bid_success"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_premium_target_payoff",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "initial_offer_premium",
+      "relation": "increases",
+      "to": "probability_of_successful_contest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_successful_contest",
+      "relation": "increases",
+      "to": "target_shareholder_payoff",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_successful_contest"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_hostile_second_bid_payoff",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_management_resistance",
+      "relation": "increases",
+      "to": "hostilities_toward_takeover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "hostilities_toward_takeover",
+      "relation": "decreases",
+      "to": "expected_value_of_second_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "hostilities_toward_takeover"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (about half of the contests in manufacturing industries, another 10% in the financial industry)",
+  "country_region": "United States (NYSE/AMEX-listed targets)",
+  "time_period": "1971-1990",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "14d statement (filed with the SEC)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "The Austin database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Mergerstat Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index (WSJI)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "MERC database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Toehold",
+     "measure": "Toehold of initial bidder.",
+     "source": "14d statement (filed with the SEC); WSJI; Mergerstat Review; MERC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Runup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; WSJI"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Iwin",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Rwin",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Irevise",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Onebid",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "truncated Tobit motivated by potential short positions in the target and the 80% upper limit on toeholds",
+    "dv": {
+     "name": "Toehold",
+     "measure": "Toehold of initial bidder.",
+     "source": "14d statement (filed with the SEC); WSJI; Mergerstat Review; MERC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Runup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; WSJI"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Iwin",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Rwin",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Irevise",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Onebid",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Equation 1: Simultaneous (three-stage least squares) equation for initial bidder's toehold",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Toehold",
+     "measure": "Toehold of initial bidder.",
+     "source": "14d statement (filed with the SEC); WSJI; Mergerstat Review; MERC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Runup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Multibid",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "lnTsize",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Equation 2: Simultaneous (three-stage least squares) equation for initial offer premium",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Premium (initial offer premium)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; WSJI"
+    },
+    "key_ivs": [
+     {
+      "name": "Markup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Multibid",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     },
+     {
+      "name": "Toehold",
+      "measure": "Toehold of initial bidder.",
+      "source": "14d statement (filed with the SEC); WSJI; Mergerstat Review; MERC database"
+     },
+     {
+      "name": "Zero-Toe",
+      "measure": "[withheld: wording matches the source]",
+      "source": "14d statement (filed with the SEC)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 (stage 1, s=0): Multinomial logit estimates of outcome probabilities p(x)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Outcome node reached in contest tree (nodes 1-4)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WSJI; CRSP; CCH Corporate Capital Structure Changes Reporter"
+    },
+    "key_ivs": [
+     {
+      "name": "Premium",
+      "measure": "the initial offer premium",
+      "source": "CRSP; WSJI"
+     },
+     {
+      "name": "Toehold",
+      "measure": "the initial toehold",
+      "source": "14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Zero-Toe",
+      "measure": "dummy variable for zero toehold",
+      "source": "14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Payment",
+      "measure": "dummy variable for cash as payment method",
+      "source": "WSJI; 14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Negotiated",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI; 14d statement (filed with the SEC)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 (stage 2, s=3 and s=4): Multinomial logit estimates of outcome probabilities p(x)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Outcome node reached in contest tree (nodes 5-10)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WSJI; CRSP; CCH Corporate Capital Structure Changes Reporter"
+    },
+    "key_ivs": [
+     {
+      "name": "Premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; WSJI"
+     },
+     {
+      "name": "Toehold",
+      "measure": "the second bidder's initial toehold level",
+      "source": "14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Zero-Toe",
+      "measure": "dummy variable for zero toehold",
+      "source": "14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Payment",
+      "measure": "dummy variable for cash as payment method",
+      "source": "WSJI; 14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Negotiated",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI; 14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 8: Partial derivatives (marginal impact) of offer characteristics on outcome probabilities",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Outcome probabilities (partial derivative ∂p_n^s/∂x_k)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "derived from Table 7 multinomial logit"
+    },
+    "key_ivs": [
+     {
+      "name": "Premium",
+      "measure": "initial (or second) offer premium",
+      "source": "CRSP; WSJI"
+     },
+     {
+      "name": "Toehold",
+      "measure": "initial (or second bidder's) toehold",
+      "source": "14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Zero-Toe",
+      "measure": "dummy variable for zero toehold",
+      "source": "14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Negotiated",
+      "measure": "dummy variable for negotiated prebid tender agreement",
+      "source": "WSJI; 14d statement (filed with the SEC)"
+     },
+     {
+      "name": "Hostile",
+      "measure": "dummy variable for target management opposition (stage 2)",
+      "source": "WSJI"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Cumulative abnormal return (CAR) to targets, initial bidders and rival bidders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Section 3.3 (Eq. 9): Cross-sectional regression of offer-induced abnormal return on outcome probabilities to recover payoffs µ",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all sample bids (forward-looking regression uses every bid)",
+    "dv": {
+     "name": "Offer-induced abnormal return Δjs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (offer-induced abnormal return); estimated multinomial-logit probabilities p(x)"
+    },
+    "key_ivs": [
+     {
+      "name": "log-odds of outcome probabilities ln(pjns/pjn*)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "estimated from Table 7 multinomial logit"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "partial anticipation of takeover activity",
+    "[withheld: wording matches the source]",
+    "total bidder gains"
+   ],
+   "mechanism_named": "partial anticipation of takeover activity",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "expected gains to bidders",
+    "offer parameters",
+    "nodes in the tender offer contest tree"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "offer parameters",
+    "relation": "affects",
+    "to": "expected gains to bidders"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,913 @@
+{
+ "paper_id": "10.5465_amj.2010.0259",
+ "title": "A Signaling Theory of Acquisition Premiums: Evidence from IPO Targets",
+ "journal": "AMJ",
+ "year": 2012,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "adverse selection"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_reputation",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "investment_bank_reputation",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4a"
+    },
+    {
+     "construct": "cross_border_acquisition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "information_asymmetry",
+     "moderated_from": "investment_bank_reputation",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity / unobserved heterogeneity of investment bank reputation (high-quality firms self-selecting into prominent underwriters, rather than the signal causing the premium)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "venture_capitalist_prominence",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "venture_capitalist_prominence",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4b"
+    },
+    {
+     "construct": "cross_border_acquisition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "information_asymmetry",
+     "moderated_from": "venture_capitalist_prominence",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity / self-selection: unobserved heterogeneity surrounding the interorganizational relationships (VC prominence) might account for the findings rather than signaling"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prominent_alliance_partners",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "prominent_alliance_partners",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4c"
+    },
+    {
+     "construct": "cross_border_acquisition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "information_asymmetry",
+     "moderated_from": "prominent_alliance_partners",
+     "moderated_to": "acquisition_premium",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5c"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity / self-selection into alliances with prominent partners (unobserved quality driving both the alliances and the premium)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (newly public U.S. IPO firms across sectors, with high-tech firms distinguished)",
+  "country_region": "United States",
+  "time_period": "1991-2000",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "308 deals (263 acquirers)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "investment bank reputation data from Loughran and Ritter (2004) (Carter and Manaster 1990 ranking index)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "individual IPO prospectuses",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Bureau of Labor Statistics' Occupational Employment Survey",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compact Disclosure",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "AeA's high-tech industry definitions",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 / univariate subsample premium comparisons (t-tests)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank reputation (above vs. below median)",
+      "measure": "Carter and Manaster (1990) ranking index of the lead underwriter, split at the median",
+      "source": "SDC / Loughran and Ritter (2004)"
+     },
+     {
+      "name": "venture capitalist prominence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / IPO prospectuses"
+     },
+     {
+      "name": "prominent alliance partners",
+      "measure": "IPO firm had prominent (publicly listed) alliance partners vs. not",
+      "source": "SDC / Compustat / CRSP"
+     },
+     {
+      "name": "knowledge distance (same-industry vs. diversifying entrant)",
+      "measure": "intra- vs. inter-industry acquirer comparison",
+      "source": "Bureau of Labor Statistics Occupational Employment Survey"
+     },
+     {
+      "name": "cross border (domestic vs. cross-border)",
+      "measure": "acquirer foreign (non-U.S.) vs. U.S.",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank reputation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Loughran and Ritter (2004)"
+     },
+     {
+      "name": "venture capitalist prominence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / IPO prospectuses"
+     },
+     {
+      "name": "prominent alliance partners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Compustat / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IPO firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "IPO underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "time since IPO",
+      "source": "SDC"
+     },
+     {
+      "name": "managerial ownership",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "inside directors",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "blockholdings",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "stock offer",
+      "source": "SDC"
+     },
+     {
+      "name": "competing bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "percent acquired",
+      "source": "SDC"
+     },
+     {
+      "name": "high-tech industry",
+      "source": "AeA high-tech industry definitions"
+     },
+     {
+      "name": "cross border",
+      "source": "SDC"
+     },
+     {
+      "name": "knowledge distance",
+      "source": "Bureau of Labor Statistics Occupational Employment Survey"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4a",
+     "H4b",
+     "H4c"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "knowledge distance",
+      "measure": "continuous measure = [0.5 * sum_k (EAk - ETk)^2]^0.5, where EAk and ETk are proportions of employees in occupation k in the acquirer's and target's three-digit-SIC industries",
+      "source": "Bureau of Labor Statistics Occupational Employment Survey"
+     },
+     {
+      "name": "knowledge distance x investment bank reputation",
+      "measure": "interaction of knowledge distance with the Carter-Manaster investment bank reputation index",
+      "source": "BLS OES / SDC"
+     },
+     {
+      "name": "knowledge distance x venture capitalist prominence",
+      "measure": "interaction of knowledge distance with the VC prominence dummy",
+      "source": "BLS OES / SDC"
+     },
+     {
+      "name": "knowledge distance x prominent alliance partners",
+      "measure": "interaction of knowledge distance with log(1 + number of prominent alliance partners)",
+      "source": "BLS OES / SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IPO firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "IPO underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "time since IPO",
+      "source": "SDC"
+     },
+     {
+      "name": "managerial ownership",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "inside directors",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "blockholdings",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "stock offer",
+      "source": "SDC"
+     },
+     {
+      "name": "competing bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "percent acquired",
+      "source": "SDC"
+     },
+     {
+      "name": "high-tech industry",
+      "source": "AeA high-tech industry definitions"
+     },
+     {
+      "name": "cross border",
+      "source": "SDC"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H5a",
+     "H5b",
+     "H5c"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "cross border",
+      "measure": "indicator variable equal to 1 if an acquirer was a foreign (non-U.S.) firm, and 0 otherwise",
+      "source": "SDC"
+     },
+     {
+      "name": "cross border x investment bank reputation",
+      "measure": "interaction of cross border with the Carter-Manaster investment bank reputation index",
+      "source": "SDC / Loughran and Ritter (2004)"
+     },
+     {
+      "name": "cross border x venture capitalist prominence",
+      "measure": "interaction of cross border with the VC prominence dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "cross border x prominent alliance partners",
+      "measure": "interaction of cross border with log(1 + number of prominent alliance partners)",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IPO firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "IPO underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "time since IPO",
+      "source": "SDC"
+     },
+     {
+      "name": "managerial ownership",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "inside directors",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "blockholdings",
+      "source": "Compact Disclosure / proxy statements"
+     },
+     {
+      "name": "acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "stock offer",
+      "source": "SDC"
+     },
+     {
+      "name": "competing bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "percent acquired",
+      "source": "SDC"
+     },
+     {
+      "name": "high-tech industry",
+      "source": "AeA high-tech industry definitions"
+     },
+     {
+      "name": "knowledge distance",
+      "source": "Bureau of Labor Statistics Occupational Employment Survey"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Supplementary — sample selection bias (two-stage Heckman model)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "first-stage probit exclusion variables: major exchange (NYSE/NASDAQ listing) and industry M&A volume",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "second-stage acquisition premium model with a selection correction term",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank reputation",
+      "measure": "Carter-Manaster ranking index",
+      "source": "SDC / Loughran and Ritter (2004)"
+     },
+     {
+      "name": "venture capitalist prominence",
+      "measure": "prominent-VC dummy",
+      "source": "SDC / IPO prospectuses"
+     },
+     {
+      "name": "prominent alliance partners",
+      "measure": "log(1 + number of prominent alliance partners)",
+      "source": "SDC / Compustat / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "major exchange (NYSE or NASDAQ listing) — first-stage regressor",
+      "source": "SDC"
+     },
+     {
+      "name": "industry M&A volume — first-stage regressor",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Supplementary — endogeneity of VC prominence and alliance variables (two-stage self-selection model)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "state location dummies used for instrumentation in the first-stage VC choice model (following Baker and Gompers 2003)",
+    "sample": "full sample plus subsamples of firms backed by prominent VCs vs. not",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "second-stage acquisition premium model with a self-selection correction term",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "venture capitalist prominence",
+      "measure": "prominent-VC dummy instrumented via a first-stage VC choice model",
+      "source": "SDC / IPO prospectuses"
+     },
+     {
+      "name": "prominent alliance partners",
+      "measure": "log(1 + number of prominent alliance partners), similar two-stage self-selection approach",
+      "source": "SDC / Compustat / CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Supplementary — endogeneity of investment bank reputation (2SLS, Durbin-Wu-Hausman test)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "acquisition premium model estimated by two-stage least squares",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank reputation",
+      "measure": "continuous Carter-Manaster ranking index treated as a potentially endogenous regressor and tested via Durbin-Wu-Hausman",
+      "source": "SDC / Loughran and Ritter (2004)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Supplementary — signal decay tests (signals x time since IPO interactions)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "acquisition premium (baseline measure)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank reputation x time since IPO",
+      "measure": "interaction of IB reputation with years from IPO to acquisition announcement",
+      "source": "SDC"
+     },
+     {
+      "name": "venture capitalist prominence x time since IPO",
+      "measure": "interaction of VC prominence with time since IPO",
+      "source": "SDC"
+     },
+     {
+      "name": "prominent alliance partners x time since IPO",
+      "measure": "interaction of prominent alliance partners with time since IPO",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Supplementary — alternative signal and premium measures (robustness)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium (sales-scaled)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "any venture capitalist backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / IPO prospectuses"
+     },
+     {
+      "name": "number of alliances with any partner",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "investment bank reputation",
+      "measure": "Carter-Manaster ranking index",
+      "source": "SDC / Loughran and Ritter (2004)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "cross border",
+    "information asymmetry"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "foreign acquirers",
+    "remedies for adverse selection",
+    "signals"
+   ],
+   "mechanism_named": "adverse selection",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "acquisition premiums",
+    "ipo targets",
+    "acquisition decisions and outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "ipo firms",
+    "acquirers",
+    "product-market and international diversification programs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ipo firms as acquirers",
+    "relation": "affects",
+    "to": "product-market and international diversification programs"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "value of signals",
+    "ipo firms",
+    "established targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "institutions",
+    "information available on targets",
+    "ipo markets",
+    "interorganizational relationships",
+    "financial intermediaries",
+    "signals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "institutions",
+    "on_path": [
+     "interorganizational relationships",
+     "signals"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "signals",
+    "acquisition premiums",
+    "established targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "established targets",
+    "on_path": [
+     "signals",
+     "acquisition premiums"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "signals",
+    "acquisition premiums"
+   ],
+   "mechanism_named": "agency theory",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "other signals",
+    "remedies",
+    "adverse selection",
+    "contingent contracts",
+    "ownership sharing",
+    "organizational trust"
+   ],
+   "mechanism_named": "adverse selection",
+   "proposed_edge": {
+    "from": "other signals or remedies",
+    "relation": "affects",
+    "to": "challenges of acquisition deals"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "signals",
+    "adverse selection",
+    "boundary conditions of signals"
+   ],
+   "mechanism_named": "adverse selection",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "signal substitution",
+    "on_path": [
+     "signals",
+     "adverse selection"
+    ]
+   }
+  }
+ ]
+}

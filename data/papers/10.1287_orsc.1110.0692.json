@@ -1,0 +1,791 @@
+{
+ "paper_id": "10.1287_orsc.1110.0692",
+ "title": "The Choice Between Joint Ventures and Acquisitions: Insights from Signaling Theory",
+ "journal": "ORSC",
+ "year": 2012,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_reputation",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "transaction_occurrence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity: the investment bank reputation–deal relationship reflects unobservable firm characteristics rather than the signal"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_reputation",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "joint_venture_over_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "investment_bank_reputation",
+     "moderated_to": "joint_venture_over_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity: interorganizational ties to reputable underwriters are outcomes of unobservable firm characteristics that drive the joint venture versus acquisition choice rather than the signal"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "venture_capitalist_backing",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "transaction_occurrence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity: VC backing reflects unobserved heterogeneity rather than a quality signal that facilitates a deal"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "venture_capitalist_backing",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "joint_venture_over_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "venture_capitalist_backing",
+     "moderated_to": "joint_venture_over_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H6"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity: VC backing reflects unobserved heterogeneity rather than a signal shaping the joint venture versus acquisition choice"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. IPO firms across sectors, excluding the financial services sector)",
+  "country_region": "United States (U.S. firms; purely domestic deals)",
+  "time_period": "1986-2001",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "343 transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat data files",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Loughran and Ritter (2004) investment bank reputation data (Carter and Manaster 1990 index)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, lower panel (probit selection equation for deal realization)",
+    "hypotheses": [
+     "H1",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "Exclusion restrictions: Major exchange, Pre-IPO alliances, Industry IPO volume, Industry M&A volume, Industry JV volume",
+    "sample": "Includes IPO firms without a subsequent JV/acquisition transaction (full IPO selection universe)",
+    "dv": {
+     "name": "Deal realization (joint venture or acquisition vs. no transaction)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment bank reputation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loughran and Ritter (2004)"
+     },
+     {
+      "name": "Venture capitalist backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC new issues module"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Major exchange (NYSE or NASDAQ vs. other; exclusion restriction)",
+      "source": "SDC"
+     },
+     {
+      "name": "Pre-IPO alliances (exclusion restriction)",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry IPO volume (exclusion restriction)",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry M&A volume (exclusion restriction)",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry JV volume (exclusion restriction)",
+      "source": "SDC"
+     },
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "Lockup provision",
+      "source": "SDC"
+     },
+     {
+      "name": "Target performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target size (log total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sector indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, top panel, Column II (probit with sample selection; main signaling effects on JV vs. acquisition)",
+    "hypotheses": [
+     "H2",
+     "H4"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "343 transactions (85% acquisitions)",
+    "dv": {
+     "name": "Joint venture vs. acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment bank reputation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loughran and Ritter (2004)"
+     },
+     {
+      "name": "Venture capitalist backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC new issues module"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "Lockup provision",
+      "source": "SDC"
+     },
+     {
+      "name": "Target performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target size (log total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience of exchange partner",
+      "source": "SDC"
+     },
+     {
+      "name": "Alliance experience of exchange partner",
+      "source": "SDC"
+     },
+     {
+      "name": "Knowledge distance (direct effect)",
+      "source": "BLS Occupation Employment Survey"
+     },
+     {
+      "name": "Sector indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, top panel, Column III (probit with sample selection; signaling x knowledge distance interactions)",
+    "hypotheses": [
+     "H5",
+     "H6"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "343 transactions (85% acquisitions)",
+    "dv": {
+     "name": "Joint venture vs. acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment bank reputation x Knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loughran and Ritter (2004); BLS Occupation Employment Survey"
+     },
+     {
+      "name": "Venture capitalist backing x Knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC new issues module; BLS Occupation Employment Survey"
+     },
+     {
+      "name": "Knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BLS Occupation Employment Survey"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment bank reputation (main effect)",
+      "source": "Loughran and Ritter (2004)"
+     },
+     {
+      "name": "Venture capitalist backing (main effect)",
+      "source": "SDC new issues module"
+     },
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "Lockup provision",
+      "source": "SDC"
+     },
+     {
+      "name": "Target performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target size (log total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience of exchange partner",
+      "source": "SDC"
+     },
+     {
+      "name": "Alliance experience of exchange partner",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Endogeneity test for Investment bank reputation (two-stage model with Smith-Blundell test)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "Investment bank reputation (first-stage) / JV vs. acquisition (second-stage)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Loughran and Ritter (2004)"
+    },
+    "key_ivs": [
+     {
+      "name": "Firm location indicators (California, Massachusetts, New York)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Previous alliances formed by the firm",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Level of IPO activity",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Endogeneity test for Venture capitalist backing (instrumented with geographic location and macro determinants)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Geographic location (California/Massachusetts) as instrument; interest rates, capital gains tax rates, industry VC funding rounds",
+    "sample": "",
+    "dv": {
+     "name": "Venture capitalist backing (first-stage) / JV vs. acquisition (second-stage treatment model)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC new issues module"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic location (California, Massachusetts)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Interest rates",
+      "measure": "[withheld: wording matches the source]",
+      "source": "other"
+     },
+     {
+      "name": "Capital gains tax rates",
+      "measure": "[withheld: wording matches the source]",
+      "source": "other"
+     },
+     {
+      "name": "Industry VC funding rounds",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Columns I-II (ordered probit, three-category)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N = 1,572 (three-category: no transaction, JV, acquisition)",
+    "dv": {
+     "name": "Ordered governance commitment (three-category)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment bank reputation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loughran and Ritter (2004)"
+     },
+     {
+      "name": "Venture capitalist backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC new issues module"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IPO firm performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "IPO firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Lockup provision",
+      "source": "SDC"
+     },
+     {
+      "name": "Underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Columns III-IV (ordered probit, four-category including nonequity alliances)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N = 2,087 (four-category: no transaction, nonequity alliance, JV, acquisition)",
+    "dv": {
+     "name": "Ordered governance commitment (four-category)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment bank reputation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loughran and Ritter (2004)"
+     },
+     {
+      "name": "Venture capitalist backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC new issues module"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IPO firm performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "IPO firm Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "IPO firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Lockup provision",
+      "source": "SDC"
+     },
+     {
+      "name": "Underpricing",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "remedies to the risk of adverse selection",
+    "adverse selection"
+   ],
+   "mechanism_named": "adverse selection",
+   "proposed_edge": {
+    "from": "remedies to the risk of adverse selection",
+    "relation": "unspecified",
+    "to": "adverse selection"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "networks",
+    "geographic proximity",
+    "information flows",
+    "credibility of a target’s claims"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "networks or geographic proximity",
+    "relation": "affects",
+    "to": "credibility of a target’s claims"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "signal",
+    "quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "signal",
+    "relation": "affects",
+    "to": "quality"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "signals",
+    "value of signals",
+    "market contexts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "market contexts",
+    "on_path": [
+     "signals",
+     "value of signals"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "market entry and governance choices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "governance choices",
+    "search and selection considerations"
+   ],
+   "mechanism_named": "transaction cost theory",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "initial public offerings",
+    "equity carve-outs",
+    "information spillovers"
+   ],
+   "mechanism_named": "information spillovers",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "two-partner joint ventures",
+    "domestic deals",
+    "cross-border transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "endogeneity",
+    "sample selection"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "sample selection",
+    "endogeneity",
+    "founder preferences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "organizational governance",
+    "outcome variables"
+   ],
+   "mechanism_named": "signaling theory",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "heterogeneity in acquisitions",
+    "adverse selection",
+    "remedies other than joint ventures"
+   ],
+   "mechanism_named": "adverse selection",
+   "proposed_edge": {
+    "from": "remedies other than joint ventures",
+    "relation": "affects",
+    "to": "adverse selection"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "other solutions in M&A",
+    "asymmetric information",
+    "contingent contract",
+    "networks",
+    "trust"
+   ],
+   "mechanism_named": "asymmetric information",
+   "proposed_edge": {
+    "from": "other solutions in M&A",
+    "relation": "decreases",
+    "to": "asymmetric information"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "remedies",
+    "corporate investment situations"
+   ],
+   "mechanism_named": "information economics",
+   "proposed_edge": {
+    "from": "remedies",
+    "relation": "unspecified",
+    "to": "remedies"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

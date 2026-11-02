@@ -1,0 +1,801 @@
+{
+ "paper_id": "10.1017_s0022109022000035",
+ "title": "Foreign Acquisition and Credit Risk: Evidence from the U.S. CDS Market",
+ "journal": "JFQA",
+ "year": 2022,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "asymmetric information",
+  "agency theory",
+  "information economics",
+  "portfolio diversification",
+  "empty creditor theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "decreases",
+      "to": "monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring",
+      "relation": "decreases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "increases",
+      "to": "managerial_risk_taking",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_risk_taking",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "monitoring",
+    "managerial_risk_taking"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "wealth transfer / expropriation from bondholders to shareholders (Galai and Masulis 1976; Jensen and Meckling 1976)",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "emerging_market_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "corporate_governance_quality",
+     "moderated_from": "foreign_block_acquisition",
+     "moderated_to": "credit_risk",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "majority_control",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "foreign_block_acquisition",
+     "moderated_to": "credit_risk",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "cash_payment",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "firm_liquidity",
+     "moderated_from": "foreign_block_acquisition",
+     "moderated_to": "credit_risk",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "diversifying_deal",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "agency_problems",
+     "moderated_from": "foreign_block_acquisition",
+     "moderated_to": "credit_risk",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "geographic_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "foreign_block_acquisition",
+     "moderated_to": "credit_risk",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    },
+    {
+     "construct": "cultural_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "foreign_block_acquisition",
+     "moderated_to": "credit_risk",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_block_acquisition",
+      "relation": "decreases",
+      "to": "creditor_monitoring",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "creditor_monitoring",
+      "relation": "decreases",
+      "to": "credit_risk",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "creditor_monitoring"
+   ],
+   "moderators": [
+    {
+     "construct": "cds_availability",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "creditor_monitoring",
+     "moderated_from": "foreign_block_acquisition",
+     "moderated_to": "credit_risk",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. target firms across industries; cross-border block acquisitions)",
+  "country_region": "U.S. target firms; foreign (cross-border) acquirers",
+  "time_period": "2001-2018",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,273 completed block acquisitions (276 by foreign firms)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IHS Markit",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Trade Reporting and Compliance Engine (TRACE)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Securities Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat North America database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergent Fixed Income Securities Database (FISD)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson One Banker",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (main DiD effect of foreign block acquisitions on target CDS spread)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "credit risk (CDS spread)",
+     "measure": "natural logarithm of 5-year CDS spreads (ln(CDS_SPREAD))",
+     "source": "IHS Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x FOREIGN interaction",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "FOREIGN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "POST",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "firm profitability (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "equity/stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "CDS depth / liquidity",
+      "source": "IHS Markit"
+     },
+     {
+      "name": "rating fixed effects",
+      "source": ""
+     },
+     {
+      "name": "acquirer nation fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "industry (2-digit SIC) fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "target firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry x year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "target x acquirer fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Figure 3 (parallel-trends / dynamic DiD with leads and lags)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "credit risk (CDS spread)",
+     "measure": "log of CDS spreads",
+     "source": "IHS Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x FOREIGN leads and lags",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "CDS depth (liquidity)",
+      "source": "IHS Markit"
+     },
+     {
+      "name": "firm and time fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (DiD over 1-5-year post-acquisition window)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "1-5-year window following acquisition",
+    "dv": {
+     "name": "credit risk (CDS spread)",
+     "measure": "natural logarithm of 5-year CDS spreads (ln(CDS_SPREAD)); changes in post-acquisition CDS spreads calculated relative to the year prior to acquisition (t=-1)",
+     "source": "IHS Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x FOREIGN_1 ... POST x FOREIGN_5",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "CDS depth (liquidity)",
+      "source": "IHS Markit"
+     },
+     {
+      "name": "industry x year and target firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A (subgroup DiD: developed/emerging, majority/minority, horizontal/diversifying, cash/other)",
+    "hypotheses": [
+     "H2",
+     "H3",
+     "H4",
+     "H5"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "sample split into subgroups (developed/emerging, majority/minority, diversifying/horizontal, cash/other)",
+    "dv": {
+     "name": "credit risk (CDS spread)",
+     "measure": "natural logarithm of 5-year CDS spreads (ln(CDS_SPREAD))",
+     "source": "IHS Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x FOREIGN by developed vs emerging market acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "POST x FOREIGN by majority vs minority control",
+      "measure": "sample partitioned into 51%-100% ownership (majority control) vs 5%-50% ownership (minority control)",
+      "source": "SDC"
+     },
+     {
+      "name": "POST x FOREIGN by diversifying vs horizontal deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "POST x FOREIGN by cash vs other payment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "CDS depth (liquidity)",
+      "source": "IHS Markit"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B (nested DiD models for subgroup differences)",
+    "hypotheses": [
+     "H2",
+     "H3",
+     "H4",
+     "H5"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "credit risk (CDS spread)",
+     "measure": "natural logarithm of 5-year CDS spreads (ln(CDS_SPREAD))",
+     "source": "IHS Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x FOREIGN x STAKE (nested triple interactions)",
+      "measure": "nested models with DEVELOPED (=1 developed country), MAJORITY (=1 majority control), DIVERSIFYING (=1 diversifying deal), CASH (=1 cash payment) triple interactions to assess differences across subgroups",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "CDS depth (liquidity)",
+      "source": "IHS Markit"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (DiD combined with propensity overlap weighting)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "synthetic sample with overlap weights balancing foreign-acquired (treated) vs domestic-acquired (control) firms",
+    "dv": {
+     "name": "credit risk (CDS spread)",
+     "measure": "natural logarithm of 5-year CDS spreads (ln(CDS_SPREAD))",
+     "source": "IHS Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x FOREIGN interaction (overlap-weighted synthetic sample)",
+      "measure": "interaction term POST x FOREIGN estimated in a synthetic sample with covariate balance via overlap weights (Li et al. (2018)); col 1 match on size/leverage/profitability/stock volatility, col 2 Altman (1968) Z-score, col 3 takeover vulnerability, col 4 richer logit specification",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "CDS depth (liquidity)",
+      "source": "IHS Markit"
+     },
+     {
+      "name": "Altman (1968) Z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "takeover vulnerability",
+      "source": "CRSP"
+     },
+     {
+      "name": "industry x year, rating, and target firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table A2 (triple-difference / DiDiD with propensity overlap weighting)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "acquired (treated) and nonacquired (control) firms; 343 nonacquired CDS firms added as twins",
+    "dv": {
+     "name": "credit risk (CDS spread)",
+     "measure": "natural logarithm of 5-year CDS spreads (ln(CDS_SPREAD))",
+     "source": "IHS Markit"
+    },
+    "key_ivs": [
+     {
+      "name": "difference-in-difference-in-difference (triple-difference) foreign-acquisition effect",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "stock volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "CDS depth (liquidity)",
+      "source": "IHS Markit"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "foreign ownership",
+    "financial markets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "foreign ownership",
+    "relation": "affects",
+    "to": "financial markets"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,604 @@
+{
+ "paper_id": "10.1093_rfs_hhad052",
+ "title": "Mandatory Financial Disclosure and M&amp;A Activity",
+ "journal": "RFS",
+ "year": 2023,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection theory",
+  "disclosure regulation theory",
+  "real options theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mandated_financial_reporting",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m_a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "innovation_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "mandated_financial_reporting",
+     "moderated_to": "m_a_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1a"
+    },
+    {
+     "construct": "asset_redeployability",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "mandated_financial_reporting",
+     "moderated_to": "m_a_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1b"
+    },
+    {
+     "construct": "industry_similarity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "mandated_financial_reporting",
+     "moderated_to": "m_a_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1c"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Mandated reporting is mechanically correlated with M&A activity"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "extended_disclosure",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "probability_of_being_acquired",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the effect is driven by industry-level information spillovers rather than the target's own disclosure (indirect channel)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mandated_financial_reporting",
+      "relation": "increases",
+      "to": "information_spillovers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_spillovers",
+      "relation": "increases",
+      "to": "m_a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_spillovers"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mandated_financial_reporting",
+      "relation": "increases",
+      "to": "information_spillovers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_spillovers",
+      "relation": "increases",
+      "to": "m_a_activity_of_listed_targets",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_spillovers"
+   ],
+   "moderators": [
+    {
+     "construct": "listed_firm_presence",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_spillovers",
+     "moderated_from": "mandated_financial_reporting",
+     "moderated_to": "m_a_activity_of_listed_targets",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mandated_financial_reporting",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m_a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "mandated_financial_reporting",
+      "relation": "decreases",
+      "to": "gains_from_trade",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "gains_from_trade",
+      "relation": "increases",
+      "to": "m_a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "gains_from_trade"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "mandatory reporting crowds out voluntary disclosure and thereby the information environment"
+   ]
+  },
+  {
+   "hypothesis": "H6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_disclosure",
+      "relation": "increases",
+      "to": "quality_of_matching",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "quality_of_matching",
+      "relation": "increases",
+      "to": "post_deal_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "quality_of_matching"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mandated_financial_reporting",
+      "relation": "decreases",
+      "to": "information_frictions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_frictions",
+      "relation": "decreases",
+      "to": "cash_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_frictions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mandated_financial_reporting",
+      "relation": "decreases",
+      "to": "asset_opacity",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "asset_opacity",
+      "relation": "decreases",
+      "to": "valuation_multiple",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asset_opacity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the increase in public information erodes the bidder's private gain from trade (negative feedback on M&A)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (private limited liability firms across two-digit SIC industries in Europe)",
+  "country_region": "12 European countries (incl. UK, Netherlands, Finland, France, Germany, Austria, Belgium, Denmark, Ireland, Italy, Spain, Sweden); U.S. private-firm data added for the difference-in-differences",
+  "time_period": "2001-2012",
+  "sample_description": "completed M&A deals involving a transfer of control (acquirer <50% of target's shares before and >50% after) of targets incorporated as private limited liability companies; deal data from Zephyr and target financials from Amadeus (both Bureau van Dijk)",
+  "sample_size": "40,321 deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Zephyr",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Amadeus",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "European Patent Office (obtained through Orbis)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Regulatory disclosure thresholds (Bernard, Burgstahler, and Kaya 2018; Breuer 2021)",
+    "category": "other",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "2003 EC accounting directive (heterogeneous country- and industry-level regulatory intensity of extended disclosure)",
+    "sample": "40,321 completed transfer-of-control deals of private limited-liability targets, 12 European countries, 2001-2012, at country-industry(SIC2)-year level (10,777 obs); controls lagged one year, SE clustered at country-year",
+    "dv": {
+     "name": "M&A activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Zephyr; Amadeus"
+    },
+    "key_ivs": [
+     {
+      "name": "Mandated reporting",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Amadeus"
+     }
+    ],
+    "controls": [
+     {
+      "name": "% public assets (proportion of country-industry-year assets held by listed firms)",
+      "source": "Amadeus"
+     },
+     {
+      "name": "Mean assets (log) (size of the average firm)",
+      "source": "Amadeus"
+     },
+     {
+      "name": "No. of firms (log)",
+      "source": "Amadeus"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Amadeus"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Amadeus"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": ""
+     },
+     {
+      "name": "Country-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Country adoption of EC directive (difference-in-differences)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered country-level adoption of the EC reporting directive",
+    "sample": "Europe plus never-treated U.S. private-firm M&A data, 2001-2012, 10,517 obs; columns 1-2 OLS, columns 3-4 Callaway and Sant'Anna (2021) staggered-adoption estimator; SE clustered at country-year",
+    "dv": {
+     "name": "M&A activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Zephyr; Amadeus"
+    },
+    "key_ivs": [
+     {
+      "name": "Reporting regulation dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected directive-adoption years (per country)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Country-industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "RDD",
+    "shock_or_instrument": "Country-specific regulatory threshold for extended disclosure (firms with assets within a [-10%, +10%] interval around the threshold)",
+    "sample": "private firms with total assets within +/-10% of the country-specific regulatory threshold; 771,296 firm-year obs (568,423 in the firm-FE column); linear probability model; SE clustered at country-year",
+    "dv": {
+     "name": "Dummy acquired",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Zephyr; Amadeus"
+    },
+    "key_ivs": [
+     {
+      "name": "Extended disclosure dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Amadeus"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Assets (log) (total assets in log)",
+      "source": "Amadeus"
+     },
+     {
+      "name": "Country-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry / country-industry / firm fixed effects (across columns 1-3)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 3.3: Germany EHUG enforcement reform",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "EHUG enforcement reform (Germany, enacted 2006; centralized compliance monitoring and higher penalties; private-firm disclosure compliance rose from 5-10% to above 90% from 2007)",
+    "sample": "Germany",
+    "dv": {
+     "name": "M&A activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Zephyr; Amadeus"
+    },
+    "key_ivs": [
+     {
+      "name": "Fraction of regulated firms x post-reform",
+      "measure": "the fraction of private firms subject to the new enforcement rules (industry share of regulated firms) interacted with the post-EHUG period",
+      "source": "Amadeus"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 4 mechanism test 1: innovative sectors (patents)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "country-industry-year level (cross-industry heterogeneity)",
+    "dv": {
+     "name": "M&A activity",
+     "measure": "M&A activity (number of deals) at country-industry-year level",
+     "source": "Zephyr; Amadeus"
+    },
+    "key_ivs": [
+     {
+      "name": "Mandated reporting x innovative sector",
+      "measure": "[withheld: wording matches the source]",
+      "source": "European Patent Office (obtained through Orbis)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 4 mechanism test 2: asset redeployability",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "country-industry-year level (cross-industry heterogeneity)",
+    "dv": {
+     "name": "M&A activity",
+     "measure": "M&A activity (number of deals) at country-industry-year level",
+     "source": "Zephyr; Amadeus"
+    },
+    "key_ivs": [
+     {
+      "name": "Mandated reporting x (low) asset redeployability",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kim and Kung (2017) asset redeployability measure"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 4 mechanism test 3: firm similarity",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "country-industry-year level (cross-industry heterogeneity)",
+    "dv": {
+     "name": "M&A activity",
+     "measure": "M&A activity (number of deals) at country-industry-year level",
+     "source": "Zephyr; Amadeus"
+    },
+    "key_ivs": [
+     {
+      "name": "Mandated reporting x firm similarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Amadeus"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "private firms",
+    "regulation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "mandatory disclosure",
+    "largest private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "presence of listed firms",
+    "mandated reporting",
+    "proprietary costs",
+    "competition among bidders",
+    "listed-firms acquisitions"
+   ],
+   "mechanism_named": "high proprietary costs",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,642 @@
+{
+ "paper_id": "10.1111_1911-3846.13075",
+ "title": "When friends become foes: Disclosure decisions after failed M&amp;A deals",
+ "journal": "CAR",
+ "year": 2025,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "proprietary cost of disclosure",
+  "voluntary disclosure theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "failed_ma_deal",
+      "relation": "decreases",
+      "to": "proprietary_cost_of_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "proprietary_cost_of_disclosure",
+      "relation": "decreases",
+      "to": "proprietary_information_disclosure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "proprietary_cost_of_disclosure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Post-M&A investor pressure driving disclosure rather than reduced proprietary cost of failed-deal information"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "failed_ma_deal",
+      "relation": "decreases",
+      "to": "proprietary_cost_of_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "proprietary_cost_of_disclosure",
+      "relation": "decreases",
+      "to": "proprietary_information_disclosure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "proprietary_cost_of_disclosure"
+   ],
+   "moderators": [
+    {
+     "construct": "nda_effectiveness",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "proprietary_cost_of_disclosure",
+     "moderated_from": "failed_ma_deal",
+     "moderated_to": "proprietary_information_disclosure",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "same_industry_counterparty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "proprietary_cost_of_disclosure",
+     "moderated_from": "failed_ma_deal",
+     "moderated_to": "proprietary_information_disclosure",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "low_industry_entry_barrier",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "proprietary_cost_of_disclosure",
+     "moderated_from": "failed_ma_deal",
+     "moderated_to": "proprietary_information_disclosure",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "counterparty_subsequent_deal_with_competitor",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "proprietary_cost_of_disclosure",
+     "moderated_from": "failed_ma_deal",
+     "moderated_to": "proprietary_information_disclosure",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "failed_ma_deal",
+      "relation": "increases",
+      "to": "proprietary_information_disclosure",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "proprietary_information_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "proprietary_information_disclosure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proprietary_information_disclosure",
+      "relation": "increases",
+      "to": "product_market_competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "product_market_competition",
+      "relation": "decreases",
+      "to": "future_firm_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "product_market_competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US public firms spanning all industries)",
+  "country_region": "United States",
+  "time_period": "1998-2020",
+  "sample_description": "US firm-years from Compustat merged with M&A data from the Bloomberg Terminal, removing utilities and financial firms and observations with missing values (non-hostile deals)",
+  "sample_size": "67,675 firm-year observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Bloomberg Terminal Database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "EDGAR database",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Jeon et al. (2022)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A: Main hypothesis - changes models (Equations 1 and 2)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "change in proprietary information disclosure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "ChangeFailed Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "ChangeCompleted Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "intangible assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "advertising expenditures",
+      "source": "Compustat"
+     },
+     {
+      "name": "Big N auditor indicator",
+      "source": "Compustat"
+     },
+     {
+      "name": "annual abnormal returns",
+      "source": ""
+     },
+     {
+      "name": "annual stock volatility",
+      "source": ""
+     },
+     {
+      "name": "analyst coverage",
+      "source": ""
+     },
+     {
+      "name": "equity issuance",
+      "source": "Compustat"
+     },
+     {
+      "name": "deal value (subsample/Eq 2 only)",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "all-cash payment indicator (subsample/Eq 2 only)",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "termination fee indicator (subsample/Eq 2 only)",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "same-industry deal indicator (subsample/Eq 2 only)",
+      "source": "Bloomberg Terminal Database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "proprietary information disclosure (level, binary)",
+     "measure": "Redacted 10K in year t + 1; and Unidentified Customer in year t + 1",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Failed Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "Completed Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "lagged dependent variable (Dep Var_t)",
+      "source": "EDGAR database; Compustat"
+     },
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "intangible assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "advertising expenditures",
+      "source": "Compustat"
+     },
+     {
+      "name": "Big N auditor indicator",
+      "source": "Compustat"
+     },
+     {
+      "name": "annual abnormal returns",
+      "source": ""
+     },
+     {
+      "name": "annual stock volatility",
+      "source": ""
+     },
+     {
+      "name": "analyst coverage",
+      "source": ""
+     },
+     {
+      "name": "equity issuance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Termination Fee (subsample only)",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "Same Ind Deal (subsample only)",
+      "source": "Bloomberg Terminal Database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "change in management earnings guidance",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "ChangeFailed Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "ChangeCompleted Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-level controls (firm size, ROA, leverage, market-to-book, intangible assets, advertising, Big N auditor, abnormal returns, stock volatility, analyst coverage, equity issuance)",
+      "source": "Compustat"
+     },
+     {
+      "name": "deal-level controls (subsample columns)",
+      "source": "Bloomberg Terminal Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Validation analysis - the role of NDAs (Martin v. Vulcan triple interaction)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "change in proprietary information disclosure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "ChangeFailed Deal x After Martin v. Vulcan x Delaware",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database; hand-coded from court decision date and state of incorporation"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-level controls (firm size, ROA, leverage, market-to-book, intangible assets, advertising, Big N auditor, abnormal returns, stock volatility, analyst coverage, equity issuance)",
+      "source": "Compustat"
+     },
+     {
+      "name": "constituent and two-way interaction terms (ChangeFailed Deal, Delaware, After Martin v. Vulcan and their pairwise interactions)",
+      "source": "Bloomberg Terminal Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panel A: Cross-sectional - counterparty in same industry",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-years involved in failed deals",
+    "dv": {
+     "name": "change in proprietary information disclosure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Same Ind Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-level controls",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panel B: Cross-sectional - low entry barrier",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-years involved in failed deals",
+    "dv": {
+     "name": "change in proprietary information disclosure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Low Entry Barrier",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-level controls",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panel C: Cross-sectional - counterparty's subsequent deal with firm's competitor",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-years involved in failed deals",
+    "dv": {
+     "name": "change in proprietary information disclosure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Deal between Counterparty and Same Ind Firm",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-level controls",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Quasi-natural experiment - DiD using announcement of FTC guidelines (Equation 3)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "firm-years involved in failed deals, sample period limited to 2015-2020 (3 years before and after treatment)",
+    "dv": {
+     "name": "change in proprietary information disclosure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x US Counterparty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     },
+     {
+      "name": "US Counterparty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bloomberg Terminal Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-level controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "deal-level controls",
+      "source": "Bloomberg Terminal Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Cross-sectional analysis - information demand (Panels A media coverage, B Neg Ret, C Stock Vol; fully interacted models)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "change in proprietary information disclosure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR database; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "ChangeFailed Deal x News Count",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Jeon et al. (2022)"
+     },
+     {
+      "name": "ChangeFailed Deal x Neg Ret",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "ChangeFailed Deal x Stock Vol",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-level controls and all other variables fully interacted",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "information transferred to a third party"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "disclosures",
+    "proprietary information"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": "parallel trends assumption",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

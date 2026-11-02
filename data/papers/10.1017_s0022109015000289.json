@@ -1,0 +1,698 @@
+{
+ "paper_id": "10.1017_s0022109015000289",
+ "title": "Director Histories and the Pattern of Acquisitions",
+ "journal": "JFQA",
+ "year": 2015,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "information asymmetry",
+  "market for corporate control",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "historical_interlock",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "historical_interlock",
+      "relation": "decreases",
+      "to": "search_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_costs",
+      "relation": "decreases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "historical_interlock",
+      "relation": "decreases",
+      "to": "downside_risk",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "downside_risk",
+      "relation": "decreases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "search_costs",
+    "downside_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "director_role_importance_at_target",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "historical_interlock",
+     "moderated_to": "acquisition_probability",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section V.B (Table 5, cols 4-6)"
+    },
+    {
+     "construct": "same_county_proximity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "historical_interlock",
+     "moderated_to": "acquisition_probability",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section V.D (Table 7)"
+    },
+    {
+     "construct": "director_ownership_stake_at_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "director_influence",
+     "moderated_from": "historical_interlock",
+     "moderated_to": "acquisition_probability",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section V.B (Table 5, col 3)"
+    },
+    {
+     "construct": "corporate_governance_quality_of_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "agency_conflict",
+     "moderated_from": "historical_interlock",
+     "moderated_to": "acquisition_probability",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section V.C (Table 6)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "psychological biases / social-connection bias",
+    "director-firm matching / spurious correlation"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reverse_historical_interlock",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (announcement returns)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "historical_interlock",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "psychological biases (director-connected deals perform worse)"
+   ]
+  },
+  {
+   "hypothesis": "Prediction (deal completion)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "historical_interlock",
+      "relation": "decreases",
+      "to": "deal_completion_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_completion_uncertainty",
+      "relation": "decreases",
+      "to": "deal_completion_probability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_completion_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (time to completion)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "historical_interlock",
+      "relation": "decreases",
+      "to": "due_diligence_reliance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "due_diligence_reliance",
+      "relation": "increases",
+      "to": "time_to_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "due_diligence_reliance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms spanning the 10 major SIC divisions)",
+  "country_region": "United States",
+  "time_period": "1996-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,401,955 ordered firm pairs (12,703,425 firm-pair-year observations; ~6,952 thousand firm-pair observations used in the main logit after the relative-size restriction)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P's Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson's SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IRRC Corporate Takeover Defenses Database (Gompers, Ishii, and Metrick (2003) governance index)",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "ordered (i,j) firm pairs in same major 10-category SIC division, 1996-2006, ~6,952 thousand firm-pair-year observations",
+    "dv": {
+     "name": "acquisition indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson's SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "contemporaneous interlock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative size (ratio of acquirer-to-target total assets)",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "relative sales-to-assets ratio",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "relative market-to-book ratio",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "same 4-digit SIC industry indicator",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "same county dummy",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry (major 10-category SIC division) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson's SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "reverse historical interlock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "contemporaneous interlock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative size",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "relative sales-to-assets ratio",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "relative market-to-book ratio",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "same 4-digit SIC industry indicator",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "same county dummy",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Mergers and Director Characteristics",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson's SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock x Executive/Insider/High ownership (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "historical interlock x Executive/Insider/Former employee (target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full vector of controls (relative size, relative sales-to-assets, relative market-to-book, same 4-digit SIC, same county)",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "contemporaneous interlock",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Historical Interlocks and Corporate Governance",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "governance data available only for years 1998, 2000, 2002, 2004, 2006; values projected forward into missing years",
+    "dv": {
+     "name": "acquisition indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson's SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock x governance provisions (duties, contract, care)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Corporate Takeover Defenses Database"
+     },
+     {
+      "name": "historical interlock x G-index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Corporate Takeover Defenses Database"
+     },
+     {
+      "name": "historical interlock x control-share / supermajority",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Corporate Takeover Defenses Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full vector of controls (relative size, relative sales-to-assets, relative market-to-book, same 4-digit SIC, same county)",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "governance term entering alone",
+      "source": "IRRC Corporate Takeover Defenses Database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson's SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock x same county dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "contemporaneous interlock x same county dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC Directors Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full vector of controls (relative size, relative sales-to-assets, relative market-to-book, same 4-digit SIC, same county)",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry (major 10-category SIC division) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Column 1 - Deal Outcomes: Announcement Returns",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "all announced mergers where acquirer and target are both in IRRC and have required Compustat balance sheet items (not restricted to same major SIC division); N = 750",
+    "dv": {
+     "name": "cumulative announcement returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock",
+      "measure": "H_ijt historical interlock indicator",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "contemporaneous interlock",
+      "measure": "I_ijt contemporaneous interlock indicator",
+      "source": "IRRC Directors Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "transaction value (in logarithms)",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "cash (majority cash transaction indicator)",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "unsolicited deal indicator",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Column 2 - Deal Outcomes: Deal Completion (Success)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "announced mergers with acquirer and target in IRRC and required Compustat items; N = 750",
+    "dv": {
+     "name": "deal success indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson's SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock",
+      "measure": "H_ijt historical interlock indicator",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "contemporaneous interlock",
+      "measure": "I_ijt contemporaneous interlock indicator",
+      "source": "IRRC Directors Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative size",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "transaction value (in logarithms)",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "cash (majority cash transaction indicator)",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "unsolicited deal indicator",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Column 3 - Deal Outcomes: Time to Completion",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "time to completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson's SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "historical interlock",
+      "measure": "H_ijt historical interlock indicator",
+      "source": "IRRC Directors Database"
+     },
+     {
+      "name": "contemporaneous interlock",
+      "measure": "I_ijt contemporaneous interlock indicator",
+      "source": "IRRC Directors Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative size",
+      "source": "S&P's Compustat"
+     },
+     {
+      "name": "transaction value (in logarithms)",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "cash (majority cash transaction indicator)",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "unsolicited deal indicator",
+      "source": "Thomson's SDC Platinum database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "acquirers",
+    "director histories",
+    "share prices of merger targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

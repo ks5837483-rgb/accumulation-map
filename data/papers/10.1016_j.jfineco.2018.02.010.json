@@ -1,0 +1,411 @@
+{
+ "paper_id": "10.1016_j.jfineco.2018.02.010",
+ "title": "Bid anticipation, information revelation, and merger gains",
+ "journal": "JFE",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "neoclassical theory of mergers and acquisitions",
+  "information economics",
+  "search and matching theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "acquirer_size_effect",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_size",
+      "relation": "decreases",
+      "to": "revelation_effect",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "revelation_effect",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "revelation_effect"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "agency cost theory and hubris theory"
+   ]
+  },
+  {
+   "hypothesis": "acquirer_predictability",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "return_on_assets",
+      "relation": "increases",
+      "to": "seed_constraint",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "seed_constraint",
+      "relation": "increases",
+      "to": "acquirer_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "seed_constraint"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded acquirers and targets)",
+  "country_region": "United States",
+  "time_period": "1980-2012",
+  "sample_description": "U.S. M&A bids from Thomson Reuters SDC Platinum merged with the CRSP/Compustat merged data set; both acquirer and target U.S. publicly traded firms; deals classified as mergers (not tender offers or block trades); acquirer seeks more than 50% of target shares to gain control and holds less than 50% beforehand; deal value exceeds one million dollars",
+  "sample_size": "7185 bids (6050 successful, 1135 failed)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP/Compustat merged data set (stock returns)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP/Compustat merged data set (accounting information)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Manually collected bid-termination reasons (endogenous vs. exogenous failure classification, from Factiva, LexisNexis, Google news, and SDC Platinum deal synopsis/history)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Parameter estimates (Simulated Method of Moments, SMM)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "exogenously failed bids (deals failing for reasons outside the control of the two firms) provide the cleanest identification, since exogenous bid failure reveals no new information and the drop in market value reflects only the lost merger gains",
+    "sample": "7185 bids (6050 successful, 1135 failed), 1980-2012; failed-bid subsamples used for identification: 143 exogenously failed, 334 endogenously failed",
+    "dv": {
+     "name": "empirical moments matched in SMM",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC Platinum; CRSP/Compustat merged data set"
+    },
+    "key_ivs": [
+     {
+      "name": "Search cost (C)",
+      "measure": "search cost parameter estimated via SMM",
+      "source": "structural model estimate"
+     },
+     {
+      "name": "Acquirer's share of merger gains / bargaining power (theta)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "structural model estimate"
+     },
+     {
+      "name": "Arrival rate of random matching (lambda)",
+      "measure": "arrival rate of random matching between potential acquirers and targets",
+      "source": "structural model estimate"
+     },
+     {
+      "name": "Long-run mean of seeds (s-bar)",
+      "measure": "long-run mean of seeds",
+      "source": "structural model estimate"
+     },
+     {
+      "name": "Persistence of seeds (rho_s)",
+      "measure": "persistence of seeds",
+      "source": "structural model estimate"
+     },
+     {
+      "name": "Volatility of shocks to seeds (sigma_s)",
+      "measure": "standard deviation of shocks to seeds",
+      "source": "structural model estimate"
+     },
+     {
+      "name": "Persistence of productivity (rho_z)",
+      "measure": "persistence of productivity",
+      "source": "structural model estimate"
+     },
+     {
+      "name": "Volatility of shocks to productivity (sigma_z)",
+      "measure": "standard deviation of shocks to productivity",
+      "source": "structural model estimate"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Discount factor beta fixed to 0.9",
+      "source": ""
+     },
+     {
+      "name": "Concavity of production function alpha fixed to 0.7",
+      "source": ""
+     },
+     {
+      "name": "Capital depreciation rate set to 0.15",
+      "source": ""
+     },
+     {
+      "name": "Probability of exogenous bid termination iota (set to number of exogenously terminated bids divided by total number of bids)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Long-run average productivity z-bar normalized to zero",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "empirical moments vs model-implied moments",
+     "measure": "14 moments compared row-by-row (empirical estimate, simulated value, std. err., t-stat testing empirical = simulated); Panel B reports the chi-square/J-test of over-identifying restrictions (eight parameters estimated using 14 moments; J-test p-value = 9.32%)",
+     "source": "Thomson Reuters SDC Platinum; CRSP/Compustat merged data set"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 4 (Panels A-C): Model-implied decomposition of announcement returns into merger gain and revelation effect; variance decompositions",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "announcement returns of acquirers and targets",
+     "measure": "model-implied three-day announcement returns decomposed into merger gain and revelation effect (Panel A); variance of announcement returns decomposed into Var(merger gain), Var(revelation), 2Cov (Panel B); revelation-effect variance decomposed into s_Rev, z_Rev, and cross term (Panel C)",
+     "source": "estimated structural model (matched to CRSP three-day CAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger gain",
+      "measure": "model-implied unexpected merger gain component of announcement return",
+      "source": "structural model"
+     },
+     {
+      "name": "Revelation effect",
+      "measure": "model-implied revelation effect (news about the firm's stand-alone value revealed at announcement)",
+      "source": "structural model"
+     },
+     {
+      "name": "Shocks to seeds (s) vs. shocks to productivity (z)",
+      "measure": "revelation-effect variance attributed to shocks to s (s_Rev), shocks to z (z_Rev), and their cross-effect",
+      "source": "structural model"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel D: Spillover effect - model (-0.19%) vs. data test using matched standalone firms' three-day CAR",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "matched standalone firms (same-industry peers not in any M&A during [-1,1] years) around bid announcements",
+    "dv": {
+     "name": "spillover effect",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/Compustat merged data set"
+    },
+    "key_ivs": [
+     {
+      "name": "Being a matched standalone peer around a bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP/Compustat merged data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "size (matching characteristic)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "book-to-market (matching characteristic)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "pre-acquisition return (matching characteristic)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A: Acquirer size effect (announcement returns of large vs. small acquirers, model vs. data)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "acquirers split into top vs. bottom size terciles",
+    "dv": {
+     "name": "acquirer announcement return",
+     "measure": "average announcement return by acquirer size group, decomposed into merger gain and revelation effect (model), compared to data",
+     "source": "estimated structural model; data three-day CAR (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer size group",
+      "measure": "large acquirer group = acquirers with size in the top tercile; small acquirer group = bottom tercile",
+      "source": "CRSP/Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel B: Predictability of M&As (predictive regression of acquirer/target dummy on ROA and size)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "model-simulated panel data of firms and actual data (R-squared reported for acquirer and target regressions)",
+    "dv": {
+     "name": "acquirer or target dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC Platinum; CRSP/Compustat (model-simulated panel and actual data)"
+    },
+    "key_ivs": [
+     {
+      "name": "Normalized ROA at t-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Size at t-1",
+      "measure": "the firm's size at period t-1",
+      "source": "CRSP/Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 5.1 / Robustness: re-estimation including hubris motive and agency costs",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "baseline estimation sample augmented with hubris moments (first moment 143 obs; moments 2-4 22 obs)",
+    "dv": {
+     "name": "empirical moments including hubristic-acquisition moments",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC Platinum; CRSP/Compustat merged data set"
+    },
+    "key_ivs": [
+     {
+      "name": "Hubris parameter (eta) and hubris threshold (m)",
+      "measure": "eta estimated jointly via SMM; m calibrated to 1.68 standard deviations above the mean of z and s",
+      "source": "structural model estimate / calibration"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "model"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "M&A transactions",
+    "misvaluation"
+   ],
+   "mechanism_named": "misvaluation",
+   "proposed_edge": {
+    "from": "misvaluation",
+    "relation": "affects",
+    "to": "M&A transactions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "predictability of M&As",
+    "M&As"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "factors outside my model",
+    "relation": "affects",
+    "to": "predictability of M&As"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "baseline model estimation",
+    "hubris motive",
+    "agency costs"
+   ],
+   "mechanism_named": "hubris motive",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "stationarity",
+    "motives to trade",
+    "industry’s life-cycle"
+   ],
+   "mechanism_named": "industry’s\nlife-cycle",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

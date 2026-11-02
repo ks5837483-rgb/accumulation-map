@@ -1,0 +1,891 @@
+{
+ "paper_id": "10.1287_orsc.1120.0811",
+ "title": "The Persistent Effect of Geographic Distance in Acquisition Target Selection",
+ "journal": "ORSC",
+ "year": 2013,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "spatial decision-making theory",
+  "organizational search",
+  "experiential learning",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "increases",
+      "to": "search_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_difficulty",
+      "relation": "decreases",
+      "to": "acquisition_match",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_difficulty"
+   ],
+   "moderators": [
+    {
+     "construct": "acquisition_relatedness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "search_difficulty",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_match",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "prior_acquisition_distance",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "search_difficulty",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_match",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3A"
+    },
+    {
+     "construct": "acquirer_is_subsidiary",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "vicarious_learning",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_match",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3C"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H3B",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_acquisition_in_region",
+      "relation": "increases",
+      "to": "contextual_knowledge",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "contextual_knowledge",
+      "relation": "increases",
+      "to": "acquisition_match",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "contextual_knowledge"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "U.S. chemical manufacturing (chemical manufacturers, NAICS subfields including basic chemicals; resin, synthetic rubber and artificial fibers; pesticide, fertilizer, and other agricultural chemical; pharmaceutical and medicine; paint, coating, and adhesive; soap, cleaning and toilet preparation compounds; printing ink, explosives, photographic film)",
+  "country_region": "United States (domestic acquisitions by U.S. firms)",
+  "time_period": "1980-2003",
+  "sample_description": "2,070 domestic acquisition announcements by 767 U.S. chemical manufacturing firms founded after 1979; acquirers identified from the SDC database using 2007 NAICS codes of their primary industry subfield",
+  "sample_size": "2,070 acquisitions (767 acquiring firms); 12,421 dyad observations in the WESML models"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva publications database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Census Bureau (website and 2002 Economic Census; MSA/micropolitan designations)",
+    "category": "census_gov",
+    "kind": "government_public"
+   },
+   {
+    "name": "Company websites, directories (Medical and Healthcare Marketplace Guide), and real estate websites (manual zip code and founding-date collection)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5, Column (1) - Main effects (H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database (zip codes manually corrected via company websites, directories, U.S. Census Bureau, real estate websites)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies (7 subfields)",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquirer size (log of assets)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is urban",
+      "source": "U.S. Census Bureau (MSA/micropolitan)"
+     },
+     {
+      "name": "Acquirer is public",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior canceled acquisitions",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer geographic centrality",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     },
+     {
+      "name": "Target is urban",
+      "source": "U.S. Census Bureau"
+     },
+     {
+      "name": "Target is public",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (2) - Relatedness interaction (H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition is related",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Acquisition distance x Acquisition is related",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies (7 subfields)",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquirer size (log of assets)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is urban",
+      "source": "U.S. Census Bureau (MSA/micropolitan)"
+     },
+     {
+      "name": "Acquirer is public",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition in state",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer geographic centrality",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (3) - Direct experience interaction (H3A)",
+    "hypotheses": [
+     "H3A"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Prior acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies (7 subfields)",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquirer size (log of assets)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is urban",
+      "source": "U.S. Census Bureau (MSA/micropolitan)"
+     },
+     {
+      "name": "Acquirer is public",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition in state",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer geographic centrality",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (4) - Contextual experience interaction (H3B)",
+    "hypotheses": [
+     "H3B"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition in state",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Prior acquisition in state",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies (7 subfields)",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquirer size (log of assets)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is urban",
+      "source": "U.S. Census Bureau (MSA/micropolitan)"
+     },
+     {
+      "name": "Acquirer is public",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer geographic centrality",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (5) - Vicarious experience: acquirer is parent (H3C)",
+    "hypotheses": [
+     "H3C"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is parent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Acquirer is parent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies (7 subfields)",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquirer size (log of assets)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is urban",
+      "source": "U.S. Census Bureau (MSA/micropolitan)"
+     },
+     {
+      "name": "Acquirer is public",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition in state",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer geographic centrality",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (6) - Vicarious experience: acquirer is subsidiary (H3C)",
+    "hypotheses": [
+     "H3C"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is subsidiary",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Acquirer is subsidiary",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies (7 subfields)",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquirer size (log of assets)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is urban",
+      "source": "U.S. Census Bureau (MSA/micropolitan)"
+     },
+     {
+      "name": "Acquirer is public",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition in state",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer geographic centrality",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (7) - All interactions (H2, H3A, H3B, H3C)",
+    "hypotheses": [
+     "H2",
+     "H3A",
+     "H3B",
+     "H3C"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Acquisition is related",
+      "measure": "interaction term between relatedness and acquisition distance (H2)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Prior acquisition distance",
+      "measure": "interaction of prior acquisition distance with acquisition distance (H3A)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Prior acquisition in state",
+      "measure": "interaction of prior acquisition in state with acquisition distance (H3B)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Acquirer is parent / subsidiary",
+      "measure": "interactions of parent/subsidiary status with acquisition distance (H3C)",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies (7 subfields)",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquirer size (log of assets)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer is urban",
+      "source": "U.S. Census Bureau (MSA/micropolitan)"
+     },
+     {
+      "name": "Acquirer is public",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquirer geographic centrality",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Corollary tests (general experience: prior acquisitions, canceled acquisitions, age, size, geographic centrality, year)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance x Number of prior acquisitions",
+      "measure": "interaction of number of prior acquisitions with acquisition distance (general experience factor)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Prior canceled acquisitions",
+      "measure": "interaction of prior canceled acquisitions with acquisition distance",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Acquirer age",
+      "measure": "interaction of acquirer age with acquisition distance",
+      "source": "Company websites / Factiva publications database"
+     },
+     {
+      "name": "Acquisition distance x Acquirer size",
+      "measure": "interaction of acquirer size with acquisition distance",
+      "source": "SDC database"
+     },
+     {
+      "name": "Acquisition distance x Acquirer geographic centrality",
+      "measure": "interaction of acquirer geographic centrality with acquisition distance",
+      "source": "Hand-collected target-pool locations"
+     },
+     {
+      "name": "Acquisition distance x Year of acquisition",
+      "measure": "interaction of year of acquisition with acquisition distance",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry subfield dummies",
+      "source": "SDC database (2007 NAICS)"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "SDC database"
+     },
+     {
+      "name": "Presence of parents or subsidiaries",
+      "source": "SDC database"
+     },
+     {
+      "name": "Prior acquisitions in state",
+      "source": "SDC database"
+     },
+     {
+      "name": "Target in similar city",
+      "source": "SDC database"
+     },
+     {
+      "name": "Target is urban",
+      "source": "U.S. Census Bureau"
+     },
+     {
+      "name": "Target is public",
+      "source": "SDC database"
+     }
+    ]
+   },
+   {
+    "label": "Table A.1 - Comparing alternative estimators (robustness: logit, conditional logit, random effects logit, logit corrected for nonindependence, WESML)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquisition (target selection / dyad match)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquisition is related",
+      "source": "SDC database"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "SDC database"
+     },
+     {
+      "name": "Full control set (as in main models)",
+      "source": "SDC database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "acquirer size",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "spatial choice",
+    "international acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "effects of space",
+    "national, political, cultural, and technological boundaries"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "distance",
+    "target search",
+    "postacquisition integration",
+    "target selection"
+   ],
+   "mechanism_named": "target search and postacquisition integration",
+   "proposed_edge": {
+    "from": "distance",
+    "relation": "affects",
+    "to": "target selection"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "asymmetric information",
+    "decision making"
+   ],
+   "mechanism_named": "asymmetric information",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "acquisitions by older firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "firm-level goals and resources",
+    "spatial factors",
+    "business strategy"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "firm-level goals and resources",
+    "on_path": [
+     "spatial factors",
+     "business strategy"
+    ]
+   }
+  }
+ ]
+}

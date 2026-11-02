@@ -1,0 +1,823 @@
+{
+ "paper_id": "10.2308/accr-52444",
+ "title": "The Information Provision in the Corporate Acquisition Process: Why Target Firms Obtain Multiple Fairness Opinions",
+ "journal": "AR",
+ "year": 2019,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "conflicts of interest",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "buyout_deal",
+      "relation": "increases",
+      "to": "management_investment_bank_conflicts_of_interest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "management_investment_bank_conflicts_of_interest",
+      "relation": "increases",
+      "to": "use_of_second_fairness_opinion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "stapled_financing_deal",
+      "relation": "increases",
+      "to": "management_investment_bank_conflicts_of_interest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "management_investment_bank_conflicts_of_interest",
+      "relation": "increases",
+      "to": "use_of_second_fairness_opinion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "management_investment_bank_conflicts_of_interest"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bidder type (private versus public bidder) rather than conflicts of interest drives the use of a second opinion"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_complexity",
+      "relation": "increases",
+      "to": "need_for_independent_valuation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "need_for_independent_valuation",
+      "relation": "increases",
+      "to": "use_of_second_fairness_opinion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "need_for_independent_valuation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "use_of_second_fairness_opinion",
+      "relation": "decreases",
+      "to": "disagreement_over_exchange_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disagreement_over_exchange_value",
+      "relation": "decreases",
+      "to": "target_shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disagreement_over_exchange_value"
+   ],
+   "moderators": [
+    {
+     "construct": "buyout_deal",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "management_investment_bank_conflicts_of_interest",
+     "moderated_from": "use_of_second_fairness_opinion",
+     "moderated_to": "target_shareholder_wealth",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3"
+    },
+    {
+     "construct": "stapled_financing_deal",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "management_investment_bank_conflicts_of_interest",
+     "moderated_from": "use_of_second_fairness_opinion",
+     "moderated_to": "target_shareholder_wealth",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "managerial opportunism / entrenchment: a second opinion is 'banker protection' that benefits managers rather than shareholders"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "use_of_second_fairness_opinion",
+      "relation": "increases",
+      "to": "informativeness_of_fairness_opinion_valuation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informativeness_of_fairness_opinion_valuation",
+      "relation": "increases",
+      "to": "target_shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informativeness_of_fairness_opinion_valuation"
+   ],
+   "moderators": [
+    {
+     "construct": "earnings_quality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "informativeness_of_fairness_opinion_valuation",
+     "moderated_from": "use_of_second_fairness_opinion",
+     "moderated_to": "target_shareholder_wealth",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sarbanes_oxley_act",
+      "relation": "increases",
+      "to": "scrutiny_of_conflicts_of_interest_and_reporting_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "scrutiny_of_conflicts_of_interest_and_reporting_quality",
+      "relation": "increases",
+      "to": "target_shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "scrutiny_of_conflicts_of_interest_and_reporting_quality"
+   ],
+   "moderators": [
+    {
+     "construct": "post_sox_period",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "scrutiny_of_conflicts_of_interest_and_reporting_quality",
+     "moderated_from": "use_of_second_fairness_opinion",
+     "moderated_to": "target_shareholder_wealth",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. takeover deals with public targets, spanning the Fama-French 48 industries)",
+  "country_region": "United States",
+  "time_period": "1996-2013",
+  "sample_description": "Hand-collected sample of U.S. M&A deals with public targets (deal value >=$20 million, mergers/acquisitions that are complete or withdrawn, >=50% shares sought, target price >=$5 the day prior to announcement, deals with SEC filings on EDGAR, at least one target-side fairness opinion); drawn from SDC, merged with CRSP for returns, with fairness-opinion and stapled-financing information hand-collected from SEC merger documents",
+  "sample_size": "3,144 deals"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC (Securities Data Company / Thomson) M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Merger documents / SEC filings on EDGAR (hand-collected fairness-opinion, stapled-financing, and valuation-method data)",
+    "category": "sec_edgar_filings",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFO (use of multiple fairness opinions)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Merger documents / SEC filings on EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Buyout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Stapled Financing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Merger documents / SEC filings on EDGAR"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Target Size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Compete",
+      "source": "SDC"
+     },
+     {
+      "name": "Rumor",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Private (Non-Buyout)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (target cumulative abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "MFO (use of multiple opinions)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Merger documents / SEC filings on EDGAR"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Buyout",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Target Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Rumor",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Stapled Financing",
+      "source": "Merger documents"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Compete",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects (Fama-French 1997 48 industries)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Two-Stage Regression Analysis (2SLS) - first stage MFO, second stage CAR (Models 1-4)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "MFO Demand: the percent of same-industry (Fama-French 1997 48-industry) transactions with multiple opinions announced within one year, excluding the focal transaction (concurrent demand for multiple opinions)",
+    "sample": "",
+    "dv": {
+     "name": "CAR (target announcement returns)",
+     "measure": "Second-stage: CAR (-2,+2), CAR (-10,+10), CAR (-63,+126) regressed on the fitted value of MFO; first-stage DV is MFO",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "MFO (fitted value of use of multiple opinions)",
+      "measure": "Predicted value of the endogenous MFO dummy obtained from the first-stage Probit regression",
+      "source": "Merger documents / SEC filings on EDGAR"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Buyout",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Target Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Rumor",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Stapled Financing",
+      "source": "Merger documents"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Compete",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (target cumulative abnormal returns)",
+     "measure": "CAR (-2,+2), CAR (-10,+10), CAR (-63,+126), abnormal returns net of CRSP value-weighted market index, day 0 = public merger announcement date",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "MFO x Buyout (interaction)",
+      "measure": "Interaction of MFO dummy with Buyout dummy",
+      "source": "Merger documents, SDC"
+     },
+     {
+      "name": "MFO x Stapled Financing (interaction)",
+      "measure": "Interaction of MFO dummy with Stapled Financing dummy",
+      "source": "Merger documents / SEC filings on EDGAR"
+     },
+     {
+      "name": "MFO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Merger documents / SEC filings on EDGAR"
+     },
+     {
+      "name": "Buyout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Stapled Financing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Merger documents / SEC filings on EDGAR"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Rumor",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Compete",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Fairness Opinion Valuation Methods (descriptive counts of valuation analyses)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "64 transactions with multiple opinions announced 2009-2013 (131 fairness opinions, 476 valuation analyses)",
+    "dv": {
+     "name": "Valuation methods used in fairness opinions",
+     "measure": "Count of valuation analyses performed per transaction by method type: public company multiples, precedent transactions, discounted cash flows, leveraged buyout, premium analysis, net asset valuation, PV of future stock price, sum of parts (mean, max, min, total)",
+     "source": "Merger documents / SEC filings on EDGAR"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Models 1-3 (EQ DD) n=2,259; Models 4-6 (EQ Modified DD) n=2,087 (reduced by earnings-quality data availability)",
+    "dv": {
+     "name": "CAR (target announcement returns)",
+     "measure": "CAR (-2,+2), CAR (-10,+10), CAR (-63,+126), abnormal returns net of CRSP value-weighted market index",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "MFO x EQ (DD) (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "EQ (DD)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "MFO x EQ (Modified DD) (interaction)",
+      "measure": "Interaction of MFO dummy with EQ (Modified DD), the DD measure modified in McNichols (2002), adding change in sales and level of PPE",
+      "source": "Compustat"
+     },
+     {
+      "name": "EQ (Modified DD)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "MFO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Merger documents / SEC filings on EDGAR"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Buyout",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Target Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stapled Financing",
+      "source": "Merger documents"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Compete",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Rumor",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act of 2002 (sample partitioned into pre-SOX 1996-2002 and post-SOX 2003-2013 subsamples)",
+    "sample": "Pre-SOX 1996-2002 (n=1,657) vs Post-SOX 2003-2013 (n=1,357)",
+    "dv": {
+     "name": "CAR (target announcement returns)",
+     "measure": "CAR (-2,+2), CAR (-10,+10), CAR (-63,+126), abnormal returns net of CRSP value-weighted market index",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "MFO x Buyout (interaction)",
+      "measure": "Interaction of MFO dummy with Buyout dummy, estimated separately in pre-SOX and post-SOX subsamples",
+      "source": "Merger documents, SDC"
+     },
+     {
+      "name": "MFO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Merger documents / SEC filings on EDGAR"
+     },
+     {
+      "name": "Buyout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC, Merger documents"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stapled Financing",
+      "source": "Merger documents"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Compete",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Rumor",
+      "source": "SDC, Merger documents"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "use of multiple opinions",
+    "target announcement returns",
+    "instrument"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "second opinion",
+    "wealth effect",
+    "buyout",
+    "stapled financing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "second opinion",
+    "economic benefits",
+    "buyout deals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

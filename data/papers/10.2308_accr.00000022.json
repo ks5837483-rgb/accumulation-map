@@ -1,0 +1,541 @@
+{
+ "paper_id": "10.2308_accr.00000022",
+ "title": "Voluntary Disclosure to Influence Investor Reactions to Merger Announcements: An Examination of Conference Calls",
+ "journal": "AR",
+ "year": 2011,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "voluntary disclosure theory",
+  "signaling theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "adverse_signal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_signal",
+      "relation": "increases",
+      "to": "conference_call_use",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_signal"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_size",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "conference_call_use",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "conference_call_use",
+      "relation": "increases",
+      "to": "forward_looking_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "forward_looking_information",
+      "relation": "increases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "conference_call_use",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "forward_looking_information",
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity / self-selection: acquirers hold conference calls when they anticipate an unfavorable reaction, biasing against finding a benefit"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "conference_call_use",
+      "relation": "increases",
+      "to": "stock_price_hyping",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stock_price_hyping",
+      "relation": "decreases",
+      "to": "post_announcement_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "stock_price_hyping"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "conference_call_use",
+      "relation": "increases",
+      "to": "opportunistic_earnings_management",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "opportunistic_earnings_management",
+      "relation": "increases",
+      "to": "pre_announcement_abnormal_accruals",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "opportunistic_earnings_management"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirers that inflate accruals avoid conference calls (to escape analyst scrutiny) rather than conference-call use reflecting less earnings management"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. bidders; controls for high-tech, regulated, and financial industries by two-digit SIC)",
+  "country_region": "United States (domestic U.S. mergers and acquisitions)",
+  "time_period": "2002-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,228 transactions"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP/Compustat merged database",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (quarterly data items)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva (and bidders' websites) for merger announcement press releases",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Full sample of 1,228 merger transactions (2002-2006)",
+    "dv": {
+     "name": "CCALL",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected press releases (Factiva / bidder website)"
+    },
+    "key_ivs": [
+     {
+      "name": "PCTSTOCK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "DEALRATIO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / CRSP-Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "INDR (bidder and target same two-digit SIC code)",
+      "source": "SDC"
+     },
+     {
+      "name": "PRIV (target is a private company)",
+      "source": "SDC"
+     },
+     {
+      "name": "FOREIGN (target is a foreign company)",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "LOGSIZE (log of market value of equity at beginning of fiscal year)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "BM (book value of equity to market value of equity)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "LOGANALYSTS (log of number of analysts issuing earnings forecasts)",
+      "source": ""
+     },
+     {
+      "name": "INSTOWN (percentage of acquirer's stock held by institutional investors)",
+      "source": ""
+     },
+     {
+      "name": "REGULATED (two-digit SIC 48 or 49)",
+      "source": "Compustat"
+     },
+     {
+      "name": "HITECH (two-digit SIC 28, 35, 36, 73, or 87)",
+      "source": "Compustat"
+     },
+     {
+      "name": "FINANCIAL (two-digit SIC 60-69)",
+      "source": "Compustat"
+     },
+     {
+      "name": "yearly fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "n=653 conference call vs. n=471 non-conference call (excludes announcements coinciding with earnings announcements)",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CCALL (conference call vs. non-conference call)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected press releases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "Industry membership (high-tech, regulated, financial) and announcement year indicators used as instrumental variables in the selection model (Equation 1)",
+    "sample": "n=1,045 (Heckman outcome model; excludes merger announcements coinciding with earnings announcements)",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CCALL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected press releases"
+     },
+     {
+      "name": "PCTSTOCK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "PCTSTOCK x PRIV interaction",
+      "measure": "interaction of PCTSTOCK with target private status (based on Chang 1998)",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRIV",
+      "source": "SDC"
+     },
+     {
+      "name": "DEALRATIO",
+      "source": "SDC / CRSP-Compustat"
+     },
+     {
+      "name": "INDR",
+      "source": "SDC"
+     },
+     {
+      "name": "FOREIGN",
+      "source": "SDC"
+     },
+     {
+      "name": "LOGSIZE",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "BM",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "LOGANALYST",
+      "source": ""
+     },
+     {
+      "name": "INSTOWN",
+      "source": ""
+     },
+     {
+      "name": "LAMBDA x CCALL (inverse Mills ratio interacted with CCALL)",
+      "source": ""
+     },
+     {
+      "name": "LAMBDA x (1-CCALL) (inverse Mills ratio for non-conference-call transactions)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel C - Post-Merger Announcement Long-Term Abnormal Returns (LTRETURN, Equation 2 re-estimated)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "Industry membership and announcement year indicators used as instruments in the selection model (Equation 1)",
+    "sample": "Matched-firm long-term (one-year) returns sample; Equation 2 re-estimated with LTRETURN replacing CAR",
+    "dv": {
+     "name": "LTRETURN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (matched-firm buy-and-hold)"
+    },
+    "key_ivs": [
+     {
+      "name": "CCALL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected press releases"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PCTSTOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "PRIV",
+      "source": "SDC"
+     },
+     {
+      "name": "PCTSTOCK x PRIV interaction",
+      "source": "SDC"
+     },
+     {
+      "name": "DEALRATIO",
+      "source": "SDC / CRSP-Compustat"
+     },
+     {
+      "name": "INDR",
+      "source": "SDC"
+     },
+     {
+      "name": "FOREIGN",
+      "source": "SDC"
+     },
+     {
+      "name": "LOGSIZE",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "BM",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "LOGANALYST",
+      "source": ""
+     },
+     {
+      "name": "INSTOWN",
+      "source": ""
+     },
+     {
+      "name": "LAMBDA x CCALL",
+      "source": ""
+     },
+     {
+      "name": "LAMBDA x (1-CCALL)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Stock-for-stock acquirers subsample (50%+ stock consideration)",
+    "dv": {
+     "name": "Abnormal accruals (performance-matched)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat (quarterly data items)"
+    },
+    "key_ivs": [
+     {
+      "name": "CCALL (conference call vs. non-conference call, within stock-for-stock acquirers)",
+      "measure": "conference call held on day of or day after merger announcement; stock-for-stock = 50 percent or more of consideration in acquirer stock",
+      "source": "Hand-collected press releases; SDC (payment)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Level of analyst coverage (high vs. low, conditioning dimension)",
+      "source": ""
+     },
+     {
+      "name": "Industry (two-digit SIC) and calendar-quarter performance matching embedded in accrual measure",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Matched-Sample (treatment-control pairs) Comparison of CAR: Panel A (cash), Panel B (stock-for-stock)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CCALL (conference call transaction vs. matched control transaction)",
+      "measure": "conference call held on day of or day after merger announcement",
+      "source": "Hand-collected press releases"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Estimated probability of conference call use from Equation 1 (within 20%) - matching criterion",
+      "source": ""
+     },
+     {
+      "name": "Percentage of stock within 5% (matching criterion)",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal ratio difference less than 20% (matching criterion)",
+      "source": "SDC / CRSP-Compustat"
+     },
+     {
+      "name": "Acquirer size difference less than 20% (matching criterion)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Transaction within one year (matching criterion)",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

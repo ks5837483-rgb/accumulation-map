@@ -1,0 +1,403 @@
+{
+ "paper_id": "10.1057_palgrave.jibs.8490200",
+ "title": "Ownership-Based Entry Mode Strategies and International Performance",
+ "journal": "JIBS",
+ "year": 1994,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "eclectic theory",
+  "transaction cost economics",
+  "contingency theory",
+  "information economics",
+  "resource-based view"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "new_venture_entry_mode",
+      "relation": "decreases",
+      "to": "resource_procurement_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "resource_procurement_costs",
+      "relation": "decreases",
+      "to": "international_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "new_venture_entry_mode",
+      "relation": "decreases",
+      "to": "organizational_control_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "organizational_control_costs",
+      "relation": "decreases",
+      "to": "international_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "resource_procurement_costs",
+    "organizational_control_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "entry age — the initial startup/adjustment period depresses an entry's performance independently of the entry mode chosen",
+    "organizational size differences across the three entry-mode subsamples"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_entry_mode",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "international_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "entry age — the initial startup/adjustment period depresses an entry's performance independently of the entry mode chosen"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "Japanese acquirers/parents entering the North American market (Canada and United States)",
+  "time_period": "1991",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "321 entries (166 new ventures, 79 joint ventures, 76 acquisitions)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "survey",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all 321 market entries (all ages)",
+    "dv": {
+     "name": "financial performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Toyo Keizai [1992] survey"
+    },
+    "key_ivs": [
+     {
+      "name": "entity age after entry",
+      "measure": "age of the entity (years) after market entry, used as the x variable",
+      "source": "Toyo Keizai [1992] survey"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all 321 market entries (all ages); used to locate the ~2-year stabilization breakpoint",
+    "dv": {
+     "name": "financial performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Toyo Keizai [1992] survey"
+    },
+    "key_ivs": [
+     {
+      "name": "entity age after entry",
+      "measure": "age (years) as the x variable; piece-wise linear regression searches for the breakpoint on the age axis at which the performance-age relationship stabilizes",
+      "source": "Toyo Keizai [1992] survey"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "entities over two years old (startup/adjustment period excluded)",
+    "dv": {
+     "name": "financial performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Toyo Keizai [1992] survey"
+    },
+    "key_ivs": [
+     {
+      "name": "ownership-based entry mode",
+      "measure": "categorical: new venture (one parent that built and operationally equipped the plant), joint venture (more than one parent, plant built and equipped by these parents), acquisition (one parent, plant and equipment purchased from the previous owner)",
+      "source": "Toyo Keizai [1992] survey"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Note 4 - full-database robustness test (entities of all ages, including <2 years)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "financial performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Toyo Keizai [1992] survey"
+    },
+    "key_ivs": [
+     {
+      "name": "ownership-based entry mode",
+      "measure": "categorical: new venture, joint venture, acquisition",
+      "source": "Toyo Keizai [1992] survey"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "performance variance"
+   ],
+   "mechanism_named": "the theoretical arguments that cause performance variance",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "other contingent influences",
+    "within-mode differences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "other contingent influences",
+    "on_path": [
+     "entry mode",
+     "performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "strategic intent",
+    "size",
+    "organizational characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "entry mode",
+     "performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "barriers to entry and exit"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "entry mode",
+     "performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "firm, industry, and country-specific variables"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "entry mode",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "these variables",
+    "on_path": [
+     "entry mode",
+     "performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "organizational and industry-specific variables"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "organizational and industry-specific variables",
+    "on_path": [
+     "entry mode",
+     "performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "size",
+    "bounded rationality",
+    "core or inimitable resources",
+    "entry mode selection process"
+   ],
+   "mechanism_named": "bounded rationality",
+   "proposed_edge": {
+    "from": "size",
+    "relation": "affects",
+    "to": "entry mode selection process"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "japanese parents",
+    "north american market"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "locational advantages",
+    "entry mode"
+   ],
+   "mechanism_named": "locational advantages",
+   "proposed_edge": {
+    "from": "locational advantages",
+    "relation": "affects",
+    "to": "entry mode"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "organizational cultures",
+    "location-specific effect"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "culture-specific factors",
+    "transaction costs",
+    "entry modes",
+    "core or non-inimitable resources"
+   ],
+   "mechanism_named": "transaction costs",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "performance measures",
+    "contingency effects",
+    "international entry mode selection process"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

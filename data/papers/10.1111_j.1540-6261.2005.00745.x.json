@@ -1,0 +1,435 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2005.00745.x",
+ "title": "Wealth Destruction on a Massive Scale? A Study of Acquiring‐Firm Returns in the Recent Merger Wave",
+ "journal": "JF",
+ "year": 2005,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "overvaluation / market-driven acquisitions theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "high_firm_valuation",
+      "relation": "increases",
+      "to": "managerial_discretion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_discretion",
+      "relation": "decreases",
+      "to": "acquisition_shareholder_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_discretion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "high-valuation firms make poor acquisitions because high valuation itself mechanically predicts poor returns (rather than because valuation enables managerial discretion)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "large_loss_deal_announcement",
+      "relation": "increases",
+      "to": "market_reassessment_of_stand_alone_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_reassessment_of_stand_alone_value",
+      "relation": "decreases",
+      "to": "long_run_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_reassessment_of_stand_alone_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the market simply overreacted to the large loss deal announcements (which would predict high, not poor, subsequent returns)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "high_firm_valuation",
+      "relation": "increases",
+      "to": "overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overvaluation",
+      "relation": "decreases",
+      "to": "acquisition_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "equity_financed_acquisition",
+      "relation": "increases",
+      "to": "signal_of_overpriced_equity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_overpriced_equity",
+      "relation": "decreases",
+      "to": "acquisition_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_of_overpriced_equity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "U.S. acquirers and U.S. targets",
+  "time_period": "1980-2001",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "12,023 acquisitions (1980-2001 full sample)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Gross Domestic Product Deflator",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Aggregate dollar return of acquiring-firm shareholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "CAR(−1,+1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Abnormal dollar synergy gain",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Aggregate dollar return of large loss deals",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Large loss deal indicator",
+     "measure": "acquisitions with a dollar return loss of at least $1 billion (2001 dollars), compared against other deals",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Transaction value",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Days to completion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Liquidity index (target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; COMPUSTAT"
+     },
+     {
+      "name": "Cash in payment",
+      "measure": "Cash ... in the consideration paid is from SDC",
+      "source": "SDC"
+     },
+     {
+      "name": "Equity in payment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Same industry deals",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash holdings",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Tobin's q",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Book-to-market (BM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Operating cash flow (OCF)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "models (1)-(4) whole sample estimated 1980–1997 (N=6,596/6,584); models (5)-(6) restricted to public-target acquisitions with premium data (N=770)",
+    "dv": {
+     "name": "Bidder 3-day announcement return",
+     "measure": "bidder 3-day announcement returns (3-day cumulative abnormal return measured using the market model)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Tobin's q",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "BM(equity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Debt/assets (market) leverage",
+      "measure": "the market value of leverage",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Liquidity index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; COMPUSTAT"
+     },
+     {
+      "name": "Small (size dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Private target",
+      "measure": "dummy for acquisition of a private-firm target",
+      "source": "SDC"
+     },
+     {
+      "name": "Public target",
+      "measure": "dummy for acquisition of a public-firm target",
+      "source": "SDC"
+     },
+     {
+      "name": "Same industry",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "One-digit main industry classification dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Abnormal returns of acquisitions around the large loss deal",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Pre- vs post-large-loss-deal period",
+      "measure": "24 months before versus 24 months after the first large loss deal, split by organizational form of assets acquired and mode of financing",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Logistic regression of large loss deal on valuation peak (not reported)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "all acquisitions made by the firms in the large loss deal sample",
+    "dv": {
+     "name": "Large loss deal indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Valuation peak dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "overreaction",
+    "overvaluation",
+    "subsequent returns"
+   ],
+   "mechanism_named": "overvaluation",
+   "proposed_edge": {
+    "from": "overvaluation",
+    "relation": "decreases",
+    "to": "subsequent returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "large loss deal firms",
+    "overvaluation"
+   ],
+   "mechanism_named": "overvaluation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

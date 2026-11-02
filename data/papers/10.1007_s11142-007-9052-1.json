@@ -1,0 +1,779 @@
+{
+ "paper_id": "10.1007_s11142-007-9052-1",
+ "title": "Does acquirer cash level predict post-acquisition returns?",
+ "journal": "RAS",
+ "year": 2007,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "limited investor attention",
+  "free cash flow theory",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_cash",
+      "relation": "increases",
+      "to": "stock_price_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stock_price_overvaluation",
+      "relation": "decreases",
+      "to": "post_acquisition_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "stock_price_overvaluation"
+   ],
+   "moderators": [
+    {
+     "construct": "diversification",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "value_destructive_investment",
+     "moderated_from": "acquirer_cash",
+     "moderated_to": "post_acquisition_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_div"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the return predictability is attributable to all firms with high cash balances generally, not to the acquisition",
+    "the negative cash-returns relation is driven by diversifying acquisitions"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_cash",
+      "relation": "increases",
+      "to": "value_destructive_investment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_destructive_investment",
+      "relation": "decreases",
+      "to": "post_acquisition_rnoa",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_destructive_investment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "all high-cash firms underperform, not just acquirers"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (excludes financial services (SIC 6xxx) and utility (SIC 49xx) acquirers)",
+  "country_region": "United States",
+  "time_period": "1972-2003",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CCH Capital Changes Reporter (CCH)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Public-media search engines (Wall Street Journal Index, Dow Jones Online / Factiva, Lexis-Nexis)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Univariate analysis (descriptive stats, mean comparisons, correlations)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-acquisition returns (two-year BHAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash level",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "high-cash acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 Panel A - Announcement period returns (robust regression)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "announcement period returns",
+     "measure": "announcement period peer-portfolio-adjusted abnormal returns",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash",
+      "measure": "cash and short-term investments scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer cash x diversification interaction",
+      "measure": "interaction variable for acquirer cash and diversification (target in different industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "different industry dummy (diversification)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "GICS"
+     }
+    ],
+    "controls": [
+     {
+      "name": "stock (form of consideration)",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC / Public-media search engines"
+     },
+     {
+      "name": "small acquirer dummy",
+      "source": "CRSP"
+     },
+     {
+      "name": "relative target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "announcement momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "net operating assets (NOA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": "GICS"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel B - Interim period returns (robust regression)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "interim period returns",
+     "measure": "interim period peer-portfolio-adjusted abnormal returns",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash",
+      "measure": "cash and short-term investments scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer cash x diversification interaction",
+      "measure": "interaction between acquirer cash and diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "different industry dummy (diversification)",
+      "measure": "acquirer/target first four GICS digits differ",
+      "source": "GICS"
+     }
+    ],
+    "controls": [
+     {
+      "name": "stock (form of consideration)",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC / Public-media search engines"
+     },
+     {
+      "name": "small acquirer dummy",
+      "source": "CRSP"
+     },
+     {
+      "name": "relative target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "announcement momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "net operating assets (NOA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": "GICS"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel C - Combined (announcement + interim) period returns (robust regression)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "combined period returns",
+     "measure": "combined announcement and interim period peer-portfolio-adjusted abnormal returns",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash",
+      "measure": "cash and short-term investments scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer cash x diversification interaction",
+      "measure": "interaction between acquirer cash and diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "different industry dummy (diversification)",
+      "measure": "acquirer/target first four GICS digits differ",
+      "source": "GICS"
+     }
+    ],
+    "controls": [
+     {
+      "name": "stock (form of consideration)",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC / Public-media search engines"
+     },
+     {
+      "name": "small acquirer dummy",
+      "source": "CRSP"
+     },
+     {
+      "name": "relative target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "announcement momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "net operating assets (NOA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": "GICS"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel D - Post-acquisition returns (robust regression)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-acquisition returns (two-year BHAR)",
+     "measure": "buy-and-hold abnormal returns (BHARs) for the acquirer minus buy-and-hold returns for the peer portfolio over the same period",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash",
+      "measure": "cash and short-term investments scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer cash x diversification interaction",
+      "measure": "interaction between acquirer cash and diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "different industry dummy (diversification)",
+      "measure": "acquirer/target first four GICS digits differ",
+      "source": "GICS"
+     }
+    ],
+    "controls": [
+     {
+      "name": "stock (form of consideration)",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC / Public-media search engines"
+     },
+     {
+      "name": "small acquirer dummy",
+      "source": "CRSP"
+     },
+     {
+      "name": "relative target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "announcement momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "net operating assets (NOA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": "GICS"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 - Fama-MacBeth monthly regressions, post-acquisition period",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "408 monthly cross-sectional regressions (Jan 1972 - Dec 2005); only the 388 months with 5 or more acquirers used",
+    "dv": {
+     "name": "abnormal monthly acquirer returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash",
+      "measure": "cash and short-term investments scaled by total assets",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "different industry dummy",
+      "source": "GICS"
+     },
+     {
+      "name": "stock",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC / Public-media search engines"
+     },
+     {
+      "name": "relative target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "small acquirer dummy",
+      "source": "CRSP"
+     },
+     {
+      "name": "announcement momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "net operating assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "industry dummies",
+      "source": "GICS"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A - Post-acquisition return on net operating assets (robust regression)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-acquisition acquirer RNOA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash",
+      "measure": "cash and short-term investments scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer cash x different industry",
+      "measure": "interaction of acquirer cash and different industry (diversification)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "different industry dummy",
+      "source": "GICS"
+     },
+     {
+      "name": "stock",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC / Public-media search engines"
+     },
+     {
+      "name": "relative target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "small acquirer dummy",
+      "source": "CRSP"
+     },
+     {
+      "name": "announcement momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "net operating assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "prior RNOA (average RNOA for years -2 and -1)",
+      "source": "Compustat"
+     },
+     {
+      "name": "prior matching portfolio RNOA",
+      "source": "Compustat"
+     },
+     {
+      "name": "post matching portfolio RNOA",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B - Post-acquisition return on net operating assets (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-acquisition acquirer RNOA",
+     "measure": "average return on net operating assets (RNOA) for years +1 and +2 following the acquisition, defined following Nissim and Penman (2001), winsorized at 4%",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer cash",
+      "measure": "cash and short-term investments scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer cash x different industry",
+      "measure": "interaction of acquirer cash and different industry (diversification)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "different industry dummy",
+      "source": "GICS"
+     },
+     {
+      "name": "stock",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC / Public-media search engines"
+     },
+     {
+      "name": "relative target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "small acquirer dummy",
+      "source": "CRSP"
+     },
+     {
+      "name": "announcement momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "net operating assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "prior RNOA (average RNOA for years -2 and -1)",
+      "source": "Compustat"
+     },
+     {
+      "name": "prior matching portfolio RNOA",
+      "source": "Compustat"
+     },
+     {
+      "name": "post matching portfolio RNOA",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Returns to investment strategies (Panels A/B/C; event-time, bootstrapped significance)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "mean abnormal returns to investment strategy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "high-cash acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "form of consideration (stock)",
+      "measure": "stock-consideration vs nonstock acquisitions",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "nature of acquisition (hostile/friendly)",
+      "measure": "friendly vs hostile acquisitions",
+      "source": "SDC / Public-media search engines"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Calendar-time results (calendar-time portfolio returns and Jensen's Alpha)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "average monthly abnormal returns / Jensen's Alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "high-cash acquirer",
+      "measure": "high-cash firms identified using 80th-percentile cutoffs (prior year)",
+      "source": "Compustat"
+     },
+     {
+      "name": "form of consideration (stock)",
+      "measure": "stock-consideration vs nonstock acquisitions",
+      "source": "SDC / CCH"
+     },
+     {
+      "name": "nature of acquisition (hostile/friendly)",
+      "measure": "friendly vs hostile acquisitions",
+      "source": "SDC / Public-media search engines"
+     }
+    ],
+    "controls": [
+     {
+      "name": "three Fama-French factors (Jensen's Alpha regression)",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "jensen’s alpha",
+    "significance"
+   ],
+   "mechanism_named": "Jensen’s Alpha approach",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "acquisitions",
+    "public firms",
+    "minority interest",
+    "private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "announcement period returns",
+    "economic implications of the acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "market responds to new information",
+    "longer-term returns",
+    "short-term response"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "new information",
+    "relation": "affects",
+    "to": "longer-term returns"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,405 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1986.tb04532.x",
+ "title": "The Timing and Substance of Divestiture Announcements: Individual, Simultaneous and Cumulative Effects",
+ "journal": "JF",
+ "year": 1986,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "efficient markets hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "transaction_price_disclosure",
+      "relation": "increases",
+      "to": "positive_signal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "positive_signal",
+      "relation": "increases",
+      "to": "announcement_day_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "transaction_price_disclosure",
+      "relation": "increases",
+      "to": "perceived_net_present_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_net_present_value",
+      "relation": "increases",
+      "to": "announcement_day_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "positive_signal",
+    "perceived_net_present_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_size_of_divestiture",
+      "relation": "increases",
+      "to": "perceived_net_present_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_net_present_value",
+      "relation": "increases",
+      "to": "announcement_day_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_net_present_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "transaction_price_disclosure",
+      "relation": "increases",
+      "to": "probability_of_success",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_success",
+      "relation": "increases",
+      "to": "announcement_day_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_success"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "transaction price merely proxies for the probability that the divestiture will be successfully completed, rather than conveying NPV information"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "subsequent_price_disclosure",
+      "relation": "decreases",
+      "to": "unexpected_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unexpected_information",
+      "relation": "increases",
+      "to": "announcement_day_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unexpected_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (major voluntary corporate sell-offs/divestitures)",
+  "country_region": "United States",
+  "time_period": "1970-1979",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "215 sell-offs (202 non-overlapping for the initial-announcement average effect)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP Daily Returns Tape",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Announcements of Mergers and Acquisitions",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal Index (WSJI)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Industrials",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The New York Times Index (NYTI)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The F and S Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "subsequent financial statements",
+    "category": "other",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Section II — Average effect of a sell-off (full-sample event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "announcement-period abnormal return",
+     "measure": "three-day summed announcement day prediction error SAR = sum_{k=-2}^{0} ARk, where daily abnormal return eit = Rit - (ai + biRmt)",
+     "source": "CRSP Daily Returns Tape"
+    },
+    "key_ivs": [
+     {
+      "name": "voluntary sell-off announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table I — Announcement day SAR by price disclosure (price vs no-price subsamples)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "full sample split into price (91 firms) and no-price (124 firms) subsamples",
+    "dv": {
+     "name": "announcement day excess return (SAR)",
+     "measure": "three-day summed announcement day prediction error SAR",
+     "source": "CRSP Daily Returns Tape"
+    },
+    "key_ivs": [
+     {
+      "name": "price disclosure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II — CARs by relative size of the sell-off (Panel A price group, Panel B no-price group)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Panel A price group; Panel B no-price group with 46 ultimately known relative sizes",
+    "dv": {
+     "name": "announcement day prediction error (SAR/CAR)",
+     "measure": "summed announcement day prediction error for relative-size subgroups (<10%, 10-50%, >50%)",
+     "source": "CRSP Daily Returns Tape"
+    },
+    "key_ivs": [
+     {
+      "name": "relative size of the divestiture",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Moody's Industrials"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table III — Regression of announcement day residuals on relative size and price disclosure (Eqs 5-6)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Price2 (137 obs, firms with eventually known relative size); Price1 (91 firms initially announcing price)",
+    "dv": {
+     "name": "SAR (announcement day residual)",
+     "measure": "three-day summed announcement day prediction error SAR",
+     "source": "CRSP Daily Returns Tape"
+    },
+    "key_ivs": [
+     {
+      "name": "Size (relative size of the divestiture)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Moody's Industrials"
+     },
+     {
+      "name": "Price (price disclosure dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table IV — Regression adding signed-agreement dummy: SAR = Bo + B1Size + B2Price + B3Agreement",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Price2 (137 obs); Price1 (91 firms)",
+    "dv": {
+     "name": "SAR",
+     "measure": "three-day summed announcement day prediction error SAR",
+     "source": "CRSP Daily Returns Tape"
+    },
+    "key_ivs": [
+     {
+      "name": "Agreement (signed agreement dummy)",
+      "measure": "dummy variable for whether the announcement contains a signed agreement",
+      "source": "The Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size (relative size of the divestiture)",
+      "source": "Moody's Industrials"
+     },
+     {
+      "name": "Price (price disclosure dummy)",
+      "source": "The Wall Street Journal Index (WSJI)"
+     }
+    ]
+   },
+   {
+    "label": "Section IV — Cumulative effects (ACE) of initial announcement plus subsequent price disclosure",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "divesting firms ultimately announcing both the sell-off and the transaction price",
+    "dv": {
+     "name": "average cumulative effect (ACE)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Daily Returns Tape"
+    },
+    "key_ivs": [
+     {
+      "name": "timing of price disclosure (single vs. split announcement)",
+      "measure": "whether price is announced on the initial disclosure date versus spread over two announcements (initial announcement then delayed price disclosure)",
+      "source": "The Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "signed agreement",
+    "investor reaction"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "signed agreement",
+    "abnormal return"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "announcement day returns",
+    "size of the divestiture",
+    "price disclosure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "unspecified factors",
+    "relation": "affects",
+    "to": "announcement day returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "pre-announcement day returns",
+    "post-announcement day returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

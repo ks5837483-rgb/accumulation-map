@@ -1,0 +1,436 @@
+{
+ "paper_id": "10.1016_j.jfineco.2020.08.001",
+ "title": "The hidden costs of being public: Evidence from multinational firms operating in an emerging market",
+ "journal": "JFE",
+ "year": 2021,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "economics of crime",
+  "deterrence theory",
+  "adverse selection",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "listing_status",
+      "relation": "increases",
+      "to": "probability_of_being_detected",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_being_detected",
+      "relation": "increases",
+      "to": "compliance_with_regulation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_being_detected"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "size (larger firms get more regulatory attention, not listing status)",
+    "concentrated ownership",
+    "public visibility",
+    "tax and tariff minimization strategies"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "increase_in_regulation",
+      "relation": "increases",
+      "to": "differential_compliance_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "differential_compliance_cost",
+      "relation": "increases",
+      "to": "acquisition_of_listed_firms_by_private_firms",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "increase_in_regulation",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "acquisition_of_listed_firms_by_private_firms",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "differential_compliance_cost",
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "industry_exposure_to_regulation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "differential_compliance_cost",
+     "moderated_from": "increase_in_regulation",
+     "moderated_to": "acquisition_of_listed_firms_by_private_firms",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "global trends / factors other than differential compliance costs driving the M&A patterns",
+    "domicile of the acquirer (domestic vs foreign firm) driving the results"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "Argentina (an emerging market)",
+  "time_period": "2000-2015 overall (import/customs transactions January 2010-September 2014; M&A transactions 2000-2015, extended to 2017 for the aftermath test)",
+  "sample_description": "Two main samples. (1) Import transactions from a novel Argentine customs database (matched to exporters via WIPO Global Brand Database) for Harmonized System codes 84.07, 84.08, 84.09, imported by MNC affiliates and independent domestic distributors; observations restricted to importers with complete importer/brand/model info and at least 1000 units imported over 2010-2014, dropping ARS-denominated transactions. (2) M&A transactions from Bureau Van Dijk's Zephyr database where an MNC's Argentine subsidiary was sold, excluding regulated industries (utilities SIC 4900-4949 and financial institutions SIC 6000-6999).",
+  "sample_size": "~850,000 import transactions and 73 importers (20 listed MNCs and 13 private MNCs) for the compliance analysis; 1,492 M&A transactions (subsample of 762 with acquirer stake >=95%) for the M&A analysis"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Manual internet search coding of firm relatedness and parent-company ownership (listed vs. private)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Zephyr Database (Bureau van Dijk)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bureau Van Dijk's Orbis database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Central Bank of Argentina (repatriation of earnings and royalties by industry; added value)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Transfer mispricing mechanism (main DiD)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Rule A5264 (2012 Argentine regulation banning transfers of funds abroad / profits repatriation)",
+    "sample": "",
+    "dv": {
+     "name": "Import price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Argentine customs database"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Argentine customs database (transaction date) / Rule A5264 date"
+     },
+     {
+      "name": "Related",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Manual internet search coding of firm relatedness; WIPO Global Brand Database"
+     },
+     {
+      "name": "Post x Related",
+      "measure": "interaction of Post and Related (differential price increase for related importers after the regulation)",
+      "source": "Argentine customs database; Manual internet search coding of firm relatedness"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product fixed effects",
+      "source": "Argentine customs database"
+     },
+     {
+      "name": "Month fixed effects (Jan-Dec)",
+      "source": "Argentine customs database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 - Transfer mispricing mechanism: size (comparable-size listed subsample)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Rule A5264 (2012 Argentine ban on profits repatriation)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Import price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Argentine customs database"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x Related",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Argentine customs database; Manual internet search coding of firm relatedness"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product fixed effects",
+      "source": "Argentine customs database"
+     },
+     {
+      "name": "Month fixed effects (Jan-Dec)",
+      "source": "Argentine customs database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Transfer mispricing mechanism: concentrated ownership",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Rule A5264 (2012 Argentine ban on profits repatriation)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Import price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Argentine customs database"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x Related",
+      "measure": "interaction of Post and Related for listed firms with concentrated ownership",
+      "source": "Argentine customs database; Manual internet search coding of firm relatedness"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product fixed effects",
+      "source": "Argentine customs database"
+     },
+     {
+      "name": "Month fixed effects (Jan-Dec)",
+      "source": "Argentine customs database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Transfer mispricing mechanism: visibility",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Rule A5264 (2012 Argentine ban on profits repatriation)",
+    "sample": "listed firms split by visibility (Factiva mentions in 2011, above vs below median)",
+    "dv": {
+     "name": "Import price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Argentine customs database"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x Related",
+      "measure": "interaction of Post and Related for listed firms with low visibility",
+      "source": "Argentine customs database; Manual internet search coding of firm relatedness"
+     },
+     {
+      "name": "Visibility",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product fixed effects",
+      "source": "Argentine customs database"
+     },
+     {
+      "name": "Month fixed effects (Jan-Dec)",
+      "source": "Argentine customs database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Rule A5264 (2012 Argentine ban on profits repatriation)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Import price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Argentine customs database"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x Related",
+      "measure": "interaction of Post and Related, with tax/tariff shocks absorbed",
+      "source": "Argentine customs database; Manual internet search coding of firm relatedness"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product fixed effects",
+      "source": "Argentine customs database"
+     },
+     {
+      "name": "Month fixed effects (Jan-Dec)",
+      "source": "Argentine customs database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "hand-collected corporate tax rate changes"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Rule A5264 (2012 Argentine ban on profits repatriation); lifting of the ban in December 2015 (Macri) used in aftermath test",
+    "sample": "288 industry-MNC type-year observations (two MNC types x nine industries [top and bottom exposure quartiles] x 16 years, 2000-2015); columns 3-4 restrict to M&A transactions where the acquirer's final stake is >= 95%",
+    "dv": {
+     "name": "Likelihood of selling",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Zephyr Database (Bureau van Dijk); Bureau Van Dijk's Orbis database (count of MNCs per industry)"
+    },
+    "key_ivs": [
+     {
+      "name": "HighExposure x Post x Listed (triple interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Zephyr Database; Central Bank of Argentina (exposure); Orbis"
+     },
+     {
+      "name": "HighExposure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Central Bank of Argentina"
+     },
+     {
+      "name": "Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Rule A5264 date"
+     },
+     {
+      "name": "Listed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Manual internet search coding of parent-company ownership"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Standard errors clustered at the industry level",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "firm-level characteristics",
+    "compliance",
+    "concentrated ownership",
+    "visibility"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "interaction of firm-level characteristics",
+    "on_path": [
+     "firm-level characteristics",
+     "compliance"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "transfers",
+    "listed firms",
+    "private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "lifting of the regulation",
+    "M&A transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "business-unfriendly regulations",
+    "welfare",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "business-unfriendly regulations",
+    "relation": "affects",
+    "to": "welfare"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

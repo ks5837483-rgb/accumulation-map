@@ -1,0 +1,1151 @@
+{
+ "paper_id": "10.1007_s11142-018-9472-0",
+ "title": "Auditor monitoring and verification in financial contracts: evidence from earnouts and SFAS 141(R)",
+ "journal": "RAS",
+ "year": 2018,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "financial contracting theory",
+  "information economics",
+  "audit quality theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "auditor_monitoring_and_verification",
+      "relation": "decreases",
+      "to": "opportunistic_accounting_manipulation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "opportunistic_accounting_manipulation",
+      "relation": "decreases",
+      "to": "accounting_based_earnout_use",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "opportunistic_accounting_manipulation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "results are driven by acquiring-firm characteristics correlated with the choice of a Big Four auditor (auditor self-selection / endogeneity)",
+    "a general earnout/auditor effect unrelated to accounting-based performance measurement",
+    "changes in macroeconomic conditions (the credit crisis)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "auditor_monitoring_and_verification",
+      "relation": "decreases",
+      "to": "intentional_accounting_manipulation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "intentional_accounting_manipulation",
+      "relation": "decreases",
+      "to": "contingent_consideration_proportion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "auditor_monitoring_and_verification",
+      "relation": "decreases",
+      "to": "unintentional_measurement_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unintentional_measurement_error",
+      "relation": "decreases",
+      "to": "contingent_consideration_proportion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "intentional_accounting_manipulation",
+    "unintentional_measurement_error"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "results are driven by acquiring-firm characteristics correlated with the choice of a Big Four auditor (auditor self-selection / endogeneity)",
+    "a general earnout/auditor effect unrelated to accounting-based performance measurement",
+    "changes in macroeconomic conditions (the credit crisis)"
+   ]
+  },
+  {
+   "hypothesis": "P_arb",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "big_four_arbitrator_provision",
+      "relation": "decreases",
+      "to": "measurement_problems",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "measurement_problems",
+      "relation": "decreases",
+      "to": "accounting_based_earnout_use",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "measurement_problems"
+   ],
+   "moderators": [
+    {
+     "construct": "sfas_141r_adoption",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "measurement_problems",
+     "moderated_from": "big_four_arbitrator_provision",
+     "moderated_to": "accounting_based_earnout_use",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P_arb"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P_stock",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "auditor_monitoring_and_verification",
+      "relation": "decreases",
+      "to": "contracting_and_implementation_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "contracting_and_implementation_costs",
+      "relation": "decreases",
+      "to": "contingent_consideration_relative_to_stock",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "contracting_and_implementation_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_car",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "auditor_monitoring_and_verification",
+      "relation": "decreases",
+      "to": "agency_and_measurement_problems",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_and_measurement_problems",
+      "relation": "decreases",
+      "to": "acquirer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_and_measurement_problems"
+   ],
+   "moderators": [
+    {
+     "construct": "private_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "agency_and_measurement_problems",
+     "moderated_from": "auditor_monitoring_and_verification",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P_car"
+    },
+    {
+     "construct": "subsidiary_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "agency_and_measurement_problems",
+     "moderated_from": "auditor_monitoring_and_verification",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P_car"
+    },
+    {
+     "construct": "target_industry_growth",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "auditor_monitoring_and_verification",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P_car"
+    },
+    {
+     "construct": "target_number_of_employees",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "agency_and_measurement_problems",
+     "moderated_from": "auditor_monitoring_and_verification",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P_car"
+    },
+    {
+     "construct": "audit_quality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "agency_and_measurement_problems",
+     "moderated_from": "auditor_monitoring_and_verification",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P_car"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a general earnout announcement effect not specific to accounting-based auditor monitoring"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A transactions across industries, targets classified by two-digit SIC codes)",
+  "country_region": "United States",
+  "time_period": "2007-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2015 transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum Mergers & Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Fundamentals Annual database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (daily CRSP value-weighted index; acquirer abnormal returns)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Acquisition agreements / earnout contracts (arbitration provisions hand-coded, e.g. arbitrator_big4)",
+    "category": "hand_collected",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Column (1): Likelihood of accounting-based earnouts (logit)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "2105 acquisitions completed 2007-2010 with nonmissing data (N=2015)",
+    "dv": {
+     "name": "accearnout",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Mergers & Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "post141R",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "big4auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "post141R*big4auditor",
+      "measure": "interaction of post141R with big4auditor (the difference-in-differences term of interest)",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative_size",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "M&A activity",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "premium",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "LIBOR",
+      "source": "market data"
+     },
+     {
+      "name": "TEDspread",
+      "source": "market data"
+     },
+     {
+      "name": "daily ret vol",
+      "source": "CRSP"
+     },
+     {
+      "name": "ln(assets)",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ATO",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "CR",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column (2): Magnitude of contingent consideration (OLS)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "excludes the 37 non-accounting-based earnout deals (N=1978)",
+    "dv": {
+     "name": "earnout_ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Mergers & Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "post141R",
+      "measure": "indicator coded one for deals completed by acquirers subject to SFAS 141(R) (fiscal years beginning after December 15, 2008)",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "big4auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "post141R*big4auditor",
+      "measure": "interaction of post141R with big4auditor",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative_size",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "M&A activity",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "premium",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "LIBOR",
+      "source": "market data"
+     },
+     {
+      "name": "TEDspread",
+      "source": "market data"
+     },
+     {
+      "name": "daily ret vol",
+      "source": "CRSP"
+     },
+     {
+      "name": "ln(assets)",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ATO",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "CR",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Column (1): Arbitration provisions and likelihood of accounting-based earnouts (logit)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "N=2015",
+    "dv": {
+     "name": "accearnout",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Mergers & Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "post141R",
+      "measure": "indicator coded one for deals subject to SFAS 141(R)",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "arbitrator_big4",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Acquisition agreements / earnout contracts (hand-coded)"
+     },
+     {
+      "name": "post141R*arbitrator_big4",
+      "measure": "interaction of post141R with arbitrator_big4",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative_size",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "M&A activity",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "premium",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "LIBOR",
+      "source": "market data"
+     },
+     {
+      "name": "TEDspread",
+      "source": "market data"
+     },
+     {
+      "name": "daily ret vol",
+      "source": "CRSP"
+     },
+     {
+      "name": "ln(assets)",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ATO",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "CR",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Column (2): Arbitration provisions and magnitude of contingent consideration (OLS)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "excludes non-accounting-based earnout deals (N=1978)",
+    "dv": {
+     "name": "earnout_ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Mergers & Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "post141R",
+      "measure": "indicator coded one for deals subject to SFAS 141(R)",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "arbitrator_big4",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Acquisition agreements / earnout contracts (hand-coded)"
+     },
+     {
+      "name": "post141R*arbitrator_big4",
+      "measure": "interaction of post141R with arbitrator_big4",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative_size",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "M&A activity",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "premium",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "LIBOR",
+      "source": "market data"
+     },
+     {
+      "name": "TEDspread",
+      "source": "market data"
+     },
+     {
+      "name": "daily ret vol",
+      "source": "CRSP"
+     },
+     {
+      "name": "ln(assets)",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ATO",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "CR",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (1): Contingent vs stock-based consideration, all deals (OLS, eq. 2a)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "earnout_stock_diff",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Mergers & Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "post141R",
+      "measure": "indicator coded one for deals subject to SFAS 141(R)",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "accearnout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "post141R*accearnout",
+      "measure": "interaction of post141R with accearnout",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative_size",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "M&A activity",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "premium",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "LIBOR",
+      "source": "market data"
+     },
+     {
+      "name": "TEDspread",
+      "source": "market data"
+     },
+     {
+      "name": "daily ret vol",
+      "source": "CRSP"
+     },
+     {
+      "name": "ln(assets)",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ATO",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "CR",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column (2): Contingent vs stock-based consideration, excluding non-accounting earnouts (OLS, eq. 2b)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "subsample excluding non-accounting-based earnouts (N=552)",
+    "dv": {
+     "name": "earnout_stock_diff",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Mergers & Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "post141R",
+      "measure": "indicator coded one for deals subject to SFAS 141(R)",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "big4auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "post141R*big4auditor",
+      "measure": "interaction of post141R with big4auditor",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative_size",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "M&A activity",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "premium",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "LIBOR",
+      "source": "market data"
+     },
+     {
+      "name": "TEDspread",
+      "source": "market data"
+     },
+     {
+      "name": "daily ret vol",
+      "source": "CRSP"
+     },
+     {
+      "name": "ln(assets)",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ATO",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "CR",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Acquiring-firm market reactions to earnout announcements before/after SFAS 141(R) (OLS, eq. 3)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "estimated separately before (N=689) and after (N=401) SFAS 141(R)",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "accearnout",
+      "measure": "indicator coded one if the deal includes an accounting-based earnout and zero otherwise",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "accearnout*private",
+      "measure": "interaction of accearnout with the private-target indicator",
+      "source": "constructed"
+     },
+     {
+      "name": "accearnout*subsidiary",
+      "measure": "interaction of accearnout with the subsidiary-target indicator",
+      "source": "constructed"
+     },
+     {
+      "name": "accearnout*MTB",
+      "measure": "interaction of accearnout with industry-median market-to-book",
+      "source": "constructed"
+     },
+     {
+      "name": "accearnout*#employees",
+      "measure": "interaction of accearnout with industry-median employees",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "M&A activity",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "premium",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "LIBOR",
+      "source": "market data"
+     },
+     {
+      "name": "TEDspread",
+      "source": "market data"
+     },
+     {
+      "name": "daily ret vol",
+      "source": "CRSP"
+     },
+     {
+      "name": "ln(assets)",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ATO",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "CR",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Acquiring-firm market reactions in post-SFAS 141(R) period partitioned by Big Four vs non-Big Four auditor (OLS)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "SFAS 141(R)",
+    "sample": "post-SFAS 141(R) deals, partitioned across acquiring firms with vs without a Big Four auditor",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "accearnout",
+      "measure": "indicator coded one if the deal includes an accounting-based earnout and zero otherwise",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "accearnout*private",
+      "measure": "interaction of accearnout with the private-target indicator",
+      "source": "constructed"
+     },
+     {
+      "name": "accearnout*subsidiary",
+      "measure": "interaction of accearnout with the subsidiary-target indicator",
+      "source": "constructed"
+     },
+     {
+      "name": "accearnout*MTB",
+      "measure": "interaction of accearnout with industry-median market-to-book",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "private",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "subsidiary",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "past deal volume",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "cross_industry",
+      "source": "SDC Platinum Mergers & Acquisitions database"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "#employees",
+      "source": "Compustat Fundamentals Annual database"
+     },
+     {
+      "name": "sd_returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "macroeconomic and acquirer characteristics controls",
+      "source": "Compustat Fundamentals Annual database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

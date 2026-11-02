@@ -1,0 +1,693 @@
+{
+ "paper_id": "10.1177_01492063241274284",
+ "title": "Internal Control Weakness and Corporate Divestitures",
+ "journal": "JOM",
+ "year": 2024,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "organizational complexity theory",
+  "impression management theory",
+  "organizational legitimacy theory",
+  "synergy and economies of scope perspective",
+  "transaction cost economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "internal_control_weakness_disclosure",
+      "relation": "increases",
+      "to": "motivation_to_remediate_internal_control_weakness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "motivation_to_remediate_internal_control_weakness",
+      "relation": "increases",
+      "to": "divestiture_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "internal_control_weakness_disclosure",
+      "relation": "increases",
+      "to": "reputation_and_legitimacy_threat",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reputation_and_legitimacy_threat",
+      "relation": "increases",
+      "to": "divestiture_activity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "motivation_to_remediate_internal_control_weakness",
+    "reputation_and_legitimacy_threat"
+   ],
+   "moderators": [
+    {
+     "construct": "newly_appointed_ceo",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "reputation_and_legitimacy_threat",
+     "moderated_from": "internal_control_weakness_disclosure",
+     "moderated_to": "divestiture_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "prevalence_of_internal_control_weakness_among_peers",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "reputation_and_legitimacy_threat",
+     "moderated_from": "internal_control_weakness_disclosure",
+     "moderated_to": "divestiture_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divestiture_following_internal_control_weakness_disclosure",
+      "relation": "increases",
+      "to": "perceived_proactive_remediation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_proactive_remediation",
+      "relation": "increases",
+      "to": "stock_market_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "divestiture_following_internal_control_weakness_disclosure",
+      "relation": "decreases",
+      "to": "motive_ambiguity",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "motive_ambiguity",
+      "relation": "decreases",
+      "to": "stock_market_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_proactive_remediation",
+    "motive_ambiguity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sample selection bias: firms that initiated divestitures may be systematically different from those that did not",
+    "non-randomness of ICW disclosure driven by omitted variables affecting both ICW and divestiture performance"
+   ]
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divestiture_following_internal_control_weakness_disclosure",
+      "relation": "decreases",
+      "to": "business_unit_synergy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "business_unit_synergy",
+      "relation": "increases",
+      "to": "core_business_sales_growth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "business_unit_synergy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sample selection bias: firms that initiated divestitures may be systematically different from those that did not",
+    "non-randomness of ICW disclosure driven by omitted variables affecting both ICW and divestiture performance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (S&P 1500 firms; industries by two-digit SIC codes)",
+  "country_region": "United States",
+  "time_period": "2003-2020",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Segment database",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "S&P 1500 firms, 2003-2020; 11,510 firm-year observations; firm fixed-effects Poisson",
+    "dv": {
+     "name": "number of divestitures",
+     "measure": "the number of divestitures in a given year (sell-offs, spin-offs, and liquidations); count variable",
+     "source": "Securities Data Corporation (SDC) Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "internal control weakness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "newly appointed CEO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "prevalence of ICW among peers",
+      "measure": "the ratio of peer firms (same two-digit SIC codes) disclosing ICWs in the given year",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin’s Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "number of acquisitions",
+      "source": "Securities Data Corporation (SDC) Platinum"
+     },
+     {
+      "name": "geographic diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "industry concentration (HHI)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Altman Z-score",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO duality",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO outsider",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option value",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "board size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "independent director ratio",
+      "source": "BoardEx"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "First-stage probit selection model (Heckman two-stage, Appendix B)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "likelihood of undertaking a divestiture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation (SDC) Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation (SDC) Platinum"
+     },
+     {
+      "name": "internal control weakness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "entropy-balancing matched sample of 4,958 divestiture deals; Heckman-corrected weighted OLS",
+    "dv": {
+     "name": "cumulative abnormal returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "divestiture following ICW disclosure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "vertical relatedness",
+      "source": ""
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin’s Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "geographic diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "CEO outsider",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO duality",
+      "source": "BoardEx"
+     },
+     {
+      "name": "newly appointed CEO",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "number of acquisitions",
+      "source": "Securities Data Corporation (SDC) Platinum"
+     },
+     {
+      "name": "board size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "independent director ratio",
+      "source": "BoardEx"
+     },
+     {
+      "name": "inverse Mills ratio",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H5"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "entropy-balancing matched sample; 1,694 divestitures with core-business segment sales data; Heckman-corrected weighted OLS",
+    "dv": {
+     "name": "increase in core business’s sales growth",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat Segment database"
+    },
+    "key_ivs": [
+     {
+      "name": "divestiture following ICW disclosure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "vertical relatedness",
+      "source": ""
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin’s Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "geographic diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "CEO outsider",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO duality",
+      "source": "BoardEx"
+     },
+     {
+      "name": "newly appointed CEO",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "number of acquisitions",
+      "source": "Securities Data Corporation (SDC) Platinum"
+     },
+     {
+      "name": "board size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "independent director ratio",
+      "source": "BoardEx"
+     },
+     {
+      "name": "inverse Mills ratio",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "firm's primary intent",
+    "post-divestiture performance"
+   ],
+   "mechanism_named": "impression management",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "firm's primary intent",
+    "on_path": [
+     "divestitures",
+     "post-divestiture performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "divestitures following mandatory icw disclosure",
+    "subsequent growth",
+    "investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "performance implications of divestitures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "disclosed icw",
+    "icw"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "types of firms",
+    "icw"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "types of firms",
+    "relation": "affects",
+    "to": "proactively take actions to address icw preemptively"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "internal control",
+    "strategic decisions",
+    "acquiring foreign targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "poor internal controls",
+    "relation": "decreases",
+    "to": "acquiring foreign targets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "heterogeneity of icw",
+    "organizational complexity",
+    "divestiture",
+    "icw"
+   ],
+   "mechanism_named": "organizational complexity",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "heterogeneity of icw",
+    "on_path": [
+     "divestiture",
+     "resolve icw"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "adoption of divestiture as a response strategy",
+    "icw disclosure",
+    "specific causes of that weakness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "specific causes of that weakness",
+    "on_path": [
+     "icw disclosure",
+     "adoption of divestiture as a response strategy"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "icw",
+    "regulatory pressures",
+    "strategic decisions and outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "firms' strategic decisions and outcomes"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,647 @@
+{
+ "paper_id": "10.1287_stsc.2023.0066",
+ "title": "Safeguarding Secrets, Shaping Acquisitions: Trade Secret Protection and the Role of Distance Between Acquirer and Target",
+ "journal": "SS",
+ "year": 2025,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "information asymmetry theory",
+  "adverse selection",
+  "real options theory",
+  "transaction cost economics",
+  "strategic factor markets theory",
+  "liability of foreignness"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "value_of_target_trade_secrets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_of_target_trade_secrets",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "decreases",
+      "to": "labor_market_hiring_of_key_employees",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "labor_market_hiring_of_key_employees",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_of_target_trade_secrets",
+    "labor_market_hiring_of_key_employees",
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "business combination laws (M&A moratorium) driving the acquisition effect rather than the UTSA",
+    "UTSA enactment timing being endogenous / spurious trends rather than causal"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_foreignness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "strengthened_trade_secret_protection",
+     "moderated_to": "acquisition_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "foreign acquirers being disproportionately affected by business combination laws rather than by trade-secret-driven information asymmetries"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "minority_stake_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "majority_stake_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "minority_stake_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_foreignness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "strengthened_trade_secret_protection",
+     "moderated_to": "minority_stake_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "minority_stake_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "geographic_distance",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "strengthened_trade_secret_protection",
+     "moderated_to": "minority_stake_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "minority_stake_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "institutional_distance",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "strengthened_trade_secret_protection",
+     "moderated_to": "minority_stake_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "stepwise_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "strengthened_trade_secret_protection",
+      "relation": "increases",
+      "to": "value_of_growth_options",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "value_of_growth_options",
+      "relation": "increases",
+      "to": "stepwise_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "value_of_growth_options"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_foreignness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "strengthened_trade_secret_protection",
+     "moderated_to": "stepwise_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P6"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (all industries)",
+  "country_region": "U.S. target firms; domestic (U.S.) and foreign acquirers",
+  "time_period": "1980-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "23,391 firm-year observations (2,412 firms; 626 acquisitions)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson One Banker of Thomson Reuters",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Kogan et al. (2017) patent data",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Png (2017b) UTSA state enactment timing",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Garmaise (2011) and Ertimur et al. (2018) noncompete (CNC) enforceability index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Klasa et al. (2018) state court recognition of the IDD",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Giroud and Mueller (2010) and Chen et al. (2021) business combination laws",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bureau of Economic Analysis (state GDP growth rate)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "World Bank's six governance indicators (WGI)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - Fixed Effects Stacked Regressions (main, post-UTSA only)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Uniform Trade Secrets Act (UTSA) staggered state-level adoption",
+    "sample": "23,391 firm-year observations of publicly listed U.S. target firms, 1980-2010, coarsened-exact-matched, 13-year stacked window",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-UTSA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Png (2017b)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Uniform Trade Secrets Act (UTSA) staggered state-level adoption",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (7 binary types)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-UTSA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Png (2017b)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth (percentage change of sales from previous period)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D dummy (indicator for missing/zero R&D expenditures)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Patents (patent stock over R&D expenditures, 15% depreciation)",
+      "source": "Kogan et al. (2017)"
+     },
+     {
+      "name": "Citations (citation stock over patent stock, 15% depreciation)",
+      "source": "Kogan et al. (2017)"
+     },
+     {
+      "name": "Copatents (copatent stock over patent stock)",
+      "source": "Kogan et al. (2017)"
+     },
+     {
+      "name": "IDD (indicator for state recognition of inevitable disclosure doctrine)",
+      "source": "Klasa et al. (2018)"
+     },
+     {
+      "name": "CNC (state-year noncompete enforceability index, 0-12)",
+      "source": "Garmaise (2011); Ertimur et al. (2018)"
+     },
+     {
+      "name": "Business combination laws (indicator for state adoption)",
+      "source": "Giroud and Mueller (2010); Chen et al. (2021)"
+     },
+     {
+      "name": "GDP growth (state GDP growth rate)",
+      "source": "Bureau of Economic Analysis"
+     }
+    ]
+   },
+   {
+    "label": "Parallel Trends event-study (Online Figures A1-A7, Online Table A5)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "Uniform Trade Secrets Act (UTSA) staggered state-level adoption",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition (binary DVs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker"
+    },
+    "key_ivs": [
+     {
+      "name": "Year dummies relative to UTSA enactment (distance-to-event indicators)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Png (2017b)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm control variables (full set)",
+      "source": "Compustat; Kogan et al. (2017)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Domestic Acquisitions Sample Split I (acquirer-target same vs different state)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Uniform Trade Secrets Act (UTSA) staggered state-level adoption",
+    "sample": "Domestic acquisitions subsample, split by acquirer-target same state vs different state",
+    "dv": {
+     "name": "Domestic acquisition (any / majority / minority)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-UTSA (moderated by geographic distance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Png (2017b); Compustat (headquarters state)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-level controls (log total assets, sales growth, R&D/assets, R&D dummy, patent stock/R&D, citation stock/patent stock, copatent stock/patent stock)",
+      "source": "Compustat; Kogan et al. (2017)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Foreign Acquisitions Sample Split I (institutional distance below vs above median)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Uniform Trade Secrets Act (UTSA) staggered state-level adoption",
+    "sample": "Foreign acquisitions subsample, split by institutional distance below vs above the median",
+    "dv": {
+     "name": "Foreign acquisition (any / majority / minority)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-UTSA (moderated by institutional distance)",
+      "measure": "Post-UTSA dummy estimated in subsamples split by institutional distance between acquirer's nation and the United States (mean distance across World Bank's six governance indicators, following Lahiri et al. 2014), less than vs more than the sample median",
+      "source": "World Bank's six governance indicators (WGI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-level controls (log total assets, sales growth, R&D/assets, R&D dummy, patent stock/R&D, citation stock/patent stock, copatent stock/patent stock)",
+      "source": "Compustat; Kogan et al. (2017)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Stepwise acquisitions descriptive analysis (real options reasoning)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "Uniform Trade Secrets Act (UTSA) staggered state-level adoption",
+    "sample": "3,607 acquisitions in the acquisition database",
+    "dv": {
+     "name": "Stepwise acquisition (share of acquisitions with initial stake <50% and repeated purchases of same target)",
+     "measure": "Percentage of acquisitions that are stepwise (same acquirer-target, initial stake less than 50%), split by domestic/foreign and pre/post-UTSA",
+     "source": "Thomson One Banker"
+    },
+    "key_ivs": [
+     {
+      "name": "Pre- vs post-UTSA period",
+      "measure": "Comparison of percentage of stepwise minority-initial acquisitions before vs after the UTSA",
+      "source": "Png (2017b)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "interplay of different strategic factor markets",
+    "institutional framework changes"
+   ],
+   "mechanism_named": "strategic factor markets",
+   "proposed_edge": {
+    "from": "institutional framework changes",
+    "relation": "affects",
+    "to": "interplay of different strategic factor markets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "de jure law",
+    "actual financial consequences of misappropriation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "publicly listed firms",
+    "private U.S. firms",
+    "likelihood to be acquired"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

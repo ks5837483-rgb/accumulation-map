@@ -1,0 +1,405 @@
+{
+ "paper_id": "10.2307_2328956",
+ "title": "The Post-Merger Performance of Acquiring Firms: A Re-Examination of an Anomaly",
+ "journal": "JF",
+ "year": 1992,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market efficiency",
+  "signaling theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_completion",
+      "relation": "increases",
+      "to": "slow_market_adjustment_to_merger_news",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "slow_market_adjustment_to_merger_news",
+      "relation": "decreases",
+      "to": "post_merger_stock_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "slow_market_adjustment_to_merger_news"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the market adjusts fully at announcement and subsequent underperformance is due to unrelated causes"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "announcement_period_return",
+      "relation": "decreases",
+      "to": "slow_market_adjustment_to_merger_news",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "slow_market_adjustment_to_merger_news",
+      "relation": "decreases",
+      "to": "post_merger_stock_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "slow_market_adjustment_to_merger_news"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_size_of_acquisition",
+      "relation": "increases",
+      "to": "economic_importance_of_merger_to_acquirer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "economic_importance_of_merger_to_acquirer",
+      "relation": "decreases",
+      "to": "post_merger_stock_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "economic_importance_of_merger_to_acquirer"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "equity_financing_of_acquisition",
+      "relation": "increases",
+      "to": "signal_of_acquirer_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_acquirer_overvaluation",
+      "relation": "decreases",
+      "to": "post_merger_stock_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_of_acquirer_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "conglomerate_merger",
+      "relation": "increases",
+      "to": "managerial_unfamiliarity_and_free_cash_flow_waste",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_unfamiliarity_and_free_cash_flow_waste",
+      "relation": "decreases",
+      "to": "post_merger_stock_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_unfamiliarity_and_free_cash_flow_waste"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (NYSE/AMEX-listed firms; CRSP; Wall Street Journal)",
+  "time_period": "1955-1987",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "937 mergers and 227 tender offers (full database); main merger-performance analysis: 765 mergers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "sample of mergers and tender offers (list of firms that disappeared from CRSP files 1955-1987, classified via Wall Street Journal Index; kindly supplied by Robert Harris)",
+    "category": "hand_collected",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "post-merger cumulative average abnormal return (CAAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "post-merger period following completion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Center for Research in Security Prices (CRSP) / Wall Street Journal Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (size control portfolio return Rst)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "beta risk (Bi, estimated over 60 months post-completion)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   },
+   {
+    "label": "Method #2 (RATS, equation (2))",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "monthly average abnormal return (intercept at)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "post-merger period following completion",
+      "measure": "months relative to the month of completion (Ibbotson RATS approach, beta allowed to change each month)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (size control portfolio return Rst)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "market risk (time-varying monthly beta Bt)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   },
+   {
+    "label": "Tender Offers (Section III.B, CAARs unreported)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "227 tender offers",
+    "dv": {
+     "name": "post-tender-offer cumulative average abnormal return (CAAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "tender offer form of acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (size control portfolio)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "beta risk",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   },
+   {
+    "label": "Table II (Analysis of Subsamples: Subperiods)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "merger sample split into five subperiods (fifties through eighties, plus 1975-1984)",
+    "dv": {
+     "name": "post-merger cumulative average abnormal return (CAAR)",
+     "measure": "CAAR computed as in equation (1) over the five years after the merger",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "subperiod / decade of merger completion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Center for Research in Security Prices (CRSP) / Wall Street Journal Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (size control portfolio)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "beta risk",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   },
+   {
+    "label": "Analysis of Subsamples: conglomerate vs. non-conglomerate acquisitions",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "conglomerate vs. non-conglomerate acquisition subsamples",
+    "dv": {
+     "name": "post-merger cumulative average abnormal return (CAAR)",
+     "measure": "CAAR computed as in equation (1) over the five years after the merger",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "conglomerate vs. non-conglomerate acquisition",
+      "measure": "results subdivided by conglomerate vs. non-conglomerate acquisitions",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (size control portfolio)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "beta risk",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "large negative returns after the merger"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "anomaly"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "announcement period return",
+    "post-merger return"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "announcement period return",
+    "relation": "decreases",
+    "to": "post-merger return"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "positive performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

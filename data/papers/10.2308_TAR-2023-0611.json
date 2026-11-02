@@ -1,0 +1,702 @@
+{
+ "paper_id": "10.2308/TAR-2023-0611",
+ "title": "Mandatory Disclosure and Takeovers: Evidence from Private Banks",
+ "journal": "AR",
+ "year": 2026,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "asymmetric information theory",
+  "disclosure regulation theory",
+  "search costs theory",
+  "winner's curse"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reduced_mandatory_disclosure",
+      "relation": "increases",
+      "to": "search_and_diligence_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_and_diligence_costs",
+      "relation": "decreases",
+      "to": "likelihood_of_receiving_takeover_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_and_diligence_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_ma_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "search_and_diligence_costs",
+     "moderated_from": "reduced_mandatory_disclosure",
+     "moderated_to": "likelihood_of_receiving_takeover_bid",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Eq. (3) serial-acquirer test"
+    },
+    {
+     "construct": "nonbank_activity_income",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "search_and_diligence_costs",
+     "moderated_from": "reduced_mandatory_disclosure",
+     "moderated_to": "likelihood_of_receiving_takeover_bid",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Eq. (4) InfoLoss = NonbankIN"
+    },
+    {
+     "construct": "intracompany_transactions",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "search_and_diligence_costs",
+     "moderated_from": "reduced_mandatory_disclosure",
+     "moderated_to": "likelihood_of_receiving_takeover_bid",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Eq. (4) InfoLoss = Intracompany"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "laxer regulatory capital/leverage requirements and supervision (not reduced disclosure) drive the decline in takeover activity"
+   ]
+  },
+  {
+   "hypothesis": "Geographical proximity of acquirers (Eq. 2)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reduced_mandatory_disclosure",
+      "relation": "increases",
+      "to": "distant_acquirer_information_disadvantage",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "distant_acquirer_information_disadvantage",
+      "relation": "increases",
+      "to": "geographical_closeness_between_target_and_acquirer",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "distant_acquirer_information_disadvantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "laxer capital requirements or supervision (not reduced disclosure) explains the shift toward geographically proximate acquirers"
+   ]
+  },
+  {
+   "hypothesis": "Deal payment terms / stock ratio (Eq. 5)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reduced_mandatory_disclosure",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "stock_proportion_in_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Deal profitability / acquirer announcement return (Eq. 6)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reduced_mandatory_disclosure",
+      "relation": "increases",
+      "to": "overpayment_under_uncertainty",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "overpayment_under_uncertainty",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overpayment_under_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reduced disclosure raises acquirer returns by lowering bidder competition and rents to the winning bidder (opposite sign to the overpayment channel)"
+   ]
+  },
+  {
+   "hypothesis": "Time to deal resolution (Eq. 7)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reduced_mandatory_disclosure",
+      "relation": "decreases",
+      "to": "ability_to_benchmark_private_information",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "ability_to_benchmark_private_information",
+      "relation": "decreases",
+      "to": "time_to_deal_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ability_to_benchmark_private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirers' access to targets' private information during due diligence substitutes for public disclosure"
+   ]
+  },
+  {
+   "hypothesis": "Uninsured deposit growth (Table 10 Panel A)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reduced_mandatory_disclosure",
+      "relation": "increases",
+      "to": "uninsured_depositor_uncertainty",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "uninsured_depositor_uncertainty",
+      "relation": "decreases",
+      "to": "uninsured_deposit_growth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "uninsured_depositor_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "2012-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,032 bank-year observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "FR Y-9 reports (FR Y-9C and FR Y-9SP) from the Federal Reserve Bank of Chicago",
+    "category": "other_govt_db",
+    "kind": "filings"
+   },
+   {
+    "name": "CRSP (acquirers' stock prices)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SNL Financial / SNL Financial Institutions Regulatory dataset (bank M&A transactions)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP-FRB (2017) linking table",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "univariate means for BHCs below vs above $1 billion, pre vs post March 2015",
+    "dv": {
+     "name": "M&A target likelihood",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial / SNL Financial Institutions Regulatory dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post (difference-in-differences)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "M&A",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial / SNL Financial Institutions Regulatory dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "RWC (total risk-based capital ratio)",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "RWC x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "ROE (return on equity attributable to parent BHC)",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAge",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "Deposit/Liability",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "Loan/Deposit",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogNumBanks",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "targeted deals only; 75 observations; year fixed effects, robust SEs, no bank FE",
+    "dv": {
+     "name": "Geographical Closeness",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Below",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "3,004 observations; bank and year fixed effects, SEs clustered by BHC",
+    "dv": {
+     "name": "M&A",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial / SNL Financial Institutions Regulatory dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post x Experience (triple interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SNL Financial Institutions Regulatory dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Below x Post, Below x Experience, Post x Experience, Experience",
+      "source": "SNL Financial / FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "3,004 observations; bank and year fixed effects, SEs clustered by BHC",
+    "dv": {
+     "name": "M&A",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial / SNL Financial Institutions Regulatory dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post x NonbankIN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9C reports"
+     },
+     {
+      "name": "Below x Post x Intracompany",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9C reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Below x NonbankIN, Post x NonbankIN, NonbankIN, Below x Intracompany, Post x Intracompany, Intracompany, Below x Post",
+      "source": "FR Y-9C reports"
+     },
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "93 observations (deals with payment terms); year fixed effects, robust SEs",
+    "dv": {
+     "name": "Stock Ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial / SNL Financial Institutions Regulatory dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Below",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "77 observations of publicly listed acquirers (75 publicly listed BHCs and 2 publicly listed non-BHC acquirers); year fixed effects, robust SEs",
+    "dv": {
+     "name": "BHAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (acquirers' stock prices)"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Below",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "98 observations (completed deals with duration); year fixed effects, robust SEs",
+    "dv": {
+     "name": "Duration",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial / SNL Financial Institutions Regulatory dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Below",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "2,749 observations; bank and year fixed effects, SEs clustered by BHC",
+    "dv": {
+     "name": "Uninsured Deposit Growth",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FR Y-9 reports / Call Reports"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "2,881 observations; bank and year fixed effects, SEs clustered by BHC",
+    "dv": {
+     "name": "Commercial Paper Issuances",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FR Y-9 reports"
+    },
+    "key_ivs": [
+     {
+      "name": "Below x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LogAssets",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "LogAssets x Post",
+      "source": "FR Y-9 reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "FR Y-9 reports"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sample size",
+    "time taken to complete m&a deals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "deal premium",
+    "sample size"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "number of subsidiaries",
+    "involvement in risky nonbanking activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

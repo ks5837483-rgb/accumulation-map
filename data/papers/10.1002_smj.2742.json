@@ -1,0 +1,832 @@
+{
+ "paper_id": "10.1002_smj.2742",
+ "title": "Geographic overlap and acquisition pairing",
+ "journal": "SMJ",
+ "year": 2018,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "strategic geography",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_overlap",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_pairing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_firm_size",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "alternative_information_collection_resources",
+     "moderated_from": "geographic_overlap",
+     "moderated_to": "acquisition_pairing",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "acquirer_geographic_dispersion",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_processing_complexity",
+     "moderated_from": "geographic_overlap",
+     "moderated_to": "acquisition_pairing",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "geographic_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "geographic_overlap",
+     "moderated_to": "acquisition_pairing",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    },
+    {
+     "construct": "product_dissimilarity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "geographic_overlap",
+     "moderated_to": "acquisition_pairing",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "HQ geographic proximity (short distance between acquirer and target headquarters) as the driver of acquisition pairing"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (domestic U.S. acquisitions across sectors, excluding financial-sector firms SIC 6000-6999)",
+  "country_region": "United States (domestic U.S. acquisitions)",
+  "time_period": "1997-2008",
+  "sample_description": "Domestic U.S. M&As from Thomson Reuters' SDC database (completed deals; acquirer owned 0% before, >50% sought, >90% after), excluding financial-sector firms (SIC 6000-6999); units of analysis are acquirer-target pairs plus propensity-score-matched potential acquirer-target dyads; supplemented by Form 10-K/EDGAR, Compustat, and Bloomberg",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters' Security Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Form 10-K accessed via the SEC electronic filing system (EDGAR)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bloomberg (M&A League Table)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Column (1): Propensity score matching regression (probit) for targets",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "52,285 firm-year observations used to estimate target propensity scores",
+    "dv": {
+     "name": "Target indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Size",
+      "measure": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "measure": "returns on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B",
+      "measure": "market-to-book ratios",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "measure": "cash balance",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 1, Column (2): Propensity score matching regression (probit) for acquirers",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "52,285 firm-year observations used to estimate acquirer propensity scores",
+    "dv": {
+     "name": "Acquirer indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Size",
+      "measure": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "measure": "returns on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B",
+      "measure": "market-to-book ratios",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "measure": "cash balance",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Model 1: Baseline model (conditional logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquisition pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Acquirer investment bank prestige",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "Target investment bank prestige",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "3-digit SIC industry (same industry dummy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Internationalization (foreign sales / total sales)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book (M/B)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic distance (main effect)",
+      "source": "Computed from firm HQ zip codes"
+     },
+     {
+      "name": "Product dissimilarity (main effect)",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Deal-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 2: H1 (geographic overlap main effect)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment bank prestige (acquirer and target)",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "3-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Internationalization",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book (M/B)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "Computed from firm HQ zip codes"
+     },
+     {
+      "name": "Product dissimilarity",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Deal-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 3: H2 (geographic overlap x acquirer firm size)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Geographic overlap x Acquirer firm size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment bank prestige (acquirer and target)",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "3-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Internationalization",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book (M/B)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "Computed from firm HQ zip codes"
+     },
+     {
+      "name": "Product dissimilarity",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Deal-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 4: H3 (geographic overlap x acquirer geographic dispersion)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Geographic overlap x Acquirer geographic dispersion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment bank prestige (acquirer and target)",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "3-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Internationalization",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book (M/B)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "Computed from firm HQ zip codes"
+     },
+     {
+      "name": "Product dissimilarity",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Deal-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 5: H4 (geographic overlap x geographic distance)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Geographic overlap x Geographic distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR); computed from firm HQ zip codes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment bank prestige (acquirer and target)",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "3-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Internationalization",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book (M/B)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "Computed from firm HQ zip codes"
+     },
+     {
+      "name": "Product dissimilarity",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Deal-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 6: H5 (geographic overlap x product dissimilarity)",
+    "hypotheses": [
+     "H5"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Geographic overlap x Product dissimilarity",
+      "measure": "interaction of geographic overlap with product dissimilarity; product similarity (Hoberg and Phillips 2010, from Form 10-K product descriptions) multiplied by -1",
+      "source": "Form 10-K (EDGAR)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment bank prestige (acquirer and target)",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "3-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Internationalization",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book (M/B)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "Computed from firm HQ zip codes"
+     },
+     {
+      "name": "Product dissimilarity",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Deal-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 7: Full model (all moderators)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3",
+     "H4",
+     "H5"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Geographic overlap x Acquirer firm size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K (EDGAR); Compustat"
+     },
+     {
+      "name": "Geographic overlap x Acquirer geographic dispersion",
+      "measure": "interaction with acquirer geographic dispersion (1-0 dummy, 1 if number of states with business activities exceeds sample median)",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Geographic overlap x Geographic distance",
+      "measure": "interaction with geographic distance (0-1 dummy, 1 if log HQ distance exceeds sample median)",
+      "source": "Form 10-K (EDGAR); computed from firm HQ zip codes"
+     },
+     {
+      "name": "Geographic overlap x Product dissimilarity",
+      "measure": "interaction with product dissimilarity (Hoberg-Phillips product similarity x -1)",
+      "source": "Form 10-K (EDGAR)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment bank prestige (acquirer and target)",
+      "source": "SDC; Bloomberg M&A League Table"
+     },
+     {
+      "name": "3-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Internationalization",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book (M/B)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic distance",
+      "source": "Computed from firm HQ zip codes"
+     },
+     {
+      "name": "Product dissimilarity",
+      "source": "Form 10-K (EDGAR)"
+     },
+     {
+      "name": "Deal-fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "geographic overlap",
+    "acquisition pairing",
+    "private targets",
+    "public targets",
+    "information asymmetry"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "private versus public target",
+    "on_path": [
+     "geographic overlap",
+     "acquisition pairing"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "geographic overlap"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "domestic acquisitions",
+    "cross-border acquisitions",
+    "geographic overlap"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "geographic overlap",
+    "information asymmetry",
+    "acquisition decisions"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "pre-acquisition evaluation process",
+    "target candidates"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

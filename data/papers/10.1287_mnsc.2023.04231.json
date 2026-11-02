@@ -1,0 +1,597 @@
+{
+ "paper_id": "10.1287_mnsc.2023.04231",
+ "title": "Corporate Acquisitions and Bank Relationships",
+ "journal": "MNSC",
+ "year": 2026,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "financial intermediation theory",
+  "information asymmetry",
+  "relationship banking theory",
+  "soft information theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "corporate_acquisition",
+      "relation": "decreases",
+      "to": "hold_up_problem",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "hold_up_problem",
+      "relation": "decreases",
+      "to": "change_in_bank_relationship_composition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "corporate_acquisition",
+      "relation": "increases",
+      "to": "acquirer_strategic_preferences",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_strategic_preferences",
+      "relation": "increases",
+      "to": "change_in_bank_relationship_composition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "corporate_acquisition",
+      "relation": "increases",
+      "to": "financing_demand",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "financing_demand",
+      "relation": "increases",
+      "to": "number_of_bank_relationships",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "hold_up_problem",
+    "acquirer_strategic_preferences",
+    "financing_demand"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firm selection into acquisition (acquirers cherry-picking targets with particular banking needs)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "informational_distance",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "restructuring_of_bank_relationships",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "firm_size",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "informational_distance",
+     "moderated_to": "restructuring_of_bank_relationships",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "corporate_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "bank_knowledge_of_local_market",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "corporate_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "industry_specific_bank_knowledge",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "sectoral_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "corporate_acquisition",
+     "moderated_to": "industry_specific_bank_knowledge",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "geographic_distance",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "corporate_acquisition",
+     "moderated_to": "bank_knowledge_of_local_market",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "firm_size",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "corporate_acquisition",
+     "moderated_to": "bank_knowledge_of_local_market",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection into acquisition / differential demand for funding (firm credit demand)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "23 European countries",
+  "time_period": "2008-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "439,031 firm-year observations (main regression sample, Table 1); ~1.2 million observations before taking differences (more than 400,000 after differences and conditioning)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Orbis database by Bureau van Dijk",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Kompass database (bank relationship data, via Orbis vintages)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Orbis Bank Focus / Bankscope (bank nationality)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "Full sample (column 1) and three progressively stringent CEM-matched samples (Matched 1-3); panel of firms across 23 European countries, 1999-2014",
+    "dv": {
+     "name": "Change in the number of bank relationships",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Orbis database by Bureau van Dijk"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis database by Bureau van Dijk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log Operating Revenue, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "log employment, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "log total assets, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Orbis"
+     },
+     {
+      "name": "Growth Operating Revenue, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "Growth employment, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "Growth assets, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "Growth Operating Revenue, t-2",
+      "source": "Orbis"
+     },
+     {
+      "name": "Shared bank, t-1 (indicator target and acquirer share a bank before acquisition)",
+      "source": "Orbis"
+     },
+     {
+      "name": "Four-digit sector-year fixed effects",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of domestic banks, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of foreign banks, t-1",
+      "source": "Orbis"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 (Decomposition of Changes: Changed / Added / Dropped)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "Full sample and matched sample; also estimated on single-bank firms subsample",
+    "dv": {
+     "name": "Number of bank relationships changed, added, and dropped",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Orbis database by Bureau van Dijk"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis database by Bureau van Dijk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Other controls shown in Table 1 (included but not shown)",
+      "source": "Orbis"
+     },
+     {
+      "name": "Four-digit sector-year fixed effects",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of domestic banks, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of foreign banks, t-1",
+      "source": "Orbis"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "Panel A full sample; Panel B matched sample (Matched 1)",
+    "dv": {
+     "name": "Change in the number of bank relationships",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Orbis database by Bureau van Dijk"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition x Different Region",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis database by Bureau van Dijk"
+     },
+     {
+      "name": "Acquisition x Different Level-1 Sector",
+      "measure": "interaction of Acquisition with indicator =1 if acquirer's main sector at level 1 (letter-coded) NACE rev. 2 differs from target's",
+      "source": "Orbis database by Bureau van Dijk"
+     },
+     {
+      "name": "Acquisition x Same level-1 - Different 2-digit Sector",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis database by Bureau van Dijk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquisition (main effect)",
+      "source": "Orbis"
+     },
+     {
+      "name": "Other controls shown in Table 1 (included but not shown)",
+      "source": "Orbis"
+     },
+     {
+      "name": "Four-digit sector-year fixed effects",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of domestic banks, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of foreign banks, t-1",
+      "source": "Orbis"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "Matched sample (Matched 1)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Orbis database by Bureau van Dijk"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "Acquisition dummy (=1 in year of acquisition and after)",
+      "source": "Orbis database by Bureau van Dijk"
+     },
+     {
+      "name": "Acquisition x Different Region (Panel B)",
+      "measure": "interaction of Acquisition with Different Region indicator (acquirer HQ in different NUTS2 region than target)",
+      "source": "Orbis database by Bureau van Dijk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Other controls shown in Table 1 (included but not shown)",
+      "source": "Orbis"
+     },
+     {
+      "name": "Four-digit sector-year fixed effects",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of domestic banks, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of foreign banks, t-1",
+      "source": "Orbis"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "Matched sample (Matched 1)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Orbis database by Bureau van Dijk"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "Acquisition dummy (=1 in year of acquisition and after)",
+      "source": "Orbis database by Bureau van Dijk"
+     },
+     {
+      "name": "Acquisition x Different 1-dgt",
+      "measure": "interaction of Acquisition with indicator =1 if acquirer's main sector at level 1 (letter) NACE rev. 2 differs from target's",
+      "source": "Orbis database by Bureau van Dijk"
+     },
+     {
+      "name": "Acquisition x Same 1dgt - Different 2dgt",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis database by Bureau van Dijk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Other controls shown in Table 1 (included but not shown)",
+      "source": "Orbis"
+     },
+     {
+      "name": "Four-digit sector-year fixed effects",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of domestic banks, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of foreign banks, t-1",
+      "source": "Orbis"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "Matched sample; domestic and foreign bank relationships analyzed separately",
+    "dv": {
+     "name": "Change in bank relationships / bank knowledge / sector specialization, split by bank nationality",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Orbis database by Bureau van Dijk"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "Acquisition dummy (=1 in year of acquisition and after)",
+      "source": "Orbis database by Bureau van Dijk"
+     },
+     {
+      "name": "Acquisition x Different Region",
+      "measure": "interaction of Acquisition with Different Region indicator (acquirer HQ in different NUTS2 region than target)",
+      "source": "Orbis database by Bureau van Dijk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Orbis"
+     },
+     {
+      "name": "Four-digit sector-year fixed effects",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of domestic banks, t-1",
+      "source": "Orbis"
+     },
+     {
+      "name": "FE: Number of foreign banks, t-1",
+      "source": "Orbis"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "specific bank characteristics",
+    "geographic reach",
+    "sectoral specialization",
+    "bank nationality",
+    "firm outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "specific bank characteristics",
+    "relation": "affects",
+    "to": "firm outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "changes in bank relationships",
+    "firms’ financial and nonfinancial outcomes"
+   ],
+   "mechanism_named": "two-stage endogeneity prob­ lem",
+   "proposed_edge": {
+    "from": "changes in bank relationships",
+    "relation": "affects",
+    "to": "firms’ financial and nonfinancial outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

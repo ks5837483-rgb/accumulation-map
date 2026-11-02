@@ -1,0 +1,815 @@
+{
+ "paper_id": "10.1007_s11142-023-09756-x",
+ "title": "Market for corporate control and demand for auditing: evidence from international M&amp;A laws",
+ "journal": "RAS",
+ "year": 2023,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "signaling theory",
+  "market for corporate control theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "increases",
+      "to": "takeover_pressure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_pressure",
+      "relation": "increases",
+      "to": "big_4_auditor_appointment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "increases",
+      "to": "managerial_commitment_to_curtailing_agency_problems",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_commitment_to_curtailing_agency_problems",
+      "relation": "increases",
+      "to": "big_4_auditor_appointment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "increases",
+      "to": "board_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_monitoring",
+      "relation": "increases",
+      "to": "big_4_auditor_appointment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "takeover_pressure",
+    "managerial_commitment_to_curtailing_agency_problems",
+    "board_monitoring"
+   ],
+   "moderators": [
+    {
+     "construct": "country_takeover_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "takeover_pressure",
+     "moderated_from": "m_and_a_law_passage",
+     "moderated_to": "big_4_auditor_appointment",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Section 5.1 (cross-sectional test)"
+    },
+    {
+     "construct": "agency_costs",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_commitment_to_curtailing_agency_problems",
+     "moderated_from": "m_and_a_law_passage",
+     "moderated_to": "big_4_auditor_appointment",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Section 5.2 Panel A (managerial commitment channel)"
+    },
+    {
+     "construct": "investor_legal_protection_and_auditor_legal_liability",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "board_monitoring",
+     "moderated_from": "m_and_a_law_passage",
+     "moderated_to": "big_4_auditor_appointment",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Section 5.2 Panel B (board monitoring channel)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "The staggered difference-in-differences estimate is a mechanical artifact of treatment-effect heterogeneity (already-treated units acting as comparison units), per Baker et al. (2022), rather than a real treatment effect."
+   ]
+  },
+  {
+   "hypothesis": "P-debt-covenants",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "increases",
+      "to": "financial_reporting_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_reporting_quality",
+      "relation": "increases",
+      "to": "accounting_based_debt_covenant_use",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_reporting_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-earnings-informativeness",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "increases",
+      "to": "financial_reporting_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_reporting_quality",
+      "relation": "increases",
+      "to": "earnings_informativeness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_reporting_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-audit-quality",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "increases",
+      "to": "demand_for_high_quality_audits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_for_high_quality_audits",
+      "relation": "increases",
+      "to": "audit_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "demand_for_high_quality_audits"
+   ],
+   "moderators": [
+    {
+     "construct": "auditor_legal_liability",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "auditor_litigation_risk",
+     "moderated_from": "m_and_a_law_passage",
+     "moderated_to": "audit_quality",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 7.1 (Table 9, Columns 2-3)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-audit-fees",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "decreases",
+      "to": "auditor_litigation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "auditor_litigation_risk",
+      "relation": "increases",
+      "to": "audit_fees",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "m_and_a_law_passage",
+      "relation": "increases",
+      "to": "auditor_litigation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "auditor_litigation_risk",
+      "relation": "increases",
+      "to": "audit_fees",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "auditor_litigation_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (nonfinancial firms across 32 countries; financial industry firms excluded)",
+  "country_region": "32 countries (16 treatment countries that enacted M&A laws, 16 control countries that never enacted them)",
+  "time_period": "1986-2009",
+  "sample_description": "Firm-year observations from the Worldscope database for countries that passed takeover laws during 1986-2009 or never passed them, excluding financial-industry firms and observations with missing auditor identity and other required variables (auditor identification from Capital IQ, supplemented by Compustat Global and Worldscope)",
+  "sample_size": "117,369 firm-year observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Worldscope",
+    "category": "worldscope",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Global",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dealscan (loan data)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson One (bond data)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "government_public"
+   },
+   {
+    "name": "Djankov et al. (2008) governance indices (anti-director index, anti-self-dealing index)",
+    "category": "other",
+    "kind": "government_public"
+   },
+   {
+    "name": "La Porta et al. (2006) auditor legal liability index",
+    "category": "other",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered enactment of M&A (takeover) laws across 16 treatment countries",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "BIG4",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope; Capital IQ; Compustat Global"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x TREAT (DiD estimator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     },
+     {
+      "name": "TREAT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (client size)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "LEV (financial leverage)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA (profitability)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "MB (market-to-book ratio)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "NGS (number of geographic segments)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "NBS (number of business segments)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "INVREC (inventories + receivables / total assets)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ISSUE (long-term debt or equity issue indicator)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "LOSS (loss indicator)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "CURR (current ratio)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ATURN (asset turnover ratio)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "CRLST (cross-listing indicator)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "GDP (GDP per capita)",
+      "source": ""
+     },
+     {
+      "name": "REGQUAL (regulatory quality)",
+      "source": ""
+     },
+     {
+      "name": "CH_FR (change in financial reform index)",
+      "source": ""
+     },
+     {
+      "name": "CGRI (corporate governance reforms)",
+      "source": ""
+     },
+     {
+      "name": "ASD (anti-self-dealing index)",
+      "source": "Djankov et al. (2008)"
+     },
+     {
+      "name": "ACCENF (strength of enforcement actions on financial reporting)",
+      "source": ""
+     },
+     {
+      "name": "INF (inflation rate)",
+      "source": ""
+     },
+     {
+      "name": "Legal system, Year, and Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Parallel trends analysis (dynamic/event-study DiD with year-relative TREAT interactions)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "Staggered enactment of M&A (takeover) laws",
+    "sample": "",
+    "dv": {
+     "name": "BIG4",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope; Capital IQ; Compustat Global"
+    },
+    "key_ivs": [
+     {
+      "name": "TREAT x YEAR(t-2), YEAR(t-1), YEAR(t), YEAR(t+1), YEAR(>=t+1), YEAR(>=t+2)",
+      "measure": "interaction of TREAT with indicators for years relative to the M&A-law enactment year t (replaces POST in Eq. (1))",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same client- and country-level controls as Eq. (1) plus Legal/Year/Industry FE (coefficients suppressed)",
+      "source": "Worldscope; other"
+     }
+    ]
+   },
+   {
+    "label": "Figure 1 - Event-study DiD (Callaway and Sant'Anna 2021) estimating ATT over [t-5, t+5], 8 enactment-year cohorts",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment; Callaway and Sant'Anna (2021) estimator with never-treated and not-yet-treated control groups",
+    "sample": "[t-5, t+5] window around enactment; 8 cohorts (1991, 1992, 1997, 1998, 2000, 2001, 2002, 2004)",
+    "dv": {
+     "name": "BIG4",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope; Capital IQ; Compustat Global"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A law enactment (treatment) - ATT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Cross-sectional tests: subsamples partitioned by country-level takeover intensity",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment",
+    "sample": "Subsamples split by median NDEALS (56,601 / 56,630) and median $DEALS (55,963 / 57,268); deals require public acquirer, public target, deal amount > US$1M",
+    "dv": {
+     "name": "BIG4",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope; Capital IQ; Compustat Global"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x TREAT",
+      "measure": "DiD estimator estimated within subsamples split at the sample median of the partitioning variable",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     },
+     {
+      "name": "NDEALS (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC Platinum"
+     },
+     {
+      "name": "$DEALS (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same client- and country-level controls as Eq. (1) plus Legal/Year/Industry FE (suppressed)",
+      "source": "Worldscope; other"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel A - Channel analysis: managerial commitment (subsamples by agency-cost proxies)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment",
+    "sample": "Subsamples partitioned by sample median of LNBS, Delta Lev, and Delta Investment",
+    "dv": {
+     "name": "BIG4",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope; Capital IQ; Compustat Global"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x TREAT",
+      "measure": "DiD estimator within subsamples split at the sample median of each agency-cost proxy",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     },
+     {
+      "name": "LNBS (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "Delta Lev (moderator)",
+      "measure": "change in financial leverage",
+      "source": "Worldscope"
+     },
+     {
+      "name": "Delta Investment (moderator)",
+      "measure": "change in investment",
+      "source": "Worldscope"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same client- and country-level controls as Eq. (1) plus Legal/Year/Industry FE (suppressed)",
+      "source": "Worldscope; other"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B - Channel analysis: board monitoring (subsamples by country-level investor protection / auditor liability)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment",
+    "sample": "Subsamples partitioned by country-level median of ANTIDIR, ASD, and AUDLIAB",
+    "dv": {
+     "name": "BIG4",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope; Capital IQ; Compustat Global"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x TREAT",
+      "measure": "DiD estimator within subsamples split at the country-level median of each partitioning index",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     },
+     {
+      "name": "ANTIDIR (moderator)",
+      "measure": "anti-director index",
+      "source": "Djankov et al. (2008)"
+     },
+     {
+      "name": "ASD (moderator)",
+      "measure": "anti-self-dealing index",
+      "source": "Djankov et al. (2008)"
+     },
+     {
+      "name": "AUDLIAB (moderator)",
+      "measure": "auditor legal liability index",
+      "source": "La Porta et al. (2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same client- and country-level controls as Eq. (1) plus Legal/Year/Industry FE (suppressed)",
+      "source": "Worldscope; other"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Creditor demand: debt covenant analysis (Eq. (2), logistic DiD; loan and bond samples)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment",
+    "sample": "9,201 firm-years with Dealscan loan or Thomson One bond data (6,156 loan obs; 3,879 bond obs), matched to firm data in year before debt issuance",
+    "dv": {
+     "name": "ACOV / NACOV",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Dealscan (loans); Thomson One (bonds)"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x TREAT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TREAT",
+      "source": "Takeover law information"
+     },
+     {
+      "name": "SIZE",
+      "source": "Worldscope"
+     },
+     {
+      "name": "LEV",
+      "source": "Worldscope"
+     },
+     {
+      "name": "ROA",
+      "source": "Worldscope"
+     },
+     {
+      "name": "MB",
+      "source": "Worldscope"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "DB_AMT (natural log of debt amount in US$ millions)",
+      "source": "Dealscan; Thomson One"
+     },
+     {
+      "name": "DB_MAT (natural log of debt maturity in months)",
+      "source": "Dealscan; Thomson One"
+     },
+     {
+      "name": "Legal/Year/Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Investor demand: earnings informativeness (Eq. (3), return-earnings OLS with triple interaction)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment",
+    "sample": "117,369 firm-years for full sample; subsamples split at median total accruals TACC (58,525 above / 58,844 below)",
+    "dv": {
+     "name": "RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope"
+    },
+    "key_ivs": [
+     {
+      "name": "E x POST x TREAT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope; Takeover law information"
+     },
+     {
+      "name": "E x TREAT, POST x TREAT, E",
+      "measure": "lower-order interaction and main-effect terms of the return-earnings model",
+      "source": "Worldscope; Takeover law information"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Legal/Year/Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment",
+    "sample": "85,862 firm-years with audit-opinion data; also split by median AUDLIAB (above/below)",
+    "dv": {
+     "name": "Erroneous_Opinion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x TREAT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TREAT",
+      "source": "Takeover law information"
+     },
+     {
+      "name": "All explanatory variables used in Eq. (1) (SIZE, LEV, ROA, MB, NGS, NBS, INVREC, ISSUE, LOSS, CURR, ATURN, CRLST and country-level controls)",
+      "source": "Worldscope; other"
+     },
+     {
+      "name": "BIG4 indicator",
+      "source": "Worldscope; Capital IQ; Compustat Global"
+     },
+     {
+      "name": "LQAO (lagged qualified audit opinion)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "AGE (firm age)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "Legal/Year/Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Staggered M&A (takeover) law enactment",
+    "sample": "19,867 firm-years with non-missing audit fees, 15 countries, 1992-2009",
+    "dv": {
+     "name": "AUDFEE",
+     "measure": "audit fees (log-transformed audit fee per the audit-fee OLS model; mean 12.018)",
+     "source": "Worldscope"
+    },
+    "key_ivs": [
+     {
+      "name": "POST x TREAT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Takeover law information (Lel and Miller 2015; Nenova 2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TREAT",
+      "source": "Takeover law information"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Worldscope; other"
+     },
+     {
+      "name": "Legal/Year/Industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "m&a laws",
+    "sample countries"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "country-level, time-varying omitted variables"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "takeover pressure",
+    "auditor selection",
+    "managerial commitment",
+    "board monitoring",
+    "channel variables"
+   ],
+   "mechanism_named": "managerial commitment and board monitoring channels",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "takeover threats",
+    "audit variables",
+    "channels"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "takeover threats",
+    "relation": "affects",
+    "to": "audit variables"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

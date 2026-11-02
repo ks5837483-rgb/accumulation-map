@@ -1,0 +1,597 @@
+{
+ "paper_id": "10.1016_j.jfineco.2018.07.005",
+ "title": "Inefficiencies and externalities from opportunistic acquirers",
+ "journal": "JFE",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "market timing / misvaluation theory of acquisitions",
+  "auction theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_misvaluation",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "allocational_inefficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "overpayment / governance failures within acquirers (empire-building) rather than misvaluation-driven crowd-out"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "misvaluation_dispersion",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "allocational_inefficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_asset_intangibility",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "misvaluation_dispersion",
+     "moderated_to": "allocational_inefficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2a"
+    },
+    {
+     "construct": "target_size",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "misvaluation_dispersion",
+     "moderated_to": "allocational_inefficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2b"
+    },
+    {
+     "construct": "investor_sentiment",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "misvaluation_dispersion",
+     "moderated_to": "allocational_inefficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2c"
+    },
+    {
+     "construct": "stock_market_volatility",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "misvaluation_dispersion",
+     "moderated_to": "allocational_inefficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2d"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_usage_in_bid",
+      "relation": "decreases",
+      "to": "perceived_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_overvaluation",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_overvaluation"
+   ],
+   "moderators": [
+    {
+     "construct": "misvaluation_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "perceived_overvaluation",
+     "moderated_from": "cash_usage_in_bid",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "merger-arbitrage trading by hedge funds shorting acquirers' shares in equity bids, which mechanically pushes up the slope of acquirer announcement returns on CashFrac"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_misvaluation",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "redistribution_of_merger_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "bidder_cash_capacity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "acquirer_misvaluation",
+     "moderated_to": "redistribution_of_merger_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US M&A contests involving publicly traded acquirers and targets)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1980-2013",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2503 bids"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Securities Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Regression (5): conditional mean/variance of offer premium",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Offer premium (OfferPrem)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Relative firm size log(M)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Center for Research in Securities Prices (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "year indicators",
+      "source": ""
+     },
+     {
+      "name": "target Fama-French 48 industry indicators",
+      "source": ""
+     },
+     {
+      "name": "target logarithm of market capitalization",
+      "source": "Center for Research in Securities Prices (CRSP)"
+     },
+     {
+      "name": "target market leverage",
+      "source": ""
+     },
+     {
+      "name": "target market-to-book ratio of equity",
+      "source": ""
+     },
+     {
+      "name": "target return on assets",
+      "source": ""
+     },
+     {
+      "name": "target cash-to-assets ratio",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Regression (6): acquirer announcement return on cash fraction",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer announcement return (AcqAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Securities Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Cash fraction (CashFrac)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative firm size log(M)",
+      "source": "Center for Research in Securities Prices (CRSP)"
+     },
+     {
+      "name": "year indicators",
+      "source": ""
+     },
+     {
+      "name": "target Fama-French 48 industry indicators",
+      "source": ""
+     },
+     {
+      "name": "target logarithm of market capitalization",
+      "source": "Center for Research in Securities Prices (CRSP)"
+     },
+     {
+      "name": "target market leverage",
+      "source": ""
+     },
+     {
+      "name": "target market-to-book ratio of equity",
+      "source": ""
+     },
+     {
+      "name": "target return on assets",
+      "source": ""
+     },
+     {
+      "name": "target cash-to-assets ratio",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Regression (7): conditional mean/variance of cash fraction",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Cash fraction (CashFrac)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Relative firm size log(M)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Center for Research in Securities Prices (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "year indicators",
+      "source": ""
+     },
+     {
+      "name": "target Fama-French 48 industry indicators",
+      "source": ""
+     },
+     {
+      "name": "target logarithm of market capitalization",
+      "source": "Center for Research in Securities Prices (CRSP)"
+     },
+     {
+      "name": "target market leverage",
+      "source": ""
+     },
+     {
+      "name": "target market-to-book ratio of equity",
+      "source": ""
+     },
+     {
+      "name": "target return on assets",
+      "source": ""
+     },
+     {
+      "name": "target cash-to-assets ratio",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tables 3-4: SMM structural estimation of the bidding model (model fit and parameter estimates)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Eight targeted moments of offer premium, acquirer announcement return, and cash fraction",
+     "measure": "means, conditional variances (Var(u_i), Var(w_i)), and regression slopes on log(M) and cash fraction of OfferPrem, AcqAR, and CashFrac, matched between model and data",
+     "source": "Thomson Reuters SDC Platinum; Center for Research in Securities Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Dispersion in bidder synergies (sigma_s)",
+      "measure": "standard deviation parameter of the truncated-normal synergy distribution N(mu_s, sigma_s^2)",
+      "source": "estimated via simulated method of moments"
+     },
+     {
+      "name": "Dispersion in bidder misvaluation (sigma_epsilon)",
+      "measure": "standard deviation parameter of the normal misvaluation distribution N(mu_epsilon, sigma_epsilon^2), identified off the slope of acquirer announcement return on cash usage",
+      "source": "estimated via simulated method of moments"
+     },
+     {
+      "name": "Dispersion in bidder cash capacity (sigma_k)",
+      "measure": "standard deviation parameter of the censored-normal cash capacity distribution N(mu_k, sigma_k^2)",
+      "source": "estimated via simulated method of moments"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative firm size M (empirical distribution fed into model)",
+      "source": "Center for Research in Securities Prices (CRSP)"
+     },
+     {
+      "name": "year indicators (moment de-heterogenization)",
+      "source": ""
+     },
+     {
+      "name": "target Fama-French 48 industry indicators",
+      "source": ""
+     },
+     {
+      "name": "target characteristics (log market cap, market leverage, market-to-book of equity, ROA, cash-to-assets)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Estimated efficiency losses (simulation from estimated model)",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Allocative inefficiency / synergy loss",
+     "measure": "[withheld: wording matches the source]",
+     "source": "simulated from the SMM-estimated model"
+    },
+    "key_ivs": [
+     {
+      "name": "Misvaluation dispersion relative to synergy dispersion (Stdev(epsilon) vs Stdev(s))",
+      "measure": "estimated standard deviations of misvaluation and synergy driving the probability of crowd-out",
+      "source": "estimated via simulated method of moments"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "distribution of target misvaluation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "target private information",
+    "target misvaluation"
+   ],
+   "mechanism_named": "targets' private information",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "overpayment",
+    "inefficiency"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "overpayment",
+    "relation": "affects",
+    "to": "inefficiency"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "e-index",
+    "governance failures within acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "characteristics of the second, unobserved bidder",
+    "conditional variance moments"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "information from competing bids"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "dynamic effects",
+    "overvaluation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "characteristics of the second, unobserved bidder",
+    "conditional variance of offer premiums"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "misvaluation",
+    "wealth redistribution between acquirers and targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "misvaluation",
+    "relation": "affects",
+    "to": "wealth redistribution between acquirers and targets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "undervalued firms",
+    "becoming acquirers",
+    "synergies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "undervaluation",
+    "relation": "decreases",
+    "to": "becoming acquirers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "inefficiencies",
+    "search frictions",
+    "agency conflicts within the target or acquirer"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "search frictions and agency conflicts",
+    "relation": "affects",
+    "to": "inefficiencies"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

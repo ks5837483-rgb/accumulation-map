@@ -1,0 +1,960 @@
+{
+ "paper_id": "10.1177_01492063241244716",
+ "title": "Type Diversity of Institutional Investors and Opportunistic Acquisitions",
+ "journal": "JOM",
+ "year": 2024,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "principal-principal conflict theory",
+  "social movement theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investor_type_diversity",
+      "relation": "increases",
+      "to": "principal_principal_conflicts",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "principal_principal_conflicts",
+      "relation": "increases",
+      "to": "opportunistic_acquisitions",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "investor_type_diversity",
+      "relation": "decreases",
+      "to": "collective_action",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "collective_action",
+      "relation": "decreases",
+      "to": "opportunistic_acquisitions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "principal_principal_conflicts",
+    "collective_action"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_general_ability",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "ceo_bargaining_power",
+     "moderated_from": "investor_type_diversity",
+     "moderated_to": "opportunistic_acquisitions",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity: time-invariant firm heterogeneity drives both investor type diversity and acquisition decisions"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investor_type_diversity",
+      "relation": "decreases",
+      "to": "shareholder_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_monitoring",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "investor_type_diversity",
+      "relation": "decreases",
+      "to": "due_diligence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "due_diligence",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shareholder_monitoring",
+    "due_diligence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. listed firms in ExecuComp), excluding finance-industry firms",
+  "country_region": "United States",
+  "time_period": "2000-2019",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,106 U.S. firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters 13F",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CSRP/CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "TFN Insider Filing Data",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bushee institutional investor legal-type classification (Spectrum dataset, provided by Brian Bushee)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Segment database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Short Interest Supplement",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Shareholder Activism data (Audit Analytics)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ISS Voting Analytics",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Models 1-2 (main effect)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "number of opportunistic acquisitions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "TFN Insider Filing Data"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity",
+      "measure": "entropy measure over the ownership shares of eight legal types of institutional investors holding at least 1% of total shares (Harrison & Klein, 2007)",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (moderation by CEO general ability)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "number of opportunistic acquisitions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "TFN Insider Filing Data"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity",
+      "measure": "entropy measure over ownership shares of eight legal institutional-investor types holding at least 1% of shares",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     },
+     {
+      "name": "CEO general ability",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ExecuComp; BoardEx"
+     },
+     {
+      "name": "investor type diversity x CEO general ability",
+      "measure": "interaction term of investor type diversity and CEO general ability",
+      "source": "Thomson Reuters 13F; ExecuComp; BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 1 (operating efficiency)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "deal-level, cross-sectional dataset",
+    "dv": {
+     "name": "operating efficiency",
+     "measure": "data envelopment analysis (DEA) operating efficiency score, averaged over the 3 years after the acquisition (Cheng, Goh, & Kim, 2018)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity",
+      "measure": "entropy measure over ownership shares of eight legal institutional-investor types holding at least 1% of shares",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 2 (Tobin's Q)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "deal-level, cross-sectional dataset",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "average of Tobin's Q over the 3 years after the acquisition (Lang & Stulz, 1994)",
+     "source": "Compustat; Center for Research in Security Prices (CSRP/CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity",
+      "measure": "entropy measure over ownership shares of eight legal institutional-investor types holding at least 1% of shares",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 3 (goodwill impairment, logit)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "deal-level, cross-sectional dataset",
+    "dv": {
+     "name": "goodwill impairment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity",
+      "measure": "entropy measure over ownership shares of eight legal institutional-investor types holding at least 1% of shares",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Instrumental Variable Regression, first + second stage)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "IV",
+    "shock_or_instrument": "MSCI index membership; JGTRRA (Jobs and Growth Tax Relief Reconciliation Act) dividend taxation uncertainty indicator",
+    "sample": "",
+    "dv": {
+     "name": "number of opportunistic acquisitions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "TFN Insider Filing Data"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity (instrumented)",
+      "measure": "entropy measure over ownership shares of eight legal institutional-investor types; instrumented in 2SLS",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     },
+     {
+      "name": "MSCI index",
+      "measure": "MSCI index membership indicator (mechanical inclusion rule based on free-float market-cap ranking) used as instrument",
+      "source": "hand-collected / MSCI membership"
+     },
+     {
+      "name": "JGTRRA taxation uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Nonlinear Regressions: FE Poisson, FE Negative Binomial, Zero-Inflated NB, RE Poisson)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "FE Poisson and FE NB restricted to firms with time-variant DV (9,741 obs); ZINB and RE Poisson (21,020 obs)",
+    "dv": {
+     "name": "number of opportunistic acquisitions",
+     "measure": "count of opportunistic acquisitions in a given year (untransformed count DV in count models)",
+     "source": "TFN Insider Filing Data"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity",
+      "measure": "entropy measure over ownership shares of eight legal institutional-investor types holding at least 1% of shares",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-year observations with shareholder proposal voting data",
+    "dv": {
+     "name": "shareholder voting consensus",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ISS Voting Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "investor type diversity",
+      "measure": "entropy measure over ownership shares of eight legal institutional-investor types holding at least 1% of shares",
+      "source": "Thomson Reuters 13F; Bushee institutional investor legal-type classification"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "business diversification",
+      "source": "Compustat Segment database"
+     },
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "investor trading diversity",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "short interest",
+      "source": "Compustat Short Interest Supplement"
+     },
+     {
+      "name": "activist investor ownership",
+      "source": "Shareholder Activism data (Audit Analytics); Thomson Reuters 13F"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO option pay",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "Compustat; ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "investor type diversity",
+    "managerial decision-making",
+    "information advantages"
+   ],
+   "mechanism_named": "information advantages",
+   "proposed_edge": {
+    "from": "investor type diversity",
+    "relation": "increases",
+    "to": "managerial decision-making"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "investor type diversity",
+    "collective action"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "other characteristics",
+    "collective actions undertaken by institutional investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "other characteristics",
+    "relation": "affects",
+    "to": "collective actions undertaken by institutional investors"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "market solutions",
+    "investor specialization",
+    "governance concerns",
+    "investor type diversity"
+   ],
+   "mechanism_named": "investor specialization",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "market solutions",
+    "on_path": [
+     "investor type diversity",
+     "governance concerns"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "factors",
+    "governance effectiveness of institutional investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "factors",
+    "relation": "affects",
+    "to": "governance effectiveness of institutional investors"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,618 @@
+{
+ "paper_id": "10.1016/j.jfineco.2015.08.007",
+ "title": "On secondary buyouts",
+ "journal": "JFE",
+ "year": 2016,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sbo_bought_late",
+      "relation": "increases",
+      "to": "money_burning",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "money_burning",
+      "relation": "decreases",
+      "to": "investment_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "sbo_bought_late",
+      "relation": "decreases",
+      "to": "search_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_costs",
+      "relation": "increases",
+      "to": "investment_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "sbo_bought_late",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "investment_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "money_burning",
+    "search_costs",
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "excess_cash",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "money_burning",
+     "moderated_from": "sbo_bought_late",
+     "moderated_to": "investment_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1-mod-a"
+    },
+    {
+     "construct": "relative_investment_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "money_burning",
+     "moderated_from": "sbo_bought_late",
+     "moderated_to": "investment_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1-mod-b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]",
+    "risk (late SBOs underperform because such transactions are less risky)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "complementary_skill_sets",
+      "relation": "increases",
+      "to": "value_creation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_creation",
+      "relation": "increases",
+      "to": "investment_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_creation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fraction_invested_in_late_sbos",
+      "relation": "increases",
+      "to": "investor_dissatisfaction",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_dissatisfaction",
+      "relation": "decreases",
+      "to": "follow_on_fund_size",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_dissatisfaction"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "general partners themselves choose to raise a smaller fund (supply effect), rather than investors penalizing the firm (demand effect)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (private equity buyouts / leveraged buyouts of portfolio companies; secondary buyouts vs. primary buyouts; industries assigned to the 48 Fama-French classifications)",
+  "country_region": "main buyout sample spans multiple countries (fund and company country recorded per investment); the LP-overlap sub-analysis uses U.S. pension funds and insurance companies",
+  "time_period": "1986-2007 (buyout investments by inception year)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,849 buyouts with precise returns data (full sample: 548 SBOs and 7,449 PBOs)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Private Placement Memorandums (PPMs)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Pitchbook database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LinkedIn",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "websites of private equity firms",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "practitioner interviews",
+    "category": "interviews_case",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Standard and Poor's (S&P) 500",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1: Secondary vs. primary buyouts (Panel A exit channels, Panel B performance by exit route, Panel C characteristics)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "548 SBOs (467 liquidated) and 7,449 PBOs (5,382 liquidated); exit route known for 421 SBOs and 4,326 PBOs",
+    "dv": {
+     "name": "buyout exit route and performance",
+     "measure": "exit channel percentages; median and average Cash Multiple; Public Market Equivalent; internal rate of return; percentage of home runs (Cash Multiple > 3) and losses (Cash Multiple < 1)",
+     "source": "Private Placement Memorandums (PPMs)"
+    },
+    "key_ivs": [
+     {
+      "name": "SBO vs PBO classification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2: Testing the money-burning hypothesis (Specifications 1-7)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "deals made by funds for which the performance of all their other investments is known, and which have limited life (non-evergreen funds); 231 SBOs and 3,240 PBOs subsample",
+    "dv": {
+     "name": "buyout investment performance (PME)",
+     "measure": "Public Market Equivalent (PME) of Kaplan and Schoar (2005)",
+     "source": "Private Placement Memorandums (PPMs)"
+    },
+    "key_ivs": [
+     {
+      "name": "SBO bought late",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "SBO bought early",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "PBO bought late",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "Excess cash (interacted with SBO bought late)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "Relative investment size (interacted with SBO bought late)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "investment size",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "club deal",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "buyer portfolio concentration (value-weighted Herfindahl index over 48 Fama-French industries)",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "buyer scale (NIP)",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "buyer experience (log number of investments)",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "private equity firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry x investment inception year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "company country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "fund-focus country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "fund quarter-of-birth fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Panel A: Buyer returns on complementary skill dummies",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "SBO transactions with complete biographical information (138 PE firms, 1,978 general partners); regional/global classification requires known full investment history of both buyer and seller",
+    "dv": {
+     "name": "buyer investment returns",
+     "measure": "buyer incremental PME (estimate of (1-s)c); Public Market Equivalent from the buyer's equity return",
+     "source": "Private Placement Memorandums (PPMs)"
+    },
+    "key_ivs": [
+     {
+      "name": "Margin grower trades with sales grower",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "dummy indicating buyer is MBA-oriented and seller is not, or vice versa (firm MBA-oriented if % MBA-holders above the 43% mean; 37% of GPs hold an MBA)",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "dummy indicating buyer is finance-oriented and seller operations-oriented, or vice versa (firm finance-oriented if majority of GPs had finance/accounting experience at transaction time)",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "dummy = 1 when the seller is regional (invested in 2 countries or fewer at time of SBO) and the buyer is global (invested in 3 countries or more)",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal characteristics",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "industry-time fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Panel B: Seller returns on complementary skill dummies",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "SBO transactions with complete biographical information",
+    "dv": {
+     "name": "seller investment returns",
+     "measure": "seller incremental PME (estimate of sc); Public Market Equivalent from the seller's equity return",
+     "source": "Private Placement Memorandums (PPMs)"
+    },
+    "key_ivs": [
+     {
+      "name": "Margin grower trades with sales grower",
+      "measure": "dummy = 1 when a margin-grower PE firm transacts with a sales-grower",
+      "source": "Capital IQ"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "dummy indicating buyer MBA-oriented and seller not, or vice versa",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "dummy indicating buyer finance-oriented and seller operations-oriented, or vice versa",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "dummy = 1 when seller is regional and buyer is global",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal characteristics",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "industry-time fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Risk estimates for SBOs (bankruptcy rate, capital loss rate, leverage, beta)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "investment risk",
+     "measure": "four risk measures: (1) bankruptcy rate; (2) capital loss rate (multiple below one); (3) leverage; (4) beta - unconditional beta from regressing IRR on contemporaneous average stock-market returns, and conditional beta from coefficients on interactions of the dummies of interest with stock-market returns",
+     "source": "Private Placement Memorandums (PPMs)"
+    },
+    "key_ivs": [
+     {
+      "name": "SBO bought late",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "complementary skill set dummies",
+      "measure": "the same complementary-skill dummies as Table 3 (margin/sales grower, educational background, professional background, regional-to-global)",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Investor welfare - net-of-fees PMEs/NPV of SBOs",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "net-of-fees investor return (NPV/PME)",
+     "measure": "Public Market Equivalent net of fees (Kaplan and Schoar 2005), using S&P 500 as market proxy; management fees assumed 20% of investment capital and 20% carried interest on funds returning more than 1.084 after management fees",
+     "source": "Private Placement Memorandums (PPMs)"
+    },
+    "key_ivs": [
+     {
+      "name": "late SBO / complementary-skill grouping",
+      "measure": "grouping of buyouts into late SBOs, early SBOs, PBOs, and SBOs between PE firms with vs. without complementary skills",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6: Investor reaction - follow-on fund size regression",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "fund-level; cannot run for SBOs between PE firms without complementary skill sets (sample less than 50 funds)",
+    "dv": {
+     "name": "follow-on fund size",
+     "measure": "size of the PE firm's next (follow-on) fund raised",
+     "source": "Private Placement Memorandums (PPMs)"
+    },
+    "key_ivs": [
+     {
+      "name": "fraction of capital invested in late SBOs",
+      "measure": "fraction of the fund's capital invested in late SBOs",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "fraction of capital invested in early SBOs",
+      "measure": "fraction of the fund's capital invested in early SBOs",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "fraction of capital invested in late PBOs",
+      "measure": "fraction of the fund's capital invested in late PBOs",
+      "source": "Private Placement Memorandums (PPMs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "size of the fund doing late SBOs",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "performance of the fund doing late SBOs",
+      "source": "Private Placement Memorandums (PPMs)"
+     },
+     {
+      "name": "vintage year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: LP overlap illustrative example (Aspen Dental SBO; Panel A transaction details, Panel B estimated transaction fees per LP)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "October 2010 Aspen Dental Management SBO (Green Equity Investors V bought from Ares Corporate Opportunities Fund II); CalPERS plus eight other overlapping LPs",
+    "dv": {
+     "name": "transaction fees borne by limited partners",
+     "measure": "estimated transaction fees as a percentage of each LP's gross and net Aspen transaction (fees range 6% to 66% of net transaction, median 10%, mean 22%)",
+     "source": "practitioner interviews"
+    },
+    "key_ivs": [
+     {
+      "name": "LP overlap",
+      "measure": "situation in which a limited partner holds stakes in both the buying and the selling fund of an SBO (e.g., CalPERS held 7.5% of the buying fund and 9.7% of the selling fund)",
+      "source": "Pitchbook database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "lps",
+    "expected returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "lp investment in funds with complementary skills",
+    "relation": "increases",
+    "to": "expected returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sbos with lp overlap",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "lp allocations",
+    "lp overlap"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "gp",
+    "lp overlap"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "lps",
+    "pe fund allocation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "finite investment period of pe funds",
+    "pe investors"
+   ],
+   "mechanism_named": "finite-life limited partnerships",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "contractual caps on late sbos",
+    "limited partners’ welfare"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "contractual caps on late sbos",
+    "relation": "increases",
+    "to": "limited partners’ welfare"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

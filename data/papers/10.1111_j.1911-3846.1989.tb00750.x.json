@@ -1,0 +1,411 @@
+{
+ "paper_id": "10.1111_j.1911-3846.1989.tb00750.x",
+ "title": "A classification of mergers and acquisitions by motives: Analysis of market responses*",
+ "journal": "CAR",
+ "year": 1989,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "free cash flow theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_liquidity",
+      "relation": "increases",
+      "to": "free_cash_flows",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "free_cash_flows",
+      "relation": "increases",
+      "to": "target_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_liquidity",
+      "relation": "increases",
+      "to": "takeover_attractiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_attractiveness",
+      "relation": "increases",
+      "to": "target_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_liquidity",
+      "relation": "decreases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "decreases",
+      "to": "target_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "free_cash_flows",
+    "takeover_attractiveness",
+    "valuation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "differences in firm size",
+    "method of payment (cash- versus stock-based consideration)",
+    "merger versus tender offer"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bankruptcy_risk",
+      "relation": "decreases",
+      "to": "free_cash_flows",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "free_cash_flows",
+      "relation": "increases",
+      "to": "target_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "bankruptcy_risk",
+      "relation": "decreases",
+      "to": "takeover_attractiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_attractiveness",
+      "relation": "increases",
+      "to": "target_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "bankruptcy_risk",
+      "relation": "increases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "decreases",
+      "to": "target_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "free_cash_flows",
+    "takeover_attractiveness",
+    "valuation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "differences in firm size",
+    "method of payment (cash- versus stock-based consideration)",
+    "merger versus tender offer"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_liquidity",
+      "relation": "increases",
+      "to": "free_cash_flows",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "free_cash_flows",
+      "relation": "decreases",
+      "to": "tobin_q",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "free_cash_flows"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A across 4-digit SIC industries; no focal sector)",
+  "country_region": "",
+  "time_period": "1965-1984",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "152 target firms and 141 bidder firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat Research File",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP daily retums file",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Merger and Acquisitions data base",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Compustat Industrial tape",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "FASB 33 tape",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "152 target firms and 141 bidder firms (final sample; 123 firms in the -7,0 window)",
+    "dv": {
+     "name": "abnormal returns (market-adjusted)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP daily retums file"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A motive group (bankrupt-predicted / highly liquid / remainder)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Research File"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal returns (risk-adjusted)",
+     "measure": "risk-adjusted abnormal returns (calculated by equation (3), Appendix A)",
+     "source": "CRSP daily retums file"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A motive group (bankrupt-predicted / highly liquid / remainder)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Research File"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "151 firms",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "abnormal return (standardized and unstandardized residuals) across various event windows",
+     "source": "CRSP daily retums file"
+    },
+    "key_ivs": [
+     {
+      "name": "group membership (three M&A motive groups)",
+      "measure": "one-way ANOVA / regression with dummies for group membership (bankrupt, highly liquid, remainder)",
+      "source": "Compustat Research File"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Target firms",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "abnormal return (standardized and unstandardized residuals) across event windows",
+     "source": "CRSP daily retums file"
+    },
+    "key_ivs": [
+     {
+      "name": "group membership (three M&A motive groups)",
+      "measure": "two dummy variables for group membership",
+      "source": "Compustat Research File"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Target firms",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "abnormal return (standardized and unstandardized residuals) across event windows",
+     "source": "CRSP daily retums file"
+    },
+    "key_ivs": [
+     {
+      "name": "group membership (three M&A motive groups)",
+      "measure": "two dummy variables for group membership",
+      "source": "Compustat Research File"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market value of common equity)",
+      "source": ""
+     },
+     {
+      "name": "method of payment (cash-based vs. common stock-based consideration)",
+      "source": "The Merger and Acquisitions data base"
+     },
+     {
+      "name": "type of takeover (merger vs. tender offer)",
+      "source": "The Merger and Acquisitions data base"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Target firms with available q-ratio data (44 bankrupt-predicted, 37 highly liquid, 127 remainder)",
+    "dv": {
+     "name": "Tobin's q ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat Research File"
+    },
+    "key_ivs": [
+     {
+      "name": "group membership (three M&A motive groups)",
+      "measure": "target firms classified as bankrupt-predicted, highly liquid, or remainder",
+      "source": "Compustat Research File"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table B-1 (Appendix B) - Correlations among the five measures of q-ratios",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "q-ratio measures",
+     "measure": "correlations among five measures of q-ratios (for 1979, repeated 1979-1983)",
+     "source": "Compustat Industrial tape"
+    },
+    "key_ivs": [
+     {
+      "name": "alternative q-ratio measures",
+      "measure": "five alternative q-ratio measures computed for the validation sample",
+      "source": "FASB 33 tape"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "expected synergies",
+    "similarity of businesses among bidder and target",
+    "strategic issues",
+    "abnormal retums"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "takeover announcement",
+     "abnormal retums"
+    ]
+   }
+  }
+ ]
+}

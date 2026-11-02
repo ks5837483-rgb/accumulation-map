@@ -1,0 +1,363 @@
+{
+ "paper_id": "10.1016_0304-405x(85)90016-9",
+ "title": "Partially anticipated events: A model of stock price reactions with an application to corporate acquisitions",
+ "journal": "JFE",
+ "year": 1985,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market efficiency",
+  "rational expectations",
+  "shareholder wealth maximization hypothesis",
+  "size maximization hypothesis",
+  "capital asset pricing model"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H.1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "absence_of_acquisition_attempt",
+      "relation": "increases",
+      "to": "investor_disappointment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_disappointment",
+      "relation": "decreases",
+      "to": "non_announcement_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_disappointment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H.2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_attempt",
+      "relation": "increases",
+      "to": "profitable_investment_project",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "profitable_investment_project",
+      "relation": "increases",
+      "to": "economic_impact",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "profitable_investment_project"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "size maximization hypothesis"
+   ]
+  },
+  {
+   "hypothesis": "H.3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_attempt",
+      "relation": "increases",
+      "to": "resolution_of_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "resolution_of_uncertainty",
+      "relation": "increases",
+      "to": "announcement_effect",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "resolution_of_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (frequently acquiring firms / conglomerates)",
+  "country_region": "United States (NYSE-listed firms)",
+  "time_period": "[withheld: wording matches the source]",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "30 firms; 228 acquisition attempts"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "CRSP files",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index (WSJI) - hand-recorded first public announcement dates of all acquisition attempts",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Schipper and Thompson (1983) sample of 30 conglomerate/acquisition-program firms",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Bildersee (1975) risk-free rate of return series",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - regression results for the model in excess dollar returns (eq. 6), estimated by OLS per firm over 60 months",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "firm excess dollar return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP files"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition attempt dummy (d_jt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "value-weighted market portfolio excess return (market-model risk adjustment, beta term)",
+      "source": "CRSP files"
+     },
+     {
+      "name": "riskless interest rate r_t",
+      "source": "Bildersee (1975) risk-free rate series"
+     },
+     {
+      "name": "beginning-of-period firm equity value V_{j,t-1}",
+      "source": "CRSP files"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 - alternative specification under the Black (1972) CAPM, zero-beta portfolio return instrumented",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "30 acquiring firms, 60 monthly return observations each",
+    "dv": {
+     "name": "firm excess dollar return",
+     "measure": "(r_jt - r_t)V_{j,t-1}: firm j's excess dollar return, model estimated under the Black (1972) version of the CAPM using the zero-beta portfolio return",
+     "source": "CRSP files"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition attempt dummy (d_jt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "zero-beta portfolio return (instrumented)",
+      "source": "CRSP files"
+     },
+     {
+      "name": "value-weighted market portfolio excess return",
+      "source": "CRSP files"
+     },
+     {
+      "name": "beginning-of-period firm equity value V_{j,t-1}",
+      "source": "CRSP files"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 - regression results with the model expressed in excess rate of return form, estimated by OLS",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "30 acquiring firms, 60 monthly return observations each",
+    "dv": {
+     "name": "firm excess rate of return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP files"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition attempt dummy (d_jt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "value-weighted market portfolio excess return (market-model risk adjustment)",
+      "source": "CRSP files"
+     },
+     {
+      "name": "riskless interest rate r_t",
+      "source": "Bildersee (1975) risk-free rate series"
+     }
+    ]
+   },
+   {
+    "label": "Section 3.3 - more restrictive joint F-test of the null that expected economic impact v_j is zero (imposing alpha_j = y_j = 0 for all firms)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "29 firms with acquisition attempts (58 and 1652 degrees of freedom)",
+    "dv": {
+     "name": "firm excess dollar return",
+     "measure": "(r_jt - r_t)V_{j,t-1}: joint linear restriction alpha_j = y_j = 0 across firms tested via the average of one-firm-at-a-time F-values",
+     "source": "CRSP files"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition attempt dummy (d_jt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "value-weighted market portfolio excess return",
+      "source": "CRSP files"
+     },
+     {
+      "name": "beginning-of-period firm equity value V_{j,t-1}",
+      "source": "CRSP files"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "acquisition program",
+    "firms in general"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "active acquirers",
+    "comparative advantage"
+   ],
+   "mechanism_named": "comparative advantage",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "fixed cost of maintaining an acquisition program",
+    "benefits of acquisition attempts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "fixed cost of maintaining an acquisition program",
+    "relation": "decreases",
+    "to": "benefits of acquisition attempts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "announcement effects",
+    "successive attempts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "successive attempts",
+    "relation": "affects",
+    "to": "announcement effects"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "partial anticipation",
+    "acquisition attempts",
+    "other types of events"
+   ],
+   "mechanism_named": "partially anticipate",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "event studies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

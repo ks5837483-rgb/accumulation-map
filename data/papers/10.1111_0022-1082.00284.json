@@ -1,0 +1,927 @@
+{
+ "paper_id": "10.1111_0022-1082.00284",
+ "title": "The Effect of Bank Relations on Investment Decisions: An Investigation of Japanese Takeover Bids",
+ "journal": "JF",
+ "year": 2000,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory",
+  "financial intermediation theory",
+  "relationship banking"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "main_bank_borrowing",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "main_bank_borrowing",
+      "relation": "increases",
+      "to": "bank_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_monitoring",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "bank_monitoring"
+   ],
+   "moderators": [
+    {
+     "construct": "low_tobins_q",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "bank_monitoring",
+     "moderated_from": "main_bank_borrowing",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "model 4"
+    },
+    {
+     "construct": "bank_centered_group_membership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "bank_power",
+     "moderated_from": "main_bank_borrowing",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "model 5"
+    },
+    {
+     "construct": "cash_reserves",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "bank_power",
+     "moderated_from": "main_bank_borrowing",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "model 6"
+    },
+    {
+     "construct": "post_1987_subperiod",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "bank_health",
+     "moderated_from": "main_bank_borrowing",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "model 7"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bank power hypothesis: banks promote acquisitions that serve creditor interests at the expense of shareholders",
+    "spurious relation: firms with good investment opportunities borrow from banks (endogeneity of bank financing)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "tobins_q",
+      "relation": "decreases",
+      "to": "information_revelation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_revelation",
+      "relation": "increases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_revelation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_target",
+      "relation": "increases",
+      "to": "ownership_concentration",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ownership_concentration",
+      "relation": "increases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ownership_concentration"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "rescue_merger",
+      "relation": "increases",
+      "to": "bank_coercion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_coercion",
+      "relation": "decreases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_coercion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "equity_financing",
+      "relation": "increases",
+      "to": "adverse_information_revelation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_information_revelation",
+      "relation": "decreases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_information_revelation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (nonfinancial Japanese acquiring firms; manufacturing, wholesale and retail, construction, transportation/communications/utilities, real estate, and agriculture/mining/fisheries)",
+  "country_region": "Japan",
+  "time_period": "1977-1993",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "154"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Nikkei database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Shohou (Gazette) published by the Tokyo Stock Exchange",
+    "category": "other",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Annual Securities Statistics by the Tokyo Stock Exchange",
+    "category": "other",
+    "kind": "government_public"
+   },
+   {
+    "name": "Kigyo Keiretsu Soran",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Acquiring firms' annual and semiannual reports",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "Keiretsu No Kenkyu",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Kaisha Soukan",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "154 Japanese acquiring firms",
+    "dv": {
+     "name": "Cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table III - Two-Day CARs categorized by transaction and bidder-specific attributes (univariate subsample comparisons)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "154 Japanese bidders (subsamples split by attribute)",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Membership in bank-centered group",
+      "measure": "acquiring firm belongs to bank-centered group (Mitsubishi, Mitsui, Sumitomo, DKB, Fuyo, or Sanwa)",
+      "source": "Keiretsu No Kenkyu"
+     },
+     {
+      "name": "Industrial relatedness",
+      "measure": "acquirer and target are in same vs. different industries (three-digit SIC codes)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Rescue motivation",
+      "measure": "acquisition motivated by rescue purposes vs. not",
+      "source": "newspapers"
+     },
+     {
+      "name": "Method of payment",
+      "measure": "method of payment involves only equity vs. combination of cash and equity",
+      "source": "newspapers"
+     },
+     {
+      "name": "Acquirer size",
+      "measure": "market value of equity is above vs. below sample median",
+      "source": "PACAP"
+     },
+     {
+      "name": "Leverage ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Main bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table IV Model (1) - CARs on total leverage",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "154 observations",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Leverage ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log of bidder market value of equity",
+      "source": "PACAP"
+     },
+     {
+      "name": "Value of transaction / market value of bidder equity",
+      "source": "newspapers; PACAP"
+     },
+     {
+      "name": "Prior bidder industry-adjusted stock return (-220 to -20 days)",
+      "source": "PACAP"
+     },
+     {
+      "name": "Bidder's Tobin Q",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Related acquisition (indicator)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Method of payment includes cash (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "annual reports"
+     },
+     {
+      "name": "Management equity ownership",
+      "source": "annual reports"
+     },
+     {
+      "name": "Target is privately held firm (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Rescue merger (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Year of transaction indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Model (2) - CARs on bank debt vs. other debt",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "154 observations",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Other debt ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log of bidder market value of equity",
+      "source": "PACAP"
+     },
+     {
+      "name": "Value of transaction / market value of bidder equity",
+      "source": "newspapers; PACAP"
+     },
+     {
+      "name": "Prior bidder industry-adjusted stock return (-220 to -20 days)",
+      "source": "PACAP"
+     },
+     {
+      "name": "Bidder's Tobin Q",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Related acquisition (indicator)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Method of payment includes cash (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "annual reports"
+     },
+     {
+      "name": "Management equity ownership",
+      "source": "annual reports"
+     },
+     {
+      "name": "Target is privately held firm (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Rescue merger (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Year of transaction indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Model (3) - CARs on main bank loan ratio",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "136 observations",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Main bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran"
+     },
+     {
+      "name": "Other debt ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log of bidder market value of equity",
+      "source": "PACAP"
+     },
+     {
+      "name": "Value of transaction / market value of bidder equity",
+      "source": "newspapers; PACAP"
+     },
+     {
+      "name": "Prior bidder industry-adjusted stock return (-220 to -20 days)",
+      "source": "PACAP"
+     },
+     {
+      "name": "Bidder's Tobin Q",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Related acquisition (indicator)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Method of payment includes cash (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "annual reports"
+     },
+     {
+      "name": "Management equity ownership",
+      "source": "annual reports"
+     },
+     {
+      "name": "Target is privately held firm (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Rescue merger (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Year of transaction indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Model (4) - main bank loan ratio interacted with low Tobin Q",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "136 observations",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Main bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran"
+     },
+     {
+      "name": "Main bank loan ratio x Bidder's Tobin Q is below sample median (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran; Nikkei database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log of bidder market value of equity",
+      "source": "PACAP"
+     },
+     {
+      "name": "Value of transaction / market value of bidder equity",
+      "source": "newspapers; PACAP"
+     },
+     {
+      "name": "Prior bidder industry-adjusted stock return (-220 to -20 days)",
+      "source": "PACAP"
+     },
+     {
+      "name": "Bidder's Tobin Q",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Other debt ratio",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Related acquisition (indicator)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Method of payment includes cash (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "annual reports"
+     },
+     {
+      "name": "Management equity ownership",
+      "source": "annual reports"
+     },
+     {
+      "name": "Target is privately held firm (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Rescue merger (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Year of transaction indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Model (5) - main bank loan ratio interacted with financial-group membership",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "134 observations",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Main bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran"
+     },
+     {
+      "name": "Bidder is member of financial group (indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Keiretsu No Kenkyu"
+     },
+     {
+      "name": "Main bank loan ratio x Bidder is member of financial group (interaction)",
+      "measure": "interaction term between the bank-centered group membership indicator and the main bank loan ratio",
+      "source": "Keiretsu No Kenkyu; Kigyo Keiretsu Soran"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log of bidder market value of equity",
+      "source": "PACAP"
+     },
+     {
+      "name": "Value of transaction / market value of bidder equity",
+      "source": "newspapers; PACAP"
+     },
+     {
+      "name": "Prior bidder industry-adjusted stock return (-220 to -20 days)",
+      "source": "PACAP"
+     },
+     {
+      "name": "Bidder's Tobin Q",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Other debt ratio",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Related acquisition (indicator)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Method of payment includes cash (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "annual reports"
+     },
+     {
+      "name": "Management equity ownership",
+      "source": "annual reports"
+     },
+     {
+      "name": "Target is privately held firm (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Rescue merger (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Year of transaction indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Model (6) - main bank loan ratio interacted with cash reserves",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "131 observations",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Main bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran"
+     },
+     {
+      "name": "Cash reserves",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Main bank loan ratio x Cash reserves (interaction)",
+      "measure": "interaction of cash reserves with the main bank loan ratio",
+      "source": "Kigyo Keiretsu Soran; Nikkei database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log of bidder market value of equity",
+      "source": "PACAP"
+     },
+     {
+      "name": "Value of transaction / market value of bidder equity",
+      "source": "newspapers; PACAP"
+     },
+     {
+      "name": "Prior bidder industry-adjusted stock return (-220 to -20 days)",
+      "source": "PACAP"
+     },
+     {
+      "name": "Bidder's Tobin Q",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Other debt ratio",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Related acquisition (indicator)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Method of payment includes cash (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "annual reports"
+     },
+     {
+      "name": "Management equity ownership",
+      "source": "annual reports"
+     },
+     {
+      "name": "Target is privately held firm (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Rescue merger (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Year of transaction indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Model (7) - main bank loan ratio interacted with 1987-1993 subperiod",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "136 observations",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Main bank loan ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran"
+     },
+     {
+      "name": "Main bank loan ratio x 1987-1993 subperiod (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kigyo Keiretsu Soran"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log of bidder market value of equity",
+      "source": "PACAP"
+     },
+     {
+      "name": "Value of transaction / market value of bidder equity",
+      "source": "newspapers; PACAP"
+     },
+     {
+      "name": "Prior bidder industry-adjusted stock return (-220 to -20 days)",
+      "source": "PACAP"
+     },
+     {
+      "name": "Bidder's Tobin Q",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Other debt ratio",
+      "source": "Nikkei database"
+     },
+     {
+      "name": "Related acquisition (indicator)",
+      "source": "PACAP; newspapers"
+     },
+     {
+      "name": "Method of payment includes cash (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "annual reports"
+     },
+     {
+      "name": "Management equity ownership",
+      "source": "annual reports"
+     },
+     {
+      "name": "Target is privately held firm (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Rescue merger (indicator)",
+      "source": "newspapers"
+     },
+     {
+      "name": "Year of transaction indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Unreported endogeneity check - instrumental variables for bank financing",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "Two-day cumulative abnormal return CAR (AD-1, AD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PACAP"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank / main bank borrowings (instrumented)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Nikkei database; Kigyo Keiretsu Soran"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bank debt",
+    "bidders’ cars"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bank financing",
+    "bidder cars"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

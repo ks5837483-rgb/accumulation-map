@@ -1,0 +1,36 @@
+=== 17 mechanisms credible in >=2 silos | rows 1093 | papers 411
+coverage: {'evaluator': 812, 'country': 1057, 'industry': 1089, 'target': 531, 'sample_era': 1050}
+
+=== pooled support by attribute level (paper x mechanism units)
+evaluator   firm: 0.87 (n=300) | investors: 0.78 (n=224)
+country     US: 0.84 (n=460) | non-US: 0.79 (n=166)
+industry    cross: 0.82 (n=548) | single/few: 0.86 (n=95)
+target      private: 0.80 (n=68) | public: 0.83 (n=252)
+sample_era  pre-1995: 0.78 (n=223) | 1995-2004: 0.83 (n=249) | 2005+: 0.88 (n=160)
+
+=== per mechanism x attribute: HOLDS / PARTIAL / SPLITS (both levels >=3 papers); blank = too thin to test
+                      mechanism evaluator country industry  target sample_era
+        accounting_manipulation                                       PARTIAL
+              adverse_selection     HOLDS   HOLDS    HOLDS   HOLDS      HOLDS
+       asset_valuation_accuracy     HOLDS   HOLDS    HOLDS              HOLDS
+             bidder_competition     HOLDS PARTIAL  PARTIAL   HOLDS      HOLDS
+         deal_selection_quality             HOLDS    HOLDS   HOLDS     SPLITS
+                  due_diligence     HOLDS   HOLDS    HOLDS   HOLDS           
+          information_asymmetry     HOLDS   HOLDS    HOLDS   HOLDS      HOLDS
+            information_opacity     HOLDS   HOLDS                            
+information_processing_capacity     HOLDS           SPLITS                   
+                     monitoring   PARTIAL PARTIAL            HOLDS      HOLDS
+              operating_synergy     HOLDS   HOLDS    HOLDS              HOLDS
+        ownership_control_value     HOLDS   HOLDS    HOLDS                   
+                price_discovery                                         HOLDS
+             signal_credibility   PARTIAL PARTIAL          PARTIAL     SPLITS
+         signal_of_firm_quality     HOLDS            HOLDS   HOLDS      HOLDS
+               transaction_cost     HOLDS   HOLDS    HOLDS              HOLDS
+          valuation_uncertainty     HOLDS   HOLDS    HOLDS   HOLDS      HOLDS
+
+cells testable 61 of 85 | HOLDS 50 | PARTIAL 8 | SPLITS 3
+
+SPLITS detail:
+  deal_selection_quality           sample_era  pre-1995 0.50/4 vs 2005+ 0.92/6
+  information_processing_capacity  industry    single/few 0.67/3 vs cross 0.92/14
+  signal_credibility               sample_era  pre-1995 0.25/4 vs 2005+ 1.00/8

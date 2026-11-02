@@ -1,0 +1,703 @@
+{
+ "paper_id": "10.1287_mnsc.2013.1796",
+ "title": "Can Analysts Analyze Mergers?",
+ "journal": "MNSC",
+ "year": 2014,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "self-selection theory",
+  "analyst reputation and career concerns",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "former_target_analyst",
+      "relation": "increases",
+      "to": "forecasting_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "forecasting_ability",
+      "relation": "increases",
+      "to": "forecast_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "forecasting_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "forward-looking bias (target analysts wait for favorable public post-completion information before covering, so their superior accuracy is mechanical rather than self-selection on ability)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "former_target_analyst",
+      "relation": "increases",
+      "to": "favorable_view_of_ma_deal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_view_of_ma_deal",
+      "relation": "increases",
+      "to": "research_optimism",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_view_of_ma_deal"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Deal-quality determinant of coverage (unnumbered prediction)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ma_deal_quality",
+      "relation": "increases",
+      "to": "favorable_assessment_of_deal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_assessment_of_deal",
+      "relation": "increases",
+      "to": "target_analyst_coverage_retention",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_assessment_of_deal"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Combined H1+H2 performance prediction (unnumbered)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_analyst_retention_percentage",
+      "relation": "increases",
+      "to": "favorable_assessment_of_merged_firm_prospects",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_assessment_of_merged_firm_prospects",
+      "relation": "increases",
+      "to": "long_term_firm_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_assessment_of_merged_firm_prospects"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "forward-looking bias (target analysts delay coverage until favorable public information arrives, so retention mechanically tracks realized post-completion performance)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms across sectors; industry dummies included as controls)",
+  "country_region": "United States",
+  "time_period": "1985-2005",
+  "sample_description": "Completed U.S. M&A deals from Securities Data Company (SDC), in which both acquiring and target firms are publicly listed/traded in the U.S. and 100% of the target is acquired (partial acquisitions excluded); both firms in CRSP and COMPUSTAT; target at least 5% of acquirer size and deal value at least $10 million; matched with individual analysts' one-year-ahead earnings forecasts, recommendations, and long-term growth forecasts from I/B/E/S",
+  "sample_size": "1,787 completed M&A deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P's COMPUSTAT Research Tape",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval Services",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel A: Probit determinants of acquirer analysts' coverage decisions",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "former acquirer analysts (Observations 9,920-14,471 across columns)",
+    "dv": {
+     "name": "Acquirer analyst stays",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Cross-Cover",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Same_Broker",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "All_Star",
+      "measure": "analyst research-quality proxy (all-star analyst indicator)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Linked / Top25_Undergrad",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (following Cohen et al. 2010)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "A_Conglomerate",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "A_STDEV",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "A_ROA",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "T_ROA",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Deal_Value",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Premium",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Relative_Size",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "A_CAR",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Paystock%",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Diversifying",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Avg_Score",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "#Companies",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Broker_Size",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "MA_Advisor",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B: Probit determinants of target analysts' coverage decisions",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "former target analysts (Observations 6,451-8,853 across columns)",
+    "dv": {
+     "name": "Target analyst stays",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Cross-Cover",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Same_Broker",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "All_Star",
+      "measure": "analyst research-quality proxy (all-star analyst indicator)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Linked / Top25_Undergrad",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (following Cohen et al. 2010)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "A_Conglomerate",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "A_STDEV",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "A_ROA",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "T_ROA",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Deal_Value",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Premium",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Relative_Size",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "A_CAR",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Paystock%",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Diversifying",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Trade_Volume",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "MA_Advisor",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Avg_Score",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "#Companies",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Broker_Size",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst forecast errors at FYE+1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "T_Stay",
+      "measure": "indicator for former target analysts (analysts who have covered the target prior to the M&A transaction; excludes cross-cover analysts)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "New",
+      "measure": "indicator for newly added analysts (covered neither merging firm prior to the M&A transaction)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Cross-cover_Stay",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Horizon",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Paystock%",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Diversifying",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Relative_Size",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "A_Conglomerate",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Trade_Volume",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: OLS regression of analysts' recommendations for the merged firms at FYE+1 (Equation 1)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Avg_Recommendation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "T_Stay",
+      "measure": "indicator for former target analysts (excludes cross-cover analysts)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "New",
+      "measure": "indicator for newly added analysts (covered neither merging firm prior)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Cross-cover_Stay",
+      "measure": "indicator for analysts who covered both merging firms prior and stay",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Avg_Horizon",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Paystock%",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Diversifying",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Relative_Size",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "A_CAR",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "A_ROA",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "A_Conglomerate",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Avg_LTG_Forecasts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "T_Stay",
+      "measure": "indicator for former target analysts (excludes cross-cover analysts)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "New",
+      "measure": "indicator for newly added analysts (covered neither merging firm prior)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Cross-cover_Stay",
+      "measure": "indicator for analysts who covered both merging firms prior and stay",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Avg_Horizon",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Paystock%",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Diversifying",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "Relative_Size",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "A_CAR",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "A_ROA",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "A_Conglomerate",
+      "source": "S&P's COMPUSTAT Research Tape"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Long-term abnormal stock performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "T_Stay%",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "A_Stay%",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "New%",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Cross-cover_Stay%",
+      "measure": "the percentage of cross-cover analysts (covered both merging firms) retaining coverage of the merged firm",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "A_Market_Cap",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Premium",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "Deal_Value",
+      "source": "Securities Data Company (SDC)"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: OLS regression of analyst coverage and long-term operating performance (ROA) of the merged firm (Equation 2)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Long-term operating performance (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "S&P's COMPUSTAT Research Tape"
+    },
+    "key_ivs": [
+     {
+      "name": "T_Stay%",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "A_Stay%",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "New%",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Cross-cover_Stay%",
+      "measure": "the percentage of cross-cover analysts retaining coverage of the merged firm",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm, M&A Deal Controls and Interactions",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

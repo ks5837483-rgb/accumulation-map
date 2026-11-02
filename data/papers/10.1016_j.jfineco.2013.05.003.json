@@ -1,0 +1,696 @@
+{
+ "paper_id": "10.1016_j.jfineco.2013.05.003",
+ "title": "Are small firms less vulnerable to overpriced stock offers?",
+ "journal": "JFE",
+ "year": 2013,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "overvaluation theory of mergers",
+  "information asymmetry",
+  "opinion divergence theory",
+  "agreement model of equity issuance",
+  "certification",
+  "risk-sharing theory of payment method"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_size",
+      "relation": "increases",
+      "to": "wealth_expropriation_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "wealth_expropriation_potential",
+      "relation": "increases",
+      "to": "targetiveness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "firm_size",
+      "relation": "increases",
+      "to": "acquisition_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_difficulty",
+      "relation": "decreases",
+      "to": "targetiveness",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "wealth_expropriation_potential",
+    "acquisition_difficulty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "opinion divergence hypothesis (Chatterjee, John, and Yan, 2012): greater opinion divergence about small firms raises required premium and lowers targetiveness"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_size",
+      "relation": "increases",
+      "to": "wealth_expropriation_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "wealth_expropriation_potential",
+      "relation": "increases",
+      "to": "targetiveness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "wealth_expropriation_potential"
+   ],
+   "moderators": [
+    {
+     "construct": "hot_market",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "wealth_expropriation_potential",
+     "moderated_from": "firm_size",
+     "moderated_to": "targetiveness",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "opinion divergence hypothesis (Chatterjee, John, and Yan, 2012) as an explanation for the hot-market targetiveness patterns"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_size",
+      "relation": "increases",
+      "to": "wealth_expropriation_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "wealth_expropriation_potential",
+      "relation": "increases",
+      "to": "acquirer_overvaluation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_size",
+      "relation": "decreases",
+      "to": "managerial_resistance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_resistance",
+      "relation": "decreases",
+      "to": "acquirer_overvaluation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "wealth_expropriation_potential",
+    "managerial_resistance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_overvaluation",
+      "relation": "increases",
+      "to": "overvaluation_dilution_motive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overvaluation_dilution_motive",
+      "relation": "increases",
+      "to": "stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overvaluation_dilution_motive"
+   ],
+   "moderators": [
+    {
+     "construct": "small_target",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "overvaluation_dilution_motive",
+     "moderated_from": "acquirer_overvaluation",
+     "moderated_to": "stock_payment",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_size",
+      "relation": "increases",
+      "to": "perceived_acquirer_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_acquirer_overvaluation",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_acquirer_overvaluation"
+   ],
+   "moderators": [
+    {
+     "construct": "information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "perceived_acquirer_overvaluation",
+     "moderated_from": "target_size",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5-certification-need"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "opinion divergence and asymmetric-information (float) effects of Moeller, Schlingemann, and Stulz (2007) driving the announcement returns",
+    "non-certification small-target effect (small targets are picky about cash acquirers, or convey positive synergy information)"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "opinion_divergence",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_premium",
+      "relation": "decreases",
+      "to": "targetiveness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "target_volatility",
+      "relation": "decreases",
+      "to": "agreement_about_target_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agreement_about_target_value",
+      "relation": "increases",
+      "to": "stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_volatility",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agreement_about_target_value",
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Hansen (1987) risk-sharing model, in which greater information asymmetry about the target raises (not lowers) the likelihood of stock payment"
+   ]
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mutual_fund_ownership",
+      "relation": "decreases",
+      "to": "tax_preference_for_stock_payment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "tax_preference_for_stock_payment",
+      "relation": "increases",
+      "to": "stock_payment",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "tax_preference_for_stock_payment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public firms; acquisitions across sectors, including cross-industry deals)",
+  "country_region": "United States",
+  "time_period": "1981-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,990 acquisitions (main sample of targeted U.S. public firms)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) Mergers and Acquisitions file",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva and Lexis/Nexis news reports",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "manually collected sample / hard-copy sources for payment terms",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 Panel A: Targetiveness by firm size (one-percentile size tranches / quartiles)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "158,194 firm-years (MV equity) / 119,043 firm-years (MV assets), CRSP share code 10 or 11, 1981-2004",
+    "dv": {
+     "name": "targetiveness frequency",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; CRSP+Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "firm size (market value of equity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "firm size (market value of assets)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP, Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 Panel B: Quadratic regression of targetiveness on percentile size rank",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "100 one-percentile size tranches; White's heteroskedasticity-consistent standard errors",
+    "dv": {
+     "name": "targetiveness frequency",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; CRSP+Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "percentile size rank and its square",
+      "measure": "the percentile rank of market value of equity (or market value of assets) and its squared value (quadratic functional form)",
+      "source": "CRSP, Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3: Multivariate logistic analysis of targetiveness",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "firm-years in CRSP and Compustat during 1981-2004, share code 10 or 11; N ranges 72,715-112,264 across models (3.1)-(3.5)",
+    "dv": {
+     "name": "targetiveness dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP, SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "percentile size rank and its square",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "opinion divergence measures",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP, other"
+     }
+    ],
+    "controls": [
+     {
+      "name": "book-to-market",
+      "source": "CRSP, Compustat"
+     },
+     {
+      "name": "cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "industry acquisition activity",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "prior-year excess return",
+      "source": "CRSP"
+     },
+     {
+      "name": "growth-resource mismatch dummy",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "targetiveness frequency by payment method",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC, CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "firm size quartile",
+      "measure": "market value of equity NYSE size quartile rank (small = bottom quartile, large = quartiles 2+3+4)",
+      "source": "CRSP"
+     },
+     {
+      "name": "payment method",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Logistic model of the determinants of payment method (stock payment dummy)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "stock payment dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "prior-year excess returns",
+      "measure": "measure of firm-specific valuation",
+      "source": "CRSP"
+     },
+     {
+      "name": "industry-adjusted log market-to-book ratio",
+      "measure": "measure of firm-specific valuation",
+      "source": "CRSP, Compustat"
+     },
+     {
+      "name": "hot-market dummy",
+      "measure": "measure of market-wide valuation (hot market = 1995-2000)",
+      "source": ""
+     },
+     {
+      "name": "valuation measures interacted with small target dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "hostile dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "tender offer dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "competing offer dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "market reactions to last earnings announcements of target and acquirer firms",
+      "source": "CRSP"
+     },
+     {
+      "name": "mutual fund ownership",
+      "source": "other"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Acquirer announcement excess return regression (certification effect of small targets)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "separate regressions by payment method (stock vs cash); subsamples formed by high/low volatility and negative/positive return on assets (ROA)",
+    "dv": {
+     "name": "acquirer announcement excess returns",
+     "measure": "acquirer announcement excess returns (negative market reaction to stock acquirers)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "small target dummy",
+      "measure": "included to capture the predicted certification effect; run in separate regressions by payment method",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "opinion divergence and information asymmetry measures following Moeller, Schlingemann, and Stulz (2007)",
+      "source": "CRSP, other"
+     }
+    ],
+    "controls": [
+     {
+      "name": "basic acquirer announcement return regression controls",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "stock payment",
+    "target volatility"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "stock payment",
+    "relation": "unspecified",
+    "to": "target volatility"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "small target effect",
+    "cash acquisitions"
+   ],
+   "mechanism_named": "certification effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "asymmetric information",
+    "small target effect"
+   ],
+   "mechanism_named": "information effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sample sizes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "analyst forecast dispersion",
+    "small firms"
+   ],
+   "mechanism_named": "opinion divergence",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "ranked excess turnover around earnings releases",
+    "opinion divergence",
+    "market-wide investor sentiment"
+   ],
+   "mechanism_named": "opinion divergence",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

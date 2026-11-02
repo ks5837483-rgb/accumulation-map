@@ -1,0 +1,383 @@
+{
+ "paper_id": "10.1111_0022-1082.00139",
+ "title": "A Reexamination of the Conglomerate Merger Wave in the 1960s: An Internal Capital Markets View",
+ "journal": "JF",
+ "year": 1999,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "internal capital markets theory",
+  "information economics",
+  "financing constraints theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unconstrained_bidder_constrained_target_pairing",
+      "relation": "increases",
+      "to": "internal_capital_market",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "internal_capital_market",
+      "relation": "increases",
+      "to": "bidder_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "unconstrained_bidder_constrained_target_pairing",
+      "relation": "decreases",
+      "to": "asymmetric_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asymmetric_information",
+      "relation": "decreases",
+      "to": "bidder_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "internal_capital_market",
+    "asymmetric_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bootstrapping (high price-earnings bidder takes over low P/E target and fools the market with higher combined earnings-per-share)",
+    "disciplinary motive (high bidder returns come from removing/disciplining target management)",
+    "high-q bidders simply taking over low-q targets"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "constrained_bidder_unconstrained_target_pairing",
+      "relation": "increases",
+      "to": "internal_capital_market",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "internal_capital_market",
+      "relation": "increases",
+      "to": "bidder_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "internal_capital_market"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (conglomerate/diversifying and related acquisitions classified by two-digit SIC codes)",
+  "country_region": "United States",
+  "time_period": "1961-1970",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "392"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT (1973 COMPUSTAT)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Industrial Manual",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poor's Register",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table III, Panel A: Abnormal Returns (related vs. diversifying portfolios)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "392 mergers, 1961-1970",
+    "dv": {
+     "name": "bidder abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "related vs. diversifying acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Standard and Poor's Register"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table III, Panel B: regression of abnormal returns on related-acquisition dummy with terms of takeover",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder abnormal returns",
+     "measure": "the four abnormal return measures defined in Panel A (11-day CAR, date-of-last-revision returns, dollar returns, investment returns)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "related acquisition dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Standard and Poor's Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "dummy = 1 if merger contest involves more than one bidder",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "dummy = 1 if the merger is hostile (management did not support the intended acquisition)",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Moody's Industrial Manual"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "unconstrained-bidder / constrained-target dividend pairing (financing constraint proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Moody's Industrial Manual"
+     },
+     {
+      "name": "bootstrapping dummy (price-earnings)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Moody's Industrial Manual"
+     }
+    ],
+    "controls": [
+     {
+      "name": "dummy = 1 if merger contest involves more than one bidder",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "dummy = 1 if the merger is hostile",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "high-investment-bidder / low-investment-target pairing (financing constraint proxy, robustness to dividend payout)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Moody's Industrial Manual"
+     },
+     {
+      "name": "bootstrapping dummy (price-earnings)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Moody's Industrial Manual"
+     }
+    ],
+    "controls": [
+     {
+      "name": "dummy = 1 if merger contest involves more than one bidder",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "dummy = 1 if the merger is hostile",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "The Wall Street Journal"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "constrained firms",
+    "unconstrained firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "constrained firms",
+    "unconstrained firms",
+    "fundamental q",
+    "euler equation"
+   ],
+   "mechanism_named": "“fundamental _q_ ” approach",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "informational advantages",
+    "capital markets",
+    "financial development"
+   ],
+   "mechanism_named": "informational advantages",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "private information",
+    "managers of bidding firms",
+    "buy shares in their own firm"
+   ],
+   "mechanism_named": "private information",
+   "proposed_edge": {
+    "from": "private information",
+    "relation": "affects",
+    "to": "managers buying shares in their own firm"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "market reactions",
+    "internal capital markets"
+   ],
+   "mechanism_named": "internal capital markets",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "market reactions",
+    "acquisitions",
+    "informational frictions in external and internal markets"
+   ],
+   "mechanism_named": "informational frictions in external and internal markets",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "informational frictions in external and internal markets",
+    "on_path": [
+     "acquisitions",
+     "market reactions"
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,1177 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2011.01653.x",
+ "title": "Are All Inside Directors the Same? Evidence from the External Directorship Market",
+ "journal": "JF",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "optimal contracting theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_entrenchment",
+      "relation": "increases",
+      "to": "ceo_opposition_to_inside_director_appointments",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ceo_opposition_to_inside_director_appointments",
+      "relation": "decreases",
+      "to": "certified_inside_director_representation",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ceo_opposition_to_inside_director_appointments"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "certified_inside_director_representation",
+      "relation": "increases",
+      "to": "board_monitoring_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_monitoring_effectiveness",
+      "relation": "increases",
+      "to": "firm_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "certified_inside_director_representation",
+      "relation": "increases",
+      "to": "board_advisory_capacity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_advisory_capacity",
+      "relation": "increases",
+      "to": "firm_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_monitoring_effectiveness",
+    "board_advisory_capacity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: better past firm performance drives outside directorships and thus CID representation, inducing a spurious CID-performance correlation"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "certified_inside_director_representation",
+      "relation": "increases",
+      "to": "firm_specific_information_sharing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_specific_information_sharing",
+      "relation": "increases",
+      "to": "firm_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_specific_information_sharing"
+   ],
+   "moderators": [
+    {
+     "construct": "r_and_d_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "firm_specific_information_sharing",
+     "moderated_from": "certified_inside_director_representation",
+     "moderated_to": "firm_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H4(i)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "certified_inside_director_representation",
+      "relation": "increases",
+      "to": "board_decision_making_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_decision_making_quality",
+      "relation": "increases",
+      "to": "acquisition_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_decision_making_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4(ii)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "certified_inside_director_representation",
+      "relation": "increases",
+      "to": "board_monitoring_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_monitoring_effectiveness",
+      "relation": "increases",
+      "to": "firm_cash_holdings",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_monitoring_effectiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4(iii)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "certified_inside_director_representation",
+      "relation": "increases",
+      "to": "board_monitoring_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_monitoring_effectiveness",
+      "relation": "decreases",
+      "to": "earnings_overstatement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_monitoring_effectiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "outside_directorship_appointment",
+      "relation": "increases",
+      "to": "inside_director_independence_from_ceo",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inside_director_independence_from_ceo",
+      "relation": "increases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "outside_directorship_appointment",
+      "relation": "increases",
+      "to": "labor_market_certification_signal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "labor_market_certification_signal",
+      "relation": "increases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inside_director_independence_from_ceo",
+    "labor_market_certification_signal"
+   ],
+   "moderators": [
+    {
+     "construct": "number_of_outside_directorships",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "inside_director_distraction",
+     "moderated_from": "outside_directorship_appointment",
+     "moderated_to": "shareholder_wealth",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "certified_inside_director_departure",
+      "relation": "decreases",
+      "to": "board_monitoring_effectiveness",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "board_monitoring_effectiveness",
+      "relation": "increases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_monitoring_effectiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "investors are reacting to the departing executive's replacement rather than to the CID departure itself"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public firms in the IRRC/S&P 1500 universe, excluding finance and utility industries)",
+  "country_region": "United States",
+  "time_period": "1997-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Investor Responsibility Research Center (IRRC) database",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Hennes, Leone, and Miller (2008) intentional/unintentional restatement classification data (from Leone's web site)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "hand-collected director appointment and departure announcement dates (manual search of news releases)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II, Model 1 - Determinants of non-CID board representation (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "non-certified inside director representation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Investor Responsibility Research Center (IRRC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D intensity",
+      "measure": "R&D/Assets (R&D expenses divided by total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Capital expenditure intensity",
+      "measure": "Capital Expenditure/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm size",
+      "measure": "Ln(Sales)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic segments",
+      "measure": "Ln(# Geographic Segments)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Business segments",
+      "measure": "Ln(# Business Segments)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market competition",
+      "measure": "Industry Competition",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO tenure",
+      "measure": "Ln(CEO Tenure)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CEO ownership",
+      "measure": "CEO percent ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Financial leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Past firm performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Board ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Founder director indicator",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Founding family director indicator",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Post-SOX period indicator (=1 for 2001 or later)",
+      "source": ""
+     },
+     {
+      "name": "Recent M&A activity indicator (any M&A within past 2 years)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II, Model 2 - Determinants of CID board representation (OLS)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "certified inside director (CID) representation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Investor Responsibility Research Center (IRRC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D intensity",
+      "measure": "R&D/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Capital expenditure intensity",
+      "measure": "Capital Expenditure/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm size",
+      "measure": "Ln(Sales)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic segments",
+      "measure": "Ln(# Geographic Segments)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Business segments",
+      "measure": "Ln(# Business Segments)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market competition",
+      "measure": "Industry Competition",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO tenure",
+      "measure": "Ln(CEO Tenure)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CEO ownership",
+      "measure": "CEO percent ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Financial leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Past firm performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Board ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Founder director indicator",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Founding family director indicator",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Post-SOX period indicator",
+      "source": ""
+     },
+     {
+      "name": "Recent M&A activity indicator",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II, Models 3-4 - Probit for presence of inside directors / CIDs (also Heckman first-stage selection model)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "presence of inside directors / presence of certified inside directors",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Investor Responsibility Research Center (IRRC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D intensity",
+      "measure": "R&D/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Capital expenditure intensity",
+      "measure": "Capital Expenditure/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm size",
+      "measure": "Ln(Sales)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Geographic segments",
+      "measure": "Ln(# Geographic Segments)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market competition",
+      "measure": "Industry Competition",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO tenure",
+      "measure": "Ln(CEO Tenure)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Financial leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Board ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CEO ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Founder / founding family director indicators",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Post-SOX period indicator",
+      "source": ""
+     },
+     {
+      "name": "Recent M&A activity indicator",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III - Certified inside directors and firm performance (Heckman two-step; firm-FE OLS in models 3 and 6)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "firm-years with non-CEO inside directors present (second-stage sample)",
+    "dv": {
+     "name": "firm operating performance and market-to-book",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Certified inside director representation",
+      "measure": "percentage of CIDs on the board",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Non-certified inside director representation",
+      "measure": "percentage of non-CIDs on the board",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO percent ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CEO percent ownership squared",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Board ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Founder director",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Founding family director",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Operating cash flow lags (CF, CF(t-1), CF(t-2))",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Inverse Mills ratio (Lambda) from first-stage probit",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (models 1,2,4,5); firm fixed effects (models 3,6)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV - Difference-in-difference around an inside director acquiring an unaffiliated outside directorship",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "firm performance (operating cash flow and market-to-book)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-treatment x Treatment Firm (difference-in-difference estimate)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Treatment Firm indicator",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Post-treatment indicator",
+      "measure": "equals one in the post-treatment period (year after) and zero otherwise",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables same as in Table III (suppressed for brevity)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "firms with inside directors (second-stage sample); models 4-6 include finance and utility firms",
+    "dv": {
+     "name": "firm operating performance and market-to-book",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "CID (%) x High R&D",
+      "measure": "CID representation interacted with High R&D indicator (=1 if firm in top quartile of R&D intensity, R&D expenses divided by total assets)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CID (%) x Low R&D",
+      "measure": "CID representation interacted with Low R&D indicator (=1 if firm in bottom quartile of R&D intensity)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Non-CID (%) x High/Low R&D",
+      "measure": "non-CID representation interacted with High/Low R&D indicators",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables including inverse Mills ratio, same as Table III (suppressed)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (models 1,2,4,5); firm fixed effects (models 3,6)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI, Panel A - Univariate 3-day CARs of inside director appointment announcements (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "announcement of a non-CEO inside director being appointed to an unaffiliated outside directorship (becoming a certified inside director)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "3-day cumulative abnormal return (CAR)",
+     "measure": "mean (median) 3-day CAR for the event window [-1, 1]; abnormal return computed by subtracting the expected return (market model, estimated using the value-weighted CRSP index over days [-210, -10]) from the actual return",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Appointment event (becoming a certified inside director)",
+      "measure": "announcement of a non-CEO inside director appointment to an unaffiliated independent outside board",
+      "source": "hand-collected director appointment and departure announcement dates (manual search of news releases)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VI, Panel B - Multivariate regression of appointment-announcement CARs (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "116 appointment announcements (100 in model 3)",
+    "dv": {
+     "name": "announcement CAR for inside director appointments to unaffiliated directorships",
+     "measure": "3-day cumulative abnormal return (CAR) around the appointment announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "High R&D",
+      "measure": "High R&D intensity indicator",
+      "source": "Compustat"
+     },
+     {
+      "name": "60% Independent Outsiders",
+      "measure": "indicator for boards having a majority (60%) of independent outside directors",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "High R&D x 60% Independent Outsiders",
+      "measure": "interaction term",
+      "source": ""
+     },
+     {
+      "name": "Relative Capital Expenditure/Sales",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Firm Size",
+      "measure": "appointing firm's total assets relative to the home firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "Director Age < 60",
+      "measure": "indicator for inside directors under 60",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "2nd Directorship / Busy Director",
+      "measure": "indicators for second outside directorship and holding two or more outside directorships",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Director Ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Board Tenure",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Firm Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Capital Expenditure/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "CF(t-1)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SOX indicator",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI, Panel C - Departure announcement 3-day CARs (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "departure announcement of an inside director",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "3-day CAR for inside director departure announcements",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Inside director departure event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected director appointment and departure announcement dates (manual search of news releases)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VII, Panel A - Univariate acquisition-announcement 5-day CARs (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "acquisition bid announcement",
+    "sample": "3,066 acquisition bid announcements by sample firms, of which 2,824 are completed bids; bidder public, <50% target shares pre-bid, deal value > $1 million and >=1% of bidder market capitalization",
+    "dv": {
+     "name": "5-day acquisition announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Presence of inside directors / CIDs on acquirer board",
+      "measure": "subsamples: all bidders vs bidders with inside directors, further split into with vs without CIDs; all bids vs completed bids",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VII, Panel B (Models 1-5, 7) - Multivariate regressions of acquisition-announcement CARs and combined bidder+target returns (OLS; Heckman self-selection in models 3, 5)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisition bids by sample firms; model 3/5 restricted to firms with inside directors; model 7 restricted to bids for public targets with returns available for both bidder and target",
+    "dv": {
+     "name": "acquisition announcement return / value creation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CID board representation",
+      "measure": "percentage of certified inside directors on the acquirer board",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Non-CID board representation",
+      "measure": "percentage of non-certified inside directors",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CID x High R&D and CID x Low R&D",
+      "measure": "CID representation interacted with high/low R&D intensity indicators",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm and deal characteristics following Masulis, Wang, and Xie (2007)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Bidder firm characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Inverse Mills ratio (self-selection control, models 3 and 5)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ]
+   },
+   {
+    "label": "Table VII, Panel B (Model 6) - Probit of acquisition bid withdrawal sensitivity to shareholder reaction",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition bid withdrawal",
+     "measure": "probit model of whether a bid is withdrawn at the bidder board's discretion",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CID representation x bid announcement 5-day CAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Bid announcement 5-day CAR (market reaction)",
+      "measure": "5-day CAR around the bid announcement",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VIII - Determinants of firm cash holdings (OLS with year+industry FE, models 1-3; Heckman second stage, models 4-5)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "9,798 firm-years (models 1-3); 4,666 firm-years in the Heckman second stage (models 4-5)",
+    "dv": {
+     "name": "firm cash holdings",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Certified Inside Directors (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CID (%) x High R&D and CID (%) x Low R&D",
+      "measure": "CID representation interacted with high/low R&D intensity indicators",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "G-Index (Gompers, Ishii, and Metrick 2003)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Ln(Board Size)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Insider Ownership",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CEO Duality",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Ln(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Capital Expenditures/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock Volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Inverse Mills Ratio (models 4-5)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Year and industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IX - Probit of earnings misreporting / restatement irregularities",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "earnings misreporting / restatement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CID board representation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "CID x firm size",
+      "measure": "interaction of CID representation with firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "CID x High R&D",
+      "measure": "CID representation interacted with high R&D intensity indicator (model 5)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size (Ln Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Other firm and governance characteristics affecting propensity to misreport",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (model 2)",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio / self-selection control (models 3, 7)",
+      "source": "Investor Responsibility Research Center (IRRC) database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "announcement effect",
+    "benefits of a cid"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "board composition",
+    "board effectiveness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "board composition",
+    "relation": "affects",
+    "to": "board effectiveness"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "quality and effectiveness of\nboards of directors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

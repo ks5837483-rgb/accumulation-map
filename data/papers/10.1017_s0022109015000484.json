@@ -1,0 +1,661 @@
+{
+ "paper_id": "10.1017_s0022109015000484",
+ "title": "Informational Content of Options Trading on Acquirer Announcement Return",
+ "journal": "JFQA",
+ "year": 2015,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "informed trading theory",
+  "market microstructure theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "iv_spread",
+      "relation": "increases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information"
+   ],
+   "moderators": [
+    {
+     "construct": "pre_event_stock_return",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "private_information",
+     "moderated_from": "iv_spread",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "pre_m&a_return_interaction"
+    },
+    {
+     "construct": "options_liquidity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "private_information",
+     "moderated_from": "iv_spread",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "options_liquidity_interaction"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "iv_skew",
+      "relation": "decreases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information"
+   ],
+   "moderators": [
+    {
+     "construct": "pre_event_stock_return",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "private_information",
+     "moderated_from": "iv_skew",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "pre_m&a_return_interaction"
+    },
+    {
+     "construct": "options_liquidity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "private_information",
+     "moderated_from": "iv_skew",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "options_liquidity_interaction"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "o_s_ratio",
+      "relation": "increases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "absolute_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information"
+   ],
+   "moderators": [
+    {
+     "construct": "pre_event_absolute_return",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "private_information",
+     "moderated_from": "o_s_ratio",
+     "moderated_to": "absolute_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "os_pre_event_car_interaction"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "iv_spread",
+      "relation": "increases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "target_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "iv_skew",
+      "relation": "decreases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "target_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms listed on NYSE, AMEX, or NASDAQ with listed options)",
+  "country_region": "United States (NYSE, AMEX, NASDAQ; CRSP, Compustat)",
+  "time_period": "1996-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "OptionMetrics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Brokers’ Estimate System (IBES)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "IV spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "IV skew",
+      "measure": "[withheld: wording matches the source]",
+      "source": "OptionMetrics"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel A: Cross-sectional regression of acquirer CAR on IV Spread (N=3,076)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "IV spread",
+      "measure": "day t-1 IV SPREAD, calculated based on Cremers and Weinbaum (2010)",
+      "source": "OptionMetrics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRE-MONTH RETURN (buy-and-hold return from day t-22 to t-1)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "PRE-YEAR RETURN (buy-and-hold return from day t-252 to t-23)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SUCCESSFUL (=1 if merger/acquisition successfully completed)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "TAKEOVER (=1 if acquisition of a majority interest vs merger)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "HOSTILE (=1 if event attitude is hostile)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "RUMOR (=1 if deal began as a rumor)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "CASH (=1 if primary payment is cash)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "SIZE (natural log of market capitalization on event day)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "BM (natural log of book-to-market ratio; book value from most recent fiscal-year-end)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR FIXED EFFECT",
+      "source": ""
+     },
+     {
+      "name": "INDUSTRY FIXED EFFECT",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B: Cross-sectional regression of acquirer CAR on IV Skew",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "IV skew subsample (fewer observations than IV spread; N=2,018 in later interaction tables)",
+    "dv": {
+     "name": "acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "IV skew",
+      "measure": "day t-1 IV SKEW, calculated based on Xing et al. (2010)",
+      "source": "OptionMetrics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRE-MONTH RETURN (buy-and-hold return from day t-22 to t-1)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "PRE-YEAR RETURN (buy-and-hold return from day t-252 to t-23)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SUCCESSFUL (=1 if merger/acquisition successfully completed)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "TAKEOVER (=1 if acquisition of a majority interest vs merger)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "HOSTILE (=1 if event attitude is hostile)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "RUMOR (=1 if deal began as a rumor)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "CASH (=1 if primary payment is cash)",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "SIZE (natural log of market capitalization on event day)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "BM (natural log of book-to-market ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR FIXED EFFECT",
+      "source": ""
+     },
+     {
+      "name": "INDUSTRY FIXED EFFECT",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "pseudo-M&A events: randomly assigned nonannouncement dates and/or nonacquiring firms (pseudo-acquirers) drawn from all optioned firms/days, repeated 1,000 times",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquirer announcement CAR (on pseudo-announcement dates)",
+     "measure": "2-day (t, t+1) CAR where t is the pseudo-announcement date",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "IV spread",
+      "measure": "IV spread measured at t-1 (t = pseudo-announcement date)",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "IV skew",
+      "measure": "IV skew measured at t-1 (t = pseudo-announcement date)",
+      "source": "OptionMetrics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRE-MONTH RETURN",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "PRE-YEAR RETURN",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "IV spread models N=3,076; IV skew models N=2,018",
+    "dv": {
+     "name": "acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "IV spread",
+      "measure": "day t-1 IV spread (Cremers and Weinbaum (2010))",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "IV skew",
+      "measure": "day t-1 IV skew (Xing et al. (2010))",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "pre-event CAR (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "IV spread x pre-event CAR (interaction)",
+      "measure": "IV SPREAD_{t-1} x CAR_{t-3,t-1}",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "IV skew x pre-event CAR (interaction)",
+      "measure": "IV SKEW_{t-1} x CAR_{t-3,t-1}",
+      "source": "OptionMetrics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRE-MONTH RETURN",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "PRE-YEAR RETURN",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SUCCESSFUL",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "TAKEOVER",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "RUMOR",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "CASH",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "SIZE",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "BM",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR FIXED EFFECT",
+      "source": ""
+     },
+     {
+      "name": "INDUSTRY FIXED EFFECT",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: The Role of Options Liquidity (options measures interacted with option bid-ask spread)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "IV spread",
+      "measure": "day t-1 IV spread (Cremers and Weinbaum (2010))",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "IV skew",
+      "measure": "day t-1 IV skew (Xing et al. (2010))",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "option bid-ask spread (options liquidity moderator)",
+      "measure": "for each option each day, (best offer price - best bid price)/midpoint of the two, averaged across all nonzero-volume options for each firm, then averaged from day t-5 to t-1",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "IV spread x option bid-ask spread (interaction)",
+      "measure": "IV SPREAD_{t-1} x OPTION BID-ASK SPREAD",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "IV skew x option bid-ask spread (interaction)",
+      "measure": "IV SKEW_{t-1} x OPTION BID-ASK SPREAD",
+      "source": "OptionMetrics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRE-MONTH RETURN",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "PRE-YEAR RETURN",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SUCCESSFUL",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "TAKEOVER",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "RUMOR",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "CASH",
+      "source": "Securities Data Company (SDC) Platinum database"
+     },
+     {
+      "name": "SIZE",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "BM",
+      "source": "Compustat"
+     },
+     {
+      "name": "YEAR FIXED EFFECT",
+      "source": ""
+     },
+     {
+      "name": "INDUSTRY FIXED EFFECT",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "liquidity",
+    "information asymmetry",
+    "targets",
+    "acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "liquidity of options trading",
+    "targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

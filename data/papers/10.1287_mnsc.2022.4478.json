@@ -1,0 +1,562 @@
+{
+ "paper_id": "10.1287_mnsc.2022.4478",
+ "title": "Not Ready for Prime Time: Financial Reporting Quality After SPAC Mergers",
+ "journal": "MNSC",
+ "year": 2022,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "spac_merger",
+      "relation": "decreases",
+      "to": "preparation_time",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "preparation_time",
+      "relation": "increases",
+      "to": "financial_reporting_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "spac_merger",
+      "relation": "decreases",
+      "to": "accounting_infrastructure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "accounting_infrastructure",
+      "relation": "increases",
+      "to": "financial_reporting_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "preparation_time",
+    "accounting_infrastructure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the financial reporting quality differences are driven by SPAC firms having lower quality (non-Big 4) auditors",
+    "the higher restatement rate is driven by warrant-related restatements following the 2021 SEC guidance on warrant accounting"
+   ]
+  },
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "spac_merger",
+      "relation": "decreases",
+      "to": "earnings_credibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_credibility",
+      "relation": "increases",
+      "to": "earnings_informativeness",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_credibility"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the lower earnings response coefficient is driven by negative earnings surprises being more prevalent in SPACs rather than by lower reporting credibility",
+    "the result is driven by extreme earnings surprises"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (postmerger SPAC firms matched to IPO firms in the same two-digit SIC industry)",
+  "country_region": "United States",
+  "time_period": "2006-2020",
+  "sample_description": "Postmerger SPAC firms (completed mergers, from spactrack.net augmented with SPACKTRAX and the Defiance ETF SPAC list) compared to traditional IPO firms in the same fiscal year and two-digit SIC industry (IPO list from Jay Ritter's website); firms available in Compustat, with financial reporting data from Audit Analytics, SEC Edgar, I/B/E/S, Thomson Reuters, and CRSP",
+  "sample_size": "45 SPAC firms and 280 IPO firms (693 SPAC and IPO firm-year observations)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "www.spactrack.net (SPACtrack)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SPACKTRAX (SPACTRAX)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Defiance ETF SPAC list",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Jay Ritter's IPO data library",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC Edgar Index filings (Edgar download)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters Institutional Holdings database (13F)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "PCAOB auditor search",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1: Descriptive Statistics (difference in means / Wilcoxon between SPAC and IPO samples)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "693 SPAC and IPO firm-years (89 SPAC, 604 IPO); CAR/SURPRISE rows use 1,220 firm-quarters",
+    "dv": {
+     "name": "Financial reporting quality proxies (RESTATE, ICW, NT_FILINGS, AMEND, COMMENT, etc.)",
+     "measure": "difference in means and Wilcoxon-test medians for outcome variables across SPAC vs IPO firm-years",
+     "source": "Audit Analytics; SEC Edgar Index filings; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "www.spactrack.net (SPACtrack); SPACKTRAX (SPACTRAX); Defiance ETF SPAC list; Jay Ritter's IPO data library"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASHFLOW",
+      "source": "Compustat"
+     },
+     {
+      "name": "ANALYST",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "INST_OWN",
+      "source": "Thomson Reuters Institutional Holdings database (13F)"
+     },
+     {
+      "name": "BIG4_AUDITOR",
+      "source": "Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "693 SPAC and IPO firm-years",
+    "dv": {
+     "name": "RESTATE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "www.spactrack.net (SPACtrack); SPACKTRAX (SPACTRAX); Defiance ETF SPAC list; Jay Ritter's IPO data library"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASHFLOW",
+      "source": "Compustat"
+     },
+     {
+      "name": "ANALYST",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "INST_OWN",
+      "source": "Thomson Reuters Institutional Holdings database (13F)"
+     },
+     {
+      "name": "BIG4_AUDITOR",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "693 SPAC and IPO firm-years",
+    "dv": {
+     "name": "ICW",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "www.spactrack.net (SPACtrack); SPACKTRAX (SPACTRAX); Defiance ETF SPAC list; Jay Ritter's IPO data library"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASHFLOW",
+      "source": "Compustat"
+     },
+     {
+      "name": "ANALYST",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "INST_OWN",
+      "source": "Thomson Reuters Institutional Holdings database (13F)"
+     },
+     {
+      "name": "BIG4_AUDITOR",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "693 firm-years (520 for Log(#ROUNDS), conditional on having a comment letter)",
+    "dv": {
+     "name": "NT_FILINGS",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC Edgar Index filings (Edgar download); Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "www.spactrack.net (SPACtrack); SPACKTRAX (SPACTRAX); Defiance ETF SPAC list; Jay Ritter's IPO data library"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASHFLOW",
+      "source": "Compustat"
+     },
+     {
+      "name": "ANALYST",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "INST_OWN",
+      "source": "Thomson Reuters Institutional Holdings database (13F)"
+     },
+     {
+      "name": "BIG4_AUDITOR",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "1,220 SPAC and IPO firm-quarters (1,190 in model 2); 165 SPAC firm-quarters",
+    "dv": {
+     "name": "CAR[-1,0,1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISE x SPAC (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S; www.spactrack.net (SPACtrack); Jay Ritter's IPO data library"
+     },
+     {
+      "name": "SURPRISE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SPAC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "www.spactrack.net (SPACtrack); Jay Ritter's IPO data library"
+     },
+     {
+      "name": "SPAC x NEGATIVE_SURP (interaction, model 2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "NEGATIVE_SURP (model 2)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "BTM",
+      "source": "CRSP; Compustat"
+     },
+     {
+      "name": "DISPERSION",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "ANALYST",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "INST_OWN",
+      "source": "Thomson Reuters Institutional Holdings database (13F)"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year-quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Event year-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "earnings response coefficient",
+    "spac firm–quarters"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "spac mergers",
+    "spac ipos",
+    "broader economic consequences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "spac and ipo processes",
+    "choice"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "retail investors",
+    "trading frenzy",
+    "attention-driven trading",
+    "ercs"
+   ],
+   "mechanism_named": "attention-driven trading",
+   "proposed_edge": {
+    "from": "attention-driven trading",
+    "relation": "decreases",
+    "to": "ercs"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "initial comment letter",
+    "sec concerns",
+    "financial reporting quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

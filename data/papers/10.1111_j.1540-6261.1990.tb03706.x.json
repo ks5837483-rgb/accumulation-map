@@ -1,0 +1,308 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1990.tb03706.x",
+ "title": "Corporate Control and the Choice of Investment Financing The Case of Corporate Acquisitions (Amihud et al., 1990)(JF)_10.1111_j.1540-6261.1990.tb03706.x",
+ "journal": "JF",
+ "year": 1990,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "corporate control theory",
+  "agency theory",
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_ownership",
+      "relation": "increases",
+      "to": "incentive_to_maintain_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_maintain_control",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "managerial_ownership",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_maintain_control",
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firm size (the observed ownership-financing association is a proxy for size differences)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "managerial_ownership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "stock_financing",
+     "moderated_to": "bidder_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (1980 Fortune 500 firms making corporate acquisitions)",
+  "country_region": "United States",
+  "time_period": "1981-1983",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "209 acquisitions by 165 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Mergers and Acquisitions",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "proxy statements filed with the SEC",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "COMPUSTAT data base",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "University of Chicago CRSP database (CRSP daily stock return file)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I (univariate comparison of ownership and size by method of payment)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "209 acquisitions by 165 firms, 1980 Fortune 500 acquirers acquiring during 1981-1983",
+    "dv": {
+     "name": "method of payment (PAY)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Mergers and Acquisitions"
+    },
+    "key_ivs": [
+     {
+      "name": "OWN2",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC"
+     },
+     {
+      "name": "OWN5",
+      "measure": "the ownership fraction held by the largest five insiders",
+      "source": "proxy statements filed with the SEC"
+     },
+     {
+      "name": "OWNALL",
+      "measure": "the ownership fraction held by all directors and officers",
+      "source": "proxy statements filed with the SEC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SLA (sales of acquiring firm, in millions of dollars)",
+      "source": "Mergers and Acquisitions"
+     },
+     {
+      "name": "SLT (sales of target firm, in millions of dollars)",
+      "source": "Mergers and Acquisitions"
+     },
+     {
+      "name": "EQA (equity/market value of acquiring firm)",
+      "source": "COMPUSTAT data base"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Mergers and Acquisitions"
+     }
+    ]
+   },
+   {
+    "label": "Table II (probit determinants of the probability of stock financing; 3 versions)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "probability of stock financing (PAY)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Mergers and Acquisitions"
+    },
+    "key_ivs": [
+     {
+      "name": "managerial ownership (OWN2 / OWN5 / OWNALL)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Mergers and Acquisitions"
+     },
+     {
+      "name": "SLA, EQA, VAL, RATIO (estimated but statistically insignificant and not reported in Table II)",
+      "source": "Mergers and Acquisitions / COMPUSTAT data base"
+     }
+    ]
+   },
+   {
+    "label": "Aggregated-sample re-estimation (probit and mean comparison, robustness)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "144 cases of firms that pursued consistent financing policies (multiple acquisitions aggregated by firm)",
+    "dv": {
+     "name": "method of payment / probability of stock financing (PAY)",
+     "measure": "PAY = 0 or PAY = 1 for cash or stock financing; multiple acquisitions by the same firm aggregated into a single case",
+     "source": "Mergers and Acquisitions"
+    },
+    "key_ivs": [
+     {
+      "name": "managerial ownership (OWN5 and OWN2/OWNALL)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "size variables SLA, SLT, EQA, VAL",
+      "source": "Mergers and Acquisitions / COMPUSTAT data base"
+     }
+    ]
+   },
+   {
+    "label": "Table III (average two-day CAR by method of payment and managerial ownership group)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "120 acquisition cases with CRSP stock return data and a well-defined WSJ announcement date",
+    "dv": {
+     "name": "CAR2 (two-day cumulative abnormal return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "University of Chicago CRSP database (CRSP daily stock return file)"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment (cash vs stock)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergers and Acquisitions"
+     },
+     {
+      "name": "managerial ownership group (OWN5)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "mean abnormal returns",
+    "high managerial ownership",
+    "stock financing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "managerial ownership",
+    "new stock issues",
+    "abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "managerial ownership",
+    "relation": "affects",
+    "to": "abnormal returns"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

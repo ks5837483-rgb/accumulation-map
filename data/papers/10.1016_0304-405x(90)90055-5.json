@@ -1,0 +1,244 @@
+{
+ "paper_id": "10.1016_0304-405x(90)90055-5",
+ "title": "An analysis of exchangeable debt offers",
+ "journal": "JFE",
+ "year": 1990,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "agency theory",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "exchangeable_debt_offer",
+      "relation": "decreases",
+      "to": "ownership_concentration",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ownership_concentration",
+      "relation": "increases",
+      "to": "target_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "exchangeable_debt_offer",
+      "relation": "decreases",
+      "to": "managerial_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_monitoring",
+      "relation": "increases",
+      "to": "target_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "exchangeable_debt_offer",
+      "relation": "decreases",
+      "to": "probability_of_change_in_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_change_in_control",
+      "relation": "increases",
+      "to": "target_firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ownership_concentration",
+    "managerial_monitoring",
+    "probability_of_change_in_control"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "exchangeable_debt_offer",
+      "relation": "increases",
+      "to": "asset_divestiture",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_divestiture",
+      "relation": "increases",
+      "to": "issuing_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "exchangeable_debt_offer",
+      "relation": "increases",
+      "to": "negative_information_effect",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "negative_information_effect",
+      "relation": "decreases",
+      "to": "issuing_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asset_divestiture",
+    "negative_information_effect"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms making exchangeable debt offers, traded OTC/AMEX/NYSE)",
+  "country_region": "United States",
+  "time_period": "1969-1987",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "36 exchangeable debt offers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "offer prospectuses",
+    "category": "filings",
+    "kind": "filings"
+   },
+   {
+    "name": "registration statements (filed with the SEC or Interstate Commerce Commission)",
+    "category": "filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poor's Stock Guide",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "36 exchangeable debt offers (31 issuing firms, 32 target firms), 1969-1987",
+    "dv": {
+     "name": "offer and capital-structure characteristics",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Exchangeable debt - issuing firms (n=36), exchangeable debt - target firms (n=33), convertible debt - issuing firms (n=662, made by 518 firms); announcement date defined as the earlier of the first WSJ report and the trading day following registration with the SEC or ICC",
+    "dv": {
+     "name": "cumulative average abnormal stock returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "type of debt offer (exchangeable vs. convertible)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "firm role (issuing vs. target firm)",
+      "measure": "whether cumulative average abnormal returns are measured for the issuing firm or for the target firm",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Difference-of-means t-test of announcement-period (AD-1 and AD) abnormal returns for issuers of convertible vs. exchangeable debt",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "convertible debt issuing firms (n=662) vs. exchangeable debt issuing firms (n=36)",
+    "dv": {
+     "name": "announcement-period abnormal return (AD-1 and AD)",
+     "measure": "mean announcement-period (AD-1 and AD) market-model abnormal return; difference-of-means t-test comparing convertible and exchangeable debt issuers",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "type of debt offer (exchangeable vs. convertible)",
+      "measure": "exchangeable vs. convertible debt offer classification",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

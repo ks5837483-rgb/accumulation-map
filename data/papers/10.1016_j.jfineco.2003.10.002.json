@@ -1,0 +1,678 @@
+{
+ "paper_id": "10.1016_j.jfineco.2003.10.002",
+ "title": "Sources of gains in horizontal mergers: evidence from customer, supplier, and rival firms",
+ "journal": "JFE",
+ "year": 2004,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "industrial organization economics",
+  "market power hypothesis",
+  "efficiency theory of mergers",
+  "monopsony theory",
+  "countervailing power theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "productive_efficiency",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "productive_efficiency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "productive_efficiency",
+      "relation": "increases",
+      "to": "merging_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "productive_efficiency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "monopolistic collusion or buying power (rather than productive efficiency) as the source of merging-firm gains"
+   ]
+  },
+  {
+   "hypothesis": "monopolistic_collusion_customers",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "monopolistic_collusion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monopolistic_collusion",
+      "relation": "decreases",
+      "to": "customer_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monopolistic_collusion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "effective U.S. antitrust regulation deterring anticompetitive mergers (rather than mergers being non-collusive)"
+   ]
+  },
+  {
+   "hypothesis": "monopolistic_collusion_antitrust_challenge",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitrust_challenge",
+      "relation": "decreases",
+      "to": "monopolistic_collusion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monopolistic_collusion",
+      "relation": "increases",
+      "to": "rival_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monopolistic_collusion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "rival_acquisition_probability",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_announcement",
+      "relation": "increases",
+      "to": "market_inference_rivals_undervalued",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_inference_rivals_undervalued",
+      "relation": "increases",
+      "to": "rival_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_inference_rivals_undervalued"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "anticompetitive (monopolistic) collusion rather than expected efficiency gains as the driver of positive rival returns"
+   ]
+  },
+  {
+   "hypothesis": "buying_power_suppliers",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "buying_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "buying_power",
+      "relation": "decreases",
+      "to": "supplier_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "buying_power"
+   ],
+   "moderators": [
+    {
+     "construct": "supplier_reliance_on_merging_firms",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "buying_power",
+     "moderated_from": "horizontal_merger",
+     "moderated_to": "supplier_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "buying_power_suppliers"
+    },
+    {
+     "construct": "merging_firm_industry_concentration",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "anticompetitive_collusion",
+     "moderated_from": "horizontal_merger",
+     "moderated_to": "supplier_value",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "buying_power_suppliers"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "buying_power_merging_firms",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "buying_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "buying_power",
+      "relation": "increases",
+      "to": "merging_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "buying_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "productive efficiency (gains not coming at suppliers' expense) as the sole source of merging-firm gains"
+   ]
+  },
+  {
+   "hypothesis": "monopsonistic_collusion",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "monopsonistic_collusion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monopsonistic_collusion",
+      "relation": "decreases",
+      "to": "supplier_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monopsonistic_collusion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "efficiency-increasing buying power (purchasing efficiencies/countervailing power) rather than monopsonistic collusion"
+   ]
+  },
+  {
+   "hypothesis": "purchasing_efficiency_countervailing_power",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "supplier_price_competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "supplier_price_competition",
+      "relation": "decreases",
+      "to": "supplier_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "horizontal_merger",
+      "relation": "increases",
+      "to": "countervailing_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "countervailing_power",
+      "relation": "decreases",
+      "to": "supplier_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "supplier_price_competition",
+    "countervailing_power"
+   ],
+   "moderators": [
+    {
+     "construct": "supplier_termination",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "supplier_price_competition",
+     "moderated_from": "horizontal_merger",
+     "moderated_to": "supplier_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "purchasing_efficiency_countervailing_power"
+    },
+    {
+     "construct": "supplier_industry_concentration",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "countervailing_power",
+     "moderated_from": "horizontal_merger",
+     "moderated_to": "supplier_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "purchasing_efficiency_countervailing_power"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "monopsonistic collusion (all suppliers harmed symmetrically) rather than efficiency-increasing countervailing power"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (domestic firms)",
+  "time_period": "1980-1997",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "554 proposed transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) Mergers & Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat industry segment files (consolidated and industry-segment, active and research files)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones Interactive (DJI) newswire/newspaper archive",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Directory of Corporate Affiliations",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Panel A: merging-firm announcement abnormal returns (combined, target, bidder)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "554 horizontal merger deals (bidders and targets), 1980-1997",
+    "dv": {
+     "name": "merging-firm announcement abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "concentrated industry subsample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "large change in industry concentration subsample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "challenged deals subsample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Interactive (DJI) newswire/newspaper archive"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel B: change in merging-firm median industry-adjusted cash flow to sales",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "391 completed merging-firm deals with matched benchmark firms",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat industry segment files"
+    },
+    "key_ivs": [
+     {
+      "name": "concentrated industry subsample",
+      "measure": "Industry Herf.>2000 (pre-merger Herfindahl Index greater than 2000)",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "large change in industry concentration subsample",
+      "measure": "D Industry Herf.>100 (change in industry Herfindahl Index exceeded 100)",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "challenged deals subsample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Interactive (DJI) newswire/newspaper archive"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "completed merging-firm deals with matched benchmark firms",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat industry segment files"
+    },
+    "key_ivs": [
+     {
+      "name": "concentrated industry / large concentration change subsamples",
+      "measure": "Industry Herf.>2000 and D Industry Herf.>100 subsamples",
+      "source": "Compustat industry segment files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel A: abnormal returns to rivals on merger announcement",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "rival firms of the 554 merger deals (avg 75.55 rivals per deal)",
+    "dv": {
+     "name": "rival announcement abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "single-segment vs. all rivals",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "concentration / challenged subsamples",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat industry segment files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "antitrust regulatory challenge / blocking action announcement (DOJ/FTC)",
+    "sample": "rivals of the 39 challenged deals",
+    "dv": {
+     "name": "rival abnormal returns on regulatory action",
+     "measure": "three-day-window abnormal return around announcement of regulatory action (antitrust challenge/blocking), market-model based",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "regulatory action / antitrust challenge event",
+      "measure": "announcement that the merger is being challenged/blocked by antitrust authorities (Justice Department or FTC)",
+      "source": "Dow Jones Interactive (DJI) newswire/newspaper archive"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Customer announcement abnormal returns",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "customer firms of merging firms (avg 0.40 customers per deal)",
+    "dv": {
+     "name": "customer announcement abnormal returns",
+     "measure": "three-day-window abnormal return centered on merger announcement, market model estimated 240 to 41 days before announcement",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "corporate customers of merging firms",
+      "measure": "firms disclosed (FASB No. 14) as customers representing more than 10% of total sales of the merging firms' overlapping segments, matched from Compustat segment files",
+      "source": "Compustat industry segment files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Supplier announcement abnormal returns",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "supplier firms of merging firms (avg 1.09 suppliers per deal)",
+    "dv": {
+     "name": "supplier announcement abnormal returns",
+     "measure": "three-day-window abnormal return centered on merger announcement, market model estimated 240 to 41 days before announcement",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "corporate suppliers of merging firms",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "retained vs. terminated suppliers",
+      "measure": "suppliers that retain vs. lose their product-market relationship with the merged entity subsequent to the merger",
+      "source": "Compustat industry segment files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Supplier changes in operating performance (matched-firm)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "suppliers of completed merging-firm deals with matched benchmark firms",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat industry segment files"
+    },
+    "key_ivs": [
+     {
+      "name": "retained vs. terminated suppliers",
+      "measure": "suppliers terminated vs. retained subsequent to a customer merger",
+      "source": "Compustat industry segment files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Multivariate cross-sectional analysis of supplier operating performance",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "supplier firms of completed merging-firm deals",
+    "dv": {
+     "name": "supplier change in operating performance (cash flow margin)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat industry segment files"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier reliance on merging firms",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "retained vs. terminated supplier",
+      "measure": "indicator for suppliers terminated versus retained after the customer merger",
+      "source": "Compustat industry segment files"
+     },
+     {
+      "name": "upstream industry concentration",
+      "measure": "concentrated versus fragmented supplier-industry context",
+      "source": "Compustat industry segment files"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "strategic actions",
+    "increased buying power",
+    "mergers to consolidate the supplier industry"
+   ],
+   "mechanism_named": "countervailing power",
+   "proposed_edge": {
+    "from": "strategic actions of suppliers to consolidate the supplier industry",
+    "relation": "decreases",
+    "to": "increased buying power of their customers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "methodology to identify product-market relationships"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "buying power",
+    "gains to horizontal mergers",
+    "monopsonistic collusion",
+    "purchasing efficiencies/countervailing power"
+   ],
+   "mechanism_named": "monopsonistic collusion or purchasing efficiencies/countervailing power",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "nature of the gains"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "positive returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "blocked deals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

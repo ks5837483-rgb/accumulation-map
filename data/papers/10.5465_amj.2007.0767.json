@@ -1,0 +1,431 @@
+{
+ "paper_id": "10.5465_amj.2007.0767",
+ "title": "Behind Acquisitions of Alliance Partners: Exploratory Learning and Network Embeddedness",
+ "journal": "AMJ",
+ "year": 2011,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "organizational learning theory",
+  "exploration-exploitation framework",
+  "social network theory",
+  "structural holes theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "exploration_alliance",
+      "relation": "increases",
+      "to": "understanding_of_partner_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "understanding_of_partner_value",
+      "relation": "increases",
+      "to": "acquisition_of_alliance_partners",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "understanding_of_partner_value"
+   ],
+   "moderators": [
+    {
+     "construct": "joint_brokerage_positions",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "value_of_exploration_alliance",
+     "moderated_from": "exploration_alliance",
+     "moderated_to": "acquisition_of_alliance_partners",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "relative_centrality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "bargaining_power_asymmetry",
+     "moderated_from": "exploration_alliance",
+     "moderated_to": "acquisition_of_alliance_partners",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1986-1996 (2,852 within-industry alliances announced 1990-1996, plus additional alliance data collected 1986-1989)",
+  "sample_description": "dyads of alliance partner firms in the U.S. computer industry (SIC hardware 3571/3572/3575/3577, software 7371/7372/7373/7374); 62 focal firms with relatively complete Compustat data and their ego networks; alliance and acquisition data from SDC Platinum (verified via LexisNexis and Dow Jones News Retrieval), financial data from Compustat, patent data from NBER",
+  "sample_size": "n = 2,838 dyad-year observations (62 focal firms; regression models n = 1,155/1,131)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval Service",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "National Bureau of Economic Research (NBER)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Census Bureau",
+    "category": "census_gov",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Model 1 (controls-only base random-effects logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "n = 1,155 firm-dyad observations",
+    "dv": {
+     "name": "Acquisitions of alliance partners",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Equity alliance index",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Strategic interdependence",
+      "source": "National Bureau of Economic Research (NBER)"
+     },
+     {
+      "name": "Asymmetry in firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Combined financial resources",
+      "source": "Compustat"
+     },
+     {
+      "name": "Competitor alliance index",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Industry concentration",
+      "source": "U.S. Census Bureau"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 2 (controls + predictors)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "n = 1,131 firm-dyad observations",
+    "dv": {
+     "name": "Acquisitions of alliance partners",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "Exploration alliance index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Joint brokerage positions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Relative centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Equity alliance index",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Strategic interdependence",
+      "source": "National Bureau of Economic Research (NBER)"
+     },
+     {
+      "name": "Asymmetry in firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Combined financial resources",
+      "source": "Compustat"
+     },
+     {
+      "name": "Competitor alliance index",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Industry concentration",
+      "source": "U.S. Census Bureau"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 3 (full model with interaction terms)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "n = 1,131 firm-dyad observations",
+    "dv": {
+     "name": "Acquisitions of alliance partners",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "Exploration alliance index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Exploration alliance index x joint brokerage positions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Exploration alliance index x relative centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Equity alliance index",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Strategic interdependence",
+      "source": "National Bureau of Economic Research (NBER)"
+     },
+     {
+      "name": "Asymmetry in firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Combined financial resources",
+      "source": "Compustat"
+     },
+     {
+      "name": "Competitor alliance index",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Industry concentration",
+      "source": "U.S. Census Bureau"
+     },
+     {
+      "name": "Joint brokerage positions",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Relative centrality",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Robustness analysis: performance consequences of partner acquisitions (ROE regression)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "firms undertaking partner acquisitions, ROE over the two years following the acquisition",
+    "dv": {
+     "name": "Firm performance (return on equity)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Partner acquisition",
+      "measure": "a firm’s partner acquisition (occurrence of an acquisition of alliance partners)",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "industry",
+    "country"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "industries",
+    "countries"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "cross-industry alliances",
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "cross-industry alliances",
+    "relation": "affects",
+    "to": "acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "acquisitions of both partner and nonpartner firms",
+    "industry network"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "sample firms",
+    "institutional environment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "institutional differences",
+    "network embeddedness",
+    "alliances",
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "institutional differences",
+    "on_path": [
+     "network embeddedness, alliances",
+     "acquisitions"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "strategy (exploration and exploitation)",
+    "network positions",
+    "firm performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "firm performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "dyadic level",
+    "portfolios of alliances",
+    "partner acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "portfolio-level or cross-level approach",
+    "partner acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

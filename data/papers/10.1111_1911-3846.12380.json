@@ -1,0 +1,742 @@
+{
+ "paper_id": "10.1111_1911-3846.12380",
+ "title": "Financial Statement Comparability and the Efficiency of Acquisition Decisions",
+ "journal": "CAR",
+ "year": 2018,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_statement_comparability",
+      "relation": "decreases",
+      "to": "cost_of_acquiring_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_acquiring_information",
+      "relation": "decreases",
+      "to": "target_valuation_accuracy",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "financial_statement_comparability",
+      "relation": "increases",
+      "to": "prediction_of_future_cash_flows",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "prediction_of_future_cash_flows",
+      "relation": "increases",
+      "to": "target_valuation_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_acquiring_information",
+    "prediction_of_future_cash_flows"
+   ],
+   "moderators": [
+    {
+     "construct": "inter_industry_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "prediction_of_future_cash_flows",
+     "moderated_from": "financial_statement_comparability",
+     "moderated_to": "target_valuation_accuracy",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2a"
+    },
+    {
+     "construct": "information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "financial_statement_comparability",
+     "moderated_to": "target_valuation_accuracy",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    },
+    {
+     "construct": "operating_environment_volatility",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "board_monitoring",
+     "moderated_from": "financial_statement_comparability",
+     "moderated_to": "target_valuation_accuracy",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2c"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "targets' accrual quality (firm-specific earnings attribute) rather than comparability",
+    "similarities in ﬁrms’ underlying economics rather than accounting comparability",
+    "the risk proﬁle of the target driving the results"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_statement_comparability",
+      "relation": "increases",
+      "to": "target_peer_comparison_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_peer_comparison_quality",
+      "relation": "increases",
+      "to": "expected_synergies",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_peer_comparison_quality"
+   ],
+   "moderators": [
+    {
+     "construct": "inter_industry_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "target_peer_comparison_quality",
+     "moderated_from": "financial_statement_comparability",
+     "moderated_to": "expected_synergies",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "similarities in ﬁrms’ underlying economics rather than accounting comparability"
+   ]
+  },
+  {
+   "hypothesis": "H1c",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_statement_comparability",
+      "relation": "increases",
+      "to": "target_screening_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_screening_quality",
+      "relation": "increases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_screening_quality"
+   ],
+   "moderators": [
+    {
+     "construct": "inter_industry_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "target_screening_quality",
+     "moderated_from": "financial_statement_comparability",
+     "moderated_to": "post_acquisition_operating_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "targets' accrual quality rather than comparability driving post-acquisition performance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1983-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,307 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP value-weighted returns",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Model (1) - ACQ_CAR",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,307 U.S. acquisitions of public targets, 1983-2009",
+    "dv": {
+     "name": "ACQ_CAR (acquirer announcement returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure: earnings and stock returns)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE (acquirer firm size)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV (acquirer leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_TOBIN_DUM (acquirer Tobin's Q dummy)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_ROA (acquirer return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF (acquirer free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF x ACQ_TOBIN_DUM (interaction)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_SIZE (target size)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_LEV (target leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_TOBIN (target Tobin's Q)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_ROA (target return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BLOCK (targets' institutional/blockholder ownership)",
+      "source": ""
+     },
+     {
+      "name": "STOCK_CORR (target-peer stock return correlation)",
+      "source": "CRSP"
+     },
+     {
+      "name": "SYNC (stock return synchronicity)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ALL_CASH (all-cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_STOCK (all-stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "REL_SIZE (relative deal size)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "HOSTILE (hostile takeover)",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER (tender offer)",
+      "source": "SDC"
+     },
+     {
+      "name": "DIFFIND (acquirer and target from different industries)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (2) - SYNERGY",
+    "hypotheses": [
+     "H1b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,277 observations (reduced by data to compute target three-day abnormal returns)",
+    "dv": {
+     "name": "SYNERGY (expected synergies / combined returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE (acquirer firm size)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV (acquirer leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_TOBIN_DUM (acquirer Tobin's Q dummy)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_ROA (acquirer return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF (acquirer free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF x ACQ_TOBIN_DUM (interaction)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_SIZE (target size)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_LEV (target leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_TOBIN (target Tobin's Q)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_ROA (target return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BLOCK (targets' institutional/blockholder ownership)",
+      "source": ""
+     },
+     {
+      "name": "STOCK_CORR (target-peer stock return correlation)",
+      "source": "CRSP"
+     },
+     {
+      "name": "SYNC (stock return synchronicity)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ALL_CASH (all-cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_STOCK (all-stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "REL_SIZE (relative deal size)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "HOSTILE (hostile takeover)",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER (tender offer)",
+      "source": "SDC"
+     },
+     {
+      "name": "DIFFIND (different industries)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (3) - DROA",
+    "hypotheses": [
+     "H1c"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,042 observations (requires three years of ROA data pre- and post-acquisition)",
+    "dv": {
+     "name": "DROA (change in acquirer post-acquisition operating performance)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE (acquirer firm size)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV (acquirer leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_TOBIN_DUM (acquirer Tobin's Q dummy)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_ROA (acquirer return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF (acquirer free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF x ACQ_TOBIN_DUM (interaction)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_SIZE (target size)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_LEV (target leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_TOBIN (target Tobin's Q)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_ROA (target return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BLOCK (targets' institutional/blockholder ownership)",
+      "source": ""
+     },
+     {
+      "name": "STOCK_CORR (target-peer stock return correlation)",
+      "source": "CRSP"
+     },
+     {
+      "name": "SYNC (stock return synchronicity)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ALL_CASH (all-cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_STOCK (all-stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "REL_SIZE (relative deal size)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "HOSTILE (hostile takeover)",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER (tender offer)",
+      "source": "SDC"
+     },
+     {
+      "name": "DIFFIND (different industries)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A - inter- vs intra-industry acquisitions (across ACQ_CAR, SYNERGY, DROA)",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition efficiency (ACQ_CAR / SYNERGY / DROA)",
+     "measure": "acquirer three-day CAR (ACQ_CAR), value-weighted combined acquirer-target three-day CAR (SYNERGY), and benchmark-adjusted change in ROA (DROA), estimated separately in each subsample",
+     "source": "CRSP / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure)"
+     },
+     {
+      "name": "DIFFIND (industry relatedness moderator, subsample split)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE, ACQ_LEV, ACQ_TOBIN_DUM, ACQ_ROA, ACQ_FCF, ACQ_FCF x ACQ_TOBIN_DUM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "STOCK_CORR, SYNC",
+      "source": "CRSP"
+     },
+     {
+      "name": "ALL_CASH, ALL_STOCK, REL_SIZE, HOSTILE, TENDER",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B - ex ante information asymmetry (ACQ_SPREAD) subsamples",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample split at median of ACQ_SPREAD into high vs low ex ante information asymmetry subsamples",
+    "dv": {
+     "name": "acquisition efficiency (ACQ_CAR / SYNERGY / DROA)",
+     "measure": "acquirer three-day CAR (ACQ_CAR), value-weighted combined acquirer-target three-day CAR (SYNERGY), and benchmark-adjusted change in ROA (DROA), estimated separately in high vs low subsamples",
+     "source": "CRSP / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure)"
+     },
+     {
+      "name": "ACQ_SPREAD (ex ante information asymmetry moderator, subsample split)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE, ACQ_LEV, ACQ_TOBIN_DUM, ACQ_ROA, ACQ_FCF, ACQ_FCF x ACQ_TOBIN_DUM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "STOCK_CORR, SYNC",
+      "source": "CRSP"
+     },
+     {
+      "name": "ALL_CASH, ALL_STOCK, REL_SIZE, HOSTILE, TENDER, DIFFIND",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel C - operating environment volatility (ACQ_RET_VOL) subsamples",
+    "hypotheses": [
+     "H2c"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample split at median of ACQ_RET_VOL into high vs low operating environment volatility subsamples",
+    "dv": {
+     "name": "acquisition efficiency (ACQ_CAR / SYNERGY / DROA)",
+     "measure": "acquirer three-day CAR (ACQ_CAR), value-weighted combined acquirer-target three-day CAR (SYNERGY), and benchmark-adjusted change in ROA (DROA), estimated separately in high vs low subsamples",
+     "source": "CRSP / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure)"
+     },
+     {
+      "name": "ACQ_RET_VOL (operating environment volatility moderator, subsample split)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE, ACQ_LEV, ACQ_TOBIN_DUM, ACQ_ROA, ACQ_FCF, ACQ_FCF x ACQ_TOBIN_DUM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "STOCK_CORR, SYNC",
+      "source": "CRSP"
+     },
+     {
+      "name": "ALL_CASH, ALL_STOCK, REL_SIZE, HOSTILE, TENDER, DIFFIND",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Column (1) - goodwill impairment logit (GW_IMPAIR)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "925 observations (GW_IMPAIR available)",
+    "dv": {
+     "name": "GW_IMPAIR (post-acquisition goodwill impairment)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ controls (ACQ_SIZE, ACQ_LEV, ACQ_TOBIN_DUM, ACQ_ROA, ACQ_FCF, interaction)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "DEAL controls (ALL_CASH, ALL_STOCK, REL_SIZE, HOSTILE, TENDER, DIFFIND)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Column (2) - divestiture logit (DIVEST)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1,288 observations (DIVEST available)",
+    "dv": {
+     "name": "DIVEST (post-acquisition divestiture)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "TRG_COMPRNK (target financial statement comparability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP (De Franco et al. 2011 measure)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ controls (ACQ_SIZE, ACQ_LEV, ACQ_TOBIN_DUM, ACQ_ROA, ACQ_FCF, interaction)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "DEAL controls (ALL_CASH, ALL_STOCK, REL_SIZE, HOSTILE, TENDER, DIFFIND)",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "financial statement comparability",
+    "comparability measure"
+   ],
+   "mechanism_named": "De\nFranco et al.’s (2011) measure",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "comparability measure",
+    "earnings–return relation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

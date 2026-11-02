@@ -1,0 +1,950 @@
+{
+ "paper_id": "10.1016_j.jm.2004.02.003",
+ "title": "Can a Previous Alliance Between an Acquirer and a Target Affect Acquisition Performance",
+ "journal": "JOM",
+ "year": 2004,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "organizational learning theory",
+  "absorptive capacity"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "previous_alliance_with_target",
+      "relation": "increases",
+      "to": "target_specific_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_specific_information",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "previous_alliance_with_target",
+      "relation": "increases",
+      "to": "experiential_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "experiential_capital",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_specific_information",
+    "experiential_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirer's general prior acquisition experience (rather than target-specific alliance experience) drives acquisition performance"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "alliance_contract_specificity",
+      "relation": "decreases",
+      "to": "breadth_of_resource_access",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "breadth_of_resource_access",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "alliance_contract_specificity",
+      "relation": "decreases",
+      "to": "target_specific_learning",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_specific_learning",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "breadth_of_resource_access",
+    "target_specific_learning"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "manufacturing (acquisitions in manufacturing)",
+  "country_region": "United States (public American acquirers acquiring public American targets)",
+  "time_period": "1988-1997",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "437 acquisitions (effective sample; 481 before excluding 44 for missing data)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC's Merger and Acquisition Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC's Alliance Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Annual Reports",
+    "category": "other",
+    "kind": "filings"
+   },
+   {
+    "name": "Lexis Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Model 1 (controls only baseline)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "SIC relatedness",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in debt to equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in industry performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition premium to shareholders' equity",
+      "source": "SDC"
+     },
+     {
+      "name": "Weighted pre-acquisition ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Method of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenged deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendliness of the deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is high-tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Price relatedness",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 2 (previous alliance with target)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer's alliance experience with target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIC relatedness",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in debt to equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in industry performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition premium to shareholders' equity",
+      "source": "SDC"
+     },
+     {
+      "name": "Weighted pre-acquisition ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Method of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenged deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendliness of the deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is high-tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Price relatedness",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 3 (previous R&D alliance)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous R&D alliance",
+      "measure": "indicator for whether the acquirer had a previous research and development (R&D) alliance with the target (SDC alliance type, verified with at least one other source)",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIC relatedness",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in debt to equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in industry performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition premium to shareholders' equity",
+      "source": "SDC"
+     },
+     {
+      "name": "Weighted pre-acquisition ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Method of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenged deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendliness of the deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is high-tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Price relatedness",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 4 (previous technical transfer alliance)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous technical transfer alliance",
+      "measure": "indicator for whether the acquirer had a previous technology transfer alliance with the target (SDC alliance type, verified with at least one other source)",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIC relatedness",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in debt to equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in industry performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition premium to shareholders' equity",
+      "source": "SDC"
+     },
+     {
+      "name": "Weighted pre-acquisition ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Method of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenged deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendliness of the deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is high-tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Price relatedness",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 5 (previous manufacturing alliance)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous manufacturing alliance",
+      "measure": "indicator for whether the acquirer had a previous manufacturing alliance with the target (SDC alliance type, verified with at least one other source)",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIC relatedness",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in debt to equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in industry performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition premium to shareholders' equity",
+      "source": "SDC"
+     },
+     {
+      "name": "Weighted pre-acquisition ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Method of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenged deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendliness of the deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is high-tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Price relatedness",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 6 (previous marketing alliance)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous marketing alliance",
+      "measure": "indicator for whether the acquirer had a previous marketing alliance with the target (SDC alliance type, verified with at least one other source)",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIC relatedness",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in debt to equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in industry performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition premium to shareholders' equity",
+      "source": "SDC"
+     },
+     {
+      "name": "Weighted pre-acquisition ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Method of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenged deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendliness of the deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is high-tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Price relatedness",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 7 (previous licensing alliance)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous licensing alliance",
+      "measure": "indicator for whether the acquirer had a previous licensing alliance with the target (SDC alliance type, verified with at least one other source)",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIC relatedness",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target's acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in debt to equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Change in industry performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition premium to shareholders' equity",
+      "source": "SDC"
+     },
+     {
+      "name": "Weighted pre-acquisition ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Method of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenged deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendliness of the deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is high-tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Price relatedness",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year indicator variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (significance of difference in effect sizes for H2 coefficients vs licensing)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous R&D alliance vs licensing alliance",
+      "measure": "coefficient difference (R&D minus licensing)",
+      "source": "SDC's Alliance Database"
+     },
+     {
+      "name": "Previous technical transfer alliance vs licensing alliance",
+      "measure": "coefficient difference (technical transfer minus licensing)",
+      "source": "SDC's Alliance Database"
+     },
+     {
+      "name": "Previous manufacturing alliance vs licensing alliance",
+      "measure": "coefficient difference (manufacturing minus licensing)",
+      "source": "SDC's Alliance Database"
+     },
+     {
+      "name": "Previous marketing alliance vs licensing alliance",
+      "measure": "coefficient difference (marketing minus licensing)",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 (exploratory: difference in effect sizes across all alliance types)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in return on assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D alliance",
+      "measure": "SDC alliance type indicator",
+      "source": "SDC's Alliance Database"
+     },
+     {
+      "name": "Technical transfer alliance",
+      "measure": "SDC alliance type indicator",
+      "source": "SDC's Alliance Database"
+     },
+     {
+      "name": "Manufacturing alliance",
+      "measure": "SDC alliance type indicator",
+      "source": "SDC's Alliance Database"
+     },
+     {
+      "name": "Marketing alliance",
+      "measure": "SDC alliance type indicator",
+      "source": "SDC's Alliance Database"
+     },
+     {
+      "name": "Licensing alliance",
+      "measure": "SDC alliance type indicator",
+      "source": "SDC's Alliance Database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "acquisitions in manufacturing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "targets’ attributes",
+    "acquisition performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "targets’ attributes",
+    "relation": "unspecified",
+    "to": "acquisition performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "acquisitions in manufacturing",
+    "time-period"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "accounting practices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "informal ties",
+    "duration of the alliances",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "informal ties",
+    "duration of alliances"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "previous alliance between a target and acquirer",
+    "an acquisition from taking place"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "previous alliance between a target and acquirer",
+    "relation": "affects",
+    "to": "an acquisition from taking place"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "limitations",
+   "constructs": [
+    "unexplained variance",
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "unexplained variance",
+    "acquisition integration and performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "firm-specific resource combinations",
+    "performance of acquisitions",
+    "industry-specific bases of competitive advantage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "firm-specific resource combinations",
+    "relation": "affects",
+    "to": "performance of acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "effectiveness of combinations",
+    "tacit elements of inter-firm compatibility"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "tacit elements of\ninter-firm compatibility",
+    "relation": "affects",
+    "to": "the effectiveness of combinations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "acquisitions",
+    "firms’ network positions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisitions",
+    "relation": "affects",
+    "to": "firms’ network positions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

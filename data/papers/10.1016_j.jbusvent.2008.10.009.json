@@ -1,0 +1,613 @@
+{
+ "paper_id": "10.1016_j.jbusvent.2008.10.009",
+ "title": "Dual-track versus single-track sell-outs: An empirical analysis of competing harvest strategies",
+ "journal": "JBV",
+ "year": 2010,
+ "field": "entrepreneurship",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "asymmetric information theory",
+  "auction theory",
+  "real options theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "dual_track_private_sell_out",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "dual_track_private_sell_out",
+      "relation": "increases",
+      "to": "competitive_bidding",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_bidding",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "dual_track_private_sell_out",
+      "relation": "increases",
+      "to": "real_option_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "real_option_value",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "competitive_bidding",
+    "real_option_value"
+   ],
+   "moderators": [
+    {
+     "construct": "investment_bank_quality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "dual_track_private_sell_out",
+     "moderated_to": "takeover_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "fn10"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Firm self-selection: higher-growth, higher-quality firms self-select into the dual-track path, so the premium reflects firm growth and quality rather than the dual-track strategy",
+    "Endogeneity / self-selection bias: better-quality firms self-select into the dual-track, so the premium is a selection artifact rather than a strategy effect"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "dual_track_public_sell_out",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "all_cash_deal",
+      "relation": "decreases",
+      "to": "seller_liquidity_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "seller_liquidity_risk",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "seller_liquidity_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (takeovers/sell-outs of privately-held firms; high tech and non-high tech)",
+  "country_region": "United States",
+  "time_period": "1995-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "679 sell-outs (539 single-track, 44 dual private, 96 dual public)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC New Issues Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Security and Exchange Commission (SEC) EDGAR",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Dow Jones VentureOne",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "679 sell-outs (539 single-track, 44 dual private, 96 dual public), 1995-2004",
+    "dv": {
+     "name": "sell-out firm and deal characteristics",
+     "measure": "sell-out firm annual sales, total assets, net income, high technology indicator, VC backing, acquirer total assets, transaction value, cash value, stock value, relative size, and focus",
+     "source": "SDC M&A Database; Dow Jones VentureOne"
+    },
+    "key_ivs": [
+     {
+      "name": "harvest strategy / track type",
+      "measure": "classification as single-track, dual private, or dual public sell-out",
+      "source": "SDC M&A Database; SDC New Issues Database; SEC EDGAR; Lexis-Nexis"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 - Univariate absolute premium comparisons across subsamples (Kruskal-Wallis, Tukey simultaneous difference t-test for means, Dunn test for medians)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "harvest strategy / track type",
+      "measure": "classification as single-track, dual private, or dual public sell-out; also broken out by method of payment (cash, mixed, stock)",
+      "source": "SDC M&A Database; SDC New Issues Database; SEC EDGAR; Lexis-Nexis"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "harvest strategy / track type by year",
+      "measure": "track classification crossed with calendar year",
+      "source": "SDC M&A Database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "harvest strategy / track type",
+      "measure": "single-track vs dual private vs dual public, restricting single-track to high-quality high-growth firms",
+      "source": "SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (high quality proxy)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "high tech industry status (high growth proxy)",
+      "source": "SDC M&A Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Wealth-relative (relative premium) difference-in-medians tests using industry-and-year matched control portfolios (Panel A by track, Panel B by method of payment)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "industry-and-year matched control portfolios of single-track and dual public sell-outs",
+    "dv": {
+     "name": "wealth relative (relative takeover premium)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "harvest strategy / track type",
+      "measure": "dual private vs single-track (H1) and dual public vs dual private (H2), matched by industry and year",
+      "source": "SDC M&A Database; SDC New Issues Database; SEC EDGAR; Lexis-Nexis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry (matched)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "year (matched)",
+      "source": "SDC M&A Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Cross-sectional OLS regression explaining the sell-out premium (Model 1 full sample; Model 2 = subsample with investment banking data)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Model 1 = complete sample; Model 2 = 311 firms for which investment banking data are available",
+    "dv": {
+     "name": "PREMIUM",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "DPRIV (dual private indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC New Issues Database; SEC EDGAR; Lexis-Nexis"
+     },
+     {
+      "name": "DPUB (dual public indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC New Issues Database; SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "FOCUS (same 4-digit SIC)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "STOCK (pure stock offer)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "MIX (stock-and-cash mixture)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "TECH (high tech industry)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "BUBBLE (1999-2000 announcement)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "TECH_BUBBLE (TECH x BUBBLE interaction)",
+      "source": ""
+     },
+     {
+      "name": "ASSETS (ln sell-out firm total assets)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "VC (venture capital backed)",
+      "source": "Dow Jones VentureOne"
+     },
+     {
+      "name": "IB_RANK (investment bank prestige)",
+      "source": "Loughran and Ritter (2004) underwriter rankings (Carter and Manaster 1990)"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Second OLS specification with year and industry dummy variables replacing BUBBLE and TECH (Model 1 full; Model 2 = investment-bank-data subsample)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Model 1 = full sample; Model 2 = subsample of firms with investment bank data",
+    "dv": {
+     "name": "PREMIUM",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "DPRIV (dual private indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC New Issues Database; SEC EDGAR; Lexis-Nexis"
+     },
+     {
+      "name": "DPUB (dual public indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC New Issues Database; SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "FOCUS (same 4-digit SIC)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "STOCK (pure stock offer)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "MIX (stock-and-cash mixture)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "ASSETS (ln sell-out firm total assets)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "VC (venture capital backed)",
+      "source": "Dow Jones VentureOne"
+     },
+     {
+      "name": "IB_RANK (investment bank prestige)",
+      "source": "Loughran and Ritter (2004) underwriter rankings"
+     },
+     {
+      "name": "year dummy variables",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "industry dummy variables",
+      "source": "SDC M&A Database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "PREMIUM (second stage)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "dual-track indicator (predicted, from first stage)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC New Issues Database; SEC EDGAR; Lexis-Nexis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "FOCUS (same 4-digit SIC)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "STOCK (pure stock offer)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "MIX (stock-and-cash mixture)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "TECH (high tech industry)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "BUBBLE (1999-2000 announcement)",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "TECH_BUBBLE (TECH x BUBBLE interaction)",
+      "source": ""
+     },
+     {
+      "name": "VC (venture capital backed)",
+      "source": "Dow Jones VentureOne"
+     },
+     {
+      "name": "IB_RANK (investment bank prestige)",
+      "source": "Loughran and Ritter (2004) underwriter rankings"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "harvest track chosen",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A Database; SDC New Issues Database; SEC EDGAR; Lexis-Nexis"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH (high tech industry)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "ASSETS (firm size)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "BUBBLE (market environment)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A Database"
+     },
+     {
+      "name": "TECH_BUBBLE",
+      "measure": "the interaction of TECH and BUBBLE",
+      "source": ""
+     },
+     {
+      "name": "VC (venture capital backing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones VentureOne"
+     },
+     {
+      "name": "IB_RANK (investment bank prestige)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loughran and Ritter (2004) underwriter rankings"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "selection bias",
+    "firm quality"
+   ],
+   "mechanism_named": "selection bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "motives of underwriters"
+   ],
+   "mechanism_named": "investment bank power hypothesis",
+   "proposed_edge": {
+    "from": "motives of underwriters",
+    "relation": "unspecified",
+    "to": "dual-tracking strategy"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "dual paths",
+    "takeover premiums"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "optimal harvesting paths"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "traditional harvest paths"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "harvest strategies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

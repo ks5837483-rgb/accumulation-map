@@ -1,0 +1,487 @@
+{
+ "paper_id": "10.1017_s0022109017000047",
+ "title": "Stapled Financing, Value Certification, and Lending Efficiency",
+ "journal": "JFQA",
+ "year": 2017,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "certification hypothesis",
+  "adverse selection",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "value_of_costly_signaling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_of_costly_signaling",
+      "relation": "increases",
+      "to": "stapled_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_of_costly_signaling"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stapled_financing",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "target_shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "stapled_financing",
+     "moderated_to": "target_shareholder_wealth",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2 (IA interaction)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "stapled financing is endogenous: banks select into stapling on unobservable factors correlated with abnormal returns (selection/omitted variables), so the estimated pricing effect is not causal"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stapled_financing",
+      "relation": "increases",
+      "to": "value_certification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_certification",
+      "relation": "increases",
+      "to": "bidding_competition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_certification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causation / endogeneity: attractive deals draw more bidder interest regardless of stapling, so the stapling-bidding association is spurious"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stapled_financing",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "loan_spread",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stapled_financing",
+      "relation": "increases",
+      "to": "value_certification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_certification",
+      "relation": "increases",
+      "to": "advisory_fees",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_certification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (leveraged buyouts (LBOs) of U.S. public firms; no focal sector)",
+  "country_region": "United States (U.S. incorporated public target firms)",
+  "time_period": "2002-2011 (Jan. 1, 2002 through Oct. 16, 2011)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "186 deals (45 stapled and 141 nonstapled LBOs)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard & Poor's Capital IQ database",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "DealScan",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Panel B2 - Measures of Information Asymmetry (stapled vs. nonstapled targets)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "45 stapled and 141 nonstapled LBO targets",
+    "dv": {
+     "name": "target information asymmetry",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STAPLED",
+      "measure": "indicator = 1 for stapled-financed LBO targets, 0 for nonstapled LBO targets",
+      "source": "hand-collected / proxy filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Target Return Measures: Univariate Comparisons (matched and unmatched)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "propensity-score-matched sample based on industry and size, plus unmatched full sample",
+    "dv": {
+     "name": "target abnormal announcement returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STAPLED",
+      "measure": "stapled vs. nonstapled deal indicator",
+      "source": "hand-collected / proxy filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry (matching dimension)",
+      "source": "Capital IQ / SDC"
+     },
+     {
+      "name": "size (matching dimension)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A - Baseline multivariate regressions of stapled financing on target returns",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "186 deals (45 stapled + 141 nonstapled LBOs)",
+    "dv": {
+     "name": "target abnormal returns",
+     "measure": "BHAR-VW and CAR-VW over [-42,+126] and [0,+126] windows, and CAR3-VW over [-1,+1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STAPLED",
+      "measure": "indicator = 1 if the deal received stapled financing",
+      "source": "hand-collected / proxy filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ln(RELATIVE_SIZE)",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "PAST_STOCK_RETURN",
+      "source": "CRSP"
+     },
+     {
+      "name": "REPUTATION (investment bank reputation)",
+      "source": "hand-collected / Capital IQ"
+     },
+     {
+      "name": "NUMBER_OF_BIDDERS",
+      "source": "Capital IQ / proxy filings"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC / Capital IQ"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC / Capital IQ"
+     },
+     {
+      "name": "CLUB_BIDDING",
+      "source": "Capital IQ / proxy filings"
+     },
+     {
+      "name": "CASH",
+      "source": "SDC / Capital IQ"
+     },
+     {
+      "name": "STRATEGIC_BIDDER",
+      "source": "Capital IQ / hand-collected"
+     },
+     {
+      "name": "TAKEOVER_DEFENSE",
+      "source": "Capital IQ / proxy filings"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B - Effects of Information Asymmetry (STAPLED interacted with IA proxies)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all stapled and nonstapled LBOs (186 deals)",
+    "dv": {
+     "name": "target abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STAPLED x VOLATILITY",
+      "measure": "stapled indicator interacted with earnings volatility",
+      "source": "hand-collected + Compustat"
+     },
+     {
+      "name": "STAPLED x INTANGIBLES",
+      "measure": "stapled indicator interacted with intangible-to-total assets",
+      "source": "hand-collected + Compustat"
+     },
+     {
+      "name": "STAPLED x OPACITY",
+      "measure": "stapled indicator interacted with opacity",
+      "source": "hand-collected + Compustat/CRSP"
+     },
+     {
+      "name": "STAPLED x TURNOVER",
+      "measure": "stapled indicator interacted with stock turnover",
+      "source": "hand-collected + CRSP"
+     },
+     {
+      "name": "STAPLED x DISC_ACCRUALS",
+      "measure": "stapled indicator interacted with discretionary accruals",
+      "source": "hand-collected + Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-, deal-, and market-specific controls as in Panel A",
+      "source": "Compustat / CRSP / Capital IQ"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 / Internet Appendix Table A.1 - Endogenous switching regression (pricing improvement)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "all stapled and nonstapled LBOs",
+    "dv": {
+     "name": "actual vs. hypothetical target abnormal returns (counterfactual CARs)",
+     "measure": "CAR-VW and CAR3-VW over [-42,+126], [0,+126], [-1,+1]; Panel B splits High-IA vs. Low-IA by VOLATILITY relative to sample median",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STAPLED (switching regime indicator)",
+      "measure": "binary decision to offer stapled financing modeled via latent variable STAPLED_i* (STAPLED_i = 1 if STAPLED_i* > 0)",
+      "source": "hand-collected / proxy filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "earnings volatility (value uncertainty / IA proxy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "previous business relationship between seller and bank",
+      "source": "hand-collected"
+     },
+     {
+      "name": "institutional equity ownership",
+      "source": "other_commercial_db"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Univariate analysis of stapled financing on capital structure and loan terms",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "successful (completed) stapled and nonstapled LBO deals with loan data",
+    "dv": {
+     "name": "buyout capital structure and loan terms",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DealScan / proxy filings"
+    },
+    "key_ivs": [
+     {
+      "name": "STAPLED",
+      "measure": "stapled vs. nonstapled deal indicator",
+      "source": "hand-collected / proxy filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "loan tranches in successful stapled and nonstapled LBO deals",
+    "dv": {
+     "name": "loan prices and maturities",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "STAPLED",
+      "measure": "stapled-financing indicator",
+      "source": "hand-collected / proxy filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "significant determinants of loan pricing (loan-level controls)",
+      "source": "DealScan"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

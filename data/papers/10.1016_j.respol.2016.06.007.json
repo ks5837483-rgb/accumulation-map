@@ -1,0 +1,556 @@
+{
+ "paper_id": "10.1016_j.respol.2016.06.007",
+ "title": "Unique synergies in technology acquisitions",
+ "journal": "RP",
+ "year": 2016,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "strategic factor market theory",
+  "resource-based view",
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_technological_proximity",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "relative_technological_proximity",
+      "relation": "increases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection",
+    "private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_technological_proximity",
+      "relation": "increases",
+      "to": "inferred_private_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inferred_private_synergies",
+      "relation": "increases",
+      "to": "acquirer_stock_market_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inferred_private_synergies"
+   ],
+   "moderators": [
+    {
+     "construct": "target_public_status",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "inferred_private_synergies",
+     "moderated_from": "relative_technological_proximity",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "relative_cash_available",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "inferred_private_synergies",
+     "moderated_from": "relative_technological_proximity",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "higher synergy opportunities for technologically related firms (economies of scale at R&D / cost cutting from overlapping research projects)",
+    "lower product market competition among technologically proximate firms",
+    "easier implementation/integration process for technologically proximate firms"
+   ]
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_patent_portfolio_overlap",
+      "relation": "decreases",
+      "to": "transaction_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "transaction_costs",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "relative_patent_portfolio_overlap",
+      "relation": "increases",
+      "to": "negotiating_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "negotiating_power",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "transaction_costs",
+    "negotiating_power"
+   ],
+   "moderators": [
+    {
+     "construct": "complex_technology_industry",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "transaction_costs",
+     "moderated_from": "relative_patent_portfolio_overlap",
+     "moderated_to": "acquisition_likelihood",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_patent_portfolio_overlap",
+      "relation": "increases",
+      "to": "inimitable_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inimitable_synergies",
+      "relation": "increases",
+      "to": "acquirer_stock_market_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inimitable_synergies"
+   ],
+   "moderators": [
+    {
+     "construct": "complex_technology_industry",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "inimitable_synergies",
+     "moderated_from": "relative_patent_portfolio_overlap",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (both target and acquirer are US firms)",
+  "time_period": "1990-2002",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "228 unique acquirers making 385 successful deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC's M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "NBER patent database (Hall et al., 2001)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LitAlert database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones' Factiva database of corporate news and announcements",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Conditional logistic regression, successful acquisition (Models 1-9)",
+    "hypotheses": [
+     "H1a",
+     "H2a"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "successful acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC's M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "relative technological proximity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "relative patent portfolio overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "complex industry",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC's M&A database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "financial leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "book-to-market ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "relative acquirer cash available (standardized using all industry participants)",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquisition experience (count of acquisitions in 5-year period prior to announcement)",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "firm size (natural logarithm of sales)",
+      "source": "Compustat"
+     },
+     {
+      "name": "patent litigation activity (count of litigants 10 years prior)",
+      "source": "LitAlert database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "acquirer patent portfolio concentration (Herfindahl index across patent classes)",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "target public status (dummy = 1 if target firm is public)",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "target liquidity index (number of deals in a particular year and SIC code)",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "target patent portfolio quality",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "target patent portfolio concentration",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "cash payment dummy (deals financed solely with cash)",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "equity payment dummy (deals financed solely with equity)",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "operational proximity dummies (based on primary SIC codes)",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "relative size (deal value divided by acquirer's market capitalization)",
+      "source": "SDC's M&A database; CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "tender offer dummy",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "prior alliance dummy (acquirer/potential acquirer and target formed alliance in past 5 years)",
+      "source": "Dow Jones' Factiva database of corporate news and announcements"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Event study of announcement returns (Panel A acquirers, Panel B targets, Panel C total returns)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Panel A = acquirers' returns; Panel B = targets' returns; Panel C = total returns (weighted sum of the two)",
+    "dv": {
+     "name": "cumulative abnormal returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - OLS regression, acquirer's abnormal returns (Models 1-9)",
+    "hypotheses": [
+     "H1b",
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Robust standard errors clustered by acquirer; Model 8 = 7-day event window, Model 9 = S&P500 benchmark",
+    "dv": {
+     "name": "acquirer's abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "relative technological proximity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "relative patent portfolio overlap",
+      "measure": "standardized value of patent portfolio overlap across industry participants (cross + common citation rate, citation- and age-weighted)",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "patent portfolio overlap x complex industry",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "relative patent overlap x complex industry",
+      "measure": "interaction between relative patent portfolio overlap and complex industry dummy",
+      "source": "NBER patent database (Hall et al., 2001)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "financial leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "book-to-market ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash available / relative acquirer cash available",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquisition experience",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "firm size (log of sales)",
+      "source": "Compustat"
+     },
+     {
+      "name": "patent litigation activity",
+      "source": "LitAlert database"
+     },
+     {
+      "name": "acquirer patent portfolio quality and concentration",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "target public status",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "target liquidity index",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "target has patent / target patent portfolio quality and concentration",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "cash payment dummy",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "equity payment dummy",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "operational proximity dummies",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "relative size",
+      "source": "SDC's M&A database; CRSP"
+     },
+     {
+      "name": "relative size of acquired knowledge base",
+      "source": "NBER patent database (Hall et al., 2001)"
+     },
+     {
+      "name": "tender offer dummy",
+      "source": "SDC's M&A database"
+     },
+     {
+      "name": "prior alliance dummy",
+      "source": "Dow Jones' Factiva database of corporate news and announcements"
+     },
+     {
+      "name": "year dummies",
+      "source": "SDC's M&A database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Models 10-11, alternative-explanation robustness (relative technological proximity x public target)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "additional models providing evidence against alternative explanations (R&D scale economies, product-market competition, implementation ease)",
+    "dv": {
+     "name": "acquirer's abnormal returns",
+     "measure": "acquirer's abnormal returns (market model, CRSP value-weighted index, 5-day window [-2,+2])",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "relative technological proximity x public target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database (Hall et al., 2001); SDC's M&A database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full set of acquirer, target and deal control variables as in Table 5 main models",
+      "source": "Compustat; CRSP; SDC's M&A database; NBER patent database (Hall et al., 2001); LitAlert database; Dow Jones' Factiva database"
+     },
+     {
+      "name": "year dummies",
+      "source": "SDC's M&A database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

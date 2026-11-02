@@ -1,0 +1,868 @@
+{
+ "paper_id": "10.1287_mnsc.2018.3227",
+ "title": "Expectation Management in Mergers and Acquisitions",
+ "journal": "MNSC",
+ "year": 2020,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "expectation management",
+  "analyst conflicts of interest",
+  "information asymmetry",
+  "market mispricing"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_payment",
+      "relation": "increases",
+      "to": "incentive_to_boost_premerger_stock_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_boost_premerger_stock_price",
+      "relation": "increases",
+      "to": "expectation_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_boost_premerger_stock_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "omitted variables (not stock payment) drive the observed expectation management"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "expectation_management",
+      "relation": "increases",
+      "to": "earnings_surprise",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "premerger_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_surprise"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the premerger stock-return increase is driven by real (unmanaged) earnings performance rather than expectation management"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "expectation_management",
+      "relation": "increases",
+      "to": "temporary_overpricing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "temporary_overpricing",
+      "relation": "decreases",
+      "to": "long_term_postmerger_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "temporary_overpricing"
+   ],
+   "moderators": [
+    {
+     "construct": "stock_payment",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "temporary_overpricing",
+     "moderated_from": "expectation_management",
+     "moderated_to": "long_term_postmerger_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "analyst_bidder_relation",
+      "relation": "increases",
+      "to": "exchange_of_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "exchange_of_benefits",
+      "relation": "increases",
+      "to": "expectation_management",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "exchange_of_benefits"
+   ],
+   "moderators": [
+    {
+     "construct": "stock_payment",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "incentive_to_boost_premerger_stock_price",
+     "moderated_from": "analyst_bidder_relation",
+     "moderated_to": "expectation_management",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_idiosyncratic_return_volatility",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_debt_equity_ratio",
+      "relation": "increases",
+      "to": "financial_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_risk",
+      "relation": "increases",
+      "to": "stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "financial_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public bidders in mergers and acquisitions)",
+  "country_region": "United States",
+  "time_period": "1992-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "4,812 M&A deals (1,687 stock, 1,230 cash, 1,895 mixed)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "13F",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Unexpected Forecasts Before Merger Announcements (univariate)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "unexpected analyst forecast",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment (Stock vs. Cash)",
+      "measure": "comparison of stock deals vs. cash deals via two-sample t-test of means and Wilcoxon rank-sum test",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3: Multivariate Analysis of Unexpected Forecasts",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "stock deals and cash deals only (mixed deals excluded)",
+    "dv": {
+     "name": "unexpected analyst forecast",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(MktCap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(RelativeSize)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TenderOffer",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "log(AnalystCov)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "PublicTarget",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "EarningsVol",
+      "source": "Compustat"
+     },
+     {
+      "name": "ForecastDisp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "InstOwn",
+      "source": "13F"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "bidder's marginal tax rate (MarginalTaxRate), target's idiosyncratic return volatility (TargetIdiosynVol), and target's debt-to-equity ratio (TargetDebt/Equity)",
+    "sample": "IV models using target characteristics restricted to publicly traded targets (sample reduced by about one-third)",
+    "dv": {
+     "name": "unexpected analyst forecast",
+     "measure": "second-stage dependent variable is the bidder's unexpected forecast; first-stage dependent variable is Stock (dummy for stock deals)",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Stock (Fitted)",
+      "measure": "the fitted value of Stock from the first-stage regression instrumented by the three instruments",
+      "source": "SDC"
+     },
+     {
+      "name": "MarginalTaxRate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "TargetIdiosynVol",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "TargetDebt/Equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(MktCap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(RelativeSize)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TenderOffer",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "log(AnalystCov)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "EarningsVol",
+      "source": "Compustat"
+     },
+     {
+      "name": "ForecastDisp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "InstOwn",
+      "source": "13F"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Expectation Management of Bidders: Pseudo-Event Analysis",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "pseudo-events created by shifting merger announcement dates four quarters backward or forward (placebo/falsification test)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "unexpected analyst forecast",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(MktCap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(RelativeSize)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TenderOffer",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "log(AnalystCov)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "PublicTarget",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "EarningsVol",
+      "source": "Compustat"
+     },
+     {
+      "name": "ForecastDisp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "InstOwn",
+      "source": "13F"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "bidders matched to nonbidder firms from the Compustat universe",
+    "dv": {
+     "name": "unexpected analyst forecast",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "bidder vs. matched nonmerger firm status",
+      "measure": "each bidder (treatment) matched to a nonbidder firm (control) via nearest-neighbor matching on the propensity of being a bidder, estimated from a probit on lagged Size, MarketToBook, SalesGrowth, and StockReturn with industry and year fixed effects (Equation 4)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size (lagged market capitalization)",
+      "source": "CRSP"
+     },
+     {
+      "name": "MarketToBook",
+      "source": "Compustat"
+     },
+     {
+      "name": "SalesGrowth",
+      "source": "Compustat"
+     },
+     {
+      "name": "StockReturn",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidder abnormal stock return in the long window around earnings announcements",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "ExpManage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "RealEarningsSurprise",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S/Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Q4 (fourth fiscal quarter dummy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(MarketBook)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(MktCap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(AnalystCoverage)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder long-term postmerger abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "UnexpForecast x Stock",
+      "measure": "interaction of the premerger unexpected forecast (sum of four quarterly unexpected forecasts) with the Stock dummy",
+      "source": "I/B/E/S/SDC"
+     },
+     {
+      "name": "UnexpForecast",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(MktCap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(RelativeSize)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TenderOffer",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "log(AnalystCov)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "PublicTarget",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "EarningsVol",
+      "source": "Compustat"
+     },
+     {
+      "name": "ForecastDisp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "InstOwn",
+      "source": "13F"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "analyst-firm-quarter level observations",
+    "dv": {
+     "name": "individual analyst's unexpected forecast",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Relation x Stock",
+      "measure": "interaction of Relation with the Stock dummy",
+      "source": "I/B/E/S/SDC"
+     },
+     {
+      "name": "Relation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(Experience)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(FirmAge)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(MktCap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(RelativeSize)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TenderOffer",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "log(AnalystCov)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "PublicTarget",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "EarningsVol",
+      "source": "Compustat"
+     },
+     {
+      "name": "ForecastDisp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "InstOwn",
+      "source": "13F"
+     },
+     {
+      "name": "Year fixed effect",
+      "source": ""
+     },
+     {
+      "name": "Individual fixed effect",
+      "source": ""
+     },
+     {
+      "name": "Analyst fixed effect",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "dollar benefits",
+    "cost savings",
+    "expectation management"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "total cost savings",
+    "deal size",
+    "deal characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "channel",
+    "analysts",
+    "corporate managers",
+    "expectation management"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "stock payment",
+    "expectation management"
+   ],
+   "mechanism_named": "endogeneity problem",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "stock dummy",
+    "IV estimates"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "expectation management",
+    "stock bidder",
+    "costs of expectation management"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "management forecasts",
+    "stock deals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

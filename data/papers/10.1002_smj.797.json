@@ -1,0 +1,609 @@
+{
+ "paper_id": "10.1002_smj.797",
+ "title": "The development of capabilities in new firms",
+ "journal": "SMJ",
+ "year": 2009,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "capabilities-based view of the firm",
+  "dynamic capabilities",
+  "information economics",
+  "organizational learning theory",
+  "path dependence"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_investor_response",
+      "relation": "increases",
+      "to": "imputed_expectations",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "imputed_expectations",
+      "relation": "increases",
+      "to": "same_type_deal_incidence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "imputed_expectations"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "same_type_deal_experience",
+      "relation": "increases",
+      "to": "imputed_expectations",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "imputed_expectations",
+      "relation": "decreases",
+      "to": "incremental_change_in_investor_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "same_type_deal_experience",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "incremental_change_in_investor_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "imputed_expectations",
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "countervailing influences (deal programs change over time, 'digestion' problems, or exhaustion of the pool of available partners) are at least as prevalent as capability development"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "same_type_deal_experience",
+      "relation": "increases",
+      "to": "imputed_expectations",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "imputed_expectations",
+      "relation": "decreases",
+      "to": "incremental_change_in_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "same_type_deal_experience",
+      "relation": "increases",
+      "to": "unobservable_capability_development",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unobservable_capability_development",
+      "relation": "increases",
+      "to": "incremental_change_in_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "imputed_expectations",
+    "unobservable_capability_development"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (newly public U.S. firms spanning service, manufacturing, finance/insurance/real estate, and retail trade sectors)",
+  "country_region": "United States",
+  "time_period": "1988-1999",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,450 'qualified IPO' firms engaging in 7,195 corporate deals (5,688 acquisitions and 1,507 alliances); unit of analysis is the deal"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Joint Ventures & Strategic Alliances report",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Mergers & Acquisitions report",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP Value-Weighted Index",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Column 1 (alliance deal-type choice, experience only)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ALL",
+     "measure": "Deal is an alliance (Yes=1)",
+     "source": "SDC Joint Ventures & Strategic Alliances report"
+    },
+    "key_ivs": [
+     {
+      "name": "ALLEXP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "ALLEXPSQ",
+      "measure": "Squared portion of all prior deals as alliances",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 2 (alliance deal-type choice with prior alliance CAR)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ALL",
+     "measure": "Deal is an alliance (Yes=1)",
+     "source": "SDC Joint Ventures & Strategic Alliances report"
+    },
+    "key_ivs": [
+     {
+      "name": "CAREXPALL",
+      "measure": "Absolute value of average CARs for prior alliance deals",
+      "source": "CRSP Value-Weighted Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ALLEXP (portion of all prior deals as alliances)",
+      "source": "SDC"
+     },
+     {
+      "name": "ALLEXPSQ (squared portion of all prior deals as alliances)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 3 (acquisition deal-type choice, experience only)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ACQ",
+     "measure": "Deal is an acquisition (Yes=1)",
+     "source": "SDC Mergers & Acquisitions report"
+    },
+    "key_ivs": [
+     {
+      "name": "ACQEXP",
+      "measure": "Portion of all prior deals as acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQEXPSQ",
+      "measure": "Squared portion of all prior deals as acquisitions",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 4 (acquisition deal-type choice with prior acquisition CAR)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ACQ",
+     "measure": "Deal is an acquisition (Yes=1)",
+     "source": "SDC Mergers & Acquisitions report"
+    },
+    "key_ivs": [
+     {
+      "name": "CAREXPACQ",
+      "measure": "Absolute value of average CARs for prior acquisition deals",
+      "source": "CRSP Value-Weighted Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQEXP (portion of all prior deals as acquisitions)",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQEXPSQ (squared portion of all prior deals as acquisitions)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 5 (H2, concentrated deal experience, acquisitions)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisition deals of qualified IPOs (deal-level unbalanced panel; random-effects GLS with clustered robust SEs)",
+    "dv": {
+     "name": "CHGCAR ACQ",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Value-Weighted Index"
+    },
+    "key_ivs": [
+     {
+      "name": "ACQEXP",
+      "measure": "Portion of all prior deals as acquisitions",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 6 (H2, concentrated deal experience, alliances)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "alliance deals of qualified IPOs (deal-level unbalanced panel; random-effects GLS with clustered robust SEs)",
+    "dv": {
+     "name": "CHGCAR ALL",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Value-Weighted Index"
+    },
+    "key_ivs": [
+     {
+      "name": "ALLEXP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 7 (H3, continuing unobservable capability development, alliances)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "alliance deals of qualified IPOs (deal-level unbalanced panel; random-effects GLS with clustered robust SEs)",
+    "dv": {
+     "name": "CHGCAR ALL",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Value-Weighted Index"
+    },
+    "key_ivs": [
+     {
+      "name": "ALLEXP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "ALLEXPSQ",
+      "measure": "Squared portion of all prior deals as alliances",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 8 (H3, continuing unobservable capability development, acquisitions)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisition deals of qualified IPOs (deal-level unbalanced panel; random-effects GLS with clustered robust SEs)",
+    "dv": {
+     "name": "CHGCAR ACQ",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Value-Weighted Index"
+    },
+    "key_ivs": [
+     {
+      "name": "ACQEXP",
+      "measure": "Portion of all prior deals as acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQEXPSQ",
+      "measure": "Squared portion of all prior deals as acquisitions",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year indicators (DEALYEAR88-DEALYEAR99)",
+      "source": "SDC"
+     },
+     {
+      "name": "Sector indicators (MANUF, FIN, RETAIL, SERV; one-digit SIC)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "HOTIPO (firm IPO'd in a 'hot' year)",
+      "source": "SDC report on Global New Issues"
+     },
+     {
+      "name": "BOOM (deal during 1995-1999 dotcom boom)",
+      "source": "SDC"
+     },
+     {
+      "name": "FIRMSIZE (log of firm's assets in prior year)",
+      "source": "COMPUSTAT/CRSP merged database (WRDS)"
+     },
+     {
+      "name": "PACQ/PALL (immediate prior deal type; recency)",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

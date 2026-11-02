@@ -1,0 +1,409 @@
+{
+ "paper_id": "10.1017_s0022109000014423",
+ "title": "Using Innovative Securities under Asymmetric Information: Why Do Some Firms Pay with Contingent Value Rights?",
+ "journal": "JFQA",
+ "year": 2008,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "security design"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cvr_offer",
+      "relation": "increases",
+      "to": "perceived_firm_intrinsic_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_firm_intrinsic_value",
+      "relation": "increases",
+      "to": "announcement_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_firm_intrinsic_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "The positive announcement effect is driven by cash accompanying the CVR rather than by the CVR itself"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "signaling_need",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signaling_need",
+      "relation": "increases",
+      "to": "likelihood_of_cvr_offer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signaling_need"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "The results are driven by the signaling role of the cash bundled in the CVR payment rather than by the CVR itself"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "internal_capital",
+      "relation": "decreases",
+      "to": "signaling_need",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signaling_need",
+      "relation": "increases",
+      "to": "likelihood_of_cvr_offer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signaling_need"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A firms across sectors; control sample drawn to match the SIC industries of the CVR-offering firms, industries defined by the first two digits of SIC codes)",
+  "country_region": "United States (CVR-offering firms listed on U.S. exchanges)",
+  "time_period": "1989-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "CVR sample: 29 announcements; control sample: 1,008 takeovers and 261 partial acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "announcement statements and proxy statements",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Standard & Poor's Compustat database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP tapes",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBES database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5, Panel B: Announcement effect, CVR bidders vs. all-stock bidders",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "announcement period abnormal equity return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "CVR offer (vs. all-stock offer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected CVR sample (WSJ Index/Lexis-Nexis); SDC control sample"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5, Panel C: Announcement effect, CVR bidders vs. propensity-score matching firms",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "CVR bidders in completed takeovers matched to all-stock bidders",
+    "dv": {
+     "name": "announcement period abnormal equity return (CAR)",
+     "measure": "cumulative abnormal return over event windows (0), (-1,1), (-3,3), (-5,5); pairwise difference between each CVR bidder and its matching firm",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "CVR bidder vs. matched non-CVR all-stock bidder",
+      "measure": "each CVR bidder matched to the single non-CVR stock bidder in the same industry with the closest propensity score (Hillion and Vermaelen (2004))",
+      "source": "hand-collected CVR sample; SDC/CRSP control sample"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CF",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTOB",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "SIZE",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "LDR",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash-offer dummy",
+      "source": "SDC/hand-collected"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel D: Target announcement returns, CVR offers vs. non-CVR matching offers",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "targets in CVR offers vs. matched non-CVR offers",
+    "dv": {
+     "name": "target announcement period abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "CVR offer vs. non-CVR matching offer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected CVR sample; SDC control sample"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5, Panel E: Robustness - CVR/stock (no cash) bidders vs. all-stock bidders and matching firms",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "CVR/stock bidders offering no cash (11 bidders)",
+    "dv": {
+     "name": "announcement period abnormal equity return (CAR)",
+     "measure": "cumulative abnormal return over event windows (0), (-1,1), (-3,3), (-5,5)",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "CVR/stock offer (no cash) vs. all-stock offer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected CVR sample; SDC control sample"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6: Long-term operating performance, CVR bidders vs. all-stock bidders and matching firms",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "CVR bidders in completed takeovers (23 completed deals) vs. all-stock bidders / matching firms",
+    "dv": {
+     "name": "long-term operating performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "CVR bidder vs. all-stock bidder / matching firm",
+      "measure": "difference in the change in post-merger OPRATIO and MTOB between CVR bidders and control all-stock bidders / propensity-score matching firms",
+      "source": "hand-collected CVR sample; SDC control sample"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7: Logistic regressions on likelihood of offering CVRs rather than cash",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "CVR takeover bidders and cash bidders (all-cash and cash/stock) operating in the same industries; industry-clustered Huber-White SEs",
+    "dv": {
+     "name": "CVR offer choice (ISSUE)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected CVR sample; SDC control sample"
+    },
+    "key_ivs": [
+     {
+      "name": "NUMBER (analyst following, information asymmetry proxy)",
+      "measure": "the number of analysts following the firm",
+      "source": "IBES database"
+     },
+     {
+      "name": "ERR (forecast error, information asymmetry proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IBES database"
+     },
+     {
+      "name": "DISP (forecast dispersion, information asymmetry proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IBES database"
+     },
+     {
+      "name": "OPRATIO (operating performance, internal capital proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "CF (cash flow, internal capital proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (log market value of total assets)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "MTOB (market-to-book ratio)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "LDR (long-term debt ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAXLOSS (tax-loss carry-forward dummy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "DIVD (cash dividend dummy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TENDER (tender offer dummy)",
+      "source": "SDC/hand-collected"
+     },
+     {
+      "name": "year dummies (time effect specification)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Correlations among CVR issue dummy, information asymmetry, internal capital, and control variables",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ISSUE (CVR offer dummy)",
+     "measure": "equal to one for firms offering CVRs and zero for firms not offering CVRs",
+     "source": "hand-collected CVR sample; SDC control sample"
+    },
+    "key_ivs": [
+     {
+      "name": "information asymmetry and internal capital proxies (NUMBER, ERR, DISP, CF, OPRATIO)",
+      "measure": "pairwise correlations with ISSUE, p-values in brackets",
+      "source": "IBES database; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "LDR",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTOB",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC/hand-collected"
+     },
+     {
+      "name": "DIVD",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAXLOSS",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

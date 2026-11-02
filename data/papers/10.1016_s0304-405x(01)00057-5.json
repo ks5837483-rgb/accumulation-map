@@ -1,0 +1,484 @@
+{
+ "paper_id": "10.1016_s0304-405x(01)00057-5",
+ "title": "CEO compensation and bank mergers",
+ "journal": "JFE",
+ "year": 2001,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "executive compensation theory",
+  "adverse selection",
+  "information economics",
+  "managerial self-interest / private benefits theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_activity",
+      "relation": "increases",
+      "to": "firm_size",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "firm_size",
+      "relation": "increases",
+      "to": "ceo_compensation",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "merger_activity",
+      "relation": "decreases",
+      "to": "acquirer_stock_price",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "acquirer_stock_price",
+      "relation": "increases",
+      "to": "ceo_compensation",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_size",
+    "acquirer_stock_price"
+   ],
+   "moderators": [
+    {
+     "construct": "merger_intensity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "[withheld: wording matches the source]",
+     "moderated_from": "merger_activity",
+     "moderated_to": "ceo_compensation",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Section 4.2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_based_compensation",
+      "relation": "increases",
+      "to": "managerial_incentive_alignment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentive_alignment",
+      "relation": "decreases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_incentive_alignment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the compensation-acquisition correlation reflects Boards setting compensation policy to influence merger activity (a board decision), not the incentive effect on CEOs"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "idiosyncratic_stock_performance",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "banking industry (bank holding companies)",
+  "country_region": "United States",
+  "time_period": "1986-1995",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "32 banks and 298 bank-years"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "proxy statements",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Securities Data Corporation",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions magazine",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Federal Reserve Board",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Merger announcement CARs (three-day window)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "66 megamergers, 1984-1995",
+    "dv": {
+     "name": "cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "megamerger announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation; Federal Reserve Board"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel B (cash-to-total compensation ratio, high- vs low-merger banks)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "32 banks split into 16 high-merger and 16 low-merger banks",
+    "dv": {
+     "name": "ratio of cash compensation to total compensation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "proxy statements"
+    },
+    "key_ivs": [
+     {
+      "name": "merger-activity group",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 (compensation gains, high- vs low-merger groups)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "32 banks split into 16 high-merger and 16 low-merger banks",
+    "dv": {
+     "name": "increase in CEO compensation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "proxy statements"
+    },
+    "key_ivs": [
+     {
+      "name": "merger-activity group",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 (full-sample compensation regressions, Eq. 1)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "298 bank-year observations",
+    "dv": {
+     "name": "CEO compensation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "proxy statements"
+    },
+    "key_ivs": [
+     {
+      "name": "assets acquired in megamergers (MEGA3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation; Federal Reserve Board"
+     },
+     {
+      "name": "assets acquired in all mergers (MRG3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation; Federal Reserve Board"
+     },
+     {
+      "name": "change in firm value due to index (INDEX CHG)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "total change in the bank's equity value minus INDEX CHG ($ millions)",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "total assets, year t-3 (RTA3)",
+      "source": "Compustat"
+     },
+     {
+      "name": "non-megamerger growth, years t-2 to t (MGROW3)",
+      "source": "Compustat"
+     },
+     {
+      "name": "non-merger growth, years t-2 to t (GROW3)",
+      "source": "Compustat"
+     },
+     {
+      "name": "return on assets (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO age (AGE)",
+      "source": "proxy statements"
+     },
+     {
+      "name": "CEO share ownership (CEO SHR)",
+      "source": "proxy statements"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (compensation regressions, high-merger vs low-merger banks)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "high-merger subsample (156 bank-year obs) vs low-merger subsample (142 bank-year obs)",
+    "dv": {
+     "name": "CEO compensation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "proxy statements"
+    },
+    "key_ivs": [
+     {
+      "name": "assets acquired in megamergers (MEGA3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation; Federal Reserve Board"
+     },
+     {
+      "name": "change in firm value due to index (INDEX CHG)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "total change in equity value minus INDEX CHG ($ millions)",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "total assets, year t-3 (RTA3)",
+      "source": "Compustat"
+     },
+     {
+      "name": "non-megamerger growth (MGROW3)",
+      "source": "Compustat"
+     },
+     {
+      "name": "return on assets (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (logistic regression of acquisition decision, Eq. 2)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation; Federal Reserve Board"
+    },
+    "key_ivs": [
+     {
+      "name": "ratio of cash compensation to total compensation",
+      "measure": "ratio of cash compensation to total compensation, measured as of year t (column 1)",
+      "source": "proxy statements"
+     },
+     {
+      "name": "level of stock-based compensation",
+      "measure": "dollar value of stock-based compensation as of year t (column 2)",
+      "source": "proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "recent merger activity",
+      "source": "Securities Data Corporation"
+     },
+     {
+      "name": "stock price performance (idiosyncratic/abnormal stock price change)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CEO age",
+      "source": "proxy statements"
+     },
+     {
+      "name": "board composition (fraction of insiders on the board)",
+      "source": "proxy statements"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "assets acquired through mergers",
+    "compensation",
+    "components of size"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "negative announcement effects",
+    "inefficient mergers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "adverse selection problem",
+    "acquisition decisions",
+    "overpriced stock"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "overpriced stock",
+    "relation": "increases",
+    "to": "acquisition decisions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "negative announcement effect",
+    "stock is overvalued"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "negative announcement effects",
+    "overcapacity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "private benefits",
+    "bad merger decisions",
+    "compensation"
+   ],
+   "mechanism_named": "private benefits",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

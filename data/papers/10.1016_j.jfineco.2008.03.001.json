@@ -1,0 +1,460 @@
+{
+ "paper_id": "10.1016_j.jfineco.2008.03.001",
+ "title": "Are fairness opinions fair? The case of mergers and acquisitions☆",
+ "journal": "JFE",
+ "year": 2008,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "voluntary disclosure theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "low_offer_premium",
+      "relation": "increases",
+      "to": "expected_benefit_of_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_benefit_of_disclosure",
+      "relation": "increases",
+      "to": "voluntary_disclosure_of_valuation_details",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_benefit_of_disclosure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "voluntary_disclosure_of_valuation_details",
+      "relation": "increases",
+      "to": "signal_that_price_is_too_low",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_that_price_is_too_low",
+      "relation": "increases",
+      "to": "tender_offer_price_revision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_that_price_is_too_low"
+   ],
+   "moderators": [
+    {
+     "construct": "disclosure_regime_voluntariness",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "signal_that_price_is_too_low",
+     "moderated_from": "voluntary_disclosure_of_valuation_details",
+     "moderated_to": "tender_offer_price_revision",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disclosed_dcf_valuation",
+      "relation": "increases",
+      "to": "perceived_undervaluation_of_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_undervaluation_of_target",
+      "relation": "increases",
+      "to": "tender_offer_price_revision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_undervaluation_of_target"
+   ],
+   "moderators": [
+    {
+     "construct": "low_offer_premium",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "perceived_undervaluation_of_target",
+     "moderated_from": "disclosed_dcf_valuation",
+     "moderated_to": "tender_offer_price_revision",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "top_tier_financial_advisor",
+      "relation": "increases",
+      "to": "assessment_of_disclosure_costs_and_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "assessment_of_disclosure_costs_and_benefits",
+      "relation": "increases",
+      "to": "voluntary_disclosure_of_valuation_details",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "assessment_of_disclosure_costs_and_benefits"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (public M&A tender offer targets; Cross Industry indicator = target and acquirer in different SIC codes)",
+  "country_region": "United States (US public companies; Delaware incorporation)",
+  "time_period": "1995-2019",
+  "sample_description": "Tender offer acquisitions of public targets from the SDC Platinum database for which a form 14D-9 can be identified (1995-2019)",
+  "sample_size": "914 tender offers"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "deals disclosing DCF valuation ranges in the fairness opinions (N=416)",
+    "dv": {
+     "name": "DCF valuation relative to tender offer price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+    },
+    "key_ivs": [
+     {
+      "name": "Low Offer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "deals disclosing DCF valuation ranges in the fairness opinions (N=416; high offers N=293, low offers N=123)",
+    "dv": {
+     "name": "Tender Offer Percentage Change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "DCF Valuation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Transaction Value",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Cross Industry",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Target Delaware Incorporated",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "shift from voluntary to mandatory disclosure of fairness opinions (change in Delaware disclosure requirements), captured by the 1995-2007 vs 2008-19 period split",
+    "sample": "tender offer deals disclosing DCF valuation ranges in the fairness opinions (N=416; 1995-2007 N=103, 2008-19 N=313)",
+    "dv": {
+     "name": "Tender Offer Percentage Change",
+     "measure": "Tender Offer Percentage Change x 100",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "DCF Valuation x Low Offer",
+      "measure": "interaction of DCF Valuation and Low Offer",
+      "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+     },
+     {
+      "name": "DCF Valuation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+     },
+     {
+      "name": "Low Offer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Transaction Value",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Cross Industry",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Target Delaware Incorporated",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "placebo: merger sample in which disclosure of fairness opinion valuations was mandatory over the entire period (no voluntary-to-mandatory shift)",
+    "sample": "merger deals disclosing DCF valuation ranges in the fairness opinions, announced 1995 through 2019 (SDC Platinum); 1995-2007 N=416, 2008-19 N=451",
+    "dv": {
+     "name": "Tender Offer Percentage Change",
+     "measure": "Tender Offer Percentage Change x 100",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "DCF Valuation x Low Offer",
+      "measure": "interaction of DCF Valuation and Low Offer",
+      "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+     },
+     {
+      "name": "DCF Valuation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+     },
+     {
+      "name": "Low Offer",
+      "measure": "bottom 30th percentile initial offer premium indicator",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Transaction Value",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Cross Industry",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Target Delaware Incorporated",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "shift from voluntary to mandatory disclosure of fairness opinions, captured by the 1995-2007 vs 2008-19 period split",
+    "sample": "full tender offer sample (N=914; 1995-2007 N=560, 2008-19 N=354)",
+    "dv": {
+     "name": "Tender Offer Percentage Change",
+     "measure": "Tender Offer Percentage Change x 100",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "FO Valuations Disclosed x Low Offer",
+      "measure": "interaction of FO Valuations Disclosed and Low Offer",
+      "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+     },
+     {
+      "name": "FO Valuations Disclosed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+     },
+     {
+      "name": "Low Offer",
+      "measure": "bottom 30th percentile initial offer premium indicator",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Transaction Value",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Cross Industry",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Target Delaware Incorporated",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "tender offers from 1995 through 2014 (N=802)",
+    "dv": {
+     "name": "Disclosure of valuation details",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected fairness opinion valuation disclosures (Form 14D-9)"
+    },
+    "key_ivs": [
+     {
+      "name": "Top 5 Finance",
+      "measure": "indicator variable for the top-ranked investment banking advisors",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Top 5 Law",
+      "measure": "indicator variable for the top-ranked law firms",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Transaction Value",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Cross Industry",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Target Delaware Incorporated",
+      "source": ""
+     },
+     {
+      "name": "Low Offer",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Conflict",
+      "source": "SDC Platinum database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "corporate filings",
+    "informativeness"
+   ],
+   "mechanism_named": "omitted-variables bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "disclosures in tender offer documents",
+    "informativeness of corporate disclosures"
+   ],
+   "mechanism_named": "omitted variable",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "disclosure requirements",
+    "fairness opinions",
+    "voluntary versus mandatory disclosure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

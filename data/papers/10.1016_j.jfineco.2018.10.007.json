@@ -1,0 +1,581 @@
+{
+ "paper_id": "10.1016_j.jfineco.2018.10.007",
+ "title": "Entry and competition in takeover auctions",
+ "journal": "JFE",
+ "year": 2019,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_entry_uncertainty",
+      "relation": "increases",
+      "to": "overall_bidder_entry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overall_bidder_entry",
+      "relation": "increases",
+      "to": "takeover_auction_revenue",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overall_bidder_entry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_entry_uncertainty",
+      "relation": "decreases",
+      "to": "high_value_bidder_participation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "high_value_bidder_participation",
+      "relation": "increases",
+      "to": "takeover_auction_revenue",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "high_value_bidder_participation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_entry_uncertainty",
+      "relation": "decreases",
+      "to": "deterrence_bidding",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deterrence_bidding",
+      "relation": "increases",
+      "to": "negotiation_revenue",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deterrence_bidding"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_entry_uncertainty",
+      "relation": "increases",
+      "to": "overall_bidder_entry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overall_bidder_entry",
+      "relation": "increases",
+      "to": "relative_auction_negotiation_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "pre_entry_uncertainty",
+      "relation": "decreases",
+      "to": "deterrence_bidding",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deterrence_bidding",
+      "relation": "decreases",
+      "to": "relative_auction_negotiation_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overall_bidder_entry",
+    "deterrence_bidding"
+   ],
+   "moderators": [
+    {
+     "construct": "entry_costs",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "overall_bidder_entry",
+     "moderated_from": "pre_entry_uncertainty",
+     "moderated_to": "relative_auction_negotiation_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "ex post deal outcomes (e.g., method of payment / cash payment, tender offer, unsolicited status, relative size of bidder and target) explain the relative performance of auctions and negotiations"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_holdings",
+      "relation": "decreases",
+      "to": "asset_valuation_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_valuation_difficulty",
+      "relation": "increases",
+      "to": "pre_entry_uncertainty",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asset_valuation_difficulty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_leverage",
+      "relation": "increases",
+      "to": "asset_valuation_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_valuation_difficulty",
+      "relation": "increases",
+      "to": "pre_entry_uncertainty",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asset_valuation_difficulty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (across the 12 Fama and French (1997) industries)",
+  "country_region": "United States (publicly traded S&P 1500 targets)",
+  "time_period": "2000-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "529 takeover auctions"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson M&A database (winning bid)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "bids manually recorded from press releases (robustness re-estimation)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (Panels A & B): structural estimates of fundamental takeover-market primitives (Columns 1-5 alternative specifications; LR tests select Column 4)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "529 takeover auctions of S&P 1500 public targets announced Jan 1, 2000 - Jan 1, 2010 (winning bidder publicly listed, acquires 100%; deal has >=2 invited bidders; EDGAR deal backgrounds and Compustat financials available)",
+    "dv": {
+     "name": "fundamental takeover-market primitives (pre-entry uncertainty, mean valuation, valuation dispersion, entry cost)",
+     "measure": "vector theta_j = (mu_j, sigma_nu_j, c_j, alpha_j) recovered by structural estimation from data on bids and entry patterns; taking observables M_j and N_j as given",
+     "source": "SEC EDGAR (hand-collected entry patterns) + Thomson M&A (winning bids)"
+    },
+    "key_ivs": [
+     {
+      "name": "pre-entry uncertainty (information frictions)",
+      "measure": "alpha_j = sigma^2_epsilon_j / (sigma^2_v_j + sigma^2_epsilon_j) in [0,1], the noise-to-signal ratio of pre-entry signals (alpha near 0 = informative signals, near 1 = uninformative)",
+      "source": "recovered from structural model"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash ratio (cash-to-assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales-to-asset ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "intangibles-to-asset ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "market-to-book (q) ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "indicator variables for the 12 Fama-French (1997) industries",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 4: average marginal (partial) effects of target observables on fundamental parameters",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "fundamental parameters mu_v and alpha (mean valuation and pre-entry uncertainty)",
+     "measure": "average marginal effect on the mean of theta of a unit change (dummy vars) or one-standard-deviation change (continuous vars) in X, holding X at the median and drawing gamma from the posterior (n=100)",
+     "source": "structural model posterior"
+    },
+    "key_ivs": [
+     {
+      "name": "target size",
+      "measure": "one-SD change in size",
+      "source": "Compustat"
+     },
+     {
+      "name": "q-ratio",
+      "measure": "one-SD change in q",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "measure": "one-SD change in leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash",
+      "measure": "one-SD change in cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "intangibles",
+      "measure": "one-SD change in intangibles",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales",
+      "measure": "one-SD change in sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "12 Fama-French industry indicators",
+      "measure": "unit change in industry dummy",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 (Panels A & B): average pre-entry uncertainty by industry and by balance-sheet quantiles",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "average pre-entry uncertainty (alpha)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "structural model"
+    },
+    "key_ivs": [
+     {
+      "name": "Fama-French industry membership",
+      "measure": "12 Fama-French (1997) industries",
+      "source": "Compustat"
+     },
+     {
+      "name": "target balance-sheet characteristics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6: unconditional counterfactual expected revenue - auction vs. sequential negotiation vs. negotiation-with-go-shop",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "expected revenue accruing to target shareholders (with revenue S.D., skewness, surplus extracted if sale, and share of cases where highest-value potential bidder wins)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "structural model (counterfactual simulation)"
+    },
+    "key_ivs": [
+     {
+      "name": "sale mechanism",
+      "measure": "auction with endogenous entry vs. sequential negotiation vs. one-shot negotiation followed by a go-shop auction",
+      "source": "structural model counterfactual"
+     },
+     {
+      "name": "pre-entry uncertainty (alpha)",
+      "measure": "recovered noise-to-signal ratio",
+      "source": "structural model"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "structural model (counterfactual)"
+    },
+    "key_ivs": [
+     {
+      "name": "pre-entry uncertainty (alpha)",
+      "measure": "different values of pre-entry uncertainty",
+      "source": "structural model"
+     },
+     {
+      "name": "entry costs (c)",
+      "measure": "different values of entry costs",
+      "source": "structural model"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "expected frequency with which each target obtains relatively higher revenue from holding an auction than from a negotiation, sorting targets by each characteristic (Panel A industry box plots; Panel B bottom/top quantiles)",
+     "source": "structural model"
+    },
+    "key_ivs": [
+     {
+      "name": "Fama-French industry membership",
+      "measure": "12 Fama-French (1997) industries",
+      "source": "Compustat"
+     },
+     {
+      "name": "target financials",
+      "measure": "leverage, cash holdings, and q-ratio (bottom vs. top quantiles)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 7: robustness checks (alternative bid data from press releases; winning cash-bid subsample; directly estimated target reservation-value distribution)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "subsample of winning cash bids; alternative bid sample manually recorded from press releases",
+    "dv": {
+     "name": "fundamental takeover-market primitives (robustness re-estimation)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "press releases / SEC EDGAR / Thomson M&A / structural model"
+    },
+    "key_ivs": [
+     {
+      "name": "pre-entry uncertainty (alpha)",
+      "measure": "recovered noise-to-signal ratio",
+      "source": "structural model"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "pre-entry uncertainty",
+    "ex ante target characteristics",
+    "shareholder empowerment movements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "optimal sale procedures",
+    "ex ante observable target characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "information frictions",
+    "endogenous entry patterns",
+    "relative performance of auctions and negotiations",
+    "firm and market-level characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "firm and market-level characteristics",
+    "relation": "affects",
+    "to": "relative performance of auctions and negotiations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "non-price procedure-specific costs or benefits",
+    "intangible costs and benefits",
+    "sale procedure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "non-price procedure-specific costs or benefits",
+    "relation": "affects",
+    "to": "sale procedure"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "non-price frictions",
+    "cost of delay",
+    "cost of approaching additional bidders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "non-price frictions",
+    "relation": "affects",
+    "to": "relative performance of auctions and negotiations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "additional frictions",
+    "size, composition, and deterrence effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

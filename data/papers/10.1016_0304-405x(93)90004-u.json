@@ -1,0 +1,348 @@
+{
+ "paper_id": "10.1016_0304-405x(93)90004-u",
+ "title": "A reexamination of analysts' earnings forecasts for takeover targets",
+ "journal": "JFE",
+ "year": 1993,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information hypothesis",
+  "synergy hypothesis",
+  "signaling theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "takeover_announcement",
+      "relation": "increases",
+      "to": "favorable_information_about_target_firm",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_information_about_target_firm",
+      "relation": "increases",
+      "to": "abnormal_earnings_forecast_revision",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_information_about_target_firm"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "synergy hypothesis: the favorable stock price reaction reflects synergistic gains rather than favorable information about the target's stand-alone value (under synergy, stand-alone forecasts would not be revised upward)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "tobin_q",
+      "relation": "decreases",
+      "to": "undervaluation_or_mismanagement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "undervaluation_or_mismanagement",
+      "relation": "increases",
+      "to": "abnormal_earnings_forecast_revision",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "undervaluation_or_mismanagement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "takeover_resistance",
+      "relation": "decreases",
+      "to": "target_stand_alone_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_stand_alone_value",
+      "relation": "increases",
+      "to": "cumulative_abnormal_forecast_revision",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_stand_alone_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "resistance reflects target management bargaining to extract a higher premium (or merely affects acquisition probability) rather than entrenched managers destroying stand-alone value"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (NYSE / American Stock Exchange)",
+  "time_period": "1977-1988",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "307 target firms (current-year earnings forecasts); 218 target firms (following-year earnings forecasts)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Institutional Brokers Estimate System (IBES)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "WSJI (Wall Street Journal Index)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC Official Summary",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "all firms on the IBES tape with randomly-chosen event dates (specification/placebo test)",
+    "dv": {
+     "name": "abnormal analysts' earnings forecast revision (current fiscal year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "randomly-chosen event date",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimate System (IBES)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "all firms on the IBES tape with randomly-chosen event dates (specification/placebo test)",
+    "dv": {
+     "name": "abnormal analysts' earnings forecast revision (following fiscal year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "randomly-chosen event date",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimate System (IBES)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "307 target firms with forecasts of current-year earnings available on IBES",
+    "dv": {
+     "name": "abnormal analysts' earnings forecast revision (current fiscal year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "takeover (tender offer) announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI (Wall Street Journal Index)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "218 target firms with forecasts of following-year earnings available on IBES",
+    "dv": {
+     "name": "abnormal analysts' earnings forecast revision (following fiscal year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "takeover (tender offer) announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WSJI (Wall Street Journal Index)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "307 targets with current-year forecasts, split by q<1 and q>1",
+    "dv": {
+     "name": "announcement-month abnormal analysts' earnings forecast revision (current fiscal year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "Tobin's q-ratio (q<1 vs q>1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (computed per appendix)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "218 targets with following-year forecasts, split by q<1 and q>1",
+    "dv": {
+     "name": "announcement-month abnormal analysts' earnings forecast revision (following fiscal year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "Tobin's q-ratio (q<1 vs q>1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (computed per appendix)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Regression of analysts' forecast revision on the target's q-ratio",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "target firms with available forecasts",
+    "dv": {
+     "name": "abnormal analysts' earnings forecast revision (reaction of analysts to the takeover announcement)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "Tobin's q-ratio of the target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (computed per appendix)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "targets split into friendly and resisted subsamples",
+    "dv": {
+     "name": "announcement-month abnormal analysts' earnings forecast revision (current and following fiscal year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimate System (IBES)"
+    },
+    "key_ivs": [
+     {
+      "name": "target management's reaction to the takeover bid (friendly vs resisted)",
+      "measure": "targets classified by management's reaction to the takeover bid into friendly and resisted samples",
+      "source": "WSJI (Wall Street Journal Index)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "favorable information conveyed by the takeover announcement",
+    "prior undervaluation of the target",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "information hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "market-adjusted model",
+    "cumulative abnormal forecast revisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

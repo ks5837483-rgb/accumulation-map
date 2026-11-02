@@ -1,0 +1,849 @@
+{
+ "paper_id": "10.1016_s0304-405x(03)00119-3",
+ "title": "Termination fees in mergers and acquisitions",
+ "journal": "JFE",
+ "year": 2003,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "contract theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "termination_fee",
+      "relation": "decreases",
+      "to": "competing_bids",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "competing_bids",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competing_bids"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "efficient contracting / shareholder interests hypothesis"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "termination_fee",
+      "relation": "increases",
+      "to": "private_information_revelation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_revelation",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_revelation"
+   ],
+   "moderators": [
+    {
+     "construct": "bid_competition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "private_information_revelation",
+     "moderated_from": "termination_fee",
+     "moderated_to": "takeover_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "agency-cost / managerial entrenchment hypothesis"
+   ]
+  },
+  {
+   "hypothesis": "prediction_success",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "termination_fee",
+      "relation": "increases",
+      "to": "bidder_deal_specific_investment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_deal_specific_investment",
+      "relation": "increases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_deal_specific_investment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "prediction_competition_deterrence",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "termination_fee",
+      "relation": "increases",
+      "to": "acquisition_cost_to_competing_bidders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_cost_to_competing_bidders",
+      "relation": "decreases",
+      "to": "competing_bids",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_cost_to_competing_bidders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "self-selection: termination fees are included when the bidder and target anticipate a competing bid, making fees appear to attract rather than deter bids"
+   ]
+  },
+  {
+   "hypothesis": "prediction_fee_size_deterrence",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "termination_fee_size",
+      "relation": "increases",
+      "to": "acquisition_cost_to_competing_bidders",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "acquisition_cost_to_competing_bidders",
+      "relation": "decreases",
+      "to": "competing_bids",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_cost_to_competing_bidders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "",
+  "time_period": "1988-2000",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,511 merger and tender offer bids"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval (DJNR)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A (premium univariate by target termination fee use)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (offer value) and CRSP (market value of equity)"
+    },
+    "key_ivs": [
+     {
+      "name": "target termination fee use",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panel B (premium by pre-/post-bid competition sub-samples)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sub-samples split by pre-bid competition only, post-bid competition only, and both pre- and post-bid competition",
+    "dv": {
+     "name": "target premium",
+     "measure": "PREMIUM = combined premium (see Panel A definition)",
+     "source": "SDC (offer value) and CRSP (market value of equity)"
+    },
+    "key_ivs": [
+     {
+      "name": "bid competition x target termination fee use",
+      "measure": "sub-samples defined by pre-bid competition, post-bid competition, or both (competing offer within six months before/after the current bid) crossed with target termination fee use (TTERMF)",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 (bidder and target abnormal announcement returns, univariate by target termination fee use)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder and target abnormal announcement returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target termination fee use",
+      "measure": "sub-sample split by TTERMF (deals with vs. without a target termination fee)",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 (determinants of target premiums, OLS; Models 1-3)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (offer value) and CRSP (market value of equity)"
+    },
+    "key_ivs": [
+     {
+      "name": "TTERMF (target termination fee dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BTERMF (bidder termination fee dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "PRECOMP (pre-bid competition dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "POISON (poison pill dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "CASH (cash payment dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "SIND (same-industry dummy, Fama-French 1997)",
+      "source": "CRSP"
+     },
+     {
+      "name": "HOSTILE (hostile/unsolicited dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER (tender offer dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD (bidder toehold >5% dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "CLEANUP (bidder holds >50% dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "FINSERV (both firms in financial services dummy)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(BMVE) (log bidder market value of equity)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(TMVE) (log target market value of equity)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(BM2B) (log bidder market-to-book)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Log(TM2B) (log target market-to-book)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (determinants of the market reaction / abnormal returns, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder and target cumulative abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TTERMF (target termination fee dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PREMIUM (bid premium)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "BTERMF (bidder termination fee dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "PRECOMP (pre-bid competition dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "POISON (poison pill dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "CASH (cash payment dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "SIND (same-industry dummy)",
+      "source": "CRSP"
+     },
+     {
+      "name": "HOSTILE (hostile dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER (tender offer dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD (bidder toehold >5% dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "CLEANUP (bidder holds >50% dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "FINSERV (financial services dummy)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(BMVE)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(TMVE)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (determinants of post-bid competition, probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "third column restricted to bids that include a target termination fee only",
+    "dv": {
+     "name": "post-bid competition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "TTERMF (target termination fee dummy)",
+      "measure": "dummy = 1 if merger agreement contains a target termination fee",
+      "source": "SDC"
+     },
+     {
+      "name": "TTERMFPCT (target termination fee size)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BTERMF",
+      "source": "SDC"
+     },
+     {
+      "name": "PREMIUM",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "PRECOMP",
+      "source": "SDC"
+     },
+     {
+      "name": "POISON",
+      "source": "SDC"
+     },
+     {
+      "name": "CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "SIND",
+      "source": "CRSP"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "CLEANUP",
+      "source": "SDC"
+     },
+     {
+      "name": "FINSERV",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(BMVE)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(TMVE)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 10 (determinants of bid success, probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bid success",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "TTERMF (target termination fee dummy)",
+      "measure": "dummy = 1 if merger agreement contains a target termination fee",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BTERMF",
+      "source": "SDC"
+     },
+     {
+      "name": "PREMIUM",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "PRECOMP",
+      "source": "SDC"
+     },
+     {
+      "name": "POSTCOMP",
+      "source": "SDC"
+     },
+     {
+      "name": "POISON",
+      "source": "SDC"
+     },
+     {
+      "name": "CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "SIND",
+      "source": "CRSP"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "CLEANUP",
+      "source": "SDC"
+     },
+     {
+      "name": "FINSERV",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(BMVE)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(TMVE)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 11 (determinants of target termination fee agreements, probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "1994 Paramount and 1997 Brazen judicial decisions favoring termination fee use (D94, D97 dummies)",
+    "sample": "",
+    "dv": {
+     "name": "target termination fee use",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "BTERMF (bidder termination fee dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "PREMIUM (bid premium)",
+      "measure": "combined premium PREMIUM",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "D94 / D97 (case-law decision dummies)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (announcement date)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRECOMP",
+      "source": "SDC"
+     },
+     {
+      "name": "POISON",
+      "source": "SDC"
+     },
+     {
+      "name": "CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "SIND",
+      "source": "CRSP"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "CLEANUP",
+      "source": "SDC"
+     },
+     {
+      "name": "FINSERV",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(BMVE)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(TMVE)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 12 (simultaneous-equations system: premium and termination fee use as endogenous variables)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "generated instruments (first-stage fitted values for TTERMF via probit and PREMIUM via OLS); exclusion restrictions omit select variables from each equation to identify the system (Maddala 1983 dichotomous/continuous simultaneous-equations system)",
+    "sample": "",
+    "dv": {
+     "name": "target premium (and target termination fee use as the second endogenous variable)",
+     "measure": "second-stage: PREMIUM (OLS equation) and TTERMF (probit equation); premium and termination fee use modeled as jointly endogenous; system estimated via Maddala (1983, p.245) technique for observed/dichotomous systems with exclusion restrictions",
+     "source": "SDC (offer value) and CRSP (market value of equity)"
+    },
+    "key_ivs": [
+     {
+      "name": "TTERMF instrument",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "PREMIUM instrument",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BTERMF",
+      "source": "SDC"
+     },
+     {
+      "name": "PRECOMP",
+      "source": "SDC"
+     },
+     {
+      "name": "POISON",
+      "source": "SDC"
+     },
+     {
+      "name": "CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "SIND",
+      "source": "CRSP"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "CLEANUP",
+      "source": "SDC"
+     },
+     {
+      "name": "FINSERV",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(BMVE)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(TMVE)",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bidder termination fee",
+    "target termination fee",
+    "premiums"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "hostility",
+    "competition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "competition",
+    "relation": "affects",
+    "to": "hostility"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "post-bid competition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "target termination fees",
+    "competing bidders",
+    "bid deterrence"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "target termination fees",
+    "relation": "decreases",
+    "to": "competing bids"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "competition",
+    "termination fees"
+   ],
+   "mechanism_named": "self-select",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "termination fee use",
+    "premium"
+   ],
+   "mechanism_named": "endogenous",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "premiums",
+    "termination fee use",
+    "deal protection"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "deal protection",
+    "relation": "increases",
+    "to": "premiums"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "premium"
+   ],
+   "mechanism_named": "truncation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

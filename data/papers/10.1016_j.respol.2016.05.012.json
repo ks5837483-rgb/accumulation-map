@@ -1,0 +1,560 @@
+{
+ "paper_id": "10.1016_j.respol.2016.05.012",
+ "title": "Technological acquisitions: The impact of geography on post-acquisition innovative performance",
+ "journal": "RP",
+ "year": 2016,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "transaction cost theory",
+  "international business theory",
+  "liability of foreignness",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "increases",
+      "to": "asymmetric_information_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asymmetric_information_costs",
+      "relation": "decreases",
+      "to": "innovative_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "decreases",
+      "to": "soft_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "soft_information",
+      "relation": "increases",
+      "to": "innovative_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "increases",
+      "to": "monitoring_and_agency_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_and_agency_costs",
+      "relation": "decreases",
+      "to": "innovative_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asymmetric_information_costs",
+    "soft_information",
+    "monitoring_and_agency_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the effect of distance is really a proxy for cultural or institutional distance rather than physical distance"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cross_border_acquisition",
+      "relation": "increases",
+      "to": "liability_of_foreignness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "liability_of_foreignness",
+      "relation": "decreases",
+      "to": "innovative_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "cross_border_acquisition",
+      "relation": "increases",
+      "to": "cultural_differences",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cultural_differences",
+      "relation": "decreases",
+      "to": "innovative_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "liability_of_foreignness",
+    "cultural_differences"
+   ],
+   "moderators": [
+    {
+     "construct": "cultural_distance",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "cultural_differences",
+     "moderated_from": "cross_border_acquisition",
+     "moderated_to": "innovative_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the border effect is really driven by cultural or institutional distance rather than the existence of a border per se"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "acquirers from 52 countries, targets from 63 countries (majority US firms)",
+  "time_period": "2003-2008 (deals announced Jan 1, 2003 to Dec 31, 2008)",
+  "sample_description": "Technological acquisitions built from Thomson SDC: deals announced Jan 2003-Dec 2008, excluding recapitalisations, repurchases of own shares and spin-offs; only publicly listed acquirers seeking 100% of target shares in high tech industries; repeat acquirers excluded; patent data from USPTO",
+  "sample_size": "3683 technological mergers and acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson SDC",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "US Patent and Trademark Office (USPTO)",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "GPS Visualizer",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Hofstede cultural measures",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Institutional Profile Database (IPD)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model 2 (distance main effect)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Abnormal patent applications (t+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "US Patent and Trademark Office (USPTO)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance (KM1000)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC / GPS Visualizer"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior Financial Performance (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Market-to-Book (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Research and Development (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Acquirer Size (number of employees, ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Free Cash to the Acquirer (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Public/Private Target (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Hostile Deal Indicator (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry cluster (target and acquirer 3-digit SIC)",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (international/border effect)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Abnormal patent applications (t+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "US Patent and Trademark Office (USPTO)"
+    },
+    "key_ivs": [
+     {
+      "name": "International (border dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior Financial Performance (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Market-to-Book (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Research and Development (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Acquirer Size (number of employees, ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Free Cash to the Acquirer (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Public/Private Target (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Hostile Deal Indicator (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry cluster (target and acquirer 3-digit SIC)",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 8 (full model, distance + borders + distance decomposition)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Abnormal patent applications (t+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "US Patent and Trademark Office (USPTO)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance (KM1000)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC / GPS Visualizer"
+     },
+     {
+      "name": "International (border dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Technological Distance",
+      "measure": "proxy for technological distance between the firms",
+      "source": ""
+     },
+     {
+      "name": "Cultural Distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hofstede cultural measures"
+     },
+     {
+      "name": "Institutional Distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Profile Database (IPD)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior Financial Performance (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Market-to-Book (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Research and Development (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Acquirer Size (number of employees, ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Free Cash to the Acquirer (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Public/Private Target (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Hostile Deal Indicator (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry cluster (target and acquirer 3-digit SIC)",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (disaggregated distance, quartiles) - robustness",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "distance disaggregated into quartiles and closest/furthest 10% deciles of the distribution",
+    "dv": {
+     "name": "Abnormal patent applications (t+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "US Patent and Trademark Office (USPTO)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance (KM1000), disaggregated into quartiles",
+      "measure": "distance variable split into quartiles (1st <143 km; 2nd 143-770 km; 3rd 770-2541 km; 4th >2541 km) and closest/furthest 10% deciles",
+      "source": "Thomson SDC / GPS Visualizer"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior Financial Performance (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Market-to-Book (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Research and Development (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Acquirer Size (number of employees, ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Free Cash to the Acquirer (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Public/Private Target (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Hostile Deal Indicator (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry cluster (target and acquirer 3-digit SIC)",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (US-domestic deals only) - robustness",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1512 US-domestic acquisitions in the sample",
+    "dv": {
+     "name": "Abnormal patent applications (t+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "US Patent and Trademark Office (USPTO)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance (KM1000)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC / GPS Visualizer"
+     },
+     {
+      "name": "Related Target Indicator",
+      "measure": "levels of relatedness between target and acquirer",
+      "source": "Thomson SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior Financial Performance (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Market-to-Book (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Research & Development (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Acquirers Size (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry cluster (target and acquirer 3-digit SIC)",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Poisson re-estimation (positive abnormal patents) - robustness",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "only the positive side of the abnormal-patent distribution (positive number of abnormal patents)",
+    "dv": {
+     "name": "Positive abnormal patent applications (t+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "US Patent and Trademark Office (USPTO)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance (KM1000)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC / GPS Visualizer"
+     },
+     {
+      "name": "International (border dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior Financial Performance (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Market-to-Book (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Research and Development (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Acquirer Size (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Free Cash to the Acquirer (ln)",
+      "source": "Datastream"
+     },
+     {
+      "name": "Public/Private Target (dummy)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Hostile Deal Indicator (dummy)",
+      "source": "Thomson SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

@@ -1,0 +1,512 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2008.01356.x",
+ "title": "Stock Returns in Mergers and Acquisitions",
+ "journal": "JF",
+ "year": 2008,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "real options theory",
+  "asset pricing",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proximity_to_takeover",
+      "relation": "increases",
+      "to": "value_of_option_to_merge_as_fraction_of_firm_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_of_option_to_merge_as_fraction_of_firm_value",
+      "relation": "increases",
+      "to": "acquiring_firm_beta",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_of_option_to_merge_as_fraction_of_firm_value"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_beta_of_bidder_versus_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "value_of_option_to_merge_as_fraction_of_firm_value",
+     "moderated_from": "proximity_to_takeover",
+     "moderated_to": "acquiring_firm_beta",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4"
+    },
+    {
+     "construct": "follow_up_options",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "value_of_option_to_merge_as_fraction_of_firm_value",
+     "moderated_from": "proximity_to_takeover",
+     "moderated_to": "acquiring_firm_beta",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    },
+    {
+     "construct": "competition_for_the_target",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "value_of_option_to_merge_as_fraction_of_firm_value",
+     "moderated_from": "proximity_to_takeover",
+     "moderated_to": "acquiring_firm_beta",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "liquidity-induced changes in beta estimates (omitted liquidity variable bias)"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "option_to_merge_exercise",
+      "relation": "increases",
+      "to": "change_in_nature_of_firm_assets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "change_in_nature_of_firm_assets",
+      "relation": "decreases",
+      "to": "acquiring_firm_beta",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "change_in_nature_of_firm_assets"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_beta_of_bidder_versus_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "change_in_nature_of_firm_assets",
+     "moderated_from": "option_to_merge_exercise",
+     "moderated_to": "acquiring_firm_beta",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "liquidity-induced changes in beta estimates (omitted liquidity variable bias)"
+   ]
+  },
+  {
+   "hypothesis": "unnumbered_runup_underperformance",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_merger_run_up",
+      "relation": "decreases",
+      "to": "investor_anticipation_of_restructuring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_anticipation_of_restructuring",
+      "relation": "increases",
+      "to": "post_merger_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_anticipation_of_restructuring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "coinsurance (diversification) effect as an explanation for post-merger underperformance"
+   ]
+  },
+  {
+   "hypothesis": "unnumbered_relative_risk_performance",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_merger_risk_differential",
+      "relation": "increases",
+      "to": "magnitude_of_beta_change_at_takeover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "magnitude_of_beta_change_at_takeover",
+      "relation": "decreases",
+      "to": "post_merger_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "magnitude_of_beta_change_at_takeover"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "coinsurance effect as an explanation for post-merger performance"
+   ]
+  },
+  {
+   "hypothesis": "unnumbered_competition_asyminfo_returns",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "competition_among_bidders_with_asymmetric_information",
+      "relation": "increases",
+      "to": "market_overestimation_of_merger_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_overestimation_of_merger_benefits",
+      "relation": "decreases",
+      "to": "acquirer_abnormal_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_overestimation_of_merger_benefits"
+   ],
+   "moderators": [
+    {
+     "construct": "heterogeneity_in_synergy_benefits_among_bidders",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "effect_derived": true,
+     "mechanism": "market_overestimation_of_merger_benefits",
+     "moderated_from": "competition_among_bidders_with_asymmetric_information",
+     "moderated_to": "acquirer_abnormal_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered_competition_asyminfo_returns"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms; all regulated SIC 4900-4999 and financial SIC 6000-6999 firms removed)",
+  "country_region": "United States",
+  "time_period": "1985-2002 (January 1, 1985 to June 30, 2002)",
+  "sample_description": "Takeovers of publicly traded U.S. firms from the SDC U.S. Mergers & Acquisitions database, where both acquirer and target are public firms listed on CRSP, transaction value $50 million and higher, 50% or more of shares acquired, and all regulated (SIC 4900-4999) and financial (SIC 6000-6999) firms removed",
+  "sample_size": "1,086 takeovers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wharton Research Data Services",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I - Calibration Results",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "calibration to U.S. historical data (Treasury yields, S&P500, distressed/asset-sale samples of Asquith et al. 1994 and Lang et al. 1995)",
+    "dv": {
+     "name": "calibrated real options model parameters",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat, CRSP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table II - Announcement Returns (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "3-day cumulative abnormal returns (CARs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Figure 6a - Realized beta dynamics around control transactions (event-time)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "full sample of 1,086 takeovers and two subsamples split on relative pre-announcement betas (betaX>betaY, betaX<betaY)",
+    "dv": {
+     "name": "monthly realized beta of acquiring firm",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wharton Research Data Services"
+    },
+    "key_ivs": [
+     {
+      "name": "relative magnitude of acquirer and target pre-announcement betas",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wharton Research Data Services"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table III columns (1)-(2) - Long-run post-merger performance regressions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N = 831 acquiring firms with available long-run return data",
+    "dv": {
+     "name": "post-merger long-run cumulative abnormal returns (CAR1, CAR2)",
+     "measure": "for each firm, normal returns using the market model rit = ai + bi*rmt + eit; CARit = sum over j=1..t of (rij - ahat_i - bhat_i*rmj), where t = 252 for CAR1 (1 year) and t = 504 for CAR2 (2 years)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "RUNUP1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "KBKT",
+      "measure": "the relative size of acquirers and targets",
+      "source": "Compustat"
+     },
+     {
+      "name": "RISK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wharton Research Data Services"
+     }
+    ],
+    "controls": [
+     {
+      "name": "A/E (3-day announcement CARs from Section V.A)",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "intercept term",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III columns (3)-(5) - Determinants of changes in acquirer beta on RUNUP1 (full sample and beta subsamples)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "col (3) full sample N=972; col (4) betaX>betaY subsample N=573; col (5) betaX<betaY subsample N=399",
+    "dv": {
+     "name": "change in acquiring firm beta (delta beta_T^m)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wharton Research Data Services"
+    },
+    "key_ivs": [
+     {
+      "name": "RUNUP1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "RISK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wharton Research Data Services"
+     },
+     {
+      "name": "KBKT",
+      "measure": "the relative size of acquirers and targets",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "A/E (3-day announcement CARs)",
+      "source": "CRSP"
+     },
+     {
+      "name": "B/M (book-to-market ratio in year prior)",
+      "source": "Compustat"
+     },
+     {
+      "name": "D/M (deal value as percentage of acquiring firm's market value of equity)",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT (run-up in market portfolio 1 year prior)",
+      "source": "CRSP"
+     },
+     {
+      "name": "PCACQ (percentage of shares acquired)",
+      "source": "SDC"
+     },
+     {
+      "name": "SIZE (logarithm of total assets in year prior)",
+      "source": "Compustat"
+     },
+     {
+      "name": "intercept term",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III columns (6)-(8) - Changes in acquirer beta on RUNUP2 (beta run-up)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "col (6) full sample N=972; col (7) betaX>betaY subsample N=573; col (8) betaX<betaY subsample N=399",
+    "dv": {
+     "name": "change in acquiring firm beta (delta beta_T^m)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wharton Research Data Services"
+    },
+    "key_ivs": [
+     {
+      "name": "RUNUP2",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wharton Research Data Services"
+     },
+     {
+      "name": "RISK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wharton Research Data Services"
+     },
+     {
+      "name": "KBKT",
+      "measure": "the relative size of acquirers and targets",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "A/E (3-day announcement CARs)",
+      "source": "CRSP"
+     },
+     {
+      "name": "B/M (book-to-market ratio in year prior)",
+      "source": "Compustat"
+     },
+     {
+      "name": "D/M (deal value as percentage of acquiring firm's market value of equity)",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT (run-up in market portfolio 1 year prior)",
+      "source": "CRSP"
+     },
+     {
+      "name": "PCACQ (percentage of shares acquired)",
+      "source": "SDC"
+     },
+     {
+      "name": "SIZE (logarithm of total assets in year prior)",
+      "source": "Compustat"
+     },
+     {
+      "name": "intercept term",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,395 @@
+{
+ "paper_id": "10.2307_2331012",
+ "title": "Valuation Effects of Greenmail Prohibitions",
+ "journal": "JFQA",
+ "year": 1990,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "agency theory",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_RUNUP",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_stock_price_runup",
+      "relation": "increases",
+      "to": "managers_favorable_private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managers_favorable_private_information",
+      "relation": "increases",
+      "to": "market_reaction_to_greenmail_prohibition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "prior_stock_price_runup",
+      "relation": "decreases",
+      "to": "deterrence_of_takeover_bid_by_prohibition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deterrence_of_takeover_bid_by_prohibition",
+      "relation": "decreases",
+      "to": "market_reaction_to_greenmail_prohibition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managers_favorable_private_information",
+    "deterrence_of_takeover_bid_by_prohibition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2_INSIDE",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_stockownership",
+      "relation": "decreases",
+      "to": "likelihood_manager_sponsored_items_reduce_stockholder_wealth",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_manager_sponsored_items_reduce_stockholder_wealth",
+      "relation": "decreases",
+      "to": "market_reaction_to_greenmail_prohibition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_manager_sponsored_items_reduce_stockholder_wealth"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3_LARGE",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "large_shareholder_presence",
+      "relation": "increases",
+      "to": "monitoring_effort",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_effort",
+      "relation": "increases",
+      "to": "market_reaction_to_greenmail_prohibition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring_effort"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4_PROFIT",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "relative_profit_margin",
+      "relation": "decreases",
+      "to": "likelihood_firm_is_takeover_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_firm_is_takeover_target",
+      "relation": "increases",
+      "to": "market_reaction_to_greenmail_prohibition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_firm_is_takeover_target"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded companies adopting antigreenmail charter amendments)",
+  "country_region": "United States",
+  "time_period": "September 1984 - December 1985",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "32"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "University of Chicago CRSP stock return tape",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "proxy statements (supplied by Info Globe Inc.'s information service)",
+    "category": "other",
+    "kind": "filings"
+   },
+   {
+    "name": "Mergers and Acquisitions periodical ('Takeover Defenses' section)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Value Line Investment Survey",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Average Abnormal Stock Returns (market model with event dummies; total 32, 'clean' 14, closely-held 13 subsamples)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "adoption of antigreenmail charter amendment (greenmail prohibition)",
+    "sample": "32 firms with antigreenmail charter amendments Sept 1984-Dec 1985; subsamples of 14 'clean' (greenmail prohibition only) and 13 closely-held firms",
+    "dv": {
+     "name": "two-day abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "University of Chicago CRSP stock return tape"
+    },
+    "key_ivs": [
+     {
+      "name": "event dummy (proxy mailing / shareholder meeting)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "value-weighted market portfolio return",
+      "source": "University of Chicago CRSP stock return tape"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 - Regression with extended event windows controlling for partial anticipation (subsample of 14 'clean' firms)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "adoption of antigreenmail charter amendment (greenmail prohibition)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "two-day abnormal stock return around event dates",
+     "measure": "[withheld: wording matches the source]",
+     "source": "University of Chicago CRSP stock return tape"
+    },
+    "key_ivs": [
+     {
+      "name": "proxy mailing event dummy (d2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     },
+     {
+      "name": "shareholder meeting event dummy (d4)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "pre-event runup dummy (d1, -60 through -1 relative to proxy mailing day)",
+      "source": "University of Chicago CRSP stock return tape"
+     },
+     {
+      "name": "interim-period dummy (d3, two days after proxy mailing through one day prior to meeting)",
+      "source": "University of Chicago CRSP stock return tape"
+     },
+     {
+      "name": "post-meeting dummy (d5, subsequent nine trading days)",
+      "source": "University of Chicago CRSP stock return tape"
+     },
+     {
+      "name": "value-weighted market portfolio return",
+      "source": "University of Chicago CRSP stock return tape"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel I - Weighted Least Squares cross-sectional regression of valuation effect on determinants",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "full sample of 32 charter amendments (excluding PROFIT); subsample of 25 cases for which Value Line PROFIT data is available",
+    "dv": {
+     "name": "valuation effect / abnormal return (AR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "University of Chicago CRSP stock return tape"
+    },
+    "key_ivs": [
+     {
+      "name": "CLEAN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     },
+     {
+      "name": "RUNUP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "University of Chicago CRSP stock return tape"
+     },
+     {
+      "name": "INSIDE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     },
+     {
+      "name": "LARGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     },
+     {
+      "name": "PROFIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Value Line Investment Survey"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel II - Nonlinear maximum likelihood cross-sectional regression (truncation-bias-corrected structural model, per Eckbo-Maksimovic-Williams 1990)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "full sample of 32 charter amendments (excluding PROFIT); subsample of 25 cases for which Value Line PROFIT data is available",
+    "dv": {
+     "name": "valuation effect / abnormal return (AR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "University of Chicago CRSP stock return tape"
+    },
+    "key_ivs": [
+     {
+      "name": "CLEAN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     },
+     {
+      "name": "RUNUP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "University of Chicago CRSP stock return tape"
+     },
+     {
+      "name": "INSIDE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     },
+     {
+      "name": "LARGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (supplied by Info Globe Inc.'s information service)"
+     },
+     {
+      "name": "PROFIT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Value Line Investment Survey"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "greenmail",
+    "arbitrageurs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "greenmail",
+    "relation": "affects",
+    "to": "arbitrageurs"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "economic impact of the charter amendment",
+    "market reaction to the average charter amendment"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "decreases",
+    "to": "valuation effect on the greenmail prohibition"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "takeover rumors",
+    "prior runup"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

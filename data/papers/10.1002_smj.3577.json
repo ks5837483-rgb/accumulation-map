@@ -1,0 +1,599 @@
+{
+ "paper_id": "10.1002_smj.3577",
+ "title": "Transportation networks and competition in the market for corporate control",
+ "journal": "SMJ",
+ "year": 2024,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "bargaining power theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "travel_time_to_distant_latent_acquirers",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "target_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "travel_time_to_distant_latent_acquirers",
+      "relation": "increases",
+      "to": "monitoring_and_integration_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_and_integration_costs",
+      "relation": "decreases",
+      "to": "target_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "monitoring_and_integration_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "target_informational_opacity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "travel_time_to_distant_latent_acquirers",
+     "moderated_to": "target_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "target_size",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "monitoring_and_integration_costs",
+     "moderated_from": "travel_time_to_distant_latent_acquirers",
+     "moderated_to": "target_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "travel_time_to_distant_latent_targets",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "target_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "travel_time_to_distant_latent_targets",
+      "relation": "increases",
+      "to": "monitoring_and_integration_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_and_integration_costs",
+      "relation": "increases",
+      "to": "target_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "monitoring_and_integration_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_knowledge_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "travel_time_to_distant_latent_targets",
+     "moderated_to": "target_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "acquirer_size",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "monitoring_and_integration_costs",
+     "moderated_from": "travel_time_to_distant_latent_targets",
+     "moderated_to": "target_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Assumption (Online Appendix C)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "travel_time_between_firms",
+      "relation": "decreases",
+      "to": "face_to_face_interaction",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "face_to_face_interaction",
+      "relation": "increases",
+      "to": "probability_of_acquisition_bid",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "face_to_face_interaction"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A deals between US public firms)",
+  "country_region": "United States",
+  "time_period": "1980-2018",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3814 acquisition announcements"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Segments",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "T-100 Domestic Segment Database (Bureau of Transportation Statistics)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "ER-586 Service Segment Data (National Archives)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Microsoft MapPoint",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "US Census Gazetteer Files",
+    "category": "census_gov",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3: Regressions on target CAR (models 1-5)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target's returns (target CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "time(target-DLAs)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "transportation network data (BTS T-100 / ER-586, Microsoft MapPoint, Census Gazetteer)"
+     },
+     {
+      "name": "time(acquirer-DLTs)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "transportation network data (BTS T-100 / ER-586, Microsoft MapPoint, Census Gazetteer)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Time(acquirer-target) - travel time between merging firms' CBSAs",
+      "source": "transportation network data (BTS T-100 / ER-586, Microsoft MapPoint, Census Gazetteer)"
+     },
+     {
+      "name": "Market proximity (product market proximity, four-digit SIC sales similarity)",
+      "source": "Compustat Segments"
+     },
+     {
+      "name": "Target relative size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "% of stock (method of payment)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target high-tech",
+      "source": "Compustat (four-digit SIC code)"
+     },
+     {
+      "name": "Acquirer and target log(assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer and target ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer and target M/B (market-to-book)",
+      "source": "Compustat-CRSP"
+     },
+     {
+      "name": "Acquirer and target R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer and target cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer and target leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer and target Delta sales (sales growth)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "sample of deals; competing bids observed in only 4.6% of deals (average competing bidders 1.2); estimated via Poisson pseudo-likelihood with time-constant CBSA, industry, and year fixed effects",
+    "dv": {
+     "name": "number of competing bidders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "time(target-DLAs)",
+      "measure": "average travel time (in hours) between the focal target and its DLAs",
+      "source": "transportation network data (BTS T-100 / ER-586, Microsoft MapPoint, Census Gazetteer)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "time(acquirer-DLTs)",
+      "source": "transportation network data"
+     },
+     {
+      "name": "other control variables included in Table 3",
+      "source": "Compustat-CRSP / SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "subsamples split by target opacity (high-tech, R&D, stock payment) and target size; target CBSA x year fixed effects",
+    "dv": {
+     "name": "target CAR [-1, 1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "time(target-DLAs) interacted with subsample dummy",
+      "measure": "coefficient of time(target-DLAs) compared across subsamples: (1) high-tech vs low-tech targets, (2) targets with R&D vs no R&D expenses, (3) deals paid entirely with stock vs without stock, (4) small targets (market value of equity < yearly median) vs large targets",
+      "source": "transportation network data + Compustat / SDC (subsample splits)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "controls included in Table 3",
+      "source": "Compustat-CRSP / SDC"
+     },
+     {
+      "name": "time(acquirer-DLTs)",
+      "source": "transportation network data"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "subsamples split by acquirer high-tech, R&D, and acquirer size; acquirer CBSA x year fixed effects",
+    "dv": {
+     "name": "target CAR [-1, 1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "time(acquirer-DLTs) interacted with subsample dummy",
+      "measure": "coefficient of time(acquirer-DLTs) compared across subsamples: (1) high-tech vs low-tech acquirers, (2) acquirers with R&D vs no R&D expenses, (3) small acquirers (market value of equity < yearly median) vs large acquirers",
+      "source": "transportation network data + Compustat (subsample splits)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "controls included in Table 3",
+      "source": "Compustat-CRSP / SDC"
+     },
+     {
+      "name": "time(target-DLAs)",
+      "source": "transportation network data"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "introduction of direct flights connecting targets to their distant latent acquirers (DLAs)",
+    "sample": "targets and other (non-target) firms in the same CBSA",
+    "dv": {
+     "name": "stock market returns of targets vs other firms in the same CBSA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "introduction of direct flights to DLAs (post x target)",
+      "measure": "discrete event of a direct-flight introduction connecting the target's CBSA to its DLAs, interacted with target status",
+      "source": "transportation network data (BTS T-100 / ER-586)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Online Appendix E: Effect of target CBSA connectivity on acquirer's CAR (public and private targets)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "larger sample including deals with both public and private targets",
+    "dv": {
+     "name": "acquirer's CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target CBSA connectivity, interacted with private-target status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "transportation network data (BTS T-100 / ER-586, Microsoft MapPoint, Census Gazetteer)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Online Appendix C: Regressions of bid frequency between CBSAs on travel time / direct flight introduction (assumption test)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "introduction of a direct flight between CBSAs",
+    "sample": "CBSA-pair-year panel",
+    "dv": {
+     "name": "frequency of acquisition bids between CBSAs",
+     "measure": "frequency of acquisition bids between pairs of CBSAs",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "travel time between CBSAs / introduction of a direct flight",
+      "measure": "travel time between the two CBSAs, and the introduction of a direct flight between them",
+      "source": "transportation network data (BTS T-100 / ER-586, Microsoft MapPoint, Census Gazetteer)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "transportation networks",
+    "competitive landscape of firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "transportation networks",
+    "relation": "affects",
+    "to": "competitive landscape of firms"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "latent acquirers and targets",
+    "probability of bids"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "probability of bids"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "latent acquirers and targets",
+    "public firms",
+    "private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "latent acquirers and targets",
+    "domestic transportation network",
+    "foreign latent acquirers and targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "travel time",
+    "target's returns",
+    "private or foreign latent acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "travel time",
+    "relation": "affects",
+    "to": "target's returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "latent acquirers and targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "limitations",
+   "constructs": [
+    "latent acquirers and targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_mediator",
+   "section": "limitations",
+   "constructs": [
+    "social relationships with the target's management"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "online and face-to-face interactions",
+    "M&A behavior"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

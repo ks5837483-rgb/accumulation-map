@@ -1,0 +1,845 @@
+{
+ "paper_id": "10.1016_j.jfineco.2015.01.001",
+ "title": "CEO network centrality and merger performance",
+ "journal": "JFE",
+ "year": 2015,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "managerial entrenchment theory",
+  "agency theory",
+  "social network theory",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_network_centrality",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "ceo_network_centrality",
+      "relation": "increases",
+      "to": "entrenchment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "entrenchment",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "entrenchment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "CEO overconfidence/hubris drives more frequent acquisitions rather than centrality"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_network_centrality",
+      "relation": "increases",
+      "to": "entrenchment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "entrenchment",
+      "relation": "decreases",
+      "to": "bidder_acquisition_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "entrenchment"
+   ],
+   "moderators": [
+    {
+     "construct": "internal_corporate_governance",
+     "type": "moderator",
+     "effect": "weakens",
+     "effect_derived": false,
+     "mechanism": "entrenchment",
+     "moderated_from": "ceo_network_centrality",
+     "moderated_to": "bidder_acquisition_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2m"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "bidder size effect drives the negative CARs",
+    "reverse causality — CEOs bid to gain connections / raise their own centrality"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_network_centrality",
+      "relation": "increases",
+      "to": "entrenchment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "entrenchment",
+      "relation": "decreases",
+      "to": "total_takeover_synergies",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "entrenchment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bidder size effect drives the negative combined CARs"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_abnormal_acquisition_returns",
+      "relation": "decreases",
+      "to": "market_discipline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_discipline",
+      "relation": "increases",
+      "to": "likelihood_bidder_subsequently_acquired",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_discipline"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_network_centrality",
+     "type": "moderator",
+     "effect": "weakens",
+     "effect_derived": false,
+     "mechanism": "market_discipline",
+     "moderated_from": "bidder_abnormal_acquisition_returns",
+     "moderated_to": "likelihood_bidder_subsequently_acquired",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_merger_bidder_abnormal_returns",
+      "relation": "decreases",
+      "to": "managerial_labor_market_discipline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_labor_market_discipline",
+      "relation": "increases",
+      "to": "ceo_turnover",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_labor_market_discipline"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_network_centrality",
+     "type": "moderator",
+     "effect": "weakens",
+     "effect_derived": false,
+     "mechanism": "managerial_labor_market_discipline",
+     "moderated_from": "post_merger_bidder_abnormal_returns",
+     "moderated_to": "ceo_turnover",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_network_centrality",
+      "relation": "increases",
+      "to": "ceo_power_and_influence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ceo_power_and_influence",
+      "relation": "increases",
+      "to": "ceo_compensation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ceo_power_and_influence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_network_centrality",
+      "relation": "increases",
+      "to": "ceo_power_and_influence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ceo_power_and_influence",
+      "relation": "increases",
+      "to": "non_monetary_award_consumption",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ceo_power_and_influence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_network_centrality",
+      "relation": "increases",
+      "to": "private_information_access",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_access",
+      "relation": "decreases",
+      "to": "post_sale_stock_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_access"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (S&P 1500 firms across 12 Fama-French (1997) industries; largest group business equipment, 18.68%)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2000-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "776 deals (464 acquirers)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Risk Metrics",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A: Comparisons of CEO centrality between acquirers and non-acquirers (T-test and Wilcoxon rank test)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "776 acquirer firm-years vs 15,639 non-acquirer firm-years",
+    "dv": {
+     "name": "acquirer status",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Panel A: Probit model of acquisitions controlling for firm characteristics",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "S&P 1500 firms 2000-2009",
+    "dv": {
+     "name": "Prob(Deal)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Tobin's Q",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Firm Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B: Probit model of acquisitions controlling for firm characteristics and corporate governance",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "13,398 firm-year observations with complete governance data",
+    "dv": {
+     "name": "Prob(Deal)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality",
+      "measure": "percentile ranking of acquirer CEO centrality by closeness, degree, betweenness, eigenvector, first principal component, and orthogonal versions; lagged one year",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Tobin's Q",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Firm Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Intense Monitors",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Board Size",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Duality",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "E-index",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Age",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Block Ownership",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "CEO Ownership",
+      "source": "Risk Metrics"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR (-3,+3) for acquirer, combined firm, and target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality group (LOW/MID/HIGH)",
+      "measure": "acquirers grouped as LOW (below 25th percentile), MID (25th-75th), HIGH (above 75th) on each of closeness, degree, betweenness, and eigenvector centrality",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6, Panel A: OLS of bidder acquisition CAR on CEO centrality with firm and deal controls (Eq. 2)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR (-3,+3)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality",
+      "measure": "acquirer CEO centrality measured by closeness (Model 1), degree (Model 2), betweenness (Model 3), eigenvector (Model 4), first principal component (Model 5), orthogonally transformed centralities (Model 6); lagged one year",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Deal Value",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Same Industry",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Stock Deal",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panel B: OLS of bidder acquisition CAR adding corporate governance controls",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR (-3,+3)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality",
+      "measure": "acquirer CEO centrality by closeness, degree, betweenness, eigenvector, first principal component, and orthogonal versions; lagged one year",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Deal Value",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Same Industry",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Stock Deal",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Intense Monitors",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Board Size",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Duality",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "E-index",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Age",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Block Ownership",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "CEO Ownership",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel A: OLS of total takeover synergies (combined CAR) on CEO centrality with combined firm and deal controls (Eq. 3)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Combined CAR (-3,+3) / total takeover synergies",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality",
+      "measure": "acquirer CEO centrality measured by closeness (Model 1), degree (Model 2), betweenness (Model 3), eigenvector (Model 4), first principal component (Model 5), orthogonally transformed centralities (Model 6); lagged one year",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Combined Size (log of number of employees for the combined entity)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Tobin's Q",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Same Industry",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Deal Value",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Stock Deal",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel B: OLS of total takeover synergies (combined CAR) adding corporate governance controls",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Combined CAR (-3,+3) / total takeover synergies",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO network centrality",
+      "measure": "acquirer CEO centrality by closeness, degree, betweenness, eigenvector, first principal component, and orthogonal versions; lagged one year",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Combined Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Tobin's Q",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Combined Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Same Industry",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Deal Value",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Stock Deal",
+      "source": "Thomson Reuters SDC database"
+     },
+     {
+      "name": "Intense Monitors",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Board Size",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Duality",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "E-index",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Age",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "Block Ownership",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "CEO Ownership",
+      "source": "Risk Metrics"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "social pressure",
+    "behavior modification",
+    "new governance designs",
+    "powerful ceos"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

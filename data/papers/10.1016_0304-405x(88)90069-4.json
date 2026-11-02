@@ -1,0 +1,208 @@
+{
+ "paper_id": "10.1016_0304-405x(88)90069-4",
+ "title": "The information effects of takeover bids and resistance",
+ "journal": "JFE",
+ "year": 1988,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "efficient markets hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "takeover_bid",
+      "relation": "increases",
+      "to": "information_about_target_value",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_about_target_value",
+      "relation": "increases",
+      "to": "earnings_forecast_revision",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_about_target_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_resistance",
+      "relation": "increases",
+      "to": "information_about_target_value",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_about_target_value",
+      "relation": "decreases",
+      "to": "earnings_forecast_revision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_about_target_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "",
+  "country_region": "",
+  "time_period": "1979-1984",
+  "sample_description": "Takeover targets, split into three samples conditioned on ex-post managerial resistance and contest outcome (no resistance, resistance/target acquired, resistance/target remains independent); analysis based on IBES consensus analyst per-share earnings forecast revisions around takeover-bid announcements and contest resolutions",
+  "sample_size": "94 targets"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "IBES (Institutional Brokers Estimate System) consensus (mean) earnings forecasts",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Sample of takeover event dates classified by ex-post managerial resistance and contest outcome (94 targets, 1979-1984)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "initial takeover-bid announcement",
+    "sample": "94 takeover targets, 1979-1984",
+    "dv": {
+     "name": "Revision in consensus FY2 (year-ahead) per-share earnings forecast around bid announcement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IBES consensus forecasts; per-share market price"
+    },
+    "key_ivs": [
+     {
+      "name": "Managerial resistance and contest outcome subsample",
+      "measure": "three samples conditioned on ex-post information: no resistance from target (N=30); resistance/target acquired (n=38); resistance/target remains independent (n=33)",
+      "source": "Hand-collected takeover event classification"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 1, Panel B - Nonparametric distribution (% positive / negative / unchanged) of FY2 forecast revisions at bid announcement, by subsample",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "initial takeover-bid announcement",
+    "sample": "94 takeover targets, 1979-1984",
+    "dv": {
+     "name": "Sign/nonparametric distribution of FY2 forecast revisions at bid announcement",
+     "measure": "Nonparametric distribution of year-ahead (FY2) earnings-forecast revisions in the month of takeover-bid announcements, tabulated as % positive, % negative, % unchanged, compared with the IBES universe",
+     "source": "IBES consensus forecasts"
+    },
+    "key_ivs": [
+     {
+      "name": "Managerial resistance and contest outcome subsample",
+      "measure": "no resistance (n=30); resistance/acquired (n=31); resistance/independent (n=33); vs IBES universe benchmark",
+      "source": "Hand-collected takeover event classification"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 - Forecast revisions during takeover contests (information content of takeover resistance), for resisting targets by contest outcome",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "takeover-contest resolution date",
+    "sample": "resisting takeover targets",
+    "dv": {
+     "name": "Revision in consensus FY2 forecast around takeover-contest resolution",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IBES consensus forecasts; per-share market price"
+    },
+    "key_ivs": [
+     {
+      "name": "Contest outcome for resisting targets",
+      "measure": "resistance/target acquired (n=31) vs resistance/target remains independent (n=33)",
+      "source": "Hand-collected takeover event classification"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "33 targets that defeat takeover bids and remain independent, 1979-1984",
+    "dv": {
+     "name": "Mean-squared forecast error (MSFE) of consensus earnings forecasts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IBES consensus forecasts; Brown, Foster, and Noreen (1985) IBES universe benchmark"
+    },
+    "key_ivs": [
+     {
+      "name": "Target group (resisting-independent targets vs IBES universe)",
+      "measure": "targets resisting and remaining independent (n=33), forecasts made 16 months prior to realization, vs IBES universe forecasts made 22 months prior",
+      "source": "Hand-collected takeover event classification; IBES"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Cross-sectional regression for ex-post bias of defeat-date consensus target forecasts",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "resisting targets that remain independent",
+    "dv": {
+     "name": "Ex-post forecast error / bias of defeat-date consensus forecast",
+     "measure": "cross-sectional regression testing for systematic positive or negative (ex-post) bias in the defeat-date consensus target forecasts; estimated with a correction for heteroskedasticity",
+     "source": "IBES consensus forecasts"
+    },
+    "key_ivs": [
+     {
+      "name": "Firm forecast characteristics",
+      "measure": "per-share forecast/net asset value variables (specific regressors not legible in the OCR text)",
+      "source": "IBES"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

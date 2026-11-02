@@ -1,0 +1,685 @@
+{
+ "paper_id": "10.1057_s41267-016-0025-0",
+ "title": "Filling institutional voids in emerging economies: The impact of capital market development and business groups on M&amp;A deal abandonment",
+ "journal": "JIBS",
+ "year": 2016,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "new institutional economics",
+  "internal market theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "capital_market_development",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "deal_abandonment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "capital_market_development",
+      "relation": "decreases",
+      "to": "financing_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financing_difficulty",
+      "relation": "increases",
+      "to": "deal_abandonment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "financing_difficulty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "regulatory and legal institutions",
+    "economic development"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "business_group_affiliation",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "deal_abandonment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "business_group_affiliation",
+      "relation": "decreases",
+      "to": "financing_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financing_difficulty",
+      "relation": "increases",
+      "to": "deal_abandonment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "financing_difficulty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "regulatory and legal institutions",
+    "economic development"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "capital_market_development",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "deal_abandonment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "capital_market_development",
+      "relation": "decreases",
+      "to": "financing_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financing_difficulty",
+      "relation": "increases",
+      "to": "deal_abandonment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "financing_difficulty"
+   ],
+   "moderators": [
+    {
+     "construct": "business_group_affiliation",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "internal_capital_market",
+     "moderated_from": "capital_market_development",
+     "moderated_to": "deal_abandonment",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly announced domestic M&A deals in nine emerging economies)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1988-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,887 domestic deals"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC Platinum Database provided by Thomson Financial",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "World Bank (stock market development, business extent of disclosure index, domestic credit provided by the banking sector)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Single-country studies conducted by local researchers and data sources for business group classification (listed in Table 2), cross-checked via web-based sources",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4, Model 1 (All deals)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "All domestic deals in nine emerging economies, 1988-2008 (N = 5,887)",
+    "dv": {
+     "name": "deal abandonment (incomplete)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital Market Development",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank"
+     },
+     {
+      "name": "Business Group Affiliation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Local single-country studies / hand-collected (Table 2)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Percentage of Ownership sought (% sought)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Sell-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Buy-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Deal Attitude indicators (friendly/neutral/hostile)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Country fixed effects (nine indicator variables)",
+      "source": "SDC Platinum Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 2 (Deals made by business groups)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Subsample of deals made by business-group-affiliated acquirers (N = 1,156)",
+    "dv": {
+     "name": "deal abandonment (incomplete)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital Market Development",
+      "measure": "stock market development; market capitalization as a percentage of GDP",
+      "source": "World Bank"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M&A experience",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Log (value of the deal)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "% sought",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Sell-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Buy-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Friendly attitude",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Country fixed effects (nine indicator variables)",
+      "source": "SDC Platinum Database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Subsample of deals made by non-business-group acquirers (N = 4,678)",
+    "dv": {
+     "name": "deal abandonment (incomplete)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital Market Development",
+      "measure": "stock market development; market capitalization as a percentage of GDP",
+      "source": "World Bank"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M&A experience",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Log (value of the deal)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "% sought",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Sell-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Buy-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Friendly attitude",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Hostile attitude",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Country fixed effects (nine indicator variables)",
+      "source": "SDC Platinum Database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Deals announced after 2004 (disclosure index unavailable earlier); N = 1,703",
+    "dv": {
+     "name": "deal abandonment (incomplete)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Business information disclosure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank"
+     },
+     {
+      "name": "Capital Market Development",
+      "measure": "stock market development; market capitalization as a percentage of GDP (added in Model 2)",
+      "source": "World Bank"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Business group affiliation",
+      "source": "Local single-country studies / hand-collected"
+     },
+     {
+      "name": "M&A experience",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Log (value of the deal)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "% sought",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Sell-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Buy-side government involvement",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Deal attitude indicators (friendly/neutral/hostile)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Country fixed effects (nine indicator variables)",
+      "source": "SDC Platinum Database"
+     }
+    ]
+   },
+   {
+    "label": "Robustness: controlling for the banking system",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "deal abandonment (incomplete)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital Market Development",
+      "measure": "stock market development; market capitalization as a percentage of GDP",
+      "source": "World Bank"
+     },
+     {
+      "name": "Business Group Affiliation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Local single-country studies / hand-collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "World Bank"
+     },
+     {
+      "name": "M&A experience",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Log (value of the deal)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "% sought",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Government involvement (sell-side / buy-side)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Deal attitude indicators",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Country fixed effects",
+      "source": "SDC Platinum Database"
+     }
+    ]
+   },
+   {
+    "label": "Robustness: inclusion of cross-border deals",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "7,587 deals including cross-border deals, announced 1988-2008",
+    "dv": {
+     "name": "deal abandonment (incomplete)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital Market Development",
+      "measure": "stock market development; market capitalization as a percentage of GDP",
+      "source": "World Bank"
+     },
+     {
+      "name": "Business Group Affiliation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Local single-country studies / hand-collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M&A experience",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Log (value of the deal)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "% sought",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Government involvement (sell-side / buy-side)",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Deal attitude indicators",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC Platinum Database"
+     },
+     {
+      "name": "Country fixed effects",
+      "source": "SDC Platinum Database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "capital market development",
+    "information asymmetry"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "cross-border deals",
+    "institutional differences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "regulatory and legal institutions",
+    "deal abandonment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "regulatory and legal institutions",
+    "relation": "affects",
+    "to": "deal abandonment"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "institutional voids in capital markets",
+    "institutional development",
+    "[withheld: wording matches the source]",
+    "market for corporate control"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "institutional development",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "institutional voids",
+    "market for corporate control"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "institutional voids",
+    "relation": "affects",
+    "to": "market for corporate control"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "institutional voids in government regulation",
+    "deal abandonment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "institutional voids in government regulation",
+    "relation": "affects",
+    "to": "deal abandonment"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "capital market development",
+    "institutional voids in government regulations",
+    "probability of deal completion"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "capital market development",
+    "relation": "increases",
+    "to": "probability of deal completion"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "institution of contract enforcement"
+   ],
+   "mechanism_named": "institution of\ncontract enforcement",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "institutional voids",
+    "deal abandonment"
+   ],
+   "mechanism_named": "contract enforcement",
+   "proposed_edge": {
+    "from": "institutional voids",
+    "relation": "affects",
+    "to": "deal abandonment"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

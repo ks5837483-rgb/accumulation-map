@@ -1,0 +1,447 @@
+{
+ "paper_id": "10.1093_rfs_hhm089",
+ "title": "The Value of Investor Protection: Firm Evidence from Cross-Border Mergers",
+ "journal": "RFS",
+ "year": 2008,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "law and finance",
+  "investor protection",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquiror_shareholder_protection",
+      "relation": "decreases",
+      "to": "expropriation_by_controlling_shareholders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expropriation_by_controlling_shareholders",
+      "relation": "decreases",
+      "to": "merger_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expropriation_by_controlling_shareholders"
+   ],
+   "moderators": [
+    {
+     "construct": "hundred_percent_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "expropriation_by_controlling_shareholders",
+     "moderated_from": "acquiror_shareholder_protection",
+     "moderated_to": "merger_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "acquirors from more protective (dispersed-ownership) countries overpay because of agency problems, not the value of investor protection transfer",
+    "the market for corporate control is more competitive in more protective acquiring countries, so higher premia reflect competition rather than investor protection"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquiror_accounting_standards",
+      "relation": "increases",
+      "to": "transparency",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "transparency",
+      "relation": "increases",
+      "to": "merger_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "transparency"
+   ],
+   "moderators": [
+    {
+     "construct": "accounting_consolidation",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "transparency",
+     "moderated_from": "acquiror_accounting_standards",
+     "moderated_to": "merger_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquiror_weaker_shareholder_protection",
+      "relation": "increases",
+      "to": "expropriation_by_controlling_shareholders",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "expropriation_by_controlling_shareholders",
+      "relation": "decreases",
+      "to": "merger_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expropriation_by_controlling_shareholders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firms undo the reduction in legal investor protection through private contracts, so no premium decline appears",
+    "the insignificant effect reflects firm characteristics explaining governance in more developed countries (Doidge, Karolyi, and Stulz 2007), not that reductions are unvalued"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border mergers matched across sectors by 2-digit SIC code)",
+  "country_region": "targets from 39 countries, acquirors from 25 countries",
+  "time_period": "January 1989 - December 2002",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "506 cross-border mergers (with 506 matched domestic mergers); 241 acquisitions used in the multivariate analysis"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Worldscope",
+    "category": "worldscope",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Merger premiums and abnormal returns",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "506 cross-border mergers (BHCAR); 208 with available merger premium data",
+    "dv": {
+     "name": "buy-and-hold cumulative abnormal return (BHCAR) / merger premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "matching adjustment (cross-border vs matched domestic acquisition)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; Datastream"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Merger premium and investor protection (univariate classification)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "cross-border merger changes target firm's nationality and applicable investor-protection law",
+    "sample": "",
+    "dv": {
+     "name": "matching-acquisition-adjusted buy-and-hold abnormal returns (MABHCAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "difference in shareholder protection (above/below median)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LLSV indices"
+     },
+     {
+      "name": "OECD membership (proxy for economic development)",
+      "measure": "target firm classified as OECD member vs nonmember",
+      "source": "other"
+     },
+     {
+      "name": "difference in accounting standards",
+      "measure": "cross-border mergers classified relative to the median of the accounting standards index",
+      "source": "LLSV indices; Worldscope"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Multivariate analyses (models 1-10), fixed-effect regressions",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "cross-border merger changes target firm's nationality and applicable investor-protection law (100% acquisition)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "matching-acquisition-adjusted buy-and-hold cumulative abnormal return (MABHCAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "difference in shareholder protection index (acquiror minus target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LLSV indices"
+     },
+     {
+      "name": "difference in accounting standards index (acquiror minus target)",
+      "measure": "difference in accounting standards acquiror-minus-target; firm-specific and time-varying index (local LLSV value, 83 for international standards, 71 for US GAAP/ADR); grouped into no-consolidation, automatic 100% consolidation, and firm-specific consolidation",
+      "source": "LLSV indices; Worldscope"
+     },
+     {
+      "name": "D100 (100% acquisition dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "accounting consolidation dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP per capita difference (acquiring minus target country)",
+      "source": "other"
+     },
+     {
+      "name": "hostility (probability of acquisition being hostile)",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "acquisition frequency in target country (percentage of domestic firms acquired)",
+      "source": "SDC"
+     },
+     {
+      "name": "percentage of shares sought by acquiror",
+      "source": "SDC"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "target country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "firm and country characteristics",
+      "source": "Worldscope"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Ownership concentration / dispersed-ownership alternative explanation",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": null,
+    "sample": "acquiror-matched sample: 297 of 506 cross-border deals matched by target and acquiring firm with available return information in Datastream",
+    "dv": {
+     "name": "difference in inside ownership (closely held shares) and merger premia",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Worldscope"
+    },
+    "key_ivs": [
+     {
+      "name": "shareholder protection difference between acquiror and target country",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LLSV indices"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "antitrust laws",
+    "merger laws"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "antitrust laws",
+    "relation": "affects",
+    "to": "market for corporate control"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "private contracts",
+    "investor protection"
+   ],
+   "mechanism_named": "private contracts",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "investor protection",
+    "merger premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "legal protection",
+    "shareholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "legal protection",
+    "relation": "decreases",
+    "to": "merger premium"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "executive compensation measures",
+    "managerial ability"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ownership concentration",
+    "merger premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ownership concentration",
+    "relation": "affects",
+    "to": "merger premium"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "hostile bids"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "gains to the acquiror"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "cross-border merger",
+    "relation": "affects",
+    "to": "gains to the acquiror"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "specific characteristics of cross-border mergers",
+    "firm value"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "specific characteristics of cross-border mergers",
+    "relation": "affects",
+    "to": "firm value"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "domestic and\ncross-border mergers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

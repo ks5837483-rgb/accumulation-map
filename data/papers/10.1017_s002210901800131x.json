@@ -1,0 +1,974 @@
+{
+ "paper_id": "10.1017_s002210901800131x",
+ "title": "Hometown Biased Acquisitions",
+ "journal": "JFQA",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "home bias theory",
+  "information economics",
+  "agency theory",
+  "behavioral corporate finance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_home_state",
+      "relation": "increases",
+      "to": "information_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_advantage",
+      "relation": "increases",
+      "to": "propensity_to_acquire_home_state_targets",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "CEO overconfidence"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_home_state_ties",
+      "relation": "increases",
+      "to": "connections_in_home_state",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "connections_in_home_state",
+      "relation": "increases",
+      "to": "hometown_bias",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "connections_in_home_state"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "weak_corporate_governance",
+      "relation": "increases",
+      "to": "agency_conflicts",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_conflicts",
+      "relation": "increases",
+      "to": "private_hometown_acquisition_bias",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_conflicts"
+   ],
+   "moderators": [
+    {
+     "construct": "agency_index",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "agency_conflicts",
+     "moderated_from": "weak_corporate_governance",
+     "moderated_to": "private_hometown_acquisition_bias",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "home advantages drive the hometown bias (no governance relationship expected)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "home_state_economic_distress",
+      "relation": "increases",
+      "to": "ceo_desire_to_help_hometown_community",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ceo_desire_to_help_hometown_community",
+      "relation": "increases",
+      "to": "private_hometown_acquisition_bias",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ceo_desire_to_help_hometown_community"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_hometown_deal",
+      "relation": "increases",
+      "to": "agency_conflicts",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_conflicts",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_conflicts"
+   ],
+   "moderators": [
+    {
+     "construct": "agency_index",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "agency_conflicts",
+     "moderated_from": "private_hometown_deal",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "public_hometown_deal",
+      "relation": "increases",
+      "to": "home_information_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "home_information_advantage",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "home_information_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "results driven by CEOs from three large states (NY, CA, IL) that also house many potential targets"
+   ]
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "public_hometown_deal",
+      "relation": "decreases",
+      "to": "information_noise",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_noise",
+      "relation": "increases",
+      "to": "large_loss_deal_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_noise"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_home_state_residence",
+      "relation": "increases",
+      "to": "home_information_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "home_information_advantage",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "home_information_advantage"
+   ],
+   "moderators": [
+    {
+     "construct": "hmstate_res",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "home_information_advantage",
+     "moderated_from": "public_hometown_deal",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P8"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "public_hometown_deal",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_premium",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "takeover_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P10",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "public_hometown_deal",
+      "relation": "increases",
+      "to": "deal_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_synergies",
+      "relation": "increases",
+      "to": "combined_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "value created because targets are underpaid (lower premiums)"
+   ]
+  },
+  {
+   "hypothesis": "P11",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "public_hometown_deal",
+      "relation": "increases",
+      "to": "realized_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "realized_synergies",
+      "relation": "increases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "realized_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (domestic acquisitions)",
+  "time_period": "1992-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P's Execucomp database (Execucomp)",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis Public Records Database (Lexis Nexis Online Public Records Database)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CEO birth county information, manually collected following Bernile, Bhagwat, and Rau (2017)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel A (baseline, DV = DEAL_DUMMY)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO_HOME_STATE x HQ_STATE interaction",
+      "source": ""
+     },
+     {
+      "name": "CEO age",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Industry-year fixed effects (Fama-French 48-industry classification)",
+      "source": ""
+     },
+     {
+      "name": "Headquarters state-pair-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B (DV = LOG_DEAL_VALUE)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "LOG_DEAL_VALUE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO_HOME_STATE x HQ_STATE interaction",
+      "source": ""
+     },
+     {
+      "name": "CEO age",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Industry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Headquarters state-pair-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (cross-state sample, in-state acquisitions excluded)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "cross-state deals only (bidder's headquarters state excluded from the 50 states and D.C.)",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO age",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Execucomp"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Industry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Headquarters state-pair-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Figure 1 / Placebo Analysis (randomized CEO home states and target headquarters states)",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "",
+    "sample": "1,000 placebo simulations reshuffling CEO home states and target headquarters states",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE (randomized)",
+      "measure": "CEO home states and target headquarters states reshuffled without replacement from original distributions; 1,000 simulations",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO_HOME_STATE x HQ_STATE interaction",
+      "source": ""
+     },
+     {
+      "name": "fixed effects (no other controls)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Reverse causality test (Section B.2, Column 1)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "indicator = 1 if the CEO of firm i grew up in state s",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Appendix Table IA.1 (CEOs' social connections and industry experience)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "indicator = 1 if the CEO grew up in state s",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Appendix Table IA.2 (CEO overconfidence)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "split by private and public deals",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "OVERCONFIDENT_CEO (and interaction with CEO_HOME_STATE)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Execucomp"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO_HOME_STATE",
+      "source": "LexisNexis Public Records Database"
+     },
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "excludes CEOs who grew up in NY, CA, and IL (~30% of sample CEOs)",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "indicator = 1 if the CEO grew up in state s",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Appendix Table IA.4 (influence of CFOs)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CFO home state dummy",
+      "measure": "dummy that captures the CFO home state (CFO state of origin identified for roughly 60% of the sample)",
+      "source": "LexisNexis Public Records Database"
+     },
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "indicator = 1 if the CEO grew up in state s",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Robustness to CEO birth county (LOG_DISTANCE_TO_CEO_BIRTH_COUNTY)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "~one third of original sample with identified CEO birthplaces (8,844 firm-year obs)",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "LOG_DISTANCE_TO_CEO_BIRTH_COUNTY",
+      "measure": "natural logarithm of the (population-based) distance to the CEO's birth county; birthplaces identified for roughly one third of the original sample (8,844 firm-year observations, 992 firms, 1,300 CEOs)",
+      "source": "CEO birth county information, manually collected following Bernile, Bhagwat, and Rau (2017)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Appendix Table IA.6 (adding financial and utility industry firms)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "main sample plus firms in financial and utility industries",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO_HOME_STATE",
+      "measure": "indicator = 1 if the CEO grew up in state s",
+      "source": "LexisNexis Public Records Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "cross-state sample",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "CEOHMTENUREGTMED x CEO_HOME_STATE",
+      "measure": "CEOHMTENUREGTMED = 1 if a CEO's home tenure (how long the CEO lived in the home state) is greater than the sample median, interacted with CEO_HOME_STATE",
+      "source": "LexisNexis Public Records Database"
+     },
+     {
+      "name": "CEOCOLLSTATE x CEO_HOME_STATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "CEOBOARDSTATE x CEO_HOME_STATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "CEORESISTATE x CEO_HOME_STATE",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO_HOME_STATE main effect",
+      "source": "LexisNexis Public Records Database"
+     },
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (agency conflicts and the hometown bias; governance x target type)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "run conditional on target type (private vs public deals)",
+    "dv": {
+     "name": "DEAL_DUMMY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Agency (corporate governance) index x CEO_HOME_STATE",
+      "measure": "index scaled to range 0 (low) to 1 (high) where high values indicate weak corporate governance / severe agency problems, interacted with CEO_HOME_STATE",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO_HOME_STATE main effect",
+      "source": "LexisNexis Public Records Database"
+     },
+     {
+      "name": "HQ_STATE",
+      "source": "Compustat"
+     },
+     {
+      "name": "state-pair-year and industry-year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "public hometown deals",
+    "outperformance",
+    "number of hometown deals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "public scrutiny",
+    "extent of disclosure",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "public scrutiny and the extent of disclosure",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "hmstate_res",
+    "home advantage"
+   ],
+   "mechanism_named": "home advantage",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

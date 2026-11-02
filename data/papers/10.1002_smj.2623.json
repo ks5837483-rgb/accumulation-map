@@ -1,0 +1,589 @@
+{
+ "paper_id": "10.1002_smj.2623",
+ "title": "Cross‐border mergers and acquisitions: The role of private equity firms",
+ "journal": "SMJ",
+ "year": 2017,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "adverse selection",
+  "liability of foreignness"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_pe_backing",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "target_poor_information_environment",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "acquirer_pe_backing",
+     "moderated_to": "announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity of PE backing (selection: PE firms may pick higher-quality deals rather than PE backing causing higher returns)"
+   ]
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_prior_pe_backer_deals_in_target_country",
+      "relation": "increases",
+      "to": "pe_deal_experience",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "pe_deal_experience",
+      "relation": "increases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "number_of_prior_pe_backer_deals_in_target_country",
+      "relation": "increases",
+      "to": "local_networks",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "local_networks",
+      "relation": "increases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "pe_deal_experience",
+    "local_networks"
+   ],
+   "moderators": [
+    {
+     "construct": "target_poor_information_environment",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "experience_and_networks",
+     "moderated_from": "number_of_prior_pe_backer_deals_in_target_country",
+     "moderated_to": "announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_advisor_experience",
+      "relation": "decreases",
+      "to": "informational_issues",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informational_issues",
+      "relation": "decreases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informational_issues"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_pe_backing",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "operating_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "target_poor_information_environment",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "acquirer_pe_backing",
+     "moderated_to": "operating_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H4b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border M&A deals across sectors)",
+  "country_region": "acquirers from 37 countries; targets private or publicly listed firms",
+  "time_period": "1996-2008",
+  "sample_description": "Cross-border M&A deals from SDC Platinum; deals completed, for 100 percent ownership, acquirer publicly listed, deal value at least USD 1m",
+  "sample_size": "4,452 deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "World Bank (WB) Governance Indicators",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1a",
+     "H1b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer PE backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Target bad WB info",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank (WB) Governance Indicators"
+     },
+     {
+      "name": "Target bad ICRG info",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer PE backing x target bad WB info / target bad ICRG info",
+      "measure": "interaction of the PE indicator with the two measures of the information environment",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "ln(assets) (acquirer size)",
+      "source": ""
+     },
+     {
+      "name": "EBITDA/assets",
+      "source": ""
+     },
+     {
+      "name": "Debt/assets (leverage)",
+      "source": ""
+     },
+     {
+      "name": "Cash/assets (cash holdings)",
+      "source": ""
+     },
+     {
+      "name": "Capex/sales (capital expenditures)",
+      "source": ""
+     },
+     {
+      "name": "# Prior deals (acquisition experience)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "# Prior cross-border deals",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "# Prior deals in target country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Overseas assets (international operations)",
+      "source": ""
+     },
+     {
+      "name": "ln(transaction value) (target size)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Multiple bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Friendly deal",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Stock payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Private target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Market cap/GDP",
+      "source": ""
+     },
+     {
+      "name": "FDI/GDP",
+      "source": ""
+     },
+     {
+      "name": "Unemployment",
+      "source": ""
+     },
+     {
+      "name": "Trade imbalance",
+      "source": ""
+     },
+     {
+      "name": "LLSV index (La Porta et al. 1997, 1998 governance index)",
+      "source": "La Porta et al. (1997, 1998)"
+     },
+     {
+      "name": "Bad WB info",
+      "source": "World Bank (WB) Governance Indicators"
+     },
+     {
+      "name": "Bad ICRG info",
+      "source": "International Country Risk Guide (ICRG)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2a",
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "# PE backer deals target country",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Target bad WB info",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank (WB) Governance Indicators"
+     },
+     {
+      "name": "Target bad ICRG info",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "interaction of the prior-local-deals variable with the information proxies",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables as in Table 1",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer PE backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "# Deals fin. advisors",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "# Cross-border deals fin. advisors",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "# Deals most exp. fin. advisor",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "# Cross-border deals most exp. fin. advisor",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Acquirer PE backing x financial advisor experience variables",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables as in Table 1",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4a",
+     "H4b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Delta Operating performance (EBIT)",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer PE backing",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Target bad WB info",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank (WB) Governance Indicators"
+     },
+     {
+      "name": "Target bad ICRG info",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer PE backing x target bad WB info / target bad ICRG info",
+      "measure": "interaction of PE backing with the information-environment proxies",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables as in Table 1",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer country fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "organizational mechanisms",
+    "pe firms advise portfolio firms"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "formal representation\non the board of directors",
+    "informal\nchannels outside the board"
+   ],
+   "mechanism_named": "formal representation\non the board of directors",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "pe-backing signal",
+    "market signals by other\nowner types"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "pe-backing signal",
+    "relation": "unspecified",
+    "to": "market signals by other\nowner types"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "event studies",
+    "enduring value creation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

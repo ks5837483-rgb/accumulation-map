@@ -1,0 +1,963 @@
+{
+ "paper_id": "10.1016_j.jacceco.2020.101333",
+ "title": "Implications of Non-GAAP earnings for real activities and accounting choices",
+ "journal": "JAE",
+ "year": 2020,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "real effects of accounting",
+  "accounting conservatism",
+  "managerial myopia",
+  "perception management",
+  "big bath accounting"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_reporting",
+      "relation": "decreases",
+      "to": "weight_on_excluded_expenses",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "weight_on_excluded_expenses",
+      "relation": "decreases",
+      "to": "corporate_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "weight_on_excluded_expenses"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the association merely reflects these firms' pre-existing higher (past) investment rather than an incremental effect of non-GAAP reporting"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_reporting",
+      "relation": "decreases",
+      "to": "weight_on_restructuring_expense",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "weight_on_restructuring_expense",
+      "relation": "decreases",
+      "to": "corporate_restructuring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "weight_on_restructuring_expense"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the higher restructuring of non-GAAP firms merely reflects their pre-existing (past) restructuring activity rather than an incremental effect of non-GAAP reporting"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sfas_141r",
+      "relation": "increases",
+      "to": "recognized_restructuring_expense",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "recognized_restructuring_expense",
+      "relation": "decreases",
+      "to": "acquisition_related_layoffs",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "recognized_restructuring_expense"
+   ],
+   "moderators": [
+    {
+     "construct": "non_gaap_reporting",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "recognized_restructuring_expense",
+     "moderated_from": "sfas_141r",
+     "moderated_to": "acquisition_related_layoffs",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ebitda_reporting",
+      "relation": "decreases",
+      "to": "weight_on_depreciation_expense",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "weight_on_depreciation_expense",
+      "relation": "decreases",
+      "to": "capital_expenditure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "weight_on_depreciation_expense"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ebitda_reporting",
+      "relation": "increases",
+      "to": "weight_on_restructuring_expense",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "weight_on_restructuring_expense",
+      "relation": "decreases",
+      "to": "corporate_restructuring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "weight_on_restructuring_expense"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_reporting",
+      "relation": "decreases",
+      "to": "weight_on_impairments",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "weight_on_impairments",
+      "relation": "decreases",
+      "to": "impairment_recognition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "weight_on_impairments"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "“big bath” behavior — an over-willingness to recognize unnecessary (discretionary) impairments rather than less opportunistic avoidance of necessary ones"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. Compustat firms across GIC industry groups; non-GAAP reporting well represented in each GIC industry)",
+  "country_region": "United States",
+  "time_period": "2006-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "24,028 firm-years (Sample 1, main investment and restructuring analysis)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Compustat annual file",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Mergers & Acquisitions (SDC database of acquisitions)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "EDGAR (Q4 earnings announcement 8-K filings)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Challenger, Gray, and Christmas (mass layoff announcements)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hand-collected earnings-announcement press releases / GAAP-to-non-GAAP reconciliations",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Frequency of excluded items (descriptive)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "100-firm random samples per expense type among non-GAAP-reporting firms recognizing material expense",
+    "dv": {
+     "name": "expense-exclusion frequency",
+     "measure": "share of 100 randomly selected non-GAAP-reporting firms (recognizing material expense >0.5% of beginning total assets) that exclude the expense in calculating non-GAAP earnings, from hand-examined GAAP/non-GAAP reconciliations",
+     "source": "Hand-collected earnings-announcement press releases / reconciliations"
+    },
+    "key_ivs": [
+     {
+      "name": "expense type",
+      "measure": "asset impairment / restructuring expense / acquisition expense / amortization of intangibles / depreciation expense; and EBITDA vs other-non-GAAP subsets",
+      "source": "Hand-collected earnings-announcement press releases / reconciliations"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Panel A - Corporate investment (cols 1-2)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Sample 1: 24,028 firm-years, fiscal years 2006-2016, entropy-weighted (Hainmueller 2012)",
+    "dv": {
+     "name": "INVESTMENT_t (and HIGH_INVESTMENT_t)",
+     "measure": "continuous investment scaled by total assets (WLS); HIGH_INVESTMENT_t = indicator for higher-than-expected investment (weighted logistic)",
+     "source": "Compustat annual file"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TOBINS_Q_t-1",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CFO_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "GROWTH_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "LOG_MV_t-1",
+      "source": "CRSP"
+     },
+     {
+      "name": "INTANGIBLES_t-1 (INTA)",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "MW_t-1 (material weakness)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "SD_ABACC_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "FITTED_NG_t (industry-year non-GAAP concentration)",
+      "source": ""
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A - Acquisitions (cols 3-5)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Sample 1: 24,028 firm-years, entropy-weighted",
+    "dv": {
+     "name": "VALUE_ACQUIRED_t (also ACQUIRE_CONTROL_t, LARGE_ACQUISITION_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers & Acquisitions (SDC database of acquisitions)"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TOBINS_Q_t-1",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CFO_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "GROWTH_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "LOG_MV_t-1",
+      "source": "CRSP"
+     },
+     {
+      "name": "INTANGIBLES_t-1 (INTA)",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "MW_t-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "SD_ABACC_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "FITTED_NG_t",
+      "source": ""
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A - Restructurings (cols 6-7)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Sample 1: 24,028 firm-years, entropy-weighted",
+    "dv": {
+     "name": "RESTRUCT_t (and RESTRUCT_8K_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual file; EDGAR (Q4 earnings announcement 8-K filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TOBINS_Q_t-1",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CFO_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "GROWTH_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "LOG_MV_t-1",
+      "source": "CRSP"
+     },
+     {
+      "name": "INTANGIBLES_t-1 (INTA)",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "MW_t-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "SD_ABACC_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "VALUE_ACQUIRED_t",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "RELATED_t",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "NEWCEO_t",
+      "source": ""
+     },
+     {
+      "name": "NUMSEGS_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "FITTED_NONGAAP_t",
+      "source": ""
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B - Investment/acquisition/restructuring controlling for lagged dependent variable",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Sample 1: 24,028 firm-years, entropy-weighted (robustness with lagged DV)",
+    "dv": {
+     "name": "INVESTMENT_t / VALUE_ACQUIRED_t / RESTRUCT_t (7 outcomes)",
+     "measure": "same seven Panel A outcomes, re-estimated adding the lagged dependent variable Y_t-1 as an additional regressor",
+     "source": "Compustat annual file; SDC Mergers & Acquisitions; EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Y_t-1 (lagged dependent variable)",
+      "source": ""
+     },
+     {
+      "name": "TOBINS_Q_t-1",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CFO_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "GROWTH_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "LOG_MV_t-1",
+      "source": "CRSP"
+     },
+     {
+      "name": "INTANGIBLES_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "MW_t-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "SD_ABACC_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "FITTED_NG_t",
+      "source": ""
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - EBITDA vs other non-GAAP: capital expenditures (cols 1-2)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Sample 2: 15,054 firm-years (EBITDA reporters vs other-non-GAAP reporters), entropy-weighted",
+    "dv": {
+     "name": "CAPEX_t (and HIGH_CAPEX_t)",
+     "measure": "CAPEX_t = capital expenditures scaled by lagged assets (WLS); HIGH_CAPEX_t = indicator for higher-than-expected capital expenditures (weighted logistic)",
+     "source": "Compustat annual file"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_EBITDA_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TOBINS_Q_t-1",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CFO_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "GROWTH_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "LOG_MV_t-1",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV_t-1 (leverage)",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "INTANGIBLES_t-1 (INTA)",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "MW_t-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "SD_ABACC_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "FITTED_EBITDA_t",
+      "source": ""
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - EBITDA vs other non-GAAP: restructurings (cols 3-4)",
+    "hypotheses": [
+     "H5"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Sample 2: 15,054 firm-years, entropy-weighted",
+    "dv": {
+     "name": "RESTRUCT_t (and RESTRUCT_8K_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual file; EDGAR (8-K filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_EBITDA_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TOBINS_Q_t-1",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CFO_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "GROWTH_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "LOG_MV_t-1",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "INTANGIBLES_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "MW_t-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "SD_ABACC_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "VALUE_ACQUIRED_t",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "RELATED_t",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "NEWCEO_t",
+      "source": ""
+     },
+     {
+      "name": "NUMSEGS_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "FITTED_EBITDA_t",
+      "source": ""
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R (effective 2009; mandatory expensing of acquisition-related restructuring costs)",
+    "sample": "11,928 acquisitions-for-control (Jan 2006-Dec 2015) by Sample 1 firms; entropy-weighted",
+    "dv": {
+     "name": "LAYOFF",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Challenger, Gray, and Christmas (mass layoff announcements) matched to SDC Mergers & Acquisitions"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     },
+     {
+      "name": "POST141R_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "PAST_NONGAAP_t x POST141R_t (DiD interaction)",
+      "measure": "interaction of PAST_NONGAAP_t and POST141R_t",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "PCTACQ",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "VAL",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "RELATED",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "REV_PER_EMP",
+      "source": "SDC Mergers & Acquisitions"
+     },
+     {
+      "name": "TOBINS_Q_t-1",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CFO_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "GROWTH_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "LOG_MV_t-1",
+      "source": "CRSP"
+     },
+     {
+      "name": "INTA_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "MW_t-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "SD_ABACC_t-1",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "NEWCEO_t",
+      "source": ""
+     },
+     {
+      "name": "NUMSEGS_t",
+      "source": "Compustat annual file"
+     },
+     {
+      "name": "FITTED_NG_t",
+      "source": ""
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Asset impairments",
+    "hypotheses": [
+     "H6"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Sample 3: 29,814 firm-years, entropy-weighted",
+    "dv": {
+     "name": "IMP_t",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual file"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BTMD_t (pre-impairment book-to-market > 1 indicator)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "WEAK_t (weak stock or accounting performance)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "RET_t (long-window contemporaneous returns)",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (cross-sectional) - Impairments split by book-to-market (BTM>1 vs BTM<1)",
+    "hypotheses": [
+     "H6"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Sample 3 split into BTM_t>1 vs BTM_t<1 subsamples, entropy-weighted",
+    "dv": {
+     "name": "IMP_t",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual file"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BTM_t (book-to-market, partition variable)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "WEAK_t",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "RET_t",
+      "source": "CRSP"
+     },
+     {
+      "name": "market/accounting performance & materiality controls per Lawrence et al. (2013)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Supplementary - Persistence of special-item expenses",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Sample 4: 23,847 firm-years",
+    "dv": {
+     "name": "future GAAP earnings / persistence of special items",
+     "measure": "predictive (persistence) of Compustat-defined special-item expenses (spi: acquisition, restructuring, impairment, gains/losses on asset sales, legal settlements, other unusual items) for future GAAP earnings, conditional on non-GAAP reporting history",
+     "source": "Compustat annual file"
+    },
+    "key_ivs": [
+     {
+      "name": "PAST_NONGAAP_t (interacted with special items)",
+      "measure": "history of reporting non-GAAP earnings interacted with special-item expense",
+      "source": "EDGAR (Q4 earnings announcement 8-K filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry (GIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "non-gaap earnings",
+    "corporate investment",
+    "restructuring",
+    "impairment decisions"
+   ],
+   "mechanism_named": "omitted variable",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,912 @@
+{
+ "paper_id": "10.1016_j.jfineco.2004.10.002",
+ "title": "Shareholder investment horizons and the market for corporate control",
+ "journal": "JFE",
+ "year": 2005,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "free cash flow theory",
+  "shareholder monitoring / corporate governance theory",
+  "bargaining theory (Grossman-Hart free-rider)",
+  "behavioral finance (noise-trader mispricing)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investor_turnover",
+      "relation": "decreases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "investor_turnover",
+      "relation": "decreases",
+      "to": "shareholder_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_monitoring",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power",
+    "shareholder_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "value-unlocking channel predicting higher (not lower) premiums for short-term-held targets",
+    "spurious negative correlation induced by short-term-held targets receiving multiple/competing bids",
+    "sample-selection bias in observed premiums (Heckman two-stage correction)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investor_turnover",
+      "relation": "decreases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "decreases",
+      "to": "probability_of_takeover_bid",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investor_turnover",
+      "relation": "decreases",
+      "to": "shareholder_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_monitoring",
+      "relation": "increases",
+      "to": "bidder_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shareholder_monitoring"
+   ],
+   "moderators": [
+    {
+     "construct": "equity_based_compensation",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "shareholder_monitoring",
+     "moderated_from": "investor_turnover",
+     "moderated_to": "bidder_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "robustness: EBC interaction (Section 4.3)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investor_turnover",
+      "relation": "decreases",
+      "to": "shareholder_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_monitoring",
+      "relation": "decreases",
+      "to": "probability_of_takeover_bid",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shareholder_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_investor_turnover",
+      "relation": "increases",
+      "to": "overbidding",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overbidding",
+      "relation": "increases",
+      "to": "value_accruing_to_target",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overbidding"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investor_turnover",
+      "relation": "increases",
+      "to": "managerial_discretion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_discretion",
+      "relation": "decreases",
+      "to": "long_run_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "investor_turnover",
+      "relation": "increases",
+      "to": "prolonged_mispricing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "prolonged_mispricing",
+      "relation": "decreases",
+      "to": "long_run_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_discretion",
+    "prolonged_mispricing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (all U.S. target acquisition announcements across the CRSP-Compustat-CDA/Spectrum universe of firms)",
+  "country_region": "United States (U.S. targets)",
+  "time_period": "1980-1999",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,814 events (base sample)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) mergers and acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Securities Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard & Poor's Execucomp database",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Council of Institutional Investors (list of activist institutional members)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (target abnormal return premium, Columns 0-4)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "3,814 U.S.-target acquisition announcements 1980-1999 (first bid per contest); N varies by specification",
+    "dv": {
+     "name": "target abnormal return premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "investor turnover (target firm)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "investor turnover of bidder firm (cross-effect)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROE (COMPUSTAT items 20/(60+60(t-1)))",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Sales growth (log COMPUSTAT items 12/12(t-1))",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "D/E (debt to equity, COMPUSTAT items 9/60)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "M/B (market to book value of equity, COMPUSTAT items 24x25/60)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Size (log of equity capitalization at start of run-up period)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Hostility (SDC attitude field unsolicited/hostile)",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bids (SDC-recorded second bidder within six months)",
+      "source": "SDC"
+     },
+     {
+      "name": "Intra-industry (Fama-French 1997 49-industry, SIC from CRSP)",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "Tender offer (SDC)",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold (bidder owns >5% of target common stock at announcement)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Fraction (institutional ownership relative to total shares outstanding)",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Concentration (Herfindahl index over distribution of investor weights)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Manager concentration (weighted average Herfindahl of investors' portfolios)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Industry exposure",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Beta (weighted average of investors' portfolio betas)",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Activism (fraction held by Council of Institutional Investors members)",
+      "source": "CDA/Spectrum/Council of Institutional Investors"
+     },
+     {
+      "name": "Change in arbitrage capital (Baker and Savasoglu 2002)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Volume (target trading volume prior to run-up period)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Fraction category 3 (mutual funds)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Fraction category 4 (investment advisers)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Managerial holdings (shares held by top officers)",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Year (announcement year) dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry (target firm Fama-French) dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (target actual offer premium, Columns 5-6)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Subsample with non-missing actual offer premium (N=1,880 and 984)",
+    "dv": {
+     "name": "actual offer premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "investor turnover (target firm)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "investor turnover of bidder firm (cross-effect)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "D/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "M/B",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "P/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Hostility",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "Intra-industry",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Fraction",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Concentration",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Manager concentration",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Industry exposure",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Beta",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Activism",
+      "source": "CDA/Spectrum/Council of Institutional Investors"
+     },
+     {
+      "name": "Change in arbitrage capital",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Year and industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (bidder abnormal return [-63,+126], Columns 0-4)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidder abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "investor turnover (bidder firm)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "investor turnover of target firm (cross-effect)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "D/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "M/B",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "P/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Hostility",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "Intra-industry",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Fraction",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Concentration",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Manager concentration",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Industry exposure",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Beta",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Activism",
+      "source": "CDA/Spectrum/Council of Institutional Investors"
+     },
+     {
+      "name": "Change in arbitrage capital",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "Fraction category 3 (mutual funds)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Fraction category 4 (investment advisers)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Year and industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (bidder abnormal return in days [-1,+1], Columns 5-6)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Short-window [-1,+1] event returns replication of the bidder main specifications",
+    "dv": {
+     "name": "bidder abnormal return in days [-1,+1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "investor turnover (bidder firm)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "investor turnover of target firm (cross-effect)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "D/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "M/B",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "P/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Hostility",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "Intra-industry",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Fraction",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Concentration",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Manager concentration",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Industry exposure",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Beta",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "Activism",
+      "source": "CDA/Spectrum/Council of Institutional Investors"
+     },
+     {
+      "name": "Change in arbitrage capital",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "Fraction category 3 (mutual funds)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Fraction category 4 (investment advisers)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Year and industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A (likelihood of being a target / being a bidder in a given year)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "17,640 different securities tracked over each sample year 1980-1999 (CDA/Spectrum universe), firm-year panel",
+    "dv": {
+     "name": "likelihood of a firm being a target (or bidder) in a given year",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "investor turnover",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "Fraction (institutional ownership)",
+      "source": "CDA/Spectrum/CRSP"
+     },
+     {
+      "name": "ownership concentration",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "change in arbitrage capital",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "stock's abnormal return (Comment and Schwert, 1995)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B (sample-selection correction for premium)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "Premium sample corrected for selection into being acquired (first-stage probability of a bid)",
+    "dv": {
+     "name": "target premium (second-stage)",
+     "measure": "second-stage OLS estimate of the premium after Heckman (1979) two-stage correction, with Heckman's Lambda (lambda_k) constructed from the first-stage probit choice model (Eq. 4)",
+     "source": "CRSP/SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investor turnover",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Heckman's Lambda (inverse Mills ratio from first-stage probit)",
+      "source": ""
+     },
+     {
+      "name": "other shareholder portfolio variables",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "accounting/deal control variables",
+      "source": "COMPUSTAT/SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "shareholder horizons",
+    "other aspects of corporate control"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "shareholder horizons",
+    "relation": "affects",
+    "to": "other aspects of corporate control"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "shareholders’ horizon",
+    "outcome of other events",
+    "proxy fights",
+    "going private transactions",
+    "self-tender offers"
+   ],
+   "mechanism_named": "shareholder monitoring and bargaining",
+   "proposed_edge": {
+    "from": "shareholders’ horizon",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "determinants of a firm’s shareholder base"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "key attributes",
+    "long-term capital"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "key attributes",
+    "relation": "affects",
+    "to": "attract long-term capital to a company"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

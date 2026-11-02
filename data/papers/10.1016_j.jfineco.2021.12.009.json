@@ -1,0 +1,679 @@
+{
+ "paper_id": "10.1016_j.jfineco.2021.12.009",
+ "title": "Blood in the water: The value of antitakeover provisions during market shocks",
+ "journal": "JFE",
+ "year": 2022,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "agency theory",
+  "bargaining theory",
+  "implicit contracts / bonding theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Main effect",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "decreases",
+      "to": "threat_of_opportunistic_takeover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "threat_of_opportunistic_takeover",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "threat_of_opportunistic_takeover"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "smaller decline in firm value is an artifact of pre-shock differences in observable firm characteristics between high and low ATP firms, not the ATPs themselves",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "Bargaining power hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "increases",
+      "to": "board_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_bargaining_power",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "Bonding hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "increases",
+      "to": "protection_of_relationship_specific_investments",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "protection_of_relationship_specific_investments",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "protection_of_relationship_specific_investments"
+   ],
+   "moderators": [
+    {
+     "construct": "importance_of_relationship_specific_investments",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "protection_of_relationship_specific_investments",
+     "moderated_from": "antitakeover_provisions",
+     "moderated_to": "firm_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Bonding hypothesis"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "RSI proxies instead capture firm opacity / an opaque information environment, so ATPs are valuable because they deter acquisitions of harder-to-value firms at opportunistic prices, not because they protect RSIs",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "Agency problems hypothesis (adverse selection channel)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Agency problems hypothesis (moral hazard channel)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "increases",
+      "to": "reduction_in_managerial_private_benefit_extraction_during_shock",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reduction_in_managerial_private_benefit_extraction_during_shock",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reduction_in_managerial_private_benefit_extraction_during_shock"
+   ],
+   "moderators": [
+    {
+     "construct": "product_market_competition",
+     "type": "moderator",
+     "effect": "weakens",
+     "effect_derived": false,
+     "mechanism": "reduction_in_managerial_private_benefit_extraction_during_shock",
+     "moderated_from": "antitakeover_provisions",
+     "moderated_to": "firm_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Agency problems hypothesis (moral hazard channel)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Shareholder activism hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "antitakeover_provisions",
+      "relation": "decreases",
+      "to": "disruptive_shareholder_activism",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disruptive_shareholder_activism",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disruptive_shareholder_activism"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1983Q1-2020Q1",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "412,049 firm-quarter observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "quarterly CRSP-Compustat merged database",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (share prices, shares outstanding, quarterly returns, value-weighted market index)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (book value of assets and equity)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP/Compustat Merged historical header information databases (state of incorporation and headquarters)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR 10-K filings (historical state of incorporation, Spamann and Wilkinson 2019)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, cols 1-4: State ATPs, Market Shocks, and Firm Value (Tobin's Q)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Shock x ATP Index (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Shock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "ATP Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Book Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Age)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "Default (Merton's distance to default)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Inst Ownership",
+      "source": ""
+     },
+     {
+      "name": "Shock x Controls interactions",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Fiscal-quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Linear time trend (cols 1-2)",
+      "source": ""
+     },
+     {
+      "name": "3-digit SIC Industry x Year x Quarter fixed effects (cols 3-4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, cols 5-8: State ATPs, Market Shocks, and Firm Value (Shareholder Return)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "market shocks (CRSP value-weighted quarterly market return <= -10%; 14 shocks)",
+    "sample": "",
+    "dv": {
+     "name": "Shareholder Return",
+     "measure": "a firm's buy-and-hold (cumulative) stock return over a calendar-quarter",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Shock x ATP Index (interaction)",
+      "measure": "Shock_t x ATP Index_st-1",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Shock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "ATP Index",
+      "measure": "index of state-level antitakeover provisions (0 to 5), normalized to 0-1",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Book Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Age)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "Default (Merton's distance to default)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Inst Ownership",
+      "source": ""
+     },
+     {
+      "name": "Shock x Controls interactions",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Fiscal-quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Shock x DGTW fixed effects (cols 5-6)",
+      "source": "CRSP"
+     },
+     {
+      "name": "3-digit SIC Industry x Year x Quarter fixed effects (cols 7-8)",
+      "source": ""
+     },
+     {
+      "name": "DGTW x Year x Quarter fixed effects (cols 7-8; 125 size/BM/momentum portfolios)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Portfolio Return Regressions (long-short high-minus-low ATP spread portfolio)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "market shocks (quarterly market return <= -10%)",
+    "sample": "portfolio time series 1984Q2 to 2020Q1 (143 quarterly observations); Newey-West with three lags",
+    "dv": {
+     "name": "High ATP - Low ATP portfolio return spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Shock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MKTRF (market minus risk-free rate)",
+      "source": "CRSP / Ken French"
+     },
+     {
+      "name": "SMB (small minus big)",
+      "source": "CRSP / Ken French"
+     },
+     {
+      "name": "HML (high minus low book-to-market)",
+      "source": "CRSP / Ken French"
+     },
+     {
+      "name": "MOM (momentum factor)",
+      "source": "CRSP / Ken French"
+     },
+     {
+      "name": "LIQ (Pastor and Stambaugh 2003 aggregate liquidity innovation)",
+      "source": "Pastor and Stambaugh (2003)"
+     },
+     {
+      "name": "Shock x factor interactions (MKTRF, SMB, HML, MOM, LIQ)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Fig. 3: State ATPs, Market Shocks, and Firm Value: By Shock (14 separate shock interactions)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "the 14 individual market shocks between 1983Q1 and 2020Q1 (e.g., 1987Q4 Black Monday, 2020Q1 COVID-19)",
+    "sample": "",
+    "dv": {
+     "name": "Firm Value (Tobin's Q and Shareholder Return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Shock_a x ATP Index (14 separate shock interactions)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "DGTW x quarter fixed effects (shareholder return models)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "market shocks (CRSP value-weighted quarterly return <= -10%)",
+    "sample": "",
+    "dv": {
+     "name": "Firm Value (Tobin's Q and Shareholder Return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Shock quarter leads/lags x ATP Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "DGTW x quarter fixed effects (shareholder return models)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Propensity score matched sample analysis (Panel A balance / logit, Panel B regressions)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "market shocks (quarterly market return <= -10%)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Firm Value (Tobin's Q and Shareholder Return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Shock x ATP Index (interaction)",
+      "measure": "market shock interacted with the continuous ATP Index in the matched sample",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "High ATP Index group membership",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP/Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Shock x Controls interactions",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "window length",
+    "takeover premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "omitted variable",
+    "rsis",
+    "corporate laws"
+   ],
+   "mechanism_named": "omitted variable",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "firm opacity",
+    "rsis",
+    "firm value"
+   ],
+   "mechanism_named": "firm opacity and misvaluation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "rsi measures",
+    "opaque information environment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "time-series heterogeneity",
+    "governance mechanisms",
+    "effectiveness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "time-series heterogeneity",
+    "on_path": [
+     "governance mechanisms",
+     "effectiveness"
+    ]
+   }
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "optimal set of provisions",
+    "business cycle"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "market conditions",
+    "economic cycles",
+    "atps"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

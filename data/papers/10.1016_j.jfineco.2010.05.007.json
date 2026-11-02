@@ -1,0 +1,878 @@
+{
+ "paper_id": "10.1016_j.jfineco.2010.05.007",
+ "title": "Club deals in leveraged buyouts",
+ "journal": "JFE",
+ "year": 2010,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "bidder collusion theory",
+  "theory of deal syndication"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "club_deal",
+      "relation": "decreases",
+      "to": "bid_competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bid_competition",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_competition"
+   ],
+   "moderators": [
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "bid_competition",
+     "moderated_from": "club_deal",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "institutional ownership prediction"
+    },
+    {
+     "construct": "pre_2006_period",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "exploitation_of_lack_of_competition",
+     "moderated_from": "club_deal",
+     "moderated_to": "acquisition_premium",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "pre-2006 structural break"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "club targets are riskier in unobservable ways (lower target quality)",
+    "larger target size (not clubbing) drives the lower premium",
+    "coordination costs among club members lower willingness to pay",
+    "increased fund inflows around 2006 (money chasing deals) explain the structural break"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "club_deal",
+      "relation": "decreases",
+      "to": "competition_for_the_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competition_for_the_target",
+      "relation": "increases",
+      "to": "post_announcement_competing_bids",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "club_deal",
+      "relation": "decreases",
+      "to": "supply_of_debt_financing_for_competing_bids",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "supply_of_debt_financing_for_competing_bids",
+      "relation": "increases",
+      "to": "post_announcement_competing_bids",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competition_for_the_target",
+    "supply_of_debt_financing_for_competing_bids"
+   ],
+   "moderators": [
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "competition_for_the_target",
+     "moderated_from": "club_deal",
+     "moderated_to": "post_announcement_competing_bids",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "institutional ownership prediction"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_size",
+      "relation": "increases",
+      "to": "capital_constraints",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "capital_constraints",
+      "relation": "increases",
+      "to": "club_formation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capital_constraints"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "diversification_benefit",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "diversification_benefit",
+      "relation": "increases",
+      "to": "club_formation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_risk",
+      "relation": "increases",
+      "to": "diversification_benefit",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "diversification_benefit",
+      "relation": "increases",
+      "to": "club_formation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "diversification_benefit"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "club_deal",
+      "relation": "increases",
+      "to": "debt_certification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "debt_certification",
+      "relation": "increases",
+      "to": "favorable_debt_financing_terms",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "debt_certification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (LBOs/M&A of U.S. publicly traded targets; industries defined by two-digit SIC codes)",
+  "country_region": "United States",
+  "time_period": "1984-2007",
+  "sample_description": "Completed acquisitions of U.S. publicly traded targets from Thomson Financial's SDC Platinum database (announced Jan 1984-Sept 2007, deal value > $100 million, acquirer seeking >50% of shares), matched to CRSP; leveraged buyouts led by prominent private equity firms (50 largest by 2002-2007 fundraising per PEI, plus additions), hand-coded into club vs. sole-sponsored deals",
+  "sample_size": "201 private equity deals (70 club, 131 sole-sponsored)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Financial's 13F Holdings database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Brokers' Estimate System (IBES)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Preqin",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "DealScan",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Private Equity International (PEI) magazine (May 2007 issue), list of the 50 largest private equity firms",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva news search",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Definitive merger proxy statements (DEFM14s) and tender offer statements (SC TOs) filed with the SEC / SEC Edgar database",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Hand-coded classification of private equity involvement and club deals (text search of SDC deal synopses + merger proxy statements, manually confirmed)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "4,031 completed acquisitions of publicly traded targets",
+    "dv": {
+     "name": "target shareholder returns",
+     "measure": "Runup = compound return over (-42,-1); CR3 = compound return over (-1,+1); Markup = compound return over (0,+126); Premium = compound return over (-42,+126); BHARs = compound return to target shares minus compound return to CRSP value-weighted market index over same period; CARs = sum of target's daily market-model residuals (market-model parameters estimated over (-379,-127))",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer type",
+      "measure": "four mutually exclusive categories: private equity club, sole private equity firm, private (non-prominent) firm, public firm",
+      "source": "SDC + hand-coded classification"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Target characteristics, by bidder type",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target firm characteristics",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP, Compustat, Thomson Financial 13F Holdings"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer type",
+      "measure": "private equity club vs. sole private equity vs. private vs. public bidder",
+      "source": "SDC + hand-coded classification"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Unreported club-formation models (probit, linear probability, logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "club deal indicator",
+     "measure": "indicator variable equal to one for club deals",
+     "source": "hand-coded classification"
+    },
+    "key_ivs": [
+     {
+      "name": "target characteristics",
+      "measure": "the target characteristics in Table 4 (size, Q, EBITDA/Assets, leverage, institutional ownership, prior returns, volatility, beta)",
+      "source": "CRSP, Compustat, Thomson Financial 13F Holdings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A, columns 1-3 (base specifications) - multivariate return regressions",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "full sample of 4,031 acquisitions incl. non-PE bidders",
+    "dv": {
+     "name": "target returns",
+     "measure": "CAR3, Markup BHAR, and Premium BHAR (expressed in percent)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Club indicator",
+      "measure": "indicator variable for the club deal category (omitted category = sole-sponsored private equity)",
+      "source": "SDC + hand-coded classification"
+     },
+     {
+      "name": "Private indicator",
+      "measure": "indicator for private (non-prominent) bidder",
+      "source": "SDC"
+     },
+     {
+      "name": "Public indicator",
+      "measure": "indicator for publicly traded bidder",
+      "source": "SDC/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "natural log of target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "All cash / Mix method-of-payment indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold at announcement",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile reaction indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Pre-competition indicator (another offer for same target within prior six months)",
+      "source": "SDC"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry (two-digit SIC) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A, columns 4-6 (institutional ownership interaction)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target returns",
+     "measure": "CAR3, Markup BHAR, and Premium BHAR (in percent)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Club x institutional ownership",
+      "measure": "club indicator interacted with target institutional ownership",
+      "source": "SDC/hand-coded + Thomson Financial 13F Holdings"
+     },
+     {
+      "name": "Sole PE x institutional ownership",
+      "measure": "sole-sponsored PE indicator interacted with institutional ownership",
+      "source": "hand-coded + 13F"
+     },
+     {
+      "name": "Institutional ownership",
+      "measure": "fraction of target shares owned by 13F institutions in the quarter prior to announcement",
+      "source": "Thomson Financial 13F Holdings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "natural log of target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "method-of-payment, toehold, tender, hostile, pre-competition indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry (two-digit SIC) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A, columns 7-9 (pre-2006 timing interaction)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "2006 onset of financial-media scrutiny and U.S. Department of Justice informal inquiry into club deals",
+    "sample": "",
+    "dv": {
+     "name": "target returns",
+     "measure": "CAR3, Markup BHAR, and Premium BHAR (in percent)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Club x Pre-2006",
+      "measure": "club indicator interacted with Pre-2006 (=1 for deals announced before 2006); net pre-2006 club discount = Club + Club*Pre-2006 - SolePE*Pre-2006",
+      "source": "SDC/hand-coded"
+     },
+     {
+      "name": "Sole PE x Pre-2006",
+      "measure": "sole-PE indicator interacted with Pre-2006 indicator",
+      "source": "hand-coded"
+     }
+    ],
+    "controls": [
+     {
+      "name": "natural log of target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "method-of-payment, toehold, tender, hostile, pre-competition indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry (two-digit SIC) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B - regressions with PE AUM and PE fund-inflow controls (year FE dropped)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target returns",
+     "measure": "CAR3, Markup BHAR, and Premium BHAR (in percent)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PE firm(s) AUM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Preqin"
+     },
+     {
+      "name": "PE inflow",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Preqin"
+     },
+     {
+      "name": "Club indicator and Club interactions (institutional ownership, pre-2006)",
+      "measure": "as in Panel A",
+      "source": "SDC/hand-coded"
+     }
+    ],
+    "controls": [
+     {
+      "name": "natural log of target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "method-of-payment, toehold, tender, hostile, pre-competition indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "industry (two-digit SIC) fixed effects (no year FE)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel A - return regressions on prominent-PE-only sample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "2006 media/DOJ scrutiny of club deals (Pre-2006 interaction)",
+    "sample": "201 prominent private equity transactions only",
+    "dv": {
+     "name": "target returns",
+     "measure": "CAR3, Markup BHAR, and Premium BHAR (in percent)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Club indicator (plus Club x institutional ownership and Club x Pre-2006 interactions across column blocks)",
+      "measure": "club vs. sole-sponsored PE; interaction terms as in Table 5",
+      "source": "SDC/hand-coded + 13F"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target size",
+      "source": "CRSP"
+     },
+     {
+      "name": "target risk controls",
+      "source": "CRSP"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B - matching estimates of the club treatment effect on returns",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "201 prominent private equity transactions only",
+    "dv": {
+     "name": "club treatment effect on target returns",
+     "measure": "estimated treatment effect on CAR3, Markup BHAR, and Premium BHAR",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Club (treatment)",
+      "measure": "club vs. sole-sponsored PE deal; kernel propensity-score matching (propensity from probit for club formation with Panel A controls + year FE) and Abadie-Imbens (2007) bias-corrected matching estimator on Panel A control variables",
+      "source": "SDC/hand-coded"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Panel A control variables (target size, risk) + year fixed effects (used to form propensity scores / matches)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A - multiples-based acquisition-discount regressions (three-year centered matching window)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2006 media/DOJ scrutiny of club deals (Pre-2006 interaction)",
+    "sample": "private-equity-sponsored deals only (sole or club)",
+    "dv": {
+     "name": "acquisition discount (deal multiples)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC, Compustat, CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Club indicator and Club x Pre-2006 interaction",
+      "measure": "net pre-2006 club discount = Club + Club*Pre-2006",
+      "source": "SDC/hand-coded"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "industry (two-digit SIC) matching implicit in discount construction",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel B - multiples-based discount regressions (preceding three-year window, matched on size)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2006 media/DOJ scrutiny of club deals (Pre-2006 interaction)",
+    "sample": "private-equity-sponsored deals only (sole or club)",
+    "dv": {
+     "name": "acquisition discount (deal multiples)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC, Compustat, CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Club indicator and Club x Pre-2006 interaction",
+      "measure": "net pre-2006 club discount = Club + Club*Pre-2006",
+      "source": "SDC/hand-coded"
+     }
+    ],
+    "controls": [
+     {
+      "name": "size control omitted (matched on size instead)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Post-announcement competition (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "201 PE transactions; column 2 restricts to 80 deals involving top-five PEI firms (40 sole, 40 club)",
+    "dv": {
+     "name": "post-announcement competition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC, Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "Club indicator",
+      "measure": "club vs. sole-sponsored PE deal",
+      "source": "SDC/hand-coded"
+     },
+     {
+      "name": "Club x institutional ownership",
+      "measure": "club indicator interacted with target institutional ownership",
+      "source": "hand-coded + 13F"
+     }
+    ],
+    "controls": [
+     {
+      "name": "institutional ownership",
+      "source": "Thomson Financial 13F Holdings"
+     },
+     {
+      "name": "prior-table explanatory variables",
+      "source": "SDC/CRSP/Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 9 Panels A-B - financing commitments (univariate comparison)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "PE deals completed 1994-2007 with available proxy/tender statements (approx. 45 club, 61 sole)",
+    "dv": {
+     "name": "financing commitments",
+     "measure": "ratio of total debt+equity commitments to total funds needed to complete the deal; counts of deals under/over/equal; equity commitments as a fraction of all commitments received",
+     "source": "definitive merger proxy / tender offer statements (Capital IQ, SEC Edgar)"
+    },
+    "key_ivs": [
+     {
+      "name": "Club vs. Sole PE",
+      "measure": "deal type",
+      "source": "SDC/hand-coded"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 9 Panel C - debt financing terms (DealScan, univariate comparison)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "107 deals matched to at least one DealScan credit facility (facility start within +/-30 days of deal effective date)",
+    "dv": {
+     "name": "debt financing terms",
+     "measure": "No. of lenders; Spread over LIBOR (bps/yr); Adjusted spread (spread minus average spread on all LBO debt in prior calendar quarter); Max. debt/EBITDA allowed under the credit facility; Adjusted max. debt/EBITDA; Post-LBO leverage (debt/(debt+equity) immediately post-LBO)",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Club vs. Sole PE",
+      "measure": "deal type",
+      "source": "SDC/hand-coded"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "institutional ownership"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "capital constraints",
+    "club deals",
+    "deal characteristics"
+   ],
+   "mechanism_named": "capital constraints",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "debt financing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "motivations for club formation",
+    "observable target characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "lower pricing of club deals",
+    "unobserved benign motivation for club formation"
+   ],
+   "mechanism_named": "unobserved benign motivation for club formation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "unobservable factors",
+    "club formation",
+    "club premiums",
+    "target institutional ownership"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "public-to-private transactions",
+    "private-to-private transactions",
+    "club deal discount"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "club deals",
+    "economic efficiency"
+   ],
+   "mechanism_named": "pooling of multiple expert opinions",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "club deals",
+    "sole-sponsored LBOs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "club deals",
+    "relation": "affects",
+    "to": "economic efficiency"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

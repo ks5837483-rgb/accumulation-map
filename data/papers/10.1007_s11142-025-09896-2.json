@@ -1,0 +1,795 @@
+{
+ "paper_id": "10.1007_s11142-025-09896-2",
+ "title": "Do key audit matter disclosures about M&amp;A transactions predict future performance?",
+ "journal": "RAS",
+ "year": 2025,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "winner's curse",
+  "hubris hypothesis",
+  "overconfidence hypothesis",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "transaction_materiality",
+      "relation": "increases",
+      "to": "estimation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "estimation_uncertainty",
+      "relation": "increases",
+      "to": "ma_kam_disclosure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "estimation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "estimation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "estimation_uncertainty",
+      "relation": "increases",
+      "to": "ma_kam_disclosure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "estimation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1c",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "overpayment_risk",
+      "relation": "increases",
+      "to": "estimation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "estimation_uncertainty",
+      "relation": "increases",
+      "to": "ma_kam_disclosure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "estimation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ma_kam_disclosure",
+      "relation": "increases",
+      "to": "estimation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "estimation_uncertainty",
+      "relation": "increases",
+      "to": "future_goodwill_impairment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "estimation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "negative",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "acquired_goodwill",
+      "relation": "increases",
+      "to": "expected_acquisition_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_acquisition_benefits",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_acquisition_benefits"
+   ],
+   "moderators": [
+    {
+     "construct": "ma_kam_disclosure",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "overpayment",
+     "moderated_from": "acquired_goodwill",
+     "moderated_to": "post_acquisition_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "poor_post_acquisition_performance",
+      "relation": "increases",
+      "to": "board_attribution_of_acquisition_failure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "board_attribution_of_acquisition_failure",
+      "relation": "increases",
+      "to": "forced_ceo_turnover",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "board_attribution_of_acquisition_failure"
+   ],
+   "moderators": [
+    {
+     "construct": "ma_kam_disclosure",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "board_attribution_of_acquisition_failure",
+     "moderated_from": "poor_post_acquisition_performance",
+     "moderated_to": "forced_ceo_turnover",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (London Stock Exchange-listed companies spanning a wide array of industries, one-digit SIC 0-9)",
+  "country_region": "United Kingdom (London Stock Exchange, Main Market and Alternative Investment Market)",
+  "time_period": "September 2013 - December 2020",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,025 company-year observations for the main KAM disclosure model (from 2,460 completed M&A transactions); consequence models N = 580 to 953"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Global Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics Europe",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx UK",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "FactSet International",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Refinitiv Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - M&A KAM Disclosure Model [1]",
+    "hypotheses": [
+     "H1a",
+     "H1b",
+     "H1c"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,025 company-year observations",
+    "dv": {
+     "name": "M&A_KAM",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics Europe"
+    },
+    "key_ivs": [
+     {
+      "name": "RELATIVE_SIZE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / FactSet International"
+     },
+     {
+      "name": "CROSS_INDUSTRY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "GOODWILL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet International"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BIG4",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "ΔAUDITOR",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "RESTATE",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "ASSETS",
+      "source": "FactSet International"
+     },
+     {
+      "name": "BTM",
+      "source": "FactSet International"
+     },
+     {
+      "name": "SALES_GROWTH",
+      "source": "FactSet International"
+     },
+     {
+      "name": "FOREIGN_SALES",
+      "source": "FactSet International"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "FactSet International"
+     },
+     {
+      "name": "ROA",
+      "source": "FactSet International"
+     },
+     {
+      "name": "RESTRUCTURING",
+      "source": "FactSet International"
+     }
+    ]
+   },
+   {
+    "label": "Goodwill Impairment Model [2a] - DV GW_IMPAIR (linear probability model)",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "896 company-year observations",
+    "dv": {
+     "name": "GW_IMPAIR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FactSet International"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A KAM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Europe"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ASSETS",
+      "source": "FactSet International"
+     },
+     {
+      "name": "BTM",
+      "source": "FactSet International"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "FactSet International"
+     },
+     {
+      "name": "AB_ANN_RET",
+      "source": "Refinitiv Datastream"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "ALL_CASH",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "#ACQUISITIONS",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "GW_KAM",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "#OTHER_KAMS",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / FactSet International"
+     },
+     {
+      "name": "CROSS_INDUSTRY",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "source": "SDC Global Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Goodwill Impairment Model [2a] - DV GW_IMPAIR_AMT (OLS)",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "896 company-year observations",
+    "dv": {
+     "name": "GW_IMPAIR_AMT",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FactSet International"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A KAM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Europe"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ASSETS",
+      "source": "FactSet International"
+     },
+     {
+      "name": "BTM",
+      "source": "FactSet International"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "FactSet International"
+     },
+     {
+      "name": "AB_ANN_RET",
+      "source": "Refinitiv Datastream"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "ALL_CASH",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "#ACQUISITIONS",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "GW_KAM",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "#OTHER_KAMS",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / FactSet International"
+     },
+     {
+      "name": "CROSS_INDUSTRY",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "source": "SDC Global Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Goodwill Impairment Model [2a] - DV GW_KAM_3YR (linear probability model)",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "896 company-year observations",
+    "dv": {
+     "name": "GW_KAM_3YR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics Europe"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A KAM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Europe"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ASSETS",
+      "source": "FactSet International"
+     },
+     {
+      "name": "BTM",
+      "source": "FactSet International"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "FactSet International"
+     },
+     {
+      "name": "AB_ANN_RET",
+      "source": "Refinitiv Datastream"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "ALL_CASH",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "#ACQUISITIONS",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "GW_KAM",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "#OTHER_KAMS",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / FactSet International"
+     },
+     {
+      "name": "CROSS_INDUSTRY",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "source": "SDC Global Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Post-Acquisition Performance Model [2b] - DV ΔOCF (t+1, t+2, t+3)",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N = 580 to 953 (further reduced by missing data; ~20-45 obs lost from missing Datastream stock returns)",
+    "dv": {
+     "name": "ΔOCF (ΔOCFt+1, ΔOCFt+2, ΔOCFt+3)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FactSet International"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A KAM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "GOODWILL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet International"
+     },
+     {
+      "name": "M&A KAM*GOODWILL (interaction)",
+      "measure": "the interaction of M&A_KAM and GOODWILL; H2b predicts a negative coefficient (β3) for the M&A_KAM*GOODWILL interaction",
+      "source": "Audit Analytics Europe / FactSet International"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ASSETS",
+      "source": "FactSet International"
+     },
+     {
+      "name": "BTM",
+      "source": "FactSet International"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "FactSet International"
+     },
+     {
+      "name": "AB_ANN_RET",
+      "source": "Refinitiv Datastream"
+     },
+     {
+      "name": "ALL_STOCK",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "ALL_CASH",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "#ACQUISITIONS",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "GW_KAM",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "#OTHER_KAMS",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / FactSet International"
+     },
+     {
+      "name": "CROSS_INDUSTRY",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "source": "SDC Global Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Forced CEO Turnover Model [3] - DV CEO_TURN (linear probability model)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "580 company-year observations",
+    "dv": {
+     "name": "CEO_TURN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BoardEx UK / press releases"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A KAM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "BAD_PERFORM (ΔOCF_NEGATIVE and GW_IMPAIR_AMT)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet International"
+     },
+     {
+      "name": "M&A KAM*BAD_PERFORM (interaction)",
+      "measure": "the interaction of M&A_KAM with BAD_PERFORM; H3 predicts a positive coefficient for β3",
+      "source": "Audit Analytics Europe / FactSet International"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / FactSet International"
+     },
+     {
+      "name": "CROSS_INDUSTRY",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "GOODWILL",
+      "source": "FactSet International"
+     },
+     {
+      "name": "AB_ANN_RET",
+      "source": "Refinitiv Datastream"
+     },
+     {
+      "name": "ROA",
+      "source": "FactSet International"
+     },
+     {
+      "name": "ΔROAt-1",
+      "source": "FactSet International"
+     },
+     {
+      "name": "ΔSALESt-1",
+      "source": "FactSet International"
+     },
+     {
+      "name": "ΔRETt-1",
+      "source": "Refinitiv Datastream"
+     },
+     {
+      "name": "ASSETS",
+      "source": "FactSet International"
+     },
+     {
+      "name": "BTM",
+      "source": "FactSet International"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "FactSet International"
+     },
+     {
+      "name": "LOSS",
+      "source": "FactSet International"
+     },
+     {
+      "name": "RESTATE",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "#ACQUISITIONS",
+      "source": "SDC Global Mergers and Acquisitions database"
+     },
+     {
+      "name": "GW_KAM",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "#OTHER_KAMS",
+      "source": "Audit Analytics Europe"
+     },
+     {
+      "name": "CEO_TENURE",
+      "source": "BoardEx UK"
+     },
+     {
+      "name": "CEO_CHAIR",
+      "source": "BoardEx UK"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "m&a kam disclosures",
+    "incremental price reactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "m&a kam disclosures",
+    "relation": "affects",
+    "to": "incremental price reactions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "results",
+    "other jurisdictions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "kams",
+    "other regulatory and legal settings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

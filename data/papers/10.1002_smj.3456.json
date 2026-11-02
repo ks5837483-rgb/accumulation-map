@@ -1,0 +1,863 @@
+{
+ "paper_id": "10.1002_smj.3456",
+ "title": "Divestment of relational assets following acquisitions: Evidence from the\n                    <scp>biopharmaceutical</scp>\n                    industry",
+ "journal": "SMJ",
+ "year": 2022,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "relational view",
+  "alliance portfolio perspective",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "stress_on_alliance_management_capacity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stress_on_alliance_management_capacity",
+      "relation": "increases",
+      "to": "alliance_termination",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "asset_co_specialization_needs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_co_specialization_needs",
+      "relation": "increases",
+      "to": "alliance_termination",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "knowledge_sharing_routine_disruption",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "knowledge_sharing_routine_disruption",
+      "relation": "increases",
+      "to": "alliance_termination",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "governance_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "governance_costs",
+      "relation": "increases",
+      "to": "alliance_termination",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "stress_on_alliance_management_capacity",
+    "asset_co_specialization_needs",
+    "knowledge_sharing_routine_disruption",
+    "governance_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "stress_on_alliance_management_capacity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "stress_on_alliance_management_capacity",
+     "moderated_from": "acquisition",
+     "moderated_to": "alliance_termination",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "under-performing alliances cause firms to become acquisition targets (reverse causality / target self-selection)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "inherited_alliance",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "alliance_termination",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "inherited_alliance",
+      "relation": "increases",
+      "to": "asset_co_specialization_needs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_co_specialization_needs",
+      "relation": "increases",
+      "to": "alliance_termination",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "inherited_alliance",
+      "relation": "increases",
+      "to": "exchange_hazards",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "exchange_hazards",
+      "relation": "increases",
+      "to": "alliance_termination",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "asset_co_specialization_needs",
+    "exchange_hazards"
+   ],
+   "moderators": [
+    {
+     "construct": "common_partners",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "inherited_alliance",
+     "moderated_to": "alliance_termination",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    },
+    {
+     "construct": "unique_partners",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "knowledge_spillover_risk",
+     "moderated_from": "inherited_alliance",
+     "moderated_to": "alliance_termination",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "global biopharmaceutical industry",
+  "country_region": "global (biopharmaceutical firms; identified by North American NAICS codes)",
+  "time_period": "1989-2000",
+  "sample_description": "Biopharmaceutical firms identified via NAICS codes in the Osiris dataset, with their alliances and acquisitions obtained from RECAP; a matched case-control / propensity-score-matched design comparing alliances exposed to acquisitions (treatment) with alliances not subject to acquisitions (control); unit of analysis = each alliance",
+  "sample_size": "67 acquiring firms (1,836 preexisting alliances), targets with 506 inherited alliances, and 246 non-acquisition control firms (2,379 alliances); H4/H5 logistic models use 1,838 alliance observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Osiris dataset",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RECAP",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Patent and Trademark Office (USPTO)",
+    "category": "patents",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Model 1 (H1 baseline)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "treatment alliances exposed to acquisition vs up-to-10 nearest-neighbor matched control alliances not exposed to acquisition",
+    "dv": {
+     "name": "alliance termination",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RECAP; Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "tie exposed to acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "alliance's product-market breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "rare-disease alliance",
+      "source": "RECAP/FDA"
+     },
+     {
+      "name": "exclusive alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "combinatorial chemistry alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "complex interdependence",
+      "source": "RECAP"
+     },
+     {
+      "name": "equity alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's activity breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's age at acquisition",
+      "source": "RECAP"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Models 2 & 3 (H2 high- vs low-stress subsamples)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "treated alliances split into high-stress vs low-stress subgroups at median stress, plus their matched control alliances",
+    "dv": {
+     "name": "alliance termination",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RECAP; Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "tie exposed to acquisition (split by stress on acquirer's alliance management capacity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "alliance's product-market breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "rare-disease alliance",
+      "source": "RECAP/FDA"
+     },
+     {
+      "name": "exclusive alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "combinatorial chemistry alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "complex interdependence",
+      "source": "RECAP"
+     },
+     {
+      "name": "equity alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's activity breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's age at acquisition",
+      "source": "RECAP"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Models 4 & 5 (H3 inherited vs preexisting subsamples)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "treated alliances split into F-FP (preexisting) vs T-TP (inherited) subgroups, plus their matched control alliances",
+    "dv": {
+     "name": "alliance termination",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RECAP; Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "tie exposed to acquisition (split by inherited vs preexisting tie)",
+      "measure": "treatment group split into F-FP (acquirer's preexisting alliances) vs T-TP (alliances inherited from the target)",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "alliance's product-market breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "rare-disease alliance",
+      "source": "RECAP/FDA"
+     },
+     {
+      "name": "exclusive alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "combinatorial chemistry alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "complex interdependence",
+      "source": "RECAP"
+     },
+     {
+      "name": "equity alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's activity breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's age at acquisition",
+      "source": "RECAP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (H4 common-partners moderation)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "acquirers' preexisting alliances (F-FPs) and target alliances (T-TPs), treated alliances only",
+    "dv": {
+     "name": "alliance termination",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RECAP; Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "target's alliance",
+      "measure": "binary variable equal to 1 for alliances inherited from the target and 0 for the acquirer's preexisting alliances",
+      "source": "RECAP"
+     },
+     {
+      "name": "#common partners (interaction with target's alliance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "alliance's product-market breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "rare-disease alliance",
+      "source": "RECAP/FDA"
+     },
+     {
+      "name": "exclusive alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "combinatorial chemistry alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "complex interdependence",
+      "source": "RECAP"
+     },
+     {
+      "name": "equity alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's activity breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's age at acquisition",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance formed after 1995",
+      "source": "RECAP"
+     },
+     {
+      "name": "acquisition's value",
+      "source": "RECAP"
+     },
+     {
+      "name": "cross-border acquisition",
+      "source": "RECAP"
+     },
+     {
+      "name": "post-acquisition portfolio size",
+      "source": "RECAP"
+     },
+     {
+      "name": "target's portfolio density",
+      "source": "RECAP"
+     },
+     {
+      "name": "acquirer's portfolio density",
+      "source": "RECAP"
+     },
+     {
+      "name": "partner's unique technological resources",
+      "source": "USPTO"
+     },
+     {
+      "name": "acquisition after 1995",
+      "source": "RECAP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 4 (full model; H5 unique-partners moderation)",
+    "hypotheses": [
+     "H5"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "acquirers' preexisting alliances (F-FPs) and target alliances (T-TPs), treated alliances only",
+    "dv": {
+     "name": "alliance termination",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RECAP; Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "target's alliance",
+      "measure": "binary variable equal to 1 for alliances inherited from the target and 0 for the acquirer's preexisting alliances",
+      "source": "RECAP"
+     },
+     {
+      "name": "#unique partners (interaction with target's alliance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     },
+     {
+      "name": "#common partners (interaction with target's alliance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "alliance's product-market breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "rare-disease alliance",
+      "source": "RECAP/FDA"
+     },
+     {
+      "name": "exclusive alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "combinatorial chemistry alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "complex interdependence",
+      "source": "RECAP"
+     },
+     {
+      "name": "equity alliance",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's activity breadth",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance's age at acquisition",
+      "source": "RECAP"
+     },
+     {
+      "name": "alliance formed after 1995",
+      "source": "RECAP"
+     },
+     {
+      "name": "acquisition's value",
+      "source": "RECAP"
+     },
+     {
+      "name": "cross-border acquisition",
+      "source": "RECAP"
+     },
+     {
+      "name": "post-acquisition portfolio size",
+      "source": "RECAP"
+     },
+     {
+      "name": "target's portfolio density",
+      "source": "RECAP"
+     },
+     {
+      "name": "acquirer's portfolio density",
+      "source": "RECAP"
+     },
+     {
+      "name": "partner's unique technological resources",
+      "source": "USPTO"
+     },
+     {
+      "name": "acquisition after 1995",
+      "source": "RECAP"
+     }
+    ]
+   },
+   {
+    "label": "Tables A1 & A2 (robustness: 18- and 12-month termination windows, H1-H3)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "same matched treatment-control sample with dependent variable reconstructed for 18- and 12-month windows",
+    "dv": {
+     "name": "alliance termination (alternate windows)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RECAP; Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "tie exposed to acquisition",
+      "measure": "binary variable set to 1 for alliances exposed to an acquisition event and 0 for matched control alliances (with stress and inherited/preexisting splits as in main models)",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "matched-covariate control set",
+      "source": "RECAP"
+     }
+    ]
+   },
+   {
+    "label": "Table A3 (robustness for H4 & H5: 18mo, 12mo, target-integration control, conditional fixed effects)",
+    "hypotheses": [
+     "H4",
+     "H5"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "F-FPs and T-TPs; Model 4 uses conditional fixed-effect specification",
+    "dv": {
+     "name": "alliance termination",
+     "measure": "binary termination measure (alternate 18- and 12-month windows in Models 1-2; 24-month window in Models 3-4)",
+     "source": "RECAP; Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "target's alliance and interactions with #common partners / #unique partners",
+      "measure": "target's alliance indicator and its interactions with #common partners (H4) and #unique partners (H5)",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full Table 3 control set",
+      "source": "RECAP; USPTO"
+     },
+     {
+      "name": "target not fully integrated (Model 3)",
+      "source": "Factiva (press releases)"
+     }
+    ]
+   },
+   {
+    "label": "Table A4 (endogeneity check: target Tobin's q vs industry peers)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "target firms in the sample compared to their industry peers",
+    "dv": {
+     "name": "Tobin's q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected/other (firm market and book value)"
+    },
+    "key_ivs": [
+     {
+      "name": "target firm vs industry peers",
+      "measure": "comparison of target firms' Tobin's q against the rest of the industry to test whether targets are inferior in market value",
+      "source": "other"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "alliance age",
+    "alliance management systems",
+    "adaptability"
+   ],
+   "mechanism_named": "trade-off associated with alliance age",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "alliance age",
+    "on_path": [
+     "inherited alliances",
+     "alliance termination"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "single industry context",
+    "specific time period",
+    "generalizability"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "other contexts",
+    "time periods"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "alliance management capacity",
+    "target's alliances"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "biopharmaceutical context",
+    "boundary condition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "informal governance",
+    "relationship-specific commitments",
+    "contracts",
+    "dyads"
+   ],
+   "mechanism_named": "informal governance and relationship-specific commitments",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "alliance governance",
+    "knowledge exchange",
+    "target partner congestion",
+    "post-acquisition alliance termination"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "granular data",
+    "inheritance effect"
+   ],
+   "mechanism_named": "inheritance effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "integrating target alliances",
+    "autonomy",
+    "integration"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "alliance age",
+    "older alliances",
+    "alliance termination",
+    "routines"
+   ],
+   "mechanism_named": "well-established\nroutines",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "knowledge and resource transfers",
+    "existing and inherited partners"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "practices and capabilities",
+    "post-acquisition challenges",
+    "inherited alliance-based\nassets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "archival sources",
+    "alliance termination",
+    "party initiated termination"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "primary data",
+    "alliance managers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "divestment of relational assets",
+    "alliance formation choices",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "divestment of relational assets",
+    "relation": "affects",
+    "to": "subsequent alliance formation choices and performance"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

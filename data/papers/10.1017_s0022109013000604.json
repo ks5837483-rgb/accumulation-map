@@ -1,0 +1,778 @@
+{
+ "paper_id": "10.1017_s0022109013000604",
+ "title": "The Value of (Stock) Liquidity in the M&amp;A Market",
+ "journal": "JFQA",
+ "year": 2013,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "rational theory",
+  "behavioral theory",
+  "investor attention theory",
+  "market microstructure theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "transparency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "transparency",
+      "relation": "increases",
+      "to": "acquirer_stock_liquidity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "asset_liquidity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_liquidity",
+      "relation": "increases",
+      "to": "acquirer_stock_liquidity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "investor_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_attention",
+      "relation": "increases",
+      "to": "acquirer_stock_liquidity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "transparency",
+    "asset_liquidity",
+    "investor_attention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "dispersion of investor opinion"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "demand_for_liquidity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_for_liquidity",
+      "relation": "increases",
+      "to": "acquirer_public_status",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "demand_for_liquidity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_for_liquidity",
+      "relation": "increases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "demand_for_liquidity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_for_liquidity",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "demand_for_liquidity"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_public_status",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "demand_for_liquidity",
+     "moderated_from": "target_stock_liquidity",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "acquirer_public_status",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "demand_for_liquidity",
+     "moderated_from": "target_stock_liquidity",
+     "moderated_to": "deal_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "easier to acquire a large fraction of a more liquid stock (fraction transacted)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "demand_for_liquidity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_for_liquidity",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_stock_liquidity",
+      "relation": "increases",
+      "to": "demand_for_liquidity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_for_liquidity",
+      "relation": "increases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "demand_for_liquidity"
+   ],
+   "moderators": [
+    {
+     "construct": "market_liquidity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "demand_for_liquidity",
+     "moderated_from": "target_stock_liquidity",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "demand_for_liquidity",
+     "moderated_from": "target_stock_liquidity",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (all Compustat firms)",
+  "country_region": "United States",
+  "time_period": "1987-2007",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "4,691 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC equity issuance database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed transactions with public target 1987-2007 (N=4,691); columns 3-4 split into low- vs high-market-liquidity periods",
+    "dv": {
+     "name": "change in acquirer liquidity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/Compustat Merged (CCM) Database"
+    },
+    "key_ivs": [
+     {
+      "name": "liquidity difference (target - acquirer)",
+      "measure": "the difference between target and acquirer liquidity index prior to the deal",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Liquidity (acquirer)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Relative size (acquirer-target size difference)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "(Relative size) squared",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Idiosyncratic risk (acquirer)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% acquired",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Log # transactions (period)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Avg. premium",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Econshock",
+      "source": ""
+     },
+     {
+      "name": "Spread (commercial and industrial loan rates)",
+      "source": ""
+     },
+     {
+      "name": "Log assets (acquirer)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Assets squared (acquirer)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N=4,691; columns 3-4 split low-liquidity period (N=3,372) vs high-liquidity period (N=1,319)",
+    "dv": {
+     "name": "acquirer public status",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "target liquidity",
+      "measure": "liquidity index (first principal component of volume, turnover, the Amihud illiquidity ratio, and the bid-ask spread)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Idiosyncratic risk (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% acquired",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Log size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Size squared (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Log # transactions (period)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Avg. premium",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Econshock",
+      "source": ""
+     },
+     {
+      "name": "Spread",
+      "source": ""
+     },
+     {
+      "name": "Market/book (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Leverage (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "ROA (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Cash/assets (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Salesgrowth (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Dividend payer dummy",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Herfindahl",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% owned before",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Choice Between High- and Low-Liquidity Acquirers (Heckman)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "public acquirers only (N=1,083); Heckman (1979) correction for selection of a public acquirer; columns 3-4 low- vs high-liquidity periods",
+    "dv": {
+     "name": "acquirer liquidity",
+     "measure": "the acquirer's liquidity index",
+     "source": "CRSP/Compustat Merged (CCM) Database"
+    },
+    "key_ivs": [
+     {
+      "name": "target liquidity",
+      "measure": "liquidity index",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Idiosyncratic risk (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% acquired",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Log size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Size squared (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Log # transactions (period)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Avg. premium",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Econshock",
+      "source": ""
+     },
+     {
+      "name": "Spread",
+      "source": ""
+     },
+     {
+      "name": "Market/book (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Leverage (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "ROA (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Cash/assets (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Salesgrowth (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Dividend payer dummy",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Herfindahl",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% owned before",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Mills public (inverse Mills ratio)",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Deal Completion (seemingly unrelated equations, public vs private)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "extended sample of complete and incomplete transactions including 2,015 incomplete deals (N=6,706); estimated separately for public (Panel A) and private (Panel B) acquirers via seemingly unrelated equations, with a Wald test of the difference (Panel C)",
+    "dv": {
+     "name": "transaction completion (success)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "target liquidity",
+      "measure": "liquidity index",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Idiosyncratic risk",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Size",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Log size",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Size squared",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "# transactions (period)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Market/book (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Avg. premium",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Econshock",
+      "source": ""
+     },
+     {
+      "name": "Spread",
+      "source": ""
+     },
+     {
+      "name": "Leverage (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "ROA (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Cash/assets (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Salesgrowth (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Dividend payer dummy",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Herfindahl",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% owned before",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Offer Premium (Heckman, public vs private)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "acquisitions by public (Panel A) vs private (Panel B) acquirers, Heckman (1979) selection correction; Panel C tests coefficient differences",
+    "dv": {
+     "name": "offer premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "target liquidity",
+      "measure": "liquidity index",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Idiosyncratic risk",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% acquired",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Log size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Size squared (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Market/book (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Leverage (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "ROA (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Cash/assets (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Governance index (Gompers, Ishii, Metrick 2003)",
+      "source": ""
+     },
+     {
+      "name": "Insider ownership dummy (>5%)",
+      "source": "Thomson Reuters Institutional Holdings (13F) Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Target Announcement Returns / CAR (Heckman, public vs private)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "acquisitions by public vs private acquirers, Heckman (1979) selection correction",
+    "dv": {
+     "name": "target announcement returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "target liquidity",
+      "measure": "liquidity index",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Idiosyncratic risk",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "% acquired",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Log size (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Market/book (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Leverage (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "ROA (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Cash/assets (target)",
+      "source": "CRSP/Compustat Merged (CCM) Database"
+     },
+     {
+      "name": "Governance index (Gompers, Ishii, Metrick 2003)",
+      "source": ""
+     },
+     {
+      "name": "Insider ownership dummy (>5%)",
+      "source": "Thomson Reuters Institutional Holdings (13F) Database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

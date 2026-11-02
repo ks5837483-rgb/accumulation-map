@@ -1,0 +1,200 @@
+{
+ "paper_id": "10.1002_smj.4250090108",
+ "title": "Divestment: Motives and gains",
+ "journal": "SMJ",
+ "year": 1988,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient market hypothesis",
+  "corporate divestment"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "RQ1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_financial_performance",
+      "relation": "decreases",
+      "to": "strategic_re_evaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "strategic_re_evaluation",
+      "relation": "increases",
+      "to": "corporate_divestment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "relative_financial_performance",
+      "relation": "decreases",
+      "to": "focus_on_improving_financial_standing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "focus_on_improving_financial_standing",
+      "relation": "increases",
+      "to": "corporate_divestment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "strategic_re_evaluation",
+    "focus_on_improving_financial_standing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "strategic_divestment",
+      "relation": "increases",
+      "to": "altered_long_run_expectations",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "altered_long_run_expectations",
+      "relation": "increases",
+      "to": "market_revaluation",
+      "from_measured": false,
+      "to_measured": false
+     }
+    ]
+   ],
+   "mechanisms": [
+    "altered_long_run_expectations"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "short-run financial gains (short-term performance improvement) as the cause of the market's positive revaluation of divesting firms"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Fortune 500 firms)",
+  "country_region": "United States",
+  "time_period": "1976-1979",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "68"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "the Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "corporate level accounting data (requisite accounting data)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Fortune 500",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1. Financial ratios for divesting and non-divesting firms, before and after divestment (n=68)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "firm financial performance (profitability, liquidity, leverage)",
+     "measure": "four accounting ratios measured before and after divestment: Current ratio; Return on total assets = net profit after taxes / total assets; Debt to total assets = total debt / total assets; Times interest earned",
+     "source": "corporate level accounting data (requisite accounting data)"
+    },
+    "key_ivs": [
+     {
+      "name": "divestment status (divesting vs non-divesting firm)",
+      "measure": "68 voluntary divestments by Fortune 500 firms announced in the Wall Street Journal 1976-79 vs a matched control set of non-divesting counterpart firms",
+      "source": "the Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "four-digit SIC number (matching criterion)",
+      "source": ""
+     },
+     {
+      "name": "size of revenues (matching criterion)",
+      "source": ""
+     },
+     {
+      "name": "test period (matching criterion)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2. Financial data disaggregated by divestment type (strategic, tactical, distress)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "68 divesting firms disaggregated by divestment type (strategic / tactical / distress) and their matched counterpart firms",
+    "dv": {
+     "name": "firm financial performance (profitability, liquidity, leverage)",
+     "measure": "same four accounting ratios (Current ratio; Return on total assets; Debt to total assets; Times interest earned) before and after divestment",
+     "source": "corporate level accounting data (requisite accounting data)"
+    },
+    "key_ivs": [
+     {
+      "name": "divestment type",
+      "measure": "divestment classified as 'strategic', 'tactical', or 'distress' (classification identified by Montgomery et al.)",
+      "source": "Montgomery et al. (1984)"
+     },
+     {
+      "name": "divestment status (divesting vs non-divesting firm)",
+      "measure": "divesting firms within each type compared with their matched non-divesting counterpart firms",
+      "source": "the Wall Street Journal"
+     }
+    ],
+    "controls": [
+     {
+      "name": "four-digit SIC number (matching criterion)",
+      "source": ""
+     },
+     {
+      "name": "size of revenues (matching criterion)",
+      "source": ""
+     },
+     {
+      "name": "test period (matching criterion)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

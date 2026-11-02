@@ -1,0 +1,933 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2005.00764.x",
+ "title": "The Choice of Payment Method in European Mergers and Acquisitions",
+ "journal": "JF",
+ "year": 2005,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "corporate control theory",
+  "capital structure theory",
+  "asymmetric information theory",
+  "adverse selection / pecking order (Myers and Majluf)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_corporate_control",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "dominant_shareholder_voting_control",
+      "relation": "increases",
+      "to": "threat_of_control_loss",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "threat_of_control_loss",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "threat_of_control_loss"
+   ],
+   "moderators": [
+    {
+     "construct": "target_ownership_concentration",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "threat_of_control_loss",
+     "moderated_from": "dominant_shareholder_voting_control",
+     "moderated_to": "cash_financing",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_corporate_control"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2_control_loss_blockholder",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "control_loss",
+      "relation": "increases",
+      "to": "risk_of_creating_new_blockholder",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_of_creating_new_blockholder",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_of_creating_new_blockholder"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3_collateral_debt_capacity",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "collateral",
+      "relation": "increases",
+      "to": "debt_capacity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "debt_capacity",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "debt_capacity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4_financial_leverage",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_leverage",
+      "relation": "increases",
+      "to": "financing_constraint",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financing_constraint",
+      "relation": "decreases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financing_constraint"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5_interlock_bank_access",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_interlocking_directors",
+      "relation": "increases",
+      "to": "access_to_debt_financing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_debt_financing",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_debt_financing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6_bidder_size",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_size",
+      "relation": "increases",
+      "to": "access_to_debt_financing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_debt_financing",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "bidder_size",
+      "relation": "decreases",
+      "to": "expected_bankruptcy_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_bankruptcy_costs",
+      "relation": "decreases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_debt_financing",
+    "expected_bankruptcy_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7_relative_deal_size_asymmetric_info",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_deal_size",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8_runup_adverse_selection",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_price_runup",
+      "relation": "increases",
+      "to": "bidder_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_overvaluation",
+      "relation": "decreases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9_unlisted_target",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unlisted_target",
+      "relation": "increases",
+      "to": "seller_liquidity_needs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "seller_liquidity_needs",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "seller_liquidity_needs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P10_subsidiary_target",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "subsidiary_target",
+      "relation": "increases",
+      "to": "corporate_control_concerns",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "corporate_control_concerns",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "corporate_control_concerns"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P11_intra_industry_asymmetric_info",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "intra_industry_deal",
+      "relation": "decreases",
+      "to": "seller_uncertainty_about_bidder_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "seller_uncertainty_about_bidder_value",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "seller_uncertainty_about_bidder_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P12_cross_border_home_bias",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cross_border_deal",
+      "relation": "increases",
+      "to": "home_country_bias",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "home_country_bias",
+      "relation": "increases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "home_country_bias"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P13_market_to_book",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_to_book_ratio",
+      "relation": "increases",
+      "to": "bidder_stock_attractiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_stock_attractiveness",
+      "relation": "decreases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_stock_attractiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P14_stock_volatility_adverse_selection",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_return_volatility",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "cash_financing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (European merger and acquisition transactions across sectors)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1997-2000",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,667 M&A deals by 1,349 bidders (final sample)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Worldscope",
+    "category": "worldscope",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Faccio and Lang (2002) stock ownership and voting control data",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Extel Financial",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "hand collected (method of payment based on descriptive information in SDC; preacquisition control structure of listed targets from sources in Appendix B)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Economist Intelligence Unit's Country Commerce Reports",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "3,667 M&A deals by 1,349 European bidders, 1997-2000 (2,775 obs in this regression after data screens)",
+    "dv": {
+     "name": "PERCENT CASH (percentage of cash consideration)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / hand collected"
+    },
+    "key_ivs": [
+     {
+      "name": "CONTROL (bidder ultimate voting control) with squared and cubic terms",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Faccio and Lang (2002)"
+     },
+     {
+      "name": "CONTROL LOSS",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Appendix B sources (listed targets) / assumed 100% for unlisted and subsidiary targets; relative size from SDC + Datastream"
+     },
+     {
+      "name": "COLLATERAL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "FIN'L LEVERAGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope + SDC (deal value)"
+     },
+     {
+      "name": "REL SIZE (relative deal size, asymmetric information proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (offer size) + Datastream (market capitalization)"
+     },
+     {
+      "name": "RUNUP (bidder over/undervaluation, adverse selection proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Datastream"
+     },
+     {
+      "name": "UNLISTED TARGET",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "SUBSIDIARY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "INTERLOCK (top bidder director is a director of a bank, indicator)",
+      "source": "hand collected"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "INTRA-INDUSTRY (same 3-digit SIC, indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT-TO-BOOK",
+      "source": "Worldscope / Datastream"
+     },
+     {
+      "name": "CROSS BORDER (indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT RUNUP (bidder-nation market run-up)",
+      "source": "Datastream"
+     }
+    ]
+   },
+   {
+    "label": "Table III, Panel A - UK & Irish Bidders subsample (two-boundary Tobit)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "UK & Irish bidders subsample (2,014 obs)",
+    "dv": {
+     "name": "PERCENT CASH (percentage of cash consideration)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / hand collected"
+    },
+    "key_ivs": [
+     {
+      "name": "CONTROL with squared and cubic terms",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Faccio and Lang (2002)"
+     },
+     {
+      "name": "COLLATERAL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "FIN'L LEVERAGE",
+      "measure": "bidder face value of debt plus deal value divided by book value of total assets plus deal value",
+      "source": "Worldscope + SDC"
+     },
+     {
+      "name": "REL SIZE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC + Datastream"
+     },
+     {
+      "name": "RUNUP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Datastream"
+     },
+     {
+      "name": "UNLISTED TARGET",
+      "measure": "indicator = 1 if target is a stand-alone unlisted company",
+      "source": "SDC"
+     },
+     {
+      "name": "SUBSIDIARY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CONTROL LOSS",
+      "source": "Appendix B / Faccio and Lang (2002)"
+     },
+     {
+      "name": "INTERLOCK",
+      "source": "hand collected"
+     },
+     {
+      "name": "LOG (TOTAL ASSETS)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "INTRA-INDUSTRY",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT-TO-BOOK",
+      "source": "Worldscope / Datastream"
+     },
+     {
+      "name": "CROSS BORDER",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT RUNUP",
+      "source": "Datastream"
+     }
+    ]
+   },
+   {
+    "label": "Table III, Panel A - Continental European Bidders subsample (two-boundary Tobit)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Continental European bidders subsample (761 obs)",
+    "dv": {
+     "name": "PERCENT CASH (percentage of cash consideration)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / hand collected"
+    },
+    "key_ivs": [
+     {
+      "name": "CONTROL with squared and cubic terms",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Faccio and Lang (2002)"
+     },
+     {
+      "name": "COLLATERAL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "FIN'L LEVERAGE",
+      "measure": "bidder face value of debt plus deal value divided by book value of total assets plus deal value",
+      "source": "Worldscope + SDC"
+     },
+     {
+      "name": "REL SIZE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC + Datastream"
+     },
+     {
+      "name": "RUNUP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Datastream"
+     },
+     {
+      "name": "UNLISTED TARGET",
+      "measure": "indicator = 1 if target is a stand-alone unlisted company",
+      "source": "SDC"
+     },
+     {
+      "name": "SUBSIDIARY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CONTROL LOSS",
+      "source": "Appendix B / Faccio and Lang (2002)"
+     },
+     {
+      "name": "INTERLOCK",
+      "source": "hand collected"
+     },
+     {
+      "name": "LOG (TOTAL ASSETS)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "INTRA-INDUSTRY",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT-TO-BOOK",
+      "source": "Worldscope / Datastream"
+     },
+     {
+      "name": "CROSS BORDER",
+      "source": "SDC"
+     },
+     {
+      "name": "MKT RUNUP",
+      "source": "Datastream"
+     }
+    ]
+   },
+   {
+    "label": "Table IV - Robustness/Sensitivity Tobit Regressions (additional controls and alternative proxies added to Table III model)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "robustness regressions added to the first (whole-sample) regression of Table III",
+    "dv": {
+     "name": "PERCENT CASH (percentage of cash consideration)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / hand collected"
+    },
+    "key_ivs": [
+     {
+      "name": "PRIORFIN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / hand collected"
+     },
+     {
+      "name": "TARG. IND. CASH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "MERGER / TENDER OFFER / ASSET ACQ. CODE (alternative transaction-form indicators)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "STNDDEV BIDDER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Datastream"
+     },
+     {
+      "name": "MERGER TAX BEN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Economist Intelligence Unit's Country Commerce Reports"
+     },
+     {
+      "name": "CAPITAL GAINS",
+      "measure": "capital-gains tax indicator for the target country",
+      "source": "Economist Intelligence Unit's Country Commerce Reports"
+     },
+     {
+      "name": "WEAK VOTING RIGHTS",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Faccio and Lang (2002) / hand collected"
+     },
+     {
+      "name": "CASH HOLDINGS",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Worldscope"
+     },
+     {
+      "name": "EURO ZONE",
+      "measure": "indicator variable for Euro-zone cross-border deals",
+      "source": "SDC"
+     },
+     {
+      "name": "GROUP BANK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand collected / Faccio, Lang, and Young (2001)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CONTROL and its squared and cubic values",
+      "source": "Faccio and Lang (2002)"
+     },
+     {
+      "name": "CONTROL LOSS",
+      "source": "Appendix B / Faccio and Lang (2002)"
+     },
+     {
+      "name": "COLLATERAL",
+      "source": "Worldscope"
+     },
+     {
+      "name": "FIN'L LEVERAGE",
+      "source": "Worldscope + SDC"
+     },
+     {
+      "name": "INTERLOCK",
+      "source": "hand collected"
+     },
+     {
+      "name": "LOG (TOTAL ASSETS)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Datastream"
+     },
+     {
+      "name": "intracorporate group indicator (same owner for bidder and target)",
+      "source": "Faccio and Lang (2002) / hand collected"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "tax effects of m&a transactions",
+    "capital gains tax benefits"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "tax codes",
+    "target firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "asset growth",
+    "future bidder financial condition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "unused debt capacity",
+    "target’s size",
+    "leverage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "cash financing",
+    "bank loans",
+    "access to debt financing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

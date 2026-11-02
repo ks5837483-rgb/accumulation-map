@@ -1,0 +1,480 @@
+{
+ "paper_id": "10.1016_0304-405x(89)90009-3",
+ "title": "Wealth effects of going private for senior securities",
+ "journal": "JFE",
+ "year": 1989,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "wealth expropriation / bondholder-stockholder conflict",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "buyout_related_leverage_increase",
+      "relation": "increases",
+      "to": "default_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "default_risk",
+      "relation": "decreases",
+      "to": "senior_security_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "default_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "covenant_protection",
+     "type": "moderator",
+     "effect": "weakens",
+     "effect_derived": true,
+     "mechanism": "default_risk",
+     "moderated_from": "buyout_related_leverage_increase",
+     "moderated_to": "senior_security_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "leverage changes drive the abnormal bond returns"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "not_reported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "insider_buyout_offer_at_premium",
+      "relation": "increases",
+      "to": "favorable_inside_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_inside_information",
+      "relation": "increases",
+      "to": "senior_security_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_inside_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "going_private_buyout",
+      "relation": "increases",
+      "to": "security_participation_via_conversion_or_redemption",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "security_participation_via_conversion_or_redemption",
+      "relation": "increases",
+      "to": "senior_security_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "security_participation_via_conversion_or_redemption"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "buyout_related_leverage_increase",
+      "relation": "increases",
+      "to": "default_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "default_risk",
+      "relation": "decreases",
+      "to": "moody_debt_rating",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "default_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE, AMEX, and NASDAQ firms undertaking going-private buyouts)",
+  "country_region": "United States",
+  "time_period": "1974-1985",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "290 buyout proposals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Manuals (Moody's security descriptions, covenants, and bond ratings)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard & Poor's (S&P) bond ratings",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings (proxy statements, 10-K reports, pro forma capitalization in buyout filings)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Annual reports",
+    "category": "other",
+    "kind": "filings"
+   },
+   {
+    "name": "Dow Jones bond index",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Sample distribution of leverage ratios before and after buyouts (descriptive)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "113 AMEX, NYSE, and NASDAQ firms with available leverage measures (30 NASDAQ, 83 AMEX/NYSE), 1974-1985",
+    "dv": {
+     "name": "leverage ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC filings (proxies/10-K), annual reports"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private buyout",
+      "measure": "level and change in leverage ratio upon the buyout",
+      "source": "SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Capital structure before and after going-private buyouts (descriptive book-value proportions)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "113 AMEX, NYSE, and NASDAQ firms, 1974-1985",
+    "dv": {
+     "name": "capital structure proportions by security type",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC filings (balance sheet, pro forma capitalization)"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private buyout",
+      "measure": "change in capital structure proportions at the buyout",
+      "source": "SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "404 securities (387 debt, 17 preferred) outstanding at 113 buyouts",
+    "dv": {
+     "name": "security disposition outcome",
+     "measure": "book value (thousands of dollars) and number of issues in each outcome category: fully/partially redeemed for cash, exchanged for other securities, remain outstanding without renegotiation, timing of payments renegotiated",
+     "source": "SEC filings / buyout filings"
+    },
+    "key_ivs": [
+     {
+      "name": "security type",
+      "measure": "private vs public, convertible vs nonconvertible, protected vs unprotected debt and preferred stock",
+      "source": "Moody's Manuals"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Index model (market/bond-index model) estimates for common stock, debt, and preferred stock",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "197 NYSE/AMEX common stocks, 90 NASDAQ common stocks, 30 convertible debt, 25 convertible preferred, 68 nonconvertible debt, 12 nonconvertible preferred; estimated by weighted least squares (WLS)",
+    "dv": {
+     "name": "security return",
+     "measure": "return to the jth common stock or security (r_jt); single-day and multi-day returns",
+     "source": "stock and bond returns data"
+    },
+    "key_ivs": [
+     {
+      "name": "market return",
+      "measure": "value-weighted NYSE/AMEX market return for listed stock and equal-weighted NASDAQ market return for NASDAQ stock (r_mt)",
+      "source": "stock returns data"
+     },
+     {
+      "name": "bond index return",
+      "measure": "return to the Dow Jones bond index (r_bt)",
+      "source": "Dow Jones bond index"
+     },
+     {
+      "name": "security-type dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel A - Abnormal returns before buyout announcements (preannouncement period, event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (management buyout) announcement",
+    "sample": "events by security type (common stock, convertible debt, convertible preferred, nonconvertible debt, nonconvertible preferred), 1974-1985",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "value-weighted portfolio abnormal return (index-model prediction error) over the 60-day preannouncement period, with aggregate and median z-statistics",
+     "source": "index model residuals / returns data"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private buyout announcement",
+      "measure": "preannouncement window defined relative to appearance of buyout announcement in the Wall Street Journal",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (management buyout) announcement",
+    "sample": "common stock, convertible debt, convertible preferred, and nonconvertible preferred events",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "value-weighted portfolio abnormal return over the announcement period (starts trading day before WSJ announcement, spans approximately three days), with aggregate and median z-statistics",
+     "source": "index model residuals / returns data"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private buyout announcement",
+      "measure": "announcement-period event window relative to WSJ announcement, by security class",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 4.3.4 / Table 6 - Abnormal returns to nonconvertible (public) debt at buyout announcements + chi-squared variance test",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (management buyout) announcement",
+    "sample": "30 nonconvertible public debt abnormal returns",
+    "dv": {
+     "name": "abnormal return to nonconvertible debt",
+     "measure": "announcement-period value-weighted portfolio abnormal return and z-statistic; chi-squared test of unit variance of individual z-statistics",
+     "source": "index model residuals / returns data"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private buyout announcement",
+      "measure": "announcement-period event window for nonconvertible public debt",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel C - Abnormal returns after buyout announcements (postannouncement period, event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (management buyout) announcement",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "value-weighted portfolio abnormal return over the postannouncement period (begins after announcement period, ends when buyout proposal is resolved: merger/tender completion/delisting, withdrawal/rejection, or higher outside offer announced), with aggregate t- and median z-statistics",
+     "source": "index model residuals / returns data"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private buyout resolution",
+      "measure": "postannouncement window until proposal resolution",
+      "source": "Wall Street Journal / SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "15 convertible debt observations and 16 convertible preferred observations with positive conversion premiums (39 securities of 30 firms overall)",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "abnormal returns computed using the appendix (index-model) procedures",
+     "source": "index model residuals"
+    },
+    "key_ivs": [
+     {
+      "name": "conversion premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected cash/cash-equivalent offer prices and conversion terms from filings; security trade prices"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 4.3.4b - Two-sample test of abnormal bond returns at defensive vs nondefensive buyout proposals",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "55 bond observations (defensive vs nondefensive)",
+    "dv": {
+     "name": "abnormal bond return",
+     "measure": "announcement-period abnormal return to public nonconvertible debt",
+     "source": "index model residuals / returns data"
+    },
+    "key_ivs": [
+     {
+      "name": "defensive proposal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal / SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "abnormal bond return",
+     "measure": "announcement-period abnormal return to public nonconvertible debt",
+     "source": "index model residuals / returns data"
+    },
+    "key_ivs": [
+     {
+      "name": "bond rating decrease",
+      "measure": "indicator for bonds whose ratings decline versus bonds with no rating change following the buyout",
+      "source": "Moody's Manuals and Standard & Poor's bond ratings"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "abnormal returns",
+    "buyout proposals that ultimately fail"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "value of private debt"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "bond-rating change announcements",
+    "leverage increases"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "leverage increases",
+    "relation": "affects",
+    "to": "bond-rating change announcements"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "bond values",
+    "going-private transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

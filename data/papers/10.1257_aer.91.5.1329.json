@@ -1,0 +1,433 @@
+{
+ "paper_id": "10.1257_aer.91.5.1329",
+ "title": "Why Regulate Insider Trading? Evidence from the First Great Merger Wave (1897–1903)",
+ "journal": "AER",
+ "year": 2001,
+ "field": "economics",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "market microstructure",
+  "insider trading theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unregulated_insider_trading",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "preannouncement_stock_price_runup",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "preannouncement runup is driven by outside information specialists (arbitrageurs, stock analysts) and toehold acquisitions rather than by insider trading"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fait_accompli_disclosure",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "preannouncement_stock_price_runup",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unregulated_insider_trading",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "outsider_participation_in_value_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "restricted_performance_disclosure",
+      "relation": "increases",
+      "to": "outsider_vulnerability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "outsider_vulnerability",
+      "relation": "increases",
+      "to": "preannouncement_stock_price_runup",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "restricted_performance_disclosure",
+      "relation": "decreases",
+      "to": "outsider_market_participation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "outsider_market_participation",
+      "relation": "increases",
+      "to": "preannouncement_stock_price_runup",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "outsider_vulnerability",
+    "outsider_market_participation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "industrial and mining trusts (railroads and utilities excluded)",
+  "country_region": "United States",
+  "time_period": "1897-1903",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "56"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "The Chronicle (Commercial and Financial Chronicle)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "John Moody (1904) comprehensive list of trusts",
+    "category": "hand_collected",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 Panel A: Cumulative abnormal returns for full sample (event study, market model and mean-adjusted model)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "1897-1903 trust merger announcement events (first Chronicle news report)",
+    "sample": "full sample of 56 participant firms (41 trusts in 26 industries)",
+    "dv": {
+     "name": "Cumulative abnormal returns (Runup, Event Gain, Premium, Postevent Drift)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Chronicle (Friday price data); market index = 12-stock DJII"
+    },
+    "key_ivs": [
+     {
+      "name": "trust merger announcement event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Chronicle"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 1 Panel B: Cumulative abnormal returns for prospective disclosure subsample (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "trust merger announcement events (prospective disclosure)",
+    "sample": "prospective disclosure subsample, N=37",
+    "dv": {
+     "name": "Cumulative abnormal returns (Runup, Event Gain, Premium, Runup Index, Postevent Drift)",
+     "measure": "mean cumulative abnormal returns (CARs) computed separately for prospective disclosures; Runup Index = Runup / Premium x 100 percent",
+     "source": "The Chronicle (Friday price data); market index = 12-stock DJII"
+    },
+    "key_ivs": [
+     {
+      "name": "prospective disclosure (announcement precedes formation)",
+      "measure": "subsample of firms whose merger was announced before actual trust formation",
+      "source": "The Chronicle / Moody (1904) formation dates"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 1 Panel C: Cumulative abnormal returns for fait-accompli disclosure subsample (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "trust merger announcement events (fait-accompli disclosure)",
+    "sample": "fait-accompli disclosure subsample, N=19",
+    "dv": {
+     "name": "Cumulative abnormal returns (Runup, Event Gain, Premium, Runup Index, Postevent Drift)",
+     "measure": "mean cumulative abnormal returns (CARs) computed separately for fait-accompli disclosures; difference-between-means test on Event Gain vs prospective subsample",
+     "source": "The Chronicle (Friday price data); market index = 12-stock DJII"
+    },
+    "key_ivs": [
+     {
+      "name": "fait-accompli disclosure (announcement after formation)",
+      "measure": "subsample of firms whose merger was announced after actual trust formation ('done deal')",
+      "source": "The Chronicle / Moody (1904) formation dates"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2: Weekly mean abnormal returns for full sample over interval (-8, +4)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "trust merger announcement events",
+    "sample": "full sample, N=56",
+    "dv": {
+     "name": "Weekly mean abnormal return (AR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Chronicle (Friday price data); market index = 12-stock DJII"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "trust merger announcement events",
+    "sample": "firms with volume data, N=33",
+    "dv": {
+     "name": "Normalized weekly log trading volume",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Chronicle (weekly trading volumes)"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 4: Weekly mean abnormal returns for prospective subsample over interval (-8, +4)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "trust merger announcement events (prospective disclosure)",
+    "sample": "prospective subsample, N=37",
+    "dv": {
+     "name": "Weekly mean abnormal return (AR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Chronicle (Friday price data); market index = 12-stock DJII"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 5: Weekly mean abnormal returns for fait-accompli subsample over interval (-8, +4)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "trust merger announcement events (fait-accompli disclosure)",
+    "sample": "fait-accompli subsample, N=19",
+    "dv": {
+     "name": "Weekly mean abnormal return (AR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Chronicle (Friday price data); market index = 12-stock DJII"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "full sample, N=56",
+    "dv": {
+     "name": "Runup, Event Gain, and Runup Index (market model)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "The Chronicle (returns from Friday price data); market index = 12-stock DJII"
+    },
+    "key_ivs": [
+     {
+      "name": "DFA (fait-accompli disclosure dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Chronicle / Moody (1904)"
+     },
+     {
+      "name": "DWK (weekly price reports dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Chronicle"
+     },
+     {
+      "name": "DSUP (absence from Investor's Supplement dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "The Chronicle"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "legal insider trading",
+    "preannouncement stock-price runup"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "information proxies",
+    "information disclosure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "fait-accompli disclosure",
+    "runup"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "negative signal effect",
+    "value-enhancing information"
+   ],
+   "mechanism_named": "negative signal effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "value loss at announcement",
+    "market penalty",
+    "disclosure regulation"
+   ],
+   "mechanism_named": "market penalty",
+   "proposed_edge": {
+    "from": "value loss at announcement",
+    "relation": "unspecified",
+    "to": "market penalty"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "sample",
+    "information effect",
+    "estimated coefficients"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "political economy of insider-trading regulation"
+   ],
+   "mechanism_named": "political economy of insider-trading regulation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "sample-selection bias",
+    "selection process"
+   ],
+   "mechanism_named": "sample-selection bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

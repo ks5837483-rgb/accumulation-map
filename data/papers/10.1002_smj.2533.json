@@ -1,0 +1,741 @@
+{
+ "paper_id": "10.1002_smj.2533",
+ "title": "Money secrets: How does trade secret legal protection affect firm market value? Evidence from the uniform trade secret act",
+ "journal": "SMJ",
+ "year": 2016,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection",
+  "resource-based view",
+  "appropriability theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "trade_secret_protection",
+      "relation": "decreases",
+      "to": "knowledge_leakage_to_competitors",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "knowledge_leakage_to_competitors",
+      "relation": "decreases",
+      "to": "firm_market_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "knowledge_leakage_to_competitors"
+   ],
+   "moderators": [
+    {
+     "construct": "industry_mobility",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "knowledge_leakage_to_competitors",
+     "moderated_from": "trade_secret_protection",
+     "moderated_to": "firm_market_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "industry patent intensity confound (the mobility interaction may capture an interaction between trade secret protection and industry propensity to patent)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "trade_secret_protection",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "firm_market_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "resource_value_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "trade_secret_protection",
+     "moderated_to": "firm_market_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "trade_secret_protection",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "firm_market_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "poor_investments_risk",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "trade_secret_protection",
+     "moderated_to": "firm_market_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (private equity buyouts of U.S. private firms spanning 61 SIC two-digit industries; ~41% in manufacturing)",
+  "country_region": "United States",
+  "time_period": "1975-2008",
+  "sample_description": "U.S. private firms bought and resold by private equity (PE) firms; data assembled from PE fundraising prospectuses / private placement memoranda (PPM), complemented with COMPUSTAT and the NBER patent database; excluded firms with missing key information or unconfirmed locations and target firms located outside the United States",
+  "sample_size": "1,890 firms (132 PE firms)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "private placement memoranda (PPM) / PE fundraising prospectuses",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bessen (2009) concordance file (patent assignee to COMPUSTAT GVKEY)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "state economic and political conditions (GDP per capita, number of firms, governor party affiliation)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Column 1 (baseline OLS, UTSA main effect on market value change)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "UTSA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "UTSA enactment dates by state (Table 1)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment Size (equity paid by PE firm, US$ millions at 2006 values)",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "IPO exit",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Public at entry",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Entry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Exit-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (SIC two-digit)",
+      "source": ""
+     },
+     {
+      "name": "Private equity firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 2 (UTSA x Industry Mobility interaction)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "the internal rate of return (IRR) ... the target firm's percentage change in market value",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "UTSA",
+      "measure": "1 if UTSA enacted in the state of incorporation between tbuy and tsell, 0 otherwise",
+      "source": "UTSA enactment dates by state (Table 1)"
+     },
+     {
+      "name": "Industry Mobility",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database + U.S. patent inventor database + Bessen (2009) concordance"
+     },
+     {
+      "name": "UTSA x Industry Mobility",
+      "measure": "interaction of UTSA enactment and Industry Mobility",
+      "source": "derived"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment Size",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "IPO exit",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Public at entry",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Entry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Exit-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (SIC two-digit)",
+      "source": ""
+     },
+     {
+      "name": "Private equity firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 3 (UTSA x Resource Value Uncertainty interaction)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "the internal rate of return (IRR) ... percentage change in market value",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "UTSA",
+      "measure": "1 if UTSA enacted in the state of incorporation between tbuy and tsell, 0 otherwise",
+      "source": "UTSA enactment dates by state (Table 1)"
+     },
+     {
+      "name": "Resource Value Uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "UTSA x Resource Value Uncertainty",
+      "measure": "interaction of UTSA enactment and Resource Value Uncertainty",
+      "source": "derived"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment Size",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "IPO exit",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Public at entry",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Entry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Exit-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (SIC two-digit)",
+      "source": ""
+     },
+     {
+      "name": "Private equity firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 4 (UTSA x Poor Investments Risk interaction)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "the internal rate of return (IRR) ... percentage change in market value",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "UTSA",
+      "measure": "1 if UTSA enacted in the state of incorporation between tbuy and tsell, 0 otherwise",
+      "source": "UTSA enactment dates by state (Table 1)"
+     },
+     {
+      "name": "Poor Investments Risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "UTSA x Poor Investments Risk",
+      "measure": "interaction of UTSA enactment and Poor Investments Risk",
+      "source": "derived"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment Size",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "IPO exit",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Public at entry",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Entry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Exit-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (SIC two-digit)",
+      "source": ""
+     },
+     {
+      "name": "Private equity firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 5 (full model, all three interactions jointly)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "the internal rate of return (IRR) ... percentage change in market value",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "UTSA",
+      "measure": "1 if UTSA enacted in the state of incorporation between tbuy and tsell, 0 otherwise",
+      "source": "UTSA enactment dates by state (Table 1)"
+     },
+     {
+      "name": "UTSA x Industry Mobility",
+      "measure": "interaction of UTSA enactment and Industry Mobility",
+      "source": "derived"
+     },
+     {
+      "name": "UTSA x Resource Value Uncertainty",
+      "measure": "interaction of UTSA enactment and Resource Value Uncertainty",
+      "source": "derived"
+     },
+     {
+      "name": "UTSA x Poor Investments Risk",
+      "measure": "interaction of UTSA enactment and Poor Investments Risk",
+      "source": "derived"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry Mobility",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "Resource Value Uncertainty",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Investment Size",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "IPO exit",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Public at entry",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Entry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Exit-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (SIC two-digit)",
+      "source": ""
+     },
+     {
+      "name": "Private equity firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (exogeneity/falsification: UTSA enactment and PE supply-demand vs. state economic/political conditions, linear probability and OLS models)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "state-year panel, 1978-2011 (653-1,785 observations)",
+    "dv": {
+     "name": "UTSA enactment (treatment) and PE supply/demand outcomes",
+     "measure": "[withheld: wording matches the source]",
+     "source": "state economic and political conditions data; private placement memoranda (PPM)"
+    },
+    "key_ivs": [
+     {
+      "name": "GDP per capita (t-1)",
+      "measure": "state gross domestic product per capita, lagged one year",
+      "source": "state economic and political conditions data"
+     },
+     {
+      "name": "Firms (t-1)",
+      "measure": "number of firms within a state, lagged one year (supply of firms)",
+      "source": "state economic and political conditions data"
+     },
+     {
+      "name": "Red governor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "state economic and political conditions data"
+     },
+     {
+      "name": "PE investments (t-1)",
+      "measure": "value of PE investments, lagged one year (demand proxy)",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "PE disposal (t-1)",
+      "measure": "value of PE disposals, lagged one year (demand proxy)",
+      "source": "private placement memoranda (PPM)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table S2 (coarsened exact matching robustness of baseline)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "coarsened exact matched treatment and control groups (Iacus, King, and Porro, 2009)",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "the internal rate of return (IRR) ... percentage change in market value",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "UTSA",
+      "measure": "1 if UTSA enacted in the state of incorporation between tbuy and tsell, 0 otherwise",
+      "source": "UTSA enactment dates by state (Table 1)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table S3 (placebo treatment tests: shock coded 5 years before and 5 years after actual enactment)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "placebo UTSA treatment shifted +/- 5 years from actual enactment",
+    "sample": "",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "the internal rate of return (IRR) ... percentage change in market value",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "Placebo UTSA treatment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "UTSA enactment dates by state (Table 1)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table S4 (robustness: alternative measures of industry mobility)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "U.S. states' enactment of the Uniform Trade Secret Act (UTSA)",
+    "sample": "",
+    "dv": {
+     "name": "Change in firm market value (buyout IRR)",
+     "measure": "the internal rate of return (IRR) ... percentage change in market value",
+     "source": "private placement memoranda (PPM) / PE fundraising prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "UTSA x Industry Mobility (alternative measures)",
+      "measure": "alternative mobility measures: 'Mean industry mobility' (time-invariant industry-level average following Chava et al., 2013) and 'Industry mobility pre-shock' (computed only from states/years where UTSA not yet enacted), interacted with UTSA",
+      "source": "NBER patent database + U.S. patent inventor database + Bessen (2009) concordance"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investment Size",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "IPO exit",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Public at entry",
+      "source": "private placement memoranda (PPM)"
+     },
+     {
+      "name": "Entry-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Exit-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (SIC two-digit)",
+      "source": ""
+     },
+     {
+      "name": "Private equity firm fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "irr",
+    "change in firm market value"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "inventor mobility",
+    "patent data"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "mobility"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "firms owned by pe companies",
+    "firm population"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "change in acquisition price",
+    "trade secret protection"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "trade secret protection",
+    "social welfare"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "trade secret protection",
+    "relation": "affects",
+    "to": "social welfare"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

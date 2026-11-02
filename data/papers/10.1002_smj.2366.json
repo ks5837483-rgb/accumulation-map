@@ -1,0 +1,773 @@
+{
+ "paper_id": "10.1002_smj.2366",
+ "title": "The role of geographic distance in completing related acquisitions: Evidence from\n                    <scp>U.S</scp>\n                    . chemical manufacturers",
+ "journal": "SMJ",
+ "year": 2015,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "spatial geography",
+  "information economics",
+  "organizational learning"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "decreases",
+      "to": "soft_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "soft_information",
+      "relation": "increases",
+      "to": "acquisition_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "soft_information"
+   ],
+   "moderators": [
+    {
+     "construct": "prior_related_acquisition_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "soft_information",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2a"
+    },
+    {
+     "construct": "prior_distant_acquisition_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "soft_information",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    },
+    {
+     "construct": "prior_acquisition_in_target_region",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "soft_information",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "vicarious_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "soft_information",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "acquisition_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "shareholder activism / takeover defenses as the cause of acquisition cancellation",
+    "antitrust / regulatory approval requirements causing post-announcement cancellation",
+    "unobserved availability of proximate related targets (omitted-variable bias in the distance x relatedness interaction)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (domestic acquisitions)",
+  "time_period": "1980-2004",
+  "sample_description": "Domestic acquisition announcements by U.S. chemical manufacturing firms founded on or after 1980 (restricted to firms founded after 1979), including both public and private firms; acquirers identified from the Thomson Reuters SDC Platinum database using NAICS primary-industry codes",
+  "sample_size": "1,603 acquisition announcements by 724 acquirers"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters SDC Platinum database (SDC)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "1997 Economic Census, Materials Summary (U.S. Census Bureau)",
+    "category": "census_gov",
+    "kind": "government_public"
+   },
+   {
+    "name": "Factiva database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4, Column 1 (Main effects)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC); zip codes corrected via company websites, directories, U.S. Census Bureau website, real estate websites"
+     },
+     {
+      "name": "Acquisition is related",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC), NAICS"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size (log of assets, missing imputed)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age (founding dates)",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Prior acquisition in target state",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer is multiunit",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquisition involved intermediary",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Prior completion in target state (3 years) / State-level completion",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer and target in similar city",
+      "source": "Thomson Reuters SDC Platinum database (SDC); MSA status"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy for availability of proximate targets)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity (Thomson Reuters high-tech categories)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target is larger",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer diversification (number of business segments)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target is marketing firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target in MSA",
+      "source": "Thomson Reuters SDC Platinum database (SDC); U.S. Census metropolitan/micropolitan designation"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC), NAICS"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Column 2 (Distance x related interaction, full sample) - H1",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquisition is related",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC), NAICS"
+     },
+     {
+      "name": "Distance x acquisition is related (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Prior acquisition in target state",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer is multiunit",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquisition involved intermediary",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Prior completion in target state (3 years)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer and target in similar city",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target is larger",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target is marketing firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Target in MSA",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Columns 1-2 (subsamples by prior related experience) - H2a",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Subsamples split by whether firms have prior related acquisition experience (no related experience vs. prior related experience)",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "dummy variable = 1 if the acquisition was completed, 0 if it remained incomplete",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance x acquisition is related (interaction)",
+      "measure": "interaction of acquisition distance and relatedness, compared across subsamples using logit coefficients, cross derivatives, and simple slopes in three-way interaction models",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Related experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Columns 3-4 (subsamples by prior distance experience) - H2b",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "dummy variable = 1 if the acquisition was completed, 0 if it remained incomplete",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance x acquisition is related (interaction)",
+      "measure": "interaction of acquisition distance and relatedness, compared across subsamples of high vs. low distance experience",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Distance experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Columns 5-6 (subsamples by prior acquisition in target state) - H3",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Subsamples split by whether the acquirer had prior acquisitions in the focal target state",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "dummy variable = 1 if the acquisition was completed, 0 if it remained incomplete",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance x acquisition is related (interaction)",
+      "measure": "interaction of acquisition distance and relatedness, compared across subsamples by contextual experience",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Prior acquisition in target state (contextual experience)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Columns 1-2 (single-unit vs. multiunit firms) - H4",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Subsamples of single-unit firms vs. multiunit firms",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "dummy variable = 1 if the acquisition was completed, 0 if it remained incomplete",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance x acquisition is related (interaction)",
+      "measure": "interaction of acquisition distance and relatedness, compared across single-unit vs. multiunit firm subsamples",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer is multiunit (vicarious experience via business units)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Columns 3-4 (state-level completion by other acquirers) - H4",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "dummy variable = 1 if the acquisition was completed, 0 if it remained incomplete",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance x acquisition is related (interaction)",
+      "measure": "interaction of acquisition distance and relatedness, compared across subsamples by state-level completion",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "State-level completion (vicarious experience)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Columns 5-6 (use of intermediaries) - H4",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Subsamples split by whether the acquisition involved an intermediary",
+    "dv": {
+     "name": "Completed acquisition",
+     "measure": "dummy variable = 1 if the acquisition was completed, 0 if it remained incomplete",
+     "source": "Thomson Reuters SDC Platinum database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Distance x acquisition is related (interaction)",
+      "measure": "interaction of acquisition distance and relatedness, compared across subsamples by use of intermediary",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquisition involved intermediary (vicarious experience)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer age",
+      "source": "Company websites; Factiva database"
+     },
+     {
+      "name": "Target is public firm",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Year of acquisition",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Acquirer geographic centrality (proxy)",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Technological proximity",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Regulatory approval required",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     },
+     {
+      "name": "Industry (NAIC) dummies",
+      "source": "Thomson Reuters SDC Platinum database (SDC)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "prior geographic dispersion",
+    "direct experience in distant acquisitions",
+    "completion of geographically distant related acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "prior geographic dispersion",
+    "relation": "increases",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_mediator",
+   "section": "limitations",
+   "constructs": [
+    "soft information",
+    "sources of soft information",
+    "acquisition outcomes"
+   ],
+   "mechanism_named": "soft information",
+   "proposed_edge": {
+    "from": "sources of soft information",
+    "relation": "affects",
+    "to": "acquisition outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "asymmetric information",
+    "decision making",
+    "use of information"
+   ],
+   "mechanism_named": "asymmetric information",
+   "proposed_edge": {
+    "from": "asymmetric information",
+    "relation": "affects",
+    "to": "decision making"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "firm age",
+    "sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "acquisition announcement",
+    "employee behavior",
+    "plans to restructure or downsize",
+    "likelihood of completion"
+   ],
+   "mechanism_named": "power and threat within organizations",
+   "proposed_edge": {
+    "from": "plans to restructure or downsize",
+    "relation": "affects",
+    "to": "likelihood of completion"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

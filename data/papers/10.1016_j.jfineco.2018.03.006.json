@@ -1,0 +1,854 @@
+{
+ "paper_id": "10.1016_j.jfineco.2018.03.006",
+ "title": "Are stock-financed takeovers opportunistic?",
+ "journal": "JFE",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection theory",
+  "signaling theory",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_rational_payment_design",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_information_about_bidder",
+      "relation": "decreases",
+      "to": "target_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_valuation_error",
+      "relation": "decreases",
+      "to": "fraction_of_stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_valuation_error"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bidder opportunism (selling overpriced shares to better-informed targets, which predicts the OPPOSITE sign)",
+    "industry relatedness raising bidder bargaining power (Ahern 2012) rather than target information"
+   ]
+  },
+  {
+   "hypothesis": "P2_bidder_opportunism",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_information_about_bidder",
+      "relation": "decreases",
+      "to": "bidder_overvaluation_exploitation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_overvaluation_exploitation",
+      "relation": "increases",
+      "to": "fraction_of_stock_payment",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_overvaluation_exploitation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "rational payment design (target-side adverse selection, which predicts the OPPOSITE sign)"
+   ]
+  },
+  {
+   "hypothesis": "P3_IV_misvaluation",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "instrumented_market_to_book",
+      "relation": "increases",
+      "to": "bidder_mispricing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_mispricing",
+      "relation": "increases",
+      "to": "fraction_of_stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_mispricing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "cash constraints of high-growth firms (Harford 2005) rather than mispricing driving the M/B-stock link",
+    "firm-specific valuation error (Rhodes-Kropf et al. 2005) as an alternative misvaluation proxy to raw M/B"
+   ]
+  },
+  {
+   "hypothesis": "P4_announcement_return",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fraction_of_stock_payment",
+      "relation": "increases",
+      "to": "market_perceived_bidder_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_perceived_bidder_overvaluation",
+      "relation": "decreases",
+      "to": "bidder_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_perceived_bidder_overvaluation"
+   ],
+   "moderators": [
+    {
+     "construct": "public_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "target adverse selection",
+     "moderated_from": "fraction_of_stock_payment",
+     "moderated_to": "bidder_announcement_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4_announcement_return"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bidder opportunism with residual (uncorrected) mispricing, which predicts M/B should also enter negatively"
+   ]
+  },
+  {
+   "hypothesis": "P5_longrun_return",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fraction_of_stock_payment",
+      "relation": "increases",
+      "to": "bidder_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_overvaluation",
+      "relation": "decreases",
+      "to": "bidder_long_run_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_overvaluation"
+   ],
+   "moderators": [
+    {
+     "construct": "high_market_to_book",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "overvaluation of bidder shares",
+     "moderated_from": "fraction_of_stock_payment",
+     "moderated_to": "bidder_long_run_abnormal_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P5_longrun_return"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6_private_bidder_competition",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "competition_from_private_bidders",
+      "relation": "increases",
+      "to": "external_pressure_to_pay_in_cash",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "external_pressure_to_pay_in_cash",
+      "relation": "decreases",
+      "to": "fraction_of_stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "external_pressure_to_pay_in_cash"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "credit market conditions jointly fueling both private-bidder competition and public-bidder cash use"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US public nonfinancial firms across Fama and French 49 industries; most active acquirer industries include Computer Software, Electronic Equipment, and Business Services)",
+  "country_region": "United States (US targets and US public nonfinancial acquirers)",
+  "time_period": "1980-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "6,200 takeover bids"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) Platinum Mergers & Acquisitions",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum Global New Issues Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters mutual fund holdings",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP mutual fund monthly net returns database",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "1987 US Census Gazetteer Files",
+    "category": "census_gov",
+    "kind": "government_public"
+   },
+   {
+    "name": "BEA (Bureau of Economic Analysis) input-output industry data",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Baseline Tobit choice model for fraction of stock",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "5,841 bids (reduced from 6,200 due to missing fraction-of-stock data)",
+    "dv": {
+     "name": "Fraction of stock in deal payment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "M/B",
+      "measure": "market-to-book ratio of the bidder",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "R&D",
+      "measure": "research and development, scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset Tangibility",
+      "measure": "property, plant, and equipment, scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Size",
+      "measure": "natural log of total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "measure": "book value of total debt, scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Holding",
+      "measure": "cash holding, scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Competition from Private Buyers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Seller",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Dividend Dummy",
+      "source": "Compustat"
+     },
+     {
+      "name": "Operating Efficiency",
+      "source": "Compustat"
+     },
+     {
+      "name": "Large Relative Deal Size",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Public Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry Wave",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "High-Tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Post Bubble",
+      "source": "SDC"
+     },
+     {
+      "name": "Credit market spread",
+      "source": "other"
+     },
+     {
+      "name": "FF49 bidder industry dummies",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Multinomial probit (all-stock vs mixed vs all-cash base)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Payment method choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "M/B",
+      "measure": "market-to-book ratio of the bidder",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Asset Tangibility",
+      "measure": "property, plant, and equipment, scaled by total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Competition from Private Buyers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Seller",
+      "measure": "one if target is a subsidiary target or financial-sponsor target, zero otherwise",
+      "source": "SDC"
+     },
+     {
+      "name": "Public Target",
+      "measure": "dummy for publicly listed target",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Holding",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "Dividend Dummy",
+      "source": "Compustat"
+     },
+     {
+      "name": "Operating Efficiency",
+      "source": "Compustat"
+     },
+     {
+      "name": "Large Relative Deal Size",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Industry Wave",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "High-Tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Post Bubble",
+      "source": "SDC"
+     },
+     {
+      "name": "FF49 bidder industry dummies",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Tobit with leverage and cash-holding decomposed into target level and deviation",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Fraction of stock in deal payment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Leverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deviation from Target Leverage",
+      "measure": "fitted residual e_t from the leverage regression",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Cash Holding",
+      "measure": "fitted value of Cash_Holding_t = f(X_{t-1}, Leverage_{t-1}) from OLS across Compustat firms",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deviation from Target Cash",
+      "measure": "fitted residual g_t from the cash-holding regression",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Operating Efficiency",
+      "source": "Compustat"
+     },
+     {
+      "name": "Competition from Private Buyers",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Seller",
+      "source": "SDC"
+     },
+     {
+      "name": "Large Relative Deal Size",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Public Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry Wave",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "High-Tech",
+      "source": "SDC"
+     },
+     {
+      "name": "Post Bubble",
+      "source": "SDC"
+     },
+     {
+      "name": "FF49 bidder industry dummies",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Adding target-information proxies (Tobit Cols 1-2, multinomial probit Cols 3-6)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Fraction of stock / payment method choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Industry Complementarity",
+      "measure": "average input and output correlation for the target-bidder industry pair, computed from BEA input/output coefficients (b_ik, v_ki) mapped from four-digit SIC codes",
+      "source": "BEA input-output industry data / SDC"
+     },
+     {
+      "name": "Local Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1987 US Census Gazetteer Files / SDC"
+     },
+     {
+      "name": "Urban Deal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1987 US Census Gazetteer Files / SDC"
+     },
+     {
+      "name": "Recent SEO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum Global New Issues Database"
+     },
+     {
+      "name": "Recent Acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HHI (Herfindahl-Hirschman Index)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Baseline characteristics from Column 3 of Table 3 (capital structure, external pressure, deal, industry, time)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "FF49 bidder industry dummies",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Robustness with five additional industry-relatedness information proxies",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Fraction of stock / payment method choice",
+     "measure": "fraction of stock (Tobit, Columns 1-5) and multinomial probit choice among all-stock, mixed, all-cash (Columns 6-7)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Vertical Relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BEA input-output industry data"
+     },
+     {
+      "name": "Same Primary SIC Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Overlapping Industries/Bidder Industries",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Overlapping Industries/Target Industries",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Acquirer-Target Return Correlation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline controls (capital structure, external pressure, deal, industry, time)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "FF49 bidder industry dummies",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Two-stage IV tests of bidder opportunism (Models I-IV)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "Fraction of stock in deal payment (second stage) / bidder M/B (first stage)",
+     "measure": "second stage: percent stock payment; first stage: bidder M/B regressed on Price Pressure and baseline controls, all firm characteristics lagged one year",
+     "source": "SDC / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Instrumented M/B",
+      "measure": "bidder M/B instrumented by Price Pressure (Models I-II)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Instrumented Valuation Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Price Pressure (instrument)",
+      "measure": "bidder stock price pressure from large aggregate mutual fund outflows: sum over tau=t-3..t of (F_j,tau * s_ij,tau-1)/Volume_i,tau, with F_jt the fund flow set to zero for funds with F_jt/TA_j,t-1 > -5%, s_ij lagged portfolio weights, sector funds excluded",
+      "source": "Thomson Reuters mutual fund holdings / CRSP mutual fund monthly net returns database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline controls from Column 3 of Table 3 (all firm characteristics lagged one year)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "FF49 bidder industry dummies (Models II and IV)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 9 - Cross-sectional regressions of bidder announcement abnormal returns",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "5,396 merger announcement returns (requires ≥100 estimation-period observations and returns in all three event days)",
+    "dv": {
+     "name": "Bidder announcement-period abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Stock",
+      "measure": "the fraction of stock payment",
+      "source": "SDC"
+     },
+     {
+      "name": "Public Target",
+      "measure": "dummy for publicly traded target",
+      "source": "SDC"
+     },
+     {
+      "name": "M/B",
+      "measure": "bidder market-to-book ratio",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Stock x Public Target",
+      "measure": "interaction between Stock and Public Target",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Remaining baseline factors from Table 3 (capital structure, external pressure, deal, industry, time)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "FF49 bidder industry dummies (odd-numbered columns)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 10 - Post-takeover long-run calendar-time four-factor portfolio performance",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "419 monthly observations, first merger announcement (1980) to last (2014)",
+    "dv": {
+     "name": "Long-run abnormal portfolio performance (alpha)",
+     "measure": "constant term alpha in a four-factor (market, SMB, HML, momentum UMD) calendar-time return-generating process (eq. 8) for equal-weighted (Panel A) and value-weighted (Panel B) portfolios; bidders enter the month after the initial bid announcement and held 36 months or until delisting",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Payment method (all-stock vs all-cash)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "M/B (above/below median)",
+      "measure": "bidders sorted on M/B: above-median (Columns 1-3) vs below-median (Columns 4-6)",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market excess return (r_mt^e)",
+      "source": "CRSP"
+     },
+     {
+      "name": "SMB factor",
+      "source": "other"
+     },
+     {
+      "name": "HML factor",
+      "source": "other"
+     },
+     {
+      "name": "Momentum (UMD) factor",
+      "source": "other"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "deal advisers",
+    "large target (legacy) share-holders",
+    "selling overpriced shares to the target"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "deal advisers",
+    "relation": "affects",
+    "to": "selling overpriced shares to the target"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "high-quality deal advisers",
+    "information asymmetry",
+    "cross-ownership by institutional owners",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "cross-ownership by institutional owners",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "stock-financed takeover",
+    "target legacy shareholders",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "concentrated group of target legacy shareholders",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "bidder opportunism",
+    "selling overpriced shares"
+   ],
+   "mechanism_named": "bidder opportunism",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

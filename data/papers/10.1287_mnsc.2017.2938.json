@@ -1,0 +1,1057 @@
+{
+ "paper_id": "10.1287_mnsc.2017.2938",
+ "title": "Trade Relationships, Indirect Economic Links, and Mergers",
+ "journal": "MNSC",
+ "year": 2019,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "transaction cost economics",
+  "hold-up theory",
+  "relationship-specific investment theory",
+  "information economics",
+  "industrial organization theory",
+  "theory of the firm"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "RSI-1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_unshared_major_customers",
+      "relation": "increases",
+      "to": "threat_to_relationship_specific_investments",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "threat_to_relationship_specific_investments",
+      "relation": "decreases",
+      "to": "likelihood_of_being_a_merger_target",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "threat_to_relationship_specific_investments"
+   ],
+   "moderators": [
+    {
+     "construct": "relationship_specific_investment_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "threat_to_relationship_specific_investments",
+     "moderated_from": "number_of_unshared_major_customers",
+     "moderated_to": "likelihood_of_being_a_merger_target",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "RSI-1m"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "antitakeover provisions (ATPs), rather than the presence of relationship-specific investments, drive the negative number-of-customers effect on target likelihood"
+   ]
+  },
+  {
+   "hypothesis": "RSI-2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "direct_trade_link",
+      "relation": "increases",
+      "to": "protection_of_relationship_specific_investments",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "protection_of_relationship_specific_investments",
+      "relation": "increases",
+      "to": "merger_likelihood_between_trade_partners",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "protection_of_relationship_specific_investments"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality—firms initiate trade relationships to gauge merger potential, so direct trade links proxy for pre-merger intent rather than causing the merger"
+   ]
+  },
+  {
+   "hypothesis": "RSI-3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "direct_trade_link",
+      "relation": "increases",
+      "to": "protection_of_relationship_specific_investments",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "protection_of_relationship_specific_investments",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "protection_of_relationship_specific_investments"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "COMP-1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "indirect_economic_link",
+      "relation": "increases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "increases",
+      "to": "merger_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "COMP-2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_is_rivals_customer",
+      "relation": "increases",
+      "to": "competitive_advantage_over_rival",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_advantage_over_rival",
+      "relation": "increases",
+      "to": "merger_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_advantage_over_rival"
+   ],
+   "moderators": [
+    {
+     "construct": "target_industry_concentration",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "competitive_advantage_over_rival",
+     "moderated_from": "target_is_rivals_customer",
+     "moderated_to": "merger_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "COMP-2m"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "COMP-3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "indirect_economic_link",
+      "relation": "increases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "COMP-4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_along_common_trade_partner",
+      "relation": "increases",
+      "to": "loss_of_bargaining_power_at_shared_firm",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "loss_of_bargaining_power_at_shared_firm",
+      "relation": "decreases",
+      "to": "market_reaction_at_shared_firm",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "loss_of_bargaining_power_at_shared_firm"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "COMP-5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_trade_relationships_involved_in_merger",
+      "relation": "increases",
+      "to": "change_in_competitive_equilibrium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "change_in_competitive_equilibrium",
+      "relation": "increases",
+      "to": "rival_announcement_return_magnitude",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "change_in_competitive_equilibrium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "COMP-6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_trade_relationships_in_recent_mergers",
+      "relation": "increases",
+      "to": "change_in_industry_competitive_equilibrium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "change_in_industry_competitive_equilibrium",
+      "relation": "increases",
+      "to": "follow_on_industry_merger_activity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "change_in_industry_competitive_equilibrium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "INFO-1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "direct_or_indirect_economic_link",
+      "relation": "increases",
+      "to": "informational_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informational_advantage",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informational_advantage"
+   ],
+   "moderators": [
+    {
+     "construct": "hard_to_value_target",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "informational_advantage",
+     "moderated_from": "direct_or_indirect_economic_link",
+     "moderated_to": "information_asymmetry",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "INFO-1m"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "INFO-2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "direct_or_indirect_economic_link",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "hard_to_value_target",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "direct_or_indirect_economic_link",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "INFO-2m"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public firms across all Fama–French 48 industries, excluding the financial sector (SIC 6000-6999), utilities, and \"other\")",
+  "country_region": "United States",
+  "time_period": "1991-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,937 acquirer deals and 1,324 target deals with requisite data"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat segments file",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Company (SDC) / Thomson Financials SDC M&A Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IRRC/RiskMetrics",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RiskMetrics Directors and Legacy Directors databases",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BEA 1992 Benchmark Input-Output data",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Lexis Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hoovers",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A: Likelihood of being an acquirer (conditional logit)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "23,622 matched acquirer firm-years (each actual acquirer paired with 5 propensity-matched pseudoacquirers), 1991-2009",
+    "dv": {
+     "name": "Likelihood of being an acquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of customers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Direct link",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Indirect link",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Target is rival's customer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Rival is target's customer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Rivals",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Number of dependent suppliers",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Bridge firm",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Industry-level customer-supplier controls (columns with BEA measures)",
+      "source": "BEA 1992 Benchmark Input-Output data"
+     },
+     {
+      "name": "Sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Net working capital",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Price-to-earnings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash deviation",
+      "source": "Compustat"
+     },
+     {
+      "name": "Abnormal returns (prior 12 months)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Mean industry stock return (prior 12 months)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Standard deviation of stock returns (prior 12 months)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Regulatory indicator",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry concentration (Herfindahl index)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Merger-wave indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Economic shock",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B: Likelihood of being a target (conditional logit)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "7,944 matched target firm-years (each actual target paired with 5 propensity-matched pseudotargets), 1991-2009",
+    "dv": {
+     "name": "Likelihood of being a target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of customers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Direct link",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Indirect link",
+      "measure": "indicates that the target and acquirer are partners of trade partners",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Target is rival's customer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Rival is target's customer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Rivals",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Number of dependent suppliers",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Bridge firm",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Industry-level customer-supplier controls (BEA columns)",
+      "source": "BEA 1992 Benchmark Input-Output data"
+     },
+     {
+      "name": "Firm-level controls (sales growth, NWC, leverage, M/B, P/E, size, cash deviation)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Abnormal returns, mean industry return, sd of returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "Regulatory indicator, Herfindahl index, economic shock, merger wave",
+      "source": "Compustat/SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "7,944 propensity-matched target firm-years",
+    "dv": {
+     "name": "Likelihood of being a target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of customers x High RSI proxy",
+      "measure": "interaction of ln(1+number of customers) with indicator for industry asset specificity (James and Kizilaslan 2014) or contract intensity (Nunn 2007) above sample median",
+      "source": "Compustat"
+     },
+     {
+      "name": "Indirect link x High HHI proxy",
+      "measure": "interaction of indirect link with indicator for target industry HHI above sample median",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "interaction of target-is-rival's-customer indicator with high-HHI indicator",
+      "source": "Compustat"
+     },
+     {
+      "name": "Rival is target's customer x High HHI proxy",
+      "measure": "interaction of rival-is-target's-customer indicator with high-HHI indicator",
+      "source": "Compustat"
+     },
+     {
+      "name": "Direct link x Information proxy",
+      "measure": "interaction of direct link with hard-to-value proxy (<$500,000 sales or R&D>sales, Officer et al. 2009) or undervaluation proxy (negative Rhodes-Kropf et al. 2005 firm-specific error)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Indirect link x Information proxy",
+      "measure": "interaction of indirect link with information proxy",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Number of customers, Direct link, Indirect link, Target/Rival customer indicators, Rivals (base link levels)",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Number of dependent suppliers, Bridge firm",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Base proxy levels (RSI, HHI, Info)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm-level controls",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "SIC three-digit industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "1,743 matched target firm-years; deals with a public acquirer and governance data from IRRC (mostly S&P 1,500 firms)",
+    "dv": {
+     "name": "Likelihood of being a target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of customers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Direct link",
+      "measure": "indicates target and acquirer are major trade partners",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Indirect link",
+      "measure": "indicates target and acquirer are partners of trade partners",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "ATP - E-index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC/RiskMetrics"
+     },
+     {
+      "name": "ATP - Cremers index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC/RiskMetrics"
+     },
+     {
+      "name": "ATP - Classified board",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRRC/RiskMetrics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Number of dependent suppliers, Bridge firm",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Firm-level controls",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "1,927 acquirer deals (subsamples of 1,339-1,757 for interaction columns)",
+    "dv": {
+     "name": "Acquirer announcement returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Direct link",
+      "measure": "indicates target and acquirer are major trade partners",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Indirect link",
+      "measure": "indicates target and acquirer are partners of trade partners",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Number of customers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Interactions with RSI / HHI / Information proxies",
+      "measure": "Number of customers x High RSI proxy, Indirect link x High HHI proxy, Target/Rival customer x High HHI proxy, Direct/Indirect link x Information proxy",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Cash flag (acquirer used cash)",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size of target to acquirer",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "Merger wave indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Target in regulated industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer M/B",
+      "source": "Compustat"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "Number of dependent suppliers, Bridge firm, base proxy levels",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year controls",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel A: Univariate tests of market reactions at linked firms (competition explanation)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "956 / 222 / 47 / 118 linked-firm observations across the four link types",
+    "dv": {
+     "name": "Three-day CAR at economically linked firm",
+     "measure": "three-day CARs(-1, +1) at customer/supplier firms when their trade partner is acquired (and at firms when two of their customers/suppliers merge), market model estimated 300 to 60 trading days before announcement; t-test of mean = 0",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Economic link type (customer, supplier, common customer/supplier of merging firms)",
+      "measure": "grouping of linked firms by relationship to the announced merger",
+      "source": "Compustat segments file"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7, Panel B: t-tests of information-based explanation (deal outcomes by link type)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "public-target deals; column obs from 43 (direct) to 264 (either) vs ~1,541-2,567 no-link",
+    "dv": {
+     "name": "Deal information proxies (days to completion, RKV firm error, percent cash, stock swap)",
+     "measure": "mean days to completion (days between completion and announcement), Rhodes-Kropf et al. (2005) firm valuation error, percent cash, and stock swap (binary), compared across deals with no links vs direct vs indirect links (t-tests)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Direct link / Indirect link",
+      "measure": "deals grouped by whether target and acquirer are major trade partners (direct) or partners of partners (indirect) vs no links",
+      "source": "Compustat segments file"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "1,129,740 rival-deal observations",
+    "dv": {
+     "name": "Rival announcement returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target number of customers",
+      "measure": "ln(1 + number of major customers of the target)",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Acquirer has direct/indirect link with target",
+      "measure": "indicators for direct/indirect economic link between acquirer and target",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "Rival is customer / Rival is dependent supplier",
+      "measure": "indicators for whether the rival is a customer or dependent supplier of a merging party",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "indicators for target-rival supply-chain position",
+      "source": "Compustat segments file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target number of dependent suppliers, Target is bridge firm, Acquirer and target are rivals, Acquirer industry concentration",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry-level customer-supplier controls",
+      "source": "BEA 1992 Benchmark Input-Output data"
+     },
+     {
+      "name": "Firm and deal controls (acquirer size, merger wave, regulated industry, acquirer leverage, M/B)",
+      "source": "Compustat/SDC"
+     },
+     {
+      "name": "Year controls",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "289,664 firm-quarter observations, Compustat firms 1991-2009",
+    "dv": {
+     "name": "Firm engages in merger activity in a quarter",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat segments file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Number of acquisitions in last 3 months",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "M/B, Cash flow, Sales growth, Capacity utilization, Leverage, Firm size, Excess return, Industry concentration",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Merger wave",
+      "source": "SDC"
+     },
+     {
+      "name": "Credit spread",
+      "source": "other"
+     },
+     {
+      "name": "Year, quarter, and industry effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "links",
+    "transferable"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "material customers",
+    "value of the link",
+    "transferable"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "relationship-specific investment",
+    "value"
+   ],
+   "mechanism_named": "relationship-specific investment explanation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "selection effects"
+   ],
+   "mechanism_named": "selection effects",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

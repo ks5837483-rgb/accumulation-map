@@ -1,0 +1,817 @@
+{
+ "paper_id": "10.1016_j.jacceco.2020.101315",
+ "title": "Corporate tax cuts, merger activity, and shareholder wealth",
+ "journal": "JAE",
+ "year": 2021,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "neoclassical theory of the firm",
+  "financial constraints theory",
+  "agency theory of free cash flow",
+  "adverse selection theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "effective_tax_rate_reduction",
+      "relation": "increases",
+      "to": "after_tax_return",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "after_tax_return",
+      "relation": "increases",
+      "to": "m_and_a_bids",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "effective_tax_rate_reduction",
+      "relation": "increases",
+      "to": "firm_cash_flow",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_cash_flow",
+      "relation": "increases",
+      "to": "cash_m_and_a_bids",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "effective_tax_rate_reduction",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "cash_m_and_a_bids",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "after_tax_return",
+    "firm_cash_flow",
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "financial_constraints",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "firm_cash_flow",
+     "moderated_from": "effective_tax_rate_reduction",
+     "moderated_to": "cash_m_and_a_bids",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "RQ2 (financial constraints)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "some industry characteristic unrelated to DPAD (rather than the DPAD deductions themselves) drives the takeover activity"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "effective_tax_rate_reduction",
+      "relation": "increases",
+      "to": "investment_opportunity_set",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investment_opportunity_set",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "effective_tax_rate_reduction",
+      "relation": "increases",
+      "to": "tax_synergy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "tax_synergy",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investment_opportunity_set",
+    "tax_synergy"
+   ],
+   "moderators": [
+    {
+     "construct": "financial_constraints",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "financing_constraint_relief",
+     "moderated_from": "effective_tax_rate_reduction",
+     "moderated_to": "acquirer_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "RQ2 (financial constraints)"
+    },
+    {
+     "construct": "target_dpad_facilitation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "tax_synergy",
+     "moderated_from": "effective_tax_rate_reduction",
+     "moderated_to": "acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Target DPAD facilitation (Table 6)"
+    },
+    {
+     "construct": "acquirer_net_operating_losses",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "tax_synergy",
+     "moderated_from": "effective_tax_rate_reduction",
+     "moderated_to": "acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Acquirer NOLs (Table 5 Panel C)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the CAR/synergy quality measures reflect investor perceptions and market sentiment bias rather than real deal quality",
+    "the DPAD cash flow leads to value-destroying (agency-driven) acquisitions rather than value-creating ones"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms; DPAD-affected industries span Fama-French 12 industries, with domestic manufacturing/production most affected)",
+  "country_region": "United States (U.S. incorporated public acquirers; sample includes both domestic and cross-border/foreign-target bids)",
+  "time_period": "1997-2013",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5072 M&A bids (main sample); firm-level activity tests use 106,506 firm-year observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 Panel B (firm-level M&A activity)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "106,506 firm-year observations with CRSP/Compustat data, fiscal years 1997-2012 (models 1 and 4 logit, others OLS)",
+    "dv": {
+     "name": "M&A bid activity (all bids and all-cash bids)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ln (Assets) / ln (Market value of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "1-digit SIC industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel C (effect of NOL - natural control group)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "106,506 firm-year observations",
+    "dv": {
+     "name": "All-cash M&A bid activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     },
+     {
+      "name": "NOL (0,1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ETRR x NOL (0,1)",
+      "measure": "interaction of ETRR with the NOL indicator (statutory-rule-based natural control group)",
+      "source": "IRS SOI / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel D (industry-level M&A activity)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "1207 industry-year observations",
+    "dv": {
+     "name": "Industry-aggregated all-cash M&A activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ln (Market value of assets) - industry average",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book ratio - industry average",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage - industry average",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return - industry average",
+      "source": "CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Panels A & B (Domestic-only vs. MNC acquirers, firm and industry level)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "Panel A firm level: 85,797 domestic-only + 20,709 MNC firm-years; Panel B industry level: 1206 domestic-only + 1038 MNC industry-years",
+    "dv": {
+     "name": "All-cash M&A bid activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Panels C & D (Foreign target transactions, firm and industry level)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "Panel C firm level: 106,506 firm-years; Panel D industry level: 1207 industry-years",
+    "dv": {
+     "name": "Cross-border all-cash M&A bid activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A (Financial constraints, triple-difference: KZ index & unrated firms)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199 (triple-difference DiDiD)",
+    "sample": "106,506 firm-year observations",
+    "dv": {
+     "name": "All-cash M&A bid activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     },
+     {
+      "name": "ETRR x High KZ index (0,1)",
+      "measure": "interaction of ETRR with High KZ index indicator (top tercile of Kaplan-Zingales index in prior year, per Lamont et al. 2001)",
+      "source": "IRS SOI / Compustat"
+     },
+     {
+      "name": "ETRR x Unrated firm (0,1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IRS SOI / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B (Alternative financial constraint measures: WW & HP index)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199 (triple-difference DiDiD)",
+    "sample": "106,506 firm-year observations",
+    "dv": {
+     "name": "All-cash M&A bid activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR x High WW index (0,1)",
+      "measure": "interaction of ETRR with Whited and Wu (2006) index top-tercile indicator",
+      "source": "IRS SOI / Compustat"
+     },
+     {
+      "name": "ETRR x High HP index (0,1)",
+      "measure": "interaction of ETRR with Hadlock and Pierce (2010) index top-tercile indicator",
+      "source": "IRS SOI / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel C (Payout policy constraint)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199 (triple-difference DiDiD)",
+    "sample": "106,506 firm-year observations",
+    "dv": {
+     "name": "All-cash M&A bid activity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR x Low payout ratio (0,1)",
+      "measure": "interaction of ETRR with indicator for dividends-to-EBIT ratio in bottom tercile",
+      "source": "IRS SOI / Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "interaction of ETRR with indicator for firms with no dividend payout in the last 30 years",
+      "source": "IRS SOI / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A (Deal quality: acquirer CAR and combined CAR)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199 (CAR via event-study market model)",
+    "sample": "1570 all-cash deals (model 1); 582 all-cash deals where both parties are public firms (models 2, 3, 4)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "three-day cumulative abnormal return centered on the acquisition announcement day, estimated using standard event-study methods (residual from market model estimated over one-year window ending four weeks prior); Combined CAR = three-day CAR for the value-weighted portfolio of acquirer and target (per Bradley et al. 1988)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public target (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile deal (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Multiple bidders (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Merger of equals (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying deal (0,1)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer ln (Market value of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target ln (Market value of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target industry ETRR",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     },
+     {
+      "name": "(Industry x Year) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer fixed effects (models 2-4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B (Deal quality by financial constraints)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199 (triple-difference DiDiD)",
+    "sample": "1570 all-cash deals (models 1,3); 582 all-cash public-public deals (models 2,4)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "three-day cumulative abnormal return around merger announcement (event-study market model); Combined CAR = value-weighted acquirer+target portfolio",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     },
+     {
+      "name": "Acquirer ETRR x High KZ (0,1)",
+      "measure": "interaction of acquirer ETRR with High KZ index (top tercile) indicator",
+      "source": "IRS SOI / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Controls and FEs as in Panel A (deal, acquirer, target characteristics; industry-year and acquirer FE)",
+      "source": "SDC/Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel C (Deal quality - effect of acquirer's NOLs)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "1570 all-cash deals (models 1,3); 582 all-cash public-public deals (models 2,4)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "three-day cumulative abnormal return around merger announcement (event-study market model); Combined CAR = value-weighted acquirer+target portfolio",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     },
+     {
+      "name": "Acquirer ETRR x NOL (0,1)",
+      "measure": "interaction of acquirer ETRR with indicator for deals in which acquirers have net operating losses",
+      "source": "IRS SOI / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Controls and FEs as in Panel A (deal, acquirer, target characteristics; industry-year and acquirer FE)",
+      "source": "SDC/Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B (Target's DPAD facilitation index on deal quality)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "582 all-cash bids for public targets",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "three-day cumulative abnormal return around merger announcement (event-study market model); Combined CAR = value-weighted acquirer+target portfolio",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     },
+     {
+      "name": "Target's DPAD facilitation index",
+      "measure": "composite score 0-3 adding one point each if: target relative size in bottom quartile, target operates in manufacturing industry, target has no significant foreign operations (per Lester and Rector 2016)",
+      "source": "Compustat/SDC"
+     },
+     {
+      "name": "ETRR x Target's DPAD facilitation index",
+      "measure": "interaction of ETRR with the facilitation index",
+      "source": "IRS SOI / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel C (Post-deal operating performance and goodwill write-off)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199 (goodwill models 3-4 logit)",
+    "sample": "555 all-cash deals with target characteristics (models 1,2,4); 1465 all-cash deals with post-deal data (model 3)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal characteristics",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer characteristics",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Target characteristics (models 1,2,4)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Acquirer fixed effects (models 2,4)",
+      "source": ""
+     },
+     {
+      "name": "(Industry x Year) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table B.1 Panel E (Validation: effect of DPAD on acquirer effective tax rates)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Domestic Production Activities Deduction (DPAD), IRC Section 199",
+    "sample": "acquirer firms; models (2) and (4) limited to firms without substantial foreign operations",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "ETRR",
+      "measure": "acquiring industry percentage point effective tax rate reduction from Section 199",
+      "source": "IRS Statistics of Income (SOI) table 7"
+     }
+    ],
+    "controls": [
+     {
+      "name": "(regression controls per Ohrn 2018 treatment-assignment validation)",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "dpad",
+    "causality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "industry differences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "industry etrr",
+    "firm specific etrr"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "etrr measure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "etrr industry variable",
+    "dpad treatment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "broadcasting industry",
+    "dpad"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "bidder cars",
+    "synergies",
+    "market sentiment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,552 @@
+{
+ "paper_id": "10.1016_0304-405x(96)00884-7",
+ "title": "The financial performance of reverse leveraged buyouts",
+ "journal": "JFE",
+ "year": 1996,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "free cash flow theory",
+  "information asymmetry",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "operating_management_and_insider_equity_ownership",
+      "relation": "increases",
+      "to": "managerial_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentives",
+      "relation": "increases",
+      "to": "accounting_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_incentives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "managers optimally time the IPO to exploit an information asymmetry (rather than incentives causing performance)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "leverage",
+      "relation": "increases",
+      "to": "managerial_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentives",
+      "relation": "increases",
+      "to": "accounting_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_incentives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "nonmanagement_insider_equity_ownership",
+      "relation": "increases",
+      "to": "managerial_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_monitoring",
+      "relation": "decreases",
+      "to": "working_capital",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the association is mechanically induced by the cash infusion from the offering used to fund working capital and capital expenditures"
+   ]
+  },
+  {
+   "hypothesis": "P3b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "nonmanagement_insider_equity_ownership",
+      "relation": "increases",
+      "to": "managerial_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_monitoring",
+      "relation": "decreases",
+      "to": "capital_expenditures",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the association is mechanically induced by the cash infusion from the offering used to fund working capital and capital expenditures"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "inflated_offering_price",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "inflated_offering_price",
+      "relation": "decreases",
+      "to": "post_ipo_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inflated_offering_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (reverse leveraged buyouts; firms compared against their two-digit SIC code industries)",
+  "country_region": "United States",
+  "time_period": "1983-1988 (IPOs January 1, 1983 to June 30, 1988; return/accounting data through 1993-1994)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "90"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Service",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "prospectuses for the public offering",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat annual industrial, research, and full coverage files",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "proxy statements",
+    "category": "hand_collected",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Panel A - median levels of accounting performance (year -1 to +4)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "accounting performance (level)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual industrial, research, and full coverage files; prospectuses"
+    },
+    "key_ivs": [
+     {
+      "name": "performance benchmark (reverse-LBO firm vs benchmark)",
+      "measure": "unadjusted, industry-adjusted (two-digit SIC match), and mean-reversion-adjusted (performance-matched) benchmarks compared across fiscal years relative to the IPO (year -1 to +4)",
+      "source": "Compustat annual industrial, research, and full coverage files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel B - median changes in accounting performance",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "change in accounting performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual industrial, research, and full coverage files"
+    },
+    "key_ivs": [
+     {
+      "name": "performance benchmark for change",
+      "measure": "unadjusted, industry-adjusted, and mean-reversion-adjusted changes from year -1 to years 0, +1, +2, +3, +4",
+      "source": "Compustat annual industrial, research, and full coverage files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "observations with R&D and advertising disclosed (material enough to be disclosed)",
+    "dv": {
+     "name": "discretionary expenditure / working capital / employment levels",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual industrial, research, and full coverage files"
+    },
+    "key_ivs": [
+     {
+      "name": "industry benchmark comparison",
+      "measure": "reverse-LBO firm value vs industry median (two-digit SIC), by fiscal year relative to IPO",
+      "source": "Compustat annual industrial, research, and full coverage files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "change in discretionary expenditures / working capital / employment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual industrial, research, and full coverage files"
+    },
+    "key_ivs": [
+     {
+      "name": "industry benchmark comparison of change",
+      "measure": "firm and industry-adjusted change from year -1 to years 0, +1, +2, +3, +4",
+      "source": "Compustat annual industrial, research, and full coverage files"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel A - cross-sectional regressions of change in performance on change in leverage and ownership (no benchmark control)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "change in performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat annual industrial, research, and full coverage files"
+    },
+    "key_ivs": [
+     {
+      "name": "change in leverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "prospectuses for the public offering"
+     },
+     {
+      "name": "change in percentage of equity owned by operating management",
+      "measure": "[withheld: wording matches the source]",
+      "source": "prospectuses for the public offering"
+     },
+     {
+      "name": "change in percentage of equity owned by nonmanagement insiders",
+      "measure": "[withheld: wording matches the source]",
+      "source": "prospectuses for the public offering"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel B - regressions adding control for change in industry performance benchmark",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "change in performance",
+     "measure": "change in OPINC/assets and OCF/assets (year -1 to +1, and year -1 to average of +1 to +4); change in working capital and capital expenditures",
+     "source": "Compustat annual industrial, research, and full coverage files"
+    },
+    "key_ivs": [
+     {
+      "name": "change in leverage",
+      "measure": "change in leverage measured at the time of the IPO",
+      "source": "prospectuses for the public offering"
+     },
+     {
+      "name": "change in percentage of equity owned by operating management",
+      "measure": "[withheld: wording matches the source]",
+      "source": "prospectuses for the public offering"
+     },
+     {
+      "name": "change in percentage of equity owned by nonmanagement insiders",
+      "measure": "[withheld: wording matches the source]",
+      "source": "prospectuses for the public offering"
+     }
+    ],
+    "controls": [
+     {
+      "name": "change in industry performance benchmark",
+      "source": "Compustat annual industrial, research, and full coverage files"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel C - OPINC and OCF regressions adding mean reversion benchmark as additional variable",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "change in accounting performance",
+     "measure": "change in OPINC/assets and OCF/assets (year -1 to +1, and year -1 to average of +1 to +4)",
+     "source": "Compustat annual industrial, research, and full coverage files"
+    },
+    "key_ivs": [
+     {
+      "name": "change in leverage",
+      "measure": "change in leverage measured at the time of the IPO",
+      "source": "prospectuses for the public offering"
+     },
+     {
+      "name": "change in percentage of equity owned by operating management",
+      "measure": "[withheld: wording matches the source]",
+      "source": "prospectuses for the public offering"
+     },
+     {
+      "name": "change in percentage of equity owned by nonmanagement insiders",
+      "measure": "[withheld: wording matches the source]",
+      "source": "prospectuses for the public offering"
+     }
+    ],
+    "controls": [
+     {
+      "name": "mean reversion performance benchmark",
+      "source": "Compustat annual industrial, research, and full coverage files"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - long-term stock market performance of reverse LBOs (information asymmetry / market-timing test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "entire sample; subset still listed after 48 months; subset not listed after 48 months (delisted)",
+    "dv": {
+     "name": "long-term stock market performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "post-IPO holding period (event time)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Association between accounting performance measures and stock market performance (reliability check)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "periods subsequent to the public offering",
+    "dv": {
+     "name": "market performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in accounting performance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat annual industrial, research, and full coverage files"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "change in organizational structure",
+    "ownership",
+    "leverage",
+    "performance",
+    "exogenous shock",
+    "investment opportunity set"
+   ],
+   "mechanism_named": "endogenous",
+   "proposed_edge": {
+    "from": "change in organizational structure",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "exogenous shocks",
+    "changes in performance",
+    "organizational structure"
+   ],
+   "mechanism_named": "exogenous shock",
+   "proposed_edge": {
+    "from": "organizational structure",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "changes in organizational structure",
+    "concentration of ownership",
+    "performance",
+    "exogenous determinants of ownership"
+   ],
+   "mechanism_named": "endogenous",
+   "proposed_edge": {
+    "from": "concentration of ownership",
+    "relation": "increases",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "organizational incentives",
+    "performance",
+    "organizational structure"
+   ],
+   "mechanism_named": "exogenous",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "shift in organizational incentives",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "shift in organizational incentives",
+    "relation": "increases",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "reverse-LBO sample",
+    "system-of-equations",
+    "endogeneity issue"
+   ],
+   "mechanism_named": "endogeneity",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "organizational incentives",
+    "performance"
+   ],
+   "mechanism_named": "endogenous variables",
+   "proposed_edge": {
+    "from": "organizational incentives",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

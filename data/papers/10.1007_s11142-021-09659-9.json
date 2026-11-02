@@ -1,0 +1,745 @@
+{
+ "paper_id": "10.1007_s11142-021-09659-9",
+ "title": "SEC comment letters on form S-4 and M&amp;A accounting quality",
+ "journal": "RAS",
+ "year": 2022,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "disclosure regulation",
+  "information asymmetry",
+  "regulatory oversight"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "increases",
+      "to": "disclosure_transparency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disclosure_transparency",
+      "relation": "decreases",
+      "to": "future_restatements",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "decreases",
+      "to": "mispricing_of_goodwill",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "mispricing_of_goodwill",
+      "relation": "increases",
+      "to": "goodwill_impairment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disclosure_transparency",
+    "mispricing_of_goodwill"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "increases",
+      "to": "disclosure_transparency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disclosure_transparency",
+      "relation": "decreases",
+      "to": "future_restatements",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disclosure_transparency"
+   ],
+   "moderators": [
+    {
+     "construct": "comment_letter_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "disclosure_transparency",
+     "moderated_from": "sec_comment_letter",
+     "moderated_to": "future_restatements",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "comment_letter_specificity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "disclosure_transparency",
+     "moderated_from": "sec_comment_letter",
+     "moderated_to": "future_restatements",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (S-4 M&A deals across sectors; classified by two-digit SIC industry with industry fixed effects)",
+  "country_region": "United States",
+  "time_period": "2004-2015",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "721 completed S-4 M&A deals (final pooled sample)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SEC EDGAR database (S-4 and S-4/A filings)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Audit Analytics (SEC comment letter data, audit fees)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Company (SDC) M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hand-collected antitrust investigation data (Google/LexisNexis searches of DOJ/FTC actions)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Inflation-adjusted GDP growth and GDP forecast dispersion data (macroeconomic controls)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "CBOE Volatility Index (VIX)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Column (1) - Pooled sample probit (Eq. 1), restatement outcome",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "721 completed S-4 M&A deals (pooled)",
+    "dv": {
+     "name": "M&A accounting quality (restatement)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acq_Size",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Acq_MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_Lev",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_NSegment",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_CLt-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Tgt_Size",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Tgt_CLt-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Tgt_NSegment",
+      "source": "Compustat"
+     },
+     {
+      "name": "Pct_Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Anti_Trust",
+      "source": "Hand-collected antitrust data"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Mulbid",
+      "source": "SDC"
+     },
+     {
+      "name": "Rel_Size",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Diffind",
+      "source": "SDC"
+     },
+     {
+      "name": "Diffcountry",
+      "source": "SDC"
+     },
+     {
+      "name": "Acq_Restatet-1 (Prior_Accounting_Quality)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Tgt_Restatet-1 (Prior_Accounting_Quality)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column (2) - Pooled sample probit (Eq. 1), goodwill impairment outcome",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "721 completed S-4 M&A deals (pooled)",
+    "dv": {
+     "name": "M&A accounting quality (goodwill impairment)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acq_Size",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Acq_MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_Lev",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_NSegment",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq_CLt-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Tgt_Size",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Tgt_CLt-1",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Tgt_NSegment",
+      "source": "Compustat"
+     },
+     {
+      "name": "GWt+1 (goodwill indicator)",
+      "source": "Compustat"
+     },
+     {
+      "name": "GDP_Growth",
+      "source": "GDP macro data"
+     },
+     {
+      "name": "GDP_Disperse",
+      "source": "GDP forecast data"
+     },
+     {
+      "name": "VIX",
+      "source": "CBOE VIX"
+     },
+     {
+      "name": "Big_Bath",
+      "source": "Compustat"
+     },
+     {
+      "name": "Pct_Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Anti_Trust",
+      "source": "Hand-collected antitrust data"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Mulbid",
+      "source": "SDC"
+     },
+     {
+      "name": "Rel_Size",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Diffind",
+      "source": "SDC"
+     },
+     {
+      "name": "Diffcountry",
+      "source": "SDC"
+     },
+     {
+      "name": "Acq_GWImpairmentt-1 (Prior_Accounting_Quality)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tgt_GWImpairmentt-1 (Prior_Accounting_Quality)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel C - Entropy-balanced sample probit (Eq. 1), restatement and goodwill impairment outcomes",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Entropy-balanced pooled sample (721 deals reweighted; treatment CL=1 vs control CL=0)",
+    "dv": {
+     "name": "M&A accounting quality (restatement and goodwill impairment)",
+     "measure": "Restate_{t+1} and GWImpairment_{t+1} indicators (same as Eq. 1), re-estimated on the entropy-balanced sample",
+     "source": "Audit Analytics / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same covariates as Eq. (1): Acq_Size, Acq_MTB, Acq_Lev, Acq_ROA, Acq_NSegment, Acq_CLt-1",
+      "source": "Compustat/CRSP/Audit Analytics"
+     },
+     {
+      "name": "Tgt_Size, Tgt_CLt-1, Tgt_NSegment",
+      "source": "Compustat/Audit Analytics"
+     },
+     {
+      "name": "Pct_Stock, Tender, Mulbid, Rel_Size, Diffind, Diffcountry",
+      "source": "SDC"
+     },
+     {
+      "name": "Anti_Trust",
+      "source": "Hand-collected antitrust data"
+     },
+     {
+      "name": "Prior_Accounting_Quality (Restate/GWImpairment)",
+      "source": "Audit Analytics/Compustat"
+     },
+     {
+      "name": "Industry FE, Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel A - Propensity-score first-stage probit (Eq. 2), determinants of receiving a comment letter",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "All completed S-4 deals used to estimate propensity scores; matched with caliper 0.2 without replacement (196 pairs / 392 observations)",
+    "dv": {
+     "name": "Probability of receiving an SEC comment letter",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_Size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Acq_MTB / Acq_Lev / Acq_ROA / Acq_NSegment",
+      "measure": "acquirer market-to-book, leverage, return on assets, number of business segments",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tgt_Size / Tgt_NSegment / Tgt_MTB / Tgt_Lev",
+      "measure": "target size, complexity, market-to-book, leverage",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Pct_Stock / Rel_Size / Anti_Trust / Tender / Mulbid / Diffind / Diffcountry",
+      "measure": "deal-characteristic covariates",
+      "source": "SDC / Hand-collected antitrust data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year FE",
+      "source": ""
+     },
+     {
+      "name": "Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel C - Propensity-score-matched sample probit (Eq. 1), restatement and goodwill impairment outcomes",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Propensity-score-matched sample: 196 pairs of comment-letter and no-comment-letter deals (392 observations)",
+    "dv": {
+     "name": "M&A accounting quality (restatement and goodwill impairment)",
+     "measure": "Restate_{t+1} and GWImpairment_{t+1} indicators (same as Eq. 1), estimated on the propensity-score-matched sample",
+     "source": "Audit Analytics / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same covariates as Eq. (1): acquirer, target, and deal characteristics",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     },
+     {
+      "name": "Anti_Trust",
+      "source": "Hand-collected antitrust data"
+     },
+     {
+      "name": "Prior_Accounting_Quality",
+      "source": "Audit Analytics/Compustat"
+     },
+     {
+      "name": "Industry FE, Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panel A - Restatement category tests (accounting rule application failures and M&A-specific restatements)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Restatements restricted to accounting-rule-failure or M&A-specific categories",
+    "dv": {
+     "name": "Category-specific restatement",
+     "measure": "Restate_FailureAccRule_{t+1} (restatements related to failure of accounting rule application, Column 1) and Restate_MNA_{t+1} (M&A-specific restatements, Column 2)",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same acquirer/target/deal controls as Eq. (1)",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     },
+     {
+      "name": "Industry FE, Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "S-4 exchange-offer filings (non-M&A placebo sample)",
+    "dv": {
+     "name": "M&A accounting quality (placebo)",
+     "measure": "Restate_{t+1} / GWImpairment_{t+1} indicators applied to the exchange-offer (non-M&A) placebo sample",
+     "source": "Audit Analytics / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Eq. (1)",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     },
+     {
+      "name": "Industry FE, Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Cross-sectional test - variation with number/complexity of S-4 comments (comment-letter word count)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "M&A accounting quality (restatement and goodwill impairment)",
+     "measure": "Restate_{t+1} and GWImpairment_{t+1} indicators (same as Eq. 1)",
+     "source": "Audit Analytics / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter word count (complexity of comments)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same acquirer/target/deal controls as Eq. (1)",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     },
+     {
+      "name": "Industry FE, Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Cross-sectional test - which comment types drive the effect (M&A-specific vs non-M&A comments)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "M&A accounting quality (restatement and goodwill impairment)",
+     "measure": "Restate_{t+1} and GWImpairment_{t+1} indicators (same as Eq. 1)",
+     "source": "Audit Analytics / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Y_MNA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "N_MNA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same acquirer/target/deal controls as Eq. (1)",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     },
+     {
+      "name": "Industry FE, Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.5 mechanism test - association of S-4 comment letter with incidence/frequency of S-4/A amendments",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "S-4 amendment incidence and frequency",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR (S-4/A filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "CL, issuance of an S-4 comment letter",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal/firm controls per main design",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "Section 5.5 mechanism test - association of S-4 comment letter with specific hand-collected S-4/A disclosure revisions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Specific S-4/A quantitative disclosure revisions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected S-4/A disclosure revision data"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC comment letter",
+      "measure": "CL, issuance of an S-4 comment letter",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal/firm controls per main design",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "Section 5.5 mechanism test - association of S-4/A disclosure revisions with future restatements/goodwill impairments",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Hand-collected sample of S-4/A disclosure revisions",
+    "dv": {
+     "name": "M&A accounting quality (restatement and goodwill impairment)",
+     "measure": "likelihood of a future restatement (Restate_{t+1}) and of a future goodwill impairment (GWImpairment_{t+1})",
+     "source": "Audit Analytics / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Pro forma financial statement revisions",
+      "measure": "revisions of pro forma financial statement (hand-collected)",
+      "source": "Hand-collected S-4/A disclosure revision data"
+     },
+     {
+      "name": "Purchase price and goodwill-allocation revisions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected S-4/A disclosure revision data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal/firm controls per main design",
+      "source": "Compustat/CRSP/SDC/Audit Analytics"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

@@ -1,0 +1,809 @@
+{
+ "paper_id": "10.1017_s0022109019001029",
+ "title": "Less Popular but More Effective Toeholds in Corporate Takeovers",
+ "journal": "JFQA",
+ "year": 2020,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "toehold bidding theory",
+  "auction theory",
+  "free-rider theory",
+  "organizational learning theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "toehold_ownership",
+      "relation": "decreases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "toehold_ownership",
+      "relation": "decreases",
+      "to": "free_rider_problem",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "free_rider_problem",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "toehold_ownership",
+      "relation": "decreases",
+      "to": "bidding_competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidding_competition",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_uncertainty",
+    "free_rider_problem",
+    "bidding_competition"
+   ],
+   "moderators": [
+    {
+     "construct": "time",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "learning_by_doing",
+     "moderated_from": "toehold_ownership",
+     "moderated_to": "acquirer_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the over-time improvement in toehold performance is driven by the mid-1990s to early-2000s merger wave rather than more effective toehold execution"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_resistance",
+      "relation": "increases",
+      "to": "toehold_bargaining_advantage",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "toehold_bargaining_advantage",
+      "relation": "increases",
+      "to": "toehold_bidding",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "toehold_bargaining_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: the toehold acquisition causes the hostile deal attitude rather than target management resistance driving the toehold decision"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "toehold_threshold",
+      "relation": "increases",
+      "to": "rejection_cost",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "rejection_cost",
+      "relation": "decreases",
+      "to": "probability_of_toehold_bidding",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "rejection_cost"
+   ],
+   "moderators": [
+    {
+     "construct": "past_toehold_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "learning_by_doing",
+     "moderated_from": "toehold_threshold",
+     "moderated_to": "probability_of_toehold_bidding",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "toehold_threshold",
+      "relation": "increases",
+      "to": "rejection_cost",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "rejection_cost",
+      "relation": "increases",
+      "to": "toehold_size",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "rejection_cost"
+   ],
+   "moderators": [
+    {
+     "construct": "time",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "learning_by_doing",
+     "moderated_from": "toehold_threshold",
+     "moderated_to": "toehold_size",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4b"
+    },
+    {
+     "construct": "past_toehold_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "learning_by_doing",
+     "moderated_from": "toehold_threshold",
+     "moderated_to": "toehold_size",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4c"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "toehold_excess_over_threshold",
+      "relation": "increases",
+      "to": "toehold_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "toehold_benefits",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "toehold_excess_over_threshold",
+      "relation": "increases",
+      "to": "acquisition_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_cost",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "toehold_benefits",
+    "acquisition_cost"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (U.S. public acquirers and U.S. public targets)",
+  "time_period": "1990-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,661 bids"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Security Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (item #31, “Investments and Advances – Equity”)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Kenneth French’s website (market return and risk-free rates)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 – univariate comparison of acquirer returns and deal characteristics (full sample vs. toehold vs. non-toehold subsamples)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "full sample of 1,661 bids split into with-toehold and without-toehold subsamples; t-test of means and Wilcoxon rank-sum test of medians",
+    "dv": {
+     "name": "acquirer returns (toehold efficiency)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TOEHOLD (subsample split: with vs. without toehold)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TARGET_SIZE",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "TARGET_RUNUP",
+      "source": "CRSP"
+     },
+     {
+      "name": "TARGET_TURNOVER",
+      "source": "CRSP"
+     },
+     {
+      "name": "TARGET_PENNY_STOCK",
+      "source": "CRSP"
+     },
+     {
+      "name": "TARGET_NYSE|AMEX",
+      "source": "CRSP"
+     },
+     {
+      "name": "ACQUIRER_SIZE",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "POISON_PILL",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER_OFFER",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "HOSTILE attitude",
+      "source": "SDC"
+     },
+     {
+      "name": "multiple bidders",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Panel A – OLS regressions of acquirer CARs on toehold use and toehold*time",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "standard errors clustered at the acquirer level",
+    "dv": {
+     "name": "ACQUIRER_CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TOEHOLD",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD_SIZE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD*TIME (and standalone TIME)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TARGET_SIZE",
+      "source": "CRSP/SDC"
+     },
+     {
+      "name": "TARGET_RUNUP",
+      "source": "CRSP"
+     },
+     {
+      "name": "TARGET_PENNY_STOCK",
+      "source": "CRSP"
+     },
+     {
+      "name": "TARGET_NYSE|AMEX",
+      "source": "CRSP"
+     },
+     {
+      "name": "TARGET_TURNOVER",
+      "source": "CRSP"
+     },
+     {
+      "name": "ACQUIRER_SIZE",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "ACQUIRER_NYSE|AMEX",
+      "source": "CRSP"
+     },
+     {
+      "name": "HORIZONTAL (same industry)",
+      "source": "SDC"
+     },
+     {
+      "name": "POISON_PILL",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER_OFFER",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "number of acquirers",
+      "source": "SDC"
+     },
+     {
+      "name": "deal completion",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Panel B – OLS regressions excluding merger-wave deals (dropping 1994–2001)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample dropping all takeover deals announced from 1994 to 2001 (merger-wave subsample removed)",
+    "dv": {
+     "name": "ACQUIRER_CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TOEHOLD",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD_SIZE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD*TIME",
+      "measure": "interaction of toehold with TIME (year difference from base year 1990)",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control set as Panel A (target, acquirer, deal characteristics)",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 – Instrumental Variable (2SLS) regressions of toehold performance",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "ACQUIRER_EQUITY_INVESTMENT (Compustat item #31 “Investments and Advances – Equity,” adjusted via SEC EDGAR 10-K filings); linear two-stage least squares (2SLS)",
+    "sample": "",
+    "dv": {
+     "name": "ACQUIRER_CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TOEHOLD_DUMMY / TOEHOLD_SIZE (instrumented)",
+      "measure": "binary TOEHOLD_DUMMY or censored continuous TOEHOLD_SIZE (censored at zero)",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQUIRER_EQUITY_INVESTMENT (instrument)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat (item #31) adjusted using 10-K filings in SEC EDGAR"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control variables as Table 3 (target, acquirer, deal characteristics)",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 – LPM on choice of buying a toehold and OLS on toehold size (toehold threshold)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "toehold bidding choice and toehold size",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "THRESHOLD / THRESHOLD_WITH_TOEHOLD",
+      "measure": "[withheld: wording matches the source]",
+      "source": "estimated (Betton et al. (2009) model)"
+     },
+     {
+      "name": "THRESHOLD*TIME (THRESHOLD_WITH_TOEHOLD*TIME)",
+      "measure": "interaction of threshold with TIME",
+      "source": "estimated"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 – Effect of acquisition experience on toehold acquisitions (learning-by-doing)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisition-experience dataset constructed with same selection criteria as Section II.A but without CRSP/Compustat data-availability and relative-size requirements, sample starts in 1985",
+    "dv": {
+     "name": "toehold bidding choice and toehold size",
+     "measure": "linear probability of toehold bidding (LPM); and TOEHOLD_SIZE (OLS)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "EXPERIENCE (SERIAL_ACQUIRER)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "EXPERIENCE (PAST_TOEHOLD_OWNER)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "EXPERIENCE*THRESHOLD_WITH_TOEHOLD interactions",
+      "measure": "interactions of experience with THRESHOLD / THRESHOLD_WITH_TOEHOLD (and with TIME)",
+      "source": "estimated"
+     }
+    ],
+    "controls": [
+     {
+      "name": "THRESHOLD",
+      "source": "estimated"
+     },
+     {
+      "name": "same controls as Table 5 plus acquirer characteristics and ACQUIRER_EQUITY_INVESTMENT",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 – Validity-of-the-instrument tests (exclusion condition)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "ACQUIRER_EQUITY_INVESTMENT",
+    "sample": "Panel A: t-test/Wilcoxon comparison of CARs; Panel B: separate regressions by equity-investment status; Panel C: serial-acquirer proportion comparison",
+    "dv": {
+     "name": "ACQUIRER_CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "POSITIVE_ACQUIRER_EQUITY_INVESTMENT / equity-investment split",
+      "measure": "acquirers with positive equity investment vs. acquirers with zero equity investment; TOEHOLD_SIZE*POSITIVE_ACQUIRER_EQUITY_INVESTMENT interaction",
+      "source": "Compustat"
+     },
+     {
+      "name": "SERIAL_ACQUIRER (empire-builder proxy)",
+      "measure": "proportion of serial acquirers in groups with and without equity investment",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TOEHOLD_SIZE and Table 3 control set",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "66 takeovers with toeholds matched to non-toehold takeovers announced in the same year with closest propensity score (Probit-generated), 132 observations total",
+    "dv": {
+     "name": "ACQUIRER_CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TOEHOLD / TOEHOLD_SIZE and TOEHOLD*TIME",
+      "measure": "toehold dummy or toehold size, with interaction with TIME",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 – Toehold acquisition and management resistance (deal attitude): OLS, IV, and PSM",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "ACQUIRER_EQUITY_INVESTMENT",
+    "sample": "three-step test: (1) OLS of deal attitude on toeholds; (2) IV regression addressing endogeneity; (3) OLS on the propensity-score-matched sample",
+    "dv": {
+     "name": "hostile deal attitude",
+     "measure": "deal attitude (hostile) regressed on toeholds and controls",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "TOEHOLD_DUMMY / TOEHOLD_SIZE (raw and instrumented)",
+      "measure": "toehold dummy or toehold size; instrumented in the IV specification",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control variables as Table 3 (target, acquirer, deal characteristics)",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10 – Non-threshold bidding and acquirer returns (deviation from threshold, non-linear)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ACQUIRER_CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TOEHOLD-THRESHOLD",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / estimated threshold"
+     },
+     {
+      "name": "(TOEHOLD-THRESHOLD)^2",
+      "measure": "squared term of TOEHOLD-THRESHOLD (non-linear specification)",
+      "source": "SDC / estimated threshold"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Table 3 control set (target, acquirer, deal characteristics)",
+      "source": "CRSP/SDC/Compustat"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 11 – Bidders’ learning: expanded toehold sample, lagged toehold-threshold",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "TOEHOLD_SIZE (current toehold size)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "THRESHOLD",
+      "measure": "the toehold threshold",
+      "source": "estimated (Betton et al. (2009) model)"
+     },
+     {
+      "name": "LAGGED(TOEHOLD-THRESHOLD)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / estimated threshold"
+     }
+    ],
+    "controls": [
+     {
+      "name": "toehold and threshold control set",
+      "source": "SDC/estimated"
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "toehold strategies",
+    "past toehold acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "stock returns",
+    "acquirer_equity_investment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

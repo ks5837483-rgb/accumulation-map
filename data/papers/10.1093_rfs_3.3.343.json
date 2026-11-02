@@ -1,0 +1,528 @@
+{
+ "paper_id": "10.1093_rfs_3.3.343",
+ "title": "Consistent Estimation of Cross-Sectional Models in Event Studies",
+ "journal": "RFS",
+ "year": 1990,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "industrial organization economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_private_information",
+      "relation": "increases",
+      "to": "outsiders_rational_inference",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "outsiders_rational_inference",
+      "relation": "increases",
+      "to": "bidder_announcement_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "outsiders_rational_inference"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "industry_concentration",
+      "relation": "increases",
+      "to": "target_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining_power",
+      "relation": "increases",
+      "to": "target_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "industry_concentration",
+      "relation": "increases",
+      "to": "target_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining_power",
+      "relation": "decreases",
+      "to": "bidder_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "industry_concentration",
+      "relation": "increases",
+      "to": "monopolistic_rents",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "monopolistic_rents",
+      "relation": "increases",
+      "to": "regulatory_challenge",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monopolistic_rents"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "Horizontal mergers; the target's major economic activity in mining or manufacturing",
+  "country_region": "United States",
+  "time_period": "July 1963-December 1981",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "196 horizontal mergers"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "CRSP tapes",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat tapes",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's manuals",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Wall Street Journal (announcement dates of proposed mergers)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hand-compiled sample of 196 horizontal mergers (compiled by Eckbo 1985), with antitrust challenge/outcome data from the appendix of Eckbo and Wier (1985) on FTC/DOJ Section 7 Clayton Act cases",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "total sample of 196 horizontal mergers (bidders J=160, targets J=104) and challenged subsample (bidders J=67, targets J=43), 1963-1981",
+    "dv": {
+     "name": "cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "event-period dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "value-weighted market portfolio return (r_mt)",
+      "source": "CRSP"
+     },
+     {
+      "name": "constant / firm intercept (a_j, B_j)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (row 1): Government challenges a proposed merger",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "196 horizontal mergers (80 challenged, 116 unchallenged)",
+    "dv": {
+     "name": "government antitrust challenge (binary)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-compiled (Eckbo and Wier 1985 appendix; FTC/DOJ)"
+    },
+    "key_ivs": [
+     {
+      "name": "concentration ratio (CR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "number of rivals (NR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "value ratio (VR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP, Moody's manuals"
+     }
+    ],
+    "controls": [
+     {
+      "name": "constant",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (row 2): Challenge successful",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "80 challenged mergers (59 successful, 21 not)",
+    "dv": {
+     "name": "successful challenge (binary)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-compiled (Eckbo and Wier 1985 appendix; FTC/DOJ)"
+    },
+    "key_ivs": [
+     {
+      "name": "concentration ratio (CR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "number of rivals (NR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "value ratio (VR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP, Moody's manuals"
+     }
+    ],
+    "controls": [
+     {
+      "name": "constant",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (row 1): Bidders, OLS estimates of cross-sectional model (8)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "bidder subsample",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "OLS estimates of the cumulative abnormal returns (7-day CAR, day -3 through 3) of the bidder used as the dependent variable in the cross-sectional regression",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "concentration ratio (CR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "number of rivals (NR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "value ratio (VR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP, Moody's manuals"
+     },
+     {
+      "name": "payment method (PM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample"
+     },
+     {
+      "name": "takeover index (TI)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FTC Report on Mergers and Acquisitions for 1979"
+     }
+    ],
+    "controls": [
+     {
+      "name": "constant",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (row 2): Bidders, ML estimates corrected for truncation bias, no rumors (model 6)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "bidder subsample",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "ML estimates of the cross-sectional coefficients from the nonlinear truncation-corrected model of bidder 7-day CAR (day -3 through 3), under the maintained hypothesis (6) of no rumors",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "concentration ratio (CR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "number of rivals (NR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "value ratio (VR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP, Moody's manuals"
+     },
+     {
+      "name": "payment method (PM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample"
+     },
+     {
+      "name": "takeover index (TI)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FTC Report on Mergers and Acquisitions for 1979"
+     },
+     {
+      "name": "standard deviation of inside information (omega / sigma_eta)",
+      "measure": "estimated standard deviation of the bidder's inside (private) information in the nonlinear model",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "constant",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (row 3): Bidders, ML estimates with prior anticipation / rumors (model 7)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "bidder subsample",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "concentration ratio (CR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "number of rivals (NR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "value ratio (VR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP, Moody's manuals"
+     },
+     {
+      "name": "payment method (PM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample"
+     },
+     {
+      "name": "takeover index (TI)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FTC Report on Mergers and Acquisitions for 1979"
+     },
+     {
+      "name": "standard deviation of inside information (omega / sigma_eta)",
+      "measure": "estimated standard deviation of the bidder's inside (private) information in the nonlinear model",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "constant",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (row 1): Targets, OLS estimates of cross-sectional model (8)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "target subsample",
+    "dv": {
+     "name": "target cumulative abnormal return (CAR)",
+     "measure": "OLS estimates of the target's 7-day cumulative abnormal return (day -3 through 3) used as the dependent variable in the cross-sectional regression",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "concentration ratio (CR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "number of rivals (NR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "value ratio (VR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP, Moody's manuals"
+     },
+     {
+      "name": "payment method (PM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample"
+     },
+     {
+      "name": "takeover index (TI)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FTC Report on Mergers and Acquisitions for 1979"
+     }
+    ],
+    "controls": [
+     {
+      "name": "constant",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (row 2): Targets, ML estimates corrected for truncation bias, no prior anticipation (model 6)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "target subsample",
+    "dv": {
+     "name": "target cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "concentration ratio (CR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "number of rivals (NR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample (Eckbo 1985)"
+     },
+     {
+      "name": "value ratio (VR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP, Moody's manuals"
+     },
+     {
+      "name": "payment method (PM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-compiled sample"
+     },
+     {
+      "name": "takeover index (TI)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FTC Report on Mergers and Acquisitions for 1979"
+     },
+     {
+      "name": "standard deviation of inside information (omega / sigma_eta)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "constant",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

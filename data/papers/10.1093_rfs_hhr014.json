@@ -1,0 +1,732 @@
+{
+ "paper_id": "10.1093_rfs_hhr014",
+ "title": "Do Investment Banks Matter for M&amp;A Returns?",
+ "journal": "RFS",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "financial intermediation and advisor skill (skilled-advice vs passive-execution)",
+  "performance persistence theory",
+  "Berk and Green (2004) rational-markets model",
+  "relationship-specific capital and client lock-in",
+  "limited-capacity hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "skilled-advice hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_skill",
+      "relation": "increases",
+      "to": "synergistic_target_identification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergistic_target_identification",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "investment_bank_skill",
+      "relation": "increases",
+      "to": "favorable_deal_terms",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_deal_terms",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "investment_bank_skill",
+      "relation": "increases",
+      "to": "deal_selectivity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_selectivity",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergistic_target_identification",
+    "favorable_deal_terms",
+    "deal_selectivity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "passive-execution hypothesis: differential returns reflect banks being systematically mandated by skilled/empire-building clients, not bank skill",
+    "limited-capacity hypothesis: differential returns reflect capacity to accept mandates (scale), not ability"
+   ]
+  },
+  {
+   "hypothesis": "performance persistence",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "past_bank_returns",
+      "relation": "increases",
+      "to": "persistent_advisor_skill",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "persistent_advisor_skill",
+      "relation": "increases",
+      "to": "future_bank_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "persistent_advisor_skill"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "passive-execution: persistence arises because banks are systematically mandated by fixated/empire-building acquirers",
+    "limited-capacity and mismeasurement: low-RET banks execute modest-value or undermeasured deals rather than value-destructive ones"
+   ]
+  },
+  {
+   "hypothesis": "market share negatively predicts returns",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_market_share",
+      "relation": "decreases",
+      "to": "deal_selectivity",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_selectivity",
+      "relation": "increases",
+      "to": "future_bank_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_selectivity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "limited-capacity: low-RET high-share banks execute deals with small but positive value rather than value-destructive deals"
+   ]
+  },
+  {
+   "hypothesis": "clients chase past performance",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "past_bank_returns",
+      "relation": "increases",
+      "to": "client_learning_about_ability",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "client_learning_about_ability",
+      "relation": "increases",
+      "to": "future_market_share",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "client_learning_about_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "lock-in via relationship-specific capital (rather than failure to learn) as the reason past RET does not predict future mandates"
+   ]
+  },
+  {
+   "hypothesis": "relationship-specific capital (advisor retention)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "past_advisor_retention",
+      "relation": "increases",
+      "to": "relationship_specific_capital",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "relationship_specific_capital",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relationship_specific_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "market share persistence via existing relationships",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "past_market_share",
+      "relation": "increases",
+      "to": "relationship_specific_capital",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "relationship_specific_capital",
+      "relation": "increases",
+      "to": "future_market_share",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relationship_specific_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A deals across all sectors; investment-banking advisory)",
+  "country_region": "United States (acquirers with CRSP-listed stock)",
+  "time_period": "1980-2007",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "15,344 deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial's Securities Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Financial 13f filings",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compact Disclosure",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Eventus",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "12,622 obs; full sample 1980–2007",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "RUNUP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Q",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "FCF",
+      "measure": "Free cash flow / Total assets (#6)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZE",
+      "measure": "Log of Total assets (#6)",
+      "source": "Compustat"
+     },
+     {
+      "name": "HERFINDAHL",
+      "measure": "sum of squared (firm sales (#12) / industry sales) shares, industries defined by Fama-French 49",
+      "source": "Compustat"
+     },
+     {
+      "name": "SELLEXP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial 13f filings"
+     },
+     {
+      "name": "OPPERF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "INSIDER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compact Disclosure"
+     },
+     {
+      "name": "ACQSIC",
+      "measure": "Log of number of acquirer SIC codes",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "REPEAT ACQUIRER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer industry fixed effects (Fama-French 49)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank fixed effects",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (advisor identity)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Time fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer characteristics (defined in Table 1)",
+      "source": "Compustat, CRSP, Thomson Financial 13f, Compact Disclosure"
+     },
+     {
+      "name": "Acquirer fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A: Persistence in Raw Returns (quintile sort on past RET)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "banks with at least 2j deals over the relevant period; 1981–2007; Newey-West t-stats",
+    "dv": {
+     "name": "Future RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Past RET quintile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel B: Persistence in Residual Returns (quintile sort on past RETRES)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1981–2007; Newey-West t-stats",
+    "dv": {
+     "name": "Future RETRES",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Past RETRES quintile",
+      "measure": "banks sorted into quintiles on past-j-year RETRES; reported as Q5−Q1 difference",
+      "source": "CRSP; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer characteristics (embedded via CARRES residualization)",
+      "source": "Compustat, CRSP, Thomson Financial 13f, Compact Disclosure"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1981–2007; Newey-West t-stats",
+    "dv": {
+     "name": "Future RET / RETRES (transaction value-weighted)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Past RET/RETRES quintile (value-weighted)",
+      "measure": "banks sorted into quintiles on past-j-year transaction-value-weighted RET/RETRES; Q5−Q1 difference",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel D: Persistence in Returns and source of low returns (success ratio)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1981–2007",
+    "dv": {
+     "name": "Success ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "RET",
+      "measure": "correlation between one-year RET and bank success ratio; and Q5 vs Q1 success ratios by RET quintile",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Large Advisors = top two-thirds of banks by number of deals; Small Advisors = bottom third; 1981–2007",
+    "dv": {
+     "name": "Future RET",
+     "measure": "average CAR to future acquisitions over the next k calendar years",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Past RET tercile/half",
+      "measure": "large advisors sorted into terciles (T3−T1) and small advisors into halves (H2−H1) by past-j-year RET",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel A: Determinants of bank-level RET (pooled regression of future RET on past RET and past SHARE)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pooled bank-level regression; standard errors clustered by bank",
+    "dv": {
+     "name": "RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Past RET",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "SHARE (market share)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year intercepts (alpha_t)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B: Determinants of RET with RET x SHARE interaction",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pooled bank-level regression; standard errors clustered by bank",
+    "dv": {
+     "name": "RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Past RET",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "SHARE (market share)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Past RET x SHARE interaction",
+      "measure": "interaction term between past RET and past SHARE; marginal effect of past RET also evaluated at SHARE=5%",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year intercepts (alpha_t)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "performance-chasing",
+    "rational lock-in",
+    "failure to learn"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "agency variables such as governance",
+    "advisor choice"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "agency variables such as governance",
+    "relation": "affects",
+    "to": "advisor choice"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "low returns to ability",
+    "good M&A advice"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "acquirer returns",
+    "target returns",
+    "bank fixed effect",
+    "defense mandates"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "bank fixed effect",
+    "relation": "affects",
+    "to": "target returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "lock-in"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "lock-in"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "M&A business",
+    "underwriting and borrowing decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "free clients",
+    "freedom on advisor choice"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "free clients"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "advisor-selection decisions",
+    "past returns",
+    "market-share information"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "focus on returns",
+    "value-destructive transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "increased focus on returns",
+    "relation": "decreases",
+    "to": "accepting value-destructive transactions"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,787 @@
+{
+ "paper_id": "10.1093_rfs_hhr109",
+ "title": "Takeovers and Divergence of Investor Opinion",
+ "journal": "RFS",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "divergence of investor opinion theory",
+  "Miller (1977) heterogeneous beliefs model",
+  "short-sale constraints",
+  "investor sentiment theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divergence_of_opinion",
+      "relation": "increases",
+      "to": "demand_curve_slope",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_curve_slope",
+      "relation": "increases",
+      "to": "total_takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "demand_curve_slope"
+   ],
+   "moderators": [
+    {
+     "construct": "supermajority_requirement",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "demand_curve_slope",
+     "moderated_from": "divergence_of_opinion",
+     "moderated_to": "total_takeover_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1 (supermajority robustness check)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sample selection: firms with higher divergence of opinion are more likely to receive/complete a bid, biasing the premium regression",
+    "spurious correlation from a common denominator (target stock price) shared by analyst-dispersion and the premium measures"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divergence_of_opinion",
+      "relation": "increases",
+      "to": "demand_curve_slope",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_curve_slope",
+      "relation": "increases",
+      "to": "pre_announcement_run_up",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "divergence_of_opinion",
+      "relation": "increases",
+      "to": "demand_curve_slope",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "demand_curve_slope",
+      "relation": "increases",
+      "to": "post_announcement_markup",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "demand_curve_slope"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H3a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_investor_sentiment",
+      "relation": "increases",
+      "to": "reliance_on_soft_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reliance_on_soft_information",
+      "relation": "increases",
+      "to": "divergence_of_opinion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reliance_on_soft_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firm-specific investor sentiment (rather than market-wide sentiment) drives the target's divergence of opinion"
+   ]
+  },
+  {
+   "hypothesis": "H3b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_investor_sentiment",
+      "relation": "increases",
+      "to": "divergence_of_opinion",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "divergence_of_opinion",
+      "relation": "increases",
+      "to": "total_takeover_premium",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "divergence_of_opinion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divergence_of_opinion",
+      "relation": "increases",
+      "to": "expected_takeover_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_takeover_premium",
+      "relation": "decreases",
+      "to": "probability_of_being_takeover_target",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_takeover_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divergence_of_opinion",
+      "relation": "increases",
+      "to": "takeover_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_price",
+      "relation": "increases",
+      "to": "takeover_synergy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "takeover_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms; acquisitions of publicly traded targets)",
+  "country_region": "United States",
+  "time_period": "1984-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,381 deals (2,069 completed and 312 failed)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P's Compustat files",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Securities Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CDA/Spectrum Mutual Funds Historical Files (institutional investor and mutual fund holdings)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Baker and Wurgler (2006) annual sentiment index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P 500 P/E ratio (Shiller 2000)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IRRC (supermajority requirement information)",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Yu (2010) market-level divergence of opinion series",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - Takeover premium by deal characteristics (univariate)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "whole sample of 2,381 deals (difference-in-means t-tests and Wilcoxon signed-rank tests)",
+    "dv": {
+     "name": "total takeover premium (return- and value-based)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "deal-characteristic subsample splits",
+      "measure": "completed vs failed, tender vs nontender, hostile vs friendly, small vs large targets, all-cash vs all-stock, diversifying vs nondiversifying, bubble (1999-2000) vs nonbubble",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Return-based total premium regressions (test of H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed takeovers (OLS in columns 1-8; median regressions in columns 9-10)",
+    "dv": {
+     "name": "return-based total takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "dummy of high analyst dispersion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "idiosyncratic volatility",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "percentage of stock component in payment",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of diversifying takeovers",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of tender offers",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of hostile takeovers",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of competing offers",
+      "source": "SDC"
+     },
+     {
+      "name": "toehold dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "target market capitalization (target size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ratio of market capitalizations between bidder and target",
+      "source": "CRSP"
+     },
+     {
+      "name": "target market-to-book ratio",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "institutional investor holding of target shares",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "target adjusted trading turnover",
+      "source": "CRSP"
+     },
+     {
+      "name": "target merger liquidity index",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "delta Hold (when delta Breadth is the IV)",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "year dummies (some specifications)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Value-based total premium regressions (test of H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed takeover deals (OLS in columns 1-8; median regressions in columns 9-10)",
+    "dv": {
+     "name": "value-based total takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "dummy of high analyst dispersion",
+      "measure": "targets with analyst dispersion above the median dispersion in their group (grouped by number of analyst forecasts)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "idiosyncratic volatility",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "percentage of stock component in payment",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of diversifying takeovers",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of tender offers",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of hostile takeovers",
+      "source": "SDC"
+     },
+     {
+      "name": "dummy of competing offers",
+      "source": "SDC"
+     },
+     {
+      "name": "toehold dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "target market capitalization",
+      "source": "CRSP"
+     },
+     {
+      "name": "ratio of market capitalizations between bidder and target",
+      "source": "CRSP"
+     },
+     {
+      "name": "target market-to-book ratio",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "institutional investor holding of target shares",
+      "source": "CDA/Spectrum"
+     },
+     {
+      "name": "target adjusted trading turnover",
+      "source": "CRSP"
+     },
+     {
+      "name": "target merger liquidity index",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "delta Hold (when delta Breadth is the IV)",
+      "source": "CDA/Spectrum"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Robustness of total premium regressions (Panels A-D; test of H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Panel A = completed + failed takeovers; Panel B = large-capitalization targets; Panels C-D = completed takeovers",
+    "dv": {
+     "name": "return- and value-based total takeover premium",
+     "measure": "cumulative abnormal target return in window [-63, 126] (return-based) and value premium relative to target equity value on day -64 (value-based)",
+     "source": "CRSP / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion / high-dispersion dummy / delta Breadth / idiosyncratic volatility",
+      "measure": "same four divergence-of-opinion proxies as in Tables 5 and 6",
+      "source": "I/B/E/S / CDA/Spectrum / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as regression 1",
+      "source": "SDC/CRSP/Compustat/CDA-Spectrum"
+     },
+     {
+      "name": "market-level divergence of opinion (Panel C)",
+      "source": "Yu (2010)"
+     },
+     {
+      "name": "inverse of target stock price at day -64 (Panel D)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Heckman selection model, premium equation (test of H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "premium equation on targets in completed and failed takeovers; selection equation on all Compustat firms 1984-2004",
+    "dv": {
+     "name": "return- and value-based takeover premium",
+     "measure": "return-based and value-based takeover premiums as dependent variable in the premium equation (same as regression 1)",
+     "source": "CRSP / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion / high-dispersion dummy / delta Breadth / idiosyncratic volatility",
+      "measure": "same four divergence-of-opinion proxies",
+      "source": "I/B/E/S / CDA/Spectrum / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as regression 1",
+      "source": "SDC/CRSP/Compustat/CDA-Spectrum"
+     },
+     {
+      "name": "inverse Mills ratio from selection equation",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 - Post-announcement markup (Panels A, B) and run-up (Panel C) regressions (test of H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed takeovers",
+    "dv": {
+     "name": "return-based markup, value-based markup, and pre-announcement run-up",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion / high-dispersion dummy / delta Breadth / idiosyncratic volatility",
+      "measure": "same four divergence-of-opinion proxies constructed prior to trading day -63",
+      "source": "I/B/E/S / CDA/Spectrum / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as regression 1",
+      "source": "SDC/CRSP/Compustat/CDA-Spectrum"
+     }
+    ]
+   },
+   {
+    "label": "Table 10 - Robustness: alternative markup/run-up windows (test of H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed takeovers",
+    "dv": {
+     "name": "run-up, announcement return, and markup over alternative windows",
+     "measure": "pre-announcement run-up = cumulative abnormal target stock return in window [-63, -3]; target announcement return = window [-2, 2]; post-announcement markup = window [3, 126]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion / high-dispersion dummy / delta Breadth / idiosyncratic volatility",
+      "measure": "same four divergence-of-opinion proxies",
+      "source": "I/B/E/S / CDA/Spectrum / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as regression 1",
+      "source": "SDC/CRSP/Compustat/CDA-Spectrum"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed deals",
+    "dv": {
+     "name": "target's divergence of opinion",
+     "measure": "target's analyst dispersion, idiosyncratic volatility, or delta Breadth (in window [-126, -64])",
+     "source": "I/B/E/S / CRSP / CDA/Spectrum"
+    },
+    "key_ivs": [
+     {
+      "name": "market-level investor sentiment",
+      "measure": "annual S&P 500 P/E ratio and Baker and Wurgler (2006) annual sentiment index, measured in the year the divergence proxies are measured",
+      "source": "S&P 500 P/E (Shiller 2000) / Baker and Wurgler (2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target market capitalization",
+      "source": "CRSP"
+     },
+     {
+      "name": "adjusted target market-to-book ratio",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "adjusted target trading turnover",
+      "source": "CRSP"
+     },
+     {
+      "name": "number of financial analysts (in analyst-dispersion regressions)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "target's delta Hold and lagged breadth of ownership (in delta Breadth regressions)",
+      "source": "CDA/Spectrum"
+     }
+    ]
+   },
+   {
+    "label": "Table 12 - Takeover premium/markup/run-up on market-level sentiment (Panel A) and with divergence control (Panel B) (test of H3b)",
+    "hypotheses": [
+     "H3b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed takeovers",
+    "dv": {
+     "name": "total return premium, total value premium, return-based markup, value-based markup, run-up",
+     "measure": "total return premium = cumulative abnormal target return in window [-63, 126]; total value premium = premium of offer price relative to target's stock price on day -64; return-based markup = window [0, 126]; value-based markup = premium relative to target's stock price on day -1; run-up = cumulative abnormal target return in window [-63, -1]",
+     "source": "CRSP / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "market-level investor sentiment",
+      "measure": "S&P 500 P/E ratio and Baker and Wurgler (2006) sentiment index",
+      "source": "S&P 500 P/E (Shiller 2000) / Baker and Wurgler (2006)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as previous premium regressions",
+      "source": "SDC/CRSP/Compustat/CDA-Spectrum"
+     },
+     {
+      "name": "target's divergence of opinion (Panel B only: analyst dispersion / idiosyncratic volatility / delta Breadth)",
+      "source": "I/B/E/S / CRSP / CDA/Spectrum"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 selection equation / probit - likelihood of being a takeover target (test of H4)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion / high-dispersion dummy / idiosyncratic volatility / delta Breadth",
+      "measure": "divergence-of-opinion proxies measured in the last three months of the prior fiscal year",
+      "source": "I/B/E/S / CRSP / CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "property, plant, and equipment to assets ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash and short-term investments to assets ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "log of market capitalization",
+      "source": "CRSP"
+     },
+     {
+      "name": "debt-to-assets ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "return on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 13 - Takeover synergy regressions (Panel A OLS, Panel B Heckman; test of H5)",
+    "hypotheses": [
+     "H5"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed takeovers (Panel A OLS; Panel B Heckman selection-model premium equation)",
+    "dv": {
+     "name": "takeover synergy (abnormal return synergy)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "analyst dispersion / high-dispersion dummy / idiosyncratic volatility / delta Breadth",
+      "measure": "same four divergence-of-opinion proxies",
+      "source": "I/B/E/S / CRSP / CDA/Spectrum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as regression 1",
+      "source": "SDC/CRSP/Compustat/CDA-Spectrum"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "target size",
+    "deal value",
+    "i/b/e/s",
+    "cda/spectrum"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,724 @@
+{
+ "paper_id": "10.2308_tar-2022-0327",
+ "title": "How Do Investors Respond to Targets’ Interim Earnings?",
+ "journal": "AR",
+ "year": 2023,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "disclosure processing costs theory",
+  "investor inattention",
+  "market efficiency",
+  "earnings-return relation (value relevance)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "nonsignificant",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "target_interim_unexpected_earnings",
+      "relation": "increases",
+      "to": "earnings_accruing_to_current_target_owners",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_accruing_to_current_target_owners",
+      "relation": "increases",
+      "to": "target_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_accruing_to_current_target_owners"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the interim earnings-return relation reflects the deal premium/consideration impounding target interim earnings rather than a genuine target-price response to the earnings"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "nonsignificant",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "target_interim_unexpected_earnings",
+      "relation": "increases",
+      "to": "earnings_accruing_to_current_target_owners",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_accruing_to_current_target_owners",
+      "relation": "increases",
+      "to": "target_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_accruing_to_current_target_owners"
+   ],
+   "moderators": [
+    {
+     "construct": "eventual_deal_withdrawal",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "earnings_accruing_to_current_target_owners",
+     "moderated_from": "target_interim_unexpected_earnings",
+     "moderated_to": "target_stock_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target interim earnings themselves drive the likelihood of deal completion, so the outcome-dependent response reflects earnings affecting deal completion rather than investors anticipating the outcome"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_interim_unexpected_earnings",
+      "relation": "increases",
+      "to": "earnings_accruing_to_acquirer_owners",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_accruing_to_acquirer_owners",
+      "relation": "increases",
+      "to": "acquirer_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_interim_unexpected_earnings",
+      "relation": "increases",
+      "to": "litigation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "litigation_risk",
+      "relation": "decreases",
+      "to": "acquirer_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "target_interim_unexpected_earnings",
+      "relation": "decreases",
+      "to": "post_acquisition_performance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "post_acquisition_performance",
+      "relation": "increases",
+      "to": "acquirer_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_accruing_to_acquirer_owners",
+    "litigation_risk",
+    "post_acquisition_performance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the absence of an acquirer price response reflects investors being unaware of the deal (awareness costs) rather than integration/disclosure processing costs"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "nonsignificant",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "target_interim_unexpected_earnings",
+      "relation": "increases",
+      "to": "disclosure_processing_costs",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "disclosure_processing_costs",
+      "relation": "increases",
+      "to": "combined_firm_future_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disclosure_processing_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "disclosure_processing_costs",
+     "moderated_from": "target_interim_unexpected_earnings",
+     "moderated_to": "combined_firm_future_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3_supplemental"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "",
+  "time_period": "1984-2017 (deals announced)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,728 unique transactions (1,405 completed, 323 withdrawn); 2,668 interim target earnings announcements"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Refinitiv",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RavenPack",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Ken French's website",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (Pre-Announcement Abnormal Returns Tests, Eq. 1, 4 columns)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "pre-deal-announcement earnings announcements (target n=18,491; acquirer n=16,399)",
+    "dv": {
+     "name": "CAR (Firm A abnormal return around earnings announcement)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Firm's own unexpected earnings (Target_UE / Acquirer_UE)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "Firm B's unexpected earnings divided by Firm A's (counterparty's) market value",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB (market-to-book)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss (Firm B reports a loss)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAR_Prior (prior-month returns, –35 to –6)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Same_EA_Date",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "UE_Overlap",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Industry fixed effects (Fama-French 1997 12-industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fiscal year-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "all interim target earnings announcements (n=2,668); column (2) restricts to majority-cash deals (>50% cash consideration, n=1,198)",
+    "dv": {
+     "name": "CARTarget",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target_UE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Assets)Target",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTBTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "LeverageTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "LossTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAR_PriorTarget",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry fixed effects (Fama-French 1997 12-industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fiscal year-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1b"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "interim target earnings announcements partitioned by eventual deal outcome: completed (n=2,067) vs withdrawn (n=601)",
+    "dv": {
+     "name": "CARTarget",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target_UE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Assets)Target",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTBTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "LeverageTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "LossTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAR_PriorTarget",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry fixed effects (Fama-French 1997 12-industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fiscal year-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "all interim EAs (n=2,668); col (2) completed (n=2,067); col (3) withdrawn (n=601)",
+    "dv": {
+     "name": "CARAcquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target_UEScaled for Acquirer",
+      "measure": "the target's unexpected earnings divided by the acquirer's market value (rescaled to the size of the acquirer)",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Assets)Acquirer",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTBAcquirer",
+      "source": "Compustat"
+     },
+     {
+      "name": "LeverageAcquirer",
+      "source": "Compustat"
+     },
+     {
+      "name": "LossTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAR_PriorAcquirer",
+      "source": "CRSP"
+     },
+     {
+      "name": "Same_EA_Date",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "UE_Overlap",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Industry fixed effects (Fama-French 1997 12-industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fiscal year-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed deals only (col 1 n=1,405 one obs/deal; cols 2-3 n=11,106 quarterly obs, eight quarters post-close)",
+    "dv": {
+     "name": "BHARCombined / CARCombined / Combined_UE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Sum of Target_UEScaled for Acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Assets)Acquirer",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTBAcquirer",
+      "source": "Compustat"
+     },
+     {
+      "name": "LeverageAcquirer",
+      "source": "Compustat"
+     },
+     {
+      "name": "LossTarget",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAR_PriorAcquirer",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry fixed effects (Fama-French 1997 12-industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fiscal year-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (Fama-French Five-Factor Returns; long-short quintile and implementable trading strategy, Eq. 3)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed deals; calendar-time monthly portfolios over two years after deal completion (Panel A quintiles ~279-286 firms each; Panel B implementable positive n=657 / negative n=518)",
+    "dv": {
+     "name": "Monthly excess stock return of combined firm (R_C − R_f)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Sum of Target_UEScaled for Acquirer (quintile assignment)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MKT_RF (market factor)",
+      "source": "Ken French's website"
+     },
+     {
+      "name": "SMB (size factor)",
+      "source": "Ken French's website"
+     },
+     {
+      "name": "HML (value factor)",
+      "source": "Ken French's website"
+     },
+     {
+      "name": "UMD (momentum, Carhart 1997)",
+      "source": "Ken French's website"
+     },
+     {
+      "name": "STR (short-term reversal factor)",
+      "source": "Ken French's website"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "high-media-attention interim acquirer-to-target EAs (top tercile; n=368 col 1, n=335 col 2)",
+    "dv": {
+     "name": "CARAcquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target_UEScaled for Acquirer",
+      "measure": "the target's unexpected earnings divided by the acquirer's market value",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Media attention (High)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RavenPack"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Assets)Acquirer, MTBAcquirer, LeverageAcquirer, LossTarget, CAR_PriorAcquirer, Same_EA_Date, UE_Overlap",
+      "source": "Compustat/CRSP/I/B/E/S"
+     },
+     {
+      "name": "Industry fixed effects (Fama-French 1997 12-industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fiscal year-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed deals with low institutional ownership (Panel B n=937 col 1 / n=7,403 cols 2-3)",
+    "dv": {
+     "name": "BHARCombined / CARCombined / Combined_UE (Panel B); combined-firm monthly excess returns (Panel C)",
+     "measure": "Panel B: two-year value-weighted BHAR, three-day CAR around combined-firm EAs over eight quarters, and sum of combined-firm unexpected earnings; Panel C: Fama-French five-factor long-short alpha (annualized return)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Sum of Target_UEScaled for Acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Institutional ownership (Low)",
+      "measure": "excluding firms in the top tercile (Panel B) / top quintile (Panel C) of institutional ownership",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Assets)Acquirer, MTBAcquirer, LeverageAcquirer, LossTarget, CAR_PriorAcquirer",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Fama-French / Carhart / STR factors (Panel C)",
+      "source": "Ken French's website"
+     },
+     {
+      "name": "Industry and fiscal year-quarter fixed effects",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Panel A all/completed/withdrawn interim EAs (n=2,668/2,067/601); Panel B completed deals (n=1,405 / 11,106)",
+    "dv": {
+     "name": "CARAcquirer (Panel A); BHARCombined/CARCombined/Combined_UE (Panel B); combined-firm monthly excess returns (Panel C)",
+     "measure": "same DVs as Tables 6, 7, and 8 respectively, re-estimated with unscaled unexpected earnings",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target_UE / Sum of Target_UE (unscaled)",
+      "measure": "target unexpected earnings (and the interim sum) unscaled, i.e., not divided by acquirer market value",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Tables 6-8 (Log(Assets), MTB, Leverage, Loss, CAR_Prior, Same_EA_Date/UE_Overlap where applicable)",
+      "source": "Compustat/CRSP/I/B/E/S"
+     },
+     {
+      "name": "Industry and fiscal year-quarter fixed effects",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "targets’ interim earnings",
+    "stock price of the acquiring firm"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "targets’ interim earnings",
+    "relation": "affects",
+    "to": "stock price of the acquiring firm"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "earnings news",
+    "equity prices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "earnings news",
+    "relation": "affects",
+    "to": "equity prices"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "interim earnings news",
+    "return"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,526 @@
+{
+ "paper_id": "10.2308/accr-50960",
+ "title": "Shell Games: The Long-Term Performance of Chinese Reverse-Merger Firms",
+ "journal": "AR",
+ "year": 2014,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "certification theory",
+  "cash flow life cycle theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "chinese_origin",
+      "relation": "increases",
+      "to": "firm_maturity",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "firm_maturity",
+      "relation": "increases",
+      "to": "post_listing_performance",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "chinese_origin",
+      "relation": "increases",
+      "to": "candidate_pool_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "candidate_pool_quality",
+      "relation": "increases",
+      "to": "post_listing_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_maturity",
+    "candidate_pool_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the superior returns of CRMs are driven by the booming Chinese economy rather than firm quality",
+    "CRM outperformance reflects differences in probability of survival or distributional skewness (lottery-pick outliers) rather than fundamental quality"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pipe_financing",
+      "relation": "increases",
+      "to": "quality_certification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "quality_certification",
+      "relation": "increases",
+      "to": "post_listing_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "quality_certification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (reverse-merger firms across 48 Fama-French industry classifications; no focal sector)",
+  "country_region": "U.S. stock markets; reverse-merger firms by country of origin: China (146), U.S. (251), and other countries (27)",
+  "time_period": "[withheld: wording matches the source]",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "424 RMs (146 Chinese, 251 U.S., 27 other)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "DataStream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10-K filings (EDGAR) - hand-collected exchange/listing status, audit opinion, and PIPE financing details",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "424 RMs and 424 exchange-industry-date-size-matched control firms (CLs), Year T",
+    "dv": {
+     "name": "firm financial health and performance characteristics",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat; DataStream; 10-K filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "RM vs. CL group",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": [
+     {
+      "name": "matched on exchange (listing venue)",
+      "source": "10-K filings (EDGAR); CRSP"
+     },
+     {
+      "name": "matched on industry (48 Fama-French [1997] classifications)",
+      "source": "Compustat"
+     },
+     {
+      "name": "matched on date (of RM's first 10-K filing)",
+      "source": "10-K filings (EDGAR)"
+     },
+     {
+      "name": "matched on size (market capitalization, MCAP)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B & C: Summary Statistics for CRMs vs. U.S. RMs (Year T) and PIPE financing amounts",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "Panel B: 146 CRMs and 251 U.S. RMs; Panel C: 80 CRMs and 178 U.S. RMs with non-missing PIPE financing",
+    "dv": {
+     "name": "firm characteristics and PIPE financing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat; DataStream; 10-K filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "China Factor (CRM vs. U.S. RM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panels A & B: Distribution by Exchange and Survival Rates (Year T to T+3), RMs vs. CLs and CRMs vs. U.S. RMs",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Panel A: 424 RMs vs. 424 CLs; Panel B: 146 CRMs vs. 251 U.S. RMs",
+    "dv": {
+     "name": "listing exchange distribution / survival status",
+     "measure": "distribution across NMS, OTCBB, PINK (Pink Sheet), DEAD (deregistered/registration revoked), and ACQ (acquired) at Year T and each of the next three anniversary dates; Chi-square test of distribution equality",
+     "source": "10-K filings (EDGAR); DataStream; hand-collected listing status"
+    },
+    "key_ivs": [
+     {
+      "name": "RM vs. CL / CRM vs. U.S. RM group",
+      "measure": "RM indicator (1 for RMs, 0 for CLs); CN indicator (1 for CRMs, 0 for U.S. RMs)",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Panel A: Logistic regression of upward/downward exchange mobility, RMs vs. CLs (Equations 1 and 2)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "424 RMs and 424 CLs, over three post-10-K time periods",
+    "dv": {
+     "name": "UP / DOWN exchange mobility",
+     "measure": "[withheld: wording matches the source]",
+     "source": "10-K filings (EDGAR); hand-collected listing status"
+    },
+    "key_ivs": [
+     {
+      "name": "RM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": [
+     {
+      "name": "INTRODUCTION (life-cycle indicator)",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Compustat"
+     },
+     {
+      "name": "MATURE",
+      "source": "Compustat"
+     },
+     {
+      "name": "SHAKE-OUT",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZE (logarithm of MCAP)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B: Logistic regression of upward/downward exchange mobility, CRMs vs. U.S. RMs",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "146 CRMs and 251 U.S. RMs, over three post-10-K time periods",
+    "dv": {
+     "name": "UP / DOWN exchange mobility",
+     "measure": "UP and DOWN indicators as defined in Equations 1 and 2, measured over T to T+1, T+2, T+3",
+     "source": "10-K filings (EDGAR); hand-collected listing status"
+    },
+    "key_ivs": [
+     {
+      "name": "CN (China Factor)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": [
+     {
+      "name": "life-cycle stage indicators (INTRODUCTION, GROWTH, MATURE, SHAKE-OUT)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZE (logarithm of MCAP)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel A: Difference-in-differences univariate comparison of future performance (CRMs vs. U.S. RMs, adjusting for matched CLs)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "future operating performance and market liquidity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat; DataStream; 10-K filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "China Factor via DID",
+      "measure": "difference-in-differences of RM-minus-CL paired differences between CRMs and U.S. RMs, eliminating effects of size, exchange, industry, and time",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": [
+     {
+      "name": "size, exchange, industry, time (removed via matching/DID)",
+      "source": "Compustat; 10-K filings (EDGAR)"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: Difference-in-differences multivariate regression of future performance (Equation 3, RM x CN interaction)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "future performance metric (VAR): ROA, CFO, AUQ, SPREAD",
+     "measure": "VAR(t+i) = each performance metric (ROA, CFO, AUQ, or SPREAD) in years T+1, T+2, T+3",
+     "source": "Compustat; DataStream; 10-K filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "RM x CN interaction (b3, the DID estimator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": [
+     {
+      "name": "INTRODUCTION, GROWTH, MATURE, SHAKE-OUT (life-cycle indicators)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZE (logarithm of MCAP)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panels A & B: Future stock returns comparison, CRMs vs. U.S. RMs (raw and country-index-adjusted)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "146 CRMs and 251 U.S. RMs surviving over the relevant return windows",
+    "dv": {
+     "name": "annual buy-hold stock returns",
+     "measure": "annual buy-hold raw returns computed from DataStream monthly returns (data type = RI), adjusted for delisting (set to -100 percent) and acquisition; Panel B subtracts the market index return of the country of domicile (China A-share index for CRMs, S&P 500 for U.S. RMs); returns over 12 months starting four months after each anniversary date, plus three-year cumulative",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "China Factor (CRM vs. U.S. RM)",
+      "measure": "CN indicator (CRM vs. U.S. RM)",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": [
+     {
+      "name": "country market index return (Panel B only: China A-share / S&P 500)",
+      "source": "DataStream"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "matched CRM-CL and U.S. RM-CL pairs, three post-10-K years",
+    "dv": {
+     "name": "future stock returns (DID)",
+     "measure": "paired difference in future stock returns between RMs and matched CLs (RM-CL), and DID between CRM-CL (a) and US-CL (b), eliminating effects of size, exchange, time, and industry",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "China Factor via DID",
+      "measure": "difference-in-differences of RM-minus-CL return differences between CRMs and U.S. RMs",
+      "source": "DealFlow Media (DFM) Reverse Merger Report"
+     }
+    ],
+    "controls": [
+     {
+      "name": "size, exchange, time, industry (removed via matching/DID)",
+      "source": "Compustat; 10-K filings (EDGAR)"
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel A: Predicting future outcomes of CRMs from Year-T characteristics",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "CRMs (logit for UP/DOWN via Wald chi-square; OLS/t-tests for RETCLA and RETMKA)",
+    "dv": {
+     "name": "future prospects: UP, DOWN, RETCLA, RETMKA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "10-K filings (EDGAR); DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "PIPE financing and Year-T firm characteristics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "10-K filings (EDGAR); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "INTRODUCTION, GROWTH, MATURE, SHAKE-OUT (life-cycle indicators)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel B: Predicting future outcomes of U.S. RMs from Year-T characteristics",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "U.S. RMs (logit for UP/DOWN; OLS for RETCLA and RETMKA)",
+    "dv": {
+     "name": "future prospects: UP, DOWN, RETCLA, RETMKA",
+     "measure": "UP / DOWN exchange mobility indicators; RETCLA = control-adjusted three-year cumulative return; RETMKA = country-market-index-adjusted three-year cumulative return",
+     "source": "10-K filings (EDGAR); DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "PIPE financing and Year-T firm characteristics",
+      "measure": "PIPE indicator; ROA; AUQ; LEV; SIZE",
+      "source": "10-K filings (EDGAR); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "INTRODUCTION, GROWTH, MATURE, SHAKE-OUT (life-cycle indicators)",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "return calculations",
+    "actual returns",
+    "stock prices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "international cooperation",
+    "accounting fraud"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "diplomacy",
+    "audit work"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "regulation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "regulatory efforts",
+    "risks associated with stocks",
+    "otc/pink sheet stocks"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "market regulation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "crms",
+    "u.s. markets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

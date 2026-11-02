@@ -1,0 +1,591 @@
+{
+ "paper_id": "10.2308_accr-52045",
+ "title": "Investor Demand for Internal Control Audits of Large U.S. Companies: Evidence from a Regulatory Exemption for M&amp;A Transactions",
+ "journal": "AR",
+ "year": 2018,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "demand for assurance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "opt_out_of_internal_control_audit",
+      "relation": "decreases",
+      "to": "information_quality",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_quality",
+      "relation": "increases",
+      "to": "investor_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "opt_out_of_internal_control_audit",
+      "relation": "decreases",
+      "to": "financial_reporting_credibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_reporting_credibility",
+      "relation": "increases",
+      "to": "investor_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_quality",
+    "financial_reporting_credibility"
+   ],
+   "moderators": [
+    {
+     "construct": "proportion_of_operations_excluded_from_audit",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_quality",
+     "moderated_from": "opt_out_of_internal_control_audit",
+     "moderated_to": "investor_reaction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "ex_ante_information_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_quality",
+     "moderated_from": "opt_out_of_internal_control_audit",
+     "moderated_to": "investor_reaction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the market reaction reflects earnings news or a correlated omitted variable rather than the opt-out disclosure",
+    "investors are overreacting to the opt-out disclosure (returns should later reverse)",
+    "opt-out signals underlying problems with the acquisition that will be reflected in future operating performance"
+   ]
+  },
+  {
+   "hypothesis": "Restatement (supplemental prediction)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "opt_out_of_internal_control_audit",
+      "relation": "decreases",
+      "to": "financial_reporting_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_reporting_quality",
+      "relation": "decreases",
+      "to": "restatement_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_reporting_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Future internal control deficiencies (supplemental prediction)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "opt_out_of_internal_control_audit",
+      "relation": "decreases",
+      "to": "internal_control_quality",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "internal_control_quality",
+      "relation": "decreases",
+      "to": "future_material_weakness",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "internal_control_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (large U.S. public companies / accelerated filers subject to SOX Section 404(b), spanning Fama-French 12 industries)",
+  "country_region": "United States",
+  "time_period": "2005-2013",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,803 acquisitions (925 companies)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10-K filings (internal control audit opinions / opt-out disclosures and filing dates)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Factiva",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4: Determinants of Opt-Out Decisions (Equation 1, Probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Opt-Out",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics / 10-K filings"
+    },
+    "key_ivs": [
+     {
+      "name": "Months Out",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / 10-K filings"
+     },
+     {
+      "name": "Target Size",
+      "measure": "size of the acquired target relative to the acquirer (transaction value scaled)",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "Domestic",
+      "measure": "indicator for whether the target is a U.S. (non-foreign) company",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying",
+      "measure": "indicator for a diversifying acquisition",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "Busy Season",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / Compustat"
+     },
+     {
+      "name": "Size",
+      "measure": "company size (t-1)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target SOX Experience (Target 404(b) Experience)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Target ICD",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Private",
+      "source": "SDC"
+     },
+     {
+      "name": "M&A Announcement",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock Financing",
+      "source": "SDC"
+     },
+     {
+      "name": "ICD (t-1)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Segments",
+      "source": "Compustat"
+     },
+     {
+      "name": "Std Stock Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book to Market",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Audit Firm fixed effects",
+      "source": "Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR10-K",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Opt-Out",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / 10-K filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ICD10-K (adverse internal control audit opinion)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Restatement(t-1,t+1)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Auditor Change(t-1,t+1)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "D&O Change(t-1,t+1)",
+      "source": "Audit Analytics / 10-K filings"
+     },
+     {
+      "name": "Non-Timely(t-1,t+1)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Financial News(t-1,t+1)",
+      "source": "other (news of dividends, reorganizations, stock issuances, splits)"
+     },
+     {
+      "name": "Earnings Ann(t-1,t+1)",
+      "source": "CRSP / I/B/E/S"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (or Company fixed effects)",
+      "source": ""
+     },
+     {
+      "name": "Opt-out determinants (Equation 1 variables, full-controls models)",
+      "source": "SDC / Compustat / Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Columns 1-2): Opt-Out interacted with Large Target - test of H2",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR10-K",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Opt-Out x Large Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Opt-Out (main effect)",
+      "source": "Audit Analytics / 10-K filings"
+     },
+     {
+      "name": "Large Target (main effect)",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "CAR model controls (ICD10-K, Restatement, Auditor Change, D&O Change, Non-Timely, Financial News, Earnings Ann)",
+      "source": "Audit Analytics / CRSP"
+     },
+     {
+      "name": "Industry or Company fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Columns 3-8): Opt-Out interacted with information-uncertainty proxies - test of H3",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR10-K",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Opt-Out x High Return Volatility",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Opt-Out x High Bid-Ask Spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Opt-Out x High Adverse Selection",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Opt-Out (main effect)",
+      "source": "Audit Analytics / 10-K filings"
+     },
+     {
+      "name": "Uncertainty proxy main effects",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAR model controls (ICD10-K, Restatement, Auditor Change, D&O Change, Non-Timely, Financial News, Earnings Ann)",
+      "source": "Audit Analytics / CRSP"
+     },
+     {
+      "name": "Industry or Company fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A: Likelihood of Opt-Out around AS5 (exogenous shock)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "PCAOB Auditing Standard No. 5 (AS5), passed 2007",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Opt-Out",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics / 10-K filings"
+    },
+    "key_ivs": [
+     {
+      "name": "AS5 (post-AS5 indicator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-coded from regulatory date"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Opt-out determinants (Equation 1 variables)",
+      "source": "SDC / Compustat / Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel B: Market Reaction to Opt-Out around AS5 (exogenous shock)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "PCAOB Auditing Standard No. 5 (AS5), passed 2007",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR10-K",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Opt-Out x AS5",
+      "measure": "Opt-Out interacted with the post-AS5 indicator (period after passage of PCAOB Auditing Standard No. 5 in 2007)",
+      "source": "Audit Analytics / regulatory date"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Opt-Out (main effect)",
+      "source": "Audit Analytics / 10-K filings"
+     },
+     {
+      "name": "AS5 (main effect)",
+      "source": "regulatory date"
+     },
+     {
+      "name": "CAR model controls (ICD10-K, Restatement, Auditor Change, D&O Change, Non-Timely, Financial News, Earnings Ann)",
+      "source": "Audit Analytics / CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Additional Analysis: Impact of Acquisition Timing (First Half)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR10-K",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "First Half",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / 10-K filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Opt-Out",
+      "source": "Audit Analytics / 10-K filings"
+     },
+     {
+      "name": "CAR model controls",
+      "source": "Audit Analytics / CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "opt-out",
+    "subsequent internal control reporting quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "opt-out",
+    "relation": "unspecified",
+    "to": "subsequent internal control reporting quality"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "accruals measures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "material control weaknesses",
+    "future reported internal control weaknesses"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

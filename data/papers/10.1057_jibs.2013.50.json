@@ -1,0 +1,997 @@
+{
+ "paper_id": "10.1057_jibs.2013.50",
+ "title": "Spatial geography and control in foreign acquisitions",
+ "journal": "JIBS",
+ "year": 2013,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information asymmetry",
+  "transaction cost theory",
+  "agency theory",
+  "real options theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "equity_ownership",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "increases",
+      "to": "moral_hazard",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "moral_hazard",
+      "relation": "increases",
+      "to": "equity_ownership",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection",
+    "moral_hazard"
+   ],
+   "moderators": [
+    {
+     "construct": "public_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "risk_tolerance",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "equity_ownership",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "acquisition_relatedness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "equity_ownership",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "cultural distance and institutional distance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border acquisitions, no focal sector; industries classified by four-digit SIC codes with industry fixed effects)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2002-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "10,181 deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Geobytes database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "TechAmerica (Cyberstates) high-tech industry definition",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Hofstede's (1980) four culture dimensions",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Douglas Dow's psychic distance measures (Dow and Karunaratna, 2006)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "World Development Indicator database",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Model 1 (Tobit, controls only)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High-tech target firms",
+      "source": "TechAmerica definition"
+     },
+     {
+      "name": "CBA experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile takeover",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash payment (payment method)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Privatization deal",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Exchange rate",
+      "source": ""
+     },
+     {
+      "name": "Cultural distance",
+      "source": "Hofstede (1980)"
+     },
+     {
+      "name": "Cultural distance squared",
+      "source": "Hofstede (1980)"
+     },
+     {
+      "name": "Institutional distance",
+      "source": "Kaufmann et al. (2009)"
+     },
+     {
+      "name": "Institutional distance squared",
+      "source": "Kaufmann et al. (2009)"
+     },
+     {
+      "name": "Similar language",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar religion",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar legal origin",
+      "source": "La Porta et al. (1997)"
+     },
+     {
+      "name": "Acquiring GDP",
+      "source": "World Development Indicator database"
+     },
+     {
+      "name": "Acquiring GDP growth",
+      "source": "World Development Indicator database"
+     },
+     {
+      "name": "Time period fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (acquiring and target)",
+      "source": ""
+     },
+     {
+      "name": "Host- and home-country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model 2 (Tobit, adds linear + squared geographic distance)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Geographic distance squared",
+      "measure": "square term of log geographic distance",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Public acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Related CBAs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High-tech target firms",
+      "source": "TechAmerica definition"
+     },
+     {
+      "name": "CBA experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile takeover",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash payment (payment method)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Privatization deal",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Exchange rate",
+      "source": ""
+     },
+     {
+      "name": "Cultural distance",
+      "source": "Hofstede (1980)"
+     },
+     {
+      "name": "Cultural distance squared",
+      "source": "Hofstede (1980)"
+     },
+     {
+      "name": "Institutional distance",
+      "source": "Kaufmann et al. (2009)"
+     },
+     {
+      "name": "Institutional distance squared",
+      "source": "Kaufmann et al. (2009)"
+     },
+     {
+      "name": "Similar language",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar religion",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar legal origin",
+      "source": "La Porta et al. (1997)"
+     },
+     {
+      "name": "Acquiring GDP",
+      "source": "World Development Indicator database"
+     },
+     {
+      "name": "Acquiring GDP growth",
+      "source": "World Development Indicator database"
+     },
+     {
+      "name": "Time period fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects (acquiring and target)",
+      "source": ""
+     },
+     {
+      "name": "Host- and home-country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model 3 (Tobit, geographic distance x public acquirer interaction)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Public acquirer x Geographic distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum; Geobytes database"
+     },
+     {
+      "name": "Geographic distance",
+      "measure": "log distance in kilometers between capital cities of acquiring and target countries",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Public acquirer",
+      "measure": "indicator = 1 for public acquiring firms, 0 otherwise",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High-tech target firms",
+      "source": "TechAmerica definition"
+     },
+     {
+      "name": "Related CBAs",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "CBA experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile takeover",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Privatization deal",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Exchange rate",
+      "source": ""
+     },
+     {
+      "name": "Cultural distance (and squared)",
+      "source": "Hofstede (1980)"
+     },
+     {
+      "name": "Institutional distance (and squared)",
+      "source": "Kaufmann et al. (2009)"
+     },
+     {
+      "name": "Similar language",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar religion",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar legal origin",
+      "source": "La Porta et al. (1997)"
+     },
+     {
+      "name": "Acquiring GDP and GDP growth",
+      "source": "World Development Indicator database"
+     },
+     {
+      "name": "Time, industry, and host/home-country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model 4 (Tobit, related CBAs x geographic distance interaction)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Related CBAs x Geographic distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum; Geobytes database"
+     },
+     {
+      "name": "Geographic distance",
+      "measure": "log distance in kilometers between capital cities of acquiring and target countries",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Related CBAs",
+      "measure": "binary = 1 when acquiring and target firms had the same four-digit SIC code",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High-tech target firms",
+      "source": "TechAmerica definition"
+     },
+     {
+      "name": "Public acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "CBA experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile takeover",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Privatization deal",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Exchange rate",
+      "source": ""
+     },
+     {
+      "name": "Cultural distance (and squared)",
+      "source": "Hofstede (1980)"
+     },
+     {
+      "name": "Institutional distance (and squared)",
+      "source": "Kaufmann et al. (2009)"
+     },
+     {
+      "name": "Similar language",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar religion",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar legal origin",
+      "source": "La Porta et al. (1997)"
+     },
+     {
+      "name": "Acquiring GDP and GDP growth",
+      "source": "World Development Indicator database"
+     },
+     {
+      "name": "Time, industry, and host/home-country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model 5 (Tobit, full model)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic distance",
+      "measure": "log distance in kilometers between capital cities of acquiring and target countries",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Geographic distance squared",
+      "measure": "square term of log geographic distance",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Public acquirer x Geographic distance",
+      "measure": "interaction between geographic distance and public acquirer",
+      "source": "SDC Platinum; Geobytes database"
+     },
+     {
+      "name": "Related CBAs x Geographic distance",
+      "measure": "interaction between related CBAs and geographic distance",
+      "source": "SDC Platinum; Geobytes database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High-tech target firms",
+      "source": "TechAmerica definition"
+     },
+     {
+      "name": "Public acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Related CBAs",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "CBA experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile takeover",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Privatization deal",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Exchange rate",
+      "source": ""
+     },
+     {
+      "name": "Cultural distance (and squared)",
+      "source": "Hofstede (1980)"
+     },
+     {
+      "name": "Institutional distance (and squared)",
+      "source": "Kaufmann et al. (2009)"
+     },
+     {
+      "name": "Similar language",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar religion",
+      "source": "Dow and Karunaratna (2006)"
+     },
+     {
+      "name": "Similar legal origin",
+      "source": "La Porta et al. (1997)"
+     },
+     {
+      "name": "Acquiring GDP and GDP growth",
+      "source": "World Development Indicator database"
+     },
+     {
+      "name": "Time, industry, and host/home-country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Difference-in-slope test (Dawson and Richter, 2006) for the two interaction effects",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "predicted equity ownership slopes plotted from Table 3 interaction coefficients (Figures 2 and 3)",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Public acquirer x Geographic distance",
+      "measure": "slope difference between public vs non-public acquirer curves (Figure 2)",
+      "source": "SDC Platinum; Geobytes database"
+     },
+     {
+      "name": "Related CBAs x Geographic distance",
+      "measure": "slope difference between related vs unrelated CBA curves (Figure 3)",
+      "source": "SDC Platinum; Geobytes database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Model 1 (spline regression, below/above-mean geographic distance)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "equity ownership as a continuous variable (0.1% to 100%) as reported in SDC Platinum",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic distance (below-mean spline)",
+      "measure": "spline variable for geographic distance below the median/mean",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Geographic distance (above-mean spline)",
+      "measure": "spline variable for geographic distance above the median/mean",
+      "source": "Geobytes database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High-tech target firms",
+      "source": "TechAmerica definition"
+     },
+     {
+      "name": "All firm-, deal-, and country-level controls (as in Table 3)",
+      "source": "SDC Platinum; Hofstede (1980); Kaufmann et al. (2009); Dow and Karunaratna (2006); La Porta et al. (1997); World Development Indicator database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 2 (spline, interactions with below-mean geographic distance spline)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "equity ownership as a continuous variable (0.1% to 100%) as reported in SDC Platinum",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Public acquirer x below-mean geographic distance spline",
+      "measure": "interaction of public acquirer with below-mean geographic distance spline",
+      "source": "SDC Platinum; Geobytes database"
+     },
+     {
+      "name": "Related (core) CBAs x below-mean geographic distance spline",
+      "measure": "interaction of related/core acquisitions with below-mean geographic distance spline",
+      "source": "SDC Platinum; Geobytes database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All firm-, deal-, and country-level controls (as in Table 3)",
+      "source": "SDC Platinum; Hofstede (1980); Kaufmann et al. (2009); Dow and Karunaratna (2006); La Porta et al. (1997); World Development Indicator database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 3 (spline, interactions with above-mean geographic distance spline)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "equity ownership",
+     "measure": "equity ownership as a continuous variable (0.1% to 100%) as reported in SDC Platinum",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Public acquirer x above-mean geographic distance spline",
+      "measure": "interaction of public acquirer with above-mean geographic distance spline",
+      "source": "SDC Platinum; Geobytes database"
+     },
+     {
+      "name": "Related (core) CBAs x above-mean geographic distance spline",
+      "measure": "interaction of related/core acquisitions with above-mean geographic distance spline",
+      "source": "SDC Platinum; Geobytes database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All firm-, deal-, and country-level controls (as in Table 3)",
+      "source": "SDC Platinum; Hofstede (1980); Kaufmann et al. (2009); Dow and Karunaratna (2006); La Porta et al. (1997); World Development Indicator database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Models 4-5 (logit, majority-control binary DV, equity 51%=1)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "same 10,181 CBAs, binary majority-control DV",
+    "dv": {
+     "name": "majority control ownership",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Geographic distance",
+      "measure": "log distance in kilometers between capital cities of acquiring and target countries",
+      "source": "Geobytes database"
+     },
+     {
+      "name": "Public acquirer x Geographic distance",
+      "measure": "interaction between geographic distance and public acquirer",
+      "source": "SDC Platinum; Geobytes database"
+     },
+     {
+      "name": "Related CBAs x Geographic distance",
+      "measure": "interaction between related CBAs and geographic distance",
+      "source": "SDC Platinum; Geobytes database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High-tech target firms",
+      "source": "TechAmerica definition"
+     },
+     {
+      "name": "All firm-, deal-, and country-level controls (as in Table 3)",
+      "source": "SDC Platinum; Hofstede (1980); Kaufmann et al. (2009); Dow and Karunaratna (2006); La Porta et al. (1997); World Development Indicator database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "cbas",
+    "information asymmetry",
+    "geographic distance"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "information asymmetry",
+    "entry modes",
+    "greenﬁeld investments"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": {
+    "from": "information asymmetry",
+    "relation": "affects",
+    "to": "entry modes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "geographic distance",
+    "information asymmetry"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "information asymmetry"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "limitations",
+   "constructs": [
+    "geographic distance",
+    "equity participation",
+    "contingency variables"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "acquirer-firm-, target-firm-, and deal-specific characteristics",
+    "on_path": [
+     "geographic distance",
+     "equity participation"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "level of competition in an industry",
+    "equity participation decision"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "level of competition in an industry",
+    "relation": "affects",
+    "to": "equity participation decision"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "market followers",
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "market followers",
+    "relation": "increases",
+    "to": "entry through acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "limitations",
+   "constructs": [
+    "distance",
+    "ﬁrst movers",
+    "later movers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "first movers vs later movers",
+    "on_path": [
+     "distance",
+     "equity participation"
+    ]
+   }
+  },
+  {
+   "gap_type": "other",
+   "section": "limitations",
+   "constructs": [
+    "equity ownership",
+    "control decision",
+    "cbas"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "cultural differences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

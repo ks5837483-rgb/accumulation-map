@@ -1,0 +1,558 @@
+{
+ "paper_id": "10.1057_s41267-023-00634-x",
+ "title": "The role of networks in international acquisition premiums",
+ "journal": "JIBS",
+ "year": 2023,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "network theory",
+  "liability of foreignness"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "foreign_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_network_centrality",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "foreign_acquisition",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "target_network_centrality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "value_of_target_local_knowledge_and_resources",
+     "moderated_from": "foreign_acquisition",
+     "moderated_to": "acquisition_premium",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border and domestic acquisition bids across sectors; year, industry, and target country dummies)",
+  "country_region": "33 acquirer countries and 43 target countries",
+  "time_period": "2008-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1693 acquisition bids"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "World Bank's annual investor protection data / World Development Indicators",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Henisz's (2000) political constraint index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Ronen and Shenkar's (1985, 2013) clusters",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Dealbook",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Online Appendix 3 - First-stage selection model (Heckman probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "foreign acquisition (selection)",
+     "measure": "probit model predicting whether a cross-border (vs domestic) acquisition manifests",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "target country's shareholder protection",
+      "measure": "exclusion restriction (World Bank investor protection data of target country)",
+      "source": "World Bank"
+     },
+     {
+      "name": "target country's trade openness",
+      "measure": "exclusion restriction",
+      "source": "World Bank"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 1, Model 1 (controls only)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "foreign acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer's network centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target's network centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "shareholder protection",
+      "source": "World Bank"
+     },
+     {
+      "name": "accounting standards",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "GDP per capita",
+      "source": "World Bank World Development Indicators"
+     },
+     {
+      "name": "political constraint",
+      "source": "Henisz (2000) political constraint index"
+     },
+     {
+      "name": "total acquisition activity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cultural proximity",
+      "source": "Ronen and Shenkar (1985, 2013) clusters"
+     },
+     {
+      "name": "geographic distance",
+      "source": ""
+     },
+     {
+      "name": "financial acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "public",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer's prior acquisitions",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer's financial advisors",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer's reputable advisor",
+      "source": "SDC / Dealbook"
+     },
+     {
+      "name": "acquirer advisor's acquisitions",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target's ROA",
+      "source": ""
+     },
+     {
+      "name": "deal value",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "equity stake sought",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "tender",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "merger of equals",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "take-private",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "completed",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "competing bids",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lambda",
+      "source": "Heckman first stage"
+     },
+     {
+      "name": "year, industry, and target country dummies",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 2 (H1 interaction)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "foreign acquisition x acquirer's network centrality",
+      "measure": "interaction term of foreign acquisition dummy and acquirer's eigenvector centrality in target country's local alliance network",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "foreign acquisition",
+      "measure": "dummy = 1 if bidder and target from different home countries, else 0",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer's network centrality",
+      "measure": "acquirer's eigenvector centrality in the target country's local alliance network (5-year rolling window)",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target's network centrality",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "shareholder protection",
+      "source": "World Bank"
+     },
+     {
+      "name": "accounting standards",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "GDP per capita",
+      "source": "World Bank World Development Indicators"
+     },
+     {
+      "name": "political constraint",
+      "source": "Henisz (2000) political constraint index"
+     },
+     {
+      "name": "total acquisition activity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cultural proximity",
+      "source": "Ronen and Shenkar (1985, 2013) clusters"
+     },
+     {
+      "name": "geographic distance",
+      "source": ""
+     },
+     {
+      "name": "deal and advisor controls (financial acquirer, public, prior acquisitions, financial advisors, reputable advisor, advisor's acquisitions, target's ROA, deal value, equity stake sought, cash, tender, hostile, merger of equals, take-private, completed, competing bids)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lambda",
+      "source": "Heckman first stage"
+     },
+     {
+      "name": "year, industry, and target country dummies",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 3 (H2 interaction)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "foreign acquisition x target's network centrality",
+      "measure": "interaction term of foreign acquisition dummy and target's eigenvector centrality in target country's local alliance network",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "foreign acquisition",
+      "measure": "dummy = 1 if bidder and target from different home countries, else 0",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target's network centrality",
+      "measure": "target's eigenvector centrality in the target country's local alliance network (5-year rolling window)",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer's network centrality",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "shareholder protection",
+      "source": "World Bank"
+     },
+     {
+      "name": "accounting standards",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "GDP per capita",
+      "source": "World Bank World Development Indicators"
+     },
+     {
+      "name": "political constraint",
+      "source": "Henisz (2000) political constraint index"
+     },
+     {
+      "name": "total acquisition activity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cultural proximity",
+      "source": "Ronen and Shenkar (1985, 2013) clusters"
+     },
+     {
+      "name": "geographic distance",
+      "source": ""
+     },
+     {
+      "name": "deal and advisor controls (financial acquirer, public, prior acquisitions, financial advisors, reputable advisor, advisor's acquisitions, target's ROA, deal value, equity stake sought, cash, tender, hostile, merger of equals, take-private, completed, competing bids)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lambda",
+      "source": "Heckman first stage"
+     },
+     {
+      "name": "year, industry, and target country dummies",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 4 (full model, both moderators)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "foreign acquisition x acquirer's network centrality",
+      "measure": "interaction term (H1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "foreign acquisition x target's network centrality",
+      "measure": "interaction term (H2)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "foreign acquisition",
+      "measure": "dummy = 1 if bidder and target from different home countries, else 0",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer's network centrality",
+      "measure": "acquirer's eigenvector centrality in target country's local alliance network (5-year rolling window)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target's network centrality",
+      "measure": "target's eigenvector centrality in target country's local alliance network (5-year rolling window)",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "shareholder protection",
+      "source": "World Bank"
+     },
+     {
+      "name": "accounting standards",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "GDP per capita",
+      "source": "World Bank World Development Indicators"
+     },
+     {
+      "name": "political constraint",
+      "source": "Henisz (2000) political constraint index"
+     },
+     {
+      "name": "total acquisition activity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cultural proximity",
+      "source": "Ronen and Shenkar (1985, 2013) clusters"
+     },
+     {
+      "name": "geographic distance",
+      "source": ""
+     },
+     {
+      "name": "deal and advisor controls (financial acquirer, public, prior acquisitions, financial advisors, reputable advisor, advisor's acquisitions, target's ROA, deal value, equity stake sought, cash, tender, hostile, merger of equals, take-private, completed, competing bids)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lambda",
+      "source": "Heckman first stage"
+     },
+     {
+      "name": "year, industry, and target country dummies",
+      "source": "SDC Platinum"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "network centrality",
+    "acquisition premiums"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "network centrality",
+    "relation": "affects",
+    "to": "acquisition premiums"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

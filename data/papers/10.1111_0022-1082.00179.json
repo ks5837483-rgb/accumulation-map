@@ -1,0 +1,780 @@
+{
+ "paper_id": "10.1111_0022-1082.00179",
+ "title": "Corporate Cash Reserves and Acquisitions",
+ "journal": "JF",
+ "year": 1999,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "free cash flow hypothesis",
+  "agency theory",
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P0",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "cost_of_external_financing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_external_financing",
+      "relation": "increases",
+      "to": "cash_reserves",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_external_financing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market-to-book proxies for good management rather than for the degree of information asymmetry (dual-proxy problem)"
+   ]
+  },
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "excess_cash_reserves",
+      "relation": "increases",
+      "to": "agency_costs_of_free_cash_flow",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs_of_free_cash_flow",
+      "relation": "increases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_costs_of_free_cash_flow"
+   ],
+   "moderators": [
+    {
+     "construct": "insider_ownership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "agency_costs_of_free_cash_flow",
+     "moderated_from": "excess_cash_reserves",
+     "moderated_to": "acquisition_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_insider_ownership_probit"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "cash-richness merely proxies for firm performance / good prior stock-price performance"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "excess_cash_reserves",
+      "relation": "increases",
+      "to": "agency_costs_of_free_cash_flow",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs_of_free_cash_flow",
+      "relation": "decreases",
+      "to": "acquisition_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_costs_of_free_cash_flow"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the negative reaction reflects value-increasing acquisitions whose returns are merely less positive due to market anticipation, not value destruction",
+    "the negative bidder returns are a leverage (disciplining-debt) effect rather than a cash effect (Maloney et al. 1993)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "excess_cash_reserves",
+      "relation": "increases",
+      "to": "managerial_empire_building",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "managerial_empire_building",
+      "relation": "increases",
+      "to": "diversifying_acquisitions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_empire_building"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "excess_cash_reserves",
+      "relation": "decreases",
+      "to": "transaction_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "transaction_value",
+      "relation": "increases",
+      "to": "multiple_bidder_competition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "excess_cash_reserves",
+      "relation": "increases",
+      "to": "bidder_deterrence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_deterrence",
+      "relation": "decreases",
+      "to": "multiple_bidder_competition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "transaction_value",
+    "bidder_deterrence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "excess_cash_reserves",
+      "relation": "increases",
+      "to": "agency_costs_of_free_cash_flow",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs_of_free_cash_flow",
+      "relation": "decreases",
+      "to": "post_merger_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_costs_of_free_cash_flow"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the post-merger operating decline is an artifact of abnormal pre-event operating performance (mean reversion), not the merger"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "excess_cash_reserves",
+      "relation": "increases",
+      "to": "agency_costs_of_free_cash_flow",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "agency_costs_of_free_cash_flow",
+      "relation": "increases",
+      "to": "target_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "agency_costs_of_free_cash_flow"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "low_payout_cash_retention",
+      "relation": "increases",
+      "to": "anticipated_wasteful_spending",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipated_wasteful_spending",
+      "relation": "decreases",
+      "to": "abnormal_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipated_wasteful_spending"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "equity_financing",
+      "relation": "increases",
+      "to": "perceived_stock_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_stock_overvaluation",
+      "relation": "decreases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_stock_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. nonfinancial corporations; financial firms excluded)",
+  "country_region": "United States",
+  "time_period": "1950-1994 (cash model panel); acquisitions sample 1977-1993",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "23,686 firm-years with 487 bids (bidder probit)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compact Disclosure",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I Panel B: Regression to Explain the Cash/Sales Ratios (cash management model)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "19 industries (18 excluding financials)",
+    "dv": {
+     "name": "cash-to-sales ratio",
+     "measure": "the Cash/Sales Ratios in Panel A",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "cash flow from operations",
+      "measure": "Cash flow from operations",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "market-to-book",
+      "measure": "M/B",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "volatility of cash flow from operations",
+      "measure": "Volatility of cash flow from operations",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "23,686 firm-years, 487 bids, 1977-1993",
+    "dv": {
+     "name": "bidder indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "cash deviation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "noncash working capital normalized by total assets",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "price-to-earnings (stock price to earnings per share)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size (natural logarithm of total assets, measured at end of year t-1)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "yearly dummy variables 1986 to 1993",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III: Predicting Bidders (ownership subsample 1991-1993, cash deviation x insider ownership)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "2,857 firm-years, 1991-1993 subsample with Compact Disclosure ownership data",
+    "dv": {
+     "name": "bidder indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "cash deviation split by insider ownership",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "insider ownership",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compact Disclosure"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "noncash working capital normalized by total assets",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "price-to-earnings (stock price to earnings per share)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size (natural logarithm of total assets)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "430 observations (bidders in the probit sample)",
+    "dv": {
+     "name": "bidder announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "cash deviation (expected bidder)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "cash deviation (unexpected bidder)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "High M/B x cash deviation (expected / unexpected bid)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Leverage (market leverage of the bidder)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Market-to-book > 1 indicator",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Unexpected bid dummy",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table V Panel B: Bid characteristics of cash-rich vs cash-poor bidders",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "cash-rich vs cash-poor bidders (difference-in-means / t-tests)",
+    "dv": {
+     "name": "bid characteristics",
+     "measure": "proportion bidding on firms outside their industry (Different industry), proportion whose targets attracted Multiple bidders, and average Target CAR (-20, -1), compared between cash-rich and cash-poor bidders",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "cash-richness",
+      "measure": "cash-rich versus cash-poor bidder classification based on cash deviation from the cash management model",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VI Panel A: Operating Performance of Merged Firms (matched on industry and cash position)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "firms that completed their announced merger with sufficient pre- and post-merger data; also run separately for cash-poor and cash-rich subsamples",
+    "dv": {
+     "name": "postmerger operating performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "premerger performance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VI Panel B: Operating Performance of Merged Firms (matched on industry only)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "firms that completed their announced merger; also run separately for cash-poor and cash-rich subsamples",
+    "dv": {
+     "name": "postmerger operating performance",
+     "measure": "postmerger performance of the combined firm; cash flow return-on-assets adjusted by simply subtracting the industry median",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "premerger performance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VII: Predicting Targets (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "23,686 observations",
+    "dv": {
+     "name": "target indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "cash deviation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "avg. abnormal return",
+      "source": ""
+     },
+     {
+      "name": "sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "noncash working capital",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "market-to-book",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "price-to-earnings",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "yearly dummies 1986-1993",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VIII: Market Reaction to Cash Stockpiling",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "13,154 firm-years",
+    "dv": {
+     "name": "annual abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Cash flows/Total assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Low payout x Cash flows/Total assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Extreme cash",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Payout difference x Extreme cash",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Future dividend changes",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target car",
+    "premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "cash stockpiles",
+    "allocation of cash stockpiles"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "determinants of cash stockpile allocation",
+    "relation": "affects",
+    "to": "allocation of cash stockpiles"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "cash-rich firms",
+    "target result"
+   ],
+   "mechanism_named": "endogeneity",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "dividends",
+    "abnormally good performance"
+   ],
+   "mechanism_named": "reverse causality",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "cash reserves",
+    "corporate control contests"
+   ],
+   "mechanism_named": "defensive value of cash reserves",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "external control mechanisms",
+    "internal mechanisms",
+    "cash-rich firms"
+   ],
+   "mechanism_named": "external control mechanisms",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

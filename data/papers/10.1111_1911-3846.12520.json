@@ -1,0 +1,904 @@
+{
+ "paper_id": "10.1111_1911-3846.12520",
+ "title": "M&amp;A Due Diligence, Post‐Acquisition Performance, and Financial Reporting for Business Combinations",
+ "journal": "CAR",
+ "year": 2019,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "competitive_pressure",
+      "relation": "increases",
+      "to": "risk_of_losing_deal_to_competing_bidder",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "risk_of_losing_deal_to_competing_bidder",
+      "relation": "decreases",
+      "to": "due_diligence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "short_term_financial_reporting_incentives",
+      "relation": "increases",
+      "to": "opportunity_cost_of_deal_delay",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "opportunity_cost_of_deal_delay",
+      "relation": "decreases",
+      "to": "due_diligence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "agency_problems",
+      "relation": "increases",
+      "to": "managerial_incentive_to_complete_deals",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentive_to_complete_deals",
+      "relation": "decreases",
+      "to": "due_diligence",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_of_losing_deal_to_competing_bidder",
+    "opportunity_cost_of_deal_delay",
+    "managerial_incentive_to_complete_deals"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "due_diligence",
+      "relation": "decreases",
+      "to": "unanticipated_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unanticipated_costs",
+      "relation": "decreases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unanticipated_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "due_diligence",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "goodwill_impairment",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "DDR_LOW and TDD_LOW capture correlated omitted variables unrelated to the specific transaction's due diligence rather than the transaction-specific due diligence effect itself"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "due_diligence",
+      "relation": "increases",
+      "to": "precision_of_asset_valuation_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "precision_of_asset_valuation_information",
+      "relation": "increases",
+      "to": "value_relevance_of_fair_value_estimates",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "precision_of_asset_valuation_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (both acquirer and target publicly traded U.S. firms)",
+  "time_period": "2001-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "308 transactions (TDD analysis; 285 for the DDR analysis)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC Platinum M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "acquiring firms' 10-K filings / SEC filings (EDGAR)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "hand-collected fair value estimates from purchase price allocation disclosures and goodwill impairment information from 10-K disclosures",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, columns (1)-(2): OLS determinants of due diligence, construction of DDR_LOW/TDD_LOW (equations 1a/1b)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "308 transactions (TDD analysis); 285 transactions (DDR analysis)",
+    "dv": {
+     "name": "Due diligence duration (ln(Days DDR), ln(Days TDD))",
+     "measure": "[withheld: wording matches the source]",
+     "source": "acquiring firms' SEC filings (confidentiality/acquisition agreement dates); SDC (completion date)"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D",
+      "measure": "R&D intensity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "DACC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ln(#Analysts)",
+      "measure": "more analysts covering the firm (log analyst coverage)",
+      "source": ""
+     },
+     {
+      "name": "ln(Fees)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "acquiring firms' 10-K filings / SEC filings"
+     },
+     {
+      "name": "Common Auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Fairness Opinion",
+      "measure": "fairness opinions from top investment banks",
+      "source": "SEC filings / SDC"
+     },
+     {
+      "name": "Top Legal Advisor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Valuation",
+      "measure": "captures outside appraisals of acquired assets (third-party valuation firms)",
+      "source": "acquiring firms' 10-K filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "sigmaSales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "sigmaOCF",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "%Loss",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ROA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "BTM",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "High Tech",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "%Stock",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "SameInd",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Contingent",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Multibid",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Auction",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Annual fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, columns (3)-(4): H1 competitive pressures & financial reporting incentives (equations 1c/1d)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Due diligence duration (ln(Days DDR), ln(Days TDD))",
+     "measure": "[withheld: wording matches the source]",
+     "source": "acquiring firms' SEC filings; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A deal volume",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "M&A dollar value",
+      "measure": "concurrent quarterly industry-level aggregate M&A dollar value",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Industry M&A premium",
+      "measure": "concurrent quarterly industry-median M&A premiums",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "HHI",
+      "measure": "the Herfindahl Hirchman index (level of competition within acquiring firms' industries)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Meet or beat",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Information risk (R&D, DACC, ln(#Analysts))",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Deal advisors (ln(Fees), Common Auditor, Fairness Opinion, Top Legal Advisor, Valuation)",
+      "source": "SEC filings / SDC"
+     },
+     {
+      "name": "Target characteristics",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction attributes",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Annual fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, columns (5)-(6): H1 agency problems (equations 1e/1f)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Due diligence duration (ln(Days DDR), ln(Days TDD))",
+     "measure": "[withheld: wording matches the source]",
+     "source": "acquiring firms' SEC filings; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Institutional ownership",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Excess CEO pay",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "CEO chair",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Information risk (R&D, DACC, ln(#Analysts))",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Deal advisors (ln(Fees), Common Auditor, Fairness Opinion, Top Legal Advisor, Valuation)",
+      "source": "SEC filings / SDC"
+     },
+     {
+      "name": "Target characteristics",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction attributes",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Annual fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel A: post-acquisition operating performance, levels analysis (equation 2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "598 firm-years (t+1 and t+2 pooled); 301 (t+1); 297 (t+2)",
+    "dv": {
+     "name": "OPINC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "DDR_LOW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed from equation (1a) residuals"
+     },
+     {
+      "name": "TDD_LOW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed from equation (1b) residuals"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PreOPINC",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ln(MVE)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "BTM",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Deal Size",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "SameInd",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Annual and industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: post-acquisition operating performance, changes analysis (equation 2, DeltaOPINC)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "598 firm-years (t+1 and t+2 pooled); 301 (t+1); 297 (t+2)",
+    "dv": {
+     "name": "DeltaOPINC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "DDR_LOW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed from equation (1a) residuals"
+     },
+     {
+      "name": "TDD_LOW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed from equation (1b) residuals"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PreOPINC",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Deltaln(MVE)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "DeltaLeverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "DeltaBTM",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Deal Size",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "SameInd",
+      "source": "SDC Platinum M&A database"
+     },
+     {
+      "name": "Annual and industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: post-acquisition goodwill impairments, logistic regression (equation 3)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "920 firm-years (full sample, column 1); 771 firm-years (additional controls, column 2)",
+    "dv": {
+     "name": "GW_Impair",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from 10-K disclosures"
+    },
+    "key_ivs": [
+     {
+      "name": "DDR_LOW",
+      "measure": "low due diligence review indicator (negative residual from equation 1a)",
+      "source": "constructed from equation (1a) residuals"
+     },
+     {
+      "name": "TDD_LOW",
+      "measure": "low transactional due diligence indicator (negative residual from equation 1b)",
+      "source": "constructed from equation (1b) residuals"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DeltaROA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "DeltaINDROA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "DeltaSales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "DeltaOCF",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MTB",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Lev",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Smooth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Bath",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "CEO Turnover",
+      "source": ""
+     },
+     {
+      "name": "Bonus",
+      "source": ""
+     },
+     {
+      "name": "TNWcov",
+      "source": "hand-collected / SEC filings"
+     },
+     {
+      "name": "HHI",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Segments",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "UNArank",
+      "source": "hand-collected from purchase price allocation disclosures"
+     },
+     {
+      "name": "OVE1",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "OVE2",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "GWtotal",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "%GWacquired",
+      "source": "hand-collected from purchase price allocation disclosures"
+     },
+     {
+      "name": "Annual and industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "restricted to firms with multiple segments; 42 unrelated goodwill impairments recoded",
+    "dv": {
+     "name": "GW_Impair (falsification recode)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from 10-K disclosures"
+    },
+    "key_ivs": [
+     {
+      "name": "DDR_LOW",
+      "measure": "low due diligence review indicator",
+      "source": "constructed from equation (1a) residuals"
+     },
+     {
+      "name": "TDD_LOW",
+      "measure": "low transactional due diligence indicator",
+      "source": "constructed from equation (1b) residuals"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as equation (3)",
+      "source": "COMPUSTAT / hand-collected"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "246 transactions with purchase price allocation fair value estimates",
+    "dv": {
+     "name": "DeltaMVE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Tangible_Assets x DDR_LOW / x TDD_LOW",
+      "measure": "interaction of hand-collected fair value estimate of tangible assets with low-due-diligence indicators",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "Identifiable_Intangibles x DDR_LOW / x TDD_LOW",
+      "measure": "interaction of fair value estimate of identifiable intangibles with low-due-diligence indicators",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "IPRD x DDR_LOW / x TDD_LOW",
+      "measure": "interaction of fair value estimate of in-process R&D with low-due-diligence indicators",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "Goodwill x DDR_LOW / x TDD_LOW",
+      "measure": "interaction of fair value estimate of goodwill with low-due-diligence indicators",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "Liabilities x DDR_LOW / x TDD_LOW",
+      "measure": "interaction of fair value estimate of assumed liabilities with low-due-diligence indicators",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "DDR_LOW",
+      "measure": "low due diligence review indicator",
+      "source": "constructed from equation (1a) residuals"
+     },
+     {
+      "name": "TDD_LOW",
+      "measure": "low transactional due diligence indicator",
+      "source": "constructed from equation (1b) residuals"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DeltaNBV",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Tangible_Assets",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "Identifiable_Intangibles",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "IPRD",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "Goodwill",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "Liabilities",
+      "source": "hand-collected purchase price allocation disclosures"
+     },
+     {
+      "name": "Annual and industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "due diligence review",
+    "negotiating the purchase price",
+    "deal termination"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "due diligence review",
+    "relation": "affects",
+    "to": "outcomes not examined in this paper"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "time to deal completion"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "due diligence"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "cross-sectional variation in due diligence"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "due diligence",
+    "acquisition-related restatements",
+    "internal control weaknesses",
+    "ceo turnover"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "due diligence",
+    "relation": "affects",
+    "to": "other post-acquisition outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "due diligence review",
+    "deal premiums",
+    "announcement returns",
+    "negotiation of the acquisition agreement"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "due diligence review",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "costs and benefits of due diligence",
+    "outcomes of M&A transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

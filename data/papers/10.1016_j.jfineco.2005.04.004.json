@@ -1,0 +1,599 @@
+{
+ "paper_id": "10.1016_j.jfineco.2005.04.004",
+ "title": "The outsourcing of R&amp;D through acquisitions in the pharmaceutical industry",
+ "journal": "JFE",
+ "year": 2006,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "asymmetric information",
+  "winner's curse",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_desperation",
+      "relation": "increases",
+      "to": "need_to_replenish_research_pipeline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "need_to_replenish_research_pipeline",
+      "relation": "increases",
+      "to": "probability_of_rd_acquisition",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "need_to_replenish_research_pipeline"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_acquisition_information_gathering",
+      "relation": "decreases",
+      "to": "asymmetric_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asymmetric_information",
+      "relation": "decreases",
+      "to": "cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "pre_acquisition_information_gathering",
+      "relation": "increases",
+      "to": "valuation_accuracy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_accuracy",
+      "relation": "increases",
+      "to": "cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asymmetric_information",
+    "valuation_accuracy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "private company discount / difficulty in valuing a company",
+    "greater likelihood of development success (Cockburn and Henderson, 2003)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_desperation",
+      "relation": "decreases",
+      "to": "negotiating_position",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "negotiating_position",
+      "relation": "increases",
+      "to": "cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "negotiating_position"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_acquisition_information_gathering",
+      "relation": "decreases",
+      "to": "asymmetric_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asymmetric_information",
+      "relation": "decreases",
+      "to": "post_acquisition_pipeline_health",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asymmetric_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_desperation",
+      "relation": "increases",
+      "to": "outsourcing_of_rd_through_acquisition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "outsourcing_of_rd_through_acquisition",
+      "relation": "increases",
+      "to": "post_acquisition_pipeline_health",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "outsourcing_of_rd_through_acquisition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "pharmaceutical / biopharmaceutical industry (R&D-directed acquisitions)",
+  "country_region": "~180 transactions spanning 15 countries; majority of acquirers (76%) and targets (80%) based in the United States",
+  "time_period": "1994-2001",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "160"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial's Securities Data Corporation (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Data Stream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Recombinant Capital (proprietary alliance data)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "FDA Orange Book",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "NERAC and Thomson Derwent (patent data)",
+    "category": "patents",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 (probit — firm propensity to engage in an outsourcing acquisition)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "firms in Recombinant Capital's alliance data set 1994-2001 with both sales and pipeline data available; N=424",
+    "dv": {
+     "name": "Acquisition Indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Change score (pre-acquisition)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Desperation Index (Categories III and IV)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": ""
+     },
+     {
+      "name": "Log market cap",
+      "source": ""
+     },
+     {
+      "name": "Count (number of prior alliances undertaken)",
+      "source": "Recombinant Capital"
+     },
+     {
+      "name": "Time trend",
+      "source": ""
+     },
+     {
+      "name": "Firm and time fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (event study — univariate acquirer CARs vs. presence of independent variables)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "160 acquisitions (Type I N=91, Type II N=27, Type III N=42)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "three-day-window cumulative abnormal return; standardized abnormal returns (SARs) computed by dividing the abnormal return by its standard deviation and aggregated over the days in the event window (following Dodd and Warner, 1983)",
+     "source": "CRSP / Data Stream"
+    },
+    "key_ivs": [
+     {
+      "name": "Relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Factiva / hand_collected"
+     },
+     {
+      "name": "Financing method (stock vs. cash payment)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Factiva"
+     },
+     {
+      "name": "Prior alliances",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Recombinant Capital"
+     },
+     {
+      "name": "Sales experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Research experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 (cross-sectional OLS — acquirer CAR regressed on selected independent variables, 6 specifications)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "160 announcements of acquisitions 1994-2001; N=155-160 across specifications",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / Data Stream"
+    },
+    "key_ivs": [
+     {
+      "name": "Pipeline experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Sales experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Alliance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Recombinant Capital"
+     },
+     {
+      "name": "Desperation Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "R&D intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock deal",
+      "source": "SDC / Factiva"
+     },
+     {
+      "name": "Cash deal",
+      "source": "SDC / Factiva"
+     },
+     {
+      "name": "Free-cash flow",
+      "source": ""
+     },
+     {
+      "name": "Tobin (Tobin's Q)",
+      "source": ""
+     },
+     {
+      "name": "Log market cap",
+      "source": ""
+     },
+     {
+      "name": "Contingent contract",
+      "source": "SDC / Factiva"
+     },
+     {
+      "name": "International",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (cross-sectional OLS — D Score post-acquisition, 5 specifications)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=155",
+    "dv": {
+     "name": "D Score post-acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand_collected"
+    },
+    "key_ivs": [
+     {
+      "name": "Desperation Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Pipeline experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Sales experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": ""
+     },
+     {
+      "name": "Free-cash flow",
+      "source": ""
+     },
+     {
+      "name": "Tobin",
+      "source": ""
+     },
+     {
+      "name": "Log market cap",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (cross-sectional OLS — D Sales post-acquisition, 5 specifications)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=155",
+    "dv": {
+     "name": "D Sales post-acquisition",
+     "measure": "Post-acquisition change in weighted sales (salest+1 - salest); weighted sales are log values of 1999 constant dollars",
+     "source": "hand_collected"
+    },
+    "key_ivs": [
+     {
+      "name": "Desperation Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Pipeline experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Sales force",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": ""
+     },
+     {
+      "name": "Sales experience",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Free-cash flow",
+      "source": ""
+     },
+     {
+      "name": "Tobin",
+      "source": ""
+     },
+     {
+      "name": "Log market cap",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "high q firms",
+    "non merger investment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "tobin's q",
+    "relation": "affects",
+    "to": "non merger investment"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "patent profile",
+    "exclusivity profile",
+    "magnitude of the car"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "post-acquisition change in product sales"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "post-acquisition changes in product sales"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "high-tech industries",
+    "software industry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "research",
+    "post-acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "alliances",
+    "internal research programs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "alliances",
+    "relation": "affects",
+    "to": "internal research programs"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

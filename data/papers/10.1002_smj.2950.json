@@ -1,0 +1,660 @@
+{
+ "paper_id": "10.1002_smj.2950",
+ "title": "Corporate venture capital as a real option in the markets for technology",
+ "journal": "SMJ",
+ "year": 2018,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "real options theory",
+  "absorptive capacity",
+  "markets for technology"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "scientific_capability",
+      "relation": "decreases",
+      "to": "technological_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "technological_uncertainty",
+      "relation": "increases",
+      "to": "cvc_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technological_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technological_distance",
+      "relation": "increases",
+      "to": "technological_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "technological_uncertainty",
+      "relation": "increases",
+      "to": "cvc_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technological_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pipeline_pressure",
+      "relation": "decreases",
+      "to": "option_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "option_value",
+      "relation": "increases",
+      "to": "cvc_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "option_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technological_uncertainty",
+      "relation": "decreases",
+      "to": "realized_technology_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "realized_technology_value",
+      "relation": "increases",
+      "to": "licensing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "realized_technology_value"
+   ],
+   "moderators": [
+    {
+     "construct": "value_of_partners_technology",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "realized_technology_value",
+     "moderated_from": "technological_uncertainty",
+     "moderated_to": "licensing",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "pharmaceutical (biopharmaceutical) industry — global pharmaceutical firms and their biotechnology partners",
+  "country_region": "U.S. (global pharmaceutical firms; sample covered ~90% of branded U.S. pharmaceutical sales)",
+  "time_period": "1985-2007 (CVC/transaction data window); dyad-year panel 1995-2007",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "597 dyads (10,012 dyad-year observations; 8,725 dyad-years in the Stage-1 analysis, 1,569 in Stage-2)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Deloitte ReCap (ReCap) database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "PharmaProjects",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "National Bureau of Economic Research (NBER) patent data",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Web of Science",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "interviews_case",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 (Models 1-5): Competing risks (Fine & Gray subdistribution hazard) model - Stage 1, sub-hazard of a CVC",
+    "hypotheses": [
+     "H1a",
+     "H1b",
+     "H2"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "597 investor-partner dyads, 8,725 dyad-years (58 global pharma firms and 385 biotech partners), 1995-2007",
+    "dv": {
+     "name": "Sub-hazard of a CVC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Deloitte ReCap (ReCap) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Investor's scientific capability",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Web of Science / Compustat"
+     },
+     {
+      "name": "Investor-partner technological distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Investor's pipeline pressure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PharmaProjects"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Value of partner's technology",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Technological uncertainty",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's pipeline (number of drugs in research pipeline)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's employees (firm size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's slack (retained earnings)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Investor's prior CVC experience",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Investor's prior MFT experience",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's pipeline (stock of drugs in clinical development)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's early-stage technology (proportion early-stage)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner VC funding (indicator received independent VC funding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's amount of funding (cumulative VC funding raised)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's age (year of founding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's public (indicator publicly traded)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 (Models 6-7): Competing risks (Fine & Gray subdistribution hazard) model - Stage 2, sub-hazard of license post-CVC (option exercise)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "subsample of 130 dyads that experienced a CVC, examined from the year of the CVC investment (1,569 dyad-years)",
+    "dv": {
+     "name": "Sub-hazard of license post-CVC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Deloitte ReCap (ReCap) database"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Deloitte ReCap (ReCap) database / PharmaProjects"
+     },
+     {
+      "name": "Value of partner's technology",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Technological uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PharmaProjects"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investor's pipeline (number of drugs in research pipeline)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's employees (firm size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's slack (retained earnings)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Investor's prior CVC experience",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's pipeline (stock of drugs in clinical development)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's early-stage technology (proportion early-stage)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner VC funding (indicator received independent VC funding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's amount of funding (cumulative VC funding raised)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's age (year of founding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's public (indicator publicly traded)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (Models 1-5): Panel data linear probability model (LPM) with dyad fixed effects - Stage 1 robustness (CVC prior to any other MFT transaction)",
+    "hypotheses": [
+     "H1a",
+     "H1b",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "597 dyads, 8,725 dyad-years; post-CVC/post-licensing observations dropped (absorbing states)",
+    "dv": {
+     "name": "CVC-first indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Deloitte ReCap (ReCap) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Investor's scientific capability",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Web of Science / Compustat"
+     },
+     {
+      "name": "Investor-partner technological distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Investor's pipeline pressure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PharmaProjects"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Value of partner's technology",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Technological uncertainty",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's pipeline (number of drugs in research pipeline)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's employees (firm size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's slack (retained earnings)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Investor's prior CVC experience",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Investor's prior MFT experience",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's pipeline (stock of drugs in clinical development)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's early-stage technology (proportion early-stage)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner VC funding (indicator received independent VC funding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's amount of funding (cumulative VC funding raised)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's age (year of founding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's public (indicator publicly traded)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Time (year) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Dyad fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (Models 6-7): Panel data linear probability model (LPM) with dyad fixed effects - Stage 2 robustness (license first event post-CVC)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "post-CVC subsample, 129 dyads, 1,159 dyad-years (within-dyad post-CVC variation only)",
+    "dv": {
+     "name": "License-first-post-CVC indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Deloitte ReCap (ReCap) database"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Deloitte ReCap (ReCap) database / PharmaProjects"
+     },
+     {
+      "name": "Technological uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PharmaProjects"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Investor's pipeline (number of drugs in research pipeline)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Investor's employees (firm size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's slack (retained earnings)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investor's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Investor's prior CVC experience",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's pipeline (stock of drugs in clinical development)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's new products (number of new products launched)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner's early-stage technology (proportion early-stage)",
+      "source": "PharmaProjects"
+     },
+     {
+      "name": "Partner VC funding (indicator received independent VC funding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's amount of funding (cumulative VC funding raised)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's age (year of founding)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's public (indicator publicly traded)",
+      "source": "Deloitte ReCap (ReCap) database"
+     },
+     {
+      "name": "Partner's patents (patent stock depreciated 15% annually)",
+      "source": "National Bureau of Economic Research (NBER) patent data"
+     },
+     {
+      "name": "Time (year) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Dyad fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "publication intensity",
+    "cvc investment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "cvc investments",
+    "performance implications",
+    "wait-and-see option strategies"
+   ],
+   "mechanism_named": "wait-and-see option strategies",
+   "proposed_edge": {
+    "from": "wait-and-see option strategies",
+    "relation": "affects",
+    "to": "performance implications"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "cvc investors",
+    "licensing",
+    "r&d alliances",
+    "acquisitions",
+    "option exercise"
+   ],
+   "mechanism_named": "method of option exercise",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "types of partners",
+    "ultimate success",
+    "new drugs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "type of partner",
+    "relation": "affects",
+    "to": "ultimate success"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

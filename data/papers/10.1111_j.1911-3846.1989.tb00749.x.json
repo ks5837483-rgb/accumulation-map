@@ -1,0 +1,361 @@
+{
+ "paper_id": "10.1111_j.1911-3846.1989.tb00749.x",
+ "title": "The acquisition value of oil and gas firms: The role of historical costs, reserve recognition accounting, and analysts' appraisals*",
+ "journal": "CAR",
+ "year": 1989,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "valuation theory",
+  "Hotelling valuation principle",
+  "analyst superiority"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "book_value_of_oil_and_gas_assets",
+      "relation": "increases",
+      "to": "estimated_asset_value_of_petroleum_properties",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "estimated_asset_value_of_petroleum_properties",
+      "relation": "increases",
+      "to": "acquisition_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "estimated_asset_value_of_petroleum_properties"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "profitability_per_barrel_of_production",
+      "relation": "increases",
+      "to": "direct_profit_margin_valuation_of_reserves",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "direct_profit_margin_valuation_of_reserves",
+      "relation": "increases",
+      "to": "acquisition_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "direct_profit_margin_valuation_of_reserves"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reserve_recognition_accounting",
+      "relation": "increases",
+      "to": "direct_measurement_of_value_of_reserves",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "direct_measurement_of_value_of_reserves",
+      "relation": "increases",
+      "to": "acquisition_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "direct_measurement_of_value_of_reserves"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "analysts_appraisals",
+      "relation": "increases",
+      "to": "wider_information_set_and_flexibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "wider_information_set_and_flexibility",
+      "relation": "increases",
+      "to": "acquisition_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "wider_information_set_and_flexibility"
+   ],
+   "moderators": [
+    {
+     "construct": "timeliness_of_analyst_information",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "wider_information_set_and_flexibility",
+     "moderated_from": "analysts_appraisals",
+     "moderated_to": "acquisition_value",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "oil and gas industry (petroleum explorer-producers / petroleum firms)",
+  "country_region": "United States (SEC/FASB-reporting firms; 3 Canadian firms excluded)",
+  "time_period": "1979-1987",
+  "sample_description": "Completed acquisitions of formerly independent oil and gas firms (petroleum explorer-producers), traced from the 102 petroleum explorer-producers in Lilien and Pastena (1982) plus additional acquisitions identified from issues of Mergers and Acquisitions; excludes acquisitions of large (noncontrolling) blocks, Canadian firms lacking full RRA, and 4 outliers; requires Form 10-K Reports, RRA, and Herold's appraisal (HER) to be available",
+  "sample_size": "44 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Form 10-K Reports (financial statements)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Herold's appraisals (latest analysts' appraisal of firm value)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - Explanatory models (1)-(6) of acquisition value (AV), full sample (N=44); Panel B incremental F-tests for RRA and HER",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "AV",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Mergers and Acquisitions"
+    },
+    "key_ivs": [
+     {
+      "name": "SEM*BVOG",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "FCM*BVOG",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "RRA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "HER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Herold's appraisals (latest analysts' appraisal of firm value)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BVNOG",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "PROF",
+      "source": "Form 10-K Reports (financial statements)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "AV",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Mergers and Acquisitions"
+    },
+    "key_ivs": [
+     {
+      "name": "SEM*BVOG",
+      "measure": "SEM (=1 for successful efforts firms, 0 for full cost firms) times BVOG (book value of oil and gas assets); scaled by barrels",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "FCM*BVOG",
+      "measure": "FCM (=1 for full cost firms, 0 for successful efforts firms) times BVOG (book value of oil and gas assets); scaled by barrels",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "RRA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "HER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Herold's appraisals (latest analysts' appraisal of firm value)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BVNOG",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "PROF",
+      "source": "Form 10-K Reports (financial statements)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Explanatory models (1)-(6) of AV, subsample where HER (analysts' appraisal) is more recent than financial statement information (N=19)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "AV",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Mergers and Acquisitions"
+    },
+    "key_ivs": [
+     {
+      "name": "SEM*BVOG",
+      "measure": "SEM (=1 for successful efforts firms, 0 for full cost firms) times BVOG (book value of oil and gas assets); scaled by barrels",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "FCM*BVOG",
+      "measure": "FCM (=1 for full cost firms, 0 for successful efforts firms) times BVOG (book value of oil and gas assets); scaled by barrels",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "RRA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "HER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Herold's appraisals (latest analysts' appraisal of firm value)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "BVNOG",
+      "source": "Form 10-K Reports (financial statements)"
+     },
+     {
+      "name": "PROF",
+      "source": "Form 10-K Reports (financial statements)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "rra",
+    "her",
+    "timing advantage"
+   ],
+   "mechanism_named": "timing advantage of RRA over HER",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "her"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "her",
+    "av"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

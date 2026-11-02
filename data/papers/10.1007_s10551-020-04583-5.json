@@ -1,0 +1,572 @@
+{
+ "paper_id": "10.1007_s10551-020-04583-5",
+ "title": "When Does Corporate Social Responsibility Backfire in Acquisitions? Signal Incongruence and Acquirer Returns",
+ "journal": "JBE",
+ "year": 2020,
+ "field": "ethics",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "stakeholder theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "csr_engagement",
+      "relation": "increases",
+      "to": "moral_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "moral_capital",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "csr_engagement",
+      "relation": "increases",
+      "to": "stakeholder_cooperation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stakeholder_cooperation",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "moral_capital",
+    "stakeholder_cooperation"
+   ],
+   "moderators": [
+    {
+     "construct": "hostile_takeover",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "signal_incongruence",
+     "moderated_from": "csr_engagement",
+     "moderated_to": "acquirer_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "window-dressing (a temporary announcement-window impression tactic rather than genuine sustained CSR driving the returns)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "csr_engagement",
+      "relation": "increases",
+      "to": "signal_incongruence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_incongruence",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_incongruence"
+   ],
+   "moderators": [
+    {
+     "construct": "hostile_takeover",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "signal_incongruence",
+     "moderated_from": "csr_engagement",
+     "moderated_to": "acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquirers headquartered in twenty-three developed economies; industry fixed effects based on two-digit SIC codes)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2002-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1310 firm-year acquisition transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Datastream ASSET4 database",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC (Security Data Company) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (Center for Research in Security Prices)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "World Bank",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "KLD database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (Models 1-8): baseline main effect of pre-announcement CSR on acquirer returns",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer cumulative abnormal returns (CAR)",
+     "measure": "cumulative abnormal stock returns of acquirers around four event windows ([-1,1] to [-5,5]); daily abnormal return AR_i,t = r_i,t - r_m,t combined over the window",
+     "source": "CRSP (Center for Research in Security Prices)"
+    },
+    "key_ivs": [
+     {
+      "name": "CSR_t-1",
+      "measure": "weighted average value of the three ASSET4 indices (social, governance, environmental) after principal component analysis (PCA), the overall corporate social responsibility index, one year before the acquisition announcement",
+      "source": "Datastream ASSET4 database"
+     },
+     {
+      "name": "LACSR (sustainable CSR engagement)",
+      "measure": "three-year-weighted CSR score: LACSR = 1/2 CSR_t-1 + 1/4 CSR_t-2 + 1/8 CSR_t-3",
+      "source": "Datastream ASSET4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size (log total book value of assets)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Q_Adj (industry-mean adjusted Tobin's Q, two-digit SIC)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "R&D",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Invest (capital expenditures per asset)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage (total debts / total assets)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Tangibility (net property, plant and equipment / total assets)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "HHI (Herfindahl-Hirschman index on sales, two-digit SIC)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Age (log of firm maturity)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Relsize (relative size of acquirer and target)",
+      "source": "SDC (Security Data Company) Platinum"
+     },
+     {
+      "name": "Unemployment rate (acquirer's home country)",
+      "source": "World Bank"
+     },
+     {
+      "name": "Rulelaw",
+      "source": "World Bank"
+     },
+     {
+      "name": "Voice (V&A)",
+      "source": "World Bank"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (Models 1-4): CSR_t-1 x Hostile interaction on acquirer returns",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer cumulative abnormal returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (Center for Research in Security Prices)"
+    },
+    "key_ivs": [
+     {
+      "name": "CSR_t-1",
+      "measure": "PCA-weighted overall corporate social responsibility index one year before the acquisition announcement",
+      "source": "Datastream ASSET4 database"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (Security Data Company) Platinum"
+     },
+     {
+      "name": "CSR_t-1 x Hostile",
+      "measure": "interactive indicator of CSR x Hostile capturing signal incongruence",
+      "source": "Datastream ASSET4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Q_Adj",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "R&D",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Invest",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Tangibility",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "HHI",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Age",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Relsize",
+      "source": "SDC (Security Data Company) Platinum"
+     },
+     {
+      "name": "Unemployment",
+      "source": "World Bank"
+     },
+     {
+      "name": "Rulelaw",
+      "source": "World Bank"
+     },
+     {
+      "name": "Voice (V&A)",
+      "source": "World Bank"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Models 1-4): LACSR x Hostile interaction on acquirer returns (sustainable CSR)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer cumulative abnormal returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (Center for Research in Security Prices)"
+    },
+    "key_ivs": [
+     {
+      "name": "LACSR (sustainable CSR engagement)",
+      "measure": "three-year-weighted CSR score: LACSR = 1/2 CSR_t-1 + 1/4 CSR_t-2 + 1/8 CSR_t-3",
+      "source": "Datastream ASSET4 database"
+     },
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (Security Data Company) Platinum"
+     },
+     {
+      "name": "LACSR x Hostile",
+      "measure": "interactive indicator of LACSR x Hostile capturing signal incongruence",
+      "source": "Datastream ASSET4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Q_Adj",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "R&D",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Invest",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Tangibility",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "HHI",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Age",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Relsize",
+      "source": "SDC (Security Data Company) Platinum"
+     },
+     {
+      "name": "Unemployment",
+      "source": "World Bank"
+     },
+     {
+      "name": "Rulelaw",
+      "source": "World Bank"
+     },
+     {
+      "name": "Voice (V&A)",
+      "source": "World Bank"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Robustness: propensity score matching (PSM) endogeneity check - CSR engagement of acquirers vs non-acquirers",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "each acquirer (treatment) matched with a corresponding non-acquirer (control) in the same calendar year",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "dynamic model comparing change of CSR engagement between treatment (acquirer) and control (non-acquirer) groups",
+     "source": "Datastream ASSET4 database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer (treatment group)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (Security Data Company) Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size (matching covariate)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "pre-announcement performance (matching covariate)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "asset-liability ratio (matching covariate)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "capital expenditure ratio (matching covariate)",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Robustness: alternative CSR measure from KLD database and financial-crisis (2008-2010) subsample checks",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "KLD-covered firms 2002-2016; crisis subsample excludes acquisitions announced 2008-2010",
+    "dv": {
+     "name": "acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR event windows re-estimated with alternative specifications",
+     "source": "CRSP (Center for Research in Security Prices)"
+    },
+    "key_ivs": [
+     {
+      "name": "CSR_KLD,t-1 / LACSR_KLD",
+      "measure": "alternative CSR measure aggregating KLD score categories (2002-2016), replacing ASSET4-based CSR_t-1 and LACSR",
+      "source": "KLD database"
+     },
+     {
+      "name": "Crisis",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (Security Data Company) Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all baseline firm/industry/country controls",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "acquirers based in underdeveloped economies",
+    "stock markets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "stakeholder responses",
+    "investors’ reactions in stock markets",
+    "csr activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "pre-announcement csr engagement",
+    "post-announcement csr engagement",
+    "long-term financial performance"
+   ],
+   "mechanism_named": "insurance property of CSR engagement",
+   "proposed_edge": {
+    "from": "post-announcement csr engagement",
+    "relation": "affects",
+    "to": "long-term financial performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "csr engagement",
+    "market return of a firm",
+    "diversification",
+    "strategic alliances"
+   ],
+   "mechanism_named": "insurance-like effects of CSR engagement",
+   "proposed_edge": {
+    "from": "csr engagement",
+    "relation": "affects",
+    "to": "market return of a firm"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "insurance-like properties of csr engagement",
+    "potentially harmful events"
+   ],
+   "mechanism_named": "insurance-like properties of CSR engagement",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

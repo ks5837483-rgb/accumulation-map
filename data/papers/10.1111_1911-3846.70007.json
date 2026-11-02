@@ -1,0 +1,664 @@
+{
+ "paper_id": "10.1111_1911-3846.70007",
+ "title": "Downside risk similarity and M&amp;As",
+ "journal": "CAR",
+ "year": 2025,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection theory",
+  "theory of mergers (like buys like)",
+  "property rights theory of the firm"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "downside_risk_similarity",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m&a_quality",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "downside_risk_similarity",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "m&a_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "downside_risk_similarity",
+      "relation": "increases",
+      "to": "acquirer_risk_management_skill",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_risk_management_skill",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_risk_management_skill"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirers gain at the expense of targets by exploiting target-specific information (wealth transfer), rather than creating value through risk management"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "downside_risk_similarity_in_idiosyncratic_risks",
+      "relation": "increases",
+      "to": "acquirer_relevant_expertise",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_relevant_expertise",
+      "relation": "increases",
+      "to": "m&a_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_relevant_expertise"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "downside_risk_similarity",
+      "relation": "decreases",
+      "to": "unfamiliar_downside_risk_exposure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unfamiliar_downside_risk_exposure",
+      "relation": "increases",
+      "to": "change_in_downside_risk_profile",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unfamiliar_downside_risk_exposure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "downside_risk_similarity",
+      "relation": "increases",
+      "to": "acquirer_ability_to_manage_target_risks",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_ability_to_manage_target_risks",
+      "relation": "decreases",
+      "to": "value_destroying_deal_outcomes",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_ability_to_manage_target_risks"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "RiskSimilarity creates value by increasing the likelihood of positive outcomes (upside) rather than by reducing future negative outcomes"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US public firms; most acquirers and targets in manufacturing and service industries)",
+  "country_region": "United States (US domestic M&A deals)",
+  "time_period": "2006-2022",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "906 M&A announcements (571 unique acquirers, 850 unique targets)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SEC's EDGAR database (10-K filings; Item 1A risk factors and Item 7)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters' SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Panel A: DRS and existing similarity measures (Equation 1, validation)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "RiskSimilarity (and change specification ΔRiskSimilarity)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC's EDGAR database (10-K Item 1A)"
+    },
+    "key_ivs": [
+     {
+      "name": "ProductSimilarity",
+      "measure": "product market similarity from Hoberg and Phillips (2010)",
+      "source": "SEC's EDGAR database"
+     },
+     {
+      "name": "RelatedInd",
+      "measure": "industry relatedness from Fan and Goyal (2006)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RelatedHR",
+      "measure": "human capital relatedness from Lee et al. (2018)",
+      "source": "other"
+     },
+     {
+      "name": "SameState",
+      "measure": "geographic proximity from Kang and Kim (2008)",
+      "source": "Compustat"
+     },
+     {
+      "name": "QDiff",
+      "measure": "asset valuation similarity from Rhodes-Kropf and Robinson (2008)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SameAuditor",
+      "measure": "shared auditors from Cai et al. (2016)",
+      "source": "other"
+     },
+     {
+      "name": "SameDirector",
+      "measure": "shared directors from Cai and Sevilir (2012)",
+      "source": "other"
+     },
+     {
+      "name": "FinSimilarity",
+      "measure": "financial statement similarity from Brown et al. (2023)",
+      "source": "Compustat"
+     },
+     {
+      "name": "MDASimilarity",
+      "measure": "management discussion and analysis similarity from Brown and Knechel (2016)",
+      "source": "SEC's EDGAR database"
+     },
+     {
+      "name": "SizeDiff",
+      "measure": "firm size differences",
+      "source": "Compustat"
+     },
+     {
+      "name": "RetCorr",
+      "measure": "stock return correlations",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CoDown or NegCSK (placebo: CoUp or PosCSK)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "RiskSimilarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ProductSimilarity",
+      "source": "SEC's EDGAR database"
+     },
+     {
+      "name": "RelatedInd",
+      "source": "Compustat"
+     },
+     {
+      "name": "RelatedHR",
+      "source": "other"
+     },
+     {
+      "name": "SameState",
+      "source": "Compustat"
+     },
+     {
+      "name": "QDiff",
+      "source": "Compustat"
+     },
+     {
+      "name": "SameAuditor",
+      "source": "other"
+     },
+     {
+      "name": "SameDirector",
+      "source": "other"
+     },
+     {
+      "name": "FinSimilarity",
+      "source": "Compustat"
+     },
+     {
+      "name": "MDASimilarity",
+      "source": "SEC's EDGAR database"
+     },
+     {
+      "name": "SizeDiff",
+      "source": "Compustat"
+     },
+     {
+      "name": "RetCorr",
+      "source": "CRSP"
+     },
+     {
+      "name": "both firms' fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: DRS and merger announcement returns, baseline (Equation 3, OLS; Col 1 CCAR, Col 2 Acquirer_CAR, Col 3 Target_CAR)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "906 US domestic M&A announcements, 2006-2022, 571 unique acquirers and 850 unique targets (both public, CRSP/Compustat, financial and utility industries excluded)",
+    "dv": {
+     "name": "CCAR (M&A Quality); decomposed into Acquirer_CAR and Target_CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "RiskSimilarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ProductSimilarity",
+      "source": "SEC's EDGAR database"
+     },
+     {
+      "name": "RelatedInd",
+      "source": "Compustat"
+     },
+     {
+      "name": "RelatedHR",
+      "source": "other"
+     },
+     {
+      "name": "SameState",
+      "source": "Compustat"
+     },
+     {
+      "name": "QDiff",
+      "source": "Compustat"
+     },
+     {
+      "name": "SameAuditor",
+      "source": "other"
+     },
+     {
+      "name": "SameDirector",
+      "source": "other"
+     },
+     {
+      "name": "FinSimilarity",
+      "source": "Compustat"
+     },
+     {
+      "name": "MDASimilarity",
+      "source": "SEC's EDGAR database"
+     },
+     {
+      "name": "RetCorr",
+      "source": "CRSP"
+     },
+     {
+      "name": "RunUp (stock returns)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Size (firm size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Q (Tobin's Q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "FCF (free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash (cash holding)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA (return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RelativeSize (relative deal size)",
+      "source": "Thomson Reuters' SDC database"
+     },
+     {
+      "name": "Tender (tender offers)",
+      "source": "Thomson Reuters' SDC database"
+     },
+     {
+      "name": "Hostile (hostile bids)",
+      "source": "Thomson Reuters' SDC database"
+     },
+     {
+      "name": "AllCash (payment method)",
+      "source": "Thomson Reuters' SDC database"
+     },
+     {
+      "name": "industry fixed effects (two-digit SIC)",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Which types of risk matter (category-specific RiskSimilarity: Campbell 2014 five categories, IMA, and Deloitte-Arkley frameworks; OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CCAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "RiskSimilarity[Financial], [LegalReg], [Tax], [Systematic], [Idiosyncratic]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     },
+     {
+      "name": "RiskSimilarity[Operational_IMA], [Strategic_IMA]",
+      "measure": "category-specific RiskSimilarity within idiosyncratic risks using the IMA (2011) framework",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     },
+     {
+      "name": "RiskSimilarity[Operational_DA] and other Deloitte-Arkley categories",
+      "measure": "category-specific RiskSimilarity within idiosyncratic risks using the Deloitte-Arkley (2023) six-category framework",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Other controls (as in Table 4: RunUp, Size, Q, Leverage, FCF, Cash, ROA, RelativeSize, Tender, Hostile, AllCash)",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (two-digit SIC)",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "906 M&A deals",
+    "dv": {
+     "name": "CCAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "RiskSimilarity(General)",
+      "measure": "RiskSimilarity computed using topics labeled general risk (discussed by more firms than the median of all topics that year), following Brown et al. (2018)",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     },
+     {
+      "name": "RiskSimilarity(Industry)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     },
+     {
+      "name": "RiskSimilarity(Firm)",
+      "measure": "RiskSimilarity computed using remaining non-general and non-industry (firm-specific) risk topics",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Other controls (as defined in Table 4)",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (two-digit SIC)",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Columns 1-2: DRS and post-M&A change in acquirer downside risk (Equation 4, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ΔRisk_t+1 (ΔRisk_t+2)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC's EDGAR database (10-K Item 1A)"
+    },
+    "key_ivs": [
+     {
+      "name": "RiskSimilarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Other controls (as defined in Table 4)",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (two-digit SIC)",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Columns 3-6: DRS and post-M&A operating performance (Equation 5, probit; Impairment, Divestiture, ROA_Decrease, ROA_Increase placebo)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "completed deals by the end of 2020 (Impairment N=537, Divestiture N=586, ROA_Decrease N=262, ROA_Increase N=389)",
+    "dv": {
+     "name": "PostMAPerf: Impairment, Divestiture, ROA_Decrease (placebo: ROA_Increase)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "manually collected goodwill impairment data from 10-K filings; Compustat (ROA); Thomson Reuters' SDC database (divestiture/deal data)"
+    },
+    "key_ivs": [
+     {
+      "name": "RiskSimilarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR database (10-K Item 1A)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Other controls (as defined in Table 4)",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (two-digit SIC)",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

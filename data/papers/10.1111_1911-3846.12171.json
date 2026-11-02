@@ -1,0 +1,580 @@
+{
+ "paper_id": "10.1111_1911-3846.12171",
+ "title": "Abnormal Accruals and Managerial Intent: Evidence from the Timing of Merger Announcements and Completions",
+ "journal": "CAR",
+ "year": 2015,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "investor inattention theory",
+  "limited attention theory",
+  "earnings management",
+  "market overvaluation hypothesis",
+  "behavioral finance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "abnormal_accruals",
+      "relation": "increases",
+      "to": "incentive_to_exploit_investor_inattention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_exploit_investor_inattention",
+      "relation": "increases",
+      "to": "friday_merger_announcement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_exploit_investor_inattention"
+   ],
+   "moderators": [
+    {
+     "construct": "merger_completion_lag",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "incentive_to_exploit_investor_inattention",
+     "moderated_from": "abnormal_accruals",
+     "moderated_to": "friday_merger_announcement",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P7"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "friday_merger_announcement",
+      "relation": "increases",
+      "to": "incentive_to_conceal_opportunism",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_conceal_opportunism",
+      "relation": "increases",
+      "to": "temporal_distancing_of_earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_conceal_opportunism"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "friday_merger_announcement",
+      "relation": "increases",
+      "to": "investor_inattention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_inattention",
+      "relation": "decreases",
+      "to": "post_merger_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_inattention"
+   ],
+   "moderators": [
+    {
+     "construct": "information_environment",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "investor_inattention",
+     "moderated_from": "friday_merger_announcement",
+     "moderated_to": "post_merger_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the negative performance reflects empire building / free cash flow (managerial waste) rather than overvaluation",
+    "the overconfidence hypothesis (which predicts fewer Friday announcements and less negative performance for Friday announcers)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "friday_merger_announcement",
+      "relation": "increases",
+      "to": "managerial_opportunism",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_opportunism",
+      "relation": "increases",
+      "to": "real_earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_opportunism"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the Friday announcers’ positive abnormal accruals result from GAAP reporting restrictions rather than opportunistic earnings inflation"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "abnormal_accruals",
+      "relation": "increases",
+      "to": "incentive_to_exploit_investor_inattention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_exploit_investor_inattention",
+      "relation": "increases",
+      "to": "switching_earnings_announcement_to_friday",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_exploit_investor_inattention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "abnormal_accruals",
+      "relation": "increases",
+      "to": "investor_overpricing_of_abnormal_accruals",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_overpricing_of_abnormal_accruals",
+      "relation": "decreases",
+      "to": "post_merger_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_overpricing_of_abnormal_accruals"
+   ],
+   "moderators": [
+    {
+     "construct": "friday_merger_announcement",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "investor_overpricing_of_abnormal_accruals",
+     "moderated_from": "abnormal_accruals",
+     "moderated_to": "post_merger_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P6"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "friday_merger_announcement",
+      "relation": "increases",
+      "to": "bad_news_suppression",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bad_news_suppression",
+      "relation": "increases",
+      "to": "sustained_overvaluation_until_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bad_news_suppression"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the differential post-completion returns simply reflect the greater overvaluation of Friday announcers rather than bad-news suppression"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public companies making stock-for-stock acquisitions; banks excluded)",
+  "country_region": "United States",
+  "time_period": "1994-2010",
+  "sample_description": "Completed stock swap announcements between U.S. companies from the SDC acquisition database (transaction a merger with method of payment and value reported; stock swap = >50% financed with stock; requiring COMPUSTAT data to compute abnormal accruals and CRSP data for abnormal returns; transaction value and acquirer market value over two million dollars; excluding banks)",
+  "sample_size": "2,457 completed stock swap announcements (304 Friday, 2,153 non-Friday)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC acquisition database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Cumulative accruals prior to stock swap announcements (Friday vs non-Friday)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal accruals",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday merger announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC acquisition database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Effect of pre-acquisition abnormal accruals on timing of stock swap announcements (logistic regression, N = 2,457)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "2,457 completed stock swap announcements",
+    "dv": {
+     "name": "FRIDAY",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC acquisition database"
+    },
+    "key_ivs": [
+     {
+      "name": "CABAC",
+      "measure": "cumulative pre-merger announcement abnormal accruals over Fiscal Quarter-3 to Quarter-1",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "UNLISTED",
+      "source": "SDC acquisition database"
+     },
+     {
+      "name": "POOL",
+      "source": "SDC acquisition database"
+     },
+     {
+      "name": "SAME_IND",
+      "source": ""
+     },
+     {
+      "name": "NBIDDER",
+      "source": "SDC acquisition database"
+     },
+     {
+      "name": "LSIZE",
+      "source": ""
+     },
+     {
+      "name": "RSIZE",
+      "source": "SDC acquisition database"
+     },
+     {
+      "name": "BM",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "LAC",
+      "source": ""
+     },
+     {
+      "name": "LIO",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Post-merger announcement abnormal returns (Friday vs non-Friday), first and second year",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "completed stock swap bids",
+    "dv": {
+     "name": "post-merger announcement abnormal returns (ABRET)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday merger announcement",
+      "measure": "Friday announcers vs non-Friday announcers",
+      "source": "SDC acquisition database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel A - Pre-merger abnormal accruals by firm information environment/visibility",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "pre-merger announcement abnormal accruals",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday merger announcement",
+      "measure": "Friday vs non-Friday announcers",
+      "source": "SDC acquisition database"
+     },
+     {
+      "name": "firm information environment/visibility",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel B - Post-merger abnormal returns by firm information environment/visibility",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-merger announcement abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday merger announcement",
+      "measure": "Friday vs non-Friday announcers",
+      "source": "SDC acquisition database"
+     },
+     {
+      "name": "firm information environment/visibility",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Real earnings management (Friday vs non-Friday); Column 2 = firms that barely beat consensus forecast",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "real earnings management",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday merger announcement",
+      "measure": "Friday vs non-Friday announcers",
+      "source": "SDC acquisition database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 - Abnormal accruals conditional on days of merger and earnings announcements (earnings-day switch to Friday)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "switch of earnings announcement day to Friday",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday merger announcement / pre-merger abnormal accruals",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC acquisition database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-merger announcement abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "CABAC",
+      "measure": "pre-merger announcement abnormal accruals",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "FRIDAY",
+      "measure": "Friday announcement indicator",
+      "source": "SDC acquisition database"
+     },
+     {
+      "name": "CABAC x FRIDAY interaction",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "abnormal accruals",
+    "opportunistic behavior",
+    "normal business activities"
+   ],
+   "mechanism_named": "generally accepted accounting principles (GAAP)",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "abnormal accruals",
+    "managers’ expectations of future performance",
+    "future performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "abnormal returns"
+   ],
+   "mechanism_named": "endogenous choice made by the acquirers",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "earnings management hypothesis",
+    "investors fail to fully impound public information"
+   ],
+   "mechanism_named": "earnings management hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

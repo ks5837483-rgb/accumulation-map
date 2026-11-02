@@ -1,0 +1,887 @@
+{
+ "paper_id": "10.1287_mnsc.2015.2371",
+ "title": "Target Firm-Specific Information and Acquisition Efficiency",
+ "journal": "MNSC",
+ "year": 2017,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_specific_information",
+      "relation": "decreases",
+      "to": "uncertainty_about_common_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "uncertainty_about_common_value",
+      "relation": "decreases",
+      "to": "acquisition_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_firm_specific_information",
+      "relation": "increases",
+      "to": "reliance_on_private_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reliance_on_private_value",
+      "relation": "increases",
+      "to": "acquisition_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "uncertainty_about_common_value",
+    "reliance_on_private_value"
+   ],
+   "moderators": [
+    {
+     "construct": "cross_industry_acquisition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "target_firm_specific_information",
+     "moderated_to": "acquisition_efficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-industry differential prediction"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "spurious correlation because both the explanatory and dependent variables are market-based measures",
+    "target firm-specific fundamental differences from industry peers (rather than information) drive the results"
+   ]
+  },
+  {
+   "hypothesis": "P1 (postacquisition divestiture)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_specific_information",
+      "relation": "increases",
+      "to": "likelihood_highest_private_value_acquirer_wins",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_highest_private_value_acquirer_wins",
+      "relation": "decreases",
+      "to": "postacquisition_divestiture",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_highest_private_value_acquirer_wins"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2 (bid withdrawal)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_specific_information",
+      "relation": "decreases",
+      "to": "discovery_of_negative_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "discovery_of_negative_information",
+      "relation": "increases",
+      "to": "deal_withdrawal",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_firm_specific_information",
+      "relation": "decreases",
+      "to": "downward_revision_of_common_value_estimate",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "downward_revision_of_common_value_estimate",
+      "relation": "increases",
+      "to": "deal_withdrawal",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "discovery_of_negative_information",
+    "downward_revision_of_common_value_estimate"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3 (acquirer firm-specific information)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_firm_specific_information",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (manufacturing, finance/insurance/real estate, and services heavily represented among acquirers and targets)",
+  "country_region": "United States",
+  "time_period": "1980-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,560 acquisition announcements"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4, column (1) — Combined returns on nonsynchronicity",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition efficiency (combined abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target stock-return nonsynchronicity (firm-specific information)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_FCF (acquirer free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_BTM (acquirer book-to-market)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_BTM (target book-to-market)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV (acquirer leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_LEV (target leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_SIZE (acquirer size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "TRG_SIZE (target size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ACQ_ROA (acquirer ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_ROA (target ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "PERC_STOCK (percentage paid with stock)",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, column (2) — Oler peer-adjusted combined returns on nonsynchronicity",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition efficiency (peer-adjusted combined returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target stock-return nonsynchronicity (firm-specific information)",
+      "measure": "NONSYNCH: minus sign of log(R2/(1-R2)); three-year average preacquisition",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "ACQ_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "PERC_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, column (3) — Change in ROA on nonsynchronicity",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition efficiency (change in operating performance)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "target stock-return nonsynchronicity (firm-specific information)",
+      "measure": "NONSYNCH: minus sign of log(R2/(1-R2)); three-year average preacquisition",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LAG_AV_ROA (previous-year value-weighted-average ROA of acquirer and target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "PERC_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, column (4) — Combined returns on abnormal accruals",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition efficiency (combined abnormal returns)",
+     "measure": "value-weighted combined abnormal returns of acquirer and target around the acquisition announcement (COMB_RET); market-model prediction errors",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target preacquisition abnormal accruals (inverse firm-specific information / reporting transparency)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "ACQ_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "PERC_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, column (5) — Oler peer-adjusted returns on abnormal accruals",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition efficiency (peer-adjusted combined returns)",
+     "measure": "combined peer-firm-adjusted abnormal returns (Oler 2008 four peer-firm matched portfolio by industry, market cap, book-to-market)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target preacquisition abnormal accruals",
+      "measure": "ABN_ACCRUALS: target preacquisition abnormal accruals",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "ACQ_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "PERC_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, column (6) — Change in ROA on abnormal accruals",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition efficiency (change in operating performance)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "target preacquisition abnormal accruals",
+      "measure": "ABN_ACCRUALS: target preacquisition abnormal accruals",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LAG_AV_ROA (previous-year value-weighted-average ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG_BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ACQ_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "TRG_LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQ_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "TRG_SIZE",
+      "source": "CRSP"
+     },
+     {
+      "name": "PERC_STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, column (1) — Postacquisition divestiture (logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "consummated acquisitions (divestiture linked by name and four-digit SIC + headquarters state match)",
+    "dv": {
+     "name": "likelihood of postacquisition divestiture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "target stock-return nonsynchronicity (firm-specific information)",
+      "measure": "NONSYNCH: minus sign of log(R2/(1-R2)); three-year average preacquisition",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ controls (same set as Equation (4))",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG controls (same set as Equation (4))",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "DEAL controls (same set as Equation (4))",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Additional analysis — Bid withdrawal likelihood",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "announced acquisitions (2,209 consummated + 351 withdrawn)",
+    "dv": {
+     "name": "likelihood of a withdrawn deal after acquisition announcement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "target preacquisition firm-specific information",
+      "measure": "target stock-return nonsynchronicity (NONSYNCH)",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ controls",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG controls",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "DEAL controls",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Additional analysis — Within-industry vs cross-industry cross-sectional test",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "within-industry vs cross-industry acquisitions",
+    "dv": {
+     "name": "acquisition efficiency (combined abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target firm-specific information interacted with cross-industry indicator",
+      "measure": "NONSYNCH interacted with cross-industry classification",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ controls",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG controls",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "DEAL controls",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Additional analysis — Falsification test with earnings nonsynchronicity",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition efficiency (combined abnormal returns)",
+     "measure": "combined abnormal returns (COMB_RET)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "earnings nonsynchronicity (placebo for stock-return nonsynchronicity)",
+      "measure": "earnings nonsynchronicity replacing stock-return nonsynchronicity as a falsification test",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ controls",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "TRG controls",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "DEAL controls",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target firm-specific information",
+    "postacquisition goodwill impairment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "target firm-specific information",
+    "relation": "affects",
+    "to": "postacquisition goodwill impairment"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "impairment tests"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "comprehensive due diligence",
+    "target firm-specific information",
+    "likelihood of withdrawing decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "comprehensive due diligence",
+    "on_path": [
+     "target firm-specific information",
+     "likelihood of withdrawing decisions"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "stock nonsynchronicity",
+    "fundamental differences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "target firm-specific information",
+    "target shareholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "target firm-specific information",
+    "relation": "affects",
+    "to": "target shareholders"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "private target-firm opacity",
+    "overall asset-allocation efficiency of private acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "private target-firm opacity",
+    "relation": "affects",
+    "to": "overall asset-allocation efficiency of private acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

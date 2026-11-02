@@ -1,0 +1,484 @@
+{
+ "paper_id": "10.2307_2329464",
+ "title": "Do Long-Term Shareholders Benefit From Corporate Acquisitions?",
+ "journal": "JF",
+ "year": 1997,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "asymmetric information",
+  "market underreaction",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "tender_offer",
+      "relation": "increases",
+      "to": "disciplining_of_target_managers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disciplining_of_target_managers",
+      "relation": "increases",
+      "to": "postacquisition_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "tender_offer",
+      "relation": "increases",
+      "to": "operating_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "operating_synergies",
+      "relation": "increases",
+      "to": "postacquisition_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disciplining_of_target_managers",
+    "operating_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the form of payment, not the mode of acquisition, is the real driving force behind the postacquisition returns"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_payment",
+      "relation": "increases",
+      "to": "acquirer_stock_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_stock_overvaluation",
+      "relation": "decreases",
+      "to": "postacquisition_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_stock_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "changes in the acquirer's debt-to-equity ratios (leverage effects) confound the cash-acquirer returns"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_size_of_target_to_acquirer",
+      "relation": "increases",
+      "to": "acquirer_stock_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_stock_overvaluation",
+      "relation": "decreases",
+      "to": "target_shareholder_cumulative_wealth_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_stock_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (NYSE, AMEX, and Nasdaq firms)",
+  "time_period": "1970-1989",
+  "sample_description": "U.S. operating firms delisted from NYSE, AMEX, and Nasdaq during 1970-1989 due to acquisition, identified from the CRSP tapes; ADRs, REITs, and closed-end funds excluded, as well as cases where target or acquirer stock traded below three dollars on the effective date",
+  "sample_size": "947 acquisitions made by 639 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP tapes (NYSE, AMEX, Nasdaq; delisting codes 200-203, last dividend payment codes 32/37/38)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital Adjustments Register",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I: Summary Statistics of acquisitions by mode and form of payment, 1970-1989",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "947 acquisitions made by 639 firms, 1970-1989 (788 mergers, 135 tender offers, 24 ambiguous; 405 stock, 314 cash, 228 mixed)",
+    "dv": {
+     "name": "number and aggregate market value of acquisitions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / Capital Adjustments Register"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "merger vs. tender offer vs. ambiguous, classified from the Wall Street Journal Index following Jensen and Ruback (1983)",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "stock payment (only acquirer's common stock), cash payment (only cash), or mixed payment",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II: Postacquisition excess returns for full sample of 947 acquisitions, by mode of acquisition and form of payment",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "947 acquisitions (405 stock, 314 cash, 228 mixed)",
+    "dv": {
+     "name": "five-year postacquisition buy-and-hold excess return (acquirer minus matching firm)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "mergers vs. tender offers vs. ambiguous",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "stock vs. cash vs. mixed payment",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "book-to-market",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III: Postacquisition excess returns for 534 nonoverlapping acquisitions, by mode and form of payment",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "534 nonoverlapping acquisitions (one acquisition per five years per firm, unambiguous merger/tender, pure cash/stock; 300 stock, 234 cash)",
+    "dv": {
+     "name": "five-year postacquisition buy-and-hold excess return (acquirer minus matching firm)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "merger (0) vs. tender offer (1)",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "pure stock (0) vs. pure cash (1)",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "book-to-market",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Panel A: OLS regression of postacquisition excess return on mode and form of payment (N=534)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "534 firms",
+    "dv": {
+     "name": "postacquisition excess return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "tender offer dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "cash payment dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     }
+    ]
+   },
+   {
+    "label": "Table IV Panel B: OLS regression excluding smaller acquirers (N=413)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "413 firms with market value above $250 million in 1994 dollars",
+    "dv": {
+     "name": "postacquisition excess return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "tender offer dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "cash payment dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "19 calendar year dummy variables (1970 to 1988)",
+      "source": "Wall Street Journal Index"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "534 acquisitions matched to IPO/SEO equity issuers from the Loughran and Ritter (1995) dataset",
+    "dv": {
+     "name": "five-year buy-and-hold return difference (acquirer minus IPO/SEO equity issuer matching firm)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "merger vs. tender offer",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "pure stock vs. pure cash",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "book-to-market (closest F-value)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI: Preacquisition, postacquisition, and combined excess returns (N=516)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "516 acquisitions (288 stock, 228 cash)",
+    "dv": {
+     "name": "preacquisition, postacquisition, and combined buy-and-hold excess returns (acquirer/target minus matching firms)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "merger vs. tender offer",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "pure stock vs. pure cash",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "book-to-market",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "516 acquisitions (419 mergers, 97 tender offers)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "merger vs. tender offer (Panel A)",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "stock vs. cash acquisitions (Panel B)",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "book-to-market",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VIII: Aggregate wealth gains to target shareholders by target/acquirer market value quartile (Panel A: Stock Mergers)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "stock merger acquisitions sorted into quartiles by target/acquirer market value",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "announcement period returns to target shareholders plus postacquisition period returns to acquirer shareholders over the combined periods (average, median, and rebalanced), minus matching firm returns",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "relative size of target to acquirer",
+      "measure": "target/acquirer market value quartile (Low, 2, 3, High)",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "book-to-market",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ex ante variable",
+    "long-term wealth losses to target shareholders",
+    "negative cumulative wealth gains"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ex ante variable",
+    "relation": "affects",
+    "to": "negative cumulative wealth gains"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "market efficiency",
+    "likely wealth gains",
+    "postacquisition returns"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

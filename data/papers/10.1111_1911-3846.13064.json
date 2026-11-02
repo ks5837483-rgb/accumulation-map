@@ -1,0 +1,759 @@
+{
+ "paper_id": "10.1111_1911-3846.13064",
+ "title": "Right on target: Is public disclosure of non‐<scp>GAAP</scp> earnings associated with M&amp;A efficiency?",
+ "journal": "CAR",
+ "year": 2025,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information asymmetry theory",
+  "voluntary disclosure theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m&a_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target firm's overall transparency (general disclosure policy) drives the result, not non-GAAP specifically"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m&a_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "target_valuation_difficulty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "non_gaap_disclosure",
+     "moderated_to": "m&a_efficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m&a_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "weak_information_environment",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "non_gaap_disclosure",
+     "moderated_to": "m&a_efficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_nongaap_quality",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m&a_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "non_gaap_disclosure_quality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "non_gaap_disclosure",
+     "moderated_to": "m&a_efficiency",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P_nongaap_quality"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "non-GAAP comment letters merely proxy for the target's overall financial reporting quality"
+   ]
+  },
+  {
+   "hypothesis": "P_synergy",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "increases",
+      "to": "synergy_opportunity_identification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_opportunity_identification",
+      "relation": "increases",
+      "to": "synergy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_opportunity_identification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "non-GAAP disclosure merely shifts bargaining power to the bidder at the target's expense (no combined-welfare gain)"
+   ]
+  },
+  {
+   "hypothesis": "P_goodwill_impairment",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "increases",
+      "to": "valuation_accuracy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_accuracy",
+      "relation": "decreases",
+      "to": "goodwill_impairment",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_accuracy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_operating_performance",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_takeover_likelihood",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "takeover_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "non_gaap_disclosure",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P_exclusion_type",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "other_item_exclusion_disclosure",
+      "relation": "increases",
+      "to": "incremental_information",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "incremental_information",
+      "relation": "increases",
+      "to": "m&a_efficiency",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incremental_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Fama-French 12 industries; majority of deals from business equipment, health-related, and finance industries)",
+  "country_region": "United States",
+  "time_period": "2005-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "669 M&A deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC non-GAAP comment letters",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NG",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target AQ (target accruals quality)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Block (institutional investor's block ownership)",
+      "source": "Thomson Reuters"
+     },
+     {
+      "name": "All Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "All Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Non-negotiated",
+      "source": "SDC"
+     },
+     {
+      "name": "Diff Ind (diversifying deal indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Year FE (Columns 4-5)",
+      "source": ""
+     },
+     {
+      "name": "Industry FE (acquirer and target, Fama-French 12; Column 5)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NG",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MF_EPS (count of quarters with EPS management forecasts over previous eight quarters)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "MF_Any (count of quarters with any management forecast over previous eight quarters)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Conf Call (frequency of target firm's conference calls in eight quarters prior to deal announcement)",
+      "source": ""
+     },
+     {
+      "name": "10-K Readability (readability of target firm's 10-Ks in 2 years prior to deal announcement)",
+      "source": "sec_edgar_filings"
+     },
+     {
+      "name": "Basic controls and Target AQ (same as Column 3 of Table 3)",
+      "source": ""
+     },
+     {
+      "name": "Year and Industry FE (in even columns)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsamples of target firms in the top vs bottom quartile of return volatility / 10-K uncertainty words (167 obs per column)",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NG",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Return Volatility (moderator, subsample split top vs bottom quartile)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "10-K Uncertainty (moderator, subsample split top vs bottom quartile)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Year FE (Columns 3-4, 7-8)",
+      "source": ""
+     },
+     {
+      "name": "Industry FE (Columns 3-4, 7-8)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsamples of targets in top vs bottom quartile of analyst coverage (190/191 obs) or illiquidity (167 obs)",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NG",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Analyst Coverage (moderator, subsample split top vs bottom quartile)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Illiquidity (moderator, subsample split top vs bottom quartile)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Year FE (Columns 3-4, 7-8)",
+      "source": ""
+     },
+     {
+      "name": "Industry FE (Columns 3-4, 7-8)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Non-GAAP quality (Panel A subsample comparisons; Panel B interaction)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Panel A compares high-quality, low-quality, and no-non-GAAP target subsamples (low-quality subsample = 31 obs)",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "High NG Quality1",
+      "measure": "indicator for target firms (with >=5 non-GAAP disclosures in prior eight quarters) whose manager non-GAAP earnings align with analyst-provided non-GAAP earnings at least five times",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Low NG Quality1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "High NG Quality2 x NG (Panel B interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC non-GAAP comment letters"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Year and Industry FE (even columns)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "specific items each firm excludes",
+    "non-GAAP exclusions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target return windows",
+    "noise"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "non-gaap disclosure",
+    "takeover likelihood"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "non-gaap disclosure",
+    "relation": "increases",
+    "to": "takeover likelihood"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "unobservable target firm characteristics",
+    "non-gaap-disclosure decisions",
+    "m&a outcomes"
+   ],
+   "mechanism_named": "confounding variables",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "exogenous shock to non-gaap disclosure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "year and industry fixed effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

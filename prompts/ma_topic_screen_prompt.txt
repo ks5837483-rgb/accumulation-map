@@ -1,0 +1,26 @@
+ma_topic_screen v2 (2026-10-31; v1 failed calibration 33/40 on M&A yes/no) — prompt of record. Reconstructs the M&A screen behind 2_master/ma_classification.xlsx,
+whose original prompt is not on disk; validated against that file's labels before use (calibration round).
+
+For each paper you get journal, year, title and abstract. Decide by reading (meaning, not keywords):
+- class:
+  "A" = empirical study of M&A ANTECEDENTS: why/whether/which firms acquire or are acquired, target choice, motives.
+  "O" = empirical study of the M&A DEAL PROCESS or STRUCTURE: bidding, negotiation, payment, contracts (earnouts,
+        termination fees), advisors, financing, disclosure/reporting/auditing of deals, regulation of deals.
+  "P" = empirical study of M&A PERFORMANCE/OUTCOMES: returns, operating performance, synergy, integration, innovation
+        or employment after the deal, divestiture/spin-off outcomes.
+  "L" = alliances, joint ventures, partnerships, licensing — not acquisitions.
+  "N_nonempirical" = about M&A but theory, formal model, review, commentary, editorial.
+  "N_offtopic" = not about mergers/acquisitions (keyword false hits: franchising, auctions in general, activism without
+        a takeover, outsourcing, etc.).
+  M&A includes mergers, acquisitions, takeovers, tender offers, LBOs/MBOs, divestitures, spin-offs, asset sales.
+  INCLUSIVE RULE (user ruling 2026-10-31: "if it has M&A taste, keep them in"): classify as A/O/P whenever the
+  tested claims have real M&A content, including: the market for corporate control without a completed deal
+  (takeover threat, takeover defenses, anti-takeover laws, takeover exposure) -> O; choices where acquisition is one
+  of the options (acquire vs build vs ally, entry mode incl. acquisition) -> A; acquisitions as one of several studied
+  outcomes -> A; accounting for deals (purchase accounting, goodwill) -> O. Use N_offtopic ONLY when the paper has no
+  M&A content at all. Use L only when the arrangements studied exclude acquisition.
+- conf: "high" | "medium" | "low".
+- reason: <= 15 words.
+STRICT JUDGMENT RULE: decide by reading; no scripts, regexes or keyword lists to assign a class. Code may only read the
+input file and write the output file.
+Output: one JSON per line: {"key","class","conf","reason"}.

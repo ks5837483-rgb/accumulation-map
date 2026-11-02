@@ -1,0 +1,678 @@
+{
+ "paper_id": "10.1017_s0022109018000509",
+ "title": "Deal Initiation in Mergers and Acquisitions",
+ "journal": "JFQA",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_financial_distress",
+      "relation": "increases",
+      "to": "expected_bankruptcy_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_bankruptcy_costs",
+      "relation": "increases",
+      "to": "target_deal_initiation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_bankruptcy_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "industry_or_economy_wide_shock",
+      "relation": "increases",
+      "to": "supply_of_takeover_targets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "supply_of_takeover_targets",
+      "relation": "increases",
+      "to": "target_deal_initiation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "supply_of_takeover_targets"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_financial_and_competitive_weakness",
+      "relation": "decreases",
+      "to": "target_reservation_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_reservation_price",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_reservation_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_deal_initiation",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "target_deal_initiation",
+     "moderated_to": "takeover_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P1_stock_payment_signal",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_acceptance_of_acquirer_stock_payment",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2_due_diligence_advisor_signal",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_retention_of_due_diligence_advisor",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly listed U.S. firms, excluding financial services and utility industries)",
+  "country_region": "United States",
+  "time_period": "1997-2012",
+  "sample_description": "U.S. M&A deals from the SDC Platinum M&A database with deal value exceeding $5 million, both acquirer and target publicly listed U.S.-domiciled firms not in financial services or utility industries, legal form of a merger or acquisition of majority interest, completed status; matched with CRSP and Compustat databases",
+  "sample_size": "1,639 deals (1,268 with a known deal initiator)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "National Bureau of Economic Research (NBER) recession dates",
+    "category": "other",
+    "kind": "government_public"
+   },
+   {
+    "name": "analyst forecasts of target earnings (dispersion and accuracy)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "also split by ALL_EQUITY, ALL_CASH, TENDER, MERGER subsamples",
+    "dv": {
+     "name": "Target takeover premia / announcement returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP, SDC, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TARGET_INITIATED",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Target financial distress, performance, financial constraint, and shock measures",
+     "measure": "ALTMANS_Z_SCORE, INTEREST_COVERAGE_RATIO, LIQUIDITY, BOOK_LEVERAGE, S&P long-term credit rating, stock price below $5; CHANGE_IN_ROA, CHANGE_IN_TOBINS_Q, SALES_GROWTH, MARKET_SHARE_GROWTH, BHAR; SA/KZ/WW financial-constraint indices; industry shock index and time-series shock indicators; 2001/2008 recession",
+     "source": "Compustat, CRSP, S&P, NBER"
+    },
+    "key_ivs": [
+     {
+      "name": "TARGET_INITIATED",
+      "measure": "1 if target initiated, 0 if bidder initiated (grouping variable)",
+      "source": "EDGAR SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Predicting Target-Initiated Deals (probit regressions, Columns 1-2)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "TARGET_INITIATED",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "ALTMANS_Z_SCORE",
+      "measure": "Altman's Z-score (target financial distress)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "measure": "target liquidity ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "CHANGE_IN_ROA_OVER_PAST_3_YEARS",
+      "measure": "change in target ROA over past 3 years",
+      "source": "Compustat"
+     },
+     {
+      "name": "BHAR_OVER_PAST_1_YEAR",
+      "measure": "target buy-and-hold abnormal return over past 1 year",
+      "source": "CRSP"
+     },
+     {
+      "name": "HIGH_HHI",
+      "measure": "high industry concentration indicator (target industry competition)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SA_INDEX",
+      "measure": "Size-Age financial constraint index (Hadlock and Pierce 2010)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INDUSTRY_SHOCK_INDEX",
+      "measure": "first principal component of seven industry-level variables (Harford 2005)",
+      "source": "Compustat"
+     },
+     {
+      "name": "2001_ECONOMIC_RECESSION",
+      "measure": "indicator = 1 for deals announced Sept. 2000 to May 2002",
+      "source": "NBER"
+     },
+     {
+      "name": "2008_ECONOMIC_RECESSION",
+      "measure": "indicator = 1 for deals announced June 2007 to Dec. 2009",
+      "source": "NBER"
+     },
+     {
+      "name": "PRIOR_INDUSTRY_TARGET_INITIATED_DEAL_&_AUCTION_ACTIVITY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "INSTITUTIONAL_SHAREHOLDING_CONCENTRATION",
+      "measure": "HHI of institutional shareholdings (col. 2 only)",
+      "source": ""
+     },
+     {
+      "name": "INSTITUTIONAL_OWNERSHIP",
+      "measure": "percentage of shares owned by institutions (col. 2 only)",
+      "source": ""
+     },
+     {
+      "name": "TOBINS_Q",
+      "measure": "target Tobin's Q (col. 2 only)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry dummies (1-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Multivariate Analysis of Target Premia (OLS, Columns 1-4)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Target premia (four measures across columns)",
+     "measure": "col.1 BID_PREMIUM; col.2 TARGET_CAR(-2,+2); col.3 TARGET_CAR(-63,+2); col.4 DEAL_VALUE_TO_EBITDA",
+     "source": "CRSP, SDC, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TARGET_INITIATED",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PERCENT_CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "ASSET_RELATEDNESS",
+      "source": "SDC"
+     },
+     {
+      "name": "ACQUIRER_TERMINATION_FEE",
+      "source": "SDC"
+     },
+     {
+      "name": "TARGET_TERMINATION_FEE",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "ln(RELATIVE_SIZE)",
+      "source": "SDC, Compustat"
+     },
+     {
+      "name": "ACQUIRER_TOBINS_Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "ALTMANS_Z_SCORE",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "CHANGE_IN_ROA_OVER_PAST_1_YEAR",
+      "source": "Compustat"
+     },
+     {
+      "name": "BHAR_OVER_PAST_1_YEAR",
+      "source": "CRSP"
+     },
+     {
+      "name": "HIGH_HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "SA_INDEX",
+      "source": "Compustat"
+     },
+     {
+      "name": "INDUSTRY_SHOCK_INDEX",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies (1-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Target premia (four measures across columns)",
+     "measure": "BID_PREMIUM; TARGET_CAR(-2,+2); TARGET_CAR(-63,+2); DEAL_VALUE_TO_EBITDA",
+     "source": "CRSP, SDC, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TARGET_INITIATED",
+      "measure": "1 if target initiated, 0 if bidder initiated",
+      "source": "EDGAR SEC filings"
+     },
+     {
+      "name": "ALTMANS_Z_SCORE x TARGET_INITIATED",
+      "measure": "interaction of target-initiated indicator with Altman's Z-score (Regression 1)",
+      "source": "Compustat, EDGAR SEC filings"
+     },
+     {
+      "name": "BHAR_OVER_PAST_1_YEAR x TARGET_INITIATED",
+      "measure": "interaction with target 1-year buy-and-hold abnormal return (Regression 2)",
+      "source": "CRSP, EDGAR SEC filings"
+     },
+     {
+      "name": "SA_INDEX x TARGET_INITIATED",
+      "measure": "interaction with SA financial-constraint index (Regression 3)",
+      "source": "Compustat, EDGAR SEC filings"
+     },
+     {
+      "name": "INDUSTRY_SHOCK_INDEX x TARGET_INITIATED",
+      "measure": "interaction with industry shock index (Regression 4)",
+      "source": "Compustat, EDGAR SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table 5 (deal, acquirer, target, constraint, shock characteristics; suppressed to conserve space)",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies (1-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "PRIOR_INDUSTRY_TARGET_INITIATED_DEAL_&_AUCTION_ACTIVITY (identifying instrument / exclusion restriction in the first-step selection equation)",
+    "sample": "",
+    "dv": {
+     "name": "Target premia (four measures across columns)",
+     "measure": "BID_PREMIUM; TARGET_CAR(-2,+2); TARGET_CAR(-63,+2); DEAL_VALUE_TO_EBITDA",
+     "source": "CRSP, SDC, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TARGET_PRIVATE_INFORMATION",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed (Heckman first-step probit)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table 5 (PERCENT_CASH, TENDER, ASSET_RELATEDNESS, termination fees, TOEHOLD, ln(RELATIVE_SIZE), acquirer ROA/Tobin's Q, ALTMANS_Z_SCORE, LIQUIDITY, CHANGE_IN_ROA_OVER_PAST_3_YEARS, BHAR_OVER_PAST_1_YEAR, HIGH_HHI, SA_INDEX, INDUSTRY_SHOCK_INDEX)",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies (1-digit SIC)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "PRIOR_INDUSTRY_TARGET_INITIATED_DEAL_&_AUCTION_ACTIVITY (identifying instrument / exclusion restriction)",
+    "sample": "high vs low information asymmetry subsamples (median split on IA factor / individual IA proxies)",
+    "dv": {
+     "name": "Target premia (four measures, high/low IA columns)",
+     "measure": "BID_PREMIUM; TARGET_CAR(-2,+2); TARGET_CAR(-63,+2); DEAL_VALUE_TO_EBITDA",
+     "source": "CRSP, SDC, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "TARGET_PRIVATE_INFORMATION",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed (Heckman first-step probit)"
+     },
+     {
+      "name": "Information asymmetry level (high vs low subsample split)",
+      "measure": "median split on a factor-analytic information-asymmetry index built from: target idiosyncratic return volatility, analyst forecast dispersion/accuracy, target size, target R&D, number/quality of acquirer financial advisors, target tangible asset intensity, target abnormal accruals, headquarters distance in miles (Panel A); and individually on forecast error (Panel B), acquirer advisor quality (Panel C), target idiosyncratic volatility (Panel D)",
+      "source": "CRSP, Compustat, analyst forecasts, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table 7",
+      "source": "SDC, Compustat, CRSP"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies (1-digit SIC)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "financial distress and weakness measures",
+    "current financial condition of target firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "weak financial or competitive position",
+    "added negative news"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "weak financial or competitive position",
+    "relation": "increases",
+    "to": "vulnerable to added negative news"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "signaling decisions",
+    "positive net present value actions"
+   ],
+   "mechanism_named": "signaling",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "asymmetric information"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "decreases",
+    "to": "asymmetric information"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

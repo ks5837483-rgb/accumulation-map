@@ -1,0 +1,859 @@
+{
+ "paper_id": "10.1016/j.jacceco.2015.01.004",
+ "title": "Common auditors in M&amp;A transactions",
+ "journal": "JAE",
+ "year": 2016,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "information asymmetry",
+  "auditing / information intermediary theory",
+  "real effects of accounting"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_auditor",
+      "relation": "decreases",
+      "to": "uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "uncertainty",
+      "relation": "decreases",
+      "to": "acquisition_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "common_auditor",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_quality",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "uncertainty",
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "target_sales_growth",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "common_auditor",
+     "moderated_to": "acquisition_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_mod_a"
+    },
+    {
+     "construct": "target_stock_return_volatility",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "uncertainty",
+     "moderated_from": "common_auditor",
+     "moderated_to": "acquisition_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_mod_b"
+    },
+    {
+     "construct": "target_rd_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "uncertainty",
+     "moderated_from": "common_auditor",
+     "moderated_to": "acquisition_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_mod_c"
+    },
+    {
+     "construct": "target_bid_ask_spread",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "common_auditor",
+     "moderated_to": "acquisition_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1_mod_d"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firm similarity as a correlated omitted variable (similar firms both earn higher returns and hire the same auditor)",
+    "endogenous / strategic selection of a common auditor prior to the deal"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "same_office_common_auditor",
+      "relation": "increases",
+      "to": "direct_communication",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "direct_communication",
+      "relation": "increases",
+      "to": "acquisition_quality",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "same_office_common_auditor",
+      "relation": "decreases",
+      "to": "uncertainty",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "uncertainty",
+      "relation": "decreases",
+      "to": "acquisition_quality",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "direct_communication",
+    "uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_auditor",
+      "relation": "increases",
+      "to": "client_matching",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "client_matching",
+      "relation": "increases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "client_matching"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_auditor",
+      "relation": "increases",
+      "to": "audit_style_consistency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "audit_style_consistency",
+      "relation": "increases",
+      "to": "financial_statement_comparability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "audit_style_consistency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_auditor",
+      "relation": "increases",
+      "to": "litigation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "litigation_risk",
+      "relation": "decreases",
+      "to": "misreporting",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "litigation_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquirers span the Fama and French 48 industry classification; most active: business services, computers, and pharmaceutical products)",
+  "country_region": "United States (domestic M&As of public U.S. acquirers and targets)",
+  "time_period": "1988-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,971 acquisitions (547 common-auditor deals, 1,424 non-common-auditor deals)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR Form 10-K filings (audit report office locations; acquirer/target headquarters zip codes)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Common auditors and M&A quality (Equation 1, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "M&A quality (announcement return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (announcement dates from SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat (auditor information)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Big 4 Auditor (acquirer and/or target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Auditor industry dominance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Operating cash flows",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Pre-announcement stock price run-up (acquirer and target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Relative deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "Percentage of stock financing",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile bid indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Multiple bidders indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "High-tech firms indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "Corr(stock return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Previous business relation (strategic alliance or joint venture)",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Local deal",
+      "source": "SDC/SEC EDGAR/Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Fama and French 48 industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Common-auditor effect and pre-M&A uncertainty (Equation 2, OLS interaction; Columns 1-4)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "M&A quality (announcement return)",
+     "measure": "ANN_CAR (three-day combined-portfolio cumulative abnormal returns over the (-1,+1) event window)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor x Uncertainty (interaction, beta3)",
+      "measure": "Common auditor indicator interacted with a target-uncertainty proxy",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Target sales growth (uncertainty proxy, Column 1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target stock return volatility (uncertainty proxy, Column 2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target R&D intensity (uncertainty proxy, Column 3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target bid-ask spread (uncertainty proxy, Column 4)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) auditor, firm, and deal controls",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Fama and French 48 industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Same-office common auditor test (adapted Equation 1, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,591 observations (deals with auditor office data; reduced by pre-1996 EDGAR unavailability)",
+    "dv": {
+     "name": "M&A quality (announcement return)",
+     "measure": "ANN_CAR (three-day combined-portfolio cumulative abnormal returns)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Same-office common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC EDGAR Form 10-K audit reports"
+     },
+     {
+      "name": "Different-office common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC EDGAR Form 10-K audit reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) controls",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Fama and French 48 industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Common-auditor M&A likelihood test (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Probability of an M&A between two potential merging firms",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (constructed from potential acquirer-target pairs)"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat (auditor information)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Leverage ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry Herfindahl index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Column 1 - Financial statement comparability: total accruals difference (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,679 observations (excludes financial institutions and observations with data restrictions)",
+    "dv": {
+     "name": "Difference in total accruals (comparability)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Minimum values and differences in size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Minimum values and differences in leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Minimum values and differences in market-to-book",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Minimum values and differences in cash flow from operations",
+      "source": "Compustat"
+     },
+     {
+      "name": "Minimum values and differences in losses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Standard deviation of sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Standard deviation of cash flow from operations",
+      "source": "Compustat"
+     },
+     {
+      "name": "Standard deviation of sales growth",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Column 2 - Financial statement comparability: earnings comovement (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,513 observations (requires at least 10 quarters of data for both acquirer and target)",
+    "dv": {
+     "name": "Earnings comovement (comparability)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control variables as the total accruals analysis (min/differences in size, leverage, market-to-book, CFO, losses; std dev of sales, CFO, sales growth)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash flow comovement across 16 consecutive quarters",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return comovement across 16 consecutive quarters",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Columns 1-4 - Limited misreporting: unexpected accruals (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Acquirer UA: 1,526 obs; Target UA: 1,508 obs (excludes financial firms; UA not estimable for some observations)",
+    "dv": {
+     "name": "Unexpected (discretionary) accruals",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) controls (Columns 2 and 4)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Columns 5-6 - Limited misreporting: restatements (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1,356 observations (Audit Analytics restatement coverage starts in 1996; two-year window before deal completion)",
+    "dv": {
+     "name": "Financial statement restatement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) controls (Column 6)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.1 - Strategic auditor selection / auditor tenure (endogeneity, OLS, untabulated)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Full sample and, in a second test, subsample where both acquirer and target auditors have at least three years tenure",
+    "dv": {
+     "name": "M&A quality (announcement return)",
+     "measure": "ANN_CAR (three-day combined-portfolio cumulative abnormal returns)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor x Short auditor tenure indicators",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat (auditor information)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) controls",
+      "source": "Compustat/CRSP/SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "delta ROA: 1,684 obs; goodwill impairment: 1,971 obs (no attrition)",
+    "dv": {
+     "name": "Post-acquisition operating performance and goodwill impairment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) controls; uncertainty proxies and interactions for the Equation (2) reruns",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.3 - Impact of Sarbanes-Oxley Act (pre/post-SOX subperiods, untabulated)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act of 2002 (Section 201 restrictions on non-audit services)",
+    "sample": "Pre-SOX vs post-SOX partition of the 1,971-deal sample",
+    "dv": {
+     "name": "M&A quality (announcement return)",
+     "measure": "ANN_CAR (three-day combined-portfolio cumulative abnormal returns)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor (estimated separately by SOX subperiod)",
+      "measure": "Common auditor indicator estimated on pre-SOX (announced Jan 1988-Jul 2002) versus post-SOX (Aug 2002-Dec 2010) subsamples",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) controls",
+      "source": "Compustat/CRSP/SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,971 deals (shared bank); 961 deals with available shared-director data",
+    "dv": {
+     "name": "M&A quality (announcement return)",
+     "measure": "ANN_CAR (three-day combined-portfolio cumulative abnormal returns)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor (with shared bank / shared director controls added)",
+      "measure": "Common auditor indicator, estimated after adding a shared investment bank indicator and a shared director indicator",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Shared investment bank indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Shared director indicator",
+      "source": "hand-collected / other"
+     },
+     {
+      "name": "Full set of Equation (1) controls",
+      "source": "Compustat/CRSP/SDC"
+     }
+    ]
+   },
+   {
+    "label": "Section 5.5 - Impact of specific auditors (untabulated)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Big 4 clients only (1,813 obs); and sample excluding Andersen clients in 2001-2002",
+    "dv": {
+     "name": "M&A quality (announcement return)",
+     "measure": "ANN_CAR (three-day combined-portfolio cumulative abnormal returns)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Common auditor x specific-auditor indicator",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of Equation (1) controls",
+      "source": "Compustat/CRSP/SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "communications",
+    "non-audit functions",
+    "audit function"
+   ],
+   "mechanism_named": "informal discussions within the audit function",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,654 @@
+{
+ "paper_id": "10.5465_amj.2018.0716",
+ "title": "Strength and Weakness in Numbers? Unpacking the Role of Prevalence in the Diffusion of Reverse Mergers",
+ "journal": "AMJ",
+ "year": 2021,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "practice diffusion theory",
+  "informational social influence",
+  "normative social influence",
+  "institutional theory",
+  "status theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "rm_prevalence",
+      "relation": "increases",
+      "to": "potential_adopter_awareness_of_practice_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "potential_adopter_awareness_of_practice_value",
+      "relation": "increases",
+      "to": "rm_diffusion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informational_social_influence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "economic conditions / changes in demand for RMs confounding the prevalence-diffusion relationship"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "rm_prevalence",
+      "relation": "increases",
+      "to": "negative_third_party_evaluations",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "negative_third_party_evaluations",
+      "relation": "decreases",
+      "to": "rm_diffusion",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "normative_social_influence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "economic conditions / changes in demand for RMs confounding the prevalence-diffusion relationship"
+   ]
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proportion_low_status_adopters",
+      "relation": "decreases",
+      "to": "potential_adopter_motivation_to_imitate",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "potential_adopter_motivation_to_imitate",
+      "relation": "increases",
+      "to": "rm_diffusion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "status_based_imitation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proportion_low_status_adopters",
+      "relation": "increases",
+      "to": "negative_third_party_evaluations",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "negative_third_party_evaluations",
+      "relation": "decreases",
+      "to": "rm_diffusion",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "normative_social_influence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "2001-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "n=521 weeks (main GSEM analysis); the underlying population is 1,904 RMs (2002-2012), with stock data on 1,466 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Deal Flow Media",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC (Securities Data Company) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva (Major News and Business Publications)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings / Edgar database (10-K, 10-Q, 8-K, 10-B/10-SB)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "DataStream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Jay Ritter's website (IPO data)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "American Association of Individual Investors weekly survey",
+    "category": "survey",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel A, Model 4A (diffusion; direct effects)",
+    "hypotheses": [
+     "H1a",
+     "H2a"
+    ],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Number of new RMs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RM population database (Deal Flow Media, SDC, Factiva, SEC filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of past RMs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RM population database (Deal Flow Media, SDC, Factiva, SEC filings)"
+     },
+     {
+      "name": "% past low-status RMs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics; SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SEC 2005 new-rules period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "SEC 2011 warning-letter period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "Available shells (log)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Number of new IPOs",
+      "source": "SDC; Jay Ritter's website"
+     },
+     {
+      "name": "Buy/Hold/Sell recommendations (lagged weekly count)",
+      "source": ""
+     },
+     {
+      "name": "Investors' sentiment (bull-bear spread)",
+      "source": "American Association of Individual Investors survey"
+     },
+     {
+      "name": "Stock market returns lag",
+      "source": "DataStream"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel A, Model 4B (mediator: stock market returns)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Stock market returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of past RMs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RM population database"
+     },
+     {
+      "name": "% past low-status RMs",
+      "measure": "proportion of past RMs by low-status firms out of total RMs (% past low-status RMs)",
+      "source": "Audit Analytics; SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SEC 2005 new-rules period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "SEC 2011 warning-letter period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "Available shells (log)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Number of new IPOs",
+      "source": "SDC; Jay Ritter's website"
+     },
+     {
+      "name": "Buy/Hold/Sell recommendations (lagged weekly count)",
+      "source": ""
+     },
+     {
+      "name": "Investors' sentiment (bull-bear spread)",
+      "source": "American Association of Individual Investors survey"
+     },
+     {
+      "name": "Negative media coverage",
+      "source": "Factiva"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel A, Model 4C (mediator: negative media coverage)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Negative media coverage",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of past RMs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RM population database"
+     },
+     {
+      "name": "% past low-status RMs",
+      "measure": "proportion of past RMs by low-status firms out of total RMs (% past low-status RMs)",
+      "source": "Audit Analytics; SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SEC 2005 new-rules period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "SEC 2011 warning-letter period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "Available shells (log)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Number of new IPOs",
+      "source": "SDC; Jay Ritter's website"
+     },
+     {
+      "name": "Buy/Hold/Sell recommendations (lagged weekly count)",
+      "source": ""
+     },
+     {
+      "name": "Investors' sentiment (bull-bear spread)",
+      "source": "American Association of Individual Investors survey"
+     },
+     {
+      "name": "Stock market returns",
+      "source": "DataStream"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B (mediated effects via nlcom bootstrap)",
+    "hypotheses": [
+     "H1b",
+     "H2b"
+    ],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Number of new RMs (indirect/mediated effect)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "RM population database (Deal Flow Media, SDC, Factiva, SEC filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "Number of past RMs (via mediators)",
+      "measure": "logarithm of cumulative past number of past RMs (Number of past RMs), indirect effect through Stock market returns and Negative media coverage",
+      "source": "RM population database; DataStream; Factiva"
+     },
+     {
+      "name": "% past low-status RMs (via mediators)",
+      "measure": "proportion of past low-status RMs (% past low-status RMs), indirect effect through Stock market returns and Negative media coverage",
+      "source": "Audit Analytics; SEC filings; DataStream; Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SEC 2005 new-rules period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "SEC 2011 warning-letter period dummy",
+      "source": "SEC"
+     },
+     {
+      "name": "Available shells (log)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Number of new IPOs",
+      "source": "SDC; Jay Ritter's website"
+     },
+     {
+      "name": "Buy/Hold/Sell recommendations (lagged weekly count)",
+      "source": ""
+     },
+     {
+      "name": "Investors' sentiment (bull-bear spread)",
+      "source": "American Association of Individual Investors survey"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "contingencies",
+    "direct effect",
+    "mediated effect"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "contingencies",
+    "on_path": [
+     "prevalence",
+     "diffusion"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "practice characteristics",
+    "degree of controversy",
+    "weakness in numbers effect"
+   ],
+   "mechanism_named": "“weakness in numbers” effect",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "degree of controversy",
+    "on_path": [
+     "prevalence",
+     "diffusion"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "prospective adopter characteristics",
+    "vulnerability to third-party evaluations",
+    "normative social influence",
+    "mediated pathway of prevalence"
+   ],
+   "mechanism_named": "normative social influence",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "vulnerability to third-party evaluations",
+    "on_path": [
+     "prevalence",
+     "diffusion"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "informational social influence",
+    "imitation",
+    "direct pathway"
+   ],
+   "mechanism_named": "informational social influence",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "prevalence",
+     "diffusion"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "prevalence",
+    "diffusion of non-controversial practices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "prevalence",
+    "relation": "affects",
+    "to": "diffusion of non-controversial practices"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_mediator",
+   "section": "discussion",
+   "constructs": [
+    "multi-constituent nature of the organizational field",
+    "third-party evaluators",
+    "prevalence",
+    "mediating effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "prevalence",
+    "diffusion of the practice",
+    "illegitimate"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "prevalence",
+    "relation": "decreases",
+    "to": "diffusion of the practice"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "practice rejection",
+    "multi-wave diffusion"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "multi-wave dynamics",
+    "practice adaptation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "controversial practice of RMs",
+    "controversial practices",
+    "direct and mediated effects of prevalence"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "mediated weakness in numbers effect",
+    "time frame",
+    "early stages of diffusion"
+   ],
+   "mechanism_named": "“weakness in numbers” effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "controversial practices",
+    "third-party evaluations",
+    "practice adopters"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "abandonment of a controversial practice",
+    "decoupling",
+    "symbolic abandonment"
+   ],
+   "mechanism_named": "decoupling (symbolic abandonment)",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "practice adopters",
+    "strategies to shield controversial practices",
+    "third-party evaluators",
+    "symbolic management via framing",
+    "rhetorical persuasion",
+    "knowledge transfers across adopters",
+    "practice adaptation"
+   ],
+   "mechanism_named": "symbolic management via framing",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "mediated weakness in numbers effect",
+    "direct strength in numbers effect",
+    "future adoptions"
+   ],
+   "mechanism_named": "competitive mediation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

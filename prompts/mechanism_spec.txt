@@ -1,0 +1,188 @@
+SPEC — mechanism-middle extraction (schema mechanism-triples-1.4)
+Layer: 5_mechanism/out_mechanism/. Recovers the unmeasured mediating MECHANISM that the flat out_claude
+triples (~97% single-edge X->Y) collapse out. The mechanism middle is where cross-field BRIDGES live
+(esp. information_asymmetry, adverse_selection). One JSON object per paper, keyed by paper_id (DOI).
+
+================================ OUTPUT SHAPE ================================
+{
+  "paper_id": "<DOI>",
+  "schema": "mechanism-triples-1.4",
+  "primary_theories": ["signaling theory", "information economics", ...],
+  "mechanism_triples": [ <one ENTRY per hypothesis> ]
+}
+
+ENTRY (one per hypothesis):
+{
+  "hypothesis": "H1",
+  "hypothesis_text": "<VERBATIM full hypothesis text, including ALL qualifiers/boundary conditions>",
+  "stated_direction": "positive|negative|curvilinear|nonsignificant",
+  "triples": [ [ <edge1>, <edge2> ], ...parallel chains... ],
+  "mechanisms": [ {"name": "...", "term_verbatim": "...", "evidence_span": "..."}, ... ],
+  "moderators": [ <moderator record>, ... ],
+  "net_direction": "positive|negative|curvilinear|nonsignificant",
+  "validated": true|false,
+  "conflict_reason": null | "<short why net != stated_direction>",
+  "support_status": "supported|rejected|mixed|not_reported",
+  "support_evidence_span": "<VERBATIM results sentence stating THIS hypothesis's TESTED outcome>",
+  "alternatives_addressed": "yes|no",
+  "alternatives_detail": [ {"rival": "<named rival explanation for THIS relationship>",
+                            "how": "control|falsification_test|competing_model|subsample|other",
+                            "evidence_span": "<VERBATIM>"} ]
+}
+
+EDGE:
+{ "from": "<snake_case construct>", "relation": "increases|decreases", "to": "<snake_case construct>",
+  "from_measured": true|false, "to_measured": true|false,
+  "evidence_span": "<VERBATIM substring justifying THIS link's direction>",
+  "derived": true   <-- OPTIONAL; include only if this link's sign was inferred, not quoted }
+
+MODERATOR:
+{ "construct": "z", "moderated_from": "<IV in the triples>", "moderated_to": "<DV in the triples>",
+  "effect": "strengthens|weakens",
+  "mechanism": "<construct Z works through; often a BRIDGE; paper's wording; NOT flipped>",
+  "type": "moderator|boundary_condition",
+  "role": "mechanism_probe|competing_contingency|atheoretical",
+  "is_boundary_condition": true|false,
+  "source_hypothesis": "H4a", "hypothesis_text": "<VERBATIM moderation-hypothesis text>",
+  "mechanism_evidence_span": "<VERBATIM: Z raises/lowers the mechanism>",
+  "effect_evidence_span": "<VERBATIM: the X->Y effect is stronger/weaker under Z>",
+  "effect_derived": true   <-- OPTIONAL; include only if the strengthen/weaken was reasoned, not quoted }
+
+================================ THE RULES ================================
+
+1. STRICT 2-STEP CHAINS. Each chain = exactly 2 edges / 3 constructs: IV -> MECHANISM -> DV. The MECHANISM
+   (middle node) is the UNMEASURED mediating construct — the WHY behind the hypothesis. NEVER a 1-step chain
+   (every hypothesis has reasoning — find the mechanism). NEVER 3+ steps: split a longer chain A->B->C->D
+   into parallel 2-step chains A->B->D and A->C->D.
+
+2. PARALLEL CHAINS for distinct mechanisms. If a hypothesis argues MULTIPLE mediators, or a curvilinear
+   effect via a positive AND a negative channel, emit each as a SEPARATE 2-step chain in "triples". Extract
+   ALL channels the paper explicitly discusses — omit none.
+
+3. RELATION ∈ {increases, decreases} ONLY. "enables" -> increases; "inhibits" -> decreases. NEVER use
+   moderates / mediates / enables / inhibits (or any other word) as a relation. Moderation and mediation are
+   handled STRUCTURALLY (rules 1 and 9), never as edge relations.
+
+4. FAITHFUL MECHANISM NAMES — DO NOT FLIP TO THE OPPOSITE. Name the mechanism in the paper's OWN wording,
+   lowercased snake_case. If the paper says "reputation REDUCES information asymmetry", extract
+   investment_bank_reputation --decreases--> information_asymmetry — the FIRST edge MAY be "decreases".
+   Do NOT reframe the mediator to an "active form" (information_asymmetry must NOT become
+   information_transparency; reliability must NOT become unreliability). This is the DELIBERATE OPPOSITE of
+   the Ahuja active-mediator convention: the mechanism node is a cross-field BRIDGE and must stay verbatim
+   so it MATCHES the same concept across papers and fields. Bridge integrity > sign tidiness.
+
+5. NEUTRAL CONSTRUCT NAMES (no direction baked in). Use "reliability" not "reliability_decrease", "cost"
+   not "cost_reduction". The sign lives on "relation"; the node is a plain noun phrase. Keep constructs
+   general/reusable ("innovation_output" not "patent_count"). NO TAUTOLOGIES — consecutive constructs must
+   be genuinely distinct, not near-synonyms.
+
+6. EVIDENCE — "NO QUOTE, NO EDGE." Every edge's evidence_span AND every mechanism's evidence_span MUST be an
+   EXACT VERBATIM substring of {PAPER_TEXT} (copy punctuation, line breaks, everything; never paraphrase).
+   If you cannot quote a link's direction exactly: (a) mark that edge "derived": true ONLY if its sign is
+   logically forced by the paper's stated_direction + the other link's quoted sign; else (b) drop the edge.
+   A mechanism's evidence_span is the quote where the paper NAMES that mechanism.
+
+7. MEASURED FLAGS. from_measured / to_measured: is this construct an actual MEASURED variable in the paper
+   (true) or the inferred MECHANISM middle (false)? Normally IV and DV are measured (true) and the MECHANISM
+   is unmeasured (false) — this flag is the whole point of the layer, so set it honestly.
+
+8. THE SIGN RULE — VALIDATE, NEVER FORCE.
+     net = sign1 x sign2   (increases=+1, decreases=-1; for curvilinear, evaluate each channel)
+     - net matches stated_direction  -> "validated": true,  "conflict_reason": null
+     - net does NOT match             -> "validated": false, "conflict_reason": "<short why>"   (review queue)
+   NEVER silently flip a sign to make it fit; NEVER drop the record. Each sign is extracted FAITHFULLY from
+   its OWN evidence_span FIRST; validation is a CHECK applied AFTER, not a constraint imposed before. A
+   conflict is informative — usually an extraction error, occasionally a genuine paper inconsistency (a
+   suppression effect or a missing parallel path) that is exactly the epistemic signal this project surfaces.
+
+9. MODERATION — RECORD SEPARATELY, NEVER AS A SLOPE NODE.
+   Triggers: "Z moderates X->Y", "the effect of X on Y is stronger/weaker when Z", "the X->Y relationship is
+   contingent on Z", "X is particularly beneficial when Z".
+     - Keep the MAIN X -> MECHANISM -> Y chain in "triples" as usual.
+     - Record Z in "moderators". Do NOT fabricate a node like "value_of_X_signal" / "benefit_of_X" /
+       "X_Y_interaction" to force the moderator into a chain. (That invented node is the #1 moderator error.)
+     - moderated_from / moderated_to MUST reference constructs that appear in the triples chains.
+     - "mechanism" = the construct Z works THROUGH (read the paper's argument for WHY Z strengthens/weakens
+       the effect). It is often a BRIDGE (e.g. information_asymmetry) — keep it verbatim, do NOT flip it.
+     - "type": "moderator" = a formally-hypothesized contingency that is part of the core causal theory;
+       "boundary_condition" = a contextual scope variable (industry, country, firm size). Capture WHY either
+       way in "mechanism".
+     - Two grounded spans: mechanism_evidence_span (Z raises/lowers the mechanism) and effect_evidence_span
+       (the X->Y effect is stronger/weaker under Z). Mark "effect_derived": true if the latter was reasoned
+       rather than quoted.
+
+10. HYPOTHESIS TEXT VERBATIM. Copy the FULL hypothesis text including ALL qualifiers and boundary conditions
+    ("for firms with higher centrality", "in related diversification", etc.). Do NOT drop qualifiers.
+
+11. SCOPE — EXTRACT THE CAUSAL CLAIMS THE PAPER EMPIRICALLY TESTS (numbered OR not). Extract an entry for
+    EACH causal claim the paper states AND tests against data — written as a numbered "Hypothesis 1 / H1",
+    a labeled prediction, OR an UNNUMBERED prediction the paper then tests (common in finance/economics
+    empirical work, e.g. "we expect X to raise Y" that the regressions test). DO NOT require a number.
+    RETURN "mechanism_triples": [] ONLY when the paper does not empirically TEST causal claims at all:
+      - a formal-modeling / theory paper (predictions derived from a model but not tested),
+      - a review / meta-analysis,
+      - a purely conceptual or QUALITATIVE THEORY-BUILDING paper (case studies that DEVELOP a framework
+        rather than test it — e.g. a "qualitative methodology + case study + conceptual framework" paper).
+    Selection PRE-FILTERS to `publication_type == empirical_quantitative` + a `method` screen, so most
+    non-empirical papers never reach you; this rule is the BACKSTOP for mislabels (a qualitative case study
+    mis-coded as empirical → still return []). NEVER manufacture a hypothesis from model prose, and NEVER
+    invent a mechanism.
+
+12. SUPPORT — THE TESTED OUTCOME: GROUNDED, NEVER INFERRED. (rev4, schema 1.3)
+    For EACH hypothesis ENTRY also emit "support_status" + "support_evidence_span" = whether the paper's DATA
+    bore the hypothesis out, read from the RESULTS / FINDINGS:
+      supported    = predicted effect held (correct sign AND statistically significant) per the results text
+      rejected     = predicted effect did NOT hold (non-significant, or significant in the OPPOSITE direction)
+      mixed        = held in some tests/specifications/subsamples/DVs but not others, OR partially
+      not_reported = the paper gives no clear test outcome for this hypothesis
+    REQUIRE support_evidence_span = the EXACT results sentence stating the outcome, copied verbatim and naming
+    this hypothesis (H-number) or its specific variables — e.g. "Our predictions were supported for brand name
+    reputation (H1a: B = -0.25; p < 0.05) but not for top management experience (H1b ...)."
+    NO QUOTE FROM THE RESULTS -> support_status = "not_reported". Never fabricate or paraphrase a result, and
+    never quote a generic "most hypotheses were supported" summary for a specific hypothesis.
+    SUPPORT IS INDEPENDENT OF stated_direction: stated_direction = what was PREDICTED; support_status = what the
+    DATA SHOWED. A rejected/mixed hypothesis is KEPT with its full mechanism chain (failed predictions are wanted).
+
+13. MODERATOR ROLE — two ORTHOGONAL questions per moderator record (rev5, schema 1.4). For EACH moderator emit
+    "role" and "is_boundary_condition", grounded in the paper's own argument:
+    role = HOW the moderator relates to the focal chain's mechanism:
+      - "mechanism_probe": the paper argues Z strengthens/weakens X->Y BECAUSE Z amplifies/dampens the SAME
+        mechanism named in THIS hypothesis's focal chain (moderation-of-process; a SUPPORTED probe is indirect
+        evidence the mechanism is real). Assign ONLY if (i) Z's rationale invokes the focal mechanism, (ii) Z is
+        mechanism-specific, (iii) direction follows. For a probe, the moderator's "mechanism" field MUST equal
+        the focal chain's mechanism.
+      - "competing_contingency": Z changes the effect through a DIFFERENT mechanism / rival force than the focal chain.
+      - "atheoretical": exploratory/control interaction, no mechanism rationale given.
+    is_boundary_condition (ORTHOGONAL to role): true if OUTSIDE Z's range the X->Y effect VANISHES/turns off
+      (a scope/limits claim), else false. A moderator can be e.g. competing_contingency AND a boundary at once.
+    (A rival MEDIATOR — a different MIDDLE for the same X->Y — is NOT a moderator: emit it as a PARALLEL CHAIN per rule 2.)
+
+14. ALTERNATIVES — DID THE PAPER RULE OUT A RIVAL EXPLANATION FOR THIS RELATIONSHIP? (grounded, never inferred)
+    For EACH hypothesis ENTRY emit "alternatives_addressed" + "alternatives_detail".
+    "yes" ONLY if the paper EXPLICITLY (a) NAMES a rival explanation / alternative account for THIS X->Y
+    relationship, AND (b) makes an empirical move to address it (a control aimed at that rival, a falsification/
+    placebo test, a competing-model horse-race, a subsample split that rules it out), AND (c) you can quote it
+    verbatim in evidence_span. A generic list of controls or a robustness check with NO named rival = "no".
+    NO QUOTE -> "no". Never infer that alternatives were addressed from the presence of controls alone.
+    (This is about a rival ACCOUNT of the whole relationship — distinct from a competing_contingency MODERATOR
+    (rule 13) and from a rival MEDIATOR parallel chain (rule 2).)
+
+================================ WORKED EXAMPLE ================================
+Target output shape = 6_rule/_mech_onepaper/...(Reuer et al., 2012)(AMJ)...259_CORRECTED.json:
+  H1  investment_bank_reputation --decreases--> information_asymmetry --decreases--> acquisition_premium
+      net = (-)(-) = +  == stated "positive"  -> validated:true   (first edge "decreases", node NOT flipped)
+  H3  prominent_alliance_partners --decreases--> adverse_selection --decreases--> acquisition_premium
+  H4a/H5a  knowledge_distance / cross_border_acquisition recorded as MODERATORS (effect:strengthens,
+      mechanism:information_asymmetry) on the H1 chain — NOT as "value_of_investment_bank_reputation_signal"
+      slope-node chains.
+
+================================ NOTES ================================
+- This spec is the Ahuja EXTRACT_MECHANISM_TRIPLES recipe MINUS its active-mediator name-flip (rule 4) PLUS
+  the validate-and-flag sign rule (rule 8), per-edge + per-mechanism evidence_spans (the Ahuja pilot had
+  none), and the two-span moderator grounding (rule 9). Design rationale: 6_rule/MECHANISM_DESIGN.md.
+- Bottom-up vs top-down is a POST-extraction analysis choice (which papers / how to aggregate the middles),
+  NOT a prompt change — this prompt is scope-agnostic.
+- METADATA (title / journal / pdf_path) is added DETERMINISTICALLY post-extraction from the master xlsx by
+  5_mechanism/enrich_and_crosswalk.py — the LLM writes ONLY paper_id + mechanism_triples (NEVER a title or a
+  path). The same script emits crosswalk.csv (DOI -> human title -> PDF path) so DOI-named JSONs map to the
+  human-named PDFs in one hop.

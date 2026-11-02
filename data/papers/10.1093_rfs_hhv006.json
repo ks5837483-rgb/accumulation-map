@@ -1,0 +1,811 @@
+{
+ "paper_id": "10.1093_rfs_hhv006",
+ "title": "Rumor Has It: Sensationalism in Financial Media",
+ "journal": "RFS",
+ "year": 2015,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "limited attention",
+  "media economics",
+  "information diffusion",
+  "limits to arbitrage"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_newsworthiness",
+      "relation": "increases",
+      "to": "media_incentive_to_attract_readers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "media_incentive_to_attract_readers",
+      "relation": "decreases",
+      "to": "rumor_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "media_incentive_to_attract_readers"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "journalists investigate firms with extreme abnormal returns or trading patterns rather than newsworthy firms"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_experience_and_expertise",
+      "relation": "increases",
+      "to": "ability_to_verify_rumors",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ability_to_verify_rumors",
+      "relation": "increases",
+      "to": "rumor_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ability_to_verify_rumors"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "weak_modal_words",
+      "relation": "increases",
+      "to": "journalist_uncertainty_about_rumor",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "journalist_uncertainty_about_rumor",
+      "relation": "decreases",
+      "to": "rumor_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "journalist_uncertainty_about_rumor"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "specific_deal_details_in_article",
+      "relation": "increases",
+      "to": "credibility_of_information_source",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credibility_of_information_source",
+      "relation": "increases",
+      "to": "rumor_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credibility_of_information_source"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_rumor_publication",
+      "relation": "increases",
+      "to": "investor_overestimation_of_accuracy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_overestimation_of_accuracy",
+      "relation": "decreases",
+      "to": "post_rumor_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_overestimation_of_accuracy"
+   ],
+   "moderators": [
+    {
+     "construct": "cost_of_arbitrage",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "limited_arbitrage",
+     "moderated_from": "investor_overestimation_of_accuracy",
+     "moderated_to": "post_rumor_abnormal_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the small stock price reaction reflects stale information already incorporated in the price rather than investor inattention"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "obscure_accuracy_predictors",
+      "relation": "increases",
+      "to": "investor_limited_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_limited_attention",
+      "relation": "increases",
+      "to": "long_short_portfolio_excess_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_limited_attention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_rumor_publication",
+      "relation": "increases",
+      "to": "target_stock_price_run_up",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_stock_price_run_up",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_stock_price_run_up"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (merger rumors in the U.S. business press, targets across sectors classified by Fama-French 17 industries)",
+  "country_region": "U.S. newspapers (33 largest U.S. papers); rumor targets mostly domestic U.S. firms with 25% foreign",
+  "time_period": "2000-2011",
+  "sample_description": "a novel hand-collected database of merger rumors: “scoop” articles (first to report a rumor) manually identified from the Factiva database, matched to official merger bids in the SDC global merger database; firm data from Compustat and CRSP",
+  "sample_size": "501 unique merger rumors (2,142 articles covering 354 target firms)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC global merger database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Interbrand and BrandZ 100 most valuable brands lists",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bureau of Economic Analysis 1997 Input-Output tables",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Audit Bureau of Circulations",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis Nexis Public Records (LNPR) database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hand-collected journalist biographical data (newspaper and professional-networking websites, university registrars, National Student Clearinghouse, award-bestowing organizations)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Loughran and McDonald (2011) weak modal word list",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Markit equity lending database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ANcerno Ltd proprietary database of institutional trades",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Hand-collected merger agreements (EDGAR filings plus acquirer investor-relations departments)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - Which firms are covered by rumors (rumor targets vs. actual merger targets)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "501 merger rumors about 354 targets vs. three subsamples of actual SDC mergers 2000-2011",
+    "dv": {
+     "name": "target newsworthiness characteristics",
+     "measure": "univariate t-tests of average target characteristics (fraction publicly traded, log book assets, brand value, advertising, industry sales to households, domestic, R&D, Tobin's q) in the rumor sample vs. three subsamples of actual mergers",
+     "source": "hand-collected rumor database, SDC, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "rumor vs. actual merger sample membership",
+      "measure": "comparison across the rumor sample and three subsamples of SDC mergers (all mergers >=$250M; size-matched public targets; U.S. targets >=$250M)",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 / Figure 1 - Cumulative abnormal returns around rumor publication (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "501 rumors, 41-day event window",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "rumor accuracy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected rumor database, SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Logit of rumor accuracy on target newsworthiness (Cols 1-3 logit accuracy; Col 4 OLS of day-0 return)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "rumor accuracy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected rumor database, SDC, CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "firm size",
+      "measure": "log (book assets) from Compustat",
+      "source": "Compustat"
+     },
+     {
+      "name": "brand value",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Interbrand and BrandZ lists"
+     },
+     {
+      "name": "advertising expenditures",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "industry sales to households",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bureau of Economic Analysis Input-Output tables"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target day-0 abnormal return",
+      "source": "CRSP"
+     },
+     {
+      "name": "estimated deal likelihood (p-hat)",
+      "source": "CRSP, SDC"
+     },
+     {
+      "name": "staleness / pre-rumor cumulative abnormal returns (5 trading days before rumor)",
+      "source": "CRSP"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Logit of rumor accuracy on journalist characteristics (Cols 1-3 logit accuracy; Col 4 OLS of day-0 return)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "rumor accuracy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected rumor database, SDC, CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "journalist age",
+      "measure": "the average age across article coauthors, then its logarithmic transformation",
+      "source": "Lexis Nexis Public Records (LNPR) database"
+     },
+     {
+      "name": "journalism major",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected journalist biographical data"
+     },
+     {
+      "name": "college quality",
+      "measure": "the university's median verbal SAT score, expressed as a percentile",
+      "source": "hand-collected journalist biographical data"
+     },
+     {
+      "name": "industry expertise",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected journalist biographical data"
+     },
+     {
+      "name": "New York location",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected journalist biographical data, LNPR database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target day-0 abnormal return",
+      "source": "CRSP"
+     },
+     {
+      "name": "estimated deal likelihood (p-hat)",
+      "source": "CRSP, SDC"
+     },
+     {
+      "name": "staleness / pre-rumor cumulative abnormal returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Logit of rumor accuracy on article text characteristics (Cols 1-3 logit accuracy; Col 4 OLS of day-0 return)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "rumor accuracy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected rumor database, SDC, CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "weak modal words",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Loughran and McDonald (2011) word list; article text (hand-collected)"
+     },
+     {
+      "name": "stage of merger talks",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected rumor database"
+     },
+     {
+      "name": "takeover price mentioned",
+      "measure": "dummy for whether the article states an alleged takeover price",
+      "source": "hand-collected rumor database"
+     },
+     {
+      "name": "number of alleged bidders",
+      "measure": "number and identity of alleged bidders reported in the article",
+      "source": "hand-collected rumor database"
+     },
+     {
+      "name": "breadth of coverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected rumor database, Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target day-0 abnormal return",
+      "source": "CRSP"
+     },
+     {
+      "name": "estimated deal likelihood (p-hat)",
+      "source": "CRSP, SDC"
+     },
+     {
+      "name": "staleness / pre-rumor cumulative abnormal returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Internet Appendix Table 5 - First-stage estimation of announcement-day return (to construct estimated deal likelihood)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "target announcement-day return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP, SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "target size",
+      "measure": "target size (log book assets)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 - Long-short portfolio returns by predicted accuracy and arbitrage costs",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "long-short portfolios over 2000-2012, monthly frequency",
+    "dv": {
+     "name": "long-short portfolio return",
+     "measure": "monthly long-short portfolio returns compounded to monthly frequency; long = above-median fitted accuracy, short = below-median fitted accuracy, held up to one year, rebalanced daily with equal weights; Newey-West p-values",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "predicted rumor accuracy",
+      "measure": "fitted accuracy from prediction models (Col 2 of Tables 6, 7, 8 and journalist/newspaper fixed effects)",
+      "source": "hand-collected rumor database, SDC"
+     },
+     {
+      "name": "arbitrage cost (idiosyncratic volatility; Amihud illiquidity)",
+      "measure": "above- vs. below-median subsamples on idiosyncratic volatility and Amihud illiquidity",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Figure 3 - Abnormal short utilization around rumor (short-selling activity)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "daily coverage from July 2006 through December 2011",
+    "dv": {
+     "name": "abnormal short utilization",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Markit equity lending database"
+    },
+    "key_ivs": [
+     {
+      "name": "rumor accuracy",
+      "measure": "accurate vs. inaccurate rumor",
+      "source": "hand-collected rumor database, SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Figure 4 - Cumulative abnormal institutional buy-sell imbalance around rumor",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "ANcerno institutional trades 2000-2011 (969 institutions)",
+    "dv": {
+     "name": "cumulative abnormal buy-sell imbalance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ANcerno Ltd institutional trades database, CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "rumor publication (and accuracy split)",
+      "measure": "event time around rumor publication, also separated into accurate vs. inaccurate rumors",
+      "source": "hand-collected rumor database, SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 6 / Internet Appendix Table 20 - Textual analysis of merger agreements (real effects)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "95 merger agreements",
+    "dv": {
+     "name": "rumor-related disclosures in merger agreements",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected merger agreements (EDGAR and acquirer investor relations)"
+    },
+    "key_ivs": [
+     {
+      "name": "presence/category of rumor discussion",
+      "measure": "manual reading and classification of relevant matches by context",
+      "source": "Hand-collected merger agreements"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 10 - Effect of rumors on takeover premium (run-up, markup, total premium)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "target cumulative abnormal returns / takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP, SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "rumor dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected rumor database, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "brand value",
+      "source": "Interbrand and BrandZ lists"
+     },
+     {
+      "name": "payment method",
+      "source": "SDC"
+     },
+     {
+      "name": "use of takeover defenses",
+      "source": "SDC"
+     },
+     {
+      "name": "deal characteristics",
+      "source": "SDC"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 7.3 / Internet Appendix Table 26 - Likelihood of withdrawn bids on matched sample (robustness for accuracy measure)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "matched sample: for each rumor target, three non-rumored deals from SDC selected by Mahalanobis distance",
+    "dv": {
+     "name": "withdrawn bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "newsworthiness variables",
+      "measure": "target newsworthiness characteristics (size, brand value, advertising, etc.)",
+      "source": "Compustat, Interbrand and BrandZ lists, Bureau of Economic Analysis Input-Output tables"
+     }
+    ],
+    "controls": [
+     {
+      "name": "form of payment",
+      "source": "SDC"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC"
+     },
+     {
+      "name": "leveraged buyouts",
+      "source": "SDC"
+     },
+     {
+      "name": "cross-border deals",
+      "source": "SDC"
+     },
+     {
+      "name": "use of target takeover defenses",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "rumors",
+    "probability of deal announcement"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "rumors",
+    "relation": "affects",
+    "to": "probability of deal announcement"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "measure of accuracy",
+    "rumors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "newsworthiness",
+    "likelihood of a withdrawn bid"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "bias",
+    "media coverage",
+    "earnings reports",
+    "executive turnover",
+    "financial distress"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "media coverage bias",
+    "relation": "affects",
+    "to": "coverage of other corporate events"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

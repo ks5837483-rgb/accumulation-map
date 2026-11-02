@@ -1,0 +1,408 @@
+{
+ "paper_id": "10.1016_0304-405x(91)90014-b",
+ "title": "The postmerger share-price performance of acquiring firms",
+ "journal": "JFE",
+ "year": 1991,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market efficiency",
+  "portfolio performance evaluation",
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "single_factor_benchmark_inefficiency",
+      "relation": "increases",
+      "to": "size_related_measurement_bias",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "size_related_measurement_bias",
+      "relation": "decreases",
+      "to": "measured_postmerger_abnormal_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "size_related_measurement_bias"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "actual poor bidder performance / mispricing at the time of the takeover (rather than a benchmark artifact)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "all_equity_medium_of_exchange",
+      "relation": "increases",
+      "to": "investor_misvaluation",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "investor_misvaluation",
+      "relation": "decreases",
+      "to": "postmerger_abnormal_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "all_equity_medium_of_exchange",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "postmerger_abnormal_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_misvaluation",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "rational adverse-selection pricing fully impounded at announcement, implying zero (not negative) expected postmerger performance"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "contested_or_opposed_bid",
+      "relation": "increases",
+      "to": "price_paid_for_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "price_paid_for_target",
+      "relation": "decreases",
+      "to": "postmerger_abnormal_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "price_paid_for_target"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_size_of_target",
+      "relation": "increases",
+      "to": "exposure_to_acquired_asset_performance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "exposure_to_acquired_asset_performance",
+      "relation": "increases",
+      "to": "postmerger_abnormal_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "exposure_to_acquired_asset_performance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. NYSE/AMEX takeovers and tender offers)",
+  "country_region": "United States",
+  "time_period": "1975-1984",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "399"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Chicago Research in Security Prices (CRSP) data",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index (WSJI)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - announcement CARs for target, buyer, and portfolio, partitioned by means of payment and contested/opposed",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "announcement cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Chicago Research in Security Prices (CRSP) data"
+    },
+    "key_ivs": [
+     {
+      "name": "means of payment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     },
+     {
+      "name": "contested or opposed bid",
+      "measure": "whether the bid was contested (multiple bidders) or opposed",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 - postmerger monthly abnormal performance, event-time and calendar-time portfolios, across four benchmarks",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "event-time analysis of 346 firms with at least 15 months of data; calendar-time portfolios of 399 firms",
+    "dv": {
+     "name": "postmerger monthly abnormal performance (Jensen's alpha)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Chicago Research in Security Prices (CRSP) data"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "CRSP equally-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "CRSP value-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "ten-factor benchmark (Lehmann and Modest maximum-likelihood factor analysis of 750 securities)",
+      "source": ""
+     },
+     {
+      "name": "eight-portfolio benchmark (Grinblatt and Titman; four size, three dividend yield, one past returns portfolios)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "postmerger monthly abnormal performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Chicago Research in Security Prices (CRSP) data"
+    },
+    "key_ivs": [
+     {
+      "name": "firm size",
+      "measure": "bidders partitioned by their postmerger equity capitalizations (market value of equity) into size groups",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CRSP equally-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "CRSP value-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "ten-factor benchmark",
+      "source": ""
+     },
+     {
+      "name": "eight-portfolio benchmark",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "postmerger monthly abnormal performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Chicago Research in Security Prices (CRSP) data"
+    },
+    "key_ivs": [
+     {
+      "name": "medium of exchange",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CRSP equally-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "CRSP value-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "ten-factor benchmark",
+      "source": ""
+     },
+     {
+      "name": "eight-portfolio benchmark",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "postmerger monthly abnormal performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Chicago Research in Security Prices (CRSP) data"
+    },
+    "key_ivs": [
+     {
+      "name": "contested/opposed bid",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CRSP equally-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "CRSP value-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "ten-factor benchmark",
+      "source": ""
+     },
+     {
+      "name": "eight-portfolio benchmark",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "postmerger monthly abnormal performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Chicago Research in Security Prices (CRSP) data"
+    },
+    "key_ivs": [
+     {
+      "name": "relative size of target to bidder",
+      "measure": "acquisitions ranked on relative size (market value of equity) of target to bidder and grouped into quintiles; portfolios formed from firms in that quintile",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CRSP equally-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "CRSP value-weighted index benchmark",
+      "source": "Chicago Research in Security Prices (CRSP) data"
+     },
+     {
+      "name": "ten-factor benchmark",
+      "source": ""
+     },
+     {
+      "name": "eight-portfolio benchmark",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "postmerger performance",
+    "eight-portfolio benchmark"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

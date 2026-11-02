@@ -1,0 +1,598 @@
+{
+ "paper_id": "10.1016_j.jfineco.2020.12.002",
+ "title": "Do low search costs facilitate like-buys-like mergers? Evidence from common bank networks",
+ "journal": "JFE",
+ "year": 2021,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "search theory",
+  "assortative matching theory",
+  "property rights theory of the firm",
+  "bargaining theory",
+  "financial intermediation theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_bank_network_connection",
+      "relation": "decreases",
+      "to": "search_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_costs",
+      "relation": "decreases",
+      "to": "likelihood_of_complementary_merger",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "bank_network_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "search_costs",
+     "moderated_from": "common_bank_network_connection",
+     "moderated_to": "likelihood_of_complementary_merger",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1.2"
+    },
+    {
+     "construct": "recency_of_common_bank_relation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "search_costs",
+     "moderated_from": "common_bank_network_connection",
+     "moderated_to": "likelihood_of_complementary_merger",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "shared geographical or industry networks reduce search costs",
+    "firms' information environments (level of information asymmetry) explain both complementary mergers and CBN connections",
+    "[withheld: wording matches the source]",
+    "Q-theory of mergers implication that banks facilitate substitute mergers of high-quality with low-quality firms"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "recency_of_common_bank_relation",
+      "relation": "increases",
+      "to": "bank_incentive_to_facilitate_merger",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_incentive_to_facilitate_merger",
+      "relation": "increases",
+      "to": "likelihood_of_complementary_merger",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "recency_of_common_bank_relation",
+      "relation": "increases",
+      "to": "up_to_date_borrower_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "up_to_date_borrower_information",
+      "relation": "increases",
+      "to": "likelihood_of_complementary_merger",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_incentive_to_facilitate_merger",
+    "up_to_date_borrower_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_bank_network_connection",
+      "relation": "decreases",
+      "to": "search_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_costs",
+      "relation": "decreases",
+      "to": "synergistic_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "common_bank_network_connection",
+      "relation": "increases",
+      "to": "asset_complementarity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_complementarity",
+      "relation": "increases",
+      "to": "synergistic_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_costs",
+    "asset_complementarity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "common investment bank (IB) M&A advisors drive the results",
+    "firms' information environments (information asymmetry) or latent bank and firm quality"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_bank_network_connection",
+      "relation": "increases",
+      "to": "acquirer_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_bargaining_power",
+      "relation": "increases",
+      "to": "acquirer_share_of_synergy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "common_bank_network_connection",
+      "relation": "increases",
+      "to": "acquirer_outside_options",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_outside_options",
+      "relation": "increases",
+      "to": "acquirer_share_of_synergy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_bargaining_power",
+    "acquirer_outside_options"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_bank_network_connection",
+      "relation": "increases",
+      "to": "bank_participation_constraint",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_participation_constraint",
+      "relation": "decreases",
+      "to": "post_merger_asset_volatility",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_participation_constraint"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US industrial public firms; financial and utility sectors excluded, SIC 6000s and 4949-4999)",
+  "country_region": "United States (all-US mergers)",
+  "time_period": "1992-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1683 completed merger deals (of which 257 are CBN deals)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters LPC DealScan",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "1683 actual merger deals (treated) matched with non-merger control deals via nearest-neighbor matching (N=9,703) and propensity score matching (N=9,946)",
+    "dv": {
+     "name": "Treated (actual vs. non-merger control merger indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "-|AcqQ-TarQ| x CBN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat / Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "CBN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "CBN_Recent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "CBN_Old",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "-|AcqQ-TarQ| (Q-closeness)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Acq outstanding loan)",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "Ln(Acq assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Acq Q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq past return (one-year)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acq leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Acq firm age)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acq institution holding",
+      "source": ""
+     },
+     {
+      "name": "Ln(Tar outstanding loan)",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "Ln(Tar assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Tar Q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tar past return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tar leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tar ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tar cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Tar firm age)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Same industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Acq_tar distance)",
+      "source": "Compustat"
+     },
+     {
+      "name": "-|AcqQ-TarQ| x Same industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "-|AcqQ-TarQ| x Ln(Acq_tar distance)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Lending network size of CBN deals and search efficiency (logit)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Matched sample of actual and non-merger control deals (N=9,703 nearest-neighbor; N=9,946 propensity score)",
+    "dv": {
+     "name": "Treated (actual vs. non-merger control merger indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "-|AcqQ-TarQ| x CBN_Recent x AcqBankNetwork (triple interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "AcqBankNetwork-All borrowers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "AcqBankNetwork-Target peers",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TarIndustryPeers (and its interaction with -|AcqQ-TarQ|)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acq outstanding loan (and interaction with -|AcqQ-TarQ|)",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "Tar outstanding loan (and interaction with -|AcqQ-TarQ|)",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "Same industry (and interaction with -|AcqQ-TarQ|)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Acq_tar distance) (and interaction with -|AcqQ-TarQ|)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Baseline firm/deal control variables (as in Table 2)",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "1683 completed merger deals during 1992-2016",
+    "dv": {
+     "name": "Combined announcement return (CombCAR3)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "CBN",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "CBN_Recent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "CBN_Old",
+      "measure": "binary variable for CBNs formed before four years prior to the merger announcement",
+      "source": "Thomson Reuters LPC DealScan"
+     },
+     {
+      "name": "CBN_Recent x 100% stock",
+      "measure": "interaction of CBN_Recent with an indicator for deals paid 100% with stock",
+      "source": "Thomson Reuters LPC DealScan / Securities Data Company (SDC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Acq_tar distance)",
+      "source": "Compustat"
+     },
+     {
+      "name": "100% stock",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "Common_IB (acquirer's current IB advisor overlaps target's past IB advisor)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "Firm and deal characteristics associated with shareholder returns (per Appendix A)",
+      "source": "Compustat / Securities Data Company (SDC) database"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Two-digit SIC industry fixed effects for acquirer and target industries",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "reduction in search frictions",
+    "investment inefficiency associated with holdup problems"
+   ],
+   "mechanism_named": "property rights\ntheory",
+   "proposed_edge": {
+    "from": "reduction in search frictions",
+    "relation": "decreases",
+    "to": "investment inefficiency associated with holdup problems"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "low search\ncosts",
+    "outside options",
+    "relation-specific\nassets",
+    "search efficiency"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "low search\ncosts",
+    "relation": "increases",
+    "to": "willingness to invest in relation-specific assets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "search",
+    "corporate\nbehavior"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "search",
+    "relation": "affects",
+    "to": "corporate\nbehavior"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

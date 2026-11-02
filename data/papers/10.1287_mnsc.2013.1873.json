@@ -1,0 +1,613 @@
+{
+ "paper_id": "10.1287_mnsc.2013.1873",
+ "title": "The Role of Accounting Quality in the M&amp;A Market",
+ "journal": "MNSC",
+ "year": 2015,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "information economics",
+  "accounting quality (earnings quality) literature"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "accounting_quality",
+      "relation": "decreases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "increases",
+      "to": "likelihood_of_auction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "accounting_quality",
+      "relation": "decreases",
+      "to": "negotiation_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "negotiation_costs",
+      "relation": "increases",
+      "to": "likelihood_of_auction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_uncertainty",
+    "negotiation_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "target_initiated",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "valuation_uncertainty",
+     "moderated_from": "accounting_quality",
+     "moderated_to": "likelihood_of_auction",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "stock return volatility (return standard deviation) as the driver of valuation uncertainty rather than accounting quality"
+   ]
+  },
+  {
+   "hypothesis": "H2A",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "accounting_quality",
+      "relation": "decreases",
+      "to": "due_diligence_time",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "due_diligence_time",
+      "relation": "increases",
+      "to": "length_of_ma_process",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "due_diligence_time"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2B",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "accounting_quality",
+      "relation": "decreases",
+      "to": "due_diligence_time",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "due_diligence_time",
+      "relation": "increases",
+      "to": "length_of_postannouncement_phase",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "due_diligence_time"
+   ],
+   "moderators": [
+    {
+     "construct": "auction",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "due_diligence_time",
+     "moderated_from": "accounting_quality",
+     "moderated_to": "length_of_postannouncement_phase",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2B"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3A",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "accounting_quality",
+      "relation": "decreases",
+      "to": "likelihood_new_information_emerges",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_new_information_emerges",
+      "relation": "decreases",
+      "to": "likelihood_of_deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_new_information_emerges"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3B",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "accounting_quality",
+      "relation": "decreases",
+      "to": "likelihood_new_information_emerges",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_new_information_emerges",
+      "relation": "decreases",
+      "to": "likelihood_of_deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_new_information_emerges"
+   ],
+   "moderators": [
+    {
+     "construct": "auction",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "likelihood_new_information_emerges",
+     "moderated_from": "accounting_quality",
+     "moderated_to": "likelihood_of_deal_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3B"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly listed U.S. firms; M&A transactions across Fama and French (1997) 48-industry classifications)",
+  "country_region": "United States",
+  "time_period": "1990-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "977 publicly announced deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Mergers and Acquisitions database (Securities Data Corporation)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP daily file",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 / Equation (3): Accounting Quality and Method of Sale (probit, 8 specifications; Models 1-4 use AQ, Models 5-8 use UAF)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "460 deals in Models 5-8 (UAF specification) versus 977 deals in Models 1-4",
+    "dv": {
+     "name": "Auction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "merger background section of SEC filings 14A, S-4, and 14D"
+    },
+    "key_ivs": [
+     {
+      "name": "Accounting Quality (AQ)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Accounting Quality (UAF)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "AQ * Target Initiated (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat; SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target Size (natural log of target firm total assets, Compustat item AT)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock Only (=1 if transaction financed with 100% stock)",
+      "source": "SDC (Securities Data Corporation)"
+     },
+     {
+      "name": "Cash % (percentage of transaction financed with cash)",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer (=1 if transaction involved a tender offer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Return SD (standard deviation of target firm stock returns over days -317 to -64 relative to announcement)",
+      "source": "CRSP daily file"
+     },
+     {
+      "name": "Toehold (=1 if bidder held stocks of target prior to current deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target Initiated (=1 if target firm initiated the deal)",
+      "source": "merger background section of SEC filings 14A, S-4, 14D"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Additional controls from Equations (4) and (5) (added Model 4)",
+      "source": "Compustat; SDC"
+     },
+     {
+      "name": "Fama and French (1997) industry fixed effects",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2A",
+     "H2B"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Ln(Days+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC and SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "Accounting Quality (AQ / UAF)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Auction",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings 14A, S-4, 14D"
+     },
+     {
+      "name": "Auction * AQ (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat; SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Stock Only",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash %",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Return SD",
+      "source": "CRSP daily file"
+     },
+     {
+      "name": "Target Initiated",
+      "source": "SEC filings 14A, S-4, 14D"
+     },
+     {
+      "name": "Prior Bidding (=1 if prior bidding for the target)",
+      "source": "SDC"
+     },
+     {
+      "name": "Family Firm (=1 if target is a family firm)",
+      "source": "SDC"
+     },
+     {
+      "name": "Same Industry (=1 if target and bidder in same Fama and French (1997) industry)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat (SIC codes)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal Value (value of transaction in millions of dollars)",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (target net income to total assets, OIBDP/AT)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQ (net liquid assets to total assets, (ACT-LCT)/AT)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Debt/Assets (total debt to total assets, DLTT/AT)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book/Market (book value to market value of equity, AT/(AT-CEQ+PRCC_C*CSHO))",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fama and French (1997) industry fixed effects; standard errors clustered by year",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Equation (5): Accounting Quality and Likelihood of Deal Completion (probit)",
+    "hypotheses": [
+     "H3A",
+     "H3B"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Accounting Quality (AQ / UAF)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Auction",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings 14A, S-4, 14D"
+     },
+     {
+      "name": "Auction * AQ (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat; SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock Only",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior Bidding",
+      "source": "SDC"
+     },
+     {
+      "name": "Litigation",
+      "source": "Compustat (SIC codes)"
+     },
+     {
+      "name": "Family Firm",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal Value",
+      "source": "SDC"
+     },
+     {
+      "name": "Premium",
+      "source": "SDC"
+     },
+     {
+      "name": "Target Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book/Market",
+      "source": "Compustat"
+     },
+     {
+      "name": "Debt/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Initiated",
+      "source": "SEC filings 14A, S-4, 14D"
+     },
+     {
+      "name": "Number of MAE clauses (MAE) in the merger agreement",
+      "source": "merger background section of SEC filings 14A, S-4, 14D"
+     },
+     {
+      "name": "Relative Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash %",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Return SD",
+      "source": "CRSP daily file"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "Same Industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fama and French (1997) industry fixed effects; standard errors clustered by year",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "m&a transactions",
+    "accounting quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "target firm accounting quality",
+    "merger agreement stage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "target firm accounting quality",
+    "relation": "increases",
+    "to": "likelihood of reaching the merger agreement stage"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "accounting quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "accounting quality",
+    "stock return volatility",
+    "valuation uncertainty"
+   ],
+   "mechanism_named": "valuation uncertainty",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

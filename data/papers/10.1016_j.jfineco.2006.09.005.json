@@ -1,0 +1,956 @@
+{
+ "paper_id": "10.1016_j.jfineco.2006.09.005",
+ "title": "Monitoring: Which institutions matter?",
+ "journal": "JFE",
+ "year": 2007,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "large-shareholder monitoring theory",
+  "corporate governance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1 (merger performance)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "independent_long_term_institutional_ownership",
+      "relation": "increases",
+      "to": "institutional_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "institutional_monitoring",
+      "relation": "increases",
+      "to": "post_merger_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "institutional_monitoring"
+   ],
+   "moderators": [
+    {
+     "construct": "institutional_shareholder_activism_environment",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "institutional_monitoring",
+     "moderated_from": "independent_long_term_institutional_ownership",
+     "moderated_to": "post_merger_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 6.1 (subperiod analysis, 1980s vs 1990s)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "institutions passively pick and invest in better-managed firms (selection/endogeneity), producing the observed relation without any active monitoring",
+    "passive stock-picking rather than active monitoring"
+   ]
+  },
+  {
+   "hypothesis": "H1 (prevention of bad bids)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "independent_long_term_institutional_ownership",
+      "relation": "increases",
+      "to": "institutional_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "institutional_monitoring",
+      "relation": "decreases",
+      "to": "bad_bid_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "institutional_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "passive stock-picking (ILTIs simply invest in firms that make fewer bad bids) rather than active monitoring"
+   ]
+  },
+  {
+   "hypothesis": "H3 (bad-bid withdrawal)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "independent_long_term_institutional_ownership",
+      "relation": "increases",
+      "to": "shareholder_influence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_influence",
+      "relation": "increases",
+      "to": "bid_withdrawal",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shareholder_influence"
+   ],
+   "moderators": [
+    {
+     "construct": "negative_announcement_return",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "shareholder_influence",
+     "moderated_from": "independent_long_term_institutional_ownership",
+     "moderated_to": "bid_withdrawal",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3 (interaction of ILTI presence and CAR3, Table 4 Panel B)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: ILTIs dumping their shares at the announcement pushes the stock price down (a spurious link, not active influence)",
+    "passive stock-picking rather than active monitoring/influence"
+   ]
+  },
+  {
+   "hypothesis": "H2 (other institutions do not monitor)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "grey_institutional_ownership",
+      "relation": "increases",
+      "to": "monitoring_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_cost",
+      "relation": "decreases",
+      "to": "institutional_monitoring",
+      "from_measured": false,
+      "to_measured": false
+     }
+    ],
+    [
+     {
+      "from": "short_term_institutional_ownership",
+      "relation": "decreases",
+      "to": "monitoring_benefit",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "monitoring_benefit",
+      "relation": "increases",
+      "to": "institutional_monitoring",
+      "from_measured": false,
+      "to_measured": false
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring_cost",
+    "monitoring_benefit"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4 (monitoring-generated information and portfolio adjustment)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "independent_long_term_institutional_ownership",
+      "relation": "increases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "pre_bid_institutional_holdings",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "independent_long_term_institutional_ownership",
+      "relation": "increases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information",
+      "relation": "decreases",
+      "to": "pre_bid_institutional_holdings",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. bidding firms across two-digit SIC industries)",
+  "country_region": "United States",
+  "time_period": "1984-2001",
+  "sample_description": "US mergers with public-firm bidders (stock swap, tender offer, or tender/merger; excluding divestitures, repurchases, self-tenders, and rumored deals) requiring transaction value at least 5% of bidder equity market cap, with bidder data from CRSP, accounting data from Compustat, and institutional holdings from the CDA/Spectrum 13F database (SDC Mergers and Acquisitions database)",
+  "sample_size": "2,150 bids (1,815 completed acquisitions in most analyses)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CDA/Spectrum institutional holding database (Form 13F)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1,815 completed acquisitions",
+    "dv": {
+     "name": "merger performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP, Compustat, I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "total institutional ownership quintile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bidder size (market capitalization quintile)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Cross-sectional regression of institutional presence and merger performance (DV = CAR3)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,815 completed acquisitions (n=1,815)",
+    "dv": {
+     "name": "CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Top5 Dummy (Independent & Long-Term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Top5 Dummy (Other)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Holdings",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Private",
+      "source": "SDC"
+     },
+     {
+      "name": "Public",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying",
+      "source": "Compustat"
+     },
+     {
+      "name": "All Equity",
+      "source": "SDC"
+     },
+     {
+      "name": "All Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Operating Cash Flow (OCF)/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "S&P 500 Membership",
+      "source": "Compustat"
+     },
+     {
+      "name": "Number of Analysts Following",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Cross-sectional regression of institutional presence and merger performance (DV = BHAR)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,792 observations",
+    "dv": {
+     "name": "BHAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Top5 Dummy (Independent & Long-Term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Top5 Dummy (Other)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Holdings",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Private",
+      "source": "SDC"
+     },
+     {
+      "name": "Public",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying",
+      "source": "Compustat"
+     },
+     {
+      "name": "All Equity",
+      "source": "SDC"
+     },
+     {
+      "name": "All Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "OCF/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "S&P 500 Membership",
+      "source": "Compustat"
+     },
+     {
+      "name": "Number of Analysts Following",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Cross-sectional regression of institutional presence and merger performance (DV = DROA)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,383 observations",
+    "dv": {
+     "name": "DROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Top5 Dummy (Independent & Long-Term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Top5 Dummy (Other)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Holdings",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Private",
+      "source": "SDC"
+     },
+     {
+      "name": "Public",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying",
+      "source": "Compustat"
+     },
+     {
+      "name": "All Equity",
+      "source": "SDC"
+     },
+     {
+      "name": "All Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "OCF/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "S&P 500 Membership",
+      "source": "Compustat"
+     },
+     {
+      "name": "Number of Analysts Following",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Cross-sectional regression of institutional presence and merger performance (DV = DEPS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "897 observations",
+    "dv": {
+     "name": "DEPS",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Top5 Dummy (Independent & Long-Term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Top5 Dummy (Other)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Holdings",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Private",
+      "source": "SDC"
+     },
+     {
+      "name": "Public",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying",
+      "source": "Compustat"
+     },
+     {
+      "name": "All Equity",
+      "source": "SDC"
+     },
+     {
+      "name": "All Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "OCF/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "S&P 500 Membership",
+      "source": "Compustat"
+     },
+     {
+      "name": "Number of Analysts Following",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A: Institutional presence and bid announcement (frequency of good vs bad deals)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "2,150 acquisitions",
+    "dv": {
+     "name": "proportion of bad/good deals",
+     "measure": "three-day announcement-period abnormal returns (CAR3) sorted into quintiles; top and bottom quintiles define good versus bad deals; frequencies of good and bad deals compared across subsamples",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Top5 Dummy (Independent & Long-Term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Top5 Dummy (Other)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "2,150 acquisitions",
+    "dv": {
+     "name": "completion dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Top5 Dummy (Independent & Long-Term)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Top5 Dummy (Other)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "CAR3",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Top5 Dummy (Independent & Long-Term) x CAR3",
+      "measure": "interaction of the ILTI top5 dummy with CAR3",
+      "source": "CDA/Spectrum institutional holding database, CRSP"
+     },
+     {
+      "name": "Top5 Dummy (Other) x CAR3",
+      "measure": "interaction of the other top5 dummy with CAR3",
+      "source": "CDA/Spectrum institutional holding database, CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Holdings",
+      "source": "CDA/Spectrum institutional holding database"
+     },
+     {
+      "name": "Private",
+      "source": "SDC"
+     },
+     {
+      "name": "Public",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying",
+      "source": "Compustat"
+     },
+     {
+      "name": "All Equity",
+      "source": "SDC"
+     },
+     {
+      "name": "All Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "OCF/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "S&P 500 Membership",
+      "source": "Compustat"
+     },
+     {
+      "name": "Number of Analysts Following",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,815 completed acquisitions",
+    "dv": {
+     "name": "change in institutional holdings over Q-1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CDA/Spectrum institutional holding database"
+    },
+    "key_ivs": [
+     {
+      "name": "merger performance measures",
+      "measure": "CAR3, BHAR1, BHAR, DROA, DEPS entered as right-hand-side variables in a reverse regression; each dependent variable regressed on five specifications identical except for the merger performance measure",
+      "source": "CRSP, Compustat, I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "contemporaneous and lagged stock returns (Return Q0, Return Q-1)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Firm Size (Q-5)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Firm book-to-market (Q-5)",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "contemporaneous and lagged share turnover (Q0, Q-1, Q-4)",
+      "source": "CRSP"
+     },
+     {
+      "name": "end-of-year (EOY) dummy",
+      "source": ""
+     },
+     {
+      "name": "days between deal announcement and quarter-end",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,815 completed acquisitions",
+    "dv": {
+     "name": "change in institutional holdings over Q-4 to Q-1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CDA/Spectrum institutional holding database"
+    },
+    "key_ivs": [
+     {
+      "name": "merger performance measures",
+      "measure": "CAR3, BHAR1, BHAR, DROA, DEPS entered as right-hand-side variables; each dependent variable regressed on five specifications identical except for the merger performance measure",
+      "source": "CRSP, Compustat, I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "contemporaneous and lagged stock returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "Firm Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Firm book-to-market",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "contemporaneous and lagged share turnover",
+      "source": "CRSP"
+     },
+     {
+      "name": "end-of-year (EOY) dummy",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,815 completed acquisitions",
+    "dv": {
+     "name": "change in holdings of independent long-term Top5 institutional investors over Q-4 to Q-1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CDA/Spectrum institutional holding database"
+    },
+    "key_ivs": [
+     {
+      "name": "merger performance measures split into positive/negative and top/bottom quintile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP, Compustat, I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "contemporaneous and lagged stock returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "Firm Size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Firm book-to-market",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "contemporaneous and lagged share turnover",
+      "source": "CRSP"
+     },
+     {
+      "name": "end-of-year (EOY) dummy",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "concentrated ilti holdings",
+    "good merger performance"
+   ],
+   "mechanism_named": "endogeneity",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "board structure",
+    "g-score"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "aggregate holdings",
+    "monitoring versus trading"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "monitoring effect",
+    "aggregate holdings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "aggregation problem"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

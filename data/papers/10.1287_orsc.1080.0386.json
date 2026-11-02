@@ -1,0 +1,1162 @@
+{
+ "paper_id": "10.1287_orsc.1080.0386",
+ "title": "Corporate Venture Capital as a Window on New Technologies: Implications for the Performance of Corporate Investors When Acquiring Startups",
+ "journal": "ORSC",
+ "year": 2009,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "absorptive capacity theory",
+  "reputation theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cvc_intensity",
+      "relation": "increases",
+      "to": "absorptive_capacity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "absorptive_capacity",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "cvc_intensity",
+      "relation": "decreases",
+      "to": "internal_knowledge_base",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "internal_knowledge_base",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "absorptive_capacity",
+    "internal_knowledge_base"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cvc_program_stability",
+      "relation": "increases",
+      "to": "reputation_as_trustworthy_partner",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reputation_as_trustworthy_partner",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "cvc_program_stability",
+      "relation": "increases",
+      "to": "access_to_high_quality_startups",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_high_quality_startups",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reputation_as_trustworthy_partner",
+    "access_to_high_quality_startups"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "The higher returns of firms with stable CVC programs are driven by those firms simply being more profitable, larger, or more experienced acquirers rather than by CVC-related information or reputation"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "IT sector (information technology); SIC lines including software (737), computer hardware (357), semiconductors (367), telecommunications (481 and 484), communications equipment (366), and electronic instruments (381 and 382)",
+  "country_region": "United States",
+  "time_period": "1987-2003",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "242 acquisitions (by 34 corporate investors)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "VentureXpert",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "VentureOne",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "news articles and press releases",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model 1 (Controls only)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2 (add CVC intensity)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (add CVC intensity squared)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "CVC intensity squared",
+      "measure": "squared term of CVC intensity (CVC/R&D + CVC), testing diminishing marginal returns",
+      "source": "Compustat, VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 4 (Thresholds / percentile cutoffs of CVC intensity)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity (0% in acquisition year)",
+      "measure": "dummy for CVC intensity = 0% in acquisition year (omitted category = inflection-point range 5.7%-17.9%)",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "dummy for CVC intensity between 0% and 5.6% in acquisition year",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "CVC intensity (>18% in acquisition year)",
+      "measure": "dummy for CVC intensity greater than 18% in acquisition year",
+      "source": "Compustat, VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 5 (add stability index)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "CVC intensity squared",
+      "measure": "squared term of CVC intensity",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "Gompers-Lerner stability index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 2 (Consecutive years investing - robustness for stability)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "CVC intensity squared",
+      "measure": "squared term of CVC intensity",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "Consecutive years investing in CVC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 3 (Total years investing - robustness for stability)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "CVC intensity squared",
+      "measure": "squared term of CVC intensity",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "Total years investing in CVC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 4 (Two-year CVC intensity - robustness)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity-2 year",
+      "measure": "two-year moving average of CVC intensity (CVC/R&D + CVC)",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "CVC intensity-2 year squared",
+      "measure": "squared term of two-year moving-average CVC intensity",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "Gompers-Lerner stability index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 5 (Three-year CVC intensity - robustness)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition performance",
+     "measure": "the two-day (−1, 0) abnormal return",
+     "source": "event study of stock market reaction to acquisition announcement"
+    },
+    "key_ivs": [
+     {
+      "name": "CVC intensity-3 year",
+      "measure": "three-year moving average of CVC intensity (CVC/R&D + CVC)",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "CVC intensity-3 year squared",
+      "measure": "squared term of three-year moving-average CVC intensity",
+      "source": "Compustat, VentureOne, VentureXpert"
+     },
+     {
+      "name": "Gompers-Lerner stability index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureOne, VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquisition experience squared",
+      "source": "SDC, VentureOne"
+     },
+     {
+      "name": "Acquirer size (log assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free cash flow (percentage of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer has CVC unit?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Acquirer has prior VC investment in target?",
+      "source": "VentureOne, VentureXpert"
+     },
+     {
+      "name": "Target age",
+      "source": "VentureOne, news articles"
+     },
+     {
+      "name": "Target is public when acquired?",
+      "source": "SDC"
+     },
+     {
+      "name": "Boom years? (1999-2000)",
+      "source": "SDC"
+     },
+     {
+      "name": "Post-boom years? (2001-2003)",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "disclosure policies of acquirers",
+    "market reaction to takeovers of private targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "disclosure policies of acquirers",
+    "relation": "affects",
+    "to": "market reaction to takeovers of private targets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "sporadic pattern in their CVC investment programs",
+    "strategic benefits"
+   ],
+   "mechanism_named": "reputation effects",
+   "proposed_edge": {
+    "from": "sporadic pattern in their CVC investment\nprograms",
+    "relation": "decreases",
+    "to": "strategic\nbenefits"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "reputations",
+    "corporate investors"
+   ],
+   "mechanism_named": "reputation effects",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "reputation",
+    "quality of investment opportunities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "renewal mechanism"
+   ],
+   "mechanism_named": "renewal mechanism",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "leaking of knowledge",
+    "vibrancy of takeover markets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "learning",
+    "expropriation"
+   ],
+   "mechanism_named": "expropriation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "social, psychological, and technological factors",
+    "modes of capability sourcing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "social, psychological, and technological factors",
+    "relation": "affects",
+    "to": "modes of capability sourcing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "common ground",
+    "equity investing",
+    "nonequity alliance",
+    "acquisition"
+   ],
+   "mechanism_named": "common ground",
+   "proposed_edge": {
+    "from": "common ground",
+    "relation": "affects",
+    "to": "mode of capability sourcing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "judgment biases in managerial decision making",
+    "social dynamics within firms",
+    "[withheld: wording matches the source]",
+    "timing or mode of market entry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "judgment biases in managerial decision making",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "dynamic capabilities",
+    "internal development",
+    "external sourcing"
+   ],
+   "mechanism_named": "dynamic capabilities",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "information",
+    "CVC investing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "dedicated units",
+    "cross-functional knowledge transfer"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "housing CVC\nactivities in dedicated units",
+    "relation": "decreases",
+    "to": "cross-functional knowledge transfer"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "governance\nissues"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "corporate development activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "corporate development activities",
+    "relation": "unspecified",
+    "to": "corporate development activities"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sector-specific differences",
+    "opportunity costs associated with deferring acquisition decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "opportunity costs of delaying acquisition decisions",
+    "IT sector"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "stock market reaction to acquisition",
+    "acquirer\nperformance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "market’s reaction",
+    "true impact of the acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "ex post operating performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "unspecified",
+    "to": "ex post operating performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "CVC investing",
+    "acquirer\nperformance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "CVC investing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "results"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "IT sector",
+    "findings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "findings",
+    "industries"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "external venture financing",
+    "entrepreneurial-firm acquisition activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "external venture financing",
+    "relation": "unspecified",
+    "to": "entrepreneurial-firm acquisition activities"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "non-equity alliances",
+    "CVC investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

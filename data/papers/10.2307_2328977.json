@@ -1,0 +1,263 @@
+{
+ "paper_id": "10.2307_2328977",
+ "title": "Management Buyout Proposals and Inside Information",
+ "journal": "JF",
+ "year": 1992,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "information hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout_proposal",
+      "relation": "increases",
+      "to": "inside_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inside_information",
+      "relation": "increases",
+      "to": "persistent_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inside_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "control transfer hypothesis (stock price increases stem solely from expectations of a value-increasing control transfer, not inside information)"
+   ]
+  },
+  {
+   "hypothesis": "control transfer hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout_proposal",
+      "relation": "increases",
+      "to": "expectations_of_control_transfer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expectations_of_control_transfer",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expectations_of_control_transfer"
+   ],
+   "moderators": [
+    {
+     "construct": "receipt_of_other_acquisition_bids",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "expectations_of_control_transfer",
+     "moderated_from": "management_buyout_proposal",
+     "moderated_to": "abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "control transfer hypothesis"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information hypothesis (price increases reflect favorable inside information revealed by the proposal, not control-transfer expectations)"
+   ]
+  },
+  {
+   "hypothesis": "information asymmetry and probability of withdrawal",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "probability_of_bid_success",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_bid_success",
+      "relation": "decreases",
+      "to": "probability_of_proposal_withdrawal",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_bid_success"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded firms with withdrawn management buyout proposals; exchange-listed and over-the-counter)",
+  "country_region": "United States",
+  "time_period": "1973-1989",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "114 withdrawn buyout proposals (of 118 identified); comparison sample of 178 completed buyouts"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News/Retrieval service",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "W. T. Grimm's Mergerstat Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions \"Out the Window\" column",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Nelson's",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Market-model abnormal returns (risk-adjusted prediction errors) around proposal and withdrawal announcements",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "114 withdrawn management buyout proposals, November 1973-December 1989 (of 118 identified; CRSP data available for 114)",
+    "dv": {
+     "name": "cumulative abnormal stock returns (market-model prediction errors)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "withdrawn management buyout proposal and withdrawal announcement (event)",
+      "measure": "event dates: proposal announcement date (AD) and withdrawal announcement date (WD); abnormal returns cumulated over pre-proposal, interim, and post-withdrawal prediction intervals surrounding these dates",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Abnormal stock returns using size-matched indices (Dimson-Marsh comparison portfolio approach)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "114 withdrawn management buyout proposals",
+    "dv": {
+     "name": "cumulative abnormal stock returns (size-matched)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "withdrawn management buyout proposal and withdrawal announcement (event)",
+      "measure": "event dates: proposal announcement date (AD) and withdrawal announcement date (WD); abnormal returns cumulated over intervals surrounding these dates",
+      "source": "Dow Jones News/Retrieval service; Wall Street Journal Index listings; W. T. Grimm's Mergerstat Review"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Abnormal returns partitioned by whether the firm received other acquisition bids",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "subsamples: firms that received other acquisition bids vs. firms that received no other acquisition bids",
+    "dv": {
+     "name": "cumulative abnormal stock returns over proposal and withdrawal announcement periods",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "receipt of other acquisition bid(s)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News/Retrieval service; The Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Comparison of asymmetric information proxies (withdrawn vs. completed buyout samples)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "withdrawn-proposal firms vs. completed-buyout firms (parametric difference of means test and Mann-Whitney U-test)",
+    "dv": {
+     "name": "asymmetric information proxies",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "buyout proposal outcome (withdrawn vs. completed)",
+      "measure": "sample partition: firms with withdrawn buyout proposals vs. firms with completed buyouts",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

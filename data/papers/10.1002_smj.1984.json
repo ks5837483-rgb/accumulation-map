@@ -1,0 +1,713 @@
+{
+ "paper_id": "10.1002_smj.1984",
+ "title": "The\n                    <i>vicarious</i>\n                    wisdom of crowds: toward a behavioral perspective on investor reactions to acquisition announcements",
+ "journal": "SMJ",
+ "year": 2012,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "behavioral decision theory",
+  "signaling theory",
+  "information economics",
+  "behavioral finance",
+  "elaboration likelihood model"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_premium",
+      "relation": "decreases",
+      "to": "perceived_value_creation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_value_creation",
+      "relation": "increases",
+      "to": "acquirer_stock_market_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_value_creation"
+   ],
+   "moderators": [
+    {
+     "construct": "industry_similarity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "stock_payment",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3a"
+    },
+    {
+     "construct": "advisor_involvement",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3b"
+    },
+    {
+     "construct": "preexisting_partial_ownership_position",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3c"
+    },
+    {
+     "construct": "defense_tactics",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3d"
+    },
+    {
+     "construct": "acquirer_performance",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4a"
+    },
+    {
+     "construct": "debt_to_equity_ratio",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4b"
+    },
+    {
+     "construct": "acquisition_experience",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "reliability of management’s perception",
+     "moderated_from": "acquisition_premium",
+     "moderated_to": "acquirer_stock_market_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "North American acquirers (acquisitions domestic and foreign)",
+  "time_period": "1990-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,616 acquisitions by 1,125 unique acquirers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial's SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P's Compustat North America",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Models 1a/1b (DV CAR(-1,1))",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3c",
+     "H3d",
+     "H5"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer's cumulative abnormal return (CAR)",
+     "measure": "short-term cumulative abnormal returns (CARs) over three (-1, 1) trading days surrounding the announcement date",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry similarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / press releases"
+     },
+     {
+      "name": "payment method",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "involvement of acquirer advisors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "preexisting partial ownership position",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "defense tactics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer performance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer debt-to-equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer acquisition experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "merger of equals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "tender offer dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "divestiture dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relative size (target total assets / acquirer total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "geographic proximity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relatedness to recent deals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target product scope (number of SIC codes in which target operates)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of target advisors",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Models 2a/2b (DV CAR(-2,2))",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3c",
+     "H3d",
+     "H5"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer's cumulative abnormal return (CAR)",
+     "measure": "short-term cumulative abnormal returns (CARs) over five (-2, 2) trading days surrounding the announcement date",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry similarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / press releases"
+     },
+     {
+      "name": "payment method",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "involvement of acquirer advisors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "preexisting partial ownership position",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "defense tactics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer performance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer debt-to-equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer acquisition experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "merger of equals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "tender offer dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "divestiture dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relative size (target total assets / acquirer total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "geographic proximity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relatedness to recent deals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target product scope (number of SIC codes in which target operates)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of target advisors",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Models 3a/3b (DV CAR(-3,3))",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3c",
+     "H3d",
+     "H5"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer's cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry similarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / press releases"
+     },
+     {
+      "name": "payment method",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "involvement of acquirer advisors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "preexisting partial ownership position",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "defense tactics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer performance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer debt-to-equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer acquisition experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "merger of equals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "tender offer dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "divestiture dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relative size (target total assets / acquirer total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "geographic proximity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relatedness to recent deals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target product scope (number of SIC codes in which target operates)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of target advisors",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Models 4a/4b (DV long-term CAR(-30,331)) - additional/robustness analysis",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3c",
+     "H3d",
+     "H5"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquirer's long-term cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry similarity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / press releases"
+     },
+     {
+      "name": "payment method",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "involvement of acquirer advisors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "preexisting partial ownership position",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "defense tactics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "acquirer performance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer debt-to-equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer acquisition experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "merger of equals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "tender offer dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "divestiture dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relative size (target total assets / acquirer total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "geographic proximity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "relatedness to recent deals dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target product scope (number of SIC codes in which target operates)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "number of target advisors",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "management’s perception",
+    "behavioral factors",
+    "investors’ decision making",
+    "investor reactions"
+   ],
+   "mechanism_named": "behavioral mechanisms",
+   "proposed_edge": {
+    "from": "behavioral factors",
+    "relation": "affects",
+    "to": "investors’ decision making"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "secondary data",
+    "investors’ stock market reactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "primary data",
+    "investors’ decisionmaking processes"
+   ],
+   "mechanism_named": "policy-capturing",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "acquisition premium",
+    "management’s perception",
+    "organizational events",
+    "alliances"
+   ],
+   "mechanism_named": "behavioral approach",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "signals",
+    "management’s perceptions",
+    "behavioral factors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "investor reactions",
+    "measure of performance",
+    "acquisition announcements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "conditions",
+    "on_path": [
+     "investor reactions",
+     "measure of performance"
+    ]
+   }
+  }
+ ]
+}

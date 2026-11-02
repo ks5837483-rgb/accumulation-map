@@ -1,0 +1,455 @@
+{
+ "paper_id": "10.1017_s002210900000212x",
+ "title": "Earnings Management and Stock Performance of Reverse Leveraged Buyouts",
+ "journal": "JFQA",
+ "year": 2006,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "managerial opportunism hypothesis of earnings management",
+  "information asymmetry",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     },
+     {
+      "from": "earnings_management",
+      "relation": "increases",
+      "to": "offering_price",
+      "from_measured": true,
+      "to_measured": false
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "buyout_specialist_involvement",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "incentive_to_borrow_future_earnings",
+     "moderated_from": "information_asymmetry",
+     "moderated_to": "earnings_management",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_management",
+      "relation": "increases",
+      "to": "reversal_of_earnings_management",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reversal_of_earnings_management",
+      "relation": "decreases",
+      "to": "post_offering_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "earnings_management",
+      "relation": "increases",
+      "to": "market_discovery_of_earnings_management",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_discovery_of_earnings_management",
+      "relation": "decreases",
+      "to": "post_offering_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reversal_of_earnings_management",
+    "market_discovery_of_earnings_management"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "investor overoptimism or pseudo market timing driving post-offering returns",
+    "earnings management is in response to investor expectations rather than managerial opportunism (Shivakumar (2000))"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_management",
+      "relation": "decreases",
+      "to": "firm_quality",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "firm_quality",
+      "relation": "increases",
+      "to": "subsequent_equity_offering_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_management",
+      "relation": "increases",
+      "to": "offering_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "offering_price",
+      "relation": "increases",
+      "to": "insider_selling_at_offering",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "offering_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (47 different two-digit SIC codes; wholesale and retail most represented, over 20%)",
+  "country_region": "United States",
+  "time_period": "1981-1999",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "247 reverse LBOs (main sample); 164 for buyout specialist/management analysis"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) IPO database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LEXIS/NEXIS database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A: Discretionary Current Accruals (DCAs) for full sample",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "247 reverse LBOs, 1981-1999",
+    "dv": {
+     "name": "discretionary current accruals (DCAs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat database"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panel B: DCAs by buyout specialist involvement",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "164 reverse LBOs with available buyout specialist/management involvement information (128 specialists, 36 non-specialists)",
+    "dv": {
+     "name": "discretionary current accruals (DCAs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat database"
+    },
+    "key_ivs": [
+     {
+      "name": "buyout specialist involvement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Retrieval; LEXIS/NEXIS database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panel C: DCAs by management involvement",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "164 reverse LBOs (110 management, 54 non-management)",
+    "dv": {
+     "name": "discretionary current accruals (DCAs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat database"
+    },
+    "key_ivs": [
+     {
+      "name": "management involvement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Retrieval; LEXIS/NEXIS database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panel D: DCAs by time period (subperiods)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "247 reverse LBOs (60 first subperiod, 187 second subperiod)",
+    "dv": {
+     "name": "discretionary current accruals (DCAs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat database"
+    },
+    "key_ivs": [
+     {
+      "name": "sample subperiod",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation (SDC) IPO database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panel E: DCAs by firm size quartiles",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "247 reverse LBOs grouped into size quartiles",
+    "dv": {
+     "name": "discretionary current accruals (DCAs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat database"
+    },
+    "key_ivs": [
+     {
+      "name": "firm size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "247 reverse LBOs",
+    "dv": {
+     "name": "post-offering abnormal stock returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "DCA quartile",
+      "measure": "reverse LBOs ranked by pre-offering-year DCAs into quartiles (Quartile 1 most aggressive/highest DCA, Quartile 4 most conservative/lowest DCA)",
+      "source": "Compustat database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "247 reverse LBOs, 1981-1999",
+    "dv": {
+     "name": "monthly portfolio abnormal returns (alpha)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "DCA portfolio (aggressive vs. conservative)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "market factor (Rmt - Rft, value-weighted CRSP index minus three-month T-bill yield)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SMB (return on small firms minus return on large firms)",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=140 (estimated separately for each post-offering holding period, and separately for SPECIALIST vs. MBO specification)",
+    "dv": {
+     "name": "post-offering abnormal stock return (BHAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "discretionary current accruals (DCA)",
+      "measure": "DCA_i, the discretionary current accruals for firm i during the offering year",
+      "source": "Compustat database"
+     },
+     {
+      "name": "SPECIALIST",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Retrieval; LEXIS/NEXIS database"
+     },
+     {
+      "name": "MBO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones News Retrieval; LEXIS/NEXIS database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Securities Data Corporation (SDC) IPO database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat database"
+     },
+     {
+      "name": "ln(SIZE) (natural logarithm of total market value of the offering firm)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "earnings management",
+    "post-offering decline in stock value"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "gains",
+    "reverse LBO"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "dcas",
+    "post-offering returns"
+   ],
+   "mechanism_named": "control sample approach",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "earnings management",
+    "price fall"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

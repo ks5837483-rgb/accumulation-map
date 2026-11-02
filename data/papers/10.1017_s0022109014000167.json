@@ -1,0 +1,634 @@
+{
+ "paper_id": "10.1017_s0022109014000167",
+ "title": "Who Gains from Buying Bad Bidders?",
+ "journal": "JFQA",
+ "year": 2014,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "disciplinary hypothesis",
+  "managerial hubris hypothesis",
+  "managerial overconfidence"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_prior_acquisition_quality",
+      "relation": "decreases",
+      "to": "recoverable_lost_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "recoverable_lost_value",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "recoverable_lost_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "SCAR captures acquirer equity overvaluation (stock-financed acquisitions correcting mispricing) rather than acquisition quality"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_prior_acquisition_quality",
+      "relation": "decreases",
+      "to": "acquirer_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_overpayment",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_prior_acquisition_quality",
+      "relation": "decreases",
+      "to": "reversal_of_poor_prior_acquisitions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reversal_of_poor_prior_acquisitions",
+      "relation": "increases",
+      "to": "synergy_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reversal_of_poor_prior_acquisitions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_complexity",
+      "relation": "increases",
+      "to": "acquirer_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_valuation_error",
+      "relation": "decreases",
+      "to": "synergy_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_valuation_error"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_complexity",
+      "relation": "increases",
+      "to": "acquirer_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_valuation_error",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_valuation_error"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. corporate takeovers/M&As, excluding financial firms)",
+  "country_region": "United States (domestic M&As)",
+  "time_period": "1986-2007",
+  "sample_description": "Completed domestic U.S. mergers and acquisitions from the SDC U.S. Mergers and Acquisitions database, requiring both acquirer and target to be public companies with financial data on Compustat and daily stock returns on CRSP, deal value at least 5% of acquirer market cap, excluding financial firms and targets with market capitalization below $25 million (in year 2000 dollars)",
+  "sample_size": "1,595 takeovers (789 of which are 'bidder' targets)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "News articles in LexisNexis and Factiva (CEO turnover data)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Kenneth French's Web site, Fama and French (1997) 49 industry definitions",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Takeover Premiums: Summary Statistics (Panels A and B, univariate comparison)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Panel A: 1,595 takeovers (787 nonbidders vs 773 bidders on Raw Premium); Panel B: bidders in top vs bottom SCAR tercile (N=257/258)",
+    "dv": {
+     "name": "Takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (offer price); CRSP (returns)"
+    },
+    "key_ivs": [
+     {
+      "name": "Target bidding quality / Bad Bidder Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (event-study CARs); SDC (prior acquisition identification)"
+     },
+     {
+      "name": "Bidder vs. nonbidder status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Cols 1-2: all targets that are past bidders (789); cols 3-4: targets with middle-tercile SCARs excluded; cols 5-6: targets with negative SCARs only",
+    "dv": {
+     "name": "Takeover Premium (Raw Premium)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (offer price); CRSP (stock price)"
+    },
+    "key_ivs": [
+     {
+      "name": "Target SCAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (event-study CARs); SDC (prior acquisitions)"
+     },
+     {
+      "name": "Target Bad Bidder Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target prior divestiture (indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target prior CEO turnover (indicator)",
+      "source": "SEC EDGAR/LexisNexis/Factiva"
+     },
+     {
+      "name": "log(Target market cap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Acquirer market cap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC (deal value); CRSP (market cap)"
+     },
+     {
+      "name": "Diversifying (3-digit SIC)",
+      "source": "Compustat (SIC); SDC"
+     },
+     {
+      "name": "Competing bid",
+      "source": "SDC"
+     },
+     {
+      "name": "All cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry M&A",
+      "source": "SDC (deal values); Compustat (industry assets)"
+     },
+     {
+      "name": "Calendar year dummy variables",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Acquirer Returns: Summary Statistics (Panels A and B, univariate comparison)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Panel A: 806 nonbidders vs 789 bidders; Panel B: bidders in top vs bottom SCAR tercile (N=263/263)",
+    "dv": {
+     "name": "Acquirer CAR(-5,+5)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Bidder vs. nonbidder status / Bad Bidder Dummy",
+      "measure": "Bad Bidder Dummy = 1 if target SCAR in bottom tercile (bad bidder), 0 if top tercile (good bidder); bidders vs nonbidders split by prior acquisition history",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Pooled weighted least squares (weight = reciprocal of CAR variance). Cols 1-2: all past bidders; cols 3-4: middle-tercile SCARs excluded; cols 5-6: negative SCARs only",
+    "dv": {
+     "name": "Acquirer CAR(-5,+5)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target SCAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; SDC"
+     },
+     {
+      "name": "Target Bad Bidder Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target prior divestiture (indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target prior CEO turnover (indicator)",
+      "source": "SEC EDGAR/LexisNexis/Factiva"
+     },
+     {
+      "name": "log(Acquirer market cap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Target market cap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying (3-digit SIC)",
+      "source": "Compustat; SDC"
+     },
+     {
+      "name": "Competing bid",
+      "source": "SDC"
+     },
+     {
+      "name": "All cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry M&A",
+      "source": "SDC; Compustat"
+     },
+     {
+      "name": "Calendar year dummy variables",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Synergy Gains: Summary Statistics (Panels A and B, univariate comparison)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Panel A: 795 nonbidders vs 789 bidders; Panel B: bidders in top vs bottom SCAR tercile (N=263/263)",
+    "dv": {
+     "name": "Synergy gains (combined value created)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Bidder vs. nonbidder status / Bad Bidder Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "789 takeovers of bidders; same specification as Table 7 (pooled weighted least squares); subsamples include negative-SCARs-only in cols 5-6",
+    "dv": {
+     "name": "Synergy value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target SCAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; SDC"
+     },
+     {
+      "name": "Target Bad Bidder Dummy",
+      "measure": "value of 1 if SCAR in bottom tercile (bad bidder), 0 if top tercile (good bidder)",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target prior divestiture (indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target prior CEO turnover (indicator)",
+      "source": "SEC EDGAR/LexisNexis/Factiva"
+     },
+     {
+      "name": "log(Acquirer market cap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Target market cap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying (3-digit SIC)",
+      "source": "Compustat; SDC"
+     },
+     {
+      "name": "Competing bid",
+      "source": "SDC"
+     },
+     {
+      "name": "All cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry M&A",
+      "source": "SDC; Compustat"
+     },
+     {
+      "name": "Calendar year dummy variables",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "target firm complexity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "number of prior acquisitions",
+    "target firm complexity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "synergy gains",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "synergy gains"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "value gains from corporate takeovers",
+    "target firm complexity",
+    "managerial hubris"
+   ],
+   "mechanism_named": "managerial hubris",
+   "proposed_edge": {
+    "from": "target firm complexity",
+    "relation": "affects",
+    "to": "value gains from corporate takeovers"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

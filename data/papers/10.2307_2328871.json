@@ -1,0 +1,376 @@
+{
+ "paper_id": "10.2307_2328871",
+ "title": "The Intra-Industry Effects of Going-Private Transactions",
+ "journal": "JF",
+ "year": 1991,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "agency theory",
+  "intra-industry information transfer"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "going_private_bid",
+      "relation": "increases",
+      "to": "industry_wide_private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "industry_wide_private_information",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "industry_wide_private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "arbitrager price pressure: arbitragers buy an industry portfolio on control-bid rumors (not external information transfer)",
+    "synergy or monopoly/collusion gains from a consolidation of operating firms"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "buyout_specialist_participation",
+      "relation": "increases",
+      "to": "bid_credibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bid_credibility",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "buyout_specialist_participation",
+      "relation": "decreases",
+      "to": "bid_signal_content",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bid_signal_content",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_credibility",
+    "bid_signal_content"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout_bid",
+      "relation": "decreases",
+      "to": "private_information_revealed",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_revealed",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "management_buyout_bid",
+      "relation": "increases",
+      "to": "favorable_private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_private_information",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_revealed",
+    "favorable_private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "subsequent_industry_buyout_bid",
+      "relation": "decreases",
+      "to": "industry_valuation_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "industry_valuation_information",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "industry_valuation_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "rival_relative_market_value",
+      "relation": "increases",
+      "to": "information_production_and_dissemination",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_production_and_dissemination",
+      "relation": "decreases",
+      "to": "rival_valuation_effect",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_production_and_dissemination"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (going-private transactions of listed U.S. firms and their horizontal industry rivals, spanning 37 two-digit SIC codes; excludes conglomerates, utilities, and financial firms)",
+  "country_region": "United States (NYSE/AMEX-listed firms)",
+  "time_period": "1980-1988",
+  "sample_description": "Initial going-private bids for firms listed on the NYSE or AMEX (buyout/LBO/MBO announcements from Mergers and Acquisitions and the Wall Street Journal), plus a portfolio of their horizontal industry rivals matched by four-digit SIC code from the CRSP daily returns file; excludes divestitures, interfirm mergers/acquisitions, conglomerates, utilities, and financial firms",
+  "sample_size": "128 going-private announcements (78 management buyouts, 50 by outsiders); 940 industry rival firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP daily returns file",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Standard and Poor's and Value Line",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I Panel A - Target firm cumulative excess returns (full sample + subsamples)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "128 going-private target firms, NYSE/AMEX listed, 1980-1988",
+    "dv": {
+     "name": "target firm cumulative excess returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP daily returns file"
+    },
+    "key_ivs": [
+     {
+      "name": "initial going-private (buyout) bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "buyout specialist participation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "management vs outside buyout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "subsequent vs first buyout bid in industry",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergers and Acquisitions"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "rival firms sharing 4-digit SIC with each target, pooled into 128 equally weighted event portfolios (940 rivals total)",
+    "dv": {
+     "name": "industry rival cumulative excess returns (event-weighted portfolios)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP daily returns file"
+    },
+    "key_ivs": [
+     {
+      "name": "initial going-private (buyout) bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "buyout specialist participation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "management vs outside buyout",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "subsequent vs first buyout bid in industry",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergers and Acquisitions"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II Panel A - Equally weighted rival firms (robustness, rivals not pooled by event)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "940 individual rival firms equally weighted (not pooled by event)",
+    "dv": {
+     "name": "industry rival cumulative excess returns (equally weighted, not pooled by event)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP daily returns file"
+    },
+    "key_ivs": [
+     {
+      "name": "initial going-private (buyout) bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II Panel B - Matched sample of rival firms (single matched competitor per target)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "128 industry rivals matched to targets by size and nature of operations",
+    "dv": {
+     "name": "matched rival cumulative excess returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP daily returns file"
+    },
+    "key_ivs": [
+     {
+      "name": "initial going-private (buyout) bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "rivals split into market value less than target (96 portfolios / 500 firms) vs greater than target (104 portfolios / 440 firms)",
+    "dv": {
+     "name": "industry rival cumulative excess returns by relative firm size",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP daily returns file"
+    },
+    "key_ivs": [
+     {
+      "name": "rival market value relative to target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP daily returns file"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

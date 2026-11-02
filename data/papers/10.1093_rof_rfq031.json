@@ -1,0 +1,454 @@
+{
+ "paper_id": "10.1093_rof_rfq031",
+ "title": "Structure and Determinants of Financial Covenants in Leveraged Buyouts",
+ "journal": "RF",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory",
+  "signaling theory",
+  "incomplete contracts theory",
+  "reputation theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pe_group_size",
+      "relation": "decreases",
+      "to": "information_asymmetry_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry_costs",
+      "relation": "increases",
+      "to": "covenant_restrictiveness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the competing increased financial risk argument (covenant restrictiveness driven by leverage/financial risk rather than reduced information asymmetry costs)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "leverage",
+      "relation": "increases",
+      "to": "risk_shifting",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_shifting",
+      "relation": "increases",
+      "to": "covenant_restrictiveness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_shifting"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality / simultaneous causality (endogeneity) between leverage and covenant restrictiveness, addressed with Wu–Hausman/instrumental-variable tests"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "profitability",
+      "relation": "increases",
+      "to": "expected_management_behavior",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_management_behavior",
+      "relation": "decreases",
+      "to": "covenant_restrictiveness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_management_behavior"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "expected_ebitda_growth",
+      "relation": "increases",
+      "to": "value_of_financial_flexibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_of_financial_flexibility",
+      "relation": "decreases",
+      "to": "covenant_restrictiveness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_of_financial_flexibility"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "agency-theory underinvestment account in which high-growth firms receive more restrictive covenants (Billett, King, and Mauer, 2007)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (German leveraged buyouts across sectors; industry controlled via fixed effects / two-digit SIC matching)",
+  "country_region": "Germany (LBO sample); nonsponsored benchmark from DealScan conditioned on Compustat data",
+  "time_period": "July 2000-August 2008",
+  "sample_description": "Proprietary LBO loan contracts and financial information negotiated between banks and PE sponsors, collected from three major European commercial banks (as lead/co-lead arrangers); benchmark samples of nonsponsored loans (term loans; and loans for corporate acquisitions) from Reuters LPC DealScan, conditioned on availability of Compustat data for the borrower",
+  "sample_size": "130 PE-sponsored LBO deals (126 observations in the D/EBITDA headroom regression); benchmark = 1,423 nonsponsored term-loan observations"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Proprietary LBO data set from three major European commercial banks (complete underwritten senior and subordinated loan contracts, original syndication memorandum, and underlying financial models)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Reuters LPC DealScan database (DealScan)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Venture Economics (TVE)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "MergerMarket",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Merrill Lynch Global Index System",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Centre for Management Buy-out Research (CMBOR)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table IV: Frequency of financial covenants (sponsored vs nonsponsored loans)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "130 PE-sponsored loans vs 1,423 nonsponsored term loans (and 355 highest D/EV quartile), 2000-2008",
+    "dv": {
+     "name": "Inclusion / number of financial covenants",
+     "measure": "inclusion of financial covenants (D/EBITDA, EBITDA/I, cash flow coverage, capex, D/E, current ratio, net worth) and 'No. of financial covenants' per loan deal",
+     "source": "Proprietary LBO data set from three banks (sponsored loans); Reuters LPC DealScan (nonsponsored loans)"
+    },
+    "key_ivs": [
+     {
+      "name": "Loan sponsorship (PE-sponsored vs comparable nonsponsored loan)",
+      "measure": "grouping of 130 PE-sponsored loans vs 1,423 nonsponsored term loans vs 355 highest borrower D/EV quartile nonsponsored term loans",
+      "source": "Proprietary LBO data set (sponsored); DealScan (nonsponsored)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Borrower financial risk / leverage quartile (highest D/EV quartile benchmark match)",
+      "source": "Compustat / DealScan"
+     }
+    ]
+   },
+   {
+    "label": "Table IX (specifications 1-3): OLS regressions on D/EBITDA covenant headroom",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "130 PE-sponsored LBOs and recapitalizations completed July 2000-August 2008 (126 observations for D/EBITDA headroom)",
+    "dv": {
+     "name": "D/EBITDA covenant headroom (leverage covenant restrictiveness)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Proprietary LBO data set from three banks (credit agreements and financial forecasts)"
+    },
+    "key_ivs": [
+     {
+      "name": "PE group size (reduced information asymmetry costs proxy / PE reputation)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Venture Economics (TVE)"
+     },
+     {
+      "name": "Banking relationship (reduced information asymmetry costs proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reuters LPC DealScan database (DealScan)"
+     },
+     {
+      "name": "Leverage / D/EBITDA (increased financial risk proxy)",
+      "measure": "net debt to EBITDA ratio at transaction",
+      "source": "Proprietary LBO data set from three banks"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Expected EBITDA growth (projected compounded average growth rate of EBITDA to following 3 years)",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Credit risk spread (difference between AAA- and BB-rated corporate bonds)",
+      "source": "Merrill Lynch Global Index System"
+     },
+     {
+      "name": "Size categories (small/mid/large cap deals)",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Strict/loose EBITDA definition dummy",
+      "source": "Proprietary LBO data set from three banks (credit agreements)"
+     }
+    ]
+   },
+   {
+    "label": "Table IX (specifications 4-6): D/EBITDA headroom regressions with bank / industry / time fixed effects",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "130 PE-sponsored LBOs and recapitalizations, July 2000-August 2008; SEs clustered at banks (spec 4) or at deal year and industry (spec 6) per Petersen (2009)",
+    "dv": {
+     "name": "D/EBITDA covenant headroom (leverage covenant restrictiveness)",
+     "measure": "the tightest (smallest) leverage headroom of the first 2 years following the transaction as measure of maximal restrictiveness",
+     "source": "Proprietary LBO data set from three banks (credit agreements and financial forecasts)"
+    },
+    "key_ivs": [
+     {
+      "name": "PE group size (reduced information asymmetry costs proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Venture Economics (TVE)"
+     },
+     {
+      "name": "Leverage / D/EBITDA (increased financial risk proxy)",
+      "measure": "net debt to EBITDA ratio at transaction",
+      "source": "Proprietary LBO data set from three banks"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Profitability (return on sales, EBITDA/sales)",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Expected EBITDA growth",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Credit risk spread (AAA vs BB corporate bonds)",
+      "source": "Merrill Lynch Global Index System"
+     },
+     {
+      "name": "Size categories (small/mid/large cap)",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Loose EBITDA definition dummy",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Bank fixed effects (specification 4)",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Industry fixed effects (specifications 5-6)",
+      "source": "Proprietary LBO data set from three banks"
+     },
+     {
+      "name": "Time (deal year) fixed effects (specifications 5-6)",
+      "source": "Proprietary LBO data set from three banks"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "slack",
+    "covenant tightness",
+    "d/ebitda slack"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "banking relationship"
+   ],
+   "mechanism_named": "selection bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "banking relationship"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "pe group reputation",
+    "covenant restrictiveness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "headroom",
+    "covenant restrictiveness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "ﬁnancial covenants"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "ﬁnancial covenants",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ﬁnancial covenants",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "pe groups behavior",
+    "defaults"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "defaults",
+    "relation": "affects",
+    "to": "pe groups behavior"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "information asymmetry"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "restrictiveness of ﬁnancial covenants",
+    "additional contractual clauses"
+   ],
+   "mechanism_named": "guard posts",
+   "proposed_edge": {
+    "from": "restrictiveness of ﬁnancial covenants",
+    "relation": "unspecified",
+    "to": "additional contractual clauses"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

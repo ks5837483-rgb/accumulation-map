@@ -1,0 +1,1207 @@
+{
+ "paper_id": "10.1016_j.jfineco.2014.02.003",
+ "title": "The role of investment banker directors in M&amp;A",
+ "journal": "JFE",
+ "year": 2014,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "board advisory role",
+  "information economics",
+  "corporate governance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_banker_directors",
+      "relation": "increases",
+      "to": "target_screening",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_screening",
+      "relation": "increases",
+      "to": "acquisition_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_screening"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity / reverse causality: firms appoint IB directors in anticipation of planned acquisitions"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_banker_directors",
+      "relation": "increases",
+      "to": "acquisition_decision_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_decision_quality",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_decision_quality"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_deal_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquisition_decision_quality",
+     "moderated_from": "investment_banker_directors",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2a"
+    },
+    {
+     "construct": "current_investment_banking_experience",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquisition_decision_quality",
+     "moderated_from": "investment_banker_directors",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2b"
+    },
+    {
+     "construct": "director_network_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_flow",
+     "moderated_from": "investment_banker_directors",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2c"
+    },
+    {
+     "construct": "ceo_inexperience",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquisition_decision_quality",
+     "moderated_from": "investment_banker_directors",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2d"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "conflicts of interest: IB directors concurrently affiliated with the deal's advisory bank benefit themselves rather than the acquirer (Guner, Malmendier, and Tate 2008)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_banker_directors",
+      "relation": "increases",
+      "to": "target_valuation_expertise",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_valuation_expertise",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_valuation_expertise"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_deal_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "target_valuation_expertise",
+     "moderated_from": "investment_banker_directors",
+     "moderated_to": "takeover_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_banker_directors",
+      "relation": "decreases",
+      "to": "reliance_on_outside_advisers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reliance_on_outside_advisers",
+      "relation": "increases",
+      "to": "advisory_fees",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reliance_on_outside_advisers"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_deal_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "reliance_on_outside_advisers",
+     "moderated_from": "investment_banker_directors",
+     "moderated_to": "advisory_fees",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4a"
+    },
+    {
+     "construct": "current_investment_banking_experience",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "reliance_on_outside_advisers",
+     "moderated_from": "investment_banker_directors",
+     "moderated_to": "advisory_fees",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_banker_directors",
+      "relation": "increases",
+      "to": "target_synergy_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_synergy_potential",
+      "relation": "increases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_synergy_potential"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (US public firms; acquisitions of US targets by US public acquirers)",
+  "time_period": "1998-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "41,393 firm-year observations (aggregate sample); acquisition sample = 2,465 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx database",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Company (SDC) Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RiskMetrics",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3: Univariate results of acquisition propensity",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "8,925 firm-years with IB director vs 29,255 without, 1999-2008",
+    "dv": {
+     "name": "acquisition propensity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of IB directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel A Model (1): Probit of acquisition propensity, full sample",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "38,180 firm-year observations",
+    "dv": {
+     "name": "acquisition dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log (Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-Book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior Acquisition Experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Avg. Abnormal Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Sales Growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Noncash Working Capital",
+      "source": "Compustat"
+     },
+     {
+      "name": "Price-to-Earnings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry (Fama and French 48) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Calendar year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A Model (2): Probit of acquisition propensity with CEO and board controls",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "5,751 firm-years subsample with ExecuComp and RiskMetrics data",
+    "dv": {
+     "name": "acquisition dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm characteristics (size, market-to-book, leverage, prior acquisition, cash, sales growth, noncash working capital, PE, avg abnormal return)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "CEO Ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO Age",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO Gender",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "Board Size",
+      "source": "RiskMetrics"
+     },
+     {
+      "name": "Board Independence",
+      "source": "RiskMetrics"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A Models (3)-(4): Recursive bivariate probit (IV) for acquisition propensity",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Instrument 1 = firms' geographic location (Location dummy: firm in CA, IL, MA, NJ, or NY, close to financial centers); Instrument 2 = Post-SOX dummy (SOX 2002 financial-expert disclosure requirement)",
+    "sample": "37,750 firm-years (full) / 5,740 (reduced subsample)",
+    "dv": {
+     "name": "acquisition dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "IB Director dummy, instrumented via recursive bivariate probit estimated simultaneously by maximum likelihood",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm characteristics (size, market-to-book, leverage, prior acquisition, cash, avg abnormal return, sales growth, noncash working capital, PE)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "board size and recent securities offerings (in IB-director selection equation)",
+      "source": "BoardEx/SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A Models (5)-(6): Two-stage least squares (2SLS, IV) for acquisition propensity",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Location dummy (proximity to financial centers) and Post-SOX dummy (SOX 2002 financial-expert requirement)",
+    "sample": "37,750 firm-years (full) / 5,740 (reduced subsample)",
+    "dv": {
+     "name": "acquisition dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "IB Director treated as endogenous continuous regressor, instrumented in 2SLS",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm characteristics (size, market-to-book, leverage, prior acquisition, cash, avg abnormal return, sales growth, noncash working capital, PE)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B Models (7)-(12): Subsample robustness (exclude short-tenure and prior-experience IB directors)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "Location and Post-SOX instruments (in bivariate probit / 2SLS models)",
+    "sample": "Subsample excluding IB directors with <=3 years tenure (32,160/31,730) and subsample excluding IB directors with prior IB experience before joining board (28,372/27,942)",
+    "dv": {
+     "name": "acquisition dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "IB Director dummy re-estimated by probit, bivariate probit, and 2SLS on reduced samples",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm characteristic variables from baseline regressions (suppressed for brevity)",
+      "source": "Compustat/CRSP/SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B: Difference-in-differences of acquisition propensity around SOX (logistic, firm fixed effects)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "Sarbanes-Oxley Act of 2002 (SOX) financial-expert mandate forcing firms to appoint financial experts (IB directors) to boards in 2003",
+    "sample": "192 firms with no IB directors during 1999-2002 that added an IB director in 2003; reduced to 65 firms (592 observations) after requiring at least one acquisition for firm FE",
+    "dv": {
+     "name": "acquisition dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log (Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-Book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition Dummy (prior)",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash Holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Avg. Abnormal Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Sales Growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Noncash Working Capital",
+      "source": "Compustat"
+     },
+     {
+      "name": "Price-to-Earnings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year dummy",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Models (1)-(2): OLS of acquirer three-day CAR, full sample",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "2,465 completed US M&A deals, 1999-2008",
+    "dv": {
+     "name": "acquirer three-day cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer log (Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer board size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Acquirer board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Acquirer prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative transaction value",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Related deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender-offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Private target",
+      "source": "SDC"
+     },
+     {
+      "name": "Public target",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry (Fama and French 48) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Models (3)-(4): Heckman selection correction for acquirer CAR",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "First-stage probit of acquisition likelihood (Table 4 Model 1); Inverse Mills ratio added in second stage",
+    "sample": "2,396 deals",
+    "dv": {
+     "name": "acquirer three-day cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "IB Director dummy",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Inverse Mills ratio (from first-stage acquisition-likelihood probit)",
+      "source": ""
+     },
+     {
+      "name": "acquirer firm and deal characteristics (as in Models 1-2)",
+      "source": "Compustat/BoardEx/SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Models (5)-(6): OLS of acquirer CAR with CEO/governance controls",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "792 deals with CEO/governance information",
+    "dv": {
+     "name": "acquirer three-day cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "IB Director dummy",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO age",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO gender",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "RiskMetrics"
+     },
+     {
+      "name": "acquirer firm and deal characteristics (as in baseline)",
+      "source": "Compustat/BoardEx/SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Models (7)-(8): OLS of acquirer CAR, large-acquirer subsample",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquirer three-day cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director",
+      "measure": "IB Director dummy",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer firm and deal characteristics (as in baseline)",
+      "source": "Compustat/BoardEx/SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Supplementary OLS of acquirer CAR with interaction (moderator) terms",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "2,465 deals (full); 771 deals in models with CEO characteristics",
+    "dv": {
+     "name": "acquirer three-day cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%) x Large Deal",
+      "measure": "interaction with indicator for deals with relative target size above the sample median",
+      "source": "BoardEx/SDC"
+     },
+     {
+      "name": "IB Director (%) x Current Experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%) x Large Network",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%) x Inexperienced CEO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ExecuComp"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/BoardEx"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "CEO characteristics (ownership, age, gender) in Models 5-6",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9: Acquirer long-run buy-and-hold abnormal returns (BHARs) by subsample",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "2,465 deals partitioned by deal size and method of payment",
+    "dv": {
+     "name": "acquirer buy-and-hold abnormal returns (BHARs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of IB directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal-characteristic subsample partitions (all, large deal, small deal, cash, stock, mixed)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 10 Models (1)-(3): OLS of takeover premium",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "843 deals with US public targets",
+    "dv": {
+     "name": "takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%) x Large Deal",
+      "measure": "interaction with large-deal dummy (relative target size above sample median)",
+      "source": "BoardEx/SDC"
+     },
+     {
+      "name": "IB Director (%) x Current Experience",
+      "measure": "interaction with dummy for IB director holding concurrent position at an investment bank",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer log (Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer board size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Acquirer board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Target market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative transaction value",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Related deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10 Models (4)-(6): OLS of acquirer advisory fees",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "log advisory fees",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "IB Director (%)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "IB Director (%) x Large Deal",
+      "measure": "interaction with large-deal dummy",
+      "source": "BoardEx/SDC"
+     },
+     {
+      "name": "IB Director (%) x Current Experience",
+      "measure": "interaction with concurrent-affiliation dummy",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer log (Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer board size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Acquirer board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Prior acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative transaction value",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Related deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Private target",
+      "source": "SDC"
+     },
+     {
+      "name": "Public target",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 11: Changes in post-acquisition operating performance by subsample",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Merging firms with US public targets across event windows (-1,+1) to (-1,+5)",
+    "dv": {
+     "name": "change in operating performance",
+     "measure": "raw operating performance calculated as earnings before interest, tax, depreciation and amortization (EBITDA) scaled by sales, and benchmark-adjusted operating performance (difference between sample firm and median of matched firms with same two-digit SIC code and operating performance within 90%-110% of the sample firm), measured as change from pre- to post-acquisition",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of IB directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "industry-performance benchmark matching (two-digit SIC, 90%-110% pre-event operating performance, Barber and Lyon 1996)",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "ib directors",
+    "securities offerings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ib directors",
+    "relation": "affects",
+    "to": "value in other transactions such as securities offerings"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "ib directors",
+    "monitoring and advisory roles of the boards"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ib directors",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "directors' networks"
+   ],
+   "mechanism_named": "two-sided effect of directors' networks",
+   "proposed_edge": {
+    "from": "directors' networks",
+    "relation": "affects",
+    "to": "two-sided effect"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

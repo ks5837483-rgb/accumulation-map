@@ -1,0 +1,454 @@
+{
+ "paper_id": "10.1017_s0022109010000025",
+ "title": "Is There Shareholder Expropriation in the United States? An Analysis of Publicly Traded Subsidiaries",
+ "journal": "JFQA",
+ "year": 2010,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "private benefits of control",
+  "tunneling",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "parent_minority_ownership_stake",
+      "relation": "increases",
+      "to": "operational_transactions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "operational_transactions",
+      "relation": "decreases",
+      "to": "subsidiary_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "operational_transactions"
+   ],
+   "moderators": [
+    {
+     "construct": "executive_overlap",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "operational_transactions",
+     "moderated_from": "parent_minority_ownership_stake",
+     "moderated_to": "subsidiary_operating_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market timing hypothesis (parents divest ahead of anticipated underperformance rather than expropriate via operational transactions)",
+    "[withheld: wording matches the source]",
+    "reduced monitoring effort by the parent as its stake falls (not expropriation)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "parent_complete_divestiture",
+      "relation": "increases",
+      "to": "market_timing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_timing",
+      "relation": "decreases",
+      "to": "subsidiary_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_timing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "parent_minority_ownership_stake",
+      "relation": "increases",
+      "to": "expropriation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expropriation_risk",
+      "relation": "decreases",
+      "to": "subsidiary_valuation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expropriation_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "parent_ownership_change_majority_to_minority",
+      "relation": "increases",
+      "to": "expropriation_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expropriation_incentive",
+      "relation": "decreases",
+      "to": "subsidiary_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expropriation_incentive"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "negative market reaction driven by the seasoned equity offering used to execute the change, not expropriation"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. subsidiaries created via equity carveouts; peers matched within Fama-French 48-industry portfolios)",
+  "country_region": "United States",
+  "time_period": "1985-2000",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "264 equity carveouts from 232 parent firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers & Acquisitions (magazine list of carveouts)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "subsidiary proxy statements (hand-collected ownership)",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "Lexis-Nexis news searches",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "264 equity carveouts, Years 0-4 following carveout; t-test of means and rank test of medians for parent vs. subsidiary ROA",
+    "dv": {
+     "name": "operating ROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "parent ownership category",
+      "measure": "3 groups by fraction of shares owned by parent at end of year: Fully Divested (<5%), Ownership Below 50% (5%-50%), Ownership Above 50% (>50%)",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Peer-Adjusted Operating ROA of Subsidiaries by Ownership Level",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "publicly traded subsidiaries, Years 1-4; t-test that mean equals 0 and rank test that median equals 0",
+    "dv": {
+     "name": "peer-adjusted operating ROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "parent ownership category",
+      "measure": "Fully Divested (<5%), Ownership Below 50% (5%-50%), Ownership Above 50% (>50%)",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N = 230 (Yr1), 200 (Yr2), 179 (Yr3), 161 (Yr4)",
+    "dv": {
+     "name": "subsidiary peer-adjusted operating ROA (Years 1-4)",
+     "measure": "peer-adjusted operating ROA (operating cash flow, Compustat item 13 / total assets, item 6; matched to Fama-French 48-industry Year-0 peers), winsorized 1st/99th",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "OWN49",
+      "measure": "[withheld: wording matches the source]",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     },
+     {
+      "name": "OWN50",
+      "measure": "[withheld: wording matches the source]",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (log of subsidiary assets / book value of total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SAME INDUSTRY (dummy = 1 if parent and subsidiary in same Fama-French 48-industry portfolio)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B - Cross-Sectional Regressions with Executive Overlap",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N = 229 (Yr1), 200 (Yr2), 179 (Yr3), 161 (Yr4)",
+    "dv": {
+     "name": "subsidiary peer-adjusted operating ROA (Years 1-4)",
+     "measure": "peer-adjusted operating ROA (Compustat item 13 / item 6; Fama-French 48-industry peer-adjusted), winsorized 1st/99th",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "EXECUTIVE OVERLAP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     },
+     {
+      "name": "EXECUTIVE OVERLAP x OWN49",
+      "measure": "interaction of executive-overlap dummy with the minority-ownership (5%-50%) dummy",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     },
+     {
+      "name": "EXECUTIVE OVERLAP x OWN50",
+      "measure": "interaction of executive-overlap dummy with the majority-ownership (>50%) dummy",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     },
+     {
+      "name": "OWN49",
+      "measure": "dummy = 1 if parent retains between 5% and 50% ownership",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     },
+     {
+      "name": "OWN50",
+      "measure": "dummy = 1 if parent retains more than 50% ownership",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (log of subsidiary assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SAME INDUSTRY",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Figure 2 / untabulated continuous-ownership regressions (nonlinear, lowess)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "subsidiary peer-adjusted operating ROA",
+     "measure": "peer-adjusted operating ROA (Compustat item 13 / item 6, Fama-French 48-industry peer-adjusted); locally smoothed via Cleveland (1979) lowess (bandwidth 0.3) in Stata 10",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "parent ownership (continuous) and ownership squared",
+      "measure": "[withheld: wording matches the source]",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "subset with ownership-altering events: majority-to-minority (25 firms), minority-to-divestiture (34), majority-to-divestiture (72)",
+    "dv": {
+     "name": "change in subsidiary peer-adjusted operating ROA",
+     "measure": "difference in peer-adjusted operating ROA (Compustat item 13 / item 6) from before to after the ownership change; winsorized 1st/99th",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "post-ownership-change indicator",
+      "measure": "[withheld: wording matches the source]",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel A - Event study: subsidiary CARs around announcements of parent ownership change",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "cumulative abnormal returns (CARs)",
+     "measure": "market-adjusted returns for subsidiaries over event windows day -1 to +1 and day +2 to +30 around ownership-change announcements",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "ownership-change type (Majority-to-Minority vs. All Other Changes)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Lexis-Nexis news searches"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel B - Regression of subsidiary CAR(-1,+1) on ownership-change and parent CAR",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsidiary announcement CARs, (-1, 1) window",
+    "dv": {
+     "name": "subsidiary CAR for (-1, 1) window",
+     "measure": "subsidiary market-adjusted cumulative abnormal return over the day (-1, 1) window",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Majority to Minority Change dummy",
+      "measure": "dummy variable for a Majority to Minority ownership change",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     },
+     {
+      "name": "Majority to Minority x parent CAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "SEO (dummy = 1 for Seasoned Equity Offering)",
+      "source": "Lexis-Nexis news searches"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tobin's q comparison of the 3 subsidiary types (parent ownership vs. subsidiary valuation)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "3 types of subsidiaries",
+    "dv": {
+     "name": "subsidiary Tobin's q",
+     "measure": "",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "parent ownership stake",
+      "measure": "parent's ownership stake / 3 ownership categories (fully divested, unconsolidated, consolidated)",
+      "source": "subsidiary proxy statements (hand-collected ownership)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "all other changes group",
+    "majority-to-minority ownership changes",
+    "premiums paid to subsidiary shareholders",
+    "equity offerings",
+    "announcement returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

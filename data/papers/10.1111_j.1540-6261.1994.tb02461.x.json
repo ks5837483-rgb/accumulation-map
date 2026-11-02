@@ -1,0 +1,465 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1994.tb02461.x",
+ "title": "The Role of ESOPs in Takeover Contests",
+ "journal": "JF",
+ "year": 1994,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "signaling theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "employee_stock_ownership_plan",
+      "relation": "increases",
+      "to": "marginal_shareholder_reservation_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "marginal_shareholder_reservation_price",
+      "relation": "decreases",
+      "to": "probability_of_takeover",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "marginal_shareholder_reservation_price"
+   ],
+   "moderators": [
+    {
+     "construct": "freeze_out_takeover_law",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "marginal_shareholder_reservation_price",
+     "moderated_from": "employee_stock_ownership_plan",
+     "moderated_to": "probability_of_takeover",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "other defensive tactics (poison pills, legal actions) drive the lower takeover rate"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "employee_stock_ownership_plan",
+      "relation": "increases",
+      "to": "likelihood_firm_becomes_takeover_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_firm_becomes_takeover_target",
+      "relation": "increases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_firm_becomes_takeover_target"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_and_employee_control",
+      "relation": "decreases",
+      "to": "probability_of_takeover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_takeover",
+      "relation": "decreases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_takeover"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "employee_stock_ownership_plan",
+      "relation": "increases",
+      "to": "marginal_shareholder_reservation_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "marginal_shareholder_reservation_price",
+      "relation": "increases",
+      "to": "target_contest_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "marginal_shareholder_reservation_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms with CRSP return data announcing ESOPs under takeover pressure)",
+  "country_region": "United States",
+  "time_period": "1980-1990",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "278 ESOP announcements (main stock-price analysis); 42 ESOP targets and 120 non-ESOP targets in the control-contest outcome analysis"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "database of unnegotiated cash tender offers (updated version of the Comment and Jarrell (1987) sample; Robert Comment's merger and tender-offer database)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dave Mayers and Saeyoung Chang takeover-related ESOP sample",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "mailed questionnaire (86 responding firms)",
+    "category": "survey",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I: Average Two-Day Prediction Errors (APE[0,1]) for Isolated ESOP Announcements",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "isolated ESOP announcements (occurring without other news about the firm), 1980-1990",
+    "dv": {
+     "name": "announcement-period abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "takeover pressure / legal-regime classification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section B.3: Cross-sectional (weighted least squares) regression of two-day prediction errors (N=198)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "two-day announcement prediction error PE[0,1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "takeover activity before announcement (TOACT)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Delaware takeover law (DELAW)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "DEFACT (ESOP announced simultaneously with other defensive actions)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table II: Takeover frequency (change-in-control incidence) for ESOP vs. Non-ESOP targets",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "42 ESOP targets (with an explicit takeover bid) and 120 non-ESOP targets from unnegotiated cash tender offers, 1983-1989 (non-ESOP) within 1980-1990",
+    "dv": {
+     "name": "change in control (takeover incidence)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of an ESOP",
+      "measure": "target has an ESOP (42 ESOP targets receiving an explicit takeover bid) versus no ESOP (120 non-ESOP targets)",
+      "source": "Dave Mayers and Saeyoung Chang takeover-related ESOP sample"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II: Cumulative prediction errors (contest returns) for ESOP vs. Non-ESOP targets (univariate t-test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "acquired (successful-takeover) ESOP and non-ESOP targets; Petro-Lewis dropped",
+    "dv": {
+     "name": "cumulative prediction error over the control contest",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of an ESOP",
+      "measure": "acquired ESOP targets versus acquired non-ESOP targets",
+      "source": "Dave Mayers and Saeyoung Chang takeover-related ESOP sample"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "probability of a control change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "post-ESOP level of employee ownership (EMPOWN + AESOPOWN)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "managerial ownership (MGROWN)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "cumulative prediction error over the control contest (contest return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "square-root of post-ESOP employee ownership (SQRT(EMPOWN + AESOPOWN))",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "square-root of managerial ownership (SQRT(MGROWN))",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "POISON_PILL (firm has a poison pill)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "LEGAL_ACTION (target takes legal action against the bidder)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "MULTIPLE_BIDDERS (more than one bidder in the contest)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "multiple bidders",
+    "contest returns",
+    "friendly and unfriendly offers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "friendly and unfriendly offers",
+    "on_path": [
+     "multiple bidders",
+     "contest returns"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "esop firms that are acquired",
+    "deterrent effect",
+    "contest returns"
+   ],
+   "mechanism_named": "deterrent effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "state takeover laws"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

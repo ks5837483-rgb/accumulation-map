@@ -1,0 +1,412 @@
+{
+ "paper_id": "10.1287_mnsc.2022.4385",
+ "title": "A Hard Look at SPAC Projections",
+ "journal": "MNSC",
+ "year": 2022,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "voluntary disclosure theory",
+  "management forecast literature",
+  "reputational capital theory",
+  "certification theory",
+  "litigation cost hypothesis of disclosure"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "forecast_horizon",
+      "relation": "increases",
+      "to": "difficulty_detecting_misrepresentation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "difficulty_detecting_misrepresentation",
+      "relation": "decreases",
+      "to": "probability_of_meeting_forecast",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "difficulty_detecting_misrepresentation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "serial_sponsor",
+      "relation": "increases",
+      "to": "reputational_capital_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reputational_capital_incentive",
+      "relation": "increases",
+      "to": "probability_of_meeting_forecast",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reputational_capital_incentive"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_completion",
+      "relation": "increases",
+      "to": "litigation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "litigation_risk",
+      "relation": "decreases",
+      "to": "projection_provision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "merger_completion",
+      "relation": "decreases",
+      "to": "merger_marketing_incentive",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "merger_marketing_incentive",
+      "relation": "increases",
+      "to": "projection_provision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "litigation_risk",
+    "merger_marketing_incentive"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the projection pattern reflects general firm attributes rather than the SPAC merger-marketing setting"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (SPAC mergers / firms going public via a special purpose acquisition company merger, spanning sectors)",
+  "country_region": "United States",
+  "time_period": "2000-2021",
+  "sample_description": "SPACs that completed an IPO and announced a merger target during the de-SPAC process, compiled from spactrack.net and spacalpha.com plus S-1 filings from the SEC's EDGAR database (blank check / special purpose acquisition company, SIC 6770); removing firms still seeking a merger target, liquidated, foreign-filing, or that had not publicly filed their road show presentation",
+  "sample_size": "389 SPACs (main sample; 212 with no missing data)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "spactrack.net and spacalpha.com",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Compustat (universe of the United States since 2004)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva (company press releases, hand collected for postmerger guidance)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "389 SPACs that announced a merger target (310 with projections)",
+    "dv": {
+     "name": "projection metrics and time horizon",
+     "measure": "whether transactions include projections, which financial metrics they project (revenue, EBITDA, gross profit, capex, free cash flow, net income, other), and average projection length in years",
+     "source": "Hand-collected from SEC filings and road show presentations"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Revenue Projection Attributes: Time Horizon (by SPAC merger announcement year)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "389 SPACs",
+    "dv": {
+     "name": "revenue projection horizon",
+     "measure": "frequency and horizon (0-6+ years) of revenue projections by year of SPAC merger announcement",
+     "source": "Hand-collected from SEC filings and road show presentations"
+    },
+    "key_ivs": [
+     {
+      "name": "merger announcement year",
+      "measure": "year of SPAC merger announcement",
+      "source": "Hand-collected from SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panels A-B - Forecast accuracy by forecast horizon",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "revenue forecast accuracy",
+     "measure": "proportion of firms that met their forecast; mean and median scaled forecast errors; and cumulative sales realizations relative to cumulative projections",
+     "source": "Hand-collected projections vs actual postmerger revenue (Compustat / firm filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "forecast horizon",
+      "measure": "forecast horizon (one-, two-, three-, four-year forecasts)",
+      "source": "Hand-collected from SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panels C-D - Forecast accuracy by sponsor type (serial vs non-serial)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "subset of SPACs with observable revenue outcomes",
+    "dv": {
+     "name": "revenue forecast accuracy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected projections vs actual postmerger revenue"
+    },
+    "key_ivs": [
+     {
+      "name": "serial SPAC sponsor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected from SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Comparison of SPAC and benchmark firm characteristics",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "SPACs vs U.S. IPO firms and 1:1 propensity-score matched public firms",
+    "dv": {
+     "name": "firm characteristics",
+     "measure": "average assets, revenues, ROA, profitable, life cycle, tech, and leverage",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC vs benchmark group (IPO firms and matched sample)",
+      "measure": "indicator for SPAC target vs benchmark firms (all U.S. industrial firms completing an original IPO during the sample period; and a 1:1 propensity-score matched sample)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Revenues",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Profitable",
+      "source": "Compustat"
+     },
+     {
+      "name": "Life cycle",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tech",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "two-digit SIC code",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 / Figures 1-2 - SPAC projected revenue growth vs benchmark actual revenue growth",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "revenue growth rate",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected SPAC forecasted revenue; actual revenue from Compustat for benchmark firms"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC projection vs benchmark actual (IPO and matched samples)",
+      "measure": "difference between average/median SPAC projected revenue growth and actual revenue growth of IPO firms and matched public firms over the forecast horizon",
+      "source": "Hand-collected projections; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Revenues",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Profitable",
+      "source": "Compustat"
+     },
+     {
+      "name": "Life cycle",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tech",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "two-digit SIC code",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Projection persistence: de-SPAC process vs following the merger",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "SPACs that completed a merger before 2021 (allowing at least six months to provide guidance)",
+    "dv": {
+     "name": "projection provision and horizon",
+     "measure": "proportion of firms that provide some type of financial projection and average projection horizon, during the de-SPAC process versus following the merger",
+     "source": "Hand-collected from SEC filings (de-SPAC) and company press releases in Factiva (postmerger)"
+    },
+    "key_ivs": [
+     {
+      "name": "timing (de-SPAC process vs postmerger)",
+      "measure": "indicator for during de-SPAC process versus following merger completion",
+      "source": "Hand-collected"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 9 - SPAC vs benchmark postmerger guidance",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "SPACs completing a merger before 2021 vs stratified random subsample of IPO firms and matched public firms",
+    "dv": {
+     "name": "postmerger guidance provision and horizon",
+     "measure": "proportion of firms providing postmerger projections and average guidance horizon (years)",
+     "source": "Hand-collected from company press releases in Factiva; Compustat for benchmark firm identification"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC vs benchmark group",
+      "measure": "indicator for SPAC firms vs stratified random subsample of IPO firms (same number of firms per year) and matched sample of public firms",
+      "source": "Compustat; hand-collected guidance"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "spac disclosure incentives",
+    "forecast optimism",
+    "investor response",
+    "forecast bias"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "spac disclosure incentives",
+    "relation": "affects",
+    "to": "forecast optimism"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

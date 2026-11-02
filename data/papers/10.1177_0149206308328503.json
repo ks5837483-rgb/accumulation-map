@@ -1,0 +1,661 @@
+{
+ "paper_id": "10.1177_0149206308328503",
+ "title": "Contingent Earnouts in Acquisitions of Privately Held Targets",
+ "journal": "JOM",
+ "year": 2009,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "transaction cost economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "new_venture",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "contingent_earnout_usage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "knowledge_distance",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "contingent_earnout_usage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "minority_equity_partnership",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "contingent_earnout_usage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the substitution result is an artifact of trivial top-up earnout payments rather than genuine substitution between earnouts and minority equity partnerships"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A across sectors; ~50% services, 26.5% manufacturing, 9.4% finance, insurance, and real estate)",
+  "country_region": "",
+  "time_period": "1993-2000",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,174 deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Security Data Corporation (SDC) database, M&A module",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Business & Company Resource Center (Thomson Corporation)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis Academic Database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Occupation Employment Survey, Bureau of Labor Statistics",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Mergerstat (representativeness test)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Full Sample (Models 1-2): Binomial logit on earnout use",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Full sample N = 1,174 acquisitions of privately held targets (all-cash or all-stock deals, 1993-2000)",
+    "dv": {
+     "name": "earnout (contractual choice)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Security Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "new venture",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business & Company Resource Center; Lexis-Nexis Academic Database"
+     },
+     {
+      "name": "knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Occupation Employment Survey, Bureau of Labor Statistics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquisition experience",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target VC backed",
+      "source": ""
+     },
+     {
+      "name": "target industry effects",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "year effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Earnouts and Cash Deals (Models 3-4): Binomial logit",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Earnouts and Cash Deals subsample, n = 456",
+    "dv": {
+     "name": "earnout (contractual choice)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Security Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "new venture",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business & Company Resource Center; Lexis-Nexis Academic Database"
+     },
+     {
+      "name": "knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Occupation Employment Survey, Bureau of Labor Statistics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquisition experience",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target VC backed",
+      "source": ""
+     },
+     {
+      "name": "target industry effects",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "year effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Earnouts and Stock Deals (Models 5-6): Binomial logit",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Earnouts and Stock Deals subsample, n = 778",
+    "dv": {
+     "name": "earnout (contractual choice)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Security Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "new venture",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business & Company Resource Center; Lexis-Nexis Academic Database"
+     },
+     {
+      "name": "knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Occupation Employment Survey, Bureau of Labor Statistics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquisition experience",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target VC backed",
+      "source": ""
+     },
+     {
+      "name": "target industry effects",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "year effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Full sample of acquisitions",
+    "dv": {
+     "name": "earnout (contractual choice)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Security Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "new venture (alternate cutoffs / continuous log age)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business & Company Resource Center; Lexis-Nexis Academic Database"
+     },
+     {
+      "name": "knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Occupation Employment Survey, Bureau of Labor Statistics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquisition experience",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target VC backed",
+      "source": ""
+     },
+     {
+      "name": "target industry effects",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "year effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Two-Limit Tobit Results (relative importance of earnout)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "proportion of deal value attributed to the earnout",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "new venture",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business & Company Resource Center; Lexis-Nexis Academic Database"
+     },
+     {
+      "name": "knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Occupation Employment Survey, Bureau of Labor Statistics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquisition experience",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target VC backed",
+      "source": ""
+     },
+     {
+      "name": "target industry effects",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "year effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Bivariate Probit Models (earnout and minority equity partnership estimated simultaneously)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Full sample N = 1,174",
+    "dv": {
+     "name": "earnout and minority equity partnership (simultaneous, bivariate probit)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Security Data Corporation (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "new venture",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business & Company Resource Center; Lexis-Nexis Academic Database"
+     },
+     {
+      "name": "knowledge distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Occupation Employment Survey, Bureau of Labor Statistics"
+     },
+     {
+      "name": "correlation of disturbances (rho) between earnout and minority equity partnership equations",
+      "measure": "the parameter rho testing whether the two latent variables are related negatively (substitutes), positively (complements), or not at all (independent decisions)",
+      "source": "Security Data Corporation (SDC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquisition experience",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "acquirer leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target VC backed",
+      "source": ""
+     },
+     {
+      "name": "target industry effects",
+      "source": "Security Data Corporation (SDC) database"
+     },
+     {
+      "name": "year effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "secondary data for m&a deal structures",
+    "primary data on earnouts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "earnout provisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "decision-making processes",
+    "sell-side risk preferences and incentives"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "sell-side risk preferences and incentives",
+    "relation": "affects",
+    "to": "earnouts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "agency costs"
+   ],
+   "mechanism_named": "agency theory",
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "agency costs"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "incentives and monitoring",
+    "negotiation and execution of earnouts"
+   ],
+   "mechanism_named": "agency theory",
+   "proposed_edge": {
+    "from": "incentives and monitoring",
+    "relation": "affects",
+    "to": "the negotiation and execution of earnouts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ownership by target firm managers",
+    "desire to adopt earnouts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ownership by target firm managers",
+    "relation": "affects",
+    "to": "desire to adopt earnouts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "target firm ownership structure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "target firm ownership structure",
+    "on_path": [
+     "information asymmetry",
+     "earnout"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "negotiation of earnout contracts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "negotiation of earnout contracts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "contractual and ownership designs",
+    "management and performance of acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "contractual and ownership designs",
+    "relation": "affects",
+    "to": "management and performance of acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "overpayment"
+   ],
+   "mechanism_named": "adverse selection",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "information asymmetry",
+    "overpayment risk"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "information asymmetry",
+    "relation": "affects",
+    "to": "overpayment risk"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "design and functioning of contracts",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "remedies",
+    "asymmetric information"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

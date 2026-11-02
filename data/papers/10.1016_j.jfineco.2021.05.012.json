@@ -1,0 +1,372 @@
+{
+ "paper_id": "10.1016_j.jfineco.2021.05.012",
+ "title": "M&amp;A rumors about unlisted firms",
+ "journal": "JFE",
+ "year": 2021,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "market microstructure",
+  "takeover auction theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_rumor",
+      "relation": "increases",
+      "to": "deal_break_up_costs",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_break_up_costs",
+      "relation": "decreases",
+      "to": "deal_consummation",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_break_up_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "unobserved heterogeneity between leaked and non-leaked deals (selection bias)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_rumor",
+      "relation": "decreases",
+      "to": "confidentiality",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "confidentiality",
+      "relation": "decreases",
+      "to": "deal_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "confidentiality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "unobserved heterogeneity between leaked and non-leaked deals (selection bias)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "toehold",
+      "relation": "increases",
+      "to": "toehold_induced_rejection_costs",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "toehold_induced_rejection_costs",
+      "relation": "decreases",
+      "to": "deal_consummation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "toehold_induced_rejection_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_value",
+      "relation": "increases",
+      "to": "deal_value_meaningfulness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_value_meaningfulness",
+      "relation": "increases",
+      "to": "deal_value_observability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_value_meaningfulness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (unlisted-firm M&A transactions spanning 18 industry sectors)",
+  "country_region": "cross-country (international; deals span multiple countries)",
+  "time_period": "1997 (sample begins)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "68,044 transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Worldscope",
+    "category": "worldscope",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 7, Specification (1) - determinants of M&A transaction rumors (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "Leak-IV instrument (historic emergence of transaction rumors in target's country and industry over the 12 preceding quarters)",
+    "sample": "31,112 observations",
+    "dv": {
+     "name": "Rumor (Leak)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BvD Zephyr"
+    },
+    "key_ivs": [
+     {
+      "name": "Leak-IV (historic rumor intensity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BvD Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Assets (target total assets prior to transaction)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Age (target company age)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Toehold (acquirer initial ownership stake in target)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Same industry (horizontal transaction)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Local deal (acquirer and target from same country)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Acquirer type (strategic / financial / individual)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "HHI (target industry concentration)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "M&A market",
+      "source": "Worldscope"
+     },
+     {
+      "name": "Buy-out",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Industry, year, and country fixed effects",
+      "source": "BvD Zephyr"
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Specifications (2)-(5) - determinants of deal closing (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "68,044 observations (Models 2 and 4); 31,363 observations (Models 3 and 5)",
+    "dv": {
+     "name": "Closing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BvD Zephyr"
+    },
+    "key_ivs": [
+     {
+      "name": "Leak (transaction rumor)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BvD Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HHI (target industry concentration)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "M&A market",
+      "source": "Worldscope"
+     },
+     {
+      "name": "Industry, year, and country fixed effects",
+      "source": "BvD Zephyr"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - naive (auxiliary) joint estimation with price observability assumed exogenous (zeta_2 = 0)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "28,869 observations; 19,790 closed deals; 6,007 closed deals with prices",
+    "dv": {
+     "name": "Deal value multiple (Ln Price)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BvD Zephyr"
+    },
+    "key_ivs": [
+     {
+      "name": "Leak (transaction rumor)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BvD Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HHI (target industry concentration)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "M&A market",
+      "source": "Worldscope"
+     },
+     {
+      "name": "Assets (target total assets, for price availability equation)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Country, industry, and time fixed effects",
+      "source": "BvD Zephyr"
+     }
+    ]
+   },
+   {
+    "label": "Table 9 - indirect inference (II) estimation of full joint model with endogenous price observability",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "Leak-IV instrument (historic rumor intensity); indirect inference with S=10 simulated pseudo-data samples per parameter vector",
+    "sample": "28,869 observations; 19,790 closed deals; 6,007 closed deals with prices",
+    "dv": {
+     "name": "Deal value multiple (Ln Price)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BvD Zephyr"
+    },
+    "key_ivs": [
+     {
+      "name": "Leak (transaction rumor)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BvD Zephyr"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HHI (target industry concentration)",
+      "source": "Worldscope"
+     },
+     {
+      "name": "M&A market",
+      "source": "Worldscope"
+     },
+     {
+      "name": "Assets (target total assets, price availability equation)",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "Country, industry, and time fixed effects",
+      "source": "BvD Zephyr"
+     },
+     {
+      "name": "rho (unobserved heterogeneity) and zeta_2 (endogenous deal-value observability)",
+      "source": "BvD Zephyr"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "m&a rumors",
+    "deal closing",
+    "value",
+    "public companies"
+   ],
+   "mechanism_named": "stock price manipulations",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,821 @@
+{
+ "paper_id": "10.2307_2393296",
+ "title": "How Much is That Company Worth?: Interorganizational Relationships, Uncertainty, and Acquisition Premiums",
+ "journal": "ASQ",
+ "year": 1994,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "neoinstitutional theory",
+  "organizational learning theory",
+  "social comparison theory",
+  "diffusion of innovations",
+  "social embeddedness"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "interlock_partner_premium",
+      "relation": "increases",
+      "to": "premium_model_transfer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "premium_model_transfer",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "premium_model_transfer"
+   ],
+   "moderators": [
+    {
+     "construct": "target_valuation_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "premium_model_transfer",
+     "moderated_from": "interlock_partner_premium",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "synergies and competition for the target as the explanations for acquisition premiums"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_valuation_uncertainty",
+      "relation": "increases",
+      "to": "information_search",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_search",
+      "relation": "increases",
+      "to": "number_of_investment_banks_used",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_valuation_uncertainty",
+      "relation": "increases",
+      "to": "legitimacy_seeking",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "legitimacy_seeking",
+      "relation": "increases",
+      "to": "number_of_investment_banks_used",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_search",
+    "legitimacy_seeking"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "own_investment_banker_premium",
+      "relation": "increases",
+      "to": "premium_model_transfer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "premium_model_transfer",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "premium_model_transfer"
+   ],
+   "moderators": [
+    {
+     "construct": "target_valuation_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "premium_model_transfer",
+     "moderated_from": "own_investment_banker_premium",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "investment-bank industry specialization plus client self-selection into premium-associated industries (rather than model spreading)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquisitions of U.S.-based, publicly held companies across 47 two-digit-SIC industries)",
+  "country_region": "United States (U.S.-based acquirors and targets)",
+  "time_period": "1986-1993 (January 1, 1986 to July 15, 1993)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "453 acquisitions (effective sample after limiting to targets with I/B/E/S data, from 788)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "proxy statements (acquiring-firm interlock/director data)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model 1 (base model, interlock subsample)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "target uncertainty",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "number of competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "business synergy (related/vertical vs conglomerate)",
+      "source": "SDC; U.S. Department of Commerce Survey of Current Business"
+     },
+     {
+      "name": "size relationship (acquiror sales / target sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size synergy (size relationship x business synergy)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "adjusted target ROE (target ROE minus target-industry average ROE)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target industry (47 two-digit SIC dummy variables)",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies (1986-1993)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2 (interlock partner premium)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "240 interlock-subsample transactions",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "interlock partner premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (interlocks) + SDC (premiums)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target uncertainty",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "number of competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "business synergy (related/vertical vs conglomerate)",
+      "source": "SDC; U.S. Department of Commerce Survey of Current Business"
+     },
+     {
+      "name": "size relationship (acquiror sales / target sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size synergy (size relationship x business synergy)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "adjusted target ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target industry (47 two-digit SIC dummy variables)",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies (1986-1993)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (interlock premium x uncertainty interaction)",
+    "hypotheses": [
+     "H1b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "240 interlock-subsample transactions",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "interlock partner premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements (interlocks) + SDC (premiums)"
+     },
+     {
+      "name": "target uncertainty (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "interlock premium x target uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements + SDC + I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "business synergy (related/vertical vs conglomerate)",
+      "source": "SDC; U.S. Department of Commerce Survey of Current Business"
+     },
+     {
+      "name": "size relationship (acquiror sales / target sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size synergy (size relationship x business synergy)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "adjusted target ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target industry (47 two-digit SIC dummy variables)",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies (1986-1993)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Poisson regression (number of investment bankers used)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "453 acquisitions with I/B/E/S uncertainty data",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "target uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of competitive bids",
+      "source": "SDC"
+     },
+     {
+      "name": "deal value (transaction size = price per target share x number of shares purchased)",
+      "source": "SDC"
+     },
+     {
+      "name": "number of target investment bankers",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 4 (base model, investment banker subsample)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "331 transactions by acquirers who used >=1 investment banking firm involved in multiple transactions",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "target uncertainty",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "number of competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "business synergy (related/vertical vs conglomerate)",
+      "source": "SDC; U.S. Department of Commerce Survey of Current Business"
+     },
+     {
+      "name": "size relationship (acquiror sales / target sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size synergy (size relationship x business synergy)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "adjusted target ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target industry (47 two-digit SIC dummy variables)",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies (1986-1993)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 5 (own & other investment banker premium)",
+    "hypotheses": [
+     "H3a",
+     "H3c"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "331 investment-banker-subsample transactions",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "own investment banker premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "other banker premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target uncertainty",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "number of competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "business synergy (related/vertical vs conglomerate)",
+      "source": "SDC; U.S. Department of Commerce Survey of Current Business"
+     },
+     {
+      "name": "size relationship (acquiror sales / target sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size synergy (size relationship x business synergy)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "adjusted target ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target industry (47 two-digit SIC dummy variables)",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies (1986-1993)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 6 (own banker premium x uncertainty interaction)",
+    "hypotheses": [
+     "H3b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "331 investment-banker-subsample transactions",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "own investment banker premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "own IBanker premium x target uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC + I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "other banker premium",
+      "source": "SDC"
+     },
+     {
+      "name": "target uncertainty",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "number of competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "business synergy (related/vertical vs conglomerate)",
+      "source": "SDC; U.S. Department of Commerce Survey of Current Business"
+     },
+     {
+      "name": "size relationship (acquiror sales / target sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size synergy (size relationship x business synergy)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "adjusted target ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target industry (47 two-digit SIC dummy variables)",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies (1986-1993)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 7 (combined interlock + banker premiums with interactions, robustness)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "183 transactions by acquirors both interlocked with other acquirers and using investment bankers involved in multiple transactions",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "interlock partner premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements + SDC"
+     },
+     {
+      "name": "own investment banker premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "interlock premium x target uncertainty and own IBanker premium x target uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements + SDC + I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "other banker premium",
+      "source": "SDC"
+     },
+     {
+      "name": "target uncertainty",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "number of competing bids",
+      "source": "SDC"
+     },
+     {
+      "name": "business synergy (related/vertical vs conglomerate)",
+      "source": "SDC; U.S. Department of Commerce Survey of Current Business"
+     },
+     {
+      "name": "size relationship (acquiror sales / target sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "size synergy (size relationship x business synergy)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "adjusted target ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target industry (47 two-digit SIC dummy variables)",
+      "source": "SDC"
+     },
+     {
+      "name": "year dummies (1986-1993)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Alternative-explanation robustness test for H3a (banker industry-specialization ruled out)",
+    "hypotheses": [
+     "H3a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "own investment banker premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control set as Table 3 premium models",
+      "source": "SDC; COMPUSTAT; I/B/E/S; U.S. Department of Commerce Survey of Current Business"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "investment banking firm",
+    "acquisition premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "uncertainty",
+    "interorganizational relationships"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "transaction uncertainty",
+    "interorganizational transfers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "uncertainty"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "sources of uncertainty",
+    "interorganizational transfers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "sources of uncertainty",
+    "relation": "affects",
+    "to": "interorganizational transfers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "transaction uncertainty",
+    "interorganizational relationships",
+    "interorganizational transfers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "director interlocks",
+    "investment banking firm relationships"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "flow of information and influence",
+    "interorganizational relationships"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "interlocks",
+    "relationships with professional firms",
+    "firm practices and structures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "interorganizational relationships",
+    "relation": "affects",
+    "to": "firm practices and structures"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "uncertainty",
+    "interorganizational relationships",
+    "transfers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "uncertainty",
+    "on_path": [
+     "interorganizational relationships",
+     "transfers"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "organizational practices and structures",
+    "interlock partners",
+    "professional firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "interorganizational relationships",
+    "relation": "affects",
+    "to": "organizational practices and structures"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "interorganizational relationships",
+    "organizations grow and change"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "interorganizational relationships",
+    "relation": "affects",
+    "to": "organizational growth and change"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

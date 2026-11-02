@@ -1,0 +1,784 @@
+{
+ "paper_id": "10.1016_j.jfineco.2021.09.006",
+ "title": "Peer selection and valuation in mergers and acquisitions",
+ "journal": "JFE",
+ "year": 2022,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "information economics",
+  "conflicts of interest"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_premium_negotiation_incentive",
+      "relation": "increases",
+      "to": "selection_of_high_valuation_multiple_peers",
+      "from_measured": false,
+      "to_measured": true
+     },
+     {
+      "from": "selection_of_high_valuation_multiple_peers",
+      "relation": "increases",
+      "to": "perceived_target_value",
+      "from_measured": true,
+      "to_measured": false
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_target_value"
+   ],
+   "moderators": [
+    {
+     "construct": "investment_bank_reputation",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "perceived_target_value",
+     "moderated_from": "advisor_premium_negotiation_incentive",
+     "moderated_to": "selection_of_high_valuation_multiple_peers",
+     "role": "atheoretical",
+     "is_boundary_condition": false,
+     "source_hypothesis": "8.2"
+    },
+    {
+     "construct": "finra_rule_5150",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "perceived_target_value",
+     "moderated_from": "advisor_premium_negotiation_incentive",
+     "moderated_to": "selection_of_high_valuation_multiple_peers",
+     "role": "atheoretical",
+     "is_boundary_condition": false,
+     "source_hypothesis": "8.3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "deal-completion incentive: banks rubber-stamp the offer by selecting low-valued peers to make the bidder's offer appear generous and facilitate deal completion (fee collection)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "chosen_peer_valuation_multiples",
+      "relation": "increases",
+      "to": "target_valuation_estimate",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_valuation_estimate",
+      "relation": "increases",
+      "to": "deal_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_valuation_estimate"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: the offer price is already known before peer firms are chosen, so premiums drive peer choice rather than peer choice driving premiums"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_peer_size",
+      "relation": "increases",
+      "to": "target_valuation_estimate",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_valuation_estimate",
+      "relation": "increases",
+      "to": "deal_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_valuation_estimate"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "buyout_deal",
+      "relation": "increases",
+      "to": "managerial_conflict_of_interest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_conflict_of_interest",
+      "relation": "decreases",
+      "to": "selection_of_high_valuation_multiple_peers",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_conflict_of_interest"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "product_similarity_between_peer_and_target",
+      "relation": "increases",
+      "to": "industry_relatedness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "industry_relatedness",
+      "relation": "increases",
+      "to": "peer_selection",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "industry_relatedness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "SIC-code mismatch implies peers are poorly/unrelatedly chosen, i.e. industry is unimportant to peer selection"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_uniqueness",
+      "relation": "decreases",
+      "to": "availability_of_comparable_firms",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "availability_of_comparable_firms",
+      "relation": "increases",
+      "to": "number_of_peers_selected",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "availability_of_comparable_firms"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A transactions across industries; publicly traded target firms)",
+  "country_region": "United States",
+  "time_period": "1995-2017",
+  "sample_description": "M&A deals with public target firms and deal status completed or withdrawn; hand-collected valuation (comparable companies) data from SEC EDGAR merger filings (DEFM 14A, S-4, SC 14D9) containing target advisors' fairness opinions; deals with deal value >= $1 million, acquirer seeking >= 50% of target, and at least one target financial advisor; SDC data merged with CRSP and Compustat",
+  "sample_size": "3,907 deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Securities Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR merger documents (SEC Form DEFM 14A, S-4, SC 14D9) - hand-collected fairness-opinion comparable companies analysis data",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Hoberg and Phillips (2010, 2016) Text-based Network Industry Classifications (TNIC) and product similarity scores",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Merger news articles and company SEC Form 10-K filings (peer business-profile information and buyout exit values)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Standard & Poor's (S&P) 500 index returns (buyout-return benchmark)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "peer industry affiliation and product similarity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected comparable companies from SEC EDGAR filings; Compustat (SIC); Hoberg-Phillips (product similarity)"
+    },
+    "key_ivs": [
+     {
+      "name": "industry classification match group (peer SIC = target SIC vs = target-or-bidder SIC vs neither); single- vs multi-segment firms",
+      "measure": "one- to four-digit SIC code match categories; average number of business segments for target and bidder; single-segment vs multi-segment group split",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Panel A full sample (312,103 peer-deal observations); Panel B subsample of public targets and public bidders (192,219 observations)",
+    "dv": {
+     "name": "comparable company selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from SEC EDGAR merger filings"
+    },
+    "key_ivs": [
+     {
+      "name": "Same Target SIC 2/3/4",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Same Target TNIC 2/3",
+      "measure": "indicator for same two-/three-digit TNIC (Hoberg-Phillips) industry classification as the target",
+      "source": "Hoberg-Phillips TNIC"
+     },
+     {
+      "name": "Product Similarity (Target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hoberg-Phillips"
+     },
+     {
+      "name": "Same Bidder SIC (Panel B)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Target/peer/bidder firm characteristics - median comparisons and tests of difference",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Panel A full sample; Panel B strategic deals (public targets and bidders)",
+    "dv": {
+     "name": "firm characteristics (pooled median levels by group)",
+     "measure": "pooled median Total Assets, Market Cap, Enterprise Value, M/B, Sale Growth, EBITDA Margin, EV/EBITDA, Asset Turnover; tests of difference in medians between selected peers and target / potential peers / acquirer",
+     "source": "Compustat and CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "firm group membership",
+      "measure": "actual (selected) peers vs target firms vs potential peers (all unselected firms with the same one-digit SIC as the target) vs acquirer firms",
+      "source": "hand-collected peers; Compustat/CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Panel A full sample (312,103 obs); Panel B public targets and public bidders (192,219 obs)",
+    "dv": {
+     "name": "comparable company selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from SEC EDGAR merger filings"
+    },
+    "key_ivs": [
+     {
+      "name": "|Diff (Market Cap)| positive / negative",
+      "measure": "absolute difference between potential peer and target market capitalization, estimated separately for positive vs negative differences, winsorized at 1st/99th percentiles",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "|Diff (Sale Growth)| positive / negative",
+      "measure": "signed absolute difference in sales growth between potential peer and target",
+      "source": "Compustat"
+     },
+     {
+      "name": "|Diff (Asset Turnover)| positive / negative",
+      "measure": "signed absolute difference in asset turnover between potential peer and target",
+      "source": "Compustat"
+     },
+     {
+      "name": "|Diff (EBITDA Margin)| positive / negative",
+      "measure": "signed absolute difference in EBITDA margin between potential peer and target",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product Similarity (Target)",
+      "measure": "Hoberg-Phillips product similarity score between potential peer and target",
+      "source": "Hoberg-Phillips"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "bidder-difference characteristics (Panel B: product similarity and signed |Diff| in Market Cap/Sale Growth/Asset Turnover/EBITDA Margin relative to bidder)",
+      "source": "Compustat/CRSP/Hoberg-Phillips"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Panel A full sample (312,103 obs; col 2 = 227,297); Panel B public targets and bidders (192,219; col 2 = 134,819)",
+    "dv": {
+     "name": "comparable company selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from SEC EDGAR merger filings"
+    },
+    "key_ivs": [
+     {
+      "name": "|Diff (M/B)| positive / negative",
+      "measure": "signed absolute difference in market-to-book (M/B) ratio between peer and target (and bidder in Panel B), winsorized at 1st/99th percentiles",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "|Diff (EV/EBITDA)| positive / negative",
+      "measure": "signed absolute difference in enterprise-value-to-EBITDA multiple between peer and target (and bidder)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Product Similarity (Target)",
+      "measure": "Hoberg-Phillips product similarity score between potential peer and target",
+      "source": "Hoberg-Phillips"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "firm-characteristic differences (|Diff| in Market Cap, Sale Growth, Asset Turnover, EBITDA Margin)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "bidder-difference characteristics (Panel B)",
+      "source": "Compustat/CRSP/Hoberg-Phillips"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Panel A full sample: buyout (50,226 / 38,900) vs non-buyout (261,877 / 188,397); Panel B buyouts vs public target-and-bidder deals; Panel C buyouts vs all-cash public deals",
+    "dv": {
+     "name": "comparable company selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from SEC EDGAR merger filings"
+    },
+    "key_ivs": [
+     {
+      "name": "|Diff (M/B)| and |Diff (EV/EBITDA)| (positive/negative) across buyout vs non-buyout subsamples",
+      "measure": "signed absolute valuation-multiple differences estimated separately for buyout vs non-buyout deals, with p-values for the difference in coefficients between subsamples",
+      "source": "Compustat/CRSP; SDC (buyout / LBO classification)"
+     },
+     {
+      "name": "Product Similarity (Target) and |Diff| in Market Cap/Sale Growth/Asset Turnover/EBITDA Margin by buyout status",
+      "measure": "signed firm-characteristic differences estimated separately for buyout vs non-buyout subsamples",
+      "source": "Compustat/CRSP/Hoberg-Phillips"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "target and bidder difference characteristics (Panels B and C)",
+      "source": "Compustat/CRSP/Hoberg-Phillips"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "deal-level; Premium N = 3,370 (col 1) / 2,857 (col 2); CAR N = 3,493 (col 3) / 2,948 (col 4)",
+    "dv": {
+     "name": "deal premium and target cumulative abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (offer price); CRSP (returns)"
+    },
+    "key_ivs": [
+     {
+      "name": "Diff (M/B)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Diff (EV/EBITDA)",
+      "measure": "mean EV/EBITDA of the chosen comps minus the target firm value",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Product Similarity (Target)",
+      "measure": "product similarity score between chosen comparable companies and the target",
+      "source": "Hoberg-Phillips"
+     },
+     {
+      "name": "Diff (Market Cap), Diff (Sale Growth), Diff (Asset Turnover), Diff (EBITDA Margin)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Withdrawn",
+      "source": "SDC"
+     },
+     {
+      "name": "Target Log (Market Cap)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Buyout",
+      "source": "SDC"
+     },
+     {
+      "name": "All Cash / All Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Product Similarity (Bidder & Target)",
+      "source": "Hoberg-Phillips"
+     },
+     {
+      "name": "Multiple Bidder",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Log (Number MA Peer)",
+      "source": "hand-collected from SEC EDGAR filings"
+     },
+     {
+      "name": "Top 8 Advisor",
+      "source": "hand-collected fairness opinions / SDC"
+     },
+     {
+      "name": "industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IA3 (Internet Appendix): Number of peers chosen in CCA and target uniqueness",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "deal-level",
+    "dv": {
+     "name": "number of comparable companies selected",
+     "measure": "number of comps selected for each deal in the comparable companies analysis",
+     "source": "hand-collected from SEC EDGAR filings"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Uniqueness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hoberg-Phillips"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm characteristics",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "deal characteristics",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer Uniqueness",
+      "source": "Hoberg-Phillips"
+     }
+    ]
+   },
+   {
+    "label": "Table IA4 (Internet Appendix): Peer selection by top-tier vs non-top-tier investment banks",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "top-8 bank vs non-top-8 bank subsamples",
+    "dv": {
+     "name": "comparable company selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from SEC EDGAR filings"
+    },
+    "key_ivs": [
+     {
+      "name": "Top-tier bank (Top 8)",
+      "measure": "top eight investment banks classified as top tier vs all other advisors, ranked by number of fairness opinions using the CCA technique in a rolling five-year window (bank mergers tracked and combined)",
+      "source": "hand-collected fairness opinions"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal fixed effects; firm-characteristic and valuation-multiple difference variables",
+      "source": "Compustat/CRSP/Hoberg-Phillips"
+     }
+    ]
+   },
+   {
+    "label": "Table IA5 (Internet Appendix): Peer selection before vs after FINRA Rule 5150",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "FINRA Rule 5150 (SEC Rule 2290 approved October 2007; post-rule period 2008 onward)",
+    "sample": "pre-2008 vs 2008-and-later subsamples",
+    "dv": {
+     "name": "comparable company selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from SEC EDGAR filings"
+    },
+    "key_ivs": [
+     {
+      "name": "post-rule period (2008 or later)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (deal announcement dates)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal fixed effects; firm-characteristic and valuation-multiple difference variables",
+      "source": "Compustat/CRSP/Hoberg-Phillips"
+     }
+    ]
+   },
+   {
+    "label": "Table IA6 (Internet Appendix): Peer selection in successful vs unsuccessful buyouts",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "273 buyout deals with identified exit status (74 IPO, 103 strategic sale, 60 secondary buyout, 35 bankruptcy, 1 sale to management); 70 additional deals coded unsuccessful by the return measure",
+    "dv": {
+     "name": "comparable company selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected from SEC EDGAR filings"
+    },
+    "key_ivs": [
+     {
+      "name": "buyout exit success",
+      "measure": "buyout classified as successful (exit via IPO, sale to a strategic buyer, or secondary buyout) vs unsuccessful (bankruptcy, or S&P 500-adjusted buyout return < 0); buyout return = ratio of sale value / first-day IPO value to purchase price, benchmarked to S&P 500 index return",
+      "source": "hand-collected exit status (SDC IPO/bankruptcy and M&A databases, CRSP market values, news articles, manual searches); S&P 500 index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal fixed effects; valuation-multiple and firm-characteristic difference variables",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "managerial conflicts of interest",
+    "peer selection",
+    "bidder characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "offer price",
+    "peer firms",
+    "comparable companies analysis"
+   ],
+   "mechanism_named": "reverse causality",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "peer firm composition",
+    "offer price",
+    "fairness opinion"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "exit status",
+    "buyout transactions"
+   ],
+   "mechanism_named": "selection bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "measure of success",
+    "buyout returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "peer valuation",
+    "buyout exit success",
+    "m/b"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "peer valuation",
+    "relation": "affects",
+    "to": "buyout exit success"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "peer valuation",
+    "overpayment",
+    "unsuccessful buyout transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "peer valuation",
+    "relation": "increases",
+    "to": "overpayment"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

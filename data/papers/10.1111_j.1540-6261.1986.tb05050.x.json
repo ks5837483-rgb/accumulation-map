@@ -1,0 +1,393 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1986.tb05050.x",
+ "title": "Price Movements as Indicators of Tender Offer Success",
+ "journal": "JF",
+ "year": 1986,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient market hypothesis",
+  "rational expectations",
+  "information economics",
+  "bayesian probability revision"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_stock_price_increase",
+      "relation": "increases",
+      "to": "market_collective_assessment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_collective_assessment",
+      "relation": "increases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_collective_assessment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "current_target_stock_price",
+      "relation": "increases",
+      "to": "market_implied_probability_of_success",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_implied_probability_of_success",
+      "relation": "increases",
+      "to": "observed_frequency_of_tender_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_implied_probability_of_success"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sampling bias from excluding competitive tender offers, which would make prices appear overvalued rather than well-calibrated"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proximity_to_conclusion_date",
+      "relation": "increases",
+      "to": "resolution_of_uncertainty",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "resolution_of_uncertainty",
+      "relation": "increases",
+      "to": "forecast_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "resolution_of_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "tender_offer",
+      "relation": "increases",
+      "to": "new_information_about_target_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "new_information_about_target_value",
+      "relation": "increases",
+      "to": "fallback_price",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "new_information_about_target_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (target firms excluding banks, insurance companies, and utilities; common stock traded on NYSE or AMEX)",
+  "country_region": "United States",
+  "time_period": "1976-1981",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "109 tender offers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Tender Offer Data Base provided by Douglas Austin",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Tender Offer Data Base provided by Kidder, Peabody and Co.",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal (published tender announcements, used to check offer-period dates)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "ISL Daily Stock Price Series",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "daily CRSP file",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Constrained fallback-price regression (Eq. 5/6)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample of unsuccessful offers",
+    "dv": {
+     "name": "fallback price (PF)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ISL Daily Stock Price Series / daily CRSP file"
+    },
+    "key_ivs": [
+     {
+      "name": "initial stock price (PI)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISL Daily Stock Price Series"
+     },
+     {
+      "name": "tender price (PT)",
+      "measure": "the tender price",
+      "source": "Tender Offer Data Bases (Douglas Austin; Kidder, Peabody and Co.)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table I - Weekly Brier scores of market forecasts",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "entire sample period, 1976 to 1981",
+    "dv": {
+     "name": "Brier score of market forecasts (base rate, calibration, resolution components)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "computed from market-inferred probabilities"
+    },
+    "key_ivs": [
+     {
+      "name": "market-inferred probability of tender success (q)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISL Daily Stock Price Series; daily CRSP file; Tender Offer Data Bases"
+     },
+     {
+      "name": "week relative to conclusion date",
+      "measure": "week number during the offer/holding period (week 1 ... week W-1)",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II (A and B) - Calibration by probability category and week",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "observed frequency of tender success",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Tender Offer Data Bases (outcomes)"
+    },
+    "key_ivs": [
+     {
+      "name": "predicted probability category (qj)",
+      "measure": "market-inferred probability of success grouped into probability categories (.05, .2, .4, .6, .8, .95) by week",
+      "source": "ISL Daily Stock Price Series; daily CRSP file"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section E - Excess Returns",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "excess returns from investment strategy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP file"
+    },
+    "key_ivs": [
+     {
+      "name": "gap between market odds and actual frequency (qj - q-bar)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "computed"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "probability of tender success",
+    "number of takeovers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "calendar year of the offer",
+    "relation": "affects",
+    "to": "probability of tender success"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "probabilistic forecasts",
+    "market price movements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "noncompetitive tenders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "auction-like competition for the target firm"
+   ],
+   "mechanism_named": "auction-like competition",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "noncompetitive tenders",
+    "sampling bias"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "competitive offers",
+    "target price increase"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "probabilistic market forecasts",
+    "probability estimates"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "pf",
+    "rf",
+    "duration of the offer period"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "partial offers",
+    "managerial control"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "small sample size",
+    "market efficiency"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

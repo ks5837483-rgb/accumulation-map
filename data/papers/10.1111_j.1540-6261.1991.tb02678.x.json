@@ -1,0 +1,260 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1991.tb02678.x",
+ "title": "The Mode of Acquisition in Takeovers: Taxes and Asymmetric Information",
+ "journal": "JF",
+ "year": 1991,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "adverse selection",
+  "tax clientele theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "taxable_offer_status",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "stock_use_in_offer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "stock used to overcome target adverse selection (Hansen/Fishman medium-of-exchange models) rather than for tax reasons"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "nontaxable_offer_choice",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "bidder_value_revaluation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "fully-revealing signaling in which bidders signal higher asset value with greater amounts of cash (so mixed offers should be revalued upward, not downward)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_offer_choice",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "fully-revealing medium-of-exchange models predicting returns should be highest in all-cash, lower in mixed, and lowest in all-stock offers (a monotone-in-cash ordering)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. exchange-listed corporate takeovers/mergers)",
+  "country_region": "United States",
+  "time_period": "1981-1986",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "342 mergers (211 taxable and 131 nontaxable)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Commerce Clearing House Capital Changes Reporter",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "342 completed mergers (211 taxable, 131 nontaxable) from firms dropped from the CRSP tape during 1981-1986, excluding non-U.S.-listed firms and prior majority-control acquirers",
+    "dv": {
+     "name": "mode of acquisition / percent of target stock purchased with bidder stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Commerce Clearing House Capital Changes Reporter"
+    },
+    "key_ivs": [
+     {
+      "name": "tax status of offer (taxable vs. nontaxable)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Commerce Clearing House Capital Changes Reporter"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "166 taxable cash, 40 nontaxable mixed mode, and 62 nontaxable all-stock ultimately successful bidding firms, 1981-1986; mergers of equals and financial-institution mergers excluded",
+    "dv": {
+     "name": "bidder cumulative abnormal prediction error CAPE(-1,0)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition (taxable cash vs. nontaxable mixed vs. nontaxable all-stock)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Commerce Clearing House Capital Changes Reporter"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "game structure",
+    "offer schedule"
+   ],
+   "mechanism_named": "sequentially rational Nash equilibria",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "out-of-equilibrium beliefs",
+    "potential equilibria"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "bidder returns",
+    "[withheld: wording matches the source]",
+    "bidder's announcement returns",
+    "tax parameters"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "bidder's choice of cash versus stock",
+     "bidder's announcement returns"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "choice of acquisition mode",
+    "bidder revaluations",
+    "changes in the tax code",
+    "stock offers"
+   ],
+   "mechanism_named": "Tax Reform Act of 1986",
+   "proposed_edge": {
+    "from": "changes in the tax code",
+    "relation": "affects",
+    "to": "choice of acquisition mode"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "cross-sectional variation in returns",
+    "choice of acquisition mode",
+    "means of payment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

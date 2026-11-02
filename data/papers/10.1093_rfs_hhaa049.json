@@ -1,0 +1,1169 @@
+{
+ "paper_id": "10.1093_rfs_hhaa049",
+ "title": "CAPM-Based Company (Mis)valuations",
+ "journal": "RFS",
+ "year": 2020,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "capital asset pricing model",
+  "behavioral corporate finance",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Prediction 1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_based_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_based_valuation_error",
+      "relation": "increases",
+      "to": "bidder_car",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_based_valuation_error"
+   ],
+   "moderators": [
+    {
+     "construct": "target_growth",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 2"
+    },
+    {
+     "construct": "relative_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 3"
+    },
+    {
+     "construct": "reliance_on_capm",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 4"
+    },
+    {
+     "construct": "steepness_of_empirical_sml",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 5"
+    },
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 5.3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "target betas are correlated with unobserved determinants of bidder CARs (omitted variables / measurement error)"
+   ]
+  },
+  {
+   "hypothesis": "Prediction 2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_based_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_based_valuation_error",
+      "relation": "increases",
+      "to": "bidder_car",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_based_valuation_error"
+   ],
+   "moderators": [
+    {
+     "construct": "target_growth",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction 3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_based_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_based_valuation_error",
+      "relation": "increases",
+      "to": "bidder_car",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_based_valuation_error"
+   ],
+   "moderators": [
+    {
+     "construct": "relative_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "Prediction 4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_based_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_based_valuation_error",
+      "relation": "increases",
+      "to": "bidder_car",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_based_valuation_error"
+   ],
+   "moderators": [
+    {
+     "construct": "reliance_on_capm",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction 5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_based_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_based_valuation_error",
+      "relation": "increases",
+      "to": "bidder_car",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_based_valuation_error"
+   ],
+   "moderators": [
+    {
+     "construct": "steepness_of_empirical_sml",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction 6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_based_valuation_error",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_based_valuation_error",
+      "relation": "increases",
+      "to": "bidder_car",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_based_valuation_error"
+   ],
+   "moderators": [
+    {
+     "construct": "public_target",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "capm_based_valuation_error",
+     "moderated_from": "target_asset_beta",
+     "moderated_to": "bidder_car",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Prediction 6"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (bid probability)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "decreases",
+      "to": "capm_implied_equity_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_implied_equity_value",
+      "relation": "increases",
+      "to": "probability_of_receiving_takeover_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_implied_equity_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (method of payment)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_asset_beta",
+      "relation": "increases",
+      "to": "perceived_equity_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_equity_overvaluation",
+      "relation": "increases",
+      "to": "all_stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_equity_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (discount rate)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_implied_cost_of_capital",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "capm_implied_cost_of_capital",
+      "relation": "increases",
+      "to": "discount_rate_in_fairness_opinion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_implied_cost_of_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (bid-implied valuation and premium)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_asset_beta",
+      "relation": "increases",
+      "to": "capm_implied_cost_of_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capm_implied_cost_of_capital",
+      "relation": "decreases",
+      "to": "bid_implied_valuation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capm_implied_cost_of_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquisitions of high beta targets generate larger synergies"
+   ]
+  },
+  {
+   "hypothesis": "Prediction (future free cash flows)",
+   "stated_direction": "nonsignificant",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "asset_beta",
+      "relation": "increases",
+      "to": "expected_free_cash_flows",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "expected_free_cash_flows",
+      "relation": "increases",
+      "to": "bidder_car",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_free_cash_flows"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (repurchases and equity offerings)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "asset_beta",
+      "relation": "increases",
+      "to": "perceived_equity_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_equity_overvaluation",
+      "relation": "increases",
+      "to": "seasoned_equity_offering",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_equity_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (mergers and acquisitions by U.S. public bidders across sectors)",
+  "country_region": "U.S. (U.S. public bidders)",
+  "time_period": "1977-2015",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Bidder CARs around bid announcements (OLS, private targets)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Bids for private targets with CPI-adjusted deal value >= $50M, U.S. public bidder, 1977-2015",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Beta spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(Deal value)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Equity",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Same industry",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cross-border",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Poison",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Multiple bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "log(Bidder size)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target controls (market-to-book, return on assets, leverage, cash holdings, cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder controls (market-to-book, return on assets, leverage, cash holdings, cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder SDC industry x Year fixed effects",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Target noise beta (instrument for Target asset beta), constructed from mutual fund fire sales (HMFFS) as a source of nonfundamental noise in realized stock returns; Bidder noise beta instruments Beta spread",
+    "sample": "Bids for private targets, 1980-2015 (mutual fund flow data unavailable before 1980)",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta (instrumented)",
+      "measure": "the target's asset beta instrumented by Target noise beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "Beta spread (instrumented)",
+      "measure": "difference between target's and bidder's asset beta, instrumented by Bidder noise beta (Columns 5.a/5.b)",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder SDC industry x Year fixed effects",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Section 3.3 / Figure 1 / Table A.4: Model calibration (structural model vs empirical coefficients)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR_Bidder (model-implied vs empirical)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta (beta_A)",
+      "measure": "target asset beta ranges; model parameters set to sample averages (rho=0.92, E_Bidder=$10,269M, rf=5.0% 20-yr U.S. bond yield, g=5.4% nominal GDP growth, market risk premium mu=6%, beta_A=0.84 average Compustat public-firm asset beta)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as Column 5 of Table 2",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Cross-sectional variation (OLS with interactions, private targets)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Bids for private targets, 1977-2015",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta x Target growth high",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target asset beta x Bidder mentions CAPM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Target asset beta x Listed peer available",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target asset beta x Steep empirical SML",
+      "measure": "[withheld: wording matches the source]",
+      "source": "other"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target controls (interacted)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder controls (interacted)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder SDC industry x Year fixed effects (interacted)",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Private versus public targets (OLS, private/public/pooled)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Private targets (Cols 1-3), public targets (Cols 4-6), all/pooled targets (Cols 7-8), 1977-2015",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta",
+      "measure": "the target's asset beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target asset beta x Public target",
+      "measure": "Public target = indicator for public targets; interaction allows the beta-CAR relation to vary with listing status",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target asset beta range indicators",
+      "measure": "1{Target asset beta < p25}, 1{> p75}, and indicators for different ranges of asset beta relative to base case",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder SDC industry x Year fixed effects",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Probability of receiving takeover bids (OLS linear probability, all public Compustat firms)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "All public firms in Compustat, 1981-2015 (SDC bid data sparse before 1981); conditional logit as robustness",
+    "dv": {
+     "name": "Controlling bid / Any bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Asset beta (t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(Assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Debt to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash flow to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's q",
+      "source": "Compustat"
+     },
+     {
+      "name": "PPE to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "IO block",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year x IPO cohort fixed effects (IPO cohort = years since first CRSP appearance)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Method of payment (OLS, private and public targets)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Private and public targets, 1977-2015",
+    "dv": {
+     "name": "100% stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Bidder asset beta",
+      "measure": "the bidder's asset beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target asset beta",
+      "measure": "the target's asset beta",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(Deal value)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Same industry",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cross-border",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Poison",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Multiple bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "log(Bidder size)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Bidder controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target SDC industry x Year fixed effects",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 Panel A: Discount rates used in fairness opinions (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Bids with fairness-opinion discount rate data in SDC Platinum, private and public targets (1,174 obs)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta",
+      "measure": "the target's asset beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "Beta spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(Deal value)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 Panel B: Bid-implied valuations and takeover premiums (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Private and public targets, 1977-2015 (Premium column: public targets only, prebid prices required)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta",
+      "measure": "the target's asset beta",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder SDC industry x Year fixed effects",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 9: Future realized free cash flows (OLS, all public Compustat firms)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "All public firms in Compustat, 1977-2015",
+    "dv": {
+     "name": "FCF/assets (t, t+1, t+2, t+3)",
+     "measure": "free cash flows scaled by total assets = [EBIT x (1-tau) + D&A - CAPEX - delta NWC] / ASSETS, in future periods t through t+3",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Asset beta (t-1)",
+      "measure": "the firm's lagged asset beta",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(Market capitalization)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Debt to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash flow to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Public targets only (combined CAR requires public targets), 1977-2015",
+    "dv": {
+     "name": "Combined CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target asset beta",
+      "measure": "the target's asset beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "Beta spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Bidder SDC industry x Year fixed effects",
+      "source": "SDC Platinum"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "market efficiency",
+    "capm"
+   ],
+   "mechanism_named": "capm",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bidder bhar",
+    "target asset beta"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "risk",
+    "expected returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "risk",
+    "expected returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "market efficiency",
+    "capm"
+   ],
+   "mechanism_named": "capm",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,567 @@
+{
+ "paper_id": "10.1002_smj.2065",
+ "title": "Relational configurations with information intermediaries: The effect of firm‐investment bank ties on expected acquisition performance",
+ "journal": "SMJ",
+ "year": 2013,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "relational embeddedness",
+  "information transfer theory",
+  "social network theory",
+  "resource dependence theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_prior_transactions",
+      "relation": "increases",
+      "to": "information_transfer_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_transfer_ability",
+      "relation": "increases",
+      "to": "expected_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_transfer_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "concentration_of_prior_transactions",
+      "relation": "decreases",
+      "to": "willingness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "willingness",
+      "relation": "increases",
+      "to": "expected_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "willingness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information breadth (size and scope effects of a larger advisor network)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_prior_transactions",
+      "relation": "increases",
+      "to": "information_transfer_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_transfer_ability",
+      "relation": "increases",
+      "to": "expected_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_transfer_ability"
+   ],
+   "moderators": [
+    {
+     "construct": "target_relatedness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_transfer_ability",
+     "moderated_from": "number_of_prior_transactions",
+     "moderated_to": "expected_acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "concentration_of_prior_transactions",
+      "relation": "decreases",
+      "to": "willingness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "willingness",
+      "relation": "increases",
+      "to": "expected_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "willingness"
+   ],
+   "moderators": [
+    {
+     "construct": "target_relatedness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "willingness",
+     "moderated_from": "concentration_of_prior_transactions",
+     "moderated_to": "expected_acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquisitions by publicly-traded U.S. firms)",
+  "country_region": "United States",
+  "time_period": "1991-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,115 useable observations"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP stocks database (abnormal returns via Eventus module of WRDS)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "field interviews with investment bankers",
+    "category": "interviews_case",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "expected acquisition performance of the acquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP stocks database (Eventus/WRDS)"
+    },
+    "key_ivs": [
+     {
+      "name": "number of prior transactions with the advising investment bank (ability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "mean number of prior transactions with nonadvising banks (ability)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "concentration of prior transactions with investment banks (willingness)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of banks (information breadth) transacted with in the 10-year period",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "relative size of target to acquirer (ratio of market values one week prior to announcement)",
+      "source": "CRSP stocks database"
+     },
+     {
+      "name": "acquisition experience (count of prior acquisitions in the 10-year period, linear term)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "acquisition experience squared term",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "common stock used as form of payment (dummy)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "target diversification (count of target's SIC codes distinct at three-digit level)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "number of bidders for the target",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "hostile acquisition (dummy)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "financial advisor prestige/reputation (annual bank rankings in the league tables)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "mean of abnormal returns on prior acquisitions",
+      "source": "CRSP stocks database"
+     },
+     {
+      "name": "variance of abnormal returns on prior acquisitions (consistency of previous performance)",
+      "source": "CRSP stocks database"
+     },
+     {
+      "name": "calendar-year dummies (1991-2006)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Relatedness moderation (interaction of prior ties and concentration with unrelated deals)",
+    "hypotheses": [
+     "H3",
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "expected acquisition performance of the acquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP stocks database (Eventus/WRDS)"
+    },
+    "key_ivs": [
+     {
+      "name": "number of prior transactions x relatedness (interaction)",
+      "measure": "interaction of number of prior transactions with the acquirer-target relatedness dummy",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "concentration of prior transactions x relatedness (interaction)",
+      "measure": "interaction of Herfindahl concentration of prior transactions with the acquirer-target relatedness dummy",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "relatedness (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "number of banks (information breadth)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "relative size of target to acquirer",
+      "source": "CRSP stocks database"
+     },
+     {
+      "name": "acquisition experience (linear and squared)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "common stock payment dummy",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "target diversification (count of three-digit SIC codes)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "number of bidders",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "hostile dummy",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "bank league-table prestige",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "mean and variance of prior abnormal returns",
+      "source": "CRSP stocks database"
+     },
+     {
+      "name": "calendar-year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Two-stage endogeneity check for related vs. unrelated choice (probit first stage; two-step consistent estimator second stage)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "lagged growth of the focal acquirer (instrument for propensity to consider related vs. unrelated targets)",
+    "sample": "",
+    "dv": {
+     "name": "expected acquisition performance (second stage); relatedness of target (first-stage probit)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP stocks database; SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "number of prior transactions with investment banks",
+      "measure": "number of prior transactions with advising and nonadvising banks (as in main models)",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "concentration of prior transactions (Herfindahl index)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "lambda (hazard from stage one accounting for endogeneity of relatedness choice)",
+      "measure": "the hazard generated from stage one entered in the second-stage equation",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control set as main models",
+      "source": "SDC Platinum database; CRSP stocks database"
+     },
+     {
+      "name": "calendar-year dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "expected acquisition performance",
+    "cumulative abnormal returns",
+    "value created in the acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "market signals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "information access"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "acquirer–investment bank relationships",
+    "interorganizational information flows"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "choice of advising banks",
+    "unobserved managerial capabilities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "managerial capabilities",
+    "relational configuration with investment banks"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "need for acquisition information",
+    "acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "acquirers",
+    "on_path": [
+     "need for acquisition information",
+     "acquisition performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "highly routinized decision making",
+    "acquisition performance",
+    "banks’ expertise"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "highly routinized decision making",
+    "relation": "affects",
+    "to": "acquisition performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "information transfer effects",
+    "resource tacitness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "resource tacitness",
+    "on_path": [
+     "information transfer effects",
+     "acquisition performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "highly tacit resources",
+    "additional relationships to the outside banks"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "resource tacitness",
+    "on_path": [
+     "additional relationships to the outside banks",
+     "acquisition performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "willingness",
+    "unrelated deals",
+    "pull for new information",
+    "low willingness of the intermediary"
+   ],
+   "mechanism_named": "‘pull’ for new information",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "ability",
+    "willingness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "willingness",
+    "on_path": [
+     "ability",
+     "acquisition performance"
+    ]
+   }
+  }
+ ]
+}

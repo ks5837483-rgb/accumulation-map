@@ -1,0 +1,1125 @@
+{
+ "paper_id": "10.1016_j.jfineco.2017.06.008",
+ "title": "Activism mergers",
+ "journal": "JFE",
+ "year": 2017,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "information economics",
+  "signaling theory",
+  "free-rider theory",
+  "monitoring theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hedge_fund_activism",
+      "relation": "decreases",
+      "to": "free_rider_problem",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "free_rider_problem",
+      "relation": "decreases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "hedge_fund_activism",
+      "relation": "decreases",
+      "to": "informational_frictions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informational_frictions",
+      "relation": "decreases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "hedge_fund_activism",
+      "relation": "decreases",
+      "to": "managerial_resistance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_resistance",
+      "relation": "decreases",
+      "to": "takeover_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "free_rider_problem",
+    "informational_frictions",
+    "managerial_resistance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection effect / stock-picking (activists simply pick firms already likely to be acquired rather than causing takeovers)",
+    "activist risk arbitrage (activism initiated after a merger announcement, generating a spurious activism-takeover association)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hedge_fund_activism",
+      "relation": "decreases",
+      "to": "target_management_self_dealing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_management_self_dealing",
+      "relation": "decreases",
+      "to": "target_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_management_self_dealing"
+   ],
+   "moderators": [
+    {
+     "construct": "activist_bidder",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "certification_of_offer_fairness",
+     "moderated_from": "hedge_fund_activism",
+     "moderated_to": "target_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2m"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hedge_fund_activism",
+      "relation": "decreases",
+      "to": "target_management_self_dealing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_management_self_dealing",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_management_self_dealing"
+   ],
+   "moderators": [
+    {
+     "construct": "activist_bidder",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "certification_of_offer_fairness",
+     "moderated_from": "hedge_fund_activism",
+     "moderated_to": "acquisition_premium",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3m"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hedge_fund_activism",
+      "relation": "decreases",
+      "to": "managerial_resistance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_resistance",
+      "relation": "decreases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_resistance"
+   ],
+   "moderators": [
+    {
+     "construct": "activist_bidder",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "certification_of_offer_fairness",
+     "moderated_from": "hedge_fund_activism",
+     "moderated_to": "merger_completion",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4m"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "failed_activism_merger",
+      "relation": "increases",
+      "to": "operating_performance_improvement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "operating_performance_improvement",
+      "relation": "increases",
+      "to": "long_term_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "failed_activism_merger",
+      "relation": "increases",
+      "to": "financial_policy_change",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_policy_change",
+      "relation": "increases",
+      "to": "long_term_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "operating_performance_improvement",
+    "financial_policy_change"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market revaluation of the target's stand-alone value (revaluation effect, per Malmendier, Opp, and Saidi 2016), rather than real operational gains",
+    "low-ball / in-play strategy (activist bids merely put the firm in play for higher third-party offers)"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hedge_fund_activism",
+      "relation": "decreases",
+      "to": "bidder_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_overpayment",
+      "relation": "decreases",
+      "to": "bidder_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Greenwood and Schor (2009) overpayment conjecture (activists pick firms for which acquirers overpay, implying lower bidder returns)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public firms in the CRSP-Compustat universe)",
+  "country_region": "United States",
+  "time_period": "2000-2014 (activism campaigns 2000-2012; merger data 2000-2014)",
+  "sample_description": "Annual firm-year panel combining hand-collected hedge fund activism campaigns (from SharkRepellent/FactSet, SEC Schedule 13D filings, and proxy statements) with merger data from Thomson Reuters SDC Platinum, merged with the universe of CRSP and Compustat firms; mergers restricted to U.S. public firms with deal size of at least $10 million, bidder owning less than 50% of target pre-bid, excluding divestitures, spin-offs, and share repurchases",
+  "sample_size": "62,066 firm-years (including 3,216 merger-bid firm-years and 2,096 activism-campaign firm-years)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "SharkRepellent database (FactSet's SharkRepellent)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC Schedule 13D/13D-A filings, proxy statements (PREC/DEFC), and SEC registration statements (ADV filings)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Thomson Reuters Securities Data Company (SDC) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters 13F database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Fama-French three-factor model factors (market, SMB, HML)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "merger targets with activist involvement (N=467) vs without (N=2749); full CRSP-Compustat panel N=62,066",
+    "dv": {
+     "name": "firm characteristics of takeover targets",
+     "measure": "mean and median firm characteristics (institutional ownership, standard deviation of daily returns, illiquidity, Tobin's Q, market cap, ROA, book leverage, dividend yield, R&D/assets, Herfindahl index) compared across groups",
+     "source": "CRSP-Compustat, 13F"
+    },
+    "key_ivs": [
+     {
+      "name": "activist involvement",
+      "measure": "merger targets with activist involvement (N=467) vs merger targets without activist involvement (N=2749), vs full CRSP-Compustat panel (N=62,066)",
+      "source": "hand-collected/SharkRepellent"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "62,066 firm-years (CRSP-Compustat); 3216 takeover bids and 1904 activism campaigns",
+    "dv": {
+     "name": "probability of receiving a takeover bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Activist",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected/SharkRepellent, SEC 13D"
+     },
+     {
+      "name": "Merger wave",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Activist x Merger wave",
+      "measure": "interaction of Activist and Merger wave",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional ownership",
+      "source": "SEC Form 13F / Thomson Reuters 13F"
+     },
+     {
+      "name": "Standard deviation of daily stock returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity (Amihud ratio)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Log market cap",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book leverage/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Dividend yield",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "R&D/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Herfindahl index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "probability of receiving a takeover bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "HF active stake",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC 13D/proxy filings"
+     },
+     {
+      "name": "% held",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "HF active stake x % held / % held>1% / % held>5%",
+      "measure": "interactions of HF active stake with ownership percentage measures",
+      "source": "Thomson Reuters 13F"
+     },
+     {
+      "name": "HF active stake x Merger wave",
+      "measure": "interaction of HF active stake and Merger wave indicator",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional ownership",
+      "source": "SEC Form 13F / Thomson Reuters 13F"
+     },
+     {
+      "name": "Standard deviation of daily stock returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity (Amihud ratio)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Log market cap",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book leverage/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Hedge fund fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "activist hedge fund's switch from Schedule 13G (passive) to Schedule 13D (activist) filing status in the same firm ('clean identification of intervention beyond stock picking', Brav, Jiang, and Kim 2015)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "probability of receiving a takeover bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "13G to 13D switcher",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional ownership",
+      "source": "SEC Form 13F / Thomson Reuters 13F"
+     },
+     {
+      "name": "Standard deviation of daily stock returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity (Amihud ratio)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Log market cap",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book leverage/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Dividend yield",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "R&D/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Herfindahl index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Merger wave",
+      "source": "SDC"
+     },
+     {
+      "name": "Hedge fund fixed effects (Cols 3, 6)",
+      "source": ""
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "467 activism mergers: 76 activist bids vs 391 third-party bids",
+    "dv": {
+     "name": "target announcement CARs, acquisition premia, and completion rates (Panel B); firm characteristics (Panel A)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "activist bid vs third-party bid",
+      "measure": "activist bid (N=76) vs third-party bid (N=391)",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7, Columns 1-2: Target CARs of third-party and activist merger bids (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "activism mergers with third-party bids (N=2992) or activist bids (N=2657) vs non-activism mergers",
+    "dv": {
+     "name": "target announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Activist non-bidder (Col 1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected/SharkRepellent, SDC"
+     },
+     {
+      "name": "Activist bidder (Col 2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional ownership",
+      "source": "SEC Form 13F / Thomson Reuters 13F"
+     },
+     {
+      "name": "Standard deviation",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity (Amihud)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Log market cap",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book leverage/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Dividend yield",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "R&D/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Herfindahl index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Merger wave",
+      "source": "SDC"
+     },
+     {
+      "name": "LBO indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Columns 3-4: Acquisition premia of third-party and activist merger bids (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "activism mergers with third-party bids (N=2961) or activist bids (N=2658) vs non-activism mergers",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Activist non-bidder (Col 3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected/SharkRepellent, SDC"
+     },
+     {
+      "name": "Activist bidder (Col 4)",
+      "measure": "indicator comparing activism targets with activist bids to non-activism merger targets",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional ownership",
+      "source": "SEC Form 13F / Thomson Reuters 13F"
+     },
+     {
+      "name": "Standard deviation",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity (Amihud)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Log market cap",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book leverage/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Dividend yield",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "R&D/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Herfindahl index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Merger wave",
+      "source": "SDC"
+     },
+     {
+      "name": "LBO indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Columns 5-6: Takeover completion probability of third-party and activist merger bids (Logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "activism mergers vs non-activism mergers (N=3267 each column)",
+    "dv": {
+     "name": "takeover completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Activist non-bidder (Col 5)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected/SharkRepellent, SDC"
+     },
+     {
+      "name": "Activist bidder (Col 6)",
+      "measure": "indicator comparing activism targets with activist bids to non-activism merger targets",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional ownership",
+      "source": "SEC Form 13F / Thomson Reuters 13F"
+     },
+     {
+      "name": "Standard deviation",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity (Amihud)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Log market cap",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book leverage/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Dividend yield",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "R&D/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Herfindahl index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Merger wave",
+      "source": "SDC"
+     },
+     {
+      "name": "LBO indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Panels A-B: Activism targets receiving activist bids, activist-only vs subsequent third-party bid (univariate t-tests)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "76 activist bids (52 activist-only, 24 with subsequent third-party bid)",
+    "dv": {
+     "name": "firm characteristics, CARs, initial premia, and completion rates",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "activist bid only vs subsequent third-party bid",
+      "measure": "activist bid only (N=52) vs activist bid followed by third-party bid (N=24)",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 9 / Fig. 1: Long-term cumulative abnormal returns of activism targets (by subsample)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "1899 activism targets between 2000 and 2012",
+    "dv": {
+     "name": "long-term cumulative abnormal returns (24 months post-activism)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; Fama-French factors"
+    },
+    "key_ivs": [
+     {
+      "name": "activism target outcome subsample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 10, Panels A-B: Revaluation effects in failed mergers (return decomposition following Malmendier, Opp, and Saidi 2016)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "failed mergers within one year of announcement; Panel A cash-only (127 non-activism, 43 activism); Panel B all mergers (230 non-activism, 51 activism)",
+    "dv": {
+     "name": "revaluation vs synergy decomposition of merger announcement returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "activism vs non-activism mergers",
+      "measure": "non-activism mergers vs activism mergers among failed mergers",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "failed-bid activism targets vs no-bid activism targets (completed mergers excluded); N ranges 976-1097 across columns",
+    "dv": {
+     "name": "changes in operational and financial policies",
+     "measure": "changes in ROA, ROS (return on sales), asset turnover, book leverage, CAPX/assets, and payout/market cap, each estimated over horizons t-2 to t+2 and t-1 to t+2 centered on the beginning of the activism campaign",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Bid but no merger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected/SharkRepellent, SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Lagged (starting) level of the respective policy variable",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional ownership",
+      "source": "SEC Form 13F / Thomson Reuters 13F"
+     },
+     {
+      "name": "Standard deviation",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity",
+      "source": "CRSP"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Log market cap",
+      "source": "CRSP"
+     },
+     {
+      "name": "Dividend yield",
+      "source": "CRSP-Compustat"
+     },
+     {
+      "name": "Book leverage/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D/assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Herfindahl index",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 12: CARs of non-financial (bidder) firms (OLS with bidder fixed effects)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidder announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Activist",
+      "measure": "indicator for activism mergers (activist intervention present)",
+      "source": "hand-collected/SharkRepellent, SDC"
+     },
+     {
+      "name": "Bidder characteristics (Col 2)",
+      "measure": "time-varying bidder characteristics: log market cap, Tobin's Q, leverage ratio, log bidder firm age (following Harford, Humphery-Jenner, and Powell 2012)",
+      "source": "CRSP-Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Merger wave dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Log transaction value",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock offer dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash offer dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Bidder fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "lower premia",
+    "hedge fund bidders",
+    "synergies",
+    "overpayment",
+    "low-ball offers"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "proxy contests",
+    "probability of an activism merger"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "proxy contests",
+    "relation": "affects",
+    "to": "probability of an activism merger"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "proxy contests",
+    "probability of an activism merger"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "proxy contests",
+    "relation": "increases",
+    "to": "probability of an activism merger"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "in-play strategy",
+    "activist bids"
+   ],
+   "mechanism_named": "in-play strategy",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "returns to failed activism mergers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "failed takeover bids",
+    "long-term abnormal returns",
+    "revaluation effect",
+    "operational or financial policy changes",
+    "activist intervention"
+   ],
+   "mechanism_named": "revaluation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,618 @@
+{
+ "paper_id": "10.1111_jofi.13508",
+ "title": "Can Social Media Inform Corporate Decisions? Evidence from Merger Withdrawals",
+ "journal": "JF",
+ "year": 2025,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "managerial learning theory",
+  "feedback effect of financial markets on corporate decisions",
+  "revelatory versus forecasting price efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Main",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "abnormal_social_media_sentiment",
+      "relation": "increases",
+      "to": "managerial_evaluation_of_the_merger",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "managerial_evaluation_of_the_merger",
+      "relation": "decreases",
+      "to": "merger_withdrawal",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_evaluation_of_the_merger"
+   ],
+   "moderators": [
+    {
+     "construct": "corporate_twitter_account_adoption",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_evaluation_of_the_merger",
+     "moderated_from": "abnormal_social_media_sentiment",
+     "moderated_to": "merger_withdrawal",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Twitter-Engagement"
+    },
+    {
+     "construct": "fundamental_tweet_content",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_evaluation_of_the_merger",
+     "moderated_from": "abnormal_social_media_sentiment",
+     "moderated_to": "merger_withdrawal",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Fundamental-vs-Technical"
+    },
+    {
+     "construct": "tweet_length",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_evaluation_of_the_merger",
+     "moderated_from": "abnormal_social_media_sentiment",
+     "moderated_to": "merger_withdrawal",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Tweet-Length"
+    },
+    {
+     "construct": "number_of_tweets",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_evaluation_of_the_merger",
+     "moderated_from": "abnormal_social_media_sentiment",
+     "moderated_to": "merger_withdrawal",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Signal-Quantity"
+    },
+    {
+     "construct": "analyst_conference_call_contentiousness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_evaluation_of_the_merger",
+     "moderated_from": "abnormal_social_media_sentiment",
+     "moderated_to": "merger_withdrawal",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "ConfCall-Contentiousness"
+    },
+    {
+     "construct": "post_gamestop_period",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "managerial_evaluation_of_the_merger",
+     "moderated_from": "abnormal_social_media_sentiment",
+     "moderated_to": "merger_withdrawal",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Post-GME"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "external governance mechanism: social media disciplines empire-building managers rather than revealing new information to them",
+    "social media merely correlates with unmeasured factors that predict merger withdrawal (pure forecasting, not manager learning)",
+    "managers learn the information from their own professional network rather than from social media"
+   ]
+  },
+  {
+   "hypothesis": "BHAR-Value",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "abnormal_social_media_sentiment",
+      "relation": "increases",
+      "to": "deal_value",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_value",
+      "relation": "decreases",
+      "to": "market_reaction_to_merger_withdrawal",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A deals across acquirer industries, GIC two-digit)",
+  "country_region": "United States (publicly listed U.S. acquirers)",
+  "time_period": "2010-2021",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "6,438 unique M&A deals (final sample with StockTwits sentiment; 6,187 completed, 251 withdrawn)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "StockTwits",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat North America",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBES",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RavenPack (v. RPA 1.0)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SMA (Twitter sentiment vendor)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Shareholder Services (ISS)",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II, Panel A: Baseline Effect (equation 2)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "U.S. acquiring firms, M&A deals 2010-2021, minimum deal value $25M",
+    "dv": {
+     "name": "Deal Withdrawn",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Abn. Sentiment (z) (StTw)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "StockTwits"
+     },
+     {
+      "name": "CAR Acq. (z) [-1;10] and [-5;-1]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "News Sentiment Acq. (z)",
+      "measure": "the news media sentiment about the M&A deal (Event Sentiment Score, ESS, over the [-1;+2] window)",
+      "source": "RavenPack (v. RPA 1.0)"
+     },
+     {
+      "name": "Analyst Rec. Changes (z)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IBES"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Deal Value ($B)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "% Shares Held Prior",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Acq. White Knight (0/1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Competing Bidder (0/1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Rumored Deal (0/1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hostile Deal (0/1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target Private (0/1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Hedge fund involvement (0/1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Challenged Deal (0/1)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Percentage of shares sought",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Acquirer market capitalization / firm size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "Cash holdings",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "N News Articles",
+      "source": "RavenPack (v. RPA 1.0)"
+     },
+     {
+      "name": "N Tweets",
+      "source": "StockTwits"
+     },
+     {
+      "name": "N Analyst Rec.",
+      "source": "IBES"
+     },
+     {
+      "name": "Year-by-quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer industry (GIC two-digit) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II, Panel B: Alternative Sentiment Measures (StockTwits vs. Twitter/SMA)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "column with SMA/Twitter restricted to merger announcements from 2012 onward (SMA availability)",
+    "dv": {
+     "name": "Deal Withdrawn",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Abn. Sentiment (z) (StTw)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "StockTwits"
+     },
+     {
+      "name": "Abn. Sentiment (z) (SMA-Tw)",
+      "measure": "abnormal Twitter sentiment constructed similarly from SMA firm-day Twitter sentiment scores",
+      "source": "SMA (Twitter sentiment vendor)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal and acquirer controls (as in main specification)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Firm controls (size, leverage, cash holdings)",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "Year-by-quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer industry (GIC2) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Panel A, cols 1-2: Self-constructed sentiment classifiers (maximum entropy, Bayesian)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Deal Withdrawn",
+     "measure": "indicator equal to one if the announced M&A deal was subsequently withdrawn (multiplied by 100)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Alternative Abn. Sentiment (max-entropy and Bayesian classifier)",
+      "measure": "abnormal social media sentiment aggregated to the stock-day level from self-trained maximum entropy and Bayesian text classifiers imputing tweet sentiment",
+      "source": "StockTwits"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal and acquirer controls (as in main specification)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Firm controls (size, leverage, cash holdings)",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "Year-by-quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer industry (GIC2) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Panel A, cols 3-6: Public targets subsample and target sentiment",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Deal Withdrawn",
+     "measure": "indicator equal to one if the announced M&A deal was subsequently withdrawn (multiplied by 100)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Abn. Sentiment (acquirer)",
+      "measure": "abnormal StockTwits sentiment about the acquirer around the announcement",
+      "source": "StockTwits"
+     },
+     {
+      "name": "Abn. Sentiment (target)",
+      "measure": "abnormal StockTwits sentiment measure constructed for the target firm",
+      "source": "StockTwits"
+     },
+     {
+      "name": "Target spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target CAR [-5,-1] and [-1,10]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Deal and acquirer controls (as in main specification)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Firm controls (size, leverage, cash holdings)",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "Year-by-quarter fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer industry (GIC2) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Panel A, col 8: Acquirer fixed effects (serial acquirers)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "subset of acquirers making at least two acquisition announcements in the sample (serial acquirers)",
+    "dv": {
+     "name": "Deal Withdrawn",
+     "measure": "indicator equal to one if the announced M&A deal was subsequently withdrawn (multiplied by 100)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Abn. Sentiment (z) (StTw)",
+      "measure": "abnormal StockTwits sentiment around the merger announcement",
+      "source": "StockTwits"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal and acquirer controls (as in main specification)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Acquirer fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year-by-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Panel B: External (non-learning) reasons for merger withdrawal",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Deal Withdrawn",
+     "measure": "indicator equal to one if the announced M&A deal was subsequently withdrawn (multiplied by 100), restricted to externally-driven withdrawals",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Abn. Sentiment (z) (StTw)",
+      "measure": "abnormal StockTwits sentiment around the merger announcement",
+      "source": "StockTwits"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal and acquirer controls (as in main specification)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Firm controls (size, leverage, cash holdings)",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "Year-by-quarter and industry (GIC2) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Governance mechanism tests (Figure 5 / Table IA.VI): positive vs. negative CAR and governance subsample splits",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample split by positive vs. negative acquirer announcement CAR; governance splits on negative-CAR deals",
+    "dv": {
+     "name": "Deal Withdrawn",
+     "measure": "indicator equal to one if the announced M&A deal was subsequently withdrawn",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Abn. Sentiment (AbnSent)",
+      "measure": "abnormal StockTwits sentiment around deal announcement, estimated within subsamples split by announcement CAR sign and by governance strength",
+      "source": "StockTwits"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Board independence measures",
+      "source": "Institutional Shareholder Services (ISS)"
+     },
+     {
+      "name": "Board monitoring intensity / co-opted directors / busy boards",
+      "source": "Institutional Shareholder Services (ISS)"
+     },
+     {
+      "name": "Antitakeover provisions (G-index / E-index)",
+      "source": "Institutional Shareholder Services (ISS)"
+     },
+     {
+      "name": "Deal and acquirer controls",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table IV: Social Media Sentiment and Eventual Market Returns (equation 3)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subset of deals with an interim period longer than 25 (75) days",
+    "dv": {
+     "name": "BHAR [11; T_conclusion]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "1(Deal Withdrawn)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "AbnSent",
+      "measure": "[withheld: wording matches the source]",
+      "source": "StockTwits"
+     },
+     {
+      "name": "1(Deal Withdrawn) x AbnSent",
+      "measure": "interaction of the withdrawal indicator with abnormal StockTwits sentiment",
+      "source": "StockTwits"
+     }
+    ],
+    "controls": [
+     {
+      "name": "1(Deal Withdrawn) x deal announcement CARs",
+      "source": "CRSP"
+     },
+     {
+      "name": "1(Deal Withdrawn) x news sentiment",
+      "source": "RavenPack (v. RPA 1.0)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Industry (GIC2) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year-by-quarter fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "social media",
+    "firms",
+    "investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

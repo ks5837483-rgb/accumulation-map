@@ -1,0 +1,914 @@
+{
+ "paper_id": "10.1177_1042258718778547",
+ "title": "Bringing It All Back Home: Corporate Venturing and Renewal Through Spin-ins",
+ "journal": "ETP",
+ "year": 2018,
+ "field": "entrepreneurship",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "transaction cost economics",
+  "relational view",
+  "information economics",
+  "upper echelons theory",
+  "evolutionary economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "spin_in_acquisition",
+      "relation": "increases",
+      "to": "efficient_organizing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "efficient_organizing",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "efficient_organizing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality (better-performing acquirers self-select into pursuing spin-ins)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overpayment",
+      "relation": "decreases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overpayment"
+   ],
+   "moderators": [
+    {
+     "construct": "spin_in_acquisition",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "overpayment",
+     "moderated_from": "information_asymmetry",
+     "moderated_to": "acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_hubris",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_premium",
+      "relation": "decreases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_premium"
+   ],
+   "moderators": [
+    {
+     "construct": "spin_in_acquisition",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "acquisition_premium",
+     "moderated_from": "ceo_hubris",
+     "moderated_to": "acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_acquisition_integration_problems",
+      "relation": "decreases",
+      "to": "synergy_realization",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_realization",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_realization"
+   ],
+   "moderators": [
+    {
+     "construct": "spin_in_acquisition",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "synergy_realization",
+     "moderated_from": "post_acquisition_integration_problems",
+     "moderated_to": "acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "",
+  "time_period": "1995-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson-Reuters' Securities Data Company (SDC) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC disclosures/filings (edgar.com; 10K through Edgar)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "company proxy statement and firm annual report",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Lexis-Nexis / LexisNexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "PRNewswire / PR Newswire",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Reuters M&A",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "MarketWatch.com",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "DowJones News",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LinkedIn.com",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "acquirer press releases and target websites",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "900 acquisitions (450 matched spin-in / non-spin-in pairs)",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition type (AT)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "acquirer press releases, target websites, LinkedIn"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Model 1 - baseline logit (well-established control variables only)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Macroeconomic effects",
+      "source": ""
+     },
+     {
+      "name": "Industry effects",
+      "source": ""
+     },
+     {
+      "name": "Firm effects",
+      "source": ""
+     },
+     {
+      "name": "Acquiring firm size - assets",
+      "source": "SDC"
+     },
+     {
+      "name": "Business focus (conglomeration)",
+      "source": ""
+     },
+     {
+      "name": "Prior acquisition experience (acquirer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquiring firm age",
+      "source": ""
+     },
+     {
+      "name": "NAICS code distance (relatedness)",
+      "source": "NAICS"
+     },
+     {
+      "name": "Acquisition payment method",
+      "source": "SDC"
+     },
+     {
+      "name": "Intangible assets as % of total deal (goodwill)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm age",
+      "source": ""
+     },
+     {
+      "name": "Acquirer ownership of target",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 4 - main effects (AT + IA + CEO hubris + PAI)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition type (AT)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "acquirer press releases, target websites, LinkedIn"
+     },
+     {
+      "name": "Information asymmetry (IA)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LexisNexis/news sources, SEC filings, LinkedIn"
+     },
+     {
+      "name": "CEO hubris",
+      "measure": "an indexed measure of CEO overconfidence (Hayward & Hambrick 1997) combining acquiring company's recent financial performance (Edgar), recent media praise for the CEO (positive LexisNexis articles), and CEO self-importance (relative pay from company's proxy statement plus CEO's portrait size in the firm's annual report)",
+      "source": "Edgar, LexisNexis, proxy statement, annual report"
+     },
+     {
+      "name": "Post-acquisition integration (PAI)",
+      "measure": "a discrete dichotomous variable (Datta 1991) assigning degree of operational integration; \"1\" = acquired entity fully integrated into existing divisional structure, \"0\" = autonomous division reporting to corporate executive committee",
+      "source": "SEC filings (10K through Edgar), PR Newswire, LexisNexis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Macroeconomic effects",
+      "source": ""
+     },
+     {
+      "name": "Industry effects",
+      "source": ""
+     },
+     {
+      "name": "Firm effects",
+      "source": ""
+     },
+     {
+      "name": "Acquiring firm size - assets",
+      "source": "SDC"
+     },
+     {
+      "name": "Business focus (conglomeration)",
+      "source": ""
+     },
+     {
+      "name": "Prior acquisition experience (acquirer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquiring firm age",
+      "source": ""
+     },
+     {
+      "name": "NAICS code distance (relatedness)",
+      "source": "NAICS"
+     },
+     {
+      "name": "Acquisition payment method",
+      "source": "SDC"
+     },
+     {
+      "name": "Intangible assets as % of total deal (goodwill)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm age",
+      "source": ""
+     },
+     {
+      "name": "Acquirer ownership of target",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 5 - AT x IA interaction",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "AT x IA interaction term",
+      "measure": "product term of acquisition type (spin-in dummy) and information asymmetry (years of shared prior association between target founders and acquirer executives)",
+      "source": "acquirer press releases/LinkedIn (AT); LexisNexis/SEC filings/LinkedIn (IA)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Macroeconomic effects",
+      "source": ""
+     },
+     {
+      "name": "Industry effects",
+      "source": ""
+     },
+     {
+      "name": "Firm effects",
+      "source": ""
+     },
+     {
+      "name": "Acquiring firm size - assets",
+      "source": "SDC"
+     },
+     {
+      "name": "Business focus (conglomeration)",
+      "source": ""
+     },
+     {
+      "name": "Prior acquisition experience (acquirer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquiring firm age",
+      "source": ""
+     },
+     {
+      "name": "NAICS code distance (relatedness)",
+      "source": "NAICS"
+     },
+     {
+      "name": "Acquisition payment method",
+      "source": "SDC"
+     },
+     {
+      "name": "Intangible assets as % of total deal (goodwill)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm age",
+      "source": ""
+     },
+     {
+      "name": "Acquirer ownership of target",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 6 - AT x CEO hubris interaction",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "AT x CEO hubris interaction term",
+      "measure": "product term of acquisition type (spin-in dummy) and CEO hubris index",
+      "source": "acquirer press releases/LinkedIn (AT); Edgar/LexisNexis/proxy statement/annual report (CEO hubris)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Macroeconomic effects",
+      "source": ""
+     },
+     {
+      "name": "Industry effects",
+      "source": ""
+     },
+     {
+      "name": "Firm effects",
+      "source": ""
+     },
+     {
+      "name": "Acquiring firm size - assets",
+      "source": "SDC"
+     },
+     {
+      "name": "Business focus (conglomeration)",
+      "source": ""
+     },
+     {
+      "name": "Prior acquisition experience (acquirer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquiring firm age",
+      "source": ""
+     },
+     {
+      "name": "NAICS code distance (relatedness)",
+      "source": "NAICS"
+     },
+     {
+      "name": "Acquisition payment method",
+      "source": "SDC"
+     },
+     {
+      "name": "Intangible assets as % of total deal (goodwill)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm age",
+      "source": ""
+     },
+     {
+      "name": "Acquirer ownership of target",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 7 - AT x PAI interaction",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "AT x PAI interaction term",
+      "measure": "product term of acquisition type (spin-in dummy) and post-acquisition integration (dichotomous degree of operational integration)",
+      "source": "acquirer press releases/LinkedIn (AT); SEC filings 10K/PR Newswire/LexisNexis (PAI)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Macroeconomic effects",
+      "source": ""
+     },
+     {
+      "name": "Industry effects",
+      "source": ""
+     },
+     {
+      "name": "Firm effects",
+      "source": ""
+     },
+     {
+      "name": "Acquiring firm size - assets",
+      "source": "SDC"
+     },
+     {
+      "name": "Business focus (conglomeration)",
+      "source": ""
+     },
+     {
+      "name": "Prior acquisition experience (acquirer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquiring firm age",
+      "source": ""
+     },
+     {
+      "name": "NAICS code distance (relatedness)",
+      "source": "NAICS"
+     },
+     {
+      "name": "Acquisition payment method",
+      "source": "SDC"
+     },
+     {
+      "name": "Intangible assets as % of total deal (goodwill)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm age",
+      "source": ""
+     },
+     {
+      "name": "Acquirer ownership of target",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 8 - full model (all main effects and all three interactions)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3",
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition type (AT)",
+      "measure": "discrete dichotomous variable coded \"1\" for spin-in",
+      "source": "acquirer press releases, target websites, LinkedIn"
+     },
+     {
+      "name": "Information asymmetry (IA)",
+      "measure": "years of shared prior association between target's founders and acquirer executives (frequency and duration of prior ties)",
+      "source": "LexisNexis/news, SEC filings, LinkedIn"
+     },
+     {
+      "name": "CEO hubris",
+      "measure": "indexed measure of CEO overconfidence (financial performance + media praise + CEO self-importance)",
+      "source": "Edgar, LexisNexis, proxy statement, annual report"
+     },
+     {
+      "name": "Post-acquisition integration (PAI)",
+      "measure": "dichotomous degree of operational integration of the acquired firm",
+      "source": "SEC filings 10K, PR Newswire, LexisNexis"
+     },
+     {
+      "name": "AT x IA (H2)",
+      "measure": "product term AT x IA",
+      "source": ""
+     },
+     {
+      "name": "AT x CEO hubris (H3)",
+      "measure": "product term AT x CEO hubris",
+      "source": ""
+     },
+     {
+      "name": "AT x PAI (H4)",
+      "measure": "product term AT x PAI",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Macroeconomic effects",
+      "source": ""
+     },
+     {
+      "name": "Industry effects",
+      "source": ""
+     },
+     {
+      "name": "Firm effects",
+      "source": ""
+     },
+     {
+      "name": "Acquiring firm size - assets",
+      "source": "SDC"
+     },
+     {
+      "name": "Business focus (conglomeration)",
+      "source": ""
+     },
+     {
+      "name": "Prior acquisition experience (acquirer)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquiring firm age",
+      "source": ""
+     },
+     {
+      "name": "NAICS code distance (relatedness)",
+      "source": "NAICS"
+     },
+     {
+      "name": "Acquisition payment method",
+      "source": "SDC"
+     },
+     {
+      "name": "Intangible assets as % of total deal (goodwill)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm age",
+      "source": ""
+     },
+     {
+      "name": "Acquirer ownership of target",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2",
+     "H3",
+     "H4"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Mean probability of AAI",
+     "measure": "mean probability of acquirer asset impairment (discrete change in probability of impairment holding all other variables fixed), by low/moderate/high levels of each interaction",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "AT x IA (by level: Low/Mod/High IA)",
+      "measure": "marginal mean probability of AAI for spin-ins vs non-spin-ins across levels of information asymmetry",
+      "source": "LexisNexis/SEC filings/LinkedIn"
+     },
+     {
+      "name": "AT x CEO hubris (by level: Low/Mod/High)",
+      "measure": "marginal mean probability of AAI for spin-ins vs non-spin-ins across levels of CEO hubris",
+      "source": "Edgar/LexisNexis/proxy statement/annual report"
+     },
+     {
+      "name": "AT x PAI (by level: Low/High)",
+      "measure": "marginal mean probability of AAI for spin-ins vs non-spin-ins at low/high integration",
+      "source": "SEC filings 10K/PR Newswire/LexisNexis"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Robustness - Heckman two-step for omitted-variable bias (inverse Mills ratio)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer asset impairment (AAI)",
+     "measure": "dichotomous impairment 1/0 within 5 years",
+     "source": "SEC EDGAR"
+    },
+    "key_ivs": [],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "internal and external innovation efforts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "ce initiatives",
+    "firm renewal",
+    "efficient organizing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "pai"
+   ],
+   "mechanism_named": "PAI",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "spin-ins",
+    "reintegration process"
+   ],
+   "mechanism_named": "reintegration process",
+   "proposed_edge": {
+    "from": "reintegration process",
+    "relation": "affects",
+    "to": "spin-ins"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "spin-ins",
+    "acquisition-related outcomes",
+    "organizational and cultural disruptions",
+    "social cognition"
+   ],
+   "mechanism_named": "social cognition",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "spin-ins",
+     "acquisition-related outcomes"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "software, electronics, and high-tech manufacturing firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "spin-ins",
+    "effect size"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "spin-ins"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "spin-ins",
+    "interindustry comparisons"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "acquisitions",
+    "transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "prior ties",
+    "partnerships, alliances, and contracting agreements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

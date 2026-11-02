@@ -1,0 +1,602 @@
+{
+ "paper_id": "10.1007_s11142-018-9468-9",
+ "title": "Costs and benefits of internal control audits: evidence from M&amp;A transactions",
+ "journal": "RAS",
+ "year": 2018,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "signaling theory",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_completion_late_in_fiscal_year",
+      "relation": "increases",
+      "to": "compliance_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "compliance_cost",
+      "relation": "increases",
+      "to": "exemption_election",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "compliance_cost"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "agency_conflicts",
+      "relation": "increases",
+      "to": "avoidance_of_external_scrutiny",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "avoidance_of_external_scrutiny",
+      "relation": "increases",
+      "to": "exemption_election",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "agency_conflicts",
+      "relation": "increases",
+      "to": "avoidance_of_disclosure_of_control_weaknesses",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "avoidance_of_disclosure_of_control_weaknesses",
+      "relation": "increases",
+      "to": "exemption_election",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "avoidance_of_external_scrutiny",
+    "avoidance_of_disclosure_of_control_weaknesses"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the agency-conflicts association merely proxies for anticipated compliance costs"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "exemption_election",
+      "relation": "decreases",
+      "to": "timely_identification_and_correction_of_internal_control_problems",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "timely_identification_and_correction_of_internal_control_problems",
+      "relation": "increases",
+      "to": "post_acquisition_outcomes",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "timely_identification_and_correction_of_internal_control_problems"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "exemption_election",
+      "relation": "decreases",
+      "to": "investor_assessment_of_net_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_assessment_of_net_benefits",
+      "relation": "increases",
+      "to": "abnormal_stock_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_assessment_of_net_benefits"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the 10-K filing-date return reflects the underlying deal or other information already incorporated by investors rather than the exemption election"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. accelerated filers in Compustat that undertake M&A acquisitions; financial firms, SIC 6000-6999, excluded)",
+  "country_region": "United States (U.S. public-company acquirers; 17.5% of targets are foreign firms)",
+  "time_period": "2005-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,070 large acquisitions (relative size >= 20%; the main-analysis sample); 4,145 acquisitions in total before the size split"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics Internal Control database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP stock files",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Shareholder Services (ISS)",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "PCAOB inspection reports (internal control audit deficiencies)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Hand-collected coding of 10-K filings (impairment/restatement linkage to the sample acquisition, following Wangerin 2017)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1070 large acquisitions (relative size >= 20%), 2005-2014; also estimated separately for U.S. public (415), U.S. private (444), and foreign (187) targets",
+    "dv": {
+     "name": "EXEMPT",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics Internal Control database"
+    },
+    "key_ivs": [
+     {
+      "name": "QTR1_DEAL",
+      "measure": "indicator equal to one if deal completion occurs in the first fiscal quarter",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "QTR4_DEAL",
+      "measure": "indicator equal to one if deal completion occurs in the fourth fiscal quarter",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "LN(RELATIVE_SIZE)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A database / Compustat"
+     },
+     {
+      "name": "US_PUBLIC_TARGET",
+      "measure": "indicator that the target was publicly traded in the United States prior to the acquisition",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "TARGET_404b",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "TARGET_ICMW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "SHARED_AUDITOR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "TARGET_BIG4",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "measure": "indicator that the target is a foreign firm",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "DIVERSIFYING_DEAL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A database / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQUIRER_BIG4",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "PCAOB_IC_SCRUTINY",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "LAST_DEAL_EXEMPT",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "acquisition completion year / time trend",
+      "source": "SDC M&A database"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: Determinants model including agency conflicts",
+    "hypotheses": [
+     "H1b"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1070 large acquisitions (24 U.S. public target observations dropped for missing agency-conflict data)",
+    "dv": {
+     "name": "EXEMPT",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics Internal Control database"
+    },
+    "key_ivs": [
+     {
+      "name": "AGENCY_CONFLICTS",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat / CRSP / Institutional Shareholder Services (ISS)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "QTR1_DEAL",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "QTR4_DEAL",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "LN(RELATIVE_SIZE)",
+      "source": "SDC M&A database / Compustat"
+     },
+     {
+      "name": "US_PUBLIC_TARGET",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "TARGET_404b",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "TARGET_ICMW",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "SHARED_AUDITOR",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "TARGET_BIG4",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "FOREIGN_TARGET",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "DIVERSIFYING_DEAL",
+      "source": "SDC M&A database / Compustat"
+     },
+     {
+      "name": "ACQUIRER_BIG4",
+      "source": "Audit Analytics Internal Control database"
+     },
+     {
+      "name": "PCAOB_IC_SCRUTINY",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "LAST_DEAL_EXEMPT",
+      "source": "Audit Analytics Internal Control database"
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Future goodwill impairments (GW_IMPAIR)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "GW_IMPAIR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "EXEMPT",
+      "measure": "indicator equal to one if the acquirer elects to exempt the acquired business from Section 404 internal control reporting",
+      "source": "Audit Analytics Internal Control database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "AGENCY_CONFLICTS",
+      "source": "Compustat / CRSP / ISS"
+     },
+     {
+      "name": "deal characteristics (relative size, quarter of deal, target status, diversifying deal)",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "acquirer/auditor characteristics (ACQUIRER_BIG4, PCAOB_IC_SCRUTINY)",
+      "source": "Audit Analytics / PCAOB inspection reports"
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Refined goodwill impairment tied to the sample acquisition (SAME_DEAL_IMPAIR)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Also an untabulated falsification test using the 188 impairments not tied to the sample acquisition or reporting unit",
+    "dv": {
+     "name": "SAME_DEAL_IMPAIR",
+     "measure": "indicator equal to one for the 296 goodwill impairments manually linked to the acquisition in the sample (impairment explicitly disclosed as related, or charged to the reporting unit to which the acquisition goodwill was originally allocated, following Wangerin 2017) and zero otherwise",
+     "source": "Hand-collected coding of 10-K filings"
+    },
+    "key_ivs": [
+     {
+      "name": "EXEMPT",
+      "measure": "indicator equal to one if the acquirer elects to exempt the acquired business from Section 404 internal control reporting",
+      "source": "Audit Analytics Internal Control database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "AGENCY_CONFLICTS",
+      "source": "Compustat / CRSP / ISS"
+     },
+     {
+      "name": "deal and acquirer characteristics",
+      "source": "SDC M&A database / Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N = 870",
+    "dv": {
+     "name": "ROA_CHANGE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "EXEMPT",
+      "measure": "indicator equal to one if the acquirer elects to exempt the acquired business from Section 404 internal control reporting",
+      "source": "Audit Analytics Internal Control database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "AGENCY_CONFLICTS",
+      "source": "Compustat / CRSP / ISS"
+     },
+     {
+      "name": "deal and acquirer characteristics",
+      "source": "SDC M&A database / Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Financial statement restatements (RESTATE)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N = 1056",
+    "dv": {
+     "name": "RESTATE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics Internal Control database"
+    },
+    "key_ivs": [
+     {
+      "name": "EXEMPT",
+      "measure": "indicator equal to one if the acquirer elects to exempt the acquired business from Section 404 internal control reporting",
+      "source": "Audit Analytics Internal Control database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "AGENCY_CONFLICTS",
+      "source": "Compustat / CRSP / ISS"
+     },
+     {
+      "name": "deal and acquirer characteristics",
+      "source": "SDC M&A database / Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Stock return reaction around the 10-K exemption-disclosure filing (FILING_RET)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "N = 1001",
+    "dv": {
+     "name": "FILING_RET",
+     "measure": "abnormal stock returns around the 10-K filing where the exemption election is disclosed",
+     "source": "CRSP stock files"
+    },
+    "key_ivs": [
+     {
+      "name": "EXEMPT",
+      "measure": "indicator equal to one if the acquirer elects to exempt the acquired business from Section 404 internal control reporting",
+      "source": "Audit Analytics Internal Control database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Future buy-and-hold abnormal returns following the 10-K filing (FUTURE_BHAR)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "N = 956",
+    "dv": {
+     "name": "FUTURE_BHAR_3YEAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP stock files"
+    },
+    "key_ivs": [
+     {
+      "name": "EXEMPT",
+      "measure": "indicator equal to one if the acquirer elects to exempt the acquired business from Section 404 internal control reporting",
+      "source": "Audit Analytics Internal Control database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "goodwill impairments",
+    "exempt acquisitions",
+    "internal control assessments",
+    "integration",
+    "synergies"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "internal control problems",
+    "internal reports",
+    "operating decisions"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "restatement disclosures",
+    "restate_target_related"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "section 404 compliance",
+    "post-acquisition outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "section 404 compliance",
+    "relation": "decreases",
+    "to": "negative post-acquisition outcomes"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

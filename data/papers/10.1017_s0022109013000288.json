@@ -1,0 +1,750 @@
+{
+ "paper_id": "10.1017_s0022109013000288",
+ "title": "Material Adverse Change Clauses and Acquisition Dynamics",
+ "journal": "JFQA",
+ "year": 2013,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "real options theory",
+  "moral hazard theory",
+  "contract theory",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "completion_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_mae_exclusions",
+      "relation": "decreases",
+      "to": "acquirer_abandonment_option",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_abandonment_option",
+      "relation": "decreases",
+      "to": "acquisition_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_abandonment_option"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality / joint determination: acquirers of deals with lower ex ante completion probability endogenously negotiate fewer exclusions, making the association spurious"
+   ]
+  },
+  {
+   "hypothesis": "renegotiation_prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_mae_exclusions",
+      "relation": "decreases",
+      "to": "acquirer_abandonment_option",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_abandonment_option",
+      "relation": "increases",
+      "to": "probability_of_renegotiation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_abandonment_option"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality / joint determination: acquirers of deals with higher ex ante renegotiation probability endogenously negotiate fewer exclusions, making the association spurious"
+   ]
+  },
+  {
+   "hypothesis": "arbitrage_spread_prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_mae_exclusions",
+      "relation": "decreases",
+      "to": "likelihood_of_termination",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_of_termination",
+      "relation": "increases",
+      "to": "arbitrage_spread",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_of_termination"
+   ],
+   "moderators": [
+    {
+     "construct": "public_disclosure_of_mac_structure",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "likelihood_of_termination",
+     "moderated_from": "number_of_mae_exclusions",
+     "moderated_to": "arbitrage_spread",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "disclosure_contingency"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "spread_change_around_filing_prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_mae_exclusions",
+      "relation": "increases",
+      "to": "perceived_likelihood_of_acquisition_completion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_likelihood_of_acquisition_completion",
+      "relation": "decreases",
+      "to": "change_in_arbitrage_spread",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_likelihood_of_acquisition_completion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "offer_premium_prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_mae_exclusions",
+      "relation": "decreases",
+      "to": "acquirer_abandonment_option",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_abandonment_option",
+      "relation": "increases",
+      "to": "offer_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_abandonment_option"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public-target acquisitions across 12 Fama-French industry groups)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1998-2005",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "755 announced acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings (8-K, 425, S4, PREM14, DEF14A, SC 13D; merger agreements and proxy statements)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "LivEdgar M&A database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10kWizard",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva News",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 (Panels A-C): Link between MAEs and acquisition outcomes and price renegotiations",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "material adverse event (MAE)",
+    "sample": "",
+    "dv": {
+     "name": "acquisition outcome (termination / renegotiation) and offer price revision",
+     "measure": "stated reasons for the termination or renegotiation identified from proxy statements and confirmed in news reports; Mean % Change in Offer Price",
+     "source": "SEC filings (proxy statements); LivEdgar M&A database; 10kWizard; Factiva News"
+    },
+    "key_ivs": [
+     {
+      "name": "occurrence of a material adverse event (MAE)",
+      "measure": "whether an MAE occurs between the initial announcement and the outcome of the acquisition (classified market-wide vs. firm-specific, and experienced by target vs. acquirer)",
+      "source": "SEC filings (proxy statements); Factiva News"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5, Panel A, Model 1: Logit of probability of completion",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "probability of acquisition completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "number of MAE exclusions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (merger agreements)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Renegotiated deal",
+      "source": "SEC filings; LivEdgar M&A database"
+     },
+     {
+      "name": "Termination fee by Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Payment",
+      "source": "SDC"
+     },
+     {
+      "name": "log(MV Assets Target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC; SEC filings; Factiva"
+     },
+     {
+      "name": "Target in Technology industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target in Regulated industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target R&D/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Volatility Index (VIX)",
+      "source": "other"
+     },
+     {
+      "name": "log(# days of Due Diligence on Target)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "year dummy variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel A, Models 2.1/2.2: 3SLS simultaneous-equations (IV) for probability of completion",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "post-2001 ('after-2001') dummy variable as instrument for the number of MAE exclusions",
+    "sample": "",
+    "dv": {
+     "name": "probability of acquisition completion (jointly with number of MAE exclusions)",
+     "measure": "Prob[Completion]=1; 2nd-stage 3SLS system with the number of exclusions and the completion dummy as endogenous variables",
+     "source": "SDC; SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "instrument for the number of MAE exclusions",
+      "measure": "fitted value from an OLS 1st-stage regression of the number of exclusions on independent variables and the post-2001 instrument",
+      "source": "SEC filings (merger agreements)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Renegotiated deal",
+      "source": "SEC filings; LivEdgar M&A database"
+     },
+     {
+      "name": "Termination fee by Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Payment",
+      "source": "SDC"
+     },
+     {
+      "name": "log(MV Assets Target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC; SEC filings; Factiva"
+     },
+     {
+      "name": "Target in Technology industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target in Regulated industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target R&D/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Volatility Index (VIX)",
+      "source": "other"
+     },
+     {
+      "name": "log(# days of Due Diligence on Target)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "year dummy variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B, Model 1: Logit of probability of renegotiation",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "probability of renegotiation",
+     "measure": "equal to 1 if the terms of the acquisition are renegotiated, and 0 otherwise",
+     "source": "SEC filings; LivEdgar M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "number of MAE exclusions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (merger agreements)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Termination fee by Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Payment",
+      "source": "SDC"
+     },
+     {
+      "name": "log(MV Assets Target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC; SEC filings; Factiva"
+     },
+     {
+      "name": "Target in Technology industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target in Regulated industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target R&D/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Volatility Index (VIX)",
+      "source": "other"
+     },
+     {
+      "name": "log(# days of Due Diligence on Target)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "year dummy variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B, Models 2 (2nd/1st stage): 3SLS simultaneous-equations (IV) for probability of renegotiation",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "post-2001 ('after-2001') dummy variable as instrument for the number of MAE exclusions",
+    "sample": "",
+    "dv": {
+     "name": "probability of renegotiation (jointly with number of MAE exclusions)",
+     "measure": "Prob[Renegotiation]=1; 2nd-stage 3SLS system with the number of exclusions and the renegotiation dummy as endogenous variables",
+     "source": "SEC filings; LivEdgar M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "instrument for the number of MAE exclusions",
+      "measure": "fitted value from an OLS 1st-stage regression of the number of exclusions on independent variables and the post-2001 instrument",
+      "source": "SEC filings (merger agreements)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Termination fee by Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Payment",
+      "source": "SDC"
+     },
+     {
+      "name": "log(MV Assets Target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC; SEC filings; Factiva"
+     },
+     {
+      "name": "Target in Technology industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target in Regulated industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target R&D/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "Volatility Index (VIX)",
+      "source": "other"
+     },
+     {
+      "name": "log(# days of Due Diligence on Target)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "year dummy variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panel B: Cross-sectional OLS regressions of arbitrage spreads (day 1, day 20, and around merger-agreement filing)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "public filing of the merger agreement (timing of MAC-structure disclosure to arbitrageurs)",
+    "sample": "729 acquisitions with available arbitrage-spread data; subsamples split by whether the merger agreement has been filed (299 filed vs. 430 not filed on day 1; 605 vs. 124 on day 20)",
+    "dv": {
+     "name": "arbitrage spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (target market price); SDC / SEC filings (offer price)"
+    },
+    "key_ivs": [
+     {
+      "name": "number of MAE exclusions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (merger agreements)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Termination fee by Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only Payment",
+      "source": "SDC"
+     },
+     {
+      "name": "log(MV Assets Target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC; SEC filings"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Model 1: OLS cross-sectional regression of offer premium",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "729 acquisitions with available offer-premium data",
+    "dv": {
+     "name": "offer premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC filings; LivEdgar M&A database; SDC; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "number of MAE exclusions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (merger agreements)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Termination fee by target",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash-Only payment",
+      "source": "SDC"
+     },
+     {
+      "name": "log(MVAssets-target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC; SEC filings"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "year dummy variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Models 2-3: 3SLS simultaneous-equations (IV) for offer premium",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "post-2001 ('after-2001') dummy variable as instrument for the number of MAE exclusions",
+    "sample": "729 acquisitions with available offer-premium data",
+    "dv": {
+     "name": "offer premium (jointly with number of MAE exclusions)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC filings; LivEdgar M&A database; SDC; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "instrument for the number of MAE exclusions",
+      "measure": "fitted value using the after-2001 dummy as instrument; method of payment and std. dev. of target returns excluded from the 2nd-stage exclusions equation",
+      "source": "SEC filings (merger agreements)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Termination fee by target",
+      "source": "SDC"
+     },
+     {
+      "name": "log(MVAssets-target)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC; SEC filings"
+     },
+     {
+      "name": "Volatility Index (VIX)",
+      "source": "other"
+     },
+     {
+      "name": "Target in Regulated industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target in Technology industry",
+      "source": "Compustat (Fama-French 1997 classification)"
+     },
+     {
+      "name": "Target R&D/Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(# days of Due Diligence)",
+      "source": "SEC filings"
+     },
+     {
+      "name": "\"After 2001\" dummy",
+      "source": ""
+     },
+     {
+      "name": "year dummy variables",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "arbitrage spreads",
+    "number of mae exclusions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "arbitrage spreads",
+    "expected time to completion",
+    "probability of completion"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "number of mae exclusions",
+    "strength of the acquirer's abandonment option"
+   ],
+   "mechanism_named": "abandonment option",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "mac structure",
+    "offer premiums",
+    "number of mae exclusions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "mac structure",
+    "relation": "affects",
+    "to": "offer premiums"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "mae exclusions",
+    "offer premiums",
+    "contractual features of the mac"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "mae exclusions",
+    "relation": "decreases",
+    "to": "offer premiums"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "mae exclusions",
+    "offer premiums"
+   ],
+   "mechanism_named": "option to abandon",
+   "proposed_edge": {
+    "from": "mae exclusions",
+    "relation": "decreases",
+    "to": "offer premiums"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

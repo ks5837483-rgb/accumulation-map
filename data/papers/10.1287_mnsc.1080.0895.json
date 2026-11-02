@@ -1,0 +1,406 @@
+{
+ "paper_id": "10.1287_mnsc.1080.0895",
+ "title": "Financial Reporting and Conflicting Managerial Incentives: The Case of Management Buyouts",
+ "journal": "MNSC",
+ "year": 2008,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "earnings management theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "external_financing",
+      "relation": "increases",
+      "to": "financing_related_reporting_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financing_related_reporting_incentive",
+      "relation": "increases",
+      "to": "earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financing_related_reporting_incentive"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "the abnormal-accrual pattern is driven by generic, non-MBO predictors of accruals rather than the MBO/financing transaction"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "external_financing",
+      "relation": "increases",
+      "to": "financing_related_reporting_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financing_related_reporting_incentive",
+      "relation": "increases",
+      "to": "earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financing_related_reporting_incentive"
+   ],
+   "moderators": [
+    {
+     "construct": "physical_assets",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "financing_related_reporting_incentive",
+     "moderated_from": "external_financing",
+     "moderated_to": "earnings_management",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the abnormal-accrual pattern (including the financing-by-collateral interaction) is driven by generic, non-MBO predictors of accruals rather than the MBO/financing transaction"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (MBOs concentrated in manufacturing, with merchandising, services, and other industries)",
+  "country_region": "United States",
+  "time_period": "1985-2005",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "138 MBO transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "proxy statements filed with the SEC (Schedule 14A) via the historical EDGAR archives",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Factiva (news reports)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "restricted sample N=108 for year-2 comparison",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "timing relative to the MBO (year 0 vs. year-2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "matched and unmatched abnormal current accruals as defined in Table 2",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "subperiod",
+      "measure": "1985-1994 (N=63) vs. 1996-2005 (N=75); no observation in 1995",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel A: Average abnormal current accruals by level of external financing (full sample and cross-period)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "matched and unmatched abnormal current accruals as defined in Table 2",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "level of external financing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); SDC; Factiva"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "MBO firms compared to the entire Compustat population with necessary observations",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "matched and unmatched abnormal current accruals as defined in Table 2",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "external financing group",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4: Average abnormal current accruals by industry and level of external financing",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "matched and unmatched abnormal current accruals as defined in Table 2",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "industrial sector and level of external financing",
+      "measure": "two-digit SIC industrial sectors (manufacturing, merchandising, services, other) crossed with low vs. high external financing (bottom vs. top quartile of external financing scaled by total firm value)",
+      "source": "Compustat; proxy statements filed with the SEC (Schedule 14A/EDGAR)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel A: OLS regression of abnormal current accruals on scaled external financing (Model 7A)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=138",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SEF (scaled external financing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); SDC; Factiva"
+     },
+     {
+      "name": "SEF * SPPE (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPPE (net beginning PP&E scaled by total firm value)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B: OLS regression of abnormal current accruals on unscaled (log) external financing (Model 7B)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=138",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "LOGEF (log external financing)",
+      "measure": "logarithm of EF, log(1+EF), where EF is total financing from external sources (unscaled)",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); SDC; Factiva"
+     },
+     {
+      "name": "LOGEF * LOGPPE (interaction)",
+      "measure": "interaction of the logarithm of external financing with the logarithm of PPE",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LOGPPE (logarithm of PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CNTR (1 - ACQ)",
+      "source": "SDC"
+     },
+     {
+      "name": "BM",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: OLS regression, first year prior to MBO (year 0) vs. second year prior (year-2)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "year-2 (fiscal year ending 25-36 months prior to the MBO) used as a placebo/pseudo pre-MBO year",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "SEF (scaled external financing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); SDC; Factiva"
+     },
+     {
+      "name": "SEF * SPPE (interaction)",
+      "measure": "interaction of scaled external financing with net beginning PP&E scaled by total firm value",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPPE",
+      "source": "Compustat"
+     },
+     {
+      "name": "CNTR (1 - ACQ)",
+      "source": "SDC"
+     },
+     {
+      "name": "BM",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Two-Stage Least Square (instrumental variables) of external financing on abnormal current accruals",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "First-stage instruments for SEF: ACQ (proportion of the company acquired), SCASH (cash balance scaled by firm value), CAPEX, LEVERAGE, LAGROA (lagged ROA), LOGVALUE (log firm value)",
+    "sample": "N=138",
+    "dv": {
+     "name": "abnormal current accruals (ABCA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "PSEF (predicted scaled external financing)",
+      "measure": "predicted value of SEF from the first-stage regression of external financing on instruments",
+      "source": "proxy statements filed with the SEC (Schedule 14A/EDGAR); SDC; Factiva"
+     },
+     {
+      "name": "PSEF * SPPE (interaction)",
+      "measure": "interaction of predicted scaled external financing with net beginning PP&E scaled by total firm value",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPPE",
+      "source": "Compustat"
+     },
+     {
+      "name": "CNTR (1 - ACQ)",
+      "source": "SDC"
+     },
+     {
+      "name": "BM",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects (first stage)",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

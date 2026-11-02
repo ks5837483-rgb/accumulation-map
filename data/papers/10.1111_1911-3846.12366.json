@@ -1,0 +1,754 @@
+{
+ "paper_id": "10.1111_1911-3846.12366",
+ "title": "Acquirer Internal Control Weaknesses in the Market for Corporate Control",
+ "journal": "CAR",
+ "year": 2018,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "winner's curse",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_internal_control_weakness",
+      "relation": "decreases",
+      "to": "information_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_quality",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquirer_internal_control_weakness",
+      "relation": "increases",
+      "to": "target_value_misestimation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_value_misestimation",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_quality",
+    "target_value_misestimation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "underlying firm characteristics / determinants of ICWs (rather than the ICW disclosure or poor information) drive the larger premiums"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_internal_control_weakness",
+      "relation": "increases",
+      "to": "perceived_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_overpayment",
+      "relation": "decreases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquirer_internal_control_weakness",
+      "relation": "decreases",
+      "to": "perceived_synergy_realization",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_synergy_realization",
+      "relation": "increases",
+      "to": "announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_overpayment",
+    "perceived_synergy_realization"
+   ],
+   "moderators": [
+    {
+     "construct": "acquisition_premium",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "perceived_overpayment",
+     "moderated_from": "acquirer_internal_control_weakness",
+     "moderated_to": "announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "ICW acquirers are habitually bad acquirers (a bad M&A track record), not their internal control weaknesses, drive the more negative CARs"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_internal_control_weakness",
+      "relation": "decreases",
+      "to": "information_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_quality",
+      "relation": "increases",
+      "to": "future_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquirer_internal_control_weakness",
+      "relation": "increases",
+      "to": "synergy_overestimation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_overestimation",
+      "relation": "decreases",
+      "to": "future_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_quality",
+    "synergy_overestimation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "ICW acquirers are habitually bad acquirers (a bad M&A track record), not their internal control weaknesses, drive the poor future performance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public-firm mergers and acquisitions across sectors)",
+  "country_region": "United States",
+  "time_period": "2003-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "381 ICW-acquirer treatment deals (plus 4,356 non-ICW control deals; matched-pair regressions use 762 observations)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10-Q (section 302) and 10-K (section 404) reports (material-weakness disclosures)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Restatement and ICW database (Rice et al. 2015; shared by Sarah Rice, David Weber, and Biyu Wu)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Panel A - Univariate stock-based premium (Treatment vs PS- and IYV-matched controls)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "762 obs (381 ICW treatment + 381 matched control)",
+    "dv": {
+     "name": "Stock-based premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (offer price, deal value) + CRSP (target stock price)"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW (acquirer ICW status)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / 10-Q (302), 10-K (404) filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel B - Univariate accounting-based premium (Treatment vs PS- and IYV-matched controls)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "762 obs (381 ICW treatment + 381 matched control)",
+    "dv": {
+     "name": "Accounting-based premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT (sales, EBITDA) + SDC (deal value)"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW (acquirer ICW status)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel A - OLS regression of stock-based premium (Premium %) (equation 1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "762 obs; standard errors clustered by year",
+    "dv": {
+     "name": "Premium (%)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC + CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Log(1+Num Acq Weaknesses)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "PS-Indicator (Model 5 only)",
+      "measure": "indicator identifying PS-matched acquirers (in PS vs IYV comparison)",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Termination Fee",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal Lockup",
+      "source": "SDC"
+     },
+     {
+      "name": "Number of Bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "Entirely Cash Deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock Percentage",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Bidder Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile Deal",
+      "source": "SDC"
+     },
+     {
+      "name": "Number of Investment Banks",
+      "source": "SDC"
+     },
+     {
+      "name": "Same Industry",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal Value",
+      "source": "SDC"
+     },
+     {
+      "name": "Log Segments",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Foreign Currency",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Restructure",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Salegrw",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Inventory",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Log MktV",
+      "source": "CRSP/COMPUSTAT"
+     },
+     {
+      "name": "Loss",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "RZscore",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Log Age",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Prior Restate",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Big 4",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Audit Fees",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Non-Audit Fees",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Auditor Change",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Mgt Change",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Book-to-Market",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Regulated Industry",
+      "source": "COMPUSTAT (SIC)"
+     },
+     {
+      "name": "Financial Industry",
+      "source": "COMPUSTAT (SIC)"
+     },
+     {
+      "name": "Litigation Firm",
+      "source": ""
+     },
+     {
+      "name": "E-Index",
+      "source": "IRRC/ISS"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Matched-pair fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B - OLS regression of accounting-based premium (Sales/Deal Value) (equation 1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "762 obs; standard errors clustered by year",
+    "dv": {
+     "name": "Sales/Deal Value (accounting-based premium)",
+     "measure": "Sales/Deal Value (inverse multiple; robustness also EBITDA/Deal Value) (De Franco et al. 2011)",
+     "source": "COMPUSTAT + SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Log(1+Num Acq Weaknesses)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "PS-Indicator (Model 5 only)",
+      "measure": "indicator identifying PS-matched acquirers",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Audit Analytics"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / IRRC-ISS"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Matched-pair fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Univariate acquirer CARs around announcement (Treatment vs PS- and IYV-matched controls)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "762 obs (381 ICW deals + matched controls)",
+    "dv": {
+     "name": "Acquirer CAR (0,+1) and toehold-adjusted Acquirer CAR (0,+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW (acquirer ICW status)",
+      "measure": "indicator = one if acquirer disclosed ICWs before the deal, zero otherwise",
+      "source": "Audit Analytics / SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - OLS regression of acquirer market returns around announcement (equation 2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "762 obs; standard errors clustered by year",
+    "dv": {
+     "name": "Acquirer CAR (0,+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW",
+      "measure": "indicator = one if acquirer disclosed ICWs before the deal, zero otherwise",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Premium (%)",
+      "measure": "offer price divided by target stock price 42 days before announcement (included as regressor)",
+      "source": "SDC + CRSP"
+     },
+     {
+      "name": "Acq_ICW x Premium (%)",
+      "measure": "interaction of ICW indicator and premium",
+      "source": "derived"
+     },
+     {
+      "name": "Sales/Deal Value and Acq_ICW x Sales/Deal Value",
+      "measure": "accounting-based premium and its interaction with Acq_ICW (alternative specification)",
+      "source": "COMPUSTAT + SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Audit Analytics"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / IRRC-ISS"
+     },
+     {
+      "name": "PS-Indicator and PS-Indicator x Premium (Model 5, PS vs IYV comparison)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Matched-pair fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A - Univariate acquirer post-acquisition (2-year) performance (Treatment vs matched controls)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "616 obs (completed deals only)",
+    "dv": {
+     "name": "Acquirer 2-year future performance (BHAR and RNOA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (BHAR) / COMPUSTAT (RNOA)"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW (acquirer ICW status)",
+      "measure": "indicator = one if acquirer disclosed ICWs before the deal, zero otherwise",
+      "source": "Audit Analytics / SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 Panel B - OLS regression of future (2-year) performance, BHAR and RNOA (equation 3)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "616 obs (completed deals only); standard errors clustered by year",
+    "dv": {
+     "name": "2-Year BHAR / 2-Year RNOA",
+     "measure": "2-year buy-and-hold abnormal return (size/BM-adjusted) and return on net operating assets for two full years post-completion",
+     "source": "CRSP / COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Acq_ICW",
+      "measure": "indicator = one if acquirer disclosed ICWs before the deal, zero otherwise",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "PS-Indicator (Models 5-6)",
+      "measure": "indicator identifying PS-matched acquirers (PS vs IYV comparison)",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior-RNOA (2 years' performance before the acquisition)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT / Audit Analytics"
+     },
+     {
+      "name": "Acquirer characteristics (Book-to-Market, ROA [omitted in RNOA models], Leverage, Regulated Industry, Financial Industry, Litigation Firm, E-Index)",
+      "source": "COMPUSTAT / IRRC-ISS"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Matched-pair fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 Panel A - OLS regression of Premium and Acquirer CAR for ICW remediation (additional analysis)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "542 obs (381 sample acquirers pooled with 161 remediation acquirers per comparison set); no matched-pair fixed effects",
+    "dv": {
+     "name": "Premium (%) and Acquirer CAR (0,+1)",
+     "measure": "stock-based premium (offer price / target price 42 days pre-announcement) and 2-day announcement CAR (market model)",
+     "source": "SDC + CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Remediate-ICW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Premium (%) and Remediate-ICW x Premium (%)",
+      "measure": "premium and its interaction with the remediation indicator (in the CAR models)",
+      "source": "SDC + CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal characteristics",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer ICW characteristics",
+      "source": "COMPUSTAT / Audit Analytics"
+     },
+     {
+      "name": "Acquirer characteristics",
+      "source": "COMPUSTAT / IRRC-ISS"
+     },
+     {
+      "name": "Target characteristics",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]",
+    "premiums"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "future stock performance",
+    "stock market",
+    "disclosures"
+   ],
+   "mechanism_named": "underreacted to the disclosures",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "ineffective internal controls",
+    "managerial decision making related to M&A",
+    "investors",
+    "future-abnormal stock returns",
+    "impounding of information"
+   ],
+   "mechanism_named": "impounding of information is not complete",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

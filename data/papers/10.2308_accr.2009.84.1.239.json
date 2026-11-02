@@ -1,0 +1,509 @@
+{
+ "paper_id": "10.2308_accr.2009.84.1.239",
+ "title": "The Information Content of Business Combination Disclosure Level",
+ "journal": "AR",
+ "year": 2009,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "disclosure theory",
+  "voluntary disclosure theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "abnormal_goodwill",
+      "relation": "increases",
+      "to": "unfavorable_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unfavorable_information",
+      "relation": "decreases",
+      "to": "disclosure_level",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unfavorable_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disclosure_level",
+      "relation": "decreases",
+      "to": "unfavorable_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unfavorable_information",
+      "relation": "decreases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unfavorable_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "abnormal disclosure captures a general \"good\" vs \"bad\" firm quality characteristic rather than the business combination's information content"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disclosure_level",
+      "relation": "increases",
+      "to": "investor_information_incorporation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_information_incorporation",
+      "relation": "increases",
+      "to": "abnormal_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_information_incorporation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the 10-K provides no new information to interpret because more timely sources (8-Ks, 10-Qs, target financial reports) already disclosed the acquisition"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (nonfinancial S&P 500 firms; 46 industries represented, ranging from Water Transportation to Business Services)",
+  "country_region": "United States (SEC EDGAR 10-K filings; S&P 500 firms)",
+  "time_period": "July 1, 2001 - December 31, 2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,019 observations, representing 297 acquiring firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SEC's EDGAR database (10-K filings, hand-collected)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat (annual)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (daily)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC (Thomson) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Financials (Inside Ownership and Institutional Investors)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bushee's (1998) classification of institutional investors (provided by Brian Bushee)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "First-stage abnormal goodwill construction regression (GDWLCONS on acquirer/target industry and acquirer growth)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "single business combinations",
+    "dv": {
+     "name": "GDWLCONS",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR 10-K (hand-collected)"
+    },
+    "key_ivs": [
+     {
+      "name": "INDACQ",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "INDTRG",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3: univariate portfolio sorts of disclosure score by goodwill/abnormal-goodwill and earnings-management proxies",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "single business combinations (713 observations)",
+    "dv": {
+     "name": "DISCSCORE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR 10-K (hand-collected)"
+    },
+    "key_ivs": [
+     {
+      "name": "GDWLCONS",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR 10-K (hand-collected)"
+     },
+     {
+      "name": "ABGDWL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed (Compustat SIC + I/B/E/S growth + hand-collected goodwill)"
+     },
+     {
+      "name": "EARNMAN-ACC",
+      "measure": "the frequency of unexpected accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "EARNMAN-MEET",
+      "measure": "the frequency of exactly meeting analysts' forecasts",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5: industry fixed-effects regression of disclosure score on alternative materiality metrics and controls",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "511 observations (single business combinations with full data; some specifications n=689)",
+    "dv": {
+     "name": "DISCSCORE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR 10-K (hand-collected)"
+    },
+    "key_ivs": [
+     {
+      "name": "LNCONS",
+      "measure": "the natural logarithm of the purchase price",
+      "source": "SEC EDGAR 10-K (hand-collected)"
+     },
+     {
+      "name": "RELCONS",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR 10-K (hand-collected) + CRSP/Compustat"
+     },
+     {
+      "name": "MAT1 / MAT5 / MAT10",
+      "measure": "three binary variables partitioning the sample by purchase price relative to acquirer total assets (1-5%, 5-10%, above 10%; base = below 1%)",
+      "source": "SEC EDGAR 10-K (hand-collected) + Compustat"
+     },
+     {
+      "name": "MATEAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR 10-K (hand-collected) + Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "YEAR (2002-2004 binary variables, base year 2001)",
+      "source": "deterministic (year)"
+     },
+     {
+      "name": "TA (acquirer's total assets at beginning of year)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CONSTYPE (ratio of stock consideration to purchase price)",
+      "source": "SEC EDGAR 10-K (hand-collected)"
+     },
+     {
+      "name": "STOCKCOMP (three-year average of restricted shares plus net option grants to CEO deflated by total CEO compensation)",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "INSOWN (shares held by insiders deflated by total shares outstanding)",
+      "source": "Thomson (Inside Ownership)"
+     },
+     {
+      "name": "INVDED (dedicated institutional ownership ratio)",
+      "source": "Thomson (Institutional Investors) / Bushee (1998)"
+     },
+     {
+      "name": "INVQUAS (quasi-indexer institutional ownership ratio)",
+      "source": "Thomson (Institutional Investors) / Bushee (1998)"
+     },
+     {
+      "name": "INVTRA (transient institutional ownership ratio)",
+      "source": "Thomson (Institutional Investors) / Bushee (1998)"
+     },
+     {
+      "name": "COUNTANA (number of analysts covering the acquirer)",
+      "source": "I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Determinants regression testing H1: disclosure score on abnormal goodwill and earnings-management proxies (industry fixed effects)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "DISCSCORE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR 10-K (hand-collected)"
+    },
+    "key_ivs": [
+     {
+      "name": "ABGDWL (abnormal goodwill)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed (Compustat SIC + I/B/E/S growth + hand-collected goodwill/purchase price)"
+     },
+     {
+      "name": "EARNMAN-ACC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat (Kothari et al. 2005 performance-matched modified Jones model)"
+     },
+     {
+      "name": "EARNMAN-MEET",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "YEAR (2002-2004 binary variables, base year 2001)",
+      "source": "deterministic (year)"
+     },
+     {
+      "name": "materiality (purchase-price to total-assets threshold / LNCONS)",
+      "source": "SEC EDGAR 10-K (hand-collected) + Compustat"
+     },
+     {
+      "name": "TA (acquirer's total assets at beginning of year)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CONSTYPE (ratio of stock consideration to purchase price)",
+      "source": "SEC EDGAR 10-K (hand-collected)"
+     },
+     {
+      "name": "STOCKCOMP (three-year average of restricted shares plus net option grants to CEO deflated by total CEO compensation)",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "INSOWN (shares held by insiders deflated by total shares outstanding)",
+      "source": "Thomson (Inside Ownership)"
+     },
+     {
+      "name": "INVDED (dedicated institutional ownership ratio)",
+      "source": "Thomson (Institutional Investors) / Bushee (1998)"
+     },
+     {
+      "name": "INVQUAS (quasi-indexer institutional ownership ratio)",
+      "source": "Thomson (Institutional Investors) / Bushee (1998)"
+     },
+     {
+      "name": "INVTRA (transient institutional ownership ratio)",
+      "source": "Thomson (Institutional Investors) / Bushee (1998)"
+     },
+     {
+      "name": "COUNTANA (number of analysts covering the acquirer)",
+      "source": "I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Future operating performance: change in ROA on disclosure level",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "change in ROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "disclosure level / abnormal disclosure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR 10-K (hand-collected)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Future stock returns association with abnormal disclosure level",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "stock returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "abnormal disclosure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR 10-K (hand-collected)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "abnormal stock returns around 10-K filing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "abnormal disclosure on business combinations",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR 10-K (hand-collected)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "earnings management",
+    "frequency of unexpected accruals",
+    "frequency of exactly meeting analysts' forecasts",
+    "disclosure"
+   ],
+   "mechanism_named": "eamings management",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "investors",
+    "disclosure levels"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "abnormal disclosure",
+    "performance",
+    "quality of the firm"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "disclosure score",
+    "goodness of the acquirer",
+    "quality of the business combination"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

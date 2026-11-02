@@ -1,0 +1,788 @@
+{
+ "paper_id": "10.1287_stsc.2021.0151",
+ "title": "Resource Reconfiguration During Technological Change",
+ "journal": "SS",
+ "year": 2022,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "resource reconfiguration",
+  "dynamic capabilities",
+  "organizational inertia",
+  "organizational learning"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "legacy_technology_orientation",
+      "relation": "increases",
+      "to": "inertia",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inertia",
+      "relation": "decreases",
+      "to": "likelihood_of_new_technology_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "legacy_technology_orientation",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "likelihood_of_new_technology_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inertia",
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "new_technology_alliance_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "inertia",
+     "moderated_from": "legacy_technology_orientation",
+     "moderated_to": "likelihood_of_new_technology_acquisition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "legacy_technology_orientation",
+      "relation": "increases",
+      "to": "inertia",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inertia",
+      "relation": "decreases",
+      "to": "likelihood_of_legacy_technology_divestiture",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inertia"
+   ],
+   "moderators": [
+    {
+     "construct": "new_technology_alliance_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "inertia",
+     "moderated_from": "legacy_technology_orientation",
+     "moderated_to": "likelihood_of_legacy_technology_divestiture",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "partial_integration_approach",
+      "relation": "increases",
+      "to": "legacy_transition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "legacy_transition",
+      "relation": "increases",
+      "to": "likelihood_of_product_market_survival",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "legacy_transition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "internal development"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "digital camera product market (spanning three industries: computing (SIC 3571, 3572, 3577, 5045), consumer electronics (SIC 5064, 5065), and photography (SIC 3861, 5043))",
+  "country_region": "United States",
+  "time_period": "1991-2006",
+  "sample_description": "longitudinal panel of firms in the mass market digital camera product market; new technology alliances, acquisitions, and legacy technology divestitures extracted from the Thomson Financial SDC (SDC Platinum) database and augmented with Lexis-Nexis and archival sources; control variable data from Compustat and other sources",
+  "sample_size": "62 firms, 843 firm-year observations"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "Thompson Financial SDC database (SDC) / SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poor Industry Survey Handbooks",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergent Online",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBIS World",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Firm annual reports",
+    "category": "other",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (first-stage control function estimation, multinomial logit)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "R&D spending (instrument for new technology dummy); technological breadth (instrument for integration approach dummy)",
+    "sample": "",
+    "dv": {
+     "name": "First-stage endogenous covariates (new technology dummy; integration approach dummy)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "USPTO; hand-collected camera model data; SDC; hand-collected archival integration coding"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D spending instrument (for new technology dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Technological breadth instrument (for integration approach dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "USPTO"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market size",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "Product market population density",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "CEO change dummy",
+      "source": "SDC Platinum, Lexis-Nexis, Capital IQ"
+     },
+     {
+      "name": "Restructuring event experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Organizational slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate diversification",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World; Compustat"
+     },
+     {
+      "name": "Prior alliance/acquisition/divestiture experience",
+      "source": "SDC Platinum, Lexis-Nexis"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 2 (Cox proportional hazards) - Legacy Reinforcement (acquisition)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Likelihood of new technology acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thompson Financial SDC database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Legacy technology orientation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "USPTO patent data; hand-collected camera model data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market size",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "Product market population density",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "CEO change dummy",
+      "source": "SDC Platinum, Lexis-Nexis, Capital IQ"
+     },
+     {
+      "name": "Restructuring event experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Organizational slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate diversification",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World; Compustat"
+     },
+     {
+      "name": "Prior alliance/acquisition/divestiture experience",
+      "source": "SDC Platinum, Lexis-Nexis"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "First-stage control function residual",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 5 (Cox proportional hazards) - Legacy Reinforcement (legacy divestiture)",
+    "hypotheses": [
+     "H1b"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Likelihood of legacy technology divestiture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thompson Financial SDC database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Legacy technology orientation",
+      "measure": "composite variable of the firm's patent portfolio and camera portfolio, [panalog=(panalog + pdigital)], composite via confirmatory factor analysis",
+      "source": "USPTO patent data; hand-collected camera model data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market size",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "Product market population density",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "CEO change dummy",
+      "source": "SDC Platinum, Lexis-Nexis, Capital IQ"
+     },
+     {
+      "name": "Restructuring event experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Organizational slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate diversification",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World; Compustat"
+     },
+     {
+      "name": "Prior alliance/acquisition/divestiture experience",
+      "source": "SDC Platinum, Lexis-Nexis"
+     },
+     {
+      "name": "Prior performance",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "First-stage control function residual",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 3 (Cox proportional hazards) - Legacy Attenuation (acquisition)",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Likelihood of new technology acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thompson Financial SDC database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Legacy technology orientation",
+      "measure": "composite of patent portfolio and camera portfolio, [panalog=(panalog + pdigital)], composite via CFA",
+      "source": "USPTO patent data; hand-collected camera model data"
+     },
+     {
+      "name": "New technology alliance experience (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thompson Financial SDC database (SDC); Lexis-Nexis and archival sources"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market size",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "Product market population density",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "CEO change dummy",
+      "source": "SDC Platinum, Lexis-Nexis, Capital IQ"
+     },
+     {
+      "name": "Restructuring event experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Organizational slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate diversification",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World; Compustat"
+     },
+     {
+      "name": "Prior alliance/acquisition/divestiture experience",
+      "source": "SDC Platinum, Lexis-Nexis"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "First-stage control function residual",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 6 (Cox proportional hazards) - Legacy Attenuation (legacy divestiture)",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Likelihood of legacy technology divestiture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thompson Financial SDC database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Legacy technology orientation",
+      "measure": "composite of patent portfolio and camera portfolio, [panalog=(panalog + pdigital)], composite via CFA",
+      "source": "USPTO patent data; hand-collected camera model data"
+     },
+     {
+      "name": "New technology alliance experience (moderator)",
+      "measure": "new technology alliance experience interacted with legacy technology orientation",
+      "source": "Thompson Financial SDC database (SDC); Lexis-Nexis and archival sources"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market size",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "Product market population density",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "CEO change dummy",
+      "source": "SDC Platinum, Lexis-Nexis, Capital IQ"
+     },
+     {
+      "name": "Restructuring event experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Organizational slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate diversification",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World; Compustat"
+     },
+     {
+      "name": "Prior alliance/acquisition/divestiture experience",
+      "source": "SDC Platinum, Lexis-Nexis"
+     },
+     {
+      "name": "Prior performance",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "First-stage control function residual",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Models 7-8 (Cox proportional hazards) - Legacy Transition (product market survival)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "technological breadth instrument (for endogenous integration approach, via first-stage control function)",
+    "sample": "",
+    "dv": {
+     "name": "Product market survival",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected (multidimensional exit classification per Josefy et al. 2017)"
+    },
+    "key_ivs": [
+     {
+      "name": "Integration approach",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Product market size",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "Product market population density",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World"
+     },
+     {
+      "name": "CEO change dummy",
+      "source": "SDC Platinum, Lexis-Nexis, Capital IQ"
+     },
+     {
+      "name": "Restructuring event experience",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Organizational slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate diversification",
+      "source": "Standard and Poor Industry Survey Handbooks, Mergent Online, IBIS World; Compustat"
+     },
+     {
+      "name": "Prior alliance/acquisition experience",
+      "source": "SDC Platinum, Lexis-Nexis"
+     },
+     {
+      "name": "Legacy technology orientation",
+      "source": "USPTO patent data; hand-collected camera model data"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "First-stage control function residual",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "partial approach to integration",
+    "adaptive potential of firms",
+    "full integration",
+    "full autonomy",
+    "legacy transition hypothesis"
+   ],
+   "mechanism_named": "legacy transition hypothesis",
+   "proposed_edge": {
+    "from": "partial approach to integration",
+    "relation": "increases",
+    "to": "adaptive potential of firms"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "technology acquisitions",
+    "firm performance and adaptability"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "technology acquisitions",
+    "relation": "increases",
+    "to": "firm performance and adaptability"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "acquisition activity",
+    "acquisition integration",
+    "firm outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition integration",
+    "relation": "affects",
+    "to": "firm outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "alliances",
+    "survival",
+    "resource reconfiguration mechanisms"
+   ],
+   "mechanism_named": "resource reconfiguration mechanisms",
+   "proposed_edge": {
+    "from": "alliances",
+    "relation": "increases",
+    "to": "survival"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "internal development strategy",
+    "internal development",
+    "legacy attenuation",
+    "transition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "internal development",
+    "relation": "affects",
+    "to": "legacy attenuation and transition"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "internal development",
+    "legacy attenuation",
+    "transition",
+    "corporate scope decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "internal development",
+    "relation": "affects",
+    "to": "legacy attenuation and transition"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "internal development",
+    "legacy attenuation",
+    "transition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "internal development",
+    "relation": "unspecified",
+    "to": "legacy attenuation and transition"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "integration",
+    "adaptation",
+    "survival"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "integration",
+    "relation": "affects",
+    "to": "adaptation and survival"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "alliances",
+    "acquisitions",
+    "legacy divestitures",
+    "firm exits"
+   ],
+   "mechanism_named": "rare event bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [],
+   "mechanism_named": "small sample bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "exits"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

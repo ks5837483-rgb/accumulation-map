@@ -1,0 +1,963 @@
+{
+ "paper_id": "10.1287_mnsc.2013.1801",
+ "title": "Entrepreneurial Exits and Innovation",
+ "journal": "MNSC",
+ "year": 2014,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "initial_public_offering",
+      "relation": "increases",
+      "to": "information_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_disclosure",
+      "relation": "decreases",
+      "to": "innovation_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "initial_public_offering",
+      "relation": "decreases",
+      "to": "experimentation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "experimentation",
+      "relation": "increases",
+      "to": "innovation_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_disclosure",
+    "experimentation"
+   ],
+   "moderators": [
+    {
+     "construct": "analyst_coverage",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_disclosure",
+     "moderated_from": "initial_public_offering",
+     "moderated_to": "innovation_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "within-IPO: analyst coverage x preclinical products"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "inventor-level turnover following exit events"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "initial_public_offering",
+      "relation": "increases",
+      "to": "information_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_disclosure",
+      "relation": "decreases",
+      "to": "innovation_quantity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_disclosure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "inventor-level turnover following exit events",
+    "preevent window dressing (filing patents to attract the audience)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "managerial_incentives_to_oversell_innovation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentives_to_oversell_innovation",
+      "relation": "increases",
+      "to": "innovation_quantity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_incentives_to_oversell_innovation"
+   ],
+   "moderators": [
+    {
+     "construct": "technology_overlap",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_incentives_to_oversell_innovation",
+     "moderated_from": "acquisition",
+     "moderated_to": "innovation_quantity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "within-M&A: technology overlap"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "inventor-level turnover following exit events"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "information_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_disclosure",
+      "relation": "decreases",
+      "to": "innovation_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_disclosure"
+   ],
+   "moderators": [
+    {
+     "construct": "private_acquirer",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_disclosure",
+     "moderated_from": "acquisition",
+     "moderated_to": "innovation_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "within-M&A: private vs public acquirer"
+    },
+    {
+     "construct": "technology_overlap",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_incentives_to_oversell_innovation",
+     "moderated_from": "acquisition",
+     "moderated_to": "innovation_quality",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "within-M&A: technology overlap"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "inventor-level turnover following exit events"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "human biotechnology industry (SIC codes 2833-2836); VC-backed biotechnology start-ups",
+  "country_region": "United States",
+  "time_period": "1980-2006 (firms founded 1980-2000, tracked yearly through 2006)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "476 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "VentureXpert",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Patent and Trademark Office data (incorporated in IQSS Patent Network database)",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson One Banker",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Zephyr",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Deloitte Recap RDNA",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Pharmaprojects",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Inteleos",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Jay Ritter's IPO data website",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC",
+    "category": "sdc",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (3-1..3-4), Post- vs. pre-IPO patent applications & forward citations",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "202 IPO firms, 3,498 firm-years; not CEM-matched (simple post vs. preevent within firm)",
+    "dv": {
+     "name": "Patent applications stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, postevent (1,3) [post-IPO window]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search (Factiva, Thomson One Banker, Zephyr, SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (3-3..3-4), Post- vs. pre-IPO forward patent citations",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "202 IPO firms, 3,498 firm-years; not CEM-matched",
+    "dv": {
+     "name": "Forward patent citations four years stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, postevent (1,3) [post-IPO window]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search (Factiva, Thomson One Banker, Zephyr, SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock (normalizing regressor)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (3-5..3-8), Post- vs. pre-M&A patent applications & forward citations",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "180 M&A firms, 2,934 firm-years; not CEM-matched",
+    "dv": {
+     "name": "Patent applications stock / Forward patent citations four years stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, postevent (1,3) [post-M&A window]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search (Factiva, Thomson One Banker, Zephyr, SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock (control for citation columns)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, IPO treatment vs. control (post-CEM), patent applications",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "CEM-balanced IPO treatment vs. control; 328 / 200 / 79 firms across the three columns",
+    "dv": {
+     "name": "Patent applications stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, post-IPO (1,3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search (Factiva, Thomson One Banker, Zephyr, SEC filings)"
+     },
+     {
+      "name": "Focal IPO sample",
+      "measure": "Dummy = 1 only for all firm-years (pre- and post-event) associated with a firm undergoing an IPO",
+      "source": "archival exit-event search"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, IPO treatment vs. control (post-CEM), forward citations",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "CEM-balanced IPO treatment vs. control; 328 / 200 / 79 firms",
+    "dv": {
+     "name": "Forward patent citations four years stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, post-IPO (1,3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search"
+     },
+     {
+      "name": "Focal IPO sample",
+      "measure": "Dummy = 1 only for all firm-years associated with a firm undergoing an IPO",
+      "source": "archival exit-event search"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, M&A treatment vs. control (post-CEM), patent applications",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "CEM-balanced M&A treatment vs. control; 396 / 260 / 96 firms",
+    "dv": {
+     "name": "Patent applications stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, post-M&A (1,3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search"
+     },
+     {
+      "name": "Focal M&A sample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, M&A treatment vs. control (post-CEM), forward citations",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "CEM-balanced M&A treatment vs. control; 396 / 260 / 96 firms",
+    "dv": {
+     "name": "Forward patent citations four years stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, post-M&A (1,3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search"
+     },
+     {
+      "name": "Focal M&A sample",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (6-1..6-4), 'Near' (withdrawn) vs. actual IPO/M&A events, post-CEM",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "Withdrawn/'near' IPO and M&A events (exit process started but not completed for reasons unrelated to innovation) used as the quasi-experimental control",
+    "sample": "post-CEM actual vs. near IPOs (168 firms, 1,612 firm-years) and actual vs. near M&As (175 firms, 2,154 firm-years)",
+    "dv": {
+     "name": "Patent applications stock / Forward patent citations four years stock",
+     "measure": "Stock of patent applications; Forward patent citations within four years of patents granted (log)",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, post-IPO (1,3)",
+      "measure": "Dummy = 1 for the one-to-three-year window after the IPO event",
+      "source": "archival exit-event search"
+     },
+     {
+      "name": "Focal, post-M&A (1,3)",
+      "measure": "Dummy = 1 for the one-to-three-year window after the M&A event",
+      "source": "archival exit-event search"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock (citation models)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (6-5..6-6), 2SLS IV for endogenous IPO vs. M&A choice",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "IPO vs. M&A biotechnology industry liquidity (ratio of quarters where biotech IPO deal volume's four-quarter moving average exceeded the prior-five-year quarterly average by 25% to the same count for M&As); first-stage F = 22.7",
+    "sample": "post-CEM firms undergoing either an IPO or M&A (IPO treatment); 179 firms, 1,049 firm-years",
+    "dv": {
+     "name": "Patent applications stock / Forward patent citations four years stock",
+     "measure": "Stock of patent applications; Forward patent citations within four years of patents granted (log), 2SLS",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "IPO year indicator (instrumented)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "archival exit-event search"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock (citation model)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (7-1..7-2), Within-IPO heterogeneity (analyst scrutiny x early-stage projects)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "within-IPO post-CEM sample; 129 firms, 891 firm-years",
+    "dv": {
+     "name": "Forward patent citations four years stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "L Analyst reports x L Preclinical products (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S (analyst reports); Inteleos/Pharmaprojects (preclinical products)"
+     },
+     {
+      "name": "L Analyst reports",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "L Preclinical products",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Inteleos/Pharmaprojects"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Patent applications stock (citation model)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (7-3..7-6), Within-M&A heterogeneity (private acquirer; technology overlap)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "within-M&A post-CEM sample; 170 firms (2,089 firm-years) and 119 firms (1,593 firm-years)",
+    "dv": {
+     "name": "Forward patent citations four years stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "Interaction term for the one-to-three-year window after the M&A event if acquired by a privately held entity (indicator variable)",
+      "source": "archival exit-event search"
+     },
+     {
+      "name": "Focal, post-M&A (1,3), technology overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IQSS Patent Network database (patent classes)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock (citation model)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Exit event window robustness (1,4 / 1,5 / 1,10 windows)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "IPO vs. M&A biotechnology industry liquidity (for the 2SLS IV columns 8-3, 8-6)",
+    "sample": "same CEM IPO-treatment, CEM M&A-treatment, and 2SLS IV specifications as Tables 4/5/6 with alternative event windows",
+    "dv": {
+     "name": "Patent applications stock / Forward patent citations four years stock",
+     "measure": "Stock of patent applications; Forward patent citations within four years of patents granted (log)",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, post-IPO (1,4)/(1,5)/(1,10)",
+      "measure": "Post-IPO event window dummies varying the horizon to 4, 5, and 10 years",
+      "source": "archival exit-event search"
+     },
+     {
+      "name": "Focal, post-M&A (1,4)/(1,5)/(1,10)",
+      "measure": "Post-M&A event window dummies varying the horizon to 4, 5, and 10 years",
+      "source": "archival exit-event search"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Weighted products",
+      "source": "Inteleos/Pharmaprojects"
+     },
+     {
+      "name": "L Patent applications stock (citation models)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9, Inventor-level analyses (post-IPO and post-M&A)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "inventor-year level; CEM-matched IPO/M&A treatment and actual-vs-near samples; 12,769 inventors (57,803 patents)",
+    "dv": {
+     "name": "Patent applications stock / Forward patent citations four years stock (inventor-year level)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IQSS Patent Network database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal, postevent (1,3)",
+      "measure": "Change in inventor innovation productivity in the one-to-three-year window after the event",
+      "source": "archival exit-event search"
+     },
+     {
+      "name": "Focal, postevent (1,3) x inventor change out",
+      "measure": "Interaction with change_out (indicator = 1 in the year an inventor who patented in a focal firm subsequently patents outside it)",
+      "source": "IQSS Patent Network database (inventor histories)"
+     },
+     {
+      "name": "Focal, postevent (1,3) x inventor change in",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IQSS Patent Network database (inventor histories)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "L Firm age",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L VC inflows stock",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "L Years since first invention (inventor age proxy)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "L Patent applications stock (citation models)",
+      "source": "IQSS Patent Network database"
+     },
+     {
+      "name": "Event year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "patent data",
+    "innovation",
+    "patenting channel"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "biotechnology",
+    "generalizability"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "M&A withdrawal announcements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "instrumental variable",
+    "exclusion restriction"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,440 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2008.01355.x",
+ "title": "The Market for Mergers and the Boundaries of the Firm",
+ "journal": "JF",
+ "year": 2008,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "property rights theory of the firm",
+  "search and matching theory",
+  "assortative matching theory",
+  "incomplete contracts theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "asset_complementarity",
+      "relation": "increases",
+      "to": "assortative_matching",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     },
+     {
+      "from": "assortative_matching",
+      "relation": "increases",
+      "to": "market_to_book_similarity",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "assortative_matching"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "industry and time-series clustering of merger activity (valuation waves) producing similar market-to-book ratios",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "search_costs",
+      "relation": "decreases",
+      "to": "assortative_matching",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "assortative_matching",
+      "relation": "decreases",
+      "to": "market_to_book_spread",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "assortative_matching"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "q-theory of mergers (which predicts market-to-book spreads should widen, not narrow, as search costs drop)",
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (mergers across all industries, spanning the Fama-French 12-industry classification)",
+  "country_region": "United States",
+  "time_period": "1980-2001",
+  "sample_description": "merger transactions between publicly listed bidders and targets in the United States; merger data from Securities Data Corporation's (SDC) M&A database, market-to-book computed by matching fiscal year-end Compustat data with CRSP market values",
+  "sample_size": "3,400 merger transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation's M&A database (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Kenneth French's website (NYSE market-to-book decile breakpoints)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Harford (2005) C&I spread data (shared by Jarrad Harford)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "3,357 mergers between publicly traded bidders and targets, 1980-2001",
+    "dv": {
+     "name": "merger frequency by decile pairing",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation's M&A database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer market-to-book decile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kenneth French's website (NYSE market-to-book decile breakpoints)"
+     },
+     {
+      "name": "target market-to-book decile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kenneth French's website (NYSE market-to-book decile breakpoints)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "3,400 total mergers, 1981-2001",
+    "dv": {
+     "name": "Scaled M/B Difference",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "merger subsample category (relative bidder/target valuation)",
+      "measure": "subgroups: Target Exceeds Acquirer M/B, Acquirer Exceeds Target M/B, both above/below respective industry median, target above/acquirer below, acquirer above/target below",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table IV, Panel A: Summary Statistics for Actual vs. Hypothetical (pseudo) Mergers (t-tests of difference in means)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "key variables compared across actual vs. hypothetical mergers",
+     "measure": "mean values of Acq.(M/B) - Targ.(M/B), |Acq.(M/B) - Targ.(M/B)|, and Delta Market Equity, with t(diff) and p-value",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "market-to-book spread",
+      "measure": "Acq.(M/B) - Targ.(M/B) and its absolute value |Acq.(M/B) - Targ.(M/B)|",
+      "source": "Compustat"
+     },
+     {
+      "name": "Delta Market Equity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table IV, Panel B: Probit Estimates (probability of being an actual merger)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "merger indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Corporation's M&A database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "absolute market-to-book spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Delta Market Equity",
+      "source": "CRSP"
+     },
+     {
+      "name": "|Delta Market Equity|",
+      "source": "CRSP"
+     },
+     {
+      "name": "Dummy:Acq.(M/B) > Targ.(M/B)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder-target ln(M/B) differential",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "valuation period (search cost proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VI: Time-series regressions of M/B spread on liquidity (C&I spread) and merger count",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "quarterly time series",
+    "dv": {
+     "name": "quarterly market-to-book spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "C&I spread (liquidity proxy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Harford (2005) C&I spread data (shared by Jarrad Harford)"
+     },
+     {
+      "name": "merger count",
+      "measure": "the number of mergers in that quarter",
+      "source": "Securities Data Corporation's M&A database (SDC)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "asset complementarities",
+    "merger activity"
+   ],
+   "mechanism_named": "asset complementarities",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "perceived asset complementarities",
+    "pre-announcement details of merger activity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "perceived asset complementarities",
+    "relation": "affects",
+    "to": "pre-announcement details of merger activity"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "merger activity",
+    "assortative matching models"
+   ],
+   "mechanism_named": "assortative matching models",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "misvaluation",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "misvaluation",
+   "proposed_edge": {
+    "from": "assortative matching",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "diversifying mergers",
+    "assortative matching"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "diversifying mergers",
+    "relation": "affects",
+    "to": "assortative matching"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "long-run valuation consequences of mergers",
+    "degree of assortative matching"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "degree of assortative matching",
+    "relation": "affects",
+    "to": "long-run valuation consequences of mergers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "like buys like mergers",
+    "shed unrelated assets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "like buys like mergers",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "like buys like transactions",
+    "better governed firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "better governed firms",
+    "relation": "affects",
+    "to": "like buys like transactions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "assortative matching",
+    "conglomerate firms trade at a discount"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "assortative matching",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "market reaction"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "negative reaction",
+    "acquirer stock prices",
+    "overvalued"
+   ],
+   "mechanism_named": "the acquirer is overvalued",
+   "proposed_edge": {
+    "from": "acquirer is overvalued",
+    "relation": "decreases",
+    "to": "acquirer stock prices"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "market reactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

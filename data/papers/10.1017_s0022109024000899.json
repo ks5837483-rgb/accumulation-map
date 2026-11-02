@@ -1,0 +1,860 @@
+{
+ "paper_id": "10.1017_s0022109024000899",
+ "title": "How Are Firms Sold? The Role of Common Ownership",
+ "journal": "JFQA",
+ "year": 2025,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "common ownership theory",
+  "auction theory",
+  "corporate governance theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "decreases",
+      "to": "competition_in_firm_sale_process",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competition_in_firm_sale_process",
+      "relation": "increases",
+      "to": "likelihood_of_auction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competition_in_firm_sale_process"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "increases",
+      "to": "competition_in_firm_sale_process",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competition_in_firm_sale_process",
+      "relation": "increases",
+      "to": "likelihood_of_auction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "increases",
+      "to": "[withheld: wording matches the source]",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "[withheld: wording matches the source]",
+      "relation": "increases",
+      "to": "likelihood_of_auction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competition_in_firm_sale_process",
+    "[withheld: wording matches the source]"
+   ],
+   "moderators": [
+    {
+     "construct": "deal_initiated_by_cross_owned_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "competition_in_firm_sale_process",
+     "moderated_from": "common_ownership_among_acquirers",
+     "moderated_to": "likelihood_of_auction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "unobserved firm characteristics or reverse causality driving both common ownership among acquirers and the sale decision (endogeneity)"
+   ]
+  },
+  {
+   "hypothesis": "avoidance_channel",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "increases",
+      "to": "target_avoidance_of_cross_owned_acquirers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_avoidance_of_cross_owned_acquirers",
+      "relation": "decreases",
+      "to": "merger_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_avoidance_of_cross_owned_acquirers"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "bargaining_channel",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "increases",
+      "to": "target_hard_bargaining",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_hard_bargaining",
+      "relation": "increases",
+      "to": "all_cash_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "increases",
+      "to": "target_hard_bargaining",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_hard_bargaining",
+      "relation": "increases",
+      "to": "deal_tenor",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_hard_bargaining"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "information_sharing_channel",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "increases",
+      "to": "information_leakage_risk_in_negotiation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_leakage_risk_in_negotiation",
+      "relation": "increases",
+      "to": "likelihood_of_auction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_leakage_risk_in_negotiation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "deal_quality",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_ownership_among_acquirers",
+      "relation": "increases",
+      "to": "competition_in_firm_sale_process",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competition_in_firm_sale_process",
+      "relation": "increases",
+      "to": "deal_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competition_in_firm_sale_process"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Antón et al. (2022) acquirer–rival cross-ownership as the driver of the returns"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public firms; M&As spanning various industries, with acquirer industry fixed effects)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1993-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,009 M&A bids"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Refinitiv Securities Data Company (SDC) Platinum M&A Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Financial CDA/Spectrum Institutional (13F) database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hand-collected data on the firm selling process (auction vs. negotiation, confidentiality agreements, number of interested buyers, deal initiator, initiation day) from acquirer and target SEC filings on EDGAR",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "List of mergers between financial institutions compiled by Lewellen and Lowry (2021), augmenting He and Huang (2017) (instrument source)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 Panel B (Baseline: likelihood the firm is sold through auction)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,009 (980 with full target characteristics) U.S. public-firm M&A bids announced 1993-2016, deal value >= $150M and >= 1% of acquirer equity",
+    "dv": {
+     "name": "Auction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer toehold",
+      "source": "SDC Platinum M&A Database"
+     },
+     {
+      "name": "Same SIC3 industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target defense dummy",
+      "source": "SDC Platinum M&A Database"
+     },
+     {
+      "name": "# Acquirer-target common owners",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     },
+     {
+      "name": "Acquirer institutional ownership",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     },
+     {
+      "name": "Acquirer market-to-book",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Acquirer Ln(size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market leverage",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Acquirer cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target institutional ownership",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     },
+     {
+      "name": "Target market-to-book",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Target Ln(size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target market leverage",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Target cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "Columns 2/5 exclude 2007-2009 bids; columns 3/6 re-measure common ownership excluding the Blackrock-BGI merger",
+    "dv": {
+     "name": "Auction",
+     "measure": "the takeover auction dummy (=1 if the target is sold through auction, 0 if negotiation); second-stage dependent variable",
+     "source": "Hand-collected from SEC filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "Fitted # common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal characteristics (acquirer toehold, same SIC3, target defense dummy, # acquirer-target common owners)",
+      "source": "SDC Platinum M&A Database / 13F"
+     },
+     {
+      "name": "Acquirer characteristics (institutional ownership, market-to-book, Ln size, ROA, market leverage, cash holdings)",
+      "source": "Compustat/CRSP/13F"
+     },
+     {
+      "name": "Target characteristics (institutional ownership, market-to-book, Ln size, ROA, market leverage, cash holdings)",
+      "source": "Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "Clean sample = Group A + Group B only; 722 obs (700 with target characteristics)",
+    "dv": {
+     "name": "Auction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal characteristics",
+      "source": "SDC Platinum M&A Database / 13F"
+     },
+     {
+      "name": "Acquirer characteristics",
+      "source": "Compustat/CRSP/13F"
+     },
+     {
+      "name": "Target characteristics",
+      "source": "Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Merger likelihood; pseudo acquirer-target pair method of Bena and Li (2014))",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Real acquirer-target pairs plus five random or industry-size matched pseudo acquirers per target; 5,964 (random) / 5,837 (industry-size matched) pair-observations; columns 1/3 linear probability, columns 2/4 conditional logit",
+    "dv": {
+     "name": "Real Acquirer-Target Pair",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum M&A Database (real pairs) + constructed pseudo acquirers"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "# Acquirer-target common owners",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     },
+     {
+      "name": "Acquirer institutional ownership",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     },
+     {
+      "name": "Acquirer Ln(size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer market-to-book",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Acquirer market leverage",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "929 of the 980 sample deals with an identifiable deal initiator in SEC filings",
+    "dv": {
+     "name": "Deal initiated by target / by acquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal characteristics",
+      "source": "SDC Platinum M&A Database / 13F"
+     },
+     {
+      "name": "Acquirer characteristics",
+      "source": "Compustat/CRSP/13F"
+     },
+     {
+      "name": "Target characteristics",
+      "source": "Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B (Interaction between deal initiation and common ownership on likelihood of auction)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Target-initiated (386), acquirer-initiated (543), all M&As (929)",
+    "dv": {
+     "name": "Auction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     },
+     {
+      "name": "# Common owners x Target-initiated",
+      "measure": "interaction of # Common owners with the target-initiated indicator (column 3, full sample); columns 1-2 split by target-initiated vs acquirer-initiated subsamples",
+      "source": "Hand-collected from SEC filings (EDGAR)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A Col 1 (Deal completion)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Completed deals supplemented with withdrawn deals over 1993-2016 (deal value >= $150M, relative size >= 1%); 2,447 obs",
+    "dv": {
+     "name": "Completed",
+     "measure": "an indicator for completed deals",
+     "source": "SDC Platinum M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A Col 2 (Target's relative gain)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "980 obs",
+    "dv": {
+     "name": "Relative Gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A Cols 3-4 (Bid premium; two versions)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "958 obs (42-day premium) / 908 obs (initiation-day premium; fewer because initiation day identified for 929 deals and offer price missing for 22)",
+    "dv": {
+     "name": "Bid Premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / hand-collected initiation day from SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A Col 5 (All-cash payment)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "980 obs",
+    "dv": {
+     "name": "All Cash",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A Col 6 (Deal tenor)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "929 obs (deals with identifiable initiation day)",
+    "dv": {
+     "name": "Deal Tenor",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel B (Interaction between target bargaining power and common ownership on likelihood of auction)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "980 obs",
+    "dv": {
+     "name": "Auction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (EDGAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners x bargaining-power proxy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hoberg and Phillips (2010) TNIC / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "980 obs (929 obs for the (Initiation,+1) window)",
+    "dv": {
+     "name": "Acquirer-target combined CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal, acquirer, and target characteristics",
+      "source": "SDC/Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (Common ownership and post-acquisition acquirer operating performance)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Fewer than 1,009 obs (columns 1-3) due to missing ROA; column 4 fewer due to unidentified deal initiation",
+    "dv": {
+     "name": "Post-Acquisition ROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "# Common owners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial CDA/Spectrum Institutional (13F) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target-initiated indicator and # Common owners x Target-initiated (column 4)",
+      "source": "Hand-collected from SEC filings (EDGAR)"
+     },
+     {
+      "name": "Deal characteristics (acquirer toehold, same SIC3, target defense dummy)",
+      "source": "SDC Platinum M&A Database"
+     },
+     {
+      "name": "Acquirer characteristics",
+      "source": "Compustat/CRSP/13F"
+     },
+     {
+      "name": "Industry (Fama-French 48) fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "common ownership",
+    "anticompetitive effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "common ownership",
+     "anticompetitive effects"
+    ]
+   }
+  }
+ ]
+}

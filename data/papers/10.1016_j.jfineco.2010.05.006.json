@@ -1,0 +1,831 @@
+{
+ "paper_id": "10.1016_j.jfineco.2010.05.006",
+ "title": "Firm values and sovereign wealth fund investments",
+ "journal": "JFE",
+ "year": 2010,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "agency theory",
+  "corporate governance / blockholder theory",
+  "private benefits of control (tunneling) theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "swf_share_acquisition",
+      "relation": "increases",
+      "to": "information_conveyed_about_firm_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_conveyed_about_firm_value",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_conveyed_about_firm_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the announcement-window abnormal return reflects concurrent confounding news (earnings, capital-structure changes, or M&A) rather than the SWF transaction itself"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "swf_share_divestment",
+      "relation": "decreases",
+      "to": "information_conveyed_about_firm_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_conveyed_about_firm_value",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "swf_share_divestment",
+      "relation": "decreases",
+      "to": "monitoring_services",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "monitoring_services",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_conveyed_about_firm_value",
+    "monitoring_services"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the divestment-window abnormal return reflects concurrent confounding news rather than the SWF sale itself"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "share_sought",
+      "relation": "increases",
+      "to": "monitoring_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_gains",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "share_sought",
+      "relation": "increases",
+      "to": "tunneling_losses",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "tunneling_losses",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring_gains",
+    "tunneling_losses"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the observed ownership-value relation is spurious / driven by endogeneity and unobserved heterogeneity in contracting environments (Himmelberg, Hubbard, and Palia, 1999)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "share_sold",
+      "relation": "decreases",
+      "to": "monitoring_gains",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "monitoring_gains",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "share_sold",
+      "relation": "decreases",
+      "to": "tunneling_losses",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "tunneling_losses",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring_gains",
+    "tunneling_losses"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "not_reported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "full_control_acquisition",
+      "relation": "decreases",
+      "to": "tunneling_losses",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "tunneling_losses",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "tunneling_losses"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "premium_paid",
+      "relation": "increases",
+      "to": "private_benefits_of_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_benefits_of_control",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_benefits_of_control"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "premium_paid",
+      "relation": "increases",
+      "to": "private_benefits_of_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_benefits_of_control",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_benefits_of_control"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "initial_investment",
+      "relation": "increases",
+      "to": "information_surprise",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_surprise",
+      "relation": "increases",
+      "to": "stock_price_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_surprise"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "regulated_industry_target",
+      "relation": "increases",
+      "to": "swf_influence_over_government_actions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "swf_influence_over_government_actions",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "swf_influence_over_government_actions"
+   ],
+   "moderators": [
+    {
+     "construct": "fund_transparency",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "swf_influence_over_government_actions",
+     "moderated_from": "regulated_industry_target",
+     "moderated_to": "firm_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P9b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P10",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "regulated_industry_target",
+      "relation": "increases",
+      "to": "swf_influence_over_government_actions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "swf_influence_over_government_actions",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "swf_influence_over_government_actions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P11",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "home_country_target",
+      "relation": "increases",
+      "to": "inside_government_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inside_government_information",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inside_government_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P12",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "truman_index",
+      "relation": "increases",
+      "to": "fund_management_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "fund_management_quality",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "truman_index",
+      "relation": "increases",
+      "to": "fund_transparency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "fund_transparency",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "fund_management_quality",
+    "fund_transparency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P13",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "truman_index",
+      "relation": "increases",
+      "to": "fund_selection_skill",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "fund_selection_skill",
+      "relation": "increases",
+      "to": "long_run_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "fund_selection_skill"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P14",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "government_favorable_decision",
+      "relation": "increases",
+      "to": "target_firm_economic_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_firm_economic_benefits",
+      "relation": "increases",
+      "to": "long_run_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_firm_economic_benefits"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (target firms of sovereign wealth fund investments; concentrated in finance, real estate, and manufacturing, plus regulated industries: financial firms, utilities, or airlines)",
+  "country_region": "US and non-US target firms (sample dominated by Asian firms; SWFs based in Singapore, UAE, Malaysia, Norway, etc.)",
+  "time_period": "January 1987-April 2008 (investments); January 1996-December 2008 (divestments)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "227 purchase events (202 in the clean announcement sample) and 47 clean divestment transactions"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis and Factiva news source databases",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Sovereign Wealth Fund Institute Web site (and fund Web sites)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Extensive search of the public press for SWF monitoring/influence events (hand-collected)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5 - Announcement period abnormal returns (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "227 full / 202 clean SWF investment events (Jan 1987-Apr 2008); 47 clean divestment events (1996-2008)",
+    "dv": {
+     "name": "cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF share acquisition/divestment announcement",
+      "measure": "announcement of an SWF purchase or sale of target-firm shares (full and clean samples; direct vs. subsidiary investment subsamples; Norway vs. non-Norway divestment subsamples)",
+      "source": "SDC / Lexis / Factiva"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Investment sample cross-sectional OLS regressions of announcement CAR",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "clean announcement investment sample plus direct and subsidiary target subsamples (Jan 1987-Apr 2008)",
+    "dv": {
+     "name": "announcement period CAR [-1, +1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "Share sought",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Share sought squared",
+      "measure": "square of Share sought",
+      "source": "SDC"
+     },
+     {
+      "name": "Full control",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Lexis / Factiva"
+     },
+     {
+      "name": "Premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Lexis / Factiva"
+     },
+     {
+      "name": "Initial",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Regulated",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected"
+     },
+     {
+      "name": "Home country",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected"
+     },
+     {
+      "name": "Truman",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Truman x Regulated interaction",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Real estate (target firm industry dummy)",
+      "source": "hand-collected"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Divestment sample cross-sectional OLS regressions of announcement CAR",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "clean divestment sample plus Norway and non-Norway divestment subsamples (1996-2008)",
+    "dv": {
+     "name": "announcement period CAR [-1, +1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "Share sold",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Lexis / Factiva"
+     },
+     {
+      "name": "Share sold squared",
+      "measure": "square of Share sold",
+      "source": "Lexis / Factiva"
+     },
+     {
+      "name": "Premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Lexis / Factiva"
+     },
+     {
+      "name": "Exit",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Lexis / Factiva"
+     },
+     {
+      "name": "Regulated",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected"
+     },
+     {
+      "name": "Home country",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected"
+     },
+     {
+      "name": "Truman",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Truman x Regulated interaction",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Lexis / Factiva"
+     },
+     {
+      "name": "Norway SWF (dummy set equal to one for divestments by Norway wealth funds)",
+      "source": "Lexis / Factiva"
+     }
+    ]
+   },
+   {
+    "label": "Long-run abnormal returns following SWF transactions (1-, 3-, 5-year horizons)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "SWF investment and divestment target firms",
+    "dv": {
+     "name": "long-run abnormal stock returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF investment/divestment announcement",
+      "measure": "SWF share purchase or divestment transaction",
+      "source": "SDC / Lexis / Factiva"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Post-investment SWF monitoring/influence activity related to target long-run returns",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "SWF investment target firms",
+    "dv": {
+     "name": "target long-run returns",
+     "measure": "target firm long-run abnormal returns",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "post-investment SWF monitoring/influence activity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "public press (Lexis / Factiva), hand-collected"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "swf portfolio returns",
+    "fund portfolio performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "swf investors",
+    "firm values",
+    "monitoring or lobbying services",
+    "tunneling"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "swf investors",
+    "relation": "affects",
+    "to": "firm values"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "truman index",
+    "fund attributes",
+    "swf transactions",
+    "firm values"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "truman index",
+    "on_path": [
+     "swf transactions",
+     "firm values"
+    ]
+   }
+  }
+ ]
+}

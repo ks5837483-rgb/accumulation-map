@@ -1,0 +1,296 @@
+{
+ "paper_id": "10.2307_2330914",
+ "title": "Abnormal Returns from Merger Profiles",
+ "journal": "JFQA",
+ "year": 1983,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient market hypothesis",
+  "learning-lag effect",
+  "market for corporate control",
+  "capital asset pricing model"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "financial_profile_resemblance",
+      "relation": "increases",
+      "to": "perception_as_merger_candidate",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perception_as_merger_candidate",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "financial_profile_resemblance",
+      "relation": "increases",
+      "to": "fundamental_change",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "fundamental_change",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perception_as_merger_candidate",
+    "fundamental_change"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the abnormal returns are attributable merely to the activity of merging (the selected firms actually being acquired)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms spanning 64 different four-digit SIC industries, listed on NYSE, AMEX, and OTC)",
+  "country_region": "United States (NYSE, American Stock Exchange, and over-the-counter listed firms)",
+  "time_period": "1973-1978",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "754 firms (from which Top 25 and Top 50 portfolios were selected)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat Industrial Research tape",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "44 firms acquired during 1975-1976 plus 44 randomly selected nonmerged firms with matching fiscal years (88 firms)",
+    "dv": {
+     "name": "group (merged vs. nonmerged) financial profile variables",
+     "measure": "means and standard deviations of the profile variables by group; null hypothesis of equality of group means tested with an F-test (rejected at .0001 level)",
+     "source": "Compustat Industrial Research tape"
+    },
+    "key_ivs": [
+     {
+      "name": "price-earnings ratio (x1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "natural logarithm of net sales (x3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "compound growth in net sales (x4)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "market value of equity to total assets (x5)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Classification functions (equations 6 and 7; discriminant analysis, BMDP7M)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "88 firms (44 acquired 1975-1976 + 44 randomly selected nonmerged); five variables retained from an original 20 across ten financial/market dimensions",
+    "dv": {
+     "name": "group membership (merged vs. nonmerged)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat Industrial Research tape"
+    },
+    "key_ivs": [
+     {
+      "name": "price-earnings ratio (x1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "natural logarithm of net sales (x3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "compound growth in net sales (x4)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     },
+     {
+      "name": "market value of equity to total assets (x5)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industrial Research tape"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Intertemporal stability test (apply classification functions to 1977 acquisitions)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "classification accuracy (group membership)",
+     "measure": "correct classification rate from applying equations 6 and 7 (estimated on 1976-or-earlier data); 69.2 percent correct, tested against chance classification of 50 percent (significant at .01 level)",
+     "source": "Compustat Industrial Research tape"
+    },
+    "key_ivs": [
+     {
+      "name": "financial profile classification score (equations 6 and 7)",
+      "measure": "classification scores computed from the same five profile variables (x1-x5)",
+      "source": "Compustat Industrial Research tape"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "101 firms that merged during 1973-1977",
+    "dv": {
+     "name": "cumulative average residuals (abnormal returns)",
+     "measure": "cumulative average residuals from the market model return-generating process, cumulated over the 30 months prior to merger; market portfolio proxy = NYSE value-weighted index",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "actual merger status",
+      "measure": "firms that actually merged during 1973-1977 (identified from Compustat Industrial Research tape with sufficient data for variable and return calculations)",
+      "source": "Compustat Industrial Research tape"
+     }
+    ],
+    "controls": [
+     {
+      "name": "beta (systematic risk; leading and symmetric estimation approaches)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 & Figure 2 - Average residuals, CARs, and betas for Top 25 and Top 50 portfolios (vs. 754 firms), March 1977-December 1978",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "754 firms with December fiscal year-end and required Compustat data; portfolios of the Top 25 and Top 50 firms by resemblance, purchased March 31, 1977",
+    "dv": {
+     "name": "cumulative average residuals (abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "posterior probability P_ij = exp(S_ij) / Sum_j exp(S_ij) from classification scores; Top 25 = firms with posterior probability of .92 or greater, Top 50 = .85 or better",
+      "source": "Compustat Industrial Research tape"
+     }
+    ],
+    "controls": [
+     {
+      "name": "beta (average systematic risk of selected firms)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "firm size",
+    "mergers",
+    "abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "firm size",
+    "relation": "unspecified",
+    "to": "abnormal returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "sales",
+    "size",
+    "abnormal returns"
+   ],
+   "mechanism_named": "the effect of \nsize",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "abnormal returns",
+    "price-earnings effect",
+    "shifts in fundamental factors"
+   ],
+   "mechanism_named": "the price-earnings effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "ex post disequilibrium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

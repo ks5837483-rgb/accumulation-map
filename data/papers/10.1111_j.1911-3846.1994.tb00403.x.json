@@ -1,0 +1,272 @@
+{
+ "paper_id": "10.1111_j.1911-3846.1994.tb00403.x",
+ "title": "The Effect of Corporate Merger Transactions on the Information Content of Earnings Announcements*",
+ "journal": "CAR",
+ "year": 1994,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "earnings response coefficient framework",
+  "information economics",
+  "rational expectations"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "premerger_earnings_response_coefficients",
+      "relation": "increases",
+      "to": "market_valuation_of_estimated_source_earnings",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "market_valuation_of_estimated_source_earnings",
+      "relation": "increases",
+      "to": "postmerger_earnings_response_coefficient",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_valuation_of_estimated_source_earnings"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_earnings_variability",
+      "relation": "increases",
+      "to": "market_assessment_of_earnings_source",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_assessment_of_earnings_source",
+      "relation": "increases",
+      "to": "relative_weight_on_premerger_erc",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_assessment_of_earnings_source"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "relative firm size (premerger sales / net income ratio) rather than relative earnings variability drives the weighting of combined-firm earnings"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (completed corporate mergers of publicly traded firms with Value Line and CRSP coverage)",
+  "country_region": "United States (data from CRSP, Value Line, and The Wall Street Journal)",
+  "time_period": "1972-1983 (transactions); 1969-1988 (estimation and testing data)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "90 mergers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Value Line analysts' forecasts",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP tape",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Distributional characteristics of estimated coefficients (parameters of equation (4)) for Groups A, B, and AB",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "estimated ERC parameters of equation (4)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Value Line analysts' forecasts; CRSP tape"
+    },
+    "key_ivs": [
+     {
+      "name": "RVL (relative variability)",
+      "measure": "coefficient on the RVL variable in equation (4)",
+      "source": "Value Line analysts' forecasts"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "postmerger Firm AB estimated ERC (Group AB)",
+     "measure": "estimated postmerger Firm AB ERC (K_AB)",
+     "source": "Value Line analysts' forecasts; CRSP tape"
+    },
+    "key_ivs": [
+     {
+      "name": "premerger Firm A estimated ERC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Value Line analysts' forecasts; CRSP tape"
+     },
+     {
+      "name": "premerger Firm B estimated ERC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Value Line analysts' forecasts; CRSP tape"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Postmerger ERC regressed on premerger ERCs within 10 variability-ratio groups; correlation between variability ratio and coefficient ratio (approximate randomization)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "postmerger estimated ERC / ratio of estimated regression coefficients",
+     "measure": "for each of 10 groups the postmerger estimated ERC (K_AB) regressed on premerger ERCs of the combining firms; product-moment correlation between mean group variability ratio and ratio of estimated regression coefficients (0.555)",
+     "source": "Value Line analysts' forecasts; CRSP tape"
+    },
+    "key_ivs": [
+     {
+      "name": "estimated variability ratio",
+      "measure": "relative premerger earnings variability of combining firms; sample divided into 10 equal-size groups by magnitude of the estimated variability ratio",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Correlations between mean variability ratio and coefficient ratio for various group sizes (sensitivity of Table 5)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ratio of estimated regression coefficients (coefficient ratio)",
+     "measure": "product-moment correlation between mean group variability ratio and coefficient ratio, repeated for 15, 9, and 6 groups",
+     "source": "Value Line analysts' forecasts; CRSP tape"
+    },
+    "key_ivs": [
+     {
+      "name": "estimated variability ratio",
+      "measure": "mean group values of the estimated variability ratio across group sizes 6, 10, and 15",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 - Comparison to alternative explanatory variable: coefficient ratio regressed/correlated by premerger sales-ratio group",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ratio of estimated regression coefficients (coefficient ratio)",
+     "measure": "product-moment correlation between mean group sales ratio and ratio of the estimated regression coefficients (0.255)",
+     "source": "Value Line analysts' forecasts; CRSP tape"
+    },
+    "key_ivs": [
+     {
+      "name": "sales ratio (relative premerger firm size)",
+      "measure": "ratio of premerger sales of the combining firms",
+      "source": ""
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "changes in the conqxjsition of firms' businesses"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "business combinations",
+    "restructuring programs",
+    "spin-off or liquidation of major subsidiaries"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "parameter estimates",
+    "piece-wise regression approach"
+   ],
+   "mechanism_named": "piece-wise regression approach",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "controls",
+    "sample size",
+    "data collection effort"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

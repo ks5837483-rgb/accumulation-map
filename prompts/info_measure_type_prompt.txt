@@ -1,0 +1,16 @@
+info_measure_type v1 (2026-11-01) — prompt of record. For each CAUSE (X) label from the M&A information-economics chains, decide what
+kind of measure it is, by reading the label and its example chain (X -> mechanism -> Y).
+kind:
+  "firm_or_deal_proxy"   = a characteristic of a firm, industry, relationship or deal used to stand in for an information condition
+                           (e.g., intangible intensity, same-cluster location, cross-border, private target, payment method, bank reputation)
+  "info_amount"          = quantity of information (disclosure length, file size, number of filings/reports, coverage counts)
+  "info_complexity"      = readability / linguistic complexity / tone / fog of text
+  "info_quality_proxy"   = a summary quality score or reporting-quality construct (reporting quality, accruals quality, audit quality,
+                           disclosure quality index, analyst forecast accuracy/dispersion as a quality proxy)
+  "info_attribute"       = a DIRECT attribute of the information itself as theorized in information economics: precision, verifiability,
+                           timeliness, specificity/hardness vs softness, who holds it (private vs public), credibility of a particular signal
+  "info_event_or_access" = an event or change in access to information (disclosure regulation, patent-library opening, AIPA, EDGAR,
+                           analyst exits, site visits, data breaches)
+  "not_information"      = not about information (governance, incentives, capabilities, competition, etc.)
+STRICT JUDGMENT RULE: decide by reading every label; no scripts, regexes or keyword lists to assign kinds. Code only to read/write files.
+Output one JSON per line: {"label","kind","confidence","note"} (note <= 10 words).

@@ -1,0 +1,602 @@
+{
+ "paper_id": "10.1111_joms.12335",
+ "title": "Viceroys or Emperors? An Institution‐Based Perspective on Merger and Acquisition Prevalence and Shareholder Value",
+ "journal": "JMS",
+ "year": 2018,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "institution-based view",
+  "principal-agency theory",
+  "principal-principal agency theory",
+  "signaling theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "anti_director_rights",
+      "relation": "decreases",
+      "to": "managerial_opportunism",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_opportunism",
+      "relation": "increases",
+      "to": "m&a_prevalence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_opportunism"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "anti_director_rights",
+      "relation": "decreases",
+      "to": "managerial_discretion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_discretion",
+      "relation": "increases",
+      "to": "m&a_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_discretion"
+   ],
+   "moderators": [
+    {
+     "construct": "anti_director_rights",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "m&a_prevalence",
+     "moderated_to": "m&a_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "anti_self_dealing_laws",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "m&a_prevalence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "anti_self_dealing_laws",
+      "relation": "decreases",
+      "to": "target_shareholder_resistance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_shareholder_resistance",
+      "relation": "decreases",
+      "to": "m&a_prevalence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "target_shareholder_resistance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "anti_self_dealing_laws",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "m&a_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "anti_self_dealing_laws",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "m&a_prevalence",
+     "moderated_to": "m&a_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&As of firms worldwide, no focal sector)",
+  "country_region": "73 countries worldwide",
+  "time_period": "1970-2007",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "91 unique studies with 288 effect sizes (meta-analysis); prevalence data for 73 countries"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "ThomsonOne",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Revised ADR index and ASD index (Djankov and associates, 2008)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "World Bank Data centre",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "World Governance Indicators",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Primary studies (hand-coded meta-analytic effect sizes)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table III - Prevalence Analysis (linear regression on M&A prevalence)",
+    "hypotheses": [
+     "H1a",
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "73 countries; year-country panel; prevalence data 1980-2007; standard errors clustered by year",
+    "dv": {
+     "name": "M&A prevalence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ThomsonOne"
+    },
+    "key_ivs": [
+     {
+      "name": "Anti-director rights (ADR) index",
+      "measure": "revised ADR index (Djankov and associates, 2008) capturing measures against shareholder expropriation by managers",
+      "source": "Revised ADR index and ASD index (Djankov and associates, 2008)"
+     },
+     {
+      "name": "Anti-self-dealing (ASD) index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Revised ADR index and ASD index (Djankov and associates, 2008)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP (logged, current US dollars)",
+      "source": "World Bank Data centre"
+     },
+     {
+      "name": "GDP per capita (logged, current US dollars)",
+      "source": "World Bank Data centre"
+     },
+     {
+      "name": "Stock market size (total value of listed companies, logged)",
+      "source": "World Bank Data centre"
+     },
+     {
+      "name": "Rule of Law",
+      "source": "World Governance Indicators"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "All combined measures in the sample; 91-93 unique studies aggregated by country (random-effects HSMA)",
+    "dv": {
+     "name": "Abnormal returns (acquirer/target/combined)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Primary studies (hand-coded meta-analytic effect sizes)"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "288 effect sizes across event windows (acquirer abnormal returns); target abnormal returns Day 0 k=14",
+    "dv": {
+     "name": "Acquirer abnormal returns (and target abnormal returns Day 0)",
+     "measure": "meta-analytic mean association (weighted sample size correlation) subdivided by event window (Day 0, Day 1-5, Day 6-21, Day 22-180, >180 days, All events)",
+     "source": "Primary studies (hand-coded meta-analytic effect sizes)"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table V - Mixed-effects meta-analytic regression (MARA) on acquirer abnormal returns",
+    "hypotheses": [
+     "H1b",
+     "H2b"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "k=147 acquirer abnormal-return effect sizes (WLS meta-analytic regression; 91 unique studies)",
+    "dv": {
+     "name": "M&A-acquirer abnormal returns relationship (associational strength)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Primary studies (hand-coded meta-analytic effect sizes)"
+    },
+    "key_ivs": [
+     {
+      "name": "Anti-director rights (ADR) index",
+      "measure": "revised ADR index (Djankov and associates, 2008), modeled as a moderator of the M&A-abnormal returns relationship",
+      "source": "Revised ADR index and ASD index (Djankov and associates, 2008)"
+     },
+     {
+      "name": "Anti-self-dealing (ASD) index",
+      "measure": "anti-self-dealing index (Djankov and associates, 2008), modeled as a moderator of the M&A-abnormal returns relationship",
+      "source": "Revised ADR index and ASD index (Djankov and associates, 2008)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP (logged)",
+      "source": "World Bank Data centre"
+     },
+     {
+      "name": "GDP per capita (logged)",
+      "source": "World Bank Data centre"
+     },
+     {
+      "name": "Stock market size (logged)",
+      "source": "World Bank Data centre"
+     },
+     {
+      "name": "Rule of Law",
+      "source": "World Governance Indicators"
+     },
+     {
+      "name": "Published study (publication status)",
+      "source": "Primary studies (hand-coded meta-analytic effect sizes)"
+     },
+     {
+      "name": "Publication year",
+      "source": "Primary studies (hand-coded meta-analytic effect sizes)"
+     },
+     {
+      "name": "Journal status (UT Dallas top journals list)",
+      "source": "Primary studies (hand-coded meta-analytic effect sizes)"
+     },
+     {
+      "name": "Year dummies",
+      "source": "Primary studies (hand-coded meta-analytic effect sizes)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "adr index",
+    "anti-director rights"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "adr index",
+    "asd index",
+    "anti-director rights",
+    "anti-self-dealing index"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "firm-level variables",
+    "abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "ownership concentration",
+    "risk of expropriation for minority shareholders"
+   ],
+   "mechanism_named": "expropriation",
+   "proposed_edge": {
+    "from": "ownership concentration",
+    "relation": "increases",
+    "to": "risk of expropriation for minority shareholders"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "m&a performance",
+    "abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "m&a performance",
+    "roa",
+    "roe",
+    "sales growth"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "adr institutions",
+    "asd institutions",
+    "cross-border acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "m&a outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "m&a outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "institutional development",
+    "m&a likelihood",
+    "m&a prevalence",
+    "target premiums"
+   ],
+   "mechanism_named": "viceroy and emperor problems",
+   "proposed_edge": {
+    "from": "institutional development of target jurisdiction",
+    "relation": "affects",
+    "to": "m&a prevalence"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "hubris",
+    "narcissism",
+    "personality dimensions",
+    "m&a decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "ceo personality characteristics",
+    "on_path": [
+     "institutional context",
+     "m&a decisions"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "institutional factors",
+    "ceo personality characteristics",
+    "m&a process"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "ceo personality characteristics",
+    "on_path": [
+     "institutional factors",
+     "m&a process"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "different types of owners",
+    "m&a initiation and outcomes"
+   ],
+   "mechanism_named": "emperor problem",
+   "proposed_edge": {
+    "from": "different types of owners",
+    "relation": "affects",
+    "to": "m&a initiation and outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "different types of owners",
+    "asd laws",
+    "institutional context"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "asd laws",
+    "on_path": [
+     "different types of owners",
+     "m&a outcomes"
+    ]
+   }
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "institutional environment",
+    "m&as"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "institutional characteristics",
+    "m&a literature"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "institutional characteristics",
+    "relation": "affects",
+    "to": "m&a findings"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "publication bias",
+    "empirical contexts",
+    "m&a process"
+   ],
+   "mechanism_named": "publication bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "success rate of m&as",
+    "abnormal returns"
+   ],
+   "mechanism_named": "file drawer problem",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,554 @@
+{
+ "paper_id": "10.1093_rfs_hhr035",
+ "title": "Anticipation, Acquisitions, and Bidder Returns: Industry Shocks and the Transfer of Information across Rivals",
+ "journal": "RFS",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market efficiency",
+  "information transfer",
+  "rational expectations",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "time_between_industry_bids",
+      "relation": "decreases",
+      "to": "market_anticipation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_anticipation",
+      "relation": "decreases",
+      "to": "bidder_abnormal_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_anticipation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "first-mover hypothesis"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "subsequent_bidder",
+      "relation": "increases",
+      "to": "market_anticipation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_anticipation",
+      "relation": "increases",
+      "to": "rival_abnormal_run_up_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_anticipation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information generic to the entire industry (not bidding-specific)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "initial_bidder_abnormal_return",
+      "relation": "increases",
+      "to": "information_transfer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_transfer",
+      "relation": "increases",
+      "to": "rival_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_transfer"
+   ],
+   "moderators": [
+    {
+     "construct": "subsequent_bidder",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_transfer",
+     "moderated_from": "initial_bidder_abnormal_return",
+     "moderated_to": "rival_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3-mod"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "first-mover hypothesis"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "probability_of_subsequent_bidding",
+      "relation": "increases",
+      "to": "market_anticipation",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "market_anticipation",
+      "relation": "decreases",
+      "to": "subsequent_bidder_abnormal_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_anticipation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "low-hanging fruit hypothesis"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (367 unique four-digit SIC industries of public US bidders; financial firms and utilities excluded)",
+  "country_region": "United States (public US bidders making both domestic and international acquisition bids)",
+  "time_period": "1985-2009",
+  "sample_description": "Acquisition bids (domestic and international) above $10 million by public US bidders from the SDC database; excludes financial firms and utilities (CRSP SIC 6000-6999 and 4900-4999), cases without CRSP SIC codes/returns, and bidders in four-digit CRSP SIC industries with fewer than five firms",
+  "sample_size": "6,930 bids"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Harford (2005) merger wave names and dates (supplied by Jarrad Harford)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "6,930 bids; Panel B: 2,356 firms bidding for public targets",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "time between industry bids (dormant period)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "three-day abnormal return [-1, 1] centered on the announcement date",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "time since previous industry bid (D>1yr minus D<=1yr)",
+      "measure": "dormant period classified as less than one year vs. more than one year",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "public or private target",
+      "source": "SDC database"
+     },
+     {
+      "name": "form of payment (stock, mixed, cash, stock swaps)",
+      "source": "SDC database"
+     },
+     {
+      "name": "number of bidders (multiple, single)",
+      "source": "SDC database"
+     },
+     {
+      "name": "form of acquisition (horizontal, non-horizontal)",
+      "source": "SDC database"
+     },
+     {
+      "name": "outcome of acquisition (successful, unsuccessful)",
+      "source": "SDC database"
+     },
+     {
+      "name": "attitude of target (hostile, friendly)",
+      "source": "SDC database"
+     },
+     {
+      "name": "target incorporated state (Delaware or other)",
+      "source": "SDC database"
+     },
+     {
+      "name": "target nationality (US, non-US)",
+      "source": "SDC database"
+     },
+     {
+      "name": "relative size (below/above median)",
+      "source": "SDC database"
+     },
+     {
+      "name": "merger waves (before/in/after/unrelated to wave)",
+      "source": "Harford (2005) merger wave dates"
+     },
+     {
+      "name": "industry growth (contracting, expanding, stable)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 5: OLS multivariate analysis of bidder abnormal returns and time since previous industry bid",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "6,667 bidders (Regressions 1-5); Regression 6: 2,303 bidders for public targets",
+    "dv": {
+     "name": "bidder abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Dormant period >1 year (initial industry bidder dummy)",
+      "measure": "dummy variable indicating initial industry bidders (dormant periods greater than one year)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Dormant period >5 years and 1<dormant period<=5 years",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     },
+     {
+      "name": "Dormant period (in 100 days)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC database"
+     },
+     {
+      "name": "Bidder's Q ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target incorporated in Delaware",
+      "source": "SDC database"
+     },
+     {
+      "name": "US target",
+      "source": "SDC database"
+     },
+     {
+      "name": "Number of firms in industry",
+      "source": "CRSP"
+     },
+     {
+      "name": "Target is in Compustat (public target proxy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Successful offer",
+      "source": "SDC database"
+     },
+     {
+      "name": "Attitude (1=Friendly)",
+      "source": "SDC database"
+     },
+     {
+      "name": "Cash offer",
+      "source": "SDC database"
+     },
+     {
+      "name": "Stock offer",
+      "source": "SDC database"
+     },
+     {
+      "name": "Horizontal offer",
+      "source": "SDC database"
+     },
+     {
+      "name": "Multiple offer",
+      "source": "SDC database"
+     },
+     {
+      "name": "Toehold position",
+      "source": "SDC database"
+     },
+     {
+      "name": "Before-the-wave dummy (PRW), In-the-wave dummy (INW), After-the-wave dummy (POW)",
+      "source": "Harford (2005) merger wave dates"
+     },
+     {
+      "name": "Wave x IIB dummy interaction terms (PRW*IIB, INW*IIB, POW*IIB)",
+      "source": "Harford (2005) merger wave dates"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "up to 16,076 firm observations (e.g. N dep=1 of 2,343 bidders vs N dep=0 of 13,733 non-bidders); measured at end of year prior to the initial industry bid",
+    "dv": {
+     "name": "bidder-type classification (binary)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Log Assets",
+      "measure": "log of total assets, measured at end of year prior to the initial industry bid",
+      "source": "Compustat"
+     },
+     {
+      "name": "Profitability",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "measure": "long-term debt normalized with total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's q > 1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "rival run-up abnormal return before the initial industry bid announcement",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Number of firms in the industry",
+      "source": "CRSP"
+     },
+     {
+      "name": "Expanding industries",
+      "source": "CRSP"
+     },
+     {
+      "name": "Contracting industries",
+      "source": "CRSP"
+     },
+     {
+      "name": "Relative size of IIB target to bidder",
+      "source": "SDC database"
+     },
+     {
+      "name": "Stock payment",
+      "source": "SDC database"
+     },
+     {
+      "name": "Initial bid is horizontal",
+      "source": "SDC database"
+     },
+     {
+      "name": "Initial bid is for a public target",
+      "source": "SDC database"
+     },
+     {
+      "name": "IIB abnormal return over [-1,1] and [-20,-2]",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "initial industry bidders 1,280; subsequent bidders 1,252; non-bidders 15,413 (Panel A)",
+    "dv": {
+     "name": "rival cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "firm type at initial industry bid",
+      "measure": "initial industry bidders vs. subsequent bidders vs. non-bidders",
+      "source": "SDC database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "estimated probabilities of subsequent bids",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "first-mover",
+    "low-hanging fruit hypotheses"
+   ],
+   "mechanism_named": "first-mover or low-hanging fruit hypotheses",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "first-mover hypothesis",
+    "dormant periods",
+    "time between industry bids"
+   ],
+   "mechanism_named": "first-mover hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "market anticipation of a subsequent bid",
+    "wealth effect of bid anticipation"
+   ],
+   "mechanism_named": "market anticipation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "stock market anticipation",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "information surrounding acquisitions",
+    "sequence of acquisition bids"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "process of anticipation",
+    "layoffs",
+    "earnings announcements",
+    "stock repurchases"
+   ],
+   "mechanism_named": "anticipation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

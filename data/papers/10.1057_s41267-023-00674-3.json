@@ -1,0 +1,934 @@
+{
+ "paper_id": "10.1057_s41267-023-00674-3",
+ "title": "Board reforms and M&amp;A performance: international evidence",
+ "journal": "JIBS",
+ "year": 2024,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "private benefits of control theory",
+  "agency theory",
+  "law and finance theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_reform",
+      "relation": "increases",
+      "to": "informational_transparency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informational_transparency",
+      "relation": "increases",
+      "to": "deal_synergies",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "board_reform",
+      "relation": "decreases",
+      "to": "private_benefits_of_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_benefits_of_control",
+      "relation": "decreases",
+      "to": "deal_synergies",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informational_transparency",
+    "private_benefits_of_control"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_reform",
+      "relation": "increases",
+      "to": "target_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining_power",
+      "relation": "increases",
+      "to": "target_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "board_reform",
+      "relation": "increases",
+      "to": "target_firm_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_firm_value",
+      "relation": "increases",
+      "to": "target_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_bargaining_power",
+    "target_firm_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_reform",
+      "relation": "decreases",
+      "to": "private_benefits_of_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_benefits_of_control",
+      "relation": "increases",
+      "to": "target_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "board_reform",
+      "relation": "decreases",
+      "to": "reservation_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reservation_price",
+      "relation": "increases",
+      "to": "target_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_benefits_of_control",
+    "reservation_price"
+   ],
+   "moderators": [
+    {
+     "construct": "target_block_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "private_benefits_of_control",
+     "moderated_from": "board_reform",
+     "moderated_to": "target_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "country_investor_protection_and_institutional_quality",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "private_benefits_of_control",
+     "moderated_from": "board_reform",
+     "moderated_to": "target_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "financial_acquirer",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "bid_competition",
+     "moderated_from": "board_reform",
+     "moderated_to": "target_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "comply_or_explain_reform_approach",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "corporate_governance_improvement",
+     "moderated_from": "board_reform",
+     "moderated_to": "target_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "acquirer_cash_ratio",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "overpayment",
+     "moderated_from": "board_reform",
+     "moderated_to": "target_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirer-country board reforms (rather than target-country reforms) drive the results",
+    "common-law countries with more developed capital markets drive the results"
+   ]
+  },
+  {
+   "hypothesis": "P1_financial_bidder_squeeze_out",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_reform",
+      "relation": "increases",
+      "to": "target_corporate_governance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_corporate_governance",
+      "relation": "decreases",
+      "to": "financial_acquirer_ma_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_corporate_governance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2_aggregate_ma_volume",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_reform",
+      "relation": "increases",
+      "to": "deal_synergies",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_synergies",
+      "relation": "increases",
+      "to": "aggregate_ma_activity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "board_reform",
+      "relation": "decreases",
+      "to": "target_willingness_to_sell",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_willingness_to_sell",
+      "relation": "increases",
+      "to": "aggregate_ma_activity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_synergies",
+    "target_willingness_to_sell"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A deals across all sectors, excluding financial targets with SIC codes 6000-6999)",
+  "country_region": "international; board reforms across 61 countries, with domestic and cross-border M&A deals involving acquirers and targets from those 61 sample countries",
+  "time_period": "1985-2021",
+  "sample_description": "M&A transactions from the Refinitiv/Thomson Reuters SDC database (domestic and cross-border deals for the 61 board-reform countries), excluding deals where the bidder or target is a government agency, joint venture, or mutual fund and where the acquisition form is buyback, exchange offer, or recapitalization, and removing financial targets (SIC codes 6000-6999)",
+  "sample_size": "607,293 deals (main-analysis N varies by dependent variable, e.g. 48,755 acquirer-CAR observations; 11,695 target-CAR observations)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Refinitiv SDC database (Thomson Reuters SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Worldscope",
+    "category": "worldscope",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Global",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "World Bank",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "International Country Risk Guide (ICRG)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Board reform list (Fauver et al. 2017 plus manually identified additional major reforms)",
+    "category": "hand_collected",
+    "kind": "government_public"
+   },
+   {
+    "name": "Bureau van Dijk Orbis database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Panel B: Determinants of board reforms (exogeneity check)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "1,494 country-year observations",
+    "dv": {
+     "name": "Board reform",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+    },
+    "key_ivs": [
+     {
+      "name": "GDP growth",
+      "measure": "GDP growth",
+      "source": "World Bank"
+     },
+     {
+      "name": "Per-capita GDP",
+      "measure": "per-capita GDP",
+      "source": "World Bank"
+     },
+     {
+      "name": "GDP",
+      "measure": "economic size (GDP)",
+      "source": "World Bank"
+     },
+     {
+      "name": "Stock market development",
+      "measure": "stock market development",
+      "source": "World Bank"
+     },
+     {
+      "name": "Investment profile",
+      "measure": "investment profile",
+      "source": "ICRG"
+     },
+     {
+      "name": "Quality of institutions",
+      "measure": "quality of institutions",
+      "source": "ICRG"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year FE",
+      "source": ""
+     },
+     {
+      "name": "Country FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, Column 1: Target CAR ~ Post Target (full sample of listed targets)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "11,695 listed-target deals",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size",
+      "source": "CRSP; Worldscope; Compustat Global"
+     },
+     {
+      "name": "ROA",
+      "source": "CRSP; Worldscope; Compustat Global"
+     },
+     {
+      "name": "Market-to-book",
+      "source": "CRSP; Worldscope; Compustat Global"
+     },
+     {
+      "name": "Relative deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash only",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross-border",
+      "source": "SDC"
+     },
+     {
+      "name": "Number of bidders",
+      "source": "SDC"
+     },
+     {
+      "name": "Horizontal",
+      "source": "SDC"
+     },
+     {
+      "name": "Vertical",
+      "source": "SDC"
+     },
+     {
+      "name": "GDP",
+      "source": "World Bank"
+     },
+     {
+      "name": "GDP per capita",
+      "source": "World Bank"
+     },
+     {
+      "name": "GDP growth",
+      "source": "World Bank"
+     },
+     {
+      "name": "Stock market development",
+      "source": "World Bank"
+     },
+     {
+      "name": "Real interest rate",
+      "source": "World Bank; ICRG"
+     },
+     {
+      "name": "Investment profile",
+      "source": "ICRG"
+     },
+     {
+      "name": "Quality of institutions",
+      "source": "ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, Column 2: Offer premium ~ Post Target (full sample)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "6,186 deals with available offer premium",
+    "dv": {
+     "name": "Offer premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 3 Panel A Column 1 (firm-, deal-, and country-level characteristics)",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, Column 3: Acquirer CAR ~ Post Target (full sample)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "48,755 acquirer deals",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 3 Panel A Column 1 (firm-, deal-, and country-level characteristics)",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, Columns 4-6: add Post Acquirer (robustness for acquirer-side reforms)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "",
+    "dv": {
+     "name": "Target CAR / Offer premium / Acquirer CAR",
+     "measure": "7-day announcement CAR (target and acquirer) and offer premium, as in Columns 1-3",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     },
+     {
+      "name": "Post Acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 3 Panel A Column 1 (firm-, deal-, and country-level characteristics)",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, Column 1: Target CAR (deals between listed firms)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "4,310 deals between listed acquirer and target firms",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "7-day announcement cumulative abnormal returns (CAR)",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls and fixed effects as Table 3 Panel A",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, Column 2: Offer premium (deals between listed firms)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "4,310 deals between listed acquirer and target firms",
+    "dv": {
+     "name": "Offer premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls and fixed effects as Table 3 Panel A",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, Column 3: Acquirer CAR (deals between listed firms)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "4,310 deals between listed acquirer and target firms",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "7-day announcement cumulative abnormal returns (CAR) for public acquirers with public targets",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls and fixed effects as Table 3 Panel A",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B, Column 4: Combined CAR (deal-level synergies)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries, 1985-2021)",
+    "sample": "4,310 deals between listed acquirer and target firms",
+    "dv": {
+     "name": "Combined CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls and fixed effects as Table 3 Panel A",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A: Target block ownership (heterogeneous effect on Target CAR)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries)",
+    "sample": "subsample of 1,039 M&As for which ownership data is available",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "7-day announcement cumulative abnormal returns (CAR)",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target × Blockholder",
+      "measure": "interaction of Post Target with Blockholder",
+      "source": "Board reform list; Bureau van Dijk Orbis"
+     },
+     {
+      "name": "Blockholder",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Bureau van Dijk Orbis database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 3 Panel A (firm-, deal-, and country-level characteristics)",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B: Reform approaches and components (heterogeneous effect on Target CAR)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries)",
+    "sample": "11,695 listed-target deals",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "7-day announcement cumulative abnormal returns (CAR)",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target × C-or-E",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     },
+     {
+      "name": "Reform components (board independence, audit committee independence, chairman/CEO separation)",
+      "measure": "Post Target defined separately for each reform component (binary reform-component indicators A/B/C)",
+      "source": "Board reform list (Fauver et al. 2017 + manual expansion)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 3 Panel A (firm-, deal-, and country-level characteristics)",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel C: Country characteristics (heterogeneous effect on Target CAR)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries)",
+    "sample": "11,695 listed-target deals",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "7-day announcement cumulative abnormal returns (CAR)",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target × Country characteristics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank; ICRG"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 3 Panel A (firm-, deal-, and country-level characteristics)",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel D: Acquirer characteristics (heterogeneous effect on Target CAR)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "national board reforms (staggered corporate-governance/board reforms across 61 countries)",
+    "sample": "11,695 listed-target deals (5,368 for the acquirer cash ratio model)",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "7-day announcement cumulative abnormal returns (CAR)",
+     "source": "CRSP; Worldscope; Compustat Global; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post Target × Acquirer characteristics",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; CRSP; Worldscope; Compustat Global"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 3 Panel A (firm-, deal-, and country-level characteristics)",
+      "source": "SDC; CRSP; Worldscope; Compustat Global; World Bank; ICRG"
+     },
+     {
+      "name": "Year × Industry FE",
+      "source": ""
+     },
+     {
+      "name": "Country × Industry FE",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "board reforms",
+    "firm behaviors",
+    "foreign-market entry modes",
+    "foreign direct investment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "board reforms",
+    "relation": "affects",
+    "to": "firm behaviors"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "board reforms",
+    "firm behaviors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

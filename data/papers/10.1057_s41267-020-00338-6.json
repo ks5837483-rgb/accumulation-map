@@ -1,0 +1,800 @@
+{
+ "paper_id": "10.1057_s41267-020-00338-6",
+ "title": "Foreign investor reactions to risk and uncertainty in antitrust: U.S. merger policy investigations and the deterrence of foreign acquirer presence",
+ "journal": "JIBS",
+ "year": 2020,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "political risk and uncertainty",
+  "information economics",
+  "deterrence theory",
+  "liability of foreignness"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_policy_risk",
+      "relation": "increases",
+      "to": "transaction_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "transaction_costs",
+      "relation": "decreases",
+      "to": "foreign_acquirer_presence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "merger_policy_risk",
+      "relation": "increases",
+      "to": "risk_aversion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_aversion",
+      "relation": "decreases",
+      "to": "foreign_acquirer_presence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "merger_policy_risk",
+      "relation": "increases",
+      "to": "antitrust_scrutiny",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "antitrust_scrutiny",
+      "relation": "decreases",
+      "to": "foreign_acquirer_presence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "transaction_costs",
+    "risk_aversion",
+    "antitrust_scrutiny"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "omitted country-level factors producing a spurious relationship between competition policy and foreign investment"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_policy_uncertainty",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "foreign_acquirer_presence",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "foreign_acquirer_experience",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "merger_policy_uncertainty",
+     "moderated_to": "foreign_acquirer_presence",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "omitted country-level factors producing a spurious relationship between competition policy and foreign investment"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (53 U.S. industrial sectors at the three-digit NAICS level, e.g. chemical products, computer and electronic products, transportation equipment manufacturing)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2002-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "563 industry-year observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson SDC Platinum Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "GDP by Industry Dataset from U.S. Bureau of Economic Analysis (BEA)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Compustat Database from Wharton Research Data Services",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "survey",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 Model 1 (controls-only baseline, left-censored Tobit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "563 industry-year observations, 53 three-digit NAICS sectors, 2002-2017",
+    "dv": {
+     "name": "Foreign-Acquirer-Presence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Database"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "CFIUS-Investigation-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Foreign-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Domestic-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Unfriendly-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database; YouGov Poll Database"
+     },
+     {
+      "name": "Emerging-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Industry-Value-Added",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-R&D",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Skilled-Labor",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Profit-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Tax-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-HHI",
+      "source": "Compustat Database from Wharton Research Data Services"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 2 (Merger-Policy-Risk introduced, left-censored Tobit)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Foreign-Acquirer-Presence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger-Policy-Risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CFIUS-Investigation-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Foreign-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Domestic-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Unfriendly-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database; YouGov Poll Database"
+     },
+     {
+      "name": "Emerging-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Industry-Value-Added",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-R&D",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Skilled-Labor",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Profit-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Tax-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-HHI",
+      "source": "Compustat Database from Wharton Research Data Services"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 3 (Merger-Policy-Uncertainty introduced, left-censored Tobit)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Foreign-Acquirer-Presence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger-Policy-Uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CFIUS-Investigation-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Foreign-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Domestic-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Unfriendly-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database; YouGov Poll Database"
+     },
+     {
+      "name": "Emerging-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Industry-Value-Added",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-R&D",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Skilled-Labor",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Profit-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Tax-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-HHI",
+      "source": "Compustat Database from Wharton Research Data Services"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 4 (full nested model, Eq. 1, left-censored Tobit)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Foreign-Acquirer-Presence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger-Policy-Risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Merger-Policy-Uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CFIUS-Investigation-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Foreign-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Domestic-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Unfriendly-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database; YouGov Poll Database"
+     },
+     {
+      "name": "Emerging-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Industry-Value-Added",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-R&D",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Skilled-Labor",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Profit-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Tax-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-HHI",
+      "source": "Compustat Database from Wharton Research Data Services"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 5 (full nested model, two-sided Tobit correcting left and right censoring)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Foreign-Acquirer-Presence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger-Policy-Risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Merger-Policy-Uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CFIUS-Investigation-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Foreign-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Domestic-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Unfriendly-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database; YouGov Poll Database"
+     },
+     {
+      "name": "Emerging-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Industry-Value-Added",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-R&D",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Skilled-Labor",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Profit-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Tax-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-HHI",
+      "source": "Compustat Database from Wharton Research Data Services"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Model 1 (mechanism split: Experienced Foreign-Acquirer-Presence, two-sided Tobit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "504 observations; Foreign-Acquirer-Experience control dropped",
+    "dv": {
+     "name": "Experienced Foreign-Acquirer-Presence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger-Policy-Risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Merger-Policy-Uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CFIUS-Investigation-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Domestic-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Unfriendly-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database; YouGov Poll Database"
+     },
+     {
+      "name": "Emerging-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Industry-Value-Added",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-R&D",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Skilled-Labor",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Profit-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Tax-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-HHI",
+      "source": "Compustat Database from Wharton Research Data Services"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Model 2 (mechanism split: Inexperienced Foreign-Acquirer-Presence, two-sided Tobit)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "532 observations; Foreign-Acquirer-Experience control dropped",
+    "dv": {
+     "name": "Inexperienced Foreign-Acquirer-Presence",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger-Policy-Risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Merger-Policy-Uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CFIUS-Investigation-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Domestic-Acquirer-Experience",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Unfriendly-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database; YouGov Poll Database"
+     },
+     {
+      "name": "Emerging-Acquirer-Participation",
+      "source": "Thomson SDC Platinum Database"
+     },
+     {
+      "name": "Industry-Value-Added",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-R&D",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Skilled-Labor",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Profit-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-Tax-Rate",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Industry-HHI",
+      "source": "Compustat Database from Wharton Research Data Services"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "limitations",
+   "constructs": [
+    "merger policy",
+    "foreign investment activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "u.s. merger policy",
+    "investigations of foreign acquirers",
+    "investigations of domestic acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "asymmetric effects of merger policy",
+    "foreign investors",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "asymmetric effects of merger policy",
+   "proposed_edge": {
+    "from": "merger policy",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "investigation activities",
+    "application of structural remedies and prohibitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "price collusion",
+    "abuse of dominance",
+    "competition policy",
+    "inward fdi activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "competition policy",
+    "relation": "affects",
+    "to": "inward fdi activities"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "merger policy",
+    "foreign acquirer activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "merger policy",
+    "relation": "affects",
+    "to": "foreign acquirer activities"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "sector-level enforcement",
+    "transaction-level details"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "sector-level enforcement",
+    "relation": "affects",
+    "to": "transaction-level details"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "merger control",
+    "greenfield activities",
+    "cross-border acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "merger control",
+    "relation": "increases",
+    "to": "greenfield activities"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "competition policy",
+    "foreign investment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "competition policy",
+    "relation": "unspecified",
+    "to": "foreign investment"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "foreign investors",
+    "participation in local m&a markets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "u.s. merger policy enforcement",
+    "protectionist in intent"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

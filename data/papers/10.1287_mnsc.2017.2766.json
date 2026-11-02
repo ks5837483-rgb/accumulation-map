@@ -1,0 +1,766 @@
+{
+ "paper_id": "10.1287_mnsc.2017.2766",
+ "title": "Return to Invested Capital and the Performance of Mergers and Acquisitions",
+ "journal": "MNSC",
+ "year": 2018,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market efficiency",
+  "managerial ability persistence",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "preacquisition_net_investment_return",
+      "relation": "increases",
+      "to": "managerial_ability_in_capital_deployment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_ability_in_capital_deployment",
+      "relation": "increases",
+      "to": "postacquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "preacquisition_net_investment_return",
+      "relation": "increases",
+      "to": "unrecognized_investment_efficiency",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "unrecognized_investment_efficiency",
+      "relation": "increases",
+      "to": "postacquisition_abnormal_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_ability_in_capital_deployment",
+    "unrecognized_investment_efficiency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "preacquisition_net_investment_return",
+      "relation": "increases",
+      "to": "managerial_ability_in_capital_deployment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_ability_in_capital_deployment",
+      "relation": "increases",
+      "to": "postacquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_ability_in_capital_deployment"
+   ],
+   "moderators": [
+    {
+     "construct": "completing_a_large_ma_deal",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_ability_in_capital_deployment",
+     "moderated_from": "preacquisition_net_investment_return",
+     "moderated_to": "postacquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "preacquisition_net_investment_return",
+      "relation": "increases",
+      "to": "managerial_ability_in_capital_deployment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_ability_in_capital_deployment",
+      "relation": "increases",
+      "to": "postacquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_ability_in_capital_deployment"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_turnover",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "managerial_ability_in_capital_deployment",
+     "moderated_from": "preacquisition_net_investment_return",
+     "moderated_to": "postacquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public acquiring firms, excluding financial institutions and regulated utilities)",
+  "country_region": "United States",
+  "time_period": "1980-2013",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Column (1): Announcement period abnormal returns (Equation (1))",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Abnormal Announcement Returns",
+     "measure": "three-day CARs",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "Small Acquirer",
+      "source": "CRSP"
+     },
+     {
+      "name": "Accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "NOA (net operating assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "PreAnnReturn",
+      "source": "CRSP"
+     },
+     {
+      "name": "Private Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Serial",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Columns (2)-(4): Long-run BHAR at 1-, 2-, and 3-year horizons (Equation (1))",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "BHAR (buy-and-hold abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "Small Acquirer",
+      "source": "CRSP"
+     },
+     {
+      "name": "Accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "NOA (net operating assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "PreAnnReturn",
+      "source": "CRSP"
+     },
+     {
+      "name": "Private Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Serial",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Regression of postacquisition operating performance (ROA year+1, avg ROA years 1-2, avg ROA years 1-3) (Equation (1))",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "Small Acquirer",
+      "source": "CRSP"
+     },
+     {
+      "name": "Accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "NOA (net operating assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "PreAnnReturn",
+      "source": "CRSP"
+     },
+     {
+      "name": "Private Target",
+      "source": "SDC"
+     },
+     {
+      "name": "Serial",
+      "source": "SDC"
+     },
+     {
+      "name": "Match_ROA (matching nonacquiring firms' operating performance)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A: Comparison of acquirers vs matching nonacquirers on postacquisition BHAR (1-, 2-, 3-year)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "matched sample of acquirers and nonacquirers (same two-digit SIC, total assets 50%-200%, not involved in a merger bid within 3 years before announcement or 3 years after completion)",
+    "dv": {
+     "name": "BHAR (buy-and-hold abnormal returns)",
+     "measure": "one-, two-, and three-year postacquisition BHARs for acquirers and matching nonacquirers (difference of acquirers and matched nonacquirers)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment efficiency group (high vs. low) / acquirer vs. matched nonacquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Matched on two-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Matched on size (total assets 50%-200%)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Matched on investment efficiency",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B: Comparison of acquirers vs matching nonacquirers on postacquisition ROA (year 1, avg years 1-2, avg years 1-3)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "matched sample of acquirers and nonacquirers (same two-digit SIC, total assets 50%-200%, not involved in a merger bid within 3 years before announcement or 3 years after completion)",
+    "dv": {
+     "name": "ROA",
+     "measure": "one-, two-, and three-year postacquisition ROA for acquirers and matching nonacquirers (difference of acquirers and matched nonacquirers)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment efficiency group (high vs. low) / acquirer vs. matched nonacquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Matched on two-digit SIC industry",
+      "source": "Compustat"
+     },
+     {
+      "name": "Matched on size (total assets 50%-200%)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Matched on investment efficiency",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel A: Effect of CEO turnover on long-run BHAR (years 1-3) (Equation (2))",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsample with same CEO in place from one fiscal year before deal announcement to deal completion year",
+    "dv": {
+     "name": "BHAR (buy-and-hold abnormal returns)",
+     "measure": "three-year buy-and-hold abnormal returns (years 1-3)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO_Turnover Yr1",
+      "measure": "indicator for CEO turnover during the first fiscal year after deal completion",
+      "source": ""
+     },
+     {
+      "name": "CEO_Turnover Yr2",
+      "measure": "indicator for CEO turnover during the second fiscal year after deal completion",
+      "source": ""
+     },
+     {
+      "name": "CEO_Turnover Yr1 x Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "CEO_Turnover Yr2 x Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Missing CEO_Turnover indicator",
+      "source": ""
+     },
+     {
+      "name": "CEO_Age",
+      "source": ""
+     },
+     {
+      "name": "CEO_Tenure",
+      "source": ""
+     },
+     {
+      "name": "E-Index (Bebchuk et al. 2009)",
+      "source": ""
+     },
+     {
+      "name": "Indep_Board (fraction of outside board members)",
+      "source": ""
+     },
+     {
+      "name": "Same CEO_Chair",
+      "source": ""
+     },
+     {
+      "name": "Insider_Ownership",
+      "source": ""
+     },
+     {
+      "name": "Missing governance indicators",
+      "source": ""
+     },
+     {
+      "name": "Firm and deal controls (as in Table 2)",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: Effect of CEO turnover on postacquisition operating performance (Avg ROA years 1-3) (Equation (2))",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsample with same CEO in place from one fiscal year before deal announcement to deal completion year",
+    "dv": {
+     "name": "Avg ROA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO_Turnover Yr1",
+      "measure": "indicator for CEO turnover during the first fiscal year after deal completion",
+      "source": ""
+     },
+     {
+      "name": "CEO_Turnover Yr2",
+      "measure": "indicator for CEO turnover during the second fiscal year after deal completion",
+      "source": ""
+     },
+     {
+      "name": "CEO_Turnover Yr1 x Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "CEO_Turnover Yr2 x Invest_Return",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Missing CEO_Turnover indicator",
+      "source": ""
+     },
+     {
+      "name": "CEO_Age",
+      "source": ""
+     },
+     {
+      "name": "CEO_Tenure",
+      "source": ""
+     },
+     {
+      "name": "E-Index (Bebchuk et al. 2009)",
+      "source": ""
+     },
+     {
+      "name": "Indep_Board (fraction of outside board members)",
+      "source": ""
+     },
+     {
+      "name": "Same CEO_Chair",
+      "source": ""
+     },
+     {
+      "name": "Insider_Ownership",
+      "source": ""
+     },
+     {
+      "name": "Missing governance indicators",
+      "source": ""
+     },
+     {
+      "name": "Firm and deal controls (as in Table 3)",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 3.3.1: Calendar-time portfolio factor regression (robustness on long-run returns)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "calendar-time event portfolios of acquirers that completed an M&A deal within the prior one, two, or three years, rebalanced monthly",
+    "dv": {
+     "name": "Event portfolio excess return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "D_low (low net investment return portfolio dummy) and its factor interactions",
+      "measure": "indicator for low net investment return acquirer portfolio and its interactions with the market, SMB, HML, MOM, and RMW factors; portfolios formed on high vs. low net investment return (ROIC-WACC)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market excess return (Rm-Rf)",
+      "source": ""
+     },
+     {
+      "name": "SMB factor",
+      "source": ""
+     },
+     {
+      "name": "HML factor",
+      "source": ""
+     },
+     {
+      "name": "RMW (profitability) factor",
+      "source": ""
+     },
+     {
+      "name": "MOM (momentum) factor",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "other firm-level factors",
+    "investment efficiency"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "other firm-level factors",
+    "relation": "affects",
+    "to": "investment efficiency"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "merger waves",
+    "characteristics of focused industries and firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "investment efficiency measure",
+    "management effectiveness",
+    "other corporate events"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

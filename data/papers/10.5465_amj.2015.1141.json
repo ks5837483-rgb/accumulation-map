@@ -1,0 +1,715 @@
+{
+ "paper_id": "10.5465_amj.2015.1141",
+ "title": "A Signaling Theory of Institutional Activism: How Norway’s Sovereign Wealth Fund Investments Affect Firms’ Foreign Acquisitions",
+ "journal": "AMJ",
+ "year": 2018,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "institutional theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "swf_investment_size",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "full_equity_ownership",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "co_national_firm",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "swf_investment_size",
+     "moderated_to": "full_equity_ownership",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "igo_joint_membership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "swf_investment_size",
+     "moderated_to": "full_equity_ownership",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "co_national_proximity_to_signaler",
+      "relation": "increases",
+      "to": "alternative_information_channels",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "alternative_information_channels",
+      "relation": "decreases",
+      "to": "reliance_on_swf_signal",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "alternative_information_channels"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Swedish firms with prior acquisition experience in Norway accruing informational advantages similar to Norwegian firms"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "igo_joint_membership",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "reliance_on_swf_signal",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border acquisitions across sectors)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1998-2011",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "4,003 firm acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson SDC Platinum Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "electronic archival records of Norway's SWF global equity holdings (nbim.no)",
+    "category": "other",
+    "kind": "government_public"
+   },
+   {
+    "name": "Pevehouse et al. (2004)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Yearbook of International Organizations",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 6 - descriptive analysis: observed full vs partial acquisition rates across subgroups",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "subgroup comparison of observed rates",
+    "dv": {
+     "name": "ownership choice (full vs partial acquisition)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF investment (high vs low)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "electronic archival records of Norway's SWF global equity holdings (nbim.no)"
+     },
+     {
+      "name": "co-national firm",
+      "measure": "co-national (Norwegian) firms compared to Swedish firms",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     },
+     {
+      "name": "joint IGO membership (high vs low)",
+      "measure": "joint IGO memberships low (below the mean) vs high (above the mean)",
+      "source": "Pevehouse et al. (2004)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "first-stage selection sample (country entry)",
+    "dv": {
+     "name": "entry into a host country",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF investment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "electronic archival records of Norway's SWF global equity holdings (nbim.no)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP growth rate",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Model 2 (Table 7) - second-stage estimates, control variables only",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "second-stage sample conditioned on entry; Swedish firms' acquisitions in Norway excluded",
+    "dv": {
+     "name": "ownership choice (full vs partial acquisition)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "total bilateral FDI (home-host)",
+      "source": ""
+     },
+     {
+      "name": "ratio of FDI from home country to host country",
+      "source": ""
+     },
+     {
+      "name": "FDI restrictiveness index",
+      "source": ""
+     },
+     {
+      "name": "physical distance (miles between capital cities)",
+      "source": ""
+     },
+     {
+      "name": "cultural distance (Hofstede four dimensions, Kogut & Singh 1988)",
+      "source": ""
+     },
+     {
+      "name": "number of bidders for target",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     },
+     {
+      "name": "relatedness of acquirer and target",
+      "source": ""
+     },
+     {
+      "name": "private acquirer",
+      "source": ""
+     },
+     {
+      "name": "government-owned acquirer",
+      "source": ""
+     },
+     {
+      "name": "regulated industry acquirer",
+      "source": ""
+     },
+     {
+      "name": "international acquisition experience",
+      "source": ""
+     },
+     {
+      "name": "country-specific experience",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Model 3 (Table 7) - second-stage main effects",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "second-stage sample conditioned on entry",
+    "dv": {
+     "name": "ownership choice (full vs partial acquisition)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF investment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "electronic archival records of Norway's SWF global equity holdings (nbim.no)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "total bilateral FDI (home-host)",
+      "source": ""
+     },
+     {
+      "name": "ratio of FDI from home country to host country",
+      "source": ""
+     },
+     {
+      "name": "FDI restrictiveness index",
+      "source": ""
+     },
+     {
+      "name": "physical distance (miles between capital cities)",
+      "source": ""
+     },
+     {
+      "name": "cultural distance (Hofstede four dimensions, Kogut & Singh 1988)",
+      "source": ""
+     },
+     {
+      "name": "number of bidders for target",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     },
+     {
+      "name": "relatedness of acquirer and target",
+      "source": ""
+     },
+     {
+      "name": "private acquirer",
+      "source": ""
+     },
+     {
+      "name": "government-owned acquirer",
+      "source": ""
+     },
+     {
+      "name": "regulated industry acquirer",
+      "source": ""
+     },
+     {
+      "name": "international acquisition experience",
+      "source": ""
+     },
+     {
+      "name": "country-specific experience",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Model 4 (Table 7) - interaction effect for co-nationality ties",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "second-stage sample conditioned on entry",
+    "dv": {
+     "name": "ownership choice (full vs partial acquisition)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF investment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "electronic archival records of Norway's SWF global equity holdings (nbim.no)"
+     },
+     {
+      "name": "co-national firm (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "total bilateral FDI (home-host)",
+      "source": ""
+     },
+     {
+      "name": "ratio of FDI from home country to host country",
+      "source": ""
+     },
+     {
+      "name": "FDI restrictiveness index",
+      "source": ""
+     },
+     {
+      "name": "physical distance (miles between capital cities)",
+      "source": ""
+     },
+     {
+      "name": "cultural distance (Hofstede four dimensions, Kogut & Singh 1988)",
+      "source": ""
+     },
+     {
+      "name": "number of bidders for target",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     },
+     {
+      "name": "relatedness of acquirer and target",
+      "source": ""
+     },
+     {
+      "name": "private acquirer",
+      "source": ""
+     },
+     {
+      "name": "government-owned acquirer",
+      "source": ""
+     },
+     {
+      "name": "regulated industry acquirer",
+      "source": ""
+     },
+     {
+      "name": "international acquisition experience",
+      "source": ""
+     },
+     {
+      "name": "country-specific experience",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Model 5 (Table 7) - interaction effect for joint IGO membership",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "second-stage sample conditioned on entry",
+    "dv": {
+     "name": "ownership choice (full vs partial acquisition)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF investment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "electronic archival records of Norway's SWF global equity holdings (nbim.no)"
+     },
+     {
+      "name": "joint IGO membership (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pevehouse et al. (2004); Yearbook of International Organizations"
+     }
+    ],
+    "controls": [
+     {
+      "name": "total bilateral FDI (home-host)",
+      "source": ""
+     },
+     {
+      "name": "ratio of FDI from home country to host country",
+      "source": ""
+     },
+     {
+      "name": "FDI restrictiveness index",
+      "source": ""
+     },
+     {
+      "name": "physical distance (miles between capital cities)",
+      "source": ""
+     },
+     {
+      "name": "cultural distance (Hofstede four dimensions, Kogut & Singh 1988)",
+      "source": ""
+     },
+     {
+      "name": "number of bidders for target",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     },
+     {
+      "name": "relatedness of acquirer and target",
+      "source": ""
+     },
+     {
+      "name": "private acquirer",
+      "source": ""
+     },
+     {
+      "name": "government-owned acquirer",
+      "source": ""
+     },
+     {
+      "name": "regulated industry acquirer",
+      "source": ""
+     },
+     {
+      "name": "international acquisition experience",
+      "source": ""
+     },
+     {
+      "name": "country-specific experience",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Model 6 (Table 7) - full model with all main and interaction effects",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "second-stage sample conditioned on entry",
+    "dv": {
+     "name": "ownership choice (full vs partial acquisition)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SWF investment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "electronic archival records of Norway's SWF global equity holdings (nbim.no)"
+     },
+     {
+      "name": "co-national firm (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     },
+     {
+      "name": "joint IGO membership (moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pevehouse et al. (2004); Yearbook of International Organizations"
+     }
+    ],
+    "controls": [
+     {
+      "name": "total bilateral FDI (home-host)",
+      "source": ""
+     },
+     {
+      "name": "ratio of FDI from home country to host country",
+      "source": ""
+     },
+     {
+      "name": "FDI restrictiveness index",
+      "source": ""
+     },
+     {
+      "name": "physical distance (miles between capital cities)",
+      "source": ""
+     },
+     {
+      "name": "cultural distance (Hofstede four dimensions, Kogut & Singh 1988)",
+      "source": ""
+     },
+     {
+      "name": "number of bidders for target",
+      "source": "Thomson SDC Platinum Mergers and Acquisitions database"
+     },
+     {
+      "name": "relatedness of acquirer and target",
+      "source": ""
+     },
+     {
+      "name": "private acquirer",
+      "source": ""
+     },
+     {
+      "name": "government-owned acquirer",
+      "source": ""
+     },
+     {
+      "name": "regulated industry acquirer",
+      "source": ""
+     },
+     {
+      "name": "international acquisition experience",
+      "source": ""
+     },
+     {
+      "name": "country-specific experience",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "signaling theory of intermediaries",
+    "foreign investments",
+    "swf"
+   ],
+   "mechanism_named": "signaling theory of intermediaries",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "swf’s corporate governance reforms",
+    "policy changes",
+    "subsequent foreign investments"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "swf’s corporate governance reforms",
+    "relation": "affects",
+    "to": "subsequent foreign investments"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "activities of swfs",
+    "prominent extra-institutional actors",
+    "national level changes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "activities of swfs",
+    "relation": "unspecified",
+    "to": "prominent extra-institutional actors"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "swf investments",
+    "access to critical technologies in foreign markets",
+    "domestic technological and economic goals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "swf investments",
+    "relation": "affects",
+    "to": "access to critical technologies in foreign markets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "swf’s investments",
+    "national strategic objectives",
+    "social activism",
+    "restrictive regulatory policies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "swf’s investments perceived to advance national strategic objectives",
+    "relation": "increases",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "deterring role of certain intermediaries",
+    "government-owned foreign institutional investor"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

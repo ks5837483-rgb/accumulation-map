@@ -1,0 +1,371 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1997.tb02741.x",
+ "title": "Do Long‐Term Shareholders Benefit From Corporate Acquisitions?",
+ "journal": "JF",
+ "year": 1997,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "asymmetric information",
+  "market underreaction",
+  "market efficiency",
+  "managerial disciplining hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "tender_offer",
+      "relation": "increases",
+      "to": "disciplining_of_target_managers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disciplining_of_target_managers",
+      "relation": "increases",
+      "to": "postacquisition_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disciplining_of_target_managers"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_payment",
+      "relation": "increases",
+      "to": "acquirer_stock_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_stock_overvaluation",
+      "relation": "decreases",
+      "to": "postacquisition_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_stock_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the form of payment is endogenous to the mode of acquisition (mode is the real driver)",
+    "changes in acquirer debt-to-equity (leverage) confound the cash-acquirer returns"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_target_to_acquirer_size",
+      "relation": "increases",
+      "to": "security_issuance_effect",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "security_issuance_effect",
+      "relation": "decreases",
+      "to": "cumulative_target_shareholder_wealth_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "security_issuance_effect"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target stock is merely riskier (Hansen 1987), not mispriced/overvalued"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. operating firms delisted from CRSP due to acquisition, excluding ADRs, REITs, and closed-end funds)",
+  "country_region": "United States (NYSE, AMEX, and Nasdaq firms)",
+  "time_period": "1970-1989",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "947 acquisitions made by 639 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP tapes",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital Adjustments Register",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I (Panel A): summary statistics by mode of acquisition and form of payment",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "947 acquisitions made by 639 firms, 1970-1989",
+    "dv": {
+     "name": "number and aggregate market value of acquisitions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "acquisition classified as merger or tender offer following Jensen and Ruback (1983) guidelines from the Wall Street Journal Index",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "stock payment (only acquirer common stock), cash payment (only cash), or mixed payment, from payment terms",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "534 firms (nonoverlapping, unambiguous mode, pure cash or pure stock)",
+    "dv": {
+     "name": "postacquisition excess return of acquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "pure stock vs. pure cash payment terms",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP tapes"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Panel A: N=534 (all firms); Panel B: N=413 (firms above $250 million in 1994 dollars)",
+    "dv": {
+     "name": "postacquisition excess return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "tender offer dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "cash payment dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "534 firms matched to IPO/SEO equity issuers",
+    "dv": {
+     "name": "acquirer versus equity issuer excess return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "pure stock vs. pure cash payment terms",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IPO/SEO matching firm (closest F-value controlling for size and book-to-market)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "Table VII: Combined Pre- and Postacquisition Excess Returns (target-to-acquirer rollover) by Mode and Form of Payment",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "combined preacquisition and postacquisition excess return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "mode of acquisition",
+      "measure": "mergers vs. tender offers (Panel A); stock mergers vs. cash tender offers (Panel C)",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "form of payment",
+      "measure": "stock vs. cash acquisitions (Panel B); stock mergers vs. cash tender offers (Panel C)",
+      "source": "Capital Adjustments Register"
+     }
+    ],
+    "controls": [
+     {
+      "name": "matching firms (first target-matching and second acquirer-matching, on size and book-to-market)",
+      "source": "CRSP tapes"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "market efficiency",
+    "likely wealth gains",
+    "acquisition effective date"
+   ],
+   "mechanism_named": "market efficiency",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "postacquisition returns",
+    "aggregate wealth gains to target shareholders",
+    "stock mergers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ex ante variable",
+    "negative cumulative wealth gains"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ex ante variable",
+    "relation": "affects",
+    "to": "negative cumulative wealth gains"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "monthly rebalanced returns",
+    "wealth gains experienced by long-term shareholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "taxes",
+    "returns from stock acquisitions",
+    "cash acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+MEASURES-LAYER EXTRACTION (analysis-level) for ONE empirical paper. Reconstruct HOW the paper tests its relationships: variables, measures, data source, identification strategy, and per-analysis structure.
+
+READ the pre-located Variables/Methods/Data/Results windows (given below) fully. If detail clearly continues past a window, Read further to finish it. Report deepest_line_read.
+
+Extract:
+1) data_sources: every distinct source {name (verbatim), category, kind}.
+   category in {compustat,crsp,sdc,thomson_refinitiv,datastream,worldscope,capitaliq,sec_edgar_filings,irrc_iss,execucomp,boardex,census_gov,patents,survey,interviews_case,experiment,hand_collected,other_commercial_db,other_govt_db,other}
+   kind in {archival_database,government_public,filings,primary_collected}
+2) analyses: one entry per DISTINCT test/table/panel/model. For each:
+   label          = paper's own label ("Table 3","Panel A","Model 2", or short description)
+   hypotheses     = list of FORMAL NUMBERED hypothesis IDs this test addresses (e.g. ["H1"],["H2a","H3"]), ONLY where the paper states numbered hypotheses AND explicitly ties them to this test. If the paper has NO numbered hypotheses (common in finance/accounting), return []. Do NOT invent hypotheses from named predictions, "effects", or prose.
+   dv             = {name, measure (verbatim), source}
+   key_ivs        = [{name, measure, source}]  (focal IV/moderator, not controls)
+   controls       = [{name, source}]  (control variables; source = which dataset each, or "")
+   identification = the causal identification method for THIS test: one of {natural_experiment,DiD,IV,RDD,event_study,matching_PSM,Heckman,fixed_effects,OLS,logit_probit,hazard_survival,structural_model,GMM,simulation,lab_experiment,field_experiment,other}. Use what the paper actually does for this test; "" if truly unclear.
+   shock_or_instrument = the specific exogenous shock / instrument / natural experiment if named (e.g. "AIPA patent reform","SFAS 141R", the named IV); "" if none.
+   sample         = one phrase if this test's sample differs, else ""
+3) primary_data = true if any source is primary_collected.
+
+RULES (anti-hallucination): hypotheses ONLY if numbered AND explicit, else []. identification = what the paper ACTUALLY does, not what it should do. Do NOT read coefficient values/signs. measures VERBATIM.
+Return: doi, data_sources, analyses, primary_data, deepest_line_read.

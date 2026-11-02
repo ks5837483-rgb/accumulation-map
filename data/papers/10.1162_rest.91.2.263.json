@@ -1,0 +1,617 @@
+{
+ "paper_id": "10.1162_rest.91.2.263",
+ "title": "Multinationals and U.S. Productivity Leadership: Evidence from Great Britain",
+ "journal": "RESTAT",
+ "year": 2009,
+ "field": "economics",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "theory of the multinational enterprise",
+  "knowledge-capital model (Markusen)",
+  "OLI paradigm (Dunning)",
+  "technology sourcing hypothesis",
+  "firm heterogeneity and self-selection"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "best_firm_effect_mne",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mne_ownership",
+      "relation": "increases",
+      "to": "knowledge_and_technology_transfer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "knowledge_and_technology_transfer",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "knowledge_and_technology_transfer"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "plant picking (the MNE productivity advantage reflects selection of already-superior plants rather than knowledge/technology transfer)"
+   ]
+  },
+  {
+   "hypothesis": "plant_picking_effect_mne",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mne_ownership",
+      "relation": "increases",
+      "to": "selection_of_high_performing_plants",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "selection_of_high_performing_plants",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "selection_of_high_performing_plants"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "takeover targets plants after a temporary shock (transitory weakness/positive shock) unrelated to long-term productivity, rather than genuine cherry-picking of superior plants"
+   ]
+  },
+  {
+   "hypothesis": "going_global_effect",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "becoming_multinational",
+      "relation": "increases",
+      "to": "technology_sourcing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "technology_sourcing",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "becoming_multinational",
+      "relation": "increases",
+      "to": "firm_level_scale_economies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_level_scale_economies",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "becoming_multinational",
+      "relation": "increases",
+      "to": "exchange_rate_hedging",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "exchange_rate_hedging",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "becoming_multinational",
+      "relation": "increases",
+      "to": "learning_effects",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "learning_effects",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technology_sourcing",
+    "firm_level_scale_economies",
+    "exchange_rate_hedging",
+    "learning_effects"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "us_additional_best_firm_effect",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "us_mne_ownership",
+      "relation": "increases",
+      "to": "knowledge_and_technology_transfer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "knowledge_and_technology_transfer",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "knowledge_and_technology_transfer"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the U.S. advantage is a positive-productivity-shock selection artifact (scenario 2) that biases firm effects downward, not an absence of U.S. knowledge transfer"
+   ]
+  },
+  {
+   "hypothesis": "us_additional_plant_picking_effect",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "us_mne_ownership",
+      "relation": "increases",
+      "to": "selection_of_high_performing_plants",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "selection_of_high_performing_plants",
+      "relation": "increases",
+      "to": "plant_productivity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "selection_of_high_performing_plants"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the apparent U.S. plant-picking is really a U.S. firm (knowledge-transfer) effect masked by takeover-selection endogeneity"
+   ]
+  },
+  {
+   "hypothesis": "long_run_selection_information_asymmetry",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "long_run_pre_takeover_productivity",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "mne_takeover_probability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "takeover selection is driven by short-term/transitory performance (or productivity growth) rather than long-run productivity levels"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "U.K. manufacturing",
+  "country_region": "United Kingdom / Great Britain (excluding Northern Ireland); plants owned by U.S., other foreign, and U.K. multinationals",
+  "time_period": "1996-2000",
+  "sample_description": "Unbalanced panel of manufacturing plants drawn from the Annual Respondents Database (ARD), based on the Annual Business Inquiry (ABI), matched with the Annual Survey into Foreign Direct Investment (AFDI); excludes Northern Ireland, surveys all businesses with more than 100 employees, and randomly samples smaller businesses",
+  "sample_size": "about 19,000 plants; 38,501 observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Annual Respondents Database (ARD)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Annual Business Inquiry (ABI)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "AFDI register (annual survey of businesses on FDI financial flows, maintained by the ONS)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Dun & Bradstreet global Who Owns Whom database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "unbalanced panel of ~19,000 manufacturing plants, Great Britain, 1996-2000 pooled (38,501 observations)",
+    "dv": {
+     "name": "labor productivity / revenue TFP",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ARD"
+    },
+    "key_ivs": [
+     {
+      "name": "US ownership dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "matched ARD-AFDI (nationality from Dun & Bradstreet Who Owns Whom)"
+     },
+     {
+      "name": "MNE dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "matched ARD-AFDI"
+     },
+     {
+      "name": "FOR (non-U.S. foreign) ownership dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "matched ARD-AFDI"
+     },
+     {
+      "name": "EU / non-EU MNE dummies (columns 6-8)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "matched ARD-AFDI"
+     }
+    ],
+    "controls": [
+     {
+      "name": "capital intensity ln(K/L)",
+      "source": "ARD"
+     },
+     {
+      "name": "material intensity ln(M/L)",
+      "source": "ARD"
+     },
+     {
+      "name": "log labor lnL",
+      "source": "ARD"
+     },
+     {
+      "name": "ten regional dummies",
+      "source": "ARD"
+     },
+     {
+      "name": "four-digit industry x year (time) interaction dummies",
+      "source": "ARD"
+     },
+     {
+      "name": "quadratic polynomial in age plus age censoring dummy (columns 5-8)",
+      "source": "ARD"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Robustness Checks (alternative TFP estimation)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "restricted subsamples: constant-markup sectors (col 3, N=7,113), commodity-producing sectors per Rauch (1999) (col 4, N=6,465), plants similar to U.S. MNEs (col 6, N=15,145)",
+    "dv": {
+     "name": "total factor productivity (TFP)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ARD"
+    },
+    "key_ivs": [
+     {
+      "name": "MNE dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "matched ARD-AFDI"
+     },
+     {
+      "name": "US ownership dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "matched ARD-AFDI"
+     },
+     {
+      "name": "FOR (non-U.S. foreign) ownership dummy",
+      "measure": "1 if the MNE group is other-foreign owned",
+      "source": "matched ARD-AFDI"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ln(Ki/KMedian) capital ratio to sector median plant",
+      "source": "ARD"
+     },
+     {
+      "name": "quadratic polynomial in age and age censoring dummy",
+      "source": "ARD"
+     },
+     {
+      "name": "time and region dummies",
+      "source": "ARD"
+     }
+    ]
+   },
+   {
+    "label": "Double fixed-effects two-step approach (going global / best firm picking / plant picking effects, equations 27-28)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "plant productivity (within-transformed)",
+     "measure": "fixed-effects within transformation of productivity residual from equation (2); regression controls for every firm-plant combination fixed effect to cancel firm- and plant-specific fixed components",
+     "source": "ARD"
+    },
+    "key_ivs": [
+     {
+      "name": "MNE dummy (going global effect)",
+      "measure": "MNE ownership status of the firm-plant combination; a positive going global effect implies gamma_MNE > 0",
+      "source": "matched ARD-AFDI"
+     },
+     {
+      "name": "firm-specific fixed effect (best firm picking)",
+      "measure": "estimated firm-specific fixed effect, tested to be higher for firms that are multinational at some point in the sample period",
+      "source": "ARD"
+     },
+     {
+      "name": "plant-specific fixed effect (plant picking)",
+      "measure": "estimated plant-specific fixed effect, tested to be higher for plants owned by an MNE at some point in the sample period",
+      "source": "ARD"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm-plant combination fixed effects",
+      "source": "ARD"
+     }
+    ]
+   },
+   {
+    "label": "Discrete-choice (logit / multinomial) model of MNE takeover (probability of becoming an MNE, equations 34-35)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "probability of becoming part of an MNE (MNE takeover)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ARD"
+    },
+    "key_ivs": [
+     {
+      "name": "capital stock",
+      "measure": "plant capital (larger plants with more valuable assets are more interesting takeover candidates)",
+      "source": "ARD"
+     },
+     {
+      "name": "net revenue",
+      "measure": "net revenue used to control for unobserved productivity omega_it",
+      "source": "ARD"
+     },
+     {
+      "name": "ownership status / MNE dummy",
+      "measure": "current MNE dummy and 'ever MNE' dummy (defined at firm level); MNE ownership in the current period increases probability of MNE ownership next period",
+      "source": "matched ARD-AFDI"
+     }
+    ],
+    "controls": [
+     {
+      "name": "longer lags of productivity omega_it",
+      "source": "ARD"
+     }
+    ]
+   },
+   {
+    "label": "Structural selection (Olley-Pakes-style) second-stage productivity regression identifying best firm and plant picking effects (equations 36-39)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "plant productivity / net revenue",
+     "measure": "r_it regressed via nonlinear least squares with productivity omega_it approximated by a polynomial in capital, MNE status and the estimated takeover probability P-hat_it (control-function correction for endogenous selection into MNE status)",
+     "source": "ARD"
+    },
+    "key_ivs": [
+     {
+      "name": "best firm effect",
+      "measure": "value of theta, capturing selection of high-productivity firms into MNE status",
+      "source": "ARD"
+     },
+     {
+      "name": "plant picking effect (delta_MNE)",
+      "measure": "coefficient delta_MNE capturing MNEs acquiring higher-productivity plants",
+      "source": "matched ARD-AFDI"
+     }
+    ],
+    "controls": [
+     {
+      "name": "capital k_it",
+      "source": "ARD"
+     },
+     {
+      "name": "estimated MNE-takeover probability P-hat_it (control function)",
+      "source": "ARD"
+     },
+     {
+      "name": "polynomial approximation of unobserved productivity omega_it",
+      "source": "ARD"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "fdi destinations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "short time period of our sample",
+    "firm effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "longer panel",
+    "firm effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "larger market shares",
+    "more productive plants",
+    "aggregate productivity"
+   ],
+   "mechanism_named": "better selection mechanism",
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "u.s. firms",
+    "selecting the best plants",
+    "aggressive takeover strategies",
+    "specific skills"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "particular time period considered",
+    "u.s. stock market boom",
+    "equity price increases"
+   ],
+   "mechanism_named": "the “cheap capital” view of FDI",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "u.s. firms",
+    "selecting the best plants"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "comparable u.k. and u.s. microdata",
+    "aggregate productivity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

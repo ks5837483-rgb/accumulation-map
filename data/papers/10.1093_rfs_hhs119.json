@@ -1,0 +1,351 @@
+{
+ "paper_id": "10.1093_rfs_hhs119",
+ "title": "Using Option Prices to Infer Overpayments and Synergies in M&amp;A Transactions",
+ "journal": "RFS",
+ "year": 2012,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "market efficiency / price discovery",
+  "option pricing theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ma_announcement",
+      "relation": "increases",
+      "to": "unfavorable_news_about_bidder_standalone_value",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "unfavorable_news_about_bidder_standalone_value",
+      "relation": "decreases",
+      "to": "observed_bidder_abnormal_return",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unfavorable_news_about_bidder_standalone_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "probability_of_merger_failure",
+      "relation": "increases",
+      "to": "downward_bias_in_observed_abnormal_returns",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "downward_bias_in_observed_abnormal_returns",
+      "relation": "decreases",
+      "to": "observed_synergy_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "downward_bias_in_observed_abnormal_returns"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "listed_options_sample_requirement",
+      "relation": "increases",
+      "to": "selection_toward_large_bidders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "selection_toward_large_bidders",
+      "relation": "decreases",
+      "to": "estimated_synergy_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "selection_toward_large_bidders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (U.S. domestic takeovers)",
+  "time_period": "1996-2008 (announcements January/April 1996 through December 2008)",
+  "sample_description": "U.S. domestic takeover bids (mergers, acquisitions, acquisitions of majority interest) where both bidder and target have listed exchange-traded call options; all-cash or all-stock, consummated or withdrawn, uncontested; drawn from SDC U.S. Mergers and Acquisitions database matched to CRSP, Compustat, and OptionMetrics",
+  "sample_size": "167 takeover offers (308 firms: 141 unique bidders, 167 unique targets)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "OptionMetrics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3: Estimating the sources of takeover value (structural model estimation)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "167 takeover offers with exchange-traded call options on both bidder and target",
+    "dv": {
+     "name": "sources of takeover value (probability of success, bidder/target gains, news)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; OptionMetrics"
+    },
+    "key_ivs": [
+     {
+      "name": "bidder and target share prices",
+      "measure": "closing prices of bidder and target on the announcement day",
+      "source": "CRSP"
+     },
+     {
+      "name": "call option prices",
+      "measure": "[withheld: wording matches the source]",
+      "source": "OptionMetrics"
+     },
+     {
+      "name": "risk-free rate",
+      "measure": "Eurodollar spot rate (1-day, 7-day, 1-month, 3-month, 6-month, 1-year nominal rates converted into continuous rates and linearly interpolated)",
+      "source": "Datastream"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4: Average abnormal returns and percentage price changes",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal returns and percentage price changes (synergy gains, gains to bidder, gains to target, news)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; OptionMetrics"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 5: Average dollar value changes",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "dollar value changes (bidder loss/gain, target gain, total synergy gain, news about bidder/target)",
+     "measure": "average dollar value changes; standard announcement-day dollar gains/losses using base date t-30 (also t-5, t-60); bidder and target gains and total synergy gain computed from model parameter estimates fitted only to announcement-day data",
+     "source": "CRSP; OptionMetrics"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "167 offers",
+    "dv": {
+     "name": "probability that the first bid succeeds",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Hostile",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Effective premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Relative size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7, Panel A: First-stage probit regression (likelihood of having exchange-traded options)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "instruments: trading volume, firm size (market capitalization), and return volatility (identify the sample-selection bias from having exchange-traded options; exclusion restriction)",
+    "sample": "1,705 observations",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "probit regression of whether a firm has listed options; specification based on Mayhew and Mihov (2004)",
+     "source": "OptionMetrics; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Market value",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Trading volume",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Return volatility",
+      "measure": "standard deviation of daily log returns",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7, Panel B: Second-stage regression (tests for sample selection bias)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "instruments: trading volume, firm size (market capitalization), and return volatility (exclusion restriction)",
+    "sample": "",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; OptionMetrics; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Bidder inverse Mills ratio",
+      "measure": "inverse Mills ratio from the first-stage bidder probit regression",
+      "source": "computed from first-stage probit"
+     },
+     {
+      "name": "Target inverse Mills ratio",
+      "measure": "inverse Mills ratio from the first-stage target probit regression",
+      "source": "computed from first-stage probit"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal characteristics (per Appendix B variable definitions)",
+      "source": "SDC"
+     },
+     {
+      "name": "firm characteristics (per Appendix B variable definitions)",
+      "source": "CRSP; Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "actively traded call options",
+    "large firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "base price"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "sample selection biases",
+    "synergy gains"
+   ],
+   "mechanism_named": "sample selection biases",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "large, liquidly traded bidders and targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,1091 @@
+{
+ "paper_id": "10.1111_1475-679x.12560",
+ "title": "News Bias in Financial Journalists’ Social Networks",
+ "journal": "JAR",
+ "year": 2024,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "favoritism hypothesis (media bias)",
+  "information transmission hypothesis (media as information intermediary)",
+  "information economics",
+  "behavioral finance (investor overreaction)",
+  "noise trader theory",
+  "limited attention theory",
+  "social network theory (homophily)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "price_discovery_efficiency",
+      "from_measured": false,
+      "to_measured": false,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "favoritism hypothesis: the less negative tone reflects bias rather than value-relevant information"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "investor_overreaction",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_overreaction",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_overreaction"
+   ],
+   "moderators": [
+    {
+     "construct": "level_of_rational_arbitrage",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "investor_overreaction",
+     "moderated_from": "journalist_social_ties",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "stock_illiquidity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "investor_overreaction",
+     "moderated_from": "journalist_social_ties",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "news_salience_front_page",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "investor_overreaction",
+     "moderated_from": "journalist_social_ties",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information transmission: the favorable coverage conveys value-relevant information rather than causing mispricing"
+   ]
+  },
+  {
+   "hypothesis": "P-slant",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "implicit_incentive_for_favorable_bias",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "implicit_incentive_for_favorable_bias",
+      "relation": "decreases",
+      "to": "negative_slant",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "shared_preferences_and_beliefs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shared_preferences_and_beliefs",
+      "relation": "decreases",
+      "to": "negative_slant",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "favoritism",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favoritism",
+      "relation": "decreases",
+      "to": "negative_slant",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "implicit_incentive_for_favorable_bias",
+    "shared_preferences_and_beliefs",
+    "favoritism"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "omitted deal quality: editors assign connected reporters to better deals / higher-synergy deals drive the tone",
+    "reverse causality: firms with high information asymmetry choose to connect with journalists",
+    "information transmission: less negative slant reflects more informative coverage, not bias"
+   ]
+  },
+  {
+   "hypothesis": "P-quotes",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "friendliness_toward_executives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "friendliness_toward_executives",
+      "relation": "increases",
+      "to": "ceo_verbatim_quotes",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "friendliness_toward_executives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-accuracy",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "obfuscation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "obfuscation",
+      "relation": "decreases",
+      "to": "reporting_accuracy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "obfuscation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information transmission: connected journalists with private access provide more accurate reporting"
+   ]
+  },
+  {
+   "hypothesis": "P-spillover",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "favorable_attitude_spillover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_attitude_spillover",
+      "relation": "decreases",
+      "to": "negative_slant",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_attitude_spillover"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-bidcompetition",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "connected_media_coverage",
+      "relation": "increases",
+      "to": "deal_misperception",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_misperception",
+      "relation": "increases",
+      "to": "bid_competition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_misperception"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-bidrevision",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "connected_media_coverage",
+      "relation": "increases",
+      "to": "bid_competition",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "bid_competition",
+      "relation": "increases",
+      "to": "bid_price_revision",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-completion",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "connected_media_coverage",
+      "relation": "increases",
+      "to": "bid_competition",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "bid_competition",
+      "relation": "decreases",
+      "to": "deal_completion",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P-career",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "decreases",
+      "to": "reporting_credibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reporting_credibility",
+      "relation": "decreases",
+      "to": "journalist_turnover",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "journalist_social_ties",
+      "relation": "increases",
+      "to": "outside_industry_opportunities",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "outside_industry_opportunities",
+      "relation": "increases",
+      "to": "move_to_connected_industry",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reporting_credibility",
+    "outside_industry_opportunities"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (mergers and acquisitions news of U.S. public firms)",
+  "country_region": "United States (U.S. public firms)",
+  "time_period": "1997-2016",
+  "sample_description": "M&A bids involving U.S. public firms from SDC Platinum (transaction value > US$10 million, target not in bankruptcy, nonfinancial parties), matched to Wall Street Journal and Financial Times news articles (via Factiva) with author information; firm/stock data from Compustat and CRSP",
+  "sample_size": "pooled sample of 1,302 articles (651 deals covered by both newspapers; from 2,390 SDC deals)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson/Refinitiv",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Brokers' Estimate System",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Bloomberg",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC's Accounting and Auditing Enforcement Releases",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "LinkedIn",
+    "category": "other",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Twitter",
+    "category": "other",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "newspaper Web sites and general Web searches (personnel biographies; hand-collected educational ties, turnover reasons)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Sample selection probit of media coverage (online appendix table A2)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "full list of M&A bids (predicting whether a deal is covered)",
+    "dv": {
+     "name": "Media coverage",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (full list of M&A bids); Factiva (coverage)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva, LinkedIn, EDGAR, Bloomberg, Twitter)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm and deal size",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "hostile and unsolicited transactions",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel A: Pooled OLS regressions (Journalist Ties and Media Slant)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "pooled sample of all overlapping articles covering the same M&A event from WSJ and FT (deal, media outlet, and journalist fixed effects)",
+    "dv": {
+     "name": "Negative slant",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva (Wall Street Journal and Financial Times article text)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected from prior article coverage (Factiva)"
+     },
+     {
+      "name": "CONNECT_UNIVERSITY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (newspaper Web sites, LinkedIn, EDGAR proxy filings, Bloomberg, Web searches)"
+     },
+     {
+      "name": "CONNECT_TWITTER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Twitter (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Local journalist",
+      "source": "hand-collected (journalist characteristics)"
+     },
+     {
+      "name": "Female",
+      "source": "hand-collected (journalist characteristics)"
+     },
+     {
+      "name": "Tenure",
+      "source": "hand-collected (journalist characteristics)"
+     },
+     {
+      "name": "Industry expert",
+      "source": "hand-collected (journalist characteristics)"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B: Two-stage least squares regressions",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Negative slant",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva (WSJ and FT article text)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK (instrumented)",
+      "measure": "CONNECT_WORK instrumented with connected journalists' turnover; second stage regresses Negative slant on instrumented CONNECT_WORK",
+      "source": "hand-collected (Factiva)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "journalist-level controls as in panel A",
+      "source": "hand-collected (journalist characteristics)"
+     },
+     {
+      "name": "average journalist slant",
+      "source": "Factiva (article text)"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, cols 1-3: Quotes of CEOs",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "same pooled sample as table 2; 1,302 observations",
+    "dv": {
+     "name": "Quotes of CEOs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva (WSJ and FT article text)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva)"
+     },
+     {
+      "name": "CONNECT_UNIVERSITY",
+      "measure": "one if any author attended the same school as the CEO",
+      "source": "hand-collected (LinkedIn, EDGAR, Bloomberg)"
+     },
+     {
+      "name": "CONNECT_TWITTER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Twitter (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "controls as in table 2 (Local journalist, Female, Tenure, Industry expert)",
+      "source": "hand-collected (journalist characteristics)"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, cols 4-12: Accuracy/ambiguity of news analysis",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "same pooled sample as table 2; 1,302 observations",
+    "dv": {
+     "name": "Accuracy/ambiguity of news article",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva (WSJ and FT article text)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva)"
+     },
+     {
+      "name": "CONNECT_UNIVERSITY",
+      "measure": "one if any author attended the same school as the CEO",
+      "source": "hand-collected (LinkedIn, EDGAR, Bloomberg)"
+     },
+     {
+      "name": "CONNECT_TWITTER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Twitter (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "controls as in table 2 (Local journalist, Female, Tenure, Industry expert)",
+      "source": "hand-collected (journalist characteristics)"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B: Spillover effect",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "news coverage of second-degree connected firms (directors' firms in the acquirer's network), including other business news; 6,988 observations; firm × year-month and media outlet FE",
+    "dv": {
+     "name": "Negative slant",
+     "measure": "the fraction of negative words in news articles concerning the directors' (second-degree connected) firms",
+     "source": "Factiva (WSJ and FT article text)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_Indirect",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx (director networks) + hand-collected journalist ties; Factiva (articles)"
+     },
+     {
+      "name": "CONNECT_Direct",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva, LinkedIn, Twitter)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "controls as in table 2",
+      "source": "hand-collected (journalist characteristics)"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel C: Articles on financial fraud (external validity)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Negative slant",
+     "measure": "the fraction of negative words in news articles on corporate financial fraud",
+     "source": "Factiva (WSJ and FT article text)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva)"
+     },
+     {
+      "name": "CONNECT_UNIVERSITY",
+      "measure": "one if any author attended the same school as the executive",
+      "source": "hand-collected (LinkedIn, EDGAR, Bloomberg)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "controls as in table 2 + firm characteristics",
+      "source": "Compustat / hand-collected"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, cols 1-3: Journalist Ties and Stock Returns (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR[0,1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock returns via market model (data source not named); event dates from WSJ/FT publication"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva)"
+     },
+     {
+      "name": "CONNECT_UNIVERSITY",
+      "measure": "one if any author attended the same school as the CEO",
+      "source": "hand-collected (LinkedIn, EDGAR, Bloomberg)"
+     },
+     {
+      "name": "CONNECT_TWITTER",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Twitter (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "relative deal size",
+      "source": "SDC"
+     },
+     {
+      "name": "toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "unsolicited",
+      "source": "SDC"
+     },
+     {
+      "name": "cross-industry",
+      "source": "SDC"
+     },
+     {
+      "name": "financing (all cash), financing (all equity)",
+      "source": "SDC"
+     },
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "CEO age",
+      "source": "EDGAR proxy filings"
+     },
+     {
+      "name": "CEO duality",
+      "source": "EDGAR proxy filings"
+     },
+     {
+      "name": "classified board",
+      "source": "EDGAR proxy filings"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, col 4: Journalist Ties and Stock Returns (2SLS)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "connected journalists' turnover (promotion)",
+    "sample": "turnover subsample (as in section 4.2); 318 observations",
+    "dv": {
+     "name": "CAR[0,1]",
+     "measure": "acquirer's cumulative abnormal return from day 0 to day 1 around the media publication date (market model residual)",
+     "source": "stock returns via market model (data source not named)"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK (instrumented)",
+      "measure": "CONNECT_WORK instrumented with connected journalists' turnover (promotion)",
+      "source": "hand-collected (Factiva)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deal and firm characteristics as in cols 1-3",
+      "source": "SDC / Compustat / EDGAR"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel A: Heterogeneous (cross-sectional) effects on CAR",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "WSJ sample; 1,127 observations; year and industry FE",
+    "dv": {
+     "name": "CAR[0,1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock returns via market model"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK × # Analysts",
+      "measure": "interaction of working-relationship tie with analyst coverage (arbitrage opportunities proxy)",
+      "source": "Institutional Brokers' Estimate System (analyst coverage)"
+     },
+     {
+      "name": "CONNECT_WORK × Firm Size",
+      "measure": "interaction with total asset size (arbitrage proxy)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CONNECT_WORK × Institutional Ownership",
+      "measure": "interaction with percentage of institutional ownership (arbitrage proxy)",
+      "source": "Thomson/Refinitiv"
+     },
+     {
+      "name": "CONNECT_WORK × Amihud Illiquidity",
+      "measure": "interaction with Amihud's [2002] illiquidity measure (liquidity channel proxy)",
+      "source": "stock returns/volume data"
+     },
+     {
+      "name": "CONNECT_WORK × Front-Page",
+      "measure": "interaction with a dummy for whether the article appears on the front page of the WSJ (salience proxy)",
+      "source": "hand-collected (WSJ article placement)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M&A deal and firm controls as in table 4",
+      "source": "SDC / Compustat / EDGAR"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: Long-run returns (price reversal)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "WSJ sample; 1,127 observations (847 for CAR[-1,complete])",
+    "dv": {
+     "name": "CAR at multiple horizons",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock returns via market model"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M&A deal and firm controls as in table 4",
+      "source": "SDC / Compustat / EDGAR"
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Attributes of the bidding process (bid competition, bid revision, deal completion)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "connected journalists' turnover (used to instrument CONNECT in the IV columns)",
+    "sample": "WSJ sample; 1,131 observations (IV columns use the turnover subsample)",
+    "dv": {
+     "name": "Bidding-process outcomes",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT_WORK",
+      "measure": "connected coverage; instrumented with journalist Turnover in even columns",
+      "source": "hand-collected (Factiva)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M&A deal and firm controls as in equation (3)",
+      "source": "SDC / Compustat / EDGAR"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Journalist networks and future career trajectory",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "journalist-level sample; media outlet and journalist location (city) fixed effects",
+    "dv": {
+     "name": "Journalist career outcomes",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva and LinkedIn"
+    },
+    "key_ivs": [
+     {
+      "name": "CONNECT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (Factiva, LinkedIn, Twitter)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "gender",
+      "source": "hand-collected (journalist characteristics)"
+     },
+     {
+      "name": "tenure",
+      "source": "hand-collected (journalist characteristics)"
+     },
+     {
+      "name": "number of publications (log)",
+      "source": "Factiva"
+     },
+     {
+      "name": "journalism degree",
+      "source": "hand-collected (LinkedIn)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "media slant",
+    "bidding contests",
+    "offer prices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "favorable coverage by connected journalists",
+    "takeover bids",
+    "bid competition",
+    "price revision"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "favorable coverage by connected journalists",
+    "relation": "increases",
+    "to": "takeover bids"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "journalist ties",
+    "managers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "journalist ties",
+    "relation": "affects",
+    "to": "managers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "connections",
+    "journalist turnover",
+    "credibility channel",
+    "external opportunity channel"
+   ],
+   "mechanism_named": "the credibility and external opportunity channels",
+   "proposed_edge": {
+    "from": "connections",
+    "relation": "affects",
+    "to": "journalist turnover"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "welfare analysis",
+    "journalist connections"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "journalists’ social networks",
+    "credibility",
+    "access to management"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "biased media coverage",
+    "connection effect",
+    "price discovery"
+   ],
+   "mechanism_named": "connection effect",
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "decreases",
+    "to": "price discovery"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

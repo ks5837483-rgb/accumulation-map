@@ -1,0 +1,844 @@
+{
+ "paper_id": "10.1093_rof_rfn017",
+ "title": "Target-firm information asymmetry and acquirer returns",
+ "journal": "RF",
+ "year": 2008,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_payment",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "stock_payment",
+      "relation": "decreases",
+      "to": "overpayment_risk",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "overpayment_risk",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "overpayment_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "target_valuation_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "stock_payment",
+     "moderated_to": "acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1"
+    },
+    {
+     "construct": "target_public_status",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "stock_payment",
+     "moderated_to": "acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquisition discount (acquirers buy private targets cheaply, Officer 2007)",
+    "new blockholder monitoring benefits from stock payment (Chang 1998)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_payment",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_valuation_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "stock_payment",
+     "moderated_to": "acquirer_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (domestic, industrial, private firms and publicly traded targets across 13 two-digit-SIC industries; concentrated in Business Services and Machinery and Equipment Supply)",
+  "country_region": "United States (acquirers traded on NYSE, Nasdaq, or AMEX; public-target acquirers are U.S. firms)",
+  "time_period": "1995-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "735 acquisitions of privately held targets (main sample) and 1,944 acquisitions of publicly traded targets"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings of the acquirer (8-Ks, S-4s, S-1s, proxy statements, S-3s) — target financial data hand collected",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table VI Panel A (1): OLS, private targets, Stock >= 90%",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of privately held targets, 1995-2004 (N=734)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Development stage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (hand-collected target financials)"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Development stage * Stock",
+      "measure": "interaction of the development stage indicator with the stock method-of-payment indicator",
+      "source": "SEC filings; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size (target deal value / acquirer market value 5 days prior)",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel A (2): OLS, private targets, Stock continuous",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of privately held targets, 1995-2004 (N=734)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Development stage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (hand-collected target financials)"
+     },
+     {
+      "name": "Stock",
+      "measure": "continuous variable for Stock (fraction of consideration paid in stock)",
+      "source": "SDC"
+     },
+     {
+      "name": "Development stage * Stock",
+      "measure": "interaction of the development stage indicator with the continuous stock variable",
+      "source": "SEC filings; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel A (3): OLS, private targets, Stock >= 90%, relative size >= 20%",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "private targets, transactions where target value is at least 20% of acquirer market value (N=357)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Development stage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (hand-collected target financials)"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Development stage * Stock",
+      "measure": "interaction of the development stage indicator with the stock method-of-payment indicator",
+      "source": "SEC filings; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel A (4): OLS, private targets, Stock >= 90%, with acquisition discount control",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "private targets with computable acquisition discount (N=404)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Development stage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (hand-collected target financials)"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Development stage * Stock",
+      "measure": "interaction of the development stage indicator with the stock method-of-payment indicator",
+      "source": "SEC filings; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Discount (acquisition discount: 1 - private target valuation multiple / average multiple of comparable public targets, averaged over deal value to total assets/net income/EBITDA/sales)",
+      "source": "SEC filings; COMPUSTAT; SDC"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel A (5): Two-stage treatment model (Heckman-type), private targets, Stock >= 90%",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "private targets with computable acquisition discount (N=404); second stage of two-stage treatment model for endogenous method-of-payment",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Development stage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (hand-collected target financials)"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Development stage * Stock",
+      "measure": "interaction of the development stage indicator with the stock method-of-payment indicator",
+      "source": "SEC filings; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Discount",
+      "source": "SEC filings; COMPUSTAT; SDC"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": "SEC filings"
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "lambda (selection correction term)",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "private targets (N=404); first-stage probit of the treatment model",
+    "dv": {
+     "name": "Stock (method of payment)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Development stage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (hand-collected target financials)"
+     },
+     {
+      "name": "Acquirer Q",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Year -1 abnormal return",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table VII (1): OLS, public targets, development stage measure of uncertainty",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of publicly traded targets, 1995-2004 (N=1,944)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Development stage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Development stage * Stock",
+      "measure": "interaction of the development stage indicator with the stock method-of-payment indicator",
+      "source": "COMPUSTAT; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": ""
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table VII (2): OLS, public targets, target idiosyncratic volatility measure of uncertainty",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of publicly traded targets, 1995-2004 (N=1,868)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target volatility",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Target volatility * Stock",
+      "measure": "interaction of target idiosyncratic volatility with the stock method-of-payment indicator",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": ""
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table VII (3): OLS, public targets, Stock continuous",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of publicly traded targets, 1995-2004 (N=1,868)",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target volatility",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock",
+      "measure": "continuous variable for stock (fraction of consideration paid in stock)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target volatility * Stock",
+      "measure": "interaction of target idiosyncratic volatility with the continuous stock variable",
+      "source": "CRSP; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Acquirer volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Acquirer Q",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "Log(acquirer market value)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Blockholder indicator",
+      "source": ""
+     },
+     {
+      "name": "Acquirer is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Target is a dotcom",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC)",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "stock-swap offer",
+    "acquirer returns",
+    "uncertainty about intrinsic values"
+   ],
+   "mechanism_named": "the Hansen model",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "method of payment",
+    "cash"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "announcement returns",
+    "stock swap",
+    "public firms",
+    "private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "announcement returns",
+    "value of the acquisition",
+    "information asymmetry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "announcement returns",
+    "stock-swap acquirers",
+    "opaque targets",
+    "publicly held firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "information asymmetry",
+    "privately held firms",
+    "publicly traded firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "difficulty of valuation",
+    "acquirer returns",
+    "public targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

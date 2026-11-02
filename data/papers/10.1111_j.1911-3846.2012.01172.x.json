@@ -1,0 +1,567 @@
+{
+ "paper_id": "10.1111_j.1911-3846.2012.01172.x",
+ "title": "Target Financial Reporting Quality and M&amp;A Deals that Go Bust*",
+ "journal": "CAR",
+ "year": 2012,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "financial reporting quality",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "low_quality_financial_reporting",
+      "relation": "increases",
+      "to": "perceived_target_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_target_value",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "low_quality_financial_reporting",
+      "relation": "increases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "low_quality_financial_reporting",
+      "relation": "increases",
+      "to": "target_share_price_discount",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_share_price_discount",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_target_value",
+    "information_uncertainty",
+    "target_share_price_discount"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "low_quality_financial_reporting",
+      "relation": "increases",
+      "to": "breach_of_gaap_warranties",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "breach_of_gaap_warranties",
+      "relation": "increases",
+      "to": "deal_termination",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "breach_of_gaap_warranties"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "overbidding by the acquirer at deal signing (winner's curse), rather than low financial reporting quality, drives termination"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "low_quality_financial_reporting",
+      "relation": "increases",
+      "to": "misrepresentation_of_target_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "misrepresentation_of_target_value",
+      "relation": "increases",
+      "to": "deal_renegotiation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "misrepresentation_of_target_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "low_quality_financial_reporting",
+      "relation": "increases",
+      "to": "material_misstatement",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "material_misstatement",
+      "relation": "increases",
+      "to": "financial_statement_restatement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "material_misstatement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_termination",
+      "relation": "increases",
+      "to": "uncovered_financial_statement_irregularities",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "uncovered_financial_statement_irregularities",
+      "relation": "increases",
+      "to": "financial_statement_restatement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "uncovered_financial_statement_irregularities"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded target firms in M&A deals; no focal sector)",
+  "country_region": "United States (U.S. publicly traded targets)",
+  "time_period": "2002-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,638 deals (deal termination analysis; 234 terminated); 1,468 deals in the deal premium analysis"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum Mergers & Acquisitions Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - Regression analysis of deal premiums (eq. 1, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,468 M&A deals settled 2002-2008 (deal premium analysis)",
+    "dv": {
+     "name": "PREMIUM",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "LQFR_SCORE",
+      "measure": "composite low-quality financial reporting score for the target, constructed from the financial reporting quality proxies |AAC|, WIC, OFFBS_LIAB, |AFE|, and DISP (higher score = lower reporting quality)",
+      "source": "COMPUSTAT; I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "INDUSTRY",
+      "source": "SDC"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "CASH",
+      "source": "SDC"
+     },
+     {
+      "name": "PUBLICBIDDER",
+      "source": "SDC"
+     },
+     {
+      "name": "SIZE (log of transaction value)",
+      "source": "SDC"
+     },
+     {
+      "name": "rCFO (std. dev. of net cash flows from operations)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "GROWTH (avg. sales growth over prior three years)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MTB",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1,638 M&A deals (deal termination analysis), 234 terminated",
+    "dv": {
+     "name": "TERMINATED",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "LQFR_SCORE",
+      "measure": "composite low-quality financial reporting score for the target, constructed from the financial reporting quality proxies |AAC|, WIC, OFFBS_LIAB, |AFE|, and DISP (higher score = lower reporting quality)",
+      "source": "COMPUSTAT; I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "INDUSTRY",
+      "source": "SDC"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "COLLAR",
+      "source": "SDC"
+     },
+     {
+      "name": "SIZE (log of transaction value)",
+      "source": "SDC"
+     },
+     {
+      "name": "rCFO",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "GROWTH",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MTB",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Ordered logistic regression (completed / renegotiated / terminated)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "subsample excluding tender offers, n = 1,441 (217 terminated, 50 renegotiated)",
+    "dv": {
+     "name": "YJ (deal outcome severity)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "LQFR_SCORE",
+      "measure": "composite low-quality financial reporting score for the target, constructed from the financial reporting quality proxies |AAC|, WIC, OFFBS_LIAB, |AFE|, and DISP (higher score = lower reporting quality)",
+      "source": "COMPUSTAT; I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "HOSTILE",
+      "source": "SDC"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "SDC"
+     },
+     {
+      "name": "INDUSTRY",
+      "source": "SDC"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "COLLAR",
+      "source": "SDC"
+     },
+     {
+      "name": "SIZE",
+      "source": "SDC"
+     },
+     {
+      "name": "rCFO",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "GROWTH",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MTB",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1,468 deals, 205 terminated",
+    "dv": {
+     "name": "TERMINATED",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "LQFR_SCORE",
+      "measure": "composite low-quality financial reporting score for the target, constructed from the financial reporting quality proxies |AAC|, WIC, OFFBS_LIAB, |AFE|, and DISP (higher score = lower reporting quality)",
+      "source": "COMPUSTAT; I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PREMIUM",
+      "source": "SDC"
+     },
+     {
+      "name": "BID_INCREASE",
+      "source": "SDC"
+     },
+     {
+      "name": "PUBLICBIDDER",
+      "source": "SDC"
+     },
+     {
+      "name": "CAR (3-day acquirer announcement return, CRSP value-weighted index)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Deal characteristics controls",
+      "source": "SDC"
+     },
+     {
+      "name": "Target firm characteristics controls",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A - Frequency of restatements of failed targets vs. control samples",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "failed targets vs. firms covered by COMPUSTAT and Audit Analytics over 2002-2008",
+    "dv": {
+     "name": "Restatement incidence",
+     "measure": "indicator that a failed target files an amended (restated) financial statement with the SEC within two years of the takeover announcement",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Failed (terminated) target status",
+      "measure": "target of a terminated M&A deal versus benchmark firms",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "low-quality financial reporting",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

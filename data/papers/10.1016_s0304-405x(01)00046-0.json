@@ -1,0 +1,440 @@
+{
+ "paper_id": "10.1016_s0304-405x(01)00046-0",
+ "title": "Where do merger gains come from? Bank mergers from the perspective of insiders and outsiders",
+ "journal": "JFE",
+ "year": 2001,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "synergy theory",
+  "efficient markets hypothesis",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_overlap",
+      "relation": "increases",
+      "to": "cost_savings_opportunity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_savings_opportunity",
+      "relation": "increases",
+      "to": "estimated_merger_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_savings_opportunity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "estimated_net_cost_savings",
+      "relation": "increases",
+      "to": "market_capitalization_of_incremental_earnings",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_capitalization_of_incremental_earnings",
+      "relation": "increases",
+      "to": "combined_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_capitalization_of_incremental_earnings"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "estimated_revenue_enhancements",
+      "relation": "increases",
+      "to": "market_capitalization_of_incremental_earnings",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "market_capitalization_of_incremental_earnings",
+      "relation": "increases",
+      "to": "combined_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_capitalization_of_incremental_earnings"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "estimated_cost_savings",
+      "relation": "increases",
+      "to": "realized_cost_reductions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "realized_cost_reductions",
+      "relation": "increases",
+      "to": "post_merger_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "realized_cost_reductions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "banking (large bank mergers/acquisitions)",
+  "country_region": "United States",
+  "time_period": "1985-1996",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "64 mergers (subsample of 41 mergers with management estimates)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Mergestat",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SNL Securities",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "8-K filings, proxy statements, press releases, annual reports, and 10Ks",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Dow Jones News Retrieval Service",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "INVESTEXT (analyst research reports)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CIRR microfiche (analyst research reports)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research on Securities Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "McNally and Thomson Bank Directory",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Federal Reserve Bulletin (Consumer Price Index)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Philadelphia Federal Reserve Bank (inflation estimate)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "64 large bank acquisitions announced 1985-1996 (target market value > $400 million in 1985 dollars, target assets >= 10% of bidder assets)",
+    "dv": {
+     "name": "Combined (and bidder, and target) announcement-period abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Time period (1985-1990 vs 1991-1996)",
+      "measure": "subperiod grouping to test change in merger returns over time",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Abnormal returns grouped by type of merger (market expansion vs market overlap)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "64 mergers split into market-expansion (29) vs market-overlap groups, 1985-1996",
+    "dv": {
+     "name": "Combined announcement-period abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger type (market expansion vs market overlap)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "McNally and Thomson Bank Directory"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Estimated present value of merger gains (and of net cost savings) scaled by combined pre-merger market value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Management estimates hand-collected from 8-K filings, proxy statements, press releases, annual reports, and analyst research reports"
+    },
+    "key_ivs": [
+     {
+      "name": "Market overlap (geographic overlap)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "McNally and Thomson Bank Directory"
+     },
+     {
+      "name": "Relative size of target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Combined pre-merger efficiency ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports/10Ks"
+     },
+     {
+      "name": "Adjusted pre-tax ROA (combined bidder and target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "annual reports/10Ks"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel A - Target abnormal returns regressed on estimated merger gains",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "41 mergers with management estimates, 1985-1996",
+    "dv": {
+     "name": "Target announcement-day abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     },
+     {
+      "name": "Estimated value of revenue enhancements/target market value",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel B - Bidder abnormal returns regressed on estimated merger gains",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "41 mergers with management estimates, 1985-1996",
+    "dv": {
+     "name": "Bidder announcement-day abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Estimated present value of merger gains/bidder market value",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     },
+     {
+      "name": "Estimated value of revenue enhancements/bidder market value",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel C - Combined bidder and target abnormal returns regressed on estimated merger gains",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "41 mergers with management estimates, 1985-1996",
+    "dv": {
+     "name": "Combined bidder and target announcement-day abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     },
+     {
+      "name": "Estimated value of revenue enhancements/combined bidder and target market value",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Management estimates from 8-K filings/proxy statements/press releases/analyst reports"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "valuation estimates",
+    "cost and revenue forecasts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "analysts' assessments of overpayment",
+    "negative return to bidders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "cost savings or revenue targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "accounting numbers",
+    "merger goals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "cost savings variable",
+    "cost savings anticipated"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "post-merger performance",
+    "selection bias"
+   ],
+   "mechanism_named": "selection bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

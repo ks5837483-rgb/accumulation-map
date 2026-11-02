@@ -1,0 +1,563 @@
+{
+ "paper_id": "10.1111_1475-679x.12082",
+ "title": "Do Improvements in the Information Environment Enhance Insiders’ Ability to Learn from Outsiders?",
+ "journal": "JAR",
+ "year": 2015,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "informational feedback effect of stock prices",
+  "learning hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ifrs_adoption",
+      "relation": "increases",
+      "to": "stock_price_informativeness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stock_price_informativeness",
+      "relation": "increases",
+      "to": "investment_to_price_sensitivity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "stock_price_informativeness"
+   ],
+   "moderators": [
+    {
+     "construct": "foreign_institutional_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "stock_price_informativeness",
+     "moderated_from": "ifrs_adoption",
+     "moderated_to": "investment_to_price_sensitivity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a general increasing time trend in investment-to-price sensitivity unrelated to the IFRS information shock"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ifrs_adoption",
+      "relation": "increases",
+      "to": "stock_price_informativeness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stock_price_informativeness",
+      "relation": "increases",
+      "to": "market_reaction_predicts_deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "stock_price_informativeness"
+   ],
+   "moderators": [
+    {
+     "construct": "outsiders_information_advantage",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "stock_price_informativeness",
+     "moderated_from": "ifrs_adoption",
+     "moderated_to": "market_reaction_predicts_deal_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P-gains (unnumbered tested prediction)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ifrs_adoption",
+      "relation": "increases",
+      "to": "insiders_ability_to_learn_from_outsiders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "insiders_ability_to_learn_from_outsiders",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "insiders_ability_to_learn_from_outsiders"
+   ],
+   "moderators": [
+    {
+     "construct": "likelihood_of_learning_from_outsiders",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "insiders_ability_to_learn_from_outsiders",
+     "moderated_from": "ifrs_adoption",
+     "moderated_to": "post_acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P-gains moderation"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (all WorldScope-covered firms, excluding regulated industries — financials and utilities, SIC 6000-6999 and 4900-4949)",
+  "country_region": "50 countries (treatment: 31 mandatory IFRS-adopting countries; control: 19 non-IFRS-adopting countries)",
+  "time_period": "1990-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "32,158 firms (284,748 firm-year observations) for the investment-to-price analysis; 9,844 M&A deals for the deal-completion analysis"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial's WorldScope database",
+    "category": "worldscope",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters's DataStream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters's SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "the FactSet/LionShares database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Daske et al. [2013] internet appendix (voluntary IFRS adopters)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Deloitte's IAS Plus (IFRS adoption dates)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A: Baseline results (investment sensitivity to stock price)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "mandatory IFRS adoption",
+    "sample": "full sample vs non-IFRS control (models 1-2); matched-by-industry-and-size control (model 3); voluntary IFRS adopters as control (model 4)",
+    "dv": {
+     "name": "Investment (I_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WorldScope"
+    },
+    "key_ivs": [
+     {
+      "name": "Q_{t-1} x Post x IFRS",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WorldScope/DataStream"
+     },
+     {
+      "name": "Tobin's q (Q_{t-1})",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WorldScope/DataStream"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Log assets (natural logarithm of lagged total assets, 2010 prices)",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Post indicator",
+      "source": "Deloitte IAS Plus"
+     },
+     {
+      "name": "IFRS treatment indicator",
+      "source": "Deloitte IAS Plus"
+     },
+     {
+      "name": "country, industry, and year fixed effects (firm and year fixed effects in model 2)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B: Robustness tests (restricted (-5,+5) window; asset growth proxy)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "mandatory IFRS adoption",
+    "sample": "10 years around mandatory IFRS adoption (-5,+5), firms with at least two pre and post observations",
+    "dv": {
+     "name": "Investment (I_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WorldScope"
+    },
+    "key_ivs": [
+     {
+      "name": "Q_{t-1} x Post x IFRS",
+      "measure": "triple interaction of lagged Tobin's q, Post-IFRS indicator, and IFRS treatment indicator",
+      "source": "WorldScope/DataStream"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CF-TA (cash flow)",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Log assets",
+      "source": "WorldScope"
+     },
+     {
+      "name": "country, industry, and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A: Event time analysis",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "mandatory IFRS adoption",
+    "sample": "treatment sample of mandatory IFRS adopters (95,517 firm-year observations)",
+    "dv": {
+     "name": "Investment (I_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WorldScope"
+    },
+    "key_ivs": [
+     {
+      "name": "Q_{t-1} x Pre-Event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WorldScope/DataStream"
+     },
+     {
+      "name": "Q_{t-1} x Event",
+      "measure": "lagged Q interacted with Event indicator (=1 for years t and t+1, zero otherwise)",
+      "source": "WorldScope/DataStream"
+     },
+     {
+      "name": "Q_{t-1} x Post-Event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WorldScope/DataStream"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CF-TA (cash flow)",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Log assets",
+      "source": "WorldScope"
+     },
+     {
+      "name": "country, industry, and year fixed effects (firm and year fixed effects in model 2)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B: True and counterfactual events (placebo)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "mandatory IFRS adoption (with 2005 counterfactual event date for non-IFRS adopters)",
+    "sample": "treatment vs non-IFRS adopters (model 1); treatment vs voluntary IFRS adopters (model 2)",
+    "dv": {
+     "name": "Investment (I_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WorldScope"
+    },
+    "key_ivs": [
+     {
+      "name": "Q_{t-1} x IFRS True Event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WorldScope/DataStream"
+     },
+     {
+      "name": "Q_{t-1} x IFRS Counterfactual",
+      "measure": "lagged Q interacted with counterfactual-event indicator (=1 after 2005 for non-IFRS adopters; year after mandatory country adoption for voluntary adopters)",
+      "source": "WorldScope/DataStream"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CF-TA (cash flow)",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Log assets",
+      "source": "WorldScope"
+     },
+     {
+      "name": "country, industry, and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Changes in foreign institutional ownership and investment sensitivity to stock price",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "mandatory IFRS adoption",
+    "sample": "treatment sample of mandatory IFRS adopters; institutional-ownership data available 2000-2010 (74,785 observations)",
+    "dv": {
+     "name": "Investment (I_t)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WorldScope"
+    },
+    "key_ivs": [
+     {
+      "name": "Q_{t-1} x Post x Delta Foreign IO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet/LionShares"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CF-TA (cash flow)",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Log assets",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Post indicator, Q_{t-1}, and lower-order Delta Foreign IO interactions",
+      "source": "WorldScope/DataStream/FactSet"
+     },
+     {
+      "name": "country, industry, and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1b",
+     "H2b"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "mandatory IFRS adoption",
+    "sample": "9,844 M&A deals announced 1990-2012 (deal value >= $10M, majority acquisitions); non-IFRS control (model 1), matched sample (model 2), treatment acquirers all deals (models 3-4) and cross-border only (models 5-6)",
+    "dv": {
+     "name": "COMP (deal completion)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x SYNERGY x LEARN",
+      "measure": "triple interaction of Post-IFRS indicator, SYNERGY, and LEARN; variable of interest predicted positive and significant",
+      "source": "SDC/DataStream/FactSet"
+     },
+     {
+      "name": "SYNERGY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DataStream"
+     },
+     {
+      "name": "LEARN",
+      "measure": "indicator for deals more likely to involve learning: (1) IFRS (=1 for acquirers from IFRS-adopting treatment countries), (2) Important (international deals with targets in countries where acquirer's primary two-digit-SIC industry is top 20% of market cap and acquirer had an increase in foreign IO from the target country), (3) Target IFRS (international deals where target country also adopts IFRS and acquirer had an increase in foreign IO from target country)",
+      "source": "SDC/FactSet"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "DataStream"
+     },
+     {
+      "name": "Deal value (US$ billion)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer market value (41 days before announcement) / Deal value scaled by acquirer MV",
+      "source": "DataStream"
+     },
+     {
+      "name": "Cash deal indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross-border (CB) indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "year, acquirer country, and industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel B: Learning and post-acquisition operating performance",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "mandatory IFRS adoption",
+    "sample": "subsample of completed deals (acquiring firms); full/matched non-IFRS control (models 1-4) and treatment acquirers (models 5-8)",
+    "dv": {
+     "name": "Change in industry-adjusted operating performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WorldScope"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x LEARN",
+      "measure": "interaction of Post-IFRS indicator with LEARN proxy (IFRS, Important, or Target IFRS); variable of interest predicted positive and significant",
+      "source": "SDC/FactSet"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size (deal value as proportion of acquirer market value)",
+      "source": "SDC/DataStream"
+     },
+     {
+      "name": "Log(assets) for acquirer and target",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Cash (100% cash) and Stock (100% stock) financed indicators",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Conglomerate (diversifying deal) indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Cross-border (CB) indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "year, industry, and acquirer country fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Learning and post-acquisition stock performance",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "mandatory IFRS adoption",
+    "sample": "monthly acquirer-vs-matched-control return observations; full/matched non-IFRS control (models 1-2) and treatment acquirers (models 3-4)",
+    "dv": {
+     "name": "Difference in monthly log returns (acquirer vs matched control)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x LEARN",
+      "measure": "interaction of Post-IFRS indicator with LEARN proxy (IFRS, Important, or Target IFRS)",
+      "source": "SDC/FactSet"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Delta Size (log of market capitalization)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Delta BTM (book-to-market ratio)",
+      "source": "WorldScope/DataStream"
+     },
+     {
+      "name": "Delta Beta (market model, weekly returns t-60 to t-12)",
+      "source": "DataStream"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "DataStream"
+     },
+     {
+      "name": "Delta IVOL (idiosyncratic volatility)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Delta Growth in PPE (annual change in PPE scaled by total assets)",
+      "source": "WorldScope"
+     },
+     {
+      "name": "Delta Illiquidity (Amihud absolute return-to-dollar-volume)",
+      "source": "DataStream"
+     },
+     {
+      "name": "country, industry, and year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

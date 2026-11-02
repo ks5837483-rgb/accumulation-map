@@ -1,0 +1,441 @@
+{
+ "paper_id": "10.1007_s11142-016-9365-z",
+ "title": "Spring-loading future performance when no one is looking Earnings and cash flow management around acquisitions",
+ "journal": "RAS",
+ "year": 2016,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "earnings management",
+  "limited investor attention"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "interim_period",
+      "relation": "decreases",
+      "to": "investor_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_attention",
+      "relation": "increases",
+      "to": "target_reported_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_attention"
+   ],
+   "moderators": [
+    {
+     "construct": "pooling_method",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "performance_transfer",
+     "moderated_from": "interim_period",
+     "moderated_to": "target_reported_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target interim understatement is merely a reversal of pre-announcement earnings overstatement",
+    "interim earnings decline because target activity levels decline (reduced manager effort, divestitures, deferred customer purchases)",
+    "interim earnings decline because costs increase rather than deliberate understatement"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_acquisition_period",
+      "relation": "increases",
+      "to": "incentive_to_justify_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_justify_synergies",
+      "relation": "increases",
+      "to": "acquirer_reported_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_justify_synergies"
+   ],
+   "moderators": [
+    {
+     "construct": "pooling_method",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "performance_transfer",
+     "moderated_from": "post_acquisition_period",
+     "moderated_to": "acquirer_reported_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2"
+    },
+    {
+     "construct": "relative_deal_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "performance_transfer",
+     "moderated_from": "post_acquisition_period",
+     "moderated_to": "acquirer_reported_performance",
+     "role": "atheoretical",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_performance_understatement",
+      "relation": "increases",
+      "to": "performance_transfer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "performance_transfer",
+      "relation": "increases",
+      "to": "acquirer_performance_overstatement",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "performance_transfer"
+   ],
+   "moderators": [
+    {
+     "construct": "pooling_method",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "performance_transfer",
+     "moderated_from": "target_performance_understatement",
+     "moderated_to": "acquirer_performance_overstatement",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3"
+    },
+    {
+     "construct": "relative_deal_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "performance_transfer",
+     "moderated_from": "target_performance_understatement",
+     "moderated_to": "acquirer_performance_overstatement",
+     "role": "atheoretical",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "restructuring charges recognized after the merger create a negative cross-sectional relation between pre-acquisition target earnings and post-acquisition earnings"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. corporations; acquirer and target firms across sectors)",
+  "country_region": "United States (both acquirers and targets are U.S. firms)",
+  "time_period": "1985-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2128 deals (drops to 1404 when testing P2 and P3, which require nonmissing acquirer data)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Security Data Corporation (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Post-acquisition SEC filings (10-Q reports), hand-collected case-by-case",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "P1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "2128 M&A completed 1985-2010; Panel C = pooling-method subsample; Panel D = large deals (target >50% of acquirer market value of equity)",
+    "dv": {
+     "name": "Target abnormal performance during interim quarter",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Interim quarter vs. quarter before (period around acquisition)",
+      "measure": "Comparison of interim quarter (quarter 0) with the quarter before (quarter -1); same-firm prior quarter used as control",
+      "source": "SDC / Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "P1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1865-2128 target firm-quarters depending on lag availability",
+    "dv": {
+     "name": "Target abnormal performance across prior quarters",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Quarter relative to interim quarter (1 through 8 quarters before vs. interim quarter)",
+      "measure": "Time-series of T_DE and T_abCFO for the interim quarter and each of the prior eight quarters",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "P1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Exploratory subsample: first 300 observations sorted by acquirer CUSIP; stub earnings computable for 106 observations, sales for 93 observations",
+    "dv": {
+     "name": "Target stub-portion income understatement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Post-acquisition SEC filings (10-Q reports), hand-collected"
+    },
+    "key_ivs": [
+     {
+      "name": "Stub portion vs. quarter before",
+      "measure": "Difference between seasonally differenced stub-portion earnings/sales and the quarter before; stub numbers put on a quarter-equivalent basis (divide by calendar days, multiply by 91)",
+      "source": "Post-acquisition SEC filings (10-Q reports), hand-collected"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 (Test of P2): acquirer (combined entity) post-acquisition performance overstatement over first four quarters vs. benchmark quarters (Panel A all firms, Panel B 518 large deals, Panel C large-deal pooling subsample)",
+    "hypotheses": [
+     "P2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Full sample (Panel A); Panel B = 518 large deals (deal value >50% of acquirer market value); Panel C = large-deal pooling subsample",
+    "dv": {
+     "name": "Acquirer (combined entity) post-acquisition abnormal performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-acquisition quarter (quarters +1 to +4 vs. benchmark quarters +5 to +8)",
+      "measure": "Time-series comparison of first four post-acquisition quarters to benchmark quarters +5 through +8",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 (Test of P3): regressions of combined-entity performance on target interim-period understatement plus controls (Panels A1/A2 all deals, first/second post-acquisition quarter; Panels B1/B2 large deals)",
+    "hypotheses": [
+     "P3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1404 acquisitions with nonmissing acquirer data (Panels A1/A2); Panels B1/B2 = 518 large deals",
+    "dv": {
+     "name": "Acquirer (combined entity) post-acquisition performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Target earnings understatement (T_DEU)",
+      "measure": "Interim-quarter seasonally differenced earnings minus the corresponding number in the quarter before, scaled by CBV",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target cash flow understatement (T_abCFOU)",
+      "measure": "Interim-quarter abnormal cash flows minus the corresponding number in the quarter before, scaled by CBV",
+      "source": "Compustat"
+     },
+     {
+      "name": "POOLING x target understatement interaction (POOLING*T_DEU, POOLING*T_abCFOU)",
+      "measure": "Interaction of pooling indicator (1 if pooling of interests, 0 if purchase) with target understatement measures",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PctStock (fraction of deal value paid as stock)",
+      "source": "SDC"
+     },
+     {
+      "name": "POOLING (pooling-of-interests accounting indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "Log(DEAL) (logarithm of deal value)",
+      "source": "SDC"
+     },
+     {
+      "name": "RELSIZE (deal value relative to acquirer)",
+      "source": "SDC"
+     },
+     {
+      "name": "A_BM (acquirer book-to-market ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "PRE_ACC (acquirer abnormal annual accruals over 3 years before the acquisition)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: market reaction to earnings announcements - regressions of three-day market adjusted returns on earnings surprises and target understatement (Panel A targets, Panel B acquirers)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Panel A = target earnings announcements; Panel B = acquirer earnings announcements",
+    "dv": {
+     "name": "Three-day market adjusted returns (ARET)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target earnings surprise (T_FE)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Acquirer earnings surprise (C_FE)",
+      "measure": "Combined-entity analyst forecast error for the post-acquisition quarters",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Target earnings understatement (T_DEU)",
+      "measure": "Estimate of target earnings understatement transferred to the acquirer (as in Table 6)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target performance understatement",
+    "acquirer performance overstatement",
+    "combined firm performance"
+   ],
+   "mechanism_named": "performance transfers",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "earnings before special items",
+    "analyst forecast errors",
+    "restructuring charges"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "post-acquisition acquirer performance",
+    "overstated post-acquisition acquirer performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "cross-firm earnings management",
+    "managerial incentives",
+    "costs and benefits of such earnings management"
+   ],
+   "mechanism_named": "cross-firm earnings management",
+   "proposed_edge": {
+    "from": "managerial incentives",
+    "relation": "affects",
+    "to": "cross-firm earnings management"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

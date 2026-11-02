@@ -1,0 +1,449 @@
+{
+ "paper_id": "10.2307_2937961",
+ "title": "Exchange Rates and Foreign Direct Investment An Imperfect Capital Markets Approach",
+ "journal": "QJE",
+ "year": 1991,
+ "field": "economics",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "imperfect capital markets",
+  "information economics",
+  "costly external finance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "domestic_currency_depreciation",
+      "relation": "increases",
+      "to": "foreign_relative_wealth",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "foreign_relative_wealth",
+      "relation": "increases",
+      "to": "foreign_direct_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "foreign_relative_wealth"
+   ],
+   "moderators": [
+    {
+     "construct": "informational_asymmetry",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "informational_asymmetry",
+     "moderated_from": "domestic_currency_depreciation",
+     "moderated_to": "foreign_direct_investment",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "tax-code changes (depreciation allowances) drive the exchange-rate–FDI relationship rather than relative wealth"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "informational_asymmetry",
+      "relation": "increases",
+      "to": "cost_of_external_finance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_external_finance",
+      "relation": "increases",
+      "to": "exchange_rate_sensitivity_of_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_external_finance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "passive_portfolio_investment",
+      "relation": "decreases",
+      "to": "informational_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informational_asymmetry",
+      "relation": "increases",
+      "to": "exchange_rate_sensitivity_of_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informational_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_stock_market_value",
+      "relation": "increases",
+      "to": "foreign_relative_wealth",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "foreign_relative_wealth",
+      "relation": "increases",
+      "to": "foreign_direct_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "foreign_relative_wealth"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the sectoral-growth hypothesis (dollar depreciation makes U.S. production cheaper, drawing foreign capacity)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (foreign direct investment inflows, broken into thirteen separate industries: petroleum, manufacturing (food, chemicals, fabricated metals, machinery, other manufacturing), trade, finance, insurance, real estate, and other industries)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1972-1988 (quarterly 1973-1988; annual 1973-1987; industry 1974-1987; ITA transactions 1977-1987; country data 1972-1987)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "time-series regressions (no cross-sectional N); e.g. quarterly 1973-1988 with 59 degrees of freedom; annual industry (1974-1987) and ITA (1977-1987) regressions with 11 and 8 degrees of freedom"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Balance-of-Payments Accounts",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "International Trade Administration (ITA) individual FDI transactions data",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "IMF merm real exchange rate index (real value of the dollar, 1980 = 100)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "IMF Balance of Payments Yearbooks",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "U. S. GNP (national accounts, used as deflator)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "quarterly data from 1973 to 1988",
+    "dv": {
+     "name": "Gross capital inflow into the United States, by type",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Balance-of-Payments Accounts"
+    },
+    "key_ivs": [
+     {
+      "name": "Real value of the dollar",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IMF merm real exchange rate index (real value of the dollar, 1980 = 100)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Time trend (t)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "annual data, 1973-1987",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Balance-of-Payments Accounts"
+    },
+    "key_ivs": [
+     {
+      "name": "Real value of the dollar",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IMF merm real exchange rate index (real value of the dollar, 1980 = 100)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Time trend (t)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "thirteen industries; annual 1974-1987; FDI inflows from industrialized countries only",
+    "dv": {
+     "name": "FDI inflow by industry",
+     "measure": "total FDI inflows broken into thirteen separate industries, in percent of the U. S. GNP",
+     "source": "Balance-of-Payments Accounts"
+    },
+    "key_ivs": [
+     {
+      "name": "Real value of the dollar",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IMF merm real exchange rate index (real value of the dollar, 1980 = 100)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Time trend (t)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV - Regressions of FDI inflows by type of transaction (ITA data)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "FDI inflow by type of transaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "International Trade Administration (ITA) individual FDI transactions data"
+    },
+    "key_ivs": [
+     {
+      "name": "Real value of the dollar",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IMF merm real exchange rate index (real value of the dollar, 1980 = 100)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Time trend (t)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table V - Regressions of Balance-of-Payments FDI inflows on the value of the dollar, cross-country (US, UK, West Germany, Canada, Japan)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Country FDI inflows",
+     "measure": "country Balance-of-Payments FDI inflows in percent of country GNP",
+     "source": "IMF Balance of Payments Yearbooks"
+    },
+    "key_ivs": [
+     {
+      "name": "Real value of the dollar (multilateral, and bilateral Canadian-U.S. rate for Canada)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IMF merm real exchange rate index (real value of the dollar, 1980 = 100)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "new capital formation",
+    "welfare",
+    "spillovers"
+   ],
+   "mechanism_named": "beneficial spillovers",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "fdi",
+    "product-market behavior",
+    "oligopolistic competition",
+    "capital costs"
+   ],
+   "mechanism_named": "oligopolistic competition",
+   "proposed_edge": {
+    "from": "fdi",
+    "relation": "affects",
+    "to": "product-market behavior"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "relative wealth",
+    "fdi flows",
+    "exchange rate"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "relative wealth",
+    "relation": "affects",
+    "to": "fdi flows"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "exchange rate",
+    "fdi"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "acquisition and establishment inflows"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "trade-weighted exchange rates",
+    "relative wealth"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "exchange rate effects",
+    "fdi"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "welfare consequences of fdi"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "fdi"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "fdi",
+    "share of assets owned by foreigners"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "outflows",
+    "valuation effects"
+   ],
+   "mechanism_named": "valuation effects",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

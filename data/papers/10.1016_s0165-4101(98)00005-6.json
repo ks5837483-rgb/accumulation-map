@@ -1,0 +1,618 @@
+{
+ "paper_id": "10.1016_s0165-4101(98)00005-6",
+ "title": "The economic determinants of accounting choices: The unique case of equity carve-outs under SAB 51",
+ "journal": "JAE",
+ "year": 1997,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient contracting",
+  "earnings management",
+  "information signaling",
+  "positive accounting theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_size",
+      "relation": "increases",
+      "to": "political_exposure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "political_exposure",
+      "relation": "decreases",
+      "to": "income_statement_gain_recognition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "political_exposure"
+   ],
+   "moderators": [
+    {
+     "construct": "carve_out_gain_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "political_exposure",
+     "moderated_from": "firm_size",
+     "moderated_to": "income_statement_gain_recognition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1c"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "carve_out_gain_size",
+      "relation": "increases",
+      "to": "political_exposure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "political_exposure",
+      "relation": "decreases",
+      "to": "income_statement_gain_recognition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "political_exposure"
+   ],
+   "moderators": [
+    {
+     "construct": "firm_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "political_exposure",
+     "moderated_from": "carve_out_gain_size",
+     "moderated_to": "income_statement_gain_recognition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1c"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "leverage",
+      "relation": "increases",
+      "to": "financial_distress_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_distress_costs",
+      "relation": "increases",
+      "to": "income_statement_gain_recognition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_distress_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "carve_out_gain_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "financial_distress_costs",
+     "moderated_from": "leverage",
+     "moderated_to": "income_statement_gain_recognition",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "discretionary_write_offs",
+      "relation": "increases",
+      "to": "earnings_smoothing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_smoothing",
+      "relation": "increases",
+      "to": "income_statement_gain_recognition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_smoothing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "unexpected non-discretionary / transaction-driven nonrecurring items drive the choice rather than discretionary write-offs"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unexpected_operating_income",
+      "relation": "decreases",
+      "to": "earnings_smoothing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_smoothing",
+      "relation": "increases",
+      "to": "income_statement_gain_recognition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_smoothing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unexpected_future_earnings",
+      "relation": "increases",
+      "to": "information_signaling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_signaling",
+      "relation": "increases",
+      "to": "income_statement_gain_recognition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_signaling"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (parents of subsidiaries undertaking equity carve-outs under SAB 51; sample firms not clustered into a few industries)",
+  "country_region": "United States",
+  "time_period": "March 1983-December 1993",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "100 carve-outs (81 for the TAX/NOTAX subsample)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Lexis/Nexis data base",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers and Acquisitions",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "hard copy of parents' financial statements and footnotes",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "NAARS annual report files",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval Service",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Industrial Manual",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poors' Corporate Record",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 Panel B: Univariate comparison of means of proxies across accounting choices (Wilcoxon rank sums)",
+    "hypotheses": [
+     "H1a",
+     "H1b",
+     "H1c",
+     "H2a",
+     "H2b",
+     "H3",
+     "H4",
+     "H5"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "n=100 for C1; n=81 for C2",
+    "dv": {
+     "name": "Accounting choice (C1 APIC/IS and C2 TAX/NOTAX)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hard copy of parents' financial statements and footnotes"
+    },
+    "key_ivs": [
+     {
+      "name": "PSIZE (parent size)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ECOGL (carve-out gain)",
+      "measure": "the carve-out gain taken as its pre-tax amount",
+      "source": "hard copy of parents' financial statements and footnotes"
+     },
+     {
+      "name": "LEV (parent leverage)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "UWOFF (unexpected discretionary write-offs)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hard copy of parents' financial statements and footnotes"
+     },
+     {
+      "name": "UOI (unexpected operating income)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "UFE (unexpected future earnings)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3: Binomial logistic regression explaining APIC/IS choices (C1)",
+    "hypotheses": [
+     "H1a",
+     "H1b",
+     "H1c",
+     "H2a",
+     "H2b",
+     "H3",
+     "H4",
+     "H5"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "n=100, March 1983-December 1993",
+    "dv": {
+     "name": "APIC/IS choice (C1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hard copy of parents' financial statements and footnotes"
+    },
+    "key_ivs": [
+     {
+      "name": "PSIZE (parent size)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ECOGL (carve-out gain)",
+      "measure": "the carve-out gain taken as its pre-tax amount (ranked)",
+      "source": "hard copy of parents' financial statements and footnotes"
+     },
+     {
+      "name": "PSIZExECOGL (interaction)",
+      "measure": "interaction of ranked PSIZE and ranked ECOGL",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV (parent leverage)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVxECOGL (interaction)",
+      "measure": "interaction of ranked LEV and ranked ECOGL",
+      "source": "Compustat"
+     },
+     {
+      "name": "UWOFF (unexpected discretionary write-offs)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hard copy of parents' financial statements and footnotes"
+     },
+     {
+      "name": "UOI (unexpected operating income)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "UFE (unexpected future earnings)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4: Binomial logistic regression explaining TAX/NOTAX choices (C2)",
+    "hypotheses": [
+     "H1a",
+     "H1b",
+     "H1c",
+     "H2a",
+     "H2b",
+     "H3",
+     "H4",
+     "H5"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "n=81, March 1983-December 1993 (parents taking the gain into net income)",
+    "dv": {
+     "name": "TAX/NOTAX choice (C2)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hard copy of parents' financial statements and footnotes"
+    },
+    "key_ivs": [
+     {
+      "name": "PSIZE (parent size)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ECOGL (carve-out gain)",
+      "measure": "the carve-out gain taken as its pre-tax amount (ranked)",
+      "source": "hard copy of parents' financial statements and footnotes"
+     },
+     {
+      "name": "PSIZExECOGL (interaction)",
+      "measure": "interaction of ranked PSIZE and ranked ECOGL",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV (parent leverage)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVxECOGL (interaction)",
+      "measure": "interaction of ranked LEV and ranked ECOGL",
+      "source": "Compustat"
+     },
+     {
+      "name": "UWOFF (unexpected discretionary write-offs)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hard copy of parents' financial statements and footnotes"
+     },
+     {
+      "name": "UOI (unexpected operating income)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "UFE (unexpected future earnings)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Section 5.2.3 Additional robustness checks (OLS on ranked data in lieu of logistic; unranked logistic after removing high-DFBETA observations; alternative write-off and earnings measures)",
+    "hypotheses": [
+     "H1a",
+     "H1b",
+     "H1c",
+     "H2a",
+     "H2b",
+     "H3",
+     "H4",
+     "H5"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Accounting choices C1 and C2",
+     "measure": "C1=0 if APIC, C1=1 if IS; C2=0 if TAX, C2=1 if NOTAX",
+     "source": "hard copy of parents' financial statements and footnotes"
+    },
+    "key_ivs": [
+     {
+      "name": "PSIZE, ECOGL, LEV, UWOFF, UOI, UFE and interactions",
+      "measure": "same covariates as Tables 3 and 4, re-estimated with OLS on ranked data, unranked logistic (dropping DFBETA>0.40 observations), and alternative measures of unexpected write-offs (above-the-line net nondiscretionary items, below-the-line net type 1 gains/losses) and alternative earnings bases (earnings before extraordinary items, net income) for UOI and UFE",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "carve-out setting",
+    "political costs hypothesis"
+   ],
+   "mechanism_named": "political costs hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "ecogl"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "prem",
+    "ecogl",
+    "financial strength"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "psize",
+    "ecogl",
+    "current level of proﬁtability"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "current level of proﬁtability",
+    "on_path": [
+     "psize",
+     "ecogl"
+    ]
+   }
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "political cost",
+    "aggressive treatment",
+    "gains"
+   ],
+   "mechanism_named": "high political cost",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "sab 51",
+    "accounting choice",
+    "accounting choices with small eﬀects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "write-oﬀ/write-down mitigation hypothesis",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "write-oﬀ/write-down mitigation hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "accounting choices under sab 51",
+    "political costs",
+    "political costs hypothesis"
+   ],
+   "mechanism_named": "political costs hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

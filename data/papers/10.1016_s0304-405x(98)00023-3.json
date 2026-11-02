@@ -1,0 +1,536 @@
+{
+ "paper_id": "10.1016_s0304-405x(98)00023-3",
+ "title": "Glamour, value and the post-acquisition performance of acquiring firms",
+ "journal": "JFE",
+ "year": 1998,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "performance extrapolation hypothesis",
+  "hubris hypothesis",
+  "behavioral finance",
+  "asymmetric information",
+  "market underreaction"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "glamour_status",
+      "relation": "increases",
+      "to": "market_overextrapolation_of_past_performance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_overextrapolation_of_past_performance",
+      "relation": "decreases",
+      "to": "long_run_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "glamour_status",
+      "relation": "increases",
+      "to": "managerial_hubris",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_hubris",
+      "relation": "decreases",
+      "to": "long_run_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_overextrapolation_of_past_performance",
+    "managerial_hubris"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "means of payment hypothesis",
+    "EPS myopia hypothesis"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "bidder_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_overvaluation",
+      "relation": "decreases",
+      "to": "long_run_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "performance extrapolation hypothesis"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "eps_impact",
+      "relation": "increases",
+      "to": "managerial_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_overpayment",
+      "relation": "decreases",
+      "to": "long_run_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "eps_impact",
+      "relation": "increases",
+      "to": "market_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_overvaluation",
+      "relation": "decreases",
+      "to": "long_run_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_overpayment",
+    "market_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "glamour_status",
+      "relation": "increases",
+      "to": "overestimation_of_synergy_creation_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overestimation_of_synergy_creation_ability",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overestimation_of_synergy_creation_ability"
+   ],
+   "moderators": [
+    {
+     "construct": "competition_for_target",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "competition_for_target",
+     "moderated_from": "glamour_status",
+     "moderated_to": "takeover_premium",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "means of payment hypothesis"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms on NYSE/AMEX/Nasdaq covered by CRSP and COMPUSTAT)",
+  "country_region": "United States",
+  "time_period": "1980-1991",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3169 mergers and 348 tender offers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP's monthly NYSE/AMEX/Nasdaq tapes",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Descriptive statistics (size and book-to-market decile rankings of acquirors)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "Full sample 3169 mergers and 348 tender offers; public-target subsample 709 mergers and 278 tender offers, announced and completed January 1980-December 1991",
+    "dv": {
+     "name": "size and book-to-market decile ranking of acquiror",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP and COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition type",
+      "measure": "transaction classified as merger/acquisition of majority interest vs. tender offer; all targets vs. only public targets",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "All mergers (N=2823) / public-target mergers (N=643); all tender offers (N=316) / public-target tender offers (N=255)",
+    "dv": {
+     "name": "bias-adjusted cumulative abnormal return (3-year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition type (merger vs tender offer)",
+      "measure": "transaction classified as merger/acquisition of majority interest vs. tender offer",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP and COMPUSTAT"
+     },
+     {
+      "name": "book-to-market ratio",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "All mergers (glamour 932 / neutral 959 / value 931); all tender offers (glamour 105 / neutral 107 / value 104)",
+    "dv": {
+     "name": "size, book-to-market decile, and target-acquiror size ratio",
+     "measure": "size decile rankings, book-to-market decile rankings, and sizes of publicly listed targets relative to acquirors four weeks before announcement; Wilcoxon rank-sum and median score tests on distributions",
+     "source": "CRSP and COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "glamour / neutral / value status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Long-term performance classifying acquirors as glamour, neutral, or value (performance extrapolation test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Glamour mergers N=932 (public 213), value mergers N=931 (public 212), neutral mergers; glamour tender offers N=105 (public 85), value tender offers N=104 (public 84)",
+    "dv": {
+     "name": "bias-adjusted cumulative abnormal return (3-year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "glamour vs value (book-to-market) status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP and COMPUSTAT"
+     },
+     {
+      "name": "book-to-market benchmark",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Section 3.2.1 - Fama and French (1993) three-factor regressions (robustness on full sample)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Full sample",
+    "dv": {
+     "name": "monthly abnormal return (three-factor alpha)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "glamour vs value status",
+      "measure": "acquirors classified glamour/value by book-to-market ratio at announcement",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "market factor",
+      "source": "CRSP"
+     },
+     {
+      "name": "size (SMB) factor",
+      "source": "CRSP and COMPUSTAT"
+     },
+     {
+      "name": "book-to-market (HML) factor",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "proportion of transaction financed through stock",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "glamour vs value status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT and CRSP"
+     },
+     {
+      "name": "acquisition type (merger vs tender offer)",
+      "measure": "transaction classified as merger vs tender offer",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bias-adjusted cumulative abnormal return (3-year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment (100% stock vs 100% cash)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "glamour vs value status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP and COMPUSTAT"
+     },
+     {
+      "name": "book-to-market benchmark",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Public-target mergers (glamour 127 / neutral 124 / value 103) and tenders; 100% cash-financed and 100% stock-financed merger and tender-offer subsamples (Wilcoxon rank-sum / Kruskal-Wallis)",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "glamour vs value status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT and CRSP"
+     },
+     {
+      "name": "method of payment (100% stock vs 100% cash)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 8 - Long-term performance classifying acquirors by EPS impact (EPS myopia test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Public-target mergers where target 100% owned after completion; sorted into low/medium/high EPS impact terciles, N=333 (low 110, medium 114, high 109)",
+    "dv": {
+     "name": "bias-adjusted cumulative abnormal return (3-year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "EPS impact of the acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT and SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP and COMPUSTAT"
+     },
+     {
+      "name": "book-to-market benchmark",
+      "source": "COMPUSTAT and CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "stock-financed tender offers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "tender offers",
+    "mergers",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "hostile transactions",
+    "fundamental change in the target",
+    "value creation after the acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "hostile transactions",
+    "relation": "increases",
+    "to": "value creation after the acquisition"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "market participants",
+    "corporate financial and strategic decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "standard long-horizon t-statistics",
+    "abnormal performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

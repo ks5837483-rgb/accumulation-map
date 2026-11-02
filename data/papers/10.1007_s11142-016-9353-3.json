@@ -1,0 +1,745 @@
+{
+ "paper_id": "10.1007_s11142-016-9353-3",
+ "title": "The effects of anticipated future investments on firm value: evidence from mergers and acquisitions",
+ "journal": "RAS",
+ "year": 2016,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "free cash flow hypothesis",
+  "market efficiency / rational expectations"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "incidence_of_past_value_destroying_acquisitions",
+      "relation": "decreases",
+      "to": "investor_expectations_about_profitability_of_future_acquisitions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_expectations_about_profitability_of_future_acquisitions",
+      "relation": "increases",
+      "to": "firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_expectations_about_profitability_of_future_acquisitions"
+   ],
+   "moderators": [
+    {
+     "construct": "positive_free_cash_flow",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "investor_expectations_about_profitability_of_future_acquisitions",
+     "moderated_from": "incidence_of_past_value_destroying_acquisitions",
+     "moderated_to": "firm_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "incidence_of_past_value_destroying_acquisitions",
+      "relation": "decreases",
+      "to": "investor_expectations_about_profitability_of_announced_acquisition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_expectations_about_profitability_of_announced_acquisition",
+      "relation": "increases",
+      "to": "acquisition_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_expectations_about_profitability_of_announced_acquisition"
+   ],
+   "moderators": [
+    {
+     "construct": "negative_free_cash_flow",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "investor_expectations_about_profitability_of_announced_acquisition",
+     "moderated_from": "incidence_of_past_value_destroying_acquisitions",
+     "moderated_to": "acquisition_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "incidence_of_past_value_destroying_acquisitions",
+      "relation": "decreases",
+      "to": "firm_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_value",
+      "relation": "decreases",
+      "to": "likelihood_of_being_taken_over",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_value"
+   ],
+   "moderators": [
+    {
+     "construct": "positive_free_cash_flow",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "firm_value",
+     "moderated_from": "incidence_of_past_value_destroying_acquisitions",
+     "moderated_to": "likelihood_of_being_taken_over",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Compustat firms, excluding regulated industries: SIC 4000-4999 and 6000-6999)",
+  "country_region": "",
+  "time_period": "1989-2013",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "10,645 firm-year observations (1,667 unique firms)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC (Securities Data Company) Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat ExecuComp database",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 Panel B: Acquisition performance (predicting future acquisition performance on historical performance)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1330 (t+1 to t+3) / 2064 (t+1 to t+5) acquisitions",
+    "dv": {
+     "name": "FuturePerf",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A: Predicting acquisitions (Logit, Eq. 3)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "FCF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Positive FCF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Incidence*Positive FCF",
+      "measure": "interaction of Incidence and the Positive FCF indicator",
+      "source": "Compustat/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size (logged total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Growth (average sales growth over past 4 years)",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB (average market-to-book ratio over past 4 years)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "PE (average price-to-earnings ratio over past 4 years)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Leverage (average leverage over past 4 years)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B: Out-of-sample acquisition forecast (quintile accuracy)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "5-year rolling estimation window (t-4 to t), forecast for t+1",
+    "dv": {
+     "name": "Fraction of firms making acquisitions in next year",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Logit predicted probability",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel A: Anticipation discount, main OLS (Eq. 4)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "positive FCF, negative FCF, and full sample; N=10,645 (FCF>=0 N=6575, FCF<0 N=4070)",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Positive FCF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Incidence*Positive FCF",
+      "measure": "interaction of Incidence and the Positive FCF indicator",
+      "source": "Compustat/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Capex (capital expenditure scaled by net PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RD (R&D expenses scaled by net PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Adv (advertising expenses scaled by net PPE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Missing RD",
+      "source": "Compustat"
+     },
+     {
+      "name": "Missing Adv",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Pastret (cumulative stock return over past 3 years minus market portfolio return over past 3 years)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Sales (logarithm of sales) and its squared term",
+      "source": "Compustat"
+     },
+     {
+      "name": "PPE (net PPE scaled by sales) and its squared term",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A columns 4-6: Falsification/placebo test on matched non-M&A firms",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Positive FCF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Incidence*Positive FCF",
+      "measure": "interaction of Incidence and the Positive FCF indicator",
+      "source": "Compustat/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same firm-characteristic controls as Table 5 Panel A (ROA, Margin, Capex, RD, Adv, Missing RD, Missing Adv, Leverage, Pastret, Sales, PPE and squared terms)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B: FCF quintile subsamples (Eq. 4 re-estimated per FCF quintile)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "firm-year observations sorted by FCF into five quintiles",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "All Table 5 Panel A control variables (suppressed for brevity)",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel C: Continuous Incidence measure (Incidence_NegRet)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "positive FCF and negative FCF samples",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence_NegRet",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 5 Panel A",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel A: Alternative measures of Tobin's Q",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "I/B/E/S subsample with analyst price target forecasts for the Tobin's Q Price target measure",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat/CRSP/I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Positive FCF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 5 Panel A",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B: Accounting-based Incidence measures",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "goodwill write-off measure conducted on a post-2006 subsample (10 years of goodwill data needed; firms began reporting goodwill write-offs in 1996)",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence_ROA",
+      "measure": "weighted average incidence of value-destroying acquisitions (represented by the change in ROA: average ROA in 3 years after vs 3 years before acquisition) over the 10-year rolling window",
+      "source": "Compustat/SDC"
+     },
+     {
+      "name": "Incidence_CFO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/SDC"
+     },
+     {
+      "name": "Incidence_Divest",
+      "measure": "weighted average incidence of value-destroying acquisitions (represented by the presence of a subsequent divestiture within 3 years in the same three-digit SIC industry) over the 10-year rolling window",
+      "source": "SDC"
+     },
+     {
+      "name": "Incidence_Goodwill write-off",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table 5 Panel A",
+      "source": "Compustat/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: The effect of CEO turnover (difference-in-differences)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "CEO turnover event",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Tobin's Q",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "Similar CEO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ExecuComp/SDC"
+     },
+     {
+      "name": "Post*Similar CEO",
+      "measure": "interaction of Post and Similar CEO",
+      "source": "ExecuComp/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Capex",
+      "source": "Compustat"
+     },
+     {
+      "name": "Margin",
+      "source": "Compustat"
+     },
+     {
+      "name": "RD",
+      "source": "Compustat"
+     },
+     {
+      "name": "Adv",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Pastret",
+      "source": "CRSP"
+     },
+     {
+      "name": "Sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "PPE",
+      "source": "Compustat"
+     },
+     {
+      "name": "Missing RD",
+      "source": "Compustat"
+     },
+     {
+      "name": "Missing Adv",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 Panel B: Announcement-window return (event study, Eq. 5)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR[-2,+2]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "Size (total assets in logarithm prior to the acquisition)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "FCF (free cash flow, Eq. 1)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Stock (=1 if deal is at least partially stock-financed)",
+      "source": "SDC"
+     },
+     {
+      "name": "Public Target (=1 if target is a public firm)",
+      "source": "SDC"
+     },
+     {
+      "name": "Private Target (=1 if target is a private firm)",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversity (=1 if bidder and target not in same Fama-French 48-industry)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 9: Likelihood of becoming a target (Logit, Eq. 6)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "positive FCF, negative FCF, and full sample",
+    "dv": {
+     "name": "Acquired",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Incidence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Positive FCF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Positive FCF*Incidence",
+      "measure": "interaction of Positive FCF and Incidence",
+      "source": "Compustat/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(MVE) (natural logarithm of market value of equity)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "BTM (book-to-market ratio)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "cumulative goodwill write-offs",
+    "goodwill impairments",
+    "acquisition performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "interaction effect",
+    "marginal effect"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

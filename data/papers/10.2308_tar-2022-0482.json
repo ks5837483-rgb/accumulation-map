@@ -1,0 +1,485 @@
+{
+ "paper_id": "10.2308_tar-2022-0482",
+ "title": "The Real Effects of PCAOB Inspection Reports on the M&amp;A Deals of Non-Big 4 Accounting Firms",
+ "journal": "AR",
+ "year": 2024,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "inspection_report_deficiencies",
+      "relation": "decreases",
+      "to": "perceived_firm_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_firm_quality",
+      "relation": "increases",
+      "to": "m_and_a_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_firm_quality"
+   ],
+   "moderators": [
+    {
+     "construct": "importance_of_public_company_audit_practice",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "perceived_firm_quality",
+     "moderated_from": "inspection_report_deficiencies",
+     "moderated_to": "m_and_a_activity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "IMP interaction (a2 < 0)"
+    },
+    {
+     "construct": "target_and_acquirer_located_in_different_cities",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "inspection_report_deficiencies",
+     "moderated_to": "m_and_a_activity",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "nonlocal vs local M&As (a1N < a1L)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "Client flight (Eq. 4)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_inspection_report_deficiencies",
+      "relation": "decreases",
+      "to": "perceived_acquirer_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_acquirer_quality",
+      "relation": "increases",
+      "to": "client_movement_to_acquirer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_acquirer_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target clients switch auditors because of a prior-year going concern opinion rather than the acquirer’s inspection report"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "non-Big 4 accounting (audit) firms in the U.S. audit market",
+  "country_region": "United States",
+  "time_period": "2005-2020",
+  "sample_description": "inspected non-Big 4 accounting firms that received one or more PCAOB inspection reports; the unit of observation is the accounting firm-year; data collected from the Audit Analytics data modules (Audit firm events, PCAOB Report, Audit opinion, Restatements, and Litigation modules)",
+  "sample_size": "797 non-Big 4 firms (9,732 firm-year observations); 711 M&A deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "data modules on the Audit Analytics website (Audit firm events, PCAOB Report, Audit opinion, Restatements, and Litigation modules)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Accounting Today (2020 top 100 firms survey; used to assess construct validity of IMP)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 (univariate comparison of inspection deficiency rates between M&A and non-M&A firms; Panel A firm-level, Panel B firm-year level)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "167 M&A firms vs 630 non-M&A firms (Panel A); 457 M&A firm-years vs 9,275 non-M&A firm-years (Panel B)",
+    "dv": {
+     "name": "PCAOB inspection deficiency rate",
+     "measure": "Part I deficiency rate (PartI_DEF%jt) and incidence of Part II quality control deficiencies (PartII_QCjt), compared across M&A vs non-M&A firms via t-tests",
+     "source": "PCAOB Report module (Audit Analytics)"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A firm status",
+      "measure": "partition of firms into M&A firms (conduct one or more M&A deals) vs non-M&A firms",
+      "source": "Audit firm events module (Audit Analytics)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, columns (1)-(4) (Equation 1, main M&A activity regression; all non-Big 4 firms)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "M&A activity of the accounting firm",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit firm events module (Audit Analytics)"
+    },
+    "key_ivs": [
+     {
+      "name": "Part I deficiency rate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "Part II quality control deficiencies",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB Report module (Audit Analytics)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(#CLIENTSjt) (log of 1 plus number of public company audit clients at start of year t)",
+      "source": "Audit opinion module (Audit Analytics)"
+     },
+     {
+      "name": "PYGROWTHjt (prior-year growth in log number of clients)",
+      "source": "Audit opinion module (Audit Analytics)"
+     },
+     {
+      "name": "ANNUALj (indicator = 1 if annually inspected firm)",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "Ln(#OFFICESjt) (log of number of offices at start of year t)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Ln(#RESTATEjt) (log of 1 plus client restatement announcements over recent three years)",
+      "source": "Restatements module (Audit Analytics)"
+     },
+     {
+      "name": "Ln(#SUEDjt) (log of 1 plus audit-related lawsuits over recent three years)",
+      "source": "Litigation module (Audit Analytics)"
+     },
+     {
+      "name": "MKTSHAREjt (firm's share of total fees in its office cities)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "HERFjt (Herfindahl index of concentration in firm's city market(s))",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "GDPjt (level of GDP in 2012 dollars in firm's state)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, columns (5)-(8) (Equation 1 re-estimated on triennially inspected firms)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "triennially inspected firms only (drops seven annually inspected firms and their predecessors: Grant Thornton, BDO USA, RSM US, Malone Bailey, Crowe, Moss Adams, Marcum)",
+    "dv": {
+     "name": "M&A activity of the accounting firm",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit firm events module (Audit Analytics)"
+    },
+    "key_ivs": [
+     {
+      "name": "Part I deficiency rate",
+      "measure": "PartI_DEF%jt = number of deficient audits divided by number of inspected audits in most recent report",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "Part II quality control deficiencies",
+      "measure": "PartII_QCjt = 1 if Part II discloses unremediated quality control deficiencies, 0 otherwise",
+      "source": "PCAOB Report module (Audit Analytics)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(#CLIENTSjt)",
+      "source": "Audit opinion module (Audit Analytics)"
+     },
+     {
+      "name": "PYGROWTHjt",
+      "source": "Audit opinion module (Audit Analytics)"
+     },
+     {
+      "name": "Ln(#OFFICESjt)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Ln(#RESTATEjt)",
+      "source": "Restatements module (Audit Analytics)"
+     },
+     {
+      "name": "Ln(#SUEDjt)",
+      "source": "Litigation module (Audit Analytics)"
+     },
+     {
+      "name": "MKTSHAREjt",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "HERFjt",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "GDPjt",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Equation 2, moderation by importance of public company audit practice)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firms with non-missing number of partners (9,665-9,670 firm-year obs)",
+    "dv": {
+     "name": "M&A activity of the accounting firm",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit firm events module (Audit Analytics)"
+    },
+    "key_ivs": [
+     {
+      "name": "Part I deficiency rate x IMP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "Part II QC deficiencies x IMP",
+      "measure": "PartII_QCjt x IMPjt interaction",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "IMP (public company audit practice importance)",
+      "measure": "IMPjt = 1 if public company audit clients / number of partners exceeds sample median, 0 otherwise",
+      "source": "PCAOB Report module (Audit Analytics)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Equations 3a and 3b, nonlocal vs local M&A deals; estimated jointly via mvreg)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Panel B: multivariate (mvreg/OLS) with year fixed effects, coefficient-equality test across nonlocal vs local; Panel C: firm and year fixed effects (supplementary)",
+    "dv": {
+     "name": "Number of nonlocal vs local M&A deals",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit firm events module (Audit Analytics)"
+    },
+    "key_ivs": [
+     {
+      "name": "Part I deficiency rate",
+      "measure": "PartI_DEF%jt = number of deficient audits divided by number of inspected audits in most recent report",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "Part II quality control deficiencies",
+      "measure": "PartII_QCjt = 1 if Part II discloses unremediated quality control deficiencies, 0 otherwise",
+      "source": "PCAOB Report module (Audit Analytics)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control variables as Table 4 (suppressed for brevity)",
+      "source": "Audit Analytics"
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Panel C (Equation 4, target-firm client flight; logistic regression)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Client moves from target to acquirer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit opinion module (Audit Analytics)"
+    },
+    "key_ivs": [
+     {
+      "name": "Part I deficiency rate (acquirer)",
+      "measure": "PartI_DEF%jt = acquirer firm j's Part I deficiency rate in its most recent inspection report",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "Part II quality control deficiencies (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB Report module (Audit Analytics)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(#CLIENTSjt)",
+      "source": "Audit opinion module (Audit Analytics)"
+     },
+     {
+      "name": "PYGROWTHjt",
+      "source": "Audit opinion module (Audit Analytics)"
+     },
+     {
+      "name": "ANNUALj",
+      "source": "PCAOB Report module (Audit Analytics)"
+     },
+     {
+      "name": "Ln(#OFFICESjt)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Ln(#RESTATEjt)",
+      "source": "Restatements module (Audit Analytics)"
+     },
+     {
+      "name": "Ln(#SUEDjt)",
+      "source": "Litigation module (Audit Analytics)"
+     },
+     {
+      "name": "MKTSHAREjt",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "HERFjt",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "GDPjt",
+      "source": ""
+     },
+     {
+      "name": "LOCALjt (=1 if target and acquirer in same city)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "RESTATEit (=1 if client i announced a restatement)",
+      "source": "Restatements module (Audit Analytics)"
+     },
+     {
+      "name": "PYGCit (=1 if prior-year audit opinion modified for going-concern)",
+      "source": "Audit opinion module (Audit Analytics)"
+     },
+     {
+      "name": "Ln(TAit) (log of client i's total assets at end of year t)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "switch rate",
+    "true flight risk"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "negative inspection reports",
+    "uninspected auditors",
+    "target firm’s clients"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "negative inspection reports",
+    "relation": "affects",
+    "to": "preference to switch to uninspected auditors"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "negative inspection reports",
+    "likelihood of a firm being sold"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "negative inspection reports",
+    "relation": "affects",
+    "to": "likelihood of a firm being sold"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

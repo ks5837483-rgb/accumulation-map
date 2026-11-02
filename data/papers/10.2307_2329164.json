@@ -1,0 +1,360 @@
+{
+ "paper_id": "10.2307_2329164",
+ "title": "The Spinoff and Merger Ex-Date Effects",
+ "journal": "JF",
+ "year": 1994,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market microstructure theory",
+  "clientele effect",
+  "transaction cost economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "spinoff_share_unbundling",
+      "relation": "increases",
+      "to": "clientele_demand_for_separated_shares",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "clientele_demand_for_separated_shares",
+      "relation": "increases",
+      "to": "spinoff_ex_date_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "clientele_demand_for_separated_shares"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bid-ask spread bias (Copeland, Lemgruber, and Mayers)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ex_date_price_discovery_volatility",
+      "relation": "increases",
+      "to": "short_term_trader_risk_premium",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "short_term_trader_risk_premium",
+      "relation": "increases",
+      "to": "spinoff_ex_date_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "short_term_trader_risk_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "odd_lot_creation",
+      "relation": "increases",
+      "to": "trading_transaction_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "trading_transaction_costs",
+      "relation": "increases",
+      "to": "spinoff_ex_date_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "trading_transaction_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "expiring_target_security_conversion_inconvenience",
+      "relation": "increases",
+      "to": "market_maker_inventory_balancing_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_maker_inventory_balancing_costs",
+      "relation": "increases",
+      "to": "merger_ex_date_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_maker_inventory_balancing_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bid-ask spread effect on target ex-date returns"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE/AMEX/NASDAQ-listed U.S. firms undergoing spinoffs and stock-for-stock mergers)",
+  "country_region": "United States",
+  "time_period": "1962-1990 (spinoffs 1964-1990; stock-for-stock mergers 1980-1989)",
+  "sample_description": "113 spinoffs identified from CRSP daily tapes (121 subsidiaries spun off in 113 divestitures by 105 companies; nontaxable distributions with CRSP distribution code 3763, bona-fide spinoffs, announcement date verifiable from the Wall Street Journal Index and Moody's manuals, parent stock priced above three dollars), plus 184 stock-for-stock mergers identified from all NYSE/AMEX/NASDAQ stocks delisted 1980-1989 with CRSP delisting code 200-203 and last dividend distribution code 3723 (non-taxable, no cash payment option)",
+  "sample_size": "113 spinoffs and 184 stock-for-stock mergers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Dividend Records and Moody's manuals",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Nexis database",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Predicasts F & S Index",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Investment Dealers Digest Mergers & Acquisitions Reports",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "SEC News Digest",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Capital Adjustments register",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "spinoff ex date (nontaxable stock distribution, CRSP distribution code 3763)",
+    "sample": "113 spinoffs (121 subsidiaries) over 1964 to 1990",
+    "dv": {
+     "name": "spinoff excess returns (parent and combined parent+subsidiary)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "spinoff ex date (event timing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "spinoff ex date",
+    "sample": "parent/subsidiary stocks with available CRSP trading-volume data (NYSE/AMEX from July 1962, NASDAQ from November 1982)",
+    "dv": {
+     "name": "trading volume and turnover ratio (parent and subsidiary stocks)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "spinoff ex date (event timing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "spinoff ex date",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "intraday volatility (parent and subsidiary stocks)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "spinoff ex date (event timing)",
+      "measure": "event intervals defined relative to announcement, completion, and ex dates",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "spinoff ex date",
+    "sample": "NASDAQ stocks only (bid-ask spreads available only for NASDAQ on CRSP daily files)",
+    "dv": {
+     "name": "bid-ask spread (parent and subsidiary stocks)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "spinoff ex date (event timing)",
+      "measure": "event intervals defined relative to announcement, completion, and ex dates",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "stock-for-stock merger ex date (target delisting; CRSP delisting code 200-203 and last dividend distribution code 3723)",
+    "sample": "184 non-taxable stock-for-stock mergers, NYSE/AMEX/NASDAQ, 1980 to 1989",
+    "dv": {
+     "name": "bidder and target excess returns and target price discount around merger ex date",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "merger ex date (event timing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "nasdaq stocks",
+    "bid-ask spreads"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "intraday volatility"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "ex-date returns",
+    "odd lots"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "odd lots",
+    "bidder shares",
+    "merger ex-date returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "odd lots",
+    "relation": "affects",
+    "to": "merger ex-date returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "ex-date returns"
+   ],
+   "mechanism_named": "bid-ask spread effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

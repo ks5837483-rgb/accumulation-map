@@ -1,0 +1,950 @@
+{
+ "paper_id": "10.1177_0001839218761369",
+ "title": "Network Synergy",
+ "journal": "ASQ",
+ "year": 2018,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "social network theory",
+  "structural holes theory",
+  "network status theory",
+  "synergy theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "access_to_structural_holes",
+      "relation": "increases",
+      "to": "access_to_novel_resources",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_novel_resources",
+      "relation": "increases",
+      "to": "likelihood_of_acquiring_target",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "access_to_structural_holes",
+      "relation": "increases",
+      "to": "exclusive_access_to_scarce_resources",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "exclusive_access_to_scarce_resources",
+      "relation": "increases",
+      "to": "likelihood_of_acquiring_target",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_novel_resources",
+    "exclusive_access_to_scarce_resources"
+   ],
+   "moderators": [
+    {
+     "construct": "common_partners",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "exclusive_access_to_scarce_resources",
+     "moderated_from": "access_to_structural_holes",
+     "moderated_to": "likelihood_of_acquiring_target",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered expectation 1 (common partners)"
+    },
+    {
+     "construct": "acquirer_technological_diversification",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "access_to_novel_resources",
+     "moderated_from": "access_to_structural_holes",
+     "moderated_to": "likelihood_of_acquiring_target",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered expectation 3 (acquirer complementary diversification)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "network_status",
+      "relation": "increases",
+      "to": "access_to_valuable_resources",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_valuable_resources",
+      "relation": "increases",
+      "to": "likelihood_of_acquiring_target",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "network_status",
+      "relation": "increases",
+      "to": "signal_of_unobservable_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_unobservable_quality",
+      "relation": "increases",
+      "to": "likelihood_of_acquiring_target",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_valuable_resources",
+    "signal_of_unobservable_quality"
+   ],
+   "moderators": [
+    {
+     "construct": "common_partners",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "access_to_valuable_resources",
+     "moderated_from": "network_status",
+     "moderated_to": "likelihood_of_acquiring_target",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "unnumbered expectation 1 (common partners)"
+    },
+    {
+     "construct": "target_university_ties_novel_to_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "access_to_valuable_resources",
+     "moderated_from": "network_status",
+     "moderated_to": "likelihood_of_acquiring_target",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered expectation 2 (complementary new/university ties)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target’s centrality as a proxy for target quality (quality signal), rather than a true network synergy"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "biotechnology industry (high-technology industry acquisitions)",
+  "country_region": "",
+  "time_period": "1995-2007",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "4,019 rows (377 acquisitions/panels)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Recombinant Capital (RECAP) database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "patents",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Propensity-score matching choice-set construction and balance tests",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "1,357 controlling biotech acquisitions (1995-2007) reduced to 377 matched panels / 4,019 rows (top ten closest matches where possible)",
+    "dv": {
+     "name": "propensity score / being acquired",
+     "measure": "propensity score matching estimating probability of a firm being acquired given technological and therapeutic match criteria",
+     "source": "SDC Platinum + RECAP + IQSS Patent Network Dataverse"
+    },
+    "key_ivs": [
+     {
+      "name": "matching criteria",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IQSS Patent Network Dataverse + RECAP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Model 1 - Controls only (conditional logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "stage of activities (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "prior acquisitions (target)",
+      "source": "SDC Platinum / RECAP"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model 2 - Change in constraint / structural holes (conditional logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in constraint",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "stage of activities (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "prior acquisitions (target)",
+      "source": "SDC Platinum / RECAP"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model 3 - Change in eigenvector centrality / network status (conditional logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in status (change in eigenvector centrality)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "stage of activities (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "prior acquisitions (target)",
+      "source": "SDC Platinum / RECAP"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model 4 - Full main-effects model (both synergy measures, conditional logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in constraint",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     },
+     {
+      "name": "change in eigenvector centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "stage of activities (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "prior acquisitions (target)",
+      "source": "SDC Platinum / RECAP"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 5 - Common partners (control) mechanism test",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "common partners",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     },
+     {
+      "name": "change in constraint",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     },
+     {
+      "name": "change in eigenvector centrality",
+      "measure": "Bonacich's (1987) eigenvector centrality measure; proportional change",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "stage of activities (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "prior acquisitions (target)",
+      "source": "SDC Platinum / RECAP"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 6 - Common partners x network synergy interaction",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "common partners x change in constraint",
+      "measure": "interaction of number of common partners between acquirer and target pre-acquisition with change in constraint",
+      "source": "RECAP"
+     },
+     {
+      "name": "common partners x change in eigenvector centrality",
+      "measure": "interaction of common partners with change in eigenvector centrality",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 7 - Change in centrality x target ties to university",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in eigenvector centrality x ties to university (target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ties to university (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model 8 - Change in centrality x university ties (target Y, acquirer N) complementarity",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in eigenvector centrality x ties to university (target Y, acquirer N)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ties to university (target Y, acquirer N)",
+      "source": "RECAP"
+     },
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Models 9-11 - Change in constraint x acquirer technological diversification (disease / patent / both)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in constraint x acquirer technological diversification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP + IQSS Patent Network Dataverse"
+     }
+    ],
+    "controls": [
+     {
+      "name": "pre-acquisition tie",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in disease areas",
+      "source": "RECAP"
+     },
+     {
+      "name": "overlap in patent classes",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "total patents (target)",
+      "source": "IQSS Patent Network Dataverse"
+     },
+     {
+      "name": "same country",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "disease diversification (target)",
+      "source": "RECAP"
+     },
+     {
+      "name": "patent class diversification (target)",
+      "source": "IQSS Patent Network Dataverse"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in constraint",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     },
+     {
+      "name": "change in eigenvector centrality",
+      "measure": "Bonacich's (1987) eigenvector centrality measure; proportional change",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as conditional logit models plus choice set fixed effects",
+      "source": "RECAP / IQSS Patent Network Dataverse / SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Tables A3-A4 - Sensitivity to alternative choice-set matching criteria (patents-only; disease/technology)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Choice sets re-matched on (A3) number of patents, overlap in patenting classes, and number of alliances (patents-only); (A4) overlap in disease areas, overlap in therapeutic technologies, and number of patents",
+    "dv": {
+     "name": "target choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (constructed choice set)"
+    },
+    "key_ivs": [
+     {
+      "name": "change in constraint",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RECAP"
+     },
+     {
+      "name": "change in eigenvector centrality",
+      "measure": "Bonacich's (1987) eigenvector centrality measure; proportional change",
+      "source": "RECAP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as main models",
+      "source": "RECAP / IQSS Patent Network Dataverse / SDC Platinum"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "other corporate events",
+    "network structure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "other corporate events",
+    "relation": "affects",
+    "to": "network structure"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "network change",
+    "technological dynamism"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "network-changing actions",
+    "rivals’ structural positions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "network-changing actions",
+    "relation": "affects",
+    "to": "rivals’ structural positions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "network resources",
+    "durability of network vs. internal synergies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "control of network resources",
+    "relation": "affects",
+    "to": "durability of network vs. internal synergies"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "premiums paid",
+    "post-acquisition integration process",
+    "types of synergies",
+    "performance of acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "types of synergies",
+    "relation": "affects",
+    "to": "performance of acquirers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "costs of node collapses",
+    "premium paid",
+    "subsequent performance of the combined firms"
+   ],
+   "mechanism_named": "node collapses",
+   "proposed_edge": {
+    "from": "costs of node collapses",
+    "relation": "affects",
+    "to": "subsequent performance of the combined firms"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "investors",
+    "network synergies",
+    "valuations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "network synergies",
+    "relation": "affects",
+    "to": "investors’ valuations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "investors",
+    "managers",
+    "expected benefits of a business combination"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "network synergies",
+    "other mechanisms and motives for acquiring targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "external resources",
+    "performance",
+    "network synergies",
+    "network attributes",
+    "structural holes",
+    "status"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "biotechnology",
+    "generalizability"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "network synergy",
+    "interorganizational ties",
+    "alliance networks",
+    "board interlocks"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

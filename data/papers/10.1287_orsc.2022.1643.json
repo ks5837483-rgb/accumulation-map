@@ -1,0 +1,1460 @@
+{
+ "paper_id": "10.1287_orsc.2022.1643",
+ "title": "When Do Boards of Directors Contribute to Shareholder Value in Firms Targeted for Acquisition? A Group Information-Processing Perspective",
+ "journal": "ORSC",
+ "year": 2023,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "group information-processing theory",
+  "information processing theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_board_meeting_frequency",
+      "relation": "increases",
+      "to": "acquisition_related_information_processing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_related_information_processing",
+      "relation": "increases",
+      "to": "target_value_capture",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "target_board_meeting_frequency",
+      "relation": "increases",
+      "to": "target_bargaining",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining",
+      "relation": "increases",
+      "to": "target_value_capture",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_related_information_processing",
+    "target_bargaining"
+   ],
+   "moderators": [
+    {
+     "construct": "overboarded_target_directors",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "acquisition_related_information_processing",
+     "moderated_from": "target_board_meeting_frequency",
+     "moderated_to": "target_value_capture",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2a"
+    },
+    {
+     "construct": "experienced_target_directors",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquisition_related_information_processing",
+     "moderated_from": "target_board_meeting_frequency",
+     "moderated_to": "target_value_capture",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    },
+    {
+     "construct": "female_target_directors",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquisition_related_information_processing",
+     "moderated_from": "target_board_meeting_frequency",
+     "moderated_to": "target_value_capture",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2c"
+    },
+    {
+     "construct": "acquirer_initiated_acquisition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_uncertainty",
+     "moderated_from": "target_board_meeting_frequency",
+     "moderated_to": "target_value_capture",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3a"
+    },
+    {
+     "construct": "acquisition_unrelatedness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "target_board_meeting_frequency",
+     "moderated_to": "target_value_capture",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3b"
+    },
+    {
+     "construct": "target_diversification",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_diversity",
+     "moderated_from": "target_board_meeting_frequency",
+     "moderated_to": "target_value_capture",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3c"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity from unobservable target preparedness driving both meeting frequency and value capture (reverse causality)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "2002-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "470 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Refinitiv's Securities Data Corporation Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat North America",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices database",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Model 1 (baseline: control and moderator variables)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "overboarded target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "experienced target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target diversification",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 2 (H1: target board meeting frequency main effect)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     }
+    ],
+    "controls": [
+     {
+      "name": "overboarded target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "experienced target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target diversification",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 3 (H2a: meeting frequency x overboarded target directors)",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "overboarded target directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "experienced target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target diversification",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 4 (H2b: meeting frequency x experienced target directors)",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "experienced target directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "overboarded target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target diversification",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 5 (H2c: meeting frequency x female target directors)",
+    "hypotheses": [
+     "H2c"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "female target directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "overboarded target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "experienced target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target diversification",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 6 (H3a: meeting frequency x acquirer-initiated acquisition)",
+    "hypotheses": [
+     "H3a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     }
+    ],
+    "controls": [
+     {
+      "name": "overboarded target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "experienced target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target diversification",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 7 (H3b: meeting frequency x acquisition unrelatedness)",
+    "hypotheses": [
+     "H3b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat North America"
+     }
+    ],
+    "controls": [
+     {
+      "name": "overboarded target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "experienced target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target diversification",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 8 (H3c: meeting frequency x target diversification)",
+    "hypotheses": [
+     "H3c"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target diversification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat North America"
+     }
+    ],
+    "controls": [
+     {
+      "name": "overboarded target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "experienced target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model 9 (full model: all hypothesized effects estimated at once)",
+    "hypotheses": [
+     "H1",
+     "H2a",
+     "H2b",
+     "H2c",
+     "H3a",
+     "H3b",
+     "H3c"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target value capture",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices database"
+    },
+    "key_ivs": [
+     {
+      "name": "target board meeting frequency",
+      "measure": "the ln-transformed number of target board meetings that occurred during private negotiations",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "overboarded target directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "experienced target directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "female target directors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer-initiated acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquisition unrelatedness",
+      "measure": "a binary variable operationalized with two-digit SIC code-based dissimilarity between target and acquirer primary business activity",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target diversification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat North America"
+     }
+    ],
+    "controls": [
+     {
+      "name": "total value created",
+      "source": "Center for Research in Security Prices database"
+     },
+     {
+      "name": "private negotiation length",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "target advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "acquirer advisors",
+      "source": "acquisition-related SEC filings (DEFM14A, S-4, TO-T, 14D-9) accessed via SEC Edgar"
+     },
+     {
+      "name": "payment method",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "completed acquisition",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target board size",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board independence",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target board tenure",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target CEO duality",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "preacquisition target board meeting frequency",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target relative size",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target relative acquisition experience",
+      "source": "Refinitiv's Securities Data Corporation Platinum database"
+     },
+     {
+      "name": "target performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "target slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer performance",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "acquirer slack",
+      "source": "Compustat North America"
+     },
+     {
+      "name": "financial crisis",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "other target board factors",
+    "target value capture",
+    "target executives",
+    "acquisition negotiation processes and outcomes"
+   ],
+   "mechanism_named": "group information-processing perspective",
+   "proposed_edge": {
+    "from": "other target board factors",
+    "relation": "affects",
+    "to": "target value capture"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "private negotiations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": "information-processing or decision-making theo­ries",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "acquisition complexity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition complexity",
+    "relation": "unspecified",
+    "to": "implications"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "overboarded acquirer and target directors",
+    "board information processing"
+   ],
+   "mechanism_named": "board information processing",
+   "proposed_edge": {
+    "from": "overboarded acquirer and target directors",
+    "relation": "affects",
+    "to": "board information processing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "other board composition factors",
+    "acquirer outcomes",
+    "target outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "other board composition factors",
+    "relation": "affects",
+    "to": "target outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "content of board meetings",
+    "contributions of individual directors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "transcripts of board meetings"
+   ],
+   "mechanism_named": "group information processing",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "target board meetings",
+    "value implications"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "target board composition",
+    "board information processing"
+   ],
+   "mechanism_named": "group information-processing framework",
+   "proposed_edge": {
+    "from": "other features",
+    "relation": "affects",
+    "to": "board information processing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "board composition",
+    "board information processing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "board composition regarding these characteristics",
+    "relation": "affects",
+    "to": "board information processing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "acquisition features",
+    "complexity of private negotiations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "other acquisition features",
+    "relation": "affects",
+    "to": "complexity of private negotiations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "target board meeting frequency",
+    "value the target captures"
+   ],
+   "mechanism_named": "endogeneity bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "acquisition complexity",
+    "meeting frequency"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition complexity",
+    "relation": "affects",
+    "to": "meeting frequency"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [],
+   "mechanism_named": "endogeneity bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "temporal dynamics of private negotiations",
+    "acquirer and target motives"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

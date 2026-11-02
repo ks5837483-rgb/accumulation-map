@@ -1,0 +1,698 @@
+{
+ "paper_id": "10.1111_1911-3846.12881",
+ "title": "Private information and bank‐loan pricing: The effect of upcoming corporate spinoffs",
+ "journal": "CAR",
+ "year": 2023,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "delegated monitoring theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "upcoming_spinoff",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "loan_spread",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "upcoming_spinoff",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_risk",
+      "relation": "increases",
+      "to": "loan_spread",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "credit_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "high_risk_spinoff",
+      "relation": "increases",
+      "to": "credit_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_risk",
+      "relation": "increases",
+      "to": "loan_spread",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credit_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "financial_reporting_quality",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "high_risk_spinoff",
+     "moderated_to": "loan_spread",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "reporting_complexity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "high_risk_spinoff",
+     "moderated_to": "loan_spread",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "operating_complexity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "high_risk_spinoff",
+     "moderated_to": "loan_spread",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "focusing_spinoff",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "high_risk_spinoff",
+     "moderated_to": "loan_spread",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the pre-spinoff spread effect reflects fundamental (time-invariant) characteristics of spinoff firms rather than banks' access to private information about the upcoming spinoff",
+    "reverse causality and correlated omitted variables drive the pre-spinoff loan-spread effect"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US borrowing firms across two-digit SIC industries; concentration in the manufacturing sector, SIC 2000-3999; financial services firms excluded)",
+  "country_region": "United States",
+  "time_period": "1986-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "50,619 loan facilities (of which 259 in the 365-day pre-spinoff period)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "DealScan database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5, Columns 1-2 (main effect; Final Sample, lead lender FE)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Final Sample, 50,619 loan facilities of US firms, 1986-2017",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread; unstandardized mean 224.95, SD 147.63 basis points outside the 1-year pre-spinoff period)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PreSpinoff1Year",
+      "measure": "indicator = 1 for loan facilities provided in the 365-day (1-year) period before a spinoff public announcement",
+      "source": "SDC Platinum database; DealScan database"
+     },
+     {
+      "name": "PreSpinoff1YearHighRisk",
+      "measure": "PreSpinoff1Year loans to high-risk spinoff firms: parent experiences a post-spinoff decrease in Altman's Z-score more than the 75th percentile of yearly decreases within its two-digit SIC code",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "PreSpinoff1YearNon-HighRisk",
+      "measure": "PreSpinoff1Year loans to spinoff firms not classified as high-risk",
+      "source": "SDC Platinum database; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "NCovenants (number of financial covenants)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Facility Amount (ln of loan facility amount)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Maturity (ln of loan maturity in months)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "NLenders (number of lenders)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Secured Loan",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Term Loan",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Refinancing Loan",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Relationship Lending",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Firm Size (total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss",
+      "source": "Compustat"
+     },
+     {
+      "name": "Negative Equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Current Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Investment Grade (S&P investment-grade rating; synthetic rating if missing)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column 3 (divesting-firm fixed effects)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Final Sample, 50,619 facilities; divesting-firm (borrower) fixed effects",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PreSpinoff1YearHighRisk",
+      "measure": "PreSpinoff1Year loans to high-risk spinoff firms (post-spinoff Altman Z-score decrease > 75th percentile within two-digit SIC)",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "PreSpinoff1YearNon-HighRisk",
+      "measure": "PreSpinoff1Year loans to non-high-risk spinoff firms",
+      "source": "SDC Platinum database; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "NCovenants",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Facility Amount",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Maturity",
+      "source": "DealScan database"
+     },
+     {
+      "name": "NLenders",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls (Firm Size, ROA, Loss, Negative Equity, Current Ratio, Leverage, Investment Grade, Tangibility)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Column 4 (Spinoff Sample, within spinoff-firm comparison)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Spinoff Sample (facilities granted to spinoff firms only), 2,281 observations",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PreSpinoff1YearHighRisk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "PreSpinoff1YearNon-HighRisk",
+      "measure": "loans within 365 days before the announcement to non-high-risk spinoff firms",
+      "source": "SDC Platinum database; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Loan-specific controls (NCovenants, Facility Amount, Maturity, NLenders, Secured Loan, Term Loan, Refinancing Loan, Relationship Lending)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls (Firm Size, ROA, Loss, Negative Equity, Current Ratio, Leverage, Investment Grade, Tangibility)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (cross-sectional: ex post change in borrower financial reporting quality)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PreSpinoff1YearHighRisk x Increase Reporting Quality",
+      "measure": "interaction of high-risk pre-spinoff loans with Increase Reporting Quality",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "PreSpinoff1YearNon-HighRisk x Increase Reporting Quality",
+      "measure": "interaction of non-high-risk pre-spinoff loans with Increase Reporting Quality",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "Increase Reporting Quality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat; 10-K filings (segmental-disclosure granularity)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Low ExAnte Reporting Quality (reporting quality at loan initiation below industry-year median)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loan-specific controls (NCovenants, Facility Amount, Maturity, NLenders, Secured Loan, Term Loan, Refinancing Loan, Relationship Lending)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls (Firm Size, ROA, Loss, Negative Equity, Current Ratio, Leverage, Investment Grade, Tangibility)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (cross-sectional: ex post change in borrower reporting complexity)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PreSpinoff1YearHighRisk x Decrease Reporting Complexity",
+      "measure": "interaction of high-risk pre-spinoff loans with Decrease Reporting Complexity",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "PreSpinoff1YearNon-HighRisk x Decrease Reporting Complexity",
+      "measure": "interaction of non-high-risk pre-spinoff loans with Decrease Reporting Complexity",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "Decrease Reporting Complexity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "10-K filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "High ExAnte Reporting Complexity (high reporting complexity at loan initiation)",
+      "source": "10-K filings"
+     },
+     {
+      "name": "Loan-specific controls (NCovenants, Facility Amount, Maturity, NLenders, Secured Loan, Term Loan, Refinancing Loan, Relationship Lending)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls (Firm Size, ROA, Loss, Negative Equity, Current Ratio, Leverage, Investment Grade, Tangibility)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Cross-sectional: ex post change in borrower operating (business) complexity",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PreSpinoff1YearHighRisk x Decrease Business Complexity",
+      "measure": "interaction of high-risk pre-spinoff loans with Decrease Business Complexity",
+      "source": "SDC Platinum database; Compustat"
+     },
+     {
+      "name": "Decrease Business Complexity",
+      "measure": "indicator = 1 if borrower business complexity (number of business or geographic segments, or proportion of foreign income) decreases from 1-year pre-spinoff to 1-year post-spinoff period",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ExAnte Business Complexity (degree of operating complexity at loan initiation)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loan-specific controls (NCovenants, Facility Amount, Maturity, NLenders, etc.)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls (Firm Size, ROA, Loss, Negative Equity, Current Ratio, Leverage, Investment Grade, Tangibility)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Cross-sectional: spinoff type (focusing vs non-focusing)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "Four spinoff-type indicators (high-risk/non-high-risk x focusing/non-focusing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Loan-specific controls (NCovenants, Facility Amount, Maturity, NLenders, etc.)",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls (Firm Size, ROA, Loss, Negative Equity, Current Ratio, Leverage, Investment Grade, Tangibility)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Robustness: Instrumental variable (IV) analysis (Table SA2)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "Final Sample",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PreSpinoff1YearHighRisk / PreSpinoff1YearNon-HighRisk (instrumented)",
+      "measure": "spinoff indicators instrumented to address reverse causality and correlated omitted variables",
+      "source": "SDC Platinum database; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Loan-specific controls",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year, industry, and lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Robustness: placebo/falsification tests (Table SA4)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "Placebo (falsely dated) spinoff announcement dates moved backward 1 and 2 years",
+    "sample": "Final Sample",
+    "dv": {
+     "name": "Spread",
+     "measure": "Spread (loan interest-rate spread, basis points)",
+     "source": "DealScan database"
+    },
+    "key_ivs": [
+     {
+      "name": "Placebo pre-spinoff indicators",
+      "measure": "spinoff indicators built on falsely (placebo) dated spinoff announcement dates moved backward by 365 days (1 year) and 730 days (2 years); pricing of loans granted 2 or 3 years before the actual announcement",
+      "source": "SDC Platinum database; Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Loan-specific controls",
+      "source": "DealScan database"
+     },
+     {
+      "name": "Borrower-specific controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year, industry, and lead lender fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "ability of banks to foresee spinoffs",
+    "other market participants",
+    "shareholders",
+    "bondholders",
+    "spinoff announcement",
+    "bank loan financing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ability of banks to foresee spinoffs",
+    "relation": "affects",
+    "to": "other market participants' reaction to a spinoff announcement"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "private communications",
+    "publicly available\ninformation",
+    "ability of banks to foresee divestitures"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "economic significance",
+    "cross-sectional tests",
+    "treatment groups"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

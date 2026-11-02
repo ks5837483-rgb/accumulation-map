@@ -1,0 +1,457 @@
+{
+ "paper_id": "10.1057_jibs.2014.41",
+ "title": "Cross-border acquisitions of state-owned enterprises",
+ "journal": "JIBS",
+ "year": 2014,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory",
+  "institutional theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "economic_freedom",
+      "relation": "decreases",
+      "to": "need_for_political_favor",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "need_for_political_favor",
+      "relation": "increases",
+      "to": "likelihood_of_acquiring_soe",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "need_for_political_favor"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target-country level of economic development (rather than economic freedom) drives the choice of SOE targets"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "soe_acquisition",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "bidder_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "soe_acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "bidder_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection",
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "economic_freedom",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "opportunity_to_improve_target_performance",
+     "moderated_from": "soe_acquisition",
+     "moderated_to": "bidder_cumulative_abnormal_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "self-selection bias in the SOE-versus-non-SOE acquisition decision"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "soe_acquisition",
+      "relation": "increases",
+      "to": "post_acquisition_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "post_acquisition_costs",
+      "relation": "decreases",
+      "to": "bidder_operating_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "post_acquisition_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "economic_freedom",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "opportunity_for_value_extraction_via_political_ties",
+     "moderated_from": "soe_acquisition",
+     "moderated_to": "bidder_operating_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "bidder underperformance driven by target industry or country rather than by SOE status"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border acquisitions of foreign state-owned and non-state-owned enterprises across sectors)",
+  "country_region": "US acquirers; targets abroad in many countries (e.g., China, France, Poland, Canada, UK)",
+  "time_period": "1987-2009",
+  "sample_description": "Completed acquisitions of foreign SOE and non-SOE targets by US corporations from the Thomson One Banker Deals database; bidders listed on NYSE, AMEX, or NASDAQ and incorporated in the US, with share price data in CRSP and accounting data in COMPUSTAT",
+  "sample_size": "186 acquisitions of SOE targets and 4,702 acquisitions of non-SOE targets (4,888 total)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson One Banker Deals database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Economic Freedom of the World (EFW) Index, Fraser Institute (Gwartney, Hall, & Lawson, 2010)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Bidder announcement period CARs (univariate event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "186 SOE-target acquisitions and 4702 non-SOE-target acquisitions abroad by US bidders, 1987-2009",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target ownership type (SOE vs non-SOE)",
+      "measure": "state-owned enterprise (SOE) target vs non-SOE target subsample split",
+      "source": "Thomson One Banker Deals database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - CARs of bidders of SOEs vs matching bidders of non-SOEs",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "186 SOE bidders vs matched non-SOE bidders (N=171 industry-matched; N=186 deal-ratio-matched; N=74 industry+country-matched)",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "announcement period CARs over (−1,+1), (−2,+2), (−3,+3) windows computed as in Table 3, for bidders of SOEs vs matched bidders of non-SOEs (and their differences)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target ownership type (SOE vs non-SOE, matched)",
+      "measure": "SOE-target bidder vs matched non-SOE-target bidder in the same year, matched on two-digit SIC code (Panel B/C), deal ratio (Panel D/E), and two-digit SIC code plus target country (Panel F/G)",
+      "source": "Thomson One Banker Deals database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Univariate analysis of EFW Index by target country type",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EFW Index (Fraser Institute)"
+    },
+    "key_ivs": [
+     {
+      "name": "target ownership type (SOE vs non-SOE)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson One Banker Deals database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N=4517",
+    "dv": {
+     "name": "bidder decision to purchase a SOE target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker Deals database"
+    },
+    "key_ivs": [
+     {
+      "name": "Economic Freedom of the World (EFW) Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EFW Index (Fraser Institute)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal Ratio",
+      "source": "Thomson One Banker Deals database / CRSP"
+     },
+     {
+      "name": "Bidder Size (natural log of bidder market capitalization)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Related Target (same two-digit SIC code as bidder)",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Bidder Foreign Sales to Total Sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Clustered standard errors by firm",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Weighted least squares (Heckman two-step) regressions of bidder CARs (Models 1-4)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "N=4500 (all bidders); N=162 (bidders of SOE only, Model 4)",
+    "dv": {
+     "name": "bidder cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SOE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Economic Freedom of the World (EFW) Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EFW Index (Fraser Institute)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Inverse Mills Ratio",
+      "source": ""
+     },
+     {
+      "name": "Deal Ratio",
+      "source": "Thomson One Banker Deals database / CRSP"
+     },
+     {
+      "name": "Cash Only",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Related Target",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Target listed prior to M&A",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Asset Acquisition",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Bidder OCF/TA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Bidder Debt Ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Clustered standard errors by firm",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "N=186 SOE bidders vs matched non-SOE bidders (N=157 country-matched; N=171 industry-matched)",
+    "dv": {
+     "name": "change in bidder Return on Assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "target ownership type (SOE vs non-SOE, matched)",
+      "measure": "bidders of SOE targets vs matched bidders of non-SOE targets in the same year, matched by deal ratio (Panel B), form of the deal (Panel C), target country (Panel D), industry/two-digit SIC (Panel E)",
+      "source": "Thomson One Banker Deals database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N ranges 4335-4410 across models",
+    "dv": {
+     "name": "change in bidder Return on Assets (ΔROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "SOE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EFW Index (Fraser Institute)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal Ratio",
+      "source": "Thomson One Banker Deals database / CRSP"
+     },
+     {
+      "name": "Bidder ROA_3 YR_PRIOR (bidder's absolute ROA three years prior)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Related Target",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Target listed prior to M&A",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Asset Acquisition",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "Thomson One Banker Deals database"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Clustered standard errors by firm",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

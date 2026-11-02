@@ -1,0 +1,540 @@
+{
+ "paper_id": "10.1287_mnsc.2017.2986",
+ "title": "Information Sharing and Spillovers: Evidence from Financial Analysts",
+ "journal": "MNSC",
+ "year": 2019,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "theory of the firm",
+  "organizational economics of information",
+  "human capital theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "in_house_colleague_covering_target",
+      "relation": "increases",
+      "to": "information_spillover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_spillover",
+      "relation": "increases",
+      "to": "individual_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_spillover"
+   ],
+   "moderators": [
+    {
+     "construct": "geographical_proximity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_spillover",
+     "moderated_from": "in_house_colleague_covering_target",
+     "moderated_to": "individual_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Nature of Information Sharing (same location)"
+    },
+    {
+     "construct": "industry_team_size",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_spillover",
+     "moderated_from": "in_house_colleague_covering_target",
+     "moderated_to": "individual_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Nature of Information Sharing (team size)"
+    },
+    {
+     "construct": "peer_experience_covering_target",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_spillover",
+     "moderated_from": "in_house_colleague_covering_target",
+     "moderated_to": "individual_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Nature of Information Sharing (experienced peer)"
+    },
+    {
+     "construct": "acquirer_analyst_star_status",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_spillover",
+     "moderated_from": "in_house_colleague_covering_target",
+     "moderated_to": "individual_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "All-Star Analysts (acquirer analyst is star)"
+    },
+    {
+     "construct": "peer_star_status",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_spillover",
+     "moderated_from": "in_house_colleague_covering_target",
+     "moderated_to": "individual_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "All-Star Analysts (peer is star)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection effect (higher-performing brokers simply hire more productive analysts)",
+    "selection of analysts into M&As rather than a treatment effect",
+    "heterogeneity in information production rather than information spillovers",
+    "industry specialization correlated with analyst type"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "self_coverage_of_acquirer_and_target",
+      "relation": "decreases",
+      "to": "information_loss_in_translation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_loss_in_translation",
+      "relation": "decreases",
+      "to": "individual_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_loss_in_translation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "learning story (analysts improve over time as they move from type 1 to type 2/3)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_analyst_coverage",
+      "relation": "decreases",
+      "to": "earnings_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "earnings_uncertainty",
+      "relation": "increases",
+      "to": "forecast_error",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "earnings_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry M&As (financial analyst coverage of publicly traded acquirers and targets; ~70% of M&As within the same GICS sector); knowledge-based industries",
+  "country_region": "United States",
+  "time_period": "1984-2011",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "15,939 analyst-broker-stock pairs (2,394 analysts, 215 brokerages, 2,403 acquirers)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP database (delisting file)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Brokers Estimates System (IBES) database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Investor's All-America Research Team",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, columns (1)-(2): Analyst Performance and Information Spillovers (baseline DiD)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "2,394 analysts at 215 brokerages covering 2,403 acquirers, 15,939 analyst-broker-stock pairs, 1984-2011",
+    "dv": {
+     "name": "Change in forecast error",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Institutional Brokers Estimates System (IBES) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Type 2",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 3",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-Specific Experience",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Stocks Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Sectors Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Team Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, column (3): variation in type within GICS sector, analyst-broker-sector fixed effects",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Change in forecast error",
+     "measure": "the change in the absolute forecast error, DeltaFE = FE_post - FE_pre",
+     "source": "Institutional Brokers Estimates System (IBES) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Type 2",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 3",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-Specific Experience",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Stocks Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Sectors Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Team Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, column (4): subsample where acquirer size > 5x target size",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "M&As for which the acquirer is at least five times the size of the target (9,956 observations)",
+    "dv": {
+     "name": "Change in forecast error",
+     "measure": "the change in the absolute forecast error, DeltaFE = FE_post - FE_pre",
+     "source": "Institutional Brokers Estimates System (IBES) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Type 2",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 3",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-Specific Experience",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Stocks Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Sectors Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Team Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in forecast error",
+     "measure": "the change in the absolute forecast error, DeltaFE = FE_post - FE_pre",
+     "source": "Institutional Brokers Estimates System (IBES) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Type 2 x Same Location",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 2 x Experienced Peer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 2 x Industry Team Size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 2 x Broker Size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Type 2",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 3",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Industry Team Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Broker Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Firm-Specific Experience",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Stocks Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Sectors Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Team Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in forecast error",
+     "measure": "the change in the absolute forecast error, DeltaFE = FE_post - FE_pre",
+     "source": "Institutional Brokers Estimates System (IBES) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Type 2 x All-Star",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor's All-America Research Team"
+     },
+     {
+      "name": "Type 3 x All-Star",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor's All-America Research Team"
+     },
+     {
+      "name": "Type 2 x Peer is All-Star",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor's All-America Research Team"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Type 2",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 3",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "All-Star",
+      "source": "Institutional Investor's All-America Research Team"
+     },
+     {
+      "name": "Firm-Specific Experience",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Stocks Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Sectors Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Team Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in forecast error",
+     "measure": "the change in the absolute forecast error, DeltaFE = FE_post - FE_pre (column 1 uses year fixed effects, R-squared 0.39)",
+     "source": "Institutional Brokers Estimates System (IBES) database"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Coverage",
+      "measure": "the number of analysts following the target prior to the M&A",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Acquirer Coverage",
+      "measure": "the number of analysts following the acquirer prior to the M&A",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 3 x Target Coverage",
+      "measure": "interaction of Type 3 with Target Coverage (number of analysts following the target prior to the M&A)",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Specialization",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Type 2",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Type 3",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Firm-Specific Experience",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Stocks Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Number of Sectors Covered",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     },
+     {
+      "name": "Team Size",
+      "source": "Institutional Brokers Estimates System (IBES) database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "related m&as",
+    "analyst type"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "analyst-broker fixed effects",
+    "all-star status"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

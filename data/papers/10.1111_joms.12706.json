@@ -1,0 +1,1074 @@
+{
+ "paper_id": "10.1111_joms.12706",
+ "title": "How Country Reputation Differentials Influence Market Reaction to International Acquisitions",
+ "journal": "JMS",
+ "year": 2021,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "social identity theory",
+  "reputation theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "country_reputation_differential",
+      "relation": "increases",
+      "to": "perceived_acquirer_capabilities",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_acquirer_capabilities",
+      "relation": "increases",
+      "to": "market_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "country_reputation_differential",
+      "relation": "decreases",
+      "to": "target_opposition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_opposition",
+      "relation": "decreases",
+      "to": "market_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_acquirer_capabilities",
+    "target_opposition"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_news_media_reporting",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_acquirer_capabilities",
+     "moderated_from": "country_reputation_differential",
+     "moderated_to": "market_reaction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2a"
+    },
+    {
+     "construct": "target_news_media_reporting",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_acquirer_capabilities",
+     "moderated_from": "country_reputation_differential",
+     "moderated_to": "market_reaction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2b"
+    },
+    {
+     "construct": "acquirer_analyst_coverage",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_acquirer_capabilities",
+     "moderated_from": "country_reputation_differential",
+     "moderated_to": "market_reaction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3a"
+    },
+    {
+     "construct": "target_analyst_coverage",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_acquirer_capabilities",
+     "moderated_from": "country_reputation_differential",
+     "moderated_to": "market_reaction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3b"
+    },
+    {
+     "construct": "acquirer_prior_acquisitions",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_acquirer_capabilities",
+     "moderated_from": "country_reputation_differential",
+     "moderated_to": "market_reaction",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firm reputation"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (international acquisitions across sectors)",
+  "country_region": "acquirers from 41 home countries, targets in 47 countries (48 countries involved)",
+  "time_period": "2009-2017",
+  "sample_description": "international acquisitions from SDC Platinum made by public firms; completed deals in which the acquirer owned <50% before and 100% after, deal value >=$1 million, with Datastream financials/stock returns and Reputation Institute country reputation data, excluding reverse takeovers and mergers of equals",
+  "sample_size": "4,792 international acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Reputation Institute (RI) CountryRep index",
+    "category": "survey",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones' Factiva database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Henisz's (2000) political constraint index",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Worldwide Governance Indicators (Kaufmann et al., 2010)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Ronen and Shenkar (1985, 2013)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Mayer and Zignago (2011)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "World Bank's World Development Indicators",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "RavenPack",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II, Model 1 (controls only)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "return on assets (ROA)",
+      "source": "Datastream"
+     },
+     {
+      "name": "assets",
+      "source": "Datastream"
+     },
+     {
+      "name": "acquirer's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "deal value",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "percentage of shares acquired",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cross-listed",
+      "source": "Datastream"
+     },
+     {
+      "name": "cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "hostility",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target country's political risk",
+      "source": "Henisz's (2000) political constraint index"
+     },
+     {
+      "name": "target country's inflation rate",
+      "source": ""
+     },
+     {
+      "name": "rule of law",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "regulatory quality",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "geographic distance",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "cultural similarity",
+      "source": "Ronen and Shenkar (1985, 2013)"
+     },
+     {
+      "name": "colonial ties",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "language (same language)",
+      "source": ""
+     },
+     {
+      "name": "GDP per capita difference",
+      "source": "World Bank's World Development Indicators"
+     },
+     {
+      "name": "time dummies",
+      "source": ""
+     },
+     {
+      "name": "industry dummies",
+      "source": ""
+     },
+     {
+      "name": "country dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II, Model 2 (main effect of country reputation differentials)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "country reputation differentials",
+      "measure": "acquirer country's country reputation score minus target country's country reputation score, using the Reputation Institute's CountryRep index (4-item, 7-point scale converted to 0–100)",
+      "source": "Reputation Institute (RI) CountryRep index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on assets (ROA)",
+      "source": "Datastream"
+     },
+     {
+      "name": "assets",
+      "source": "Datastream"
+     },
+     {
+      "name": "acquirer's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "deal value",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "percentage of shares acquired",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cross-listed",
+      "source": "Datastream"
+     },
+     {
+      "name": "cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "hostility",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target country's political risk",
+      "source": "Henisz's (2000) political constraint index"
+     },
+     {
+      "name": "target country's inflation rate",
+      "source": ""
+     },
+     {
+      "name": "rule of law",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "regulatory quality",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "geographic distance",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "cultural similarity",
+      "source": "Ronen and Shenkar (1985, 2013)"
+     },
+     {
+      "name": "colonial ties",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "language (same language)",
+      "source": ""
+     },
+     {
+      "name": "GDP per capita difference",
+      "source": "World Bank's World Development Indicators"
+     }
+    ]
+   },
+   {
+    "label": "Table II, Model 3 (news media reporting moderators)",
+    "hypotheses": [
+     "H2a",
+     "H2b"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "country reputation differentials",
+      "measure": "acquirer country's country reputation score minus target country's country reputation score (RI CountryRep index)",
+      "source": "Reputation Institute (RI) CountryRep index"
+     },
+     {
+      "name": "acquirer's news media reporting",
+      "measure": "total number of articles published about the acquirer in the Wall Street Journal, New York Times, Financial Times, and The Times a year prior to the deal announcement",
+      "source": "Dow Jones' Factiva database"
+     },
+     {
+      "name": "target's news media reporting",
+      "measure": "total number of articles published about the target in the Wall Street Journal, New York Times, Financial Times, and The Times a year prior to the deal announcement",
+      "source": "Dow Jones' Factiva database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on assets (ROA)",
+      "source": "Datastream"
+     },
+     {
+      "name": "assets",
+      "source": "Datastream"
+     },
+     {
+      "name": "acquirer's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "deal value",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "percentage of shares acquired",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cross-listed",
+      "source": "Datastream"
+     },
+     {
+      "name": "cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "hostility",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target country's political risk",
+      "source": "Henisz's (2000) political constraint index"
+     },
+     {
+      "name": "target country's inflation rate",
+      "source": ""
+     },
+     {
+      "name": "rule of law",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "regulatory quality",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "geographic distance",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "cultural similarity",
+      "source": "Ronen and Shenkar (1985, 2013)"
+     },
+     {
+      "name": "colonial ties",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "language (same language)",
+      "source": ""
+     },
+     {
+      "name": "GDP per capita difference",
+      "source": "World Bank's World Development Indicators"
+     }
+    ]
+   },
+   {
+    "label": "Table II, Model 4 (analyst coverage moderators)",
+    "hypotheses": [
+     "H3a",
+     "H3b"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "country reputation differentials",
+      "measure": "acquirer country's country reputation score minus target country's country reputation score (RI CountryRep index)",
+      "source": "Reputation Institute (RI) CountryRep index"
+     },
+     {
+      "name": "acquirer's analyst coverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's analyst coverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on assets (ROA)",
+      "source": "Datastream"
+     },
+     {
+      "name": "assets",
+      "source": "Datastream"
+     },
+     {
+      "name": "acquirer's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "deal value",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "percentage of shares acquired",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cross-listed",
+      "source": "Datastream"
+     },
+     {
+      "name": "cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "hostility",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target country's political risk",
+      "source": "Henisz's (2000) political constraint index"
+     },
+     {
+      "name": "target country's inflation rate",
+      "source": ""
+     },
+     {
+      "name": "rule of law",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "regulatory quality",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "geographic distance",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "cultural similarity",
+      "source": "Ronen and Shenkar (1985, 2013)"
+     },
+     {
+      "name": "colonial ties",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "language (same language)",
+      "source": ""
+     },
+     {
+      "name": "GDP per capita difference",
+      "source": "World Bank's World Development Indicators"
+     }
+    ]
+   },
+   {
+    "label": "Table II, Model 5 (acquirer's prior acquisitions moderator)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "country reputation differentials",
+      "measure": "acquirer country's country reputation score minus target country's country reputation score (RI CountryRep index)",
+      "source": "Reputation Institute (RI) CountryRep index"
+     },
+     {
+      "name": "acquirer's prior acquisitions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on assets (ROA)",
+      "source": "Datastream"
+     },
+     {
+      "name": "assets",
+      "source": "Datastream"
+     },
+     {
+      "name": "acquirer's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "deal value",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "percentage of shares acquired",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cross-listed",
+      "source": "Datastream"
+     },
+     {
+      "name": "cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "hostility",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target country's political risk",
+      "source": "Henisz's (2000) political constraint index"
+     },
+     {
+      "name": "target country's inflation rate",
+      "source": ""
+     },
+     {
+      "name": "rule of law",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "regulatory quality",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "geographic distance",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "cultural similarity",
+      "source": "Ronen and Shenkar (1985, 2013)"
+     },
+     {
+      "name": "colonial ties",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "language (same language)",
+      "source": ""
+     },
+     {
+      "name": "GDP per capita difference",
+      "source": "World Bank's World Development Indicators"
+     }
+    ]
+   },
+   {
+    "label": "Table II, Model 6 (full model, all main and interaction effects)",
+    "hypotheses": [
+     "H1",
+     "H2a",
+     "H2b",
+     "H3a",
+     "H3b",
+     "H4"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "country reputation differentials",
+      "measure": "acquirer country's country reputation score minus target country's country reputation score (RI CountryRep index)",
+      "source": "Reputation Institute (RI) CountryRep index"
+     },
+     {
+      "name": "acquirer's news media reporting",
+      "measure": "total number of articles about the acquirer in WSJ, NYT, Financial Times, and The Times a year prior to the deal announcement",
+      "source": "Dow Jones' Factiva database"
+     },
+     {
+      "name": "target's news media reporting",
+      "measure": "total number of articles about the target in WSJ, NYT, Financial Times, and The Times a year prior to the deal announcement",
+      "source": "Dow Jones' Factiva database"
+     },
+     {
+      "name": "acquirer's analyst coverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's analyst coverage",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "acquirer's prior acquisitions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "return on assets (ROA)",
+      "source": "Datastream"
+     },
+     {
+      "name": "assets",
+      "source": "Datastream"
+     },
+     {
+      "name": "acquirer's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "target's firm reputation",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "deal value",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "public target",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "percentage of shares acquired",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "cross-listed",
+      "source": "Datastream"
+     },
+     {
+      "name": "cash payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "hostility",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "target country's political risk",
+      "source": "Henisz's (2000) political constraint index"
+     },
+     {
+      "name": "target country's inflation rate",
+      "source": ""
+     },
+     {
+      "name": "rule of law",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "regulatory quality",
+      "source": "Worldwide Governance Indicators (Kaufmann et al., 2010)"
+     },
+     {
+      "name": "geographic distance",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "cultural similarity",
+      "source": "Ronen and Shenkar (1985, 2013)"
+     },
+     {
+      "name": "colonial ties",
+      "source": "Mayer and Zignago (2011)"
+     },
+     {
+      "name": "language (same language)",
+      "source": ""
+     },
+     {
+      "name": "GDP per capita difference",
+      "source": "World Bank's World Development Indicators"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "US-reduced subsample (removed about half of the acquiring and target firms from the United States)",
+    "dv": {
+     "name": "cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream"
+    },
+    "key_ivs": [
+     {
+      "name": "alternative country reputation differentials (dyadic reputations)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reputation Institute (RI) CountryRep index"
+     },
+     {
+      "name": "alternative firm reputation / firm sentiment",
+      "measure": "top-50-most-admired dummies, Fortune reputation-score measures, and RavenPack public-sentiment scores replacing the original firm reputation dummies",
+      "source": "RavenPack"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "country association",
+    "country reputation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "country association",
+    "country reputation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "country association",
+    "on_path": [
+     "country reputation",
+     "market reaction"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "investor perceptions",
+    "country reputation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "investor characteristics",
+    "investor personalities",
+    "country reputation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "investor personalities",
+    "on_path": [
+     "country reputation",
+     "market reaction"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "prestige of a firm’s home country",
+    "proximity to the investor",
+    "investor perception of the firm"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "proximity to the investor",
+    "on_path": [
+     "country reputation",
+     "investor perception of the firm"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "individual traits",
+    "country reputation",
+    "decision-making"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "individual traits",
+    "relation": "affects",
+    "to": "incorporation of country reputation in decision-making"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "country reputation",
+    "attribute of interest"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "country’s reputation for specific attributes",
+    "perceptions of its firms’ capabilities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "public target firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "premium paid for the takeover",
+    "stock market reactions to the target firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "premium paid for the takeover",
+    "stock market reactions to the target firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "reputations of their home countries",
+    "international acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "firms actively dealing with and leveraging home country reputations",
+    "relation": "affects",
+    "to": "international acquisitions"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

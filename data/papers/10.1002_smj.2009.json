@@ -1,0 +1,552 @@
+{
+ "paper_id": "10.1002_smj.2009",
+ "title": "Acquisition announcements and stock market valuations of acquiring firms' rivals: A test of the growth probability hypothesis in China",
+ "journal": "SMJ",
+ "year": 2012,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "growth probability hypothesis",
+  "industrial organization economics",
+  "information economics",
+  "competitive dynamics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_announcement",
+      "relation": "increases",
+      "to": "industry_growth_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "industry_growth_potential",
+      "relation": "increases",
+      "to": "rival_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "industry_growth_potential"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market power hypothesis (horizontal acquisitions raise rivals' returns by enhancing the market power of all remaining players)",
+    "acquisition probability hypothesis (rivals gain because acquisitions raise their probability of becoming future targets)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquiring_firm_market_reaction",
+      "relation": "increases",
+      "to": "industry_growth_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "industry_growth_potential",
+      "relation": "increases",
+      "to": "rival_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquiring_firm_market_reaction",
+      "relation": "increases",
+      "to": "synergy_availability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_availability",
+      "relation": "increases",
+      "to": "rival_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "industry_growth_potential",
+    "synergy_availability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "managerial hubris hypothesis (rivals benefit because acquisitions destroy acquirer value, so rivals should gain when acquisitions fail)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "industry_concentration",
+      "relation": "increases",
+      "to": "firm_interdependence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_interdependence",
+      "relation": "increases",
+      "to": "rival_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "industry_concentration",
+      "relation": "increases",
+      "to": "industry_growth_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "industry_growth_potential",
+      "relation": "increases",
+      "to": "rival_firm_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_interdependence",
+    "industry_growth_potential"
+   ],
+   "moderators": [
+    {
+     "construct": "horizontal_acquisition",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "market_power",
+     "moderated_from": "industry_concentration",
+     "moderated_to": "rival_firm_abnormal_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (49 unique industries in mainland China; top three by number of M&As: chemicals, construction and materials, and electricity)",
+  "country_region": "China",
+  "time_period": "1993-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream database",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Shanghai and Shenzhen Stock Exchanges",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "1,074 acquisition announcements; 77 target-firm observations",
+    "dv": {
+     "name": "Rival firms' cumulative abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream database"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 3: univariate subsample analysis (positive vs. negative acquirer reaction; horizontal vs. non-horizontal)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "subsamples split by positive/negative acquirer reaction and by horizontal/non-horizontal acquisition",
+    "dv": {
+     "name": "Rival firms' cumulative abnormal returns",
+     "measure": "cumulative abnormal returns for each rival firm (CARr,i), event window (-2,+2)",
+     "source": "Datastream database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal firms' acquisition performance (acquirer CAR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Datastream database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Model 1: multilevel random-effects regression (full sample)",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "643 observations across 49 industry groups",
+    "dv": {
+     "name": "Rival firms' portfolio CARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Datastream database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal firms' acquisition performance (acquirer CAR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Degree of industry concentration",
+      "measure": "sales-based Herfindahl index (Hp,t) normalized to (H*p,t = (Hp,t - 1/N)/(1 - 1/N)) between 0 and 1",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Industry relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Cross-border acquisition dummy",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Target firm's public status",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Mode of payment (stock vs. cash)",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Merger type (merger vs. acquisition)",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Rival firms' cash-to-assets ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' asset growth ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' book-to-market ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' debt-to-assets ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' return on assets",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Relative size (rival market cap / acquirer market cap)",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Acquiring firms' financial characteristics (industry median-adjusted)",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Completed acquisition dummy",
+      "source": "SDC platinum database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 2: multilevel random-effects regression (horizontal acquisitions subsample)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "horizontal acquisitions subsample",
+    "dv": {
+     "name": "Rival firms' portfolio CARs",
+     "measure": "rival firms' portfolio CARs (CARp,i), event window (-2,+2)",
+     "source": "Datastream database"
+    },
+    "key_ivs": [
+     {
+      "name": "Degree of industry concentration",
+      "measure": "sales-based normalized Herfindahl index (H*p,t)",
+      "source": "Datastream database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Cross-border acquisition dummy",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Target firm's public status",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Mode of payment (stock vs. cash)",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Merger type (merger vs. acquisition)",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Rival firms' cash-to-assets ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' asset growth ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' book-to-market ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' debt-to-assets ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' return on assets",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Relative size (rival market cap / acquirer market cap)",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Acquiring firms' financial characteristics (industry median-adjusted)",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Completed acquisition dummy",
+      "source": "SDC platinum database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 3: multilevel random-effects regression (non-horizontal acquisitions subsample)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "non-horizontal acquisitions subsample",
+    "dv": {
+     "name": "Rival firms' portfolio CARs",
+     "measure": "rival firms' portfolio CARs (CARp,i), event window (-2,+2)",
+     "source": "Datastream database"
+    },
+    "key_ivs": [
+     {
+      "name": "Degree of industry concentration",
+      "measure": "sales-based normalized Herfindahl index (H*p,t)",
+      "source": "Datastream database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Cross-border acquisition dummy",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Target firm's public status",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Mode of payment (stock vs. cash)",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Merger type (merger vs. acquisition)",
+      "source": "SDC platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Rival firms' cash-to-assets ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' asset growth ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' book-to-market ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' debt-to-assets ratio",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Rival firms' return on assets",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Relative size (rival market cap / acquirer market cap)",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Acquiring firms' financial characteristics (industry median-adjusted)",
+      "source": "Datastream database"
+     },
+     {
+      "name": "Completed acquisition dummy",
+      "source": "SDC platinum database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "growth probability hypothesis",
+    "emerging markets",
+    "developed markets"
+   ],
+   "mechanism_named": "growth probability hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "contextual hypotheses",
+    "state interference",
+    "emerging markets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "state interference",
+    "on_path": [
+     "industry concentration",
+     "rival firms' CAR"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "developed market",
+    "growth potential"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "event study methodology",
+    "short-term sentiments of the market"
+   ],
+   "mechanism_named": "event study methodology",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "rivals' returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "rivals' returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "decreasing competition after industry consolidation",
+    "suppliers and customers",
+    "other stakeholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "decreasing competition after industry consolidation",
+    "relation": "affects",
+    "to": "value implications for suppliers and customers"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

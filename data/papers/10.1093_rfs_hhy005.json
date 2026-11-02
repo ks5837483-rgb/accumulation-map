@@ -1,0 +1,678 @@
+{
+ "paper_id": "10.1093_rfs_hhy005",
+ "title": "High-Frequency Measures of Informed Trading and Corporate Announcements",
+ "journal": "RFS",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market microstructure theory",
+  "information-based trading model (PIN/EKOP)",
+  "information asymmetry",
+  "differential interpretation of public information"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_announcement_informed_buying",
+      "relation": "increases",
+      "to": "impounding_of_information_in_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "impounding_of_information_in_price",
+      "relation": "decreases",
+      "to": "announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "impounding_of_information_in_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "pi_g reflects mechanical positive price changes from the way trades are classified as buys, not informed buying"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_announcement_informed_buying",
+      "relation": "increases",
+      "to": "impounding_of_information_in_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "impounding_of_information_in_price",
+      "relation": "decreases",
+      "to": "announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "impounding_of_information_in_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_announcement_informed_selling",
+      "relation": "increases",
+      "to": "impounding_of_information_in_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "impounding_of_information_in_price",
+      "relation": "increases",
+      "to": "announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "impounding_of_information_in_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the spread captures a generic trading/return effect rather than informed selling on the specific bad news (placebo: wrong-direction informed buying has no effect)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_announcement_informed_selling",
+      "relation": "increases",
+      "to": "private_information_about_bid_withdrawal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_about_bid_withdrawal",
+      "relation": "increases",
+      "to": "bid_withdrawal",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_about_bid_withdrawal"
+   ],
+   "moderators": [
+    {
+     "construct": "all_cash_payment_method",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": false,
+     "mechanism": "relative-value merger-arbitrage trading",
+     "moderated_from": "post_announcement_informed_selling",
+     "moderated_to": "bid_withdrawal",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "relative-value merger-arbitrage trading in stock-payment bids obscures the informed-trading / bid-withdrawal link"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_announcement_informed_buying",
+      "relation": "increases",
+      "to": "private_information_about_competing_bid",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_about_competing_bid",
+      "relation": "increases",
+      "to": "emergence_of_competing_bid",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_about_competing_bid"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_announcement_informed_buying",
+      "relation": "increases",
+      "to": "superior_interpretation_of_public_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "superior_interpretation_of_public_information",
+      "relation": "increases",
+      "to": "subsequent_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "superior_interpretation_of_public_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "in stock-payment bids informed trading is motivated by relative bidder/target prices (merger arbitrage) rather than the target's absolute return prospects"
+   ]
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_announcement_informed_buying",
+      "relation": "increases",
+      "to": "private_information_good_news",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_good_news",
+      "relation": "increases",
+      "to": "subsequent_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_good_news"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_announcement_informed_selling",
+      "relation": "increases",
+      "to": "private_information_bad_news",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_bad_news",
+      "relation": "decreases",
+      "to": "subsequent_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_bad_news"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "salience_of_forthcoming_earnings_news",
+      "relation": "increases",
+      "to": "incentive_to_trade_on_private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_trade_on_private_information",
+      "relation": "increases",
+      "to": "pre_announcement_informed_trading",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_trade_on_private_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the endogenously determined announcement return is mechanically related to pre-announcement informed trading; they use SUE (unaffected by pre-EAD trading) instead"
+   ]
+  },
+  {
+   "hypothesis": "P10",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_announcement_informed_trading",
+      "relation": "increases",
+      "to": "impounding_of_earnings_information_in_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "impounding_of_earnings_information_in_price",
+      "relation": "decreases",
+      "to": "price_response_to_earnings_surprise",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "impounding_of_earnings_information_in_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P11",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_announcement_informed_buying",
+      "relation": "increases",
+      "to": "private_information_good_news",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_good_news",
+      "relation": "increases",
+      "to": "subsequent_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_good_news"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P12",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_announcement_informed_selling",
+      "relation": "increases",
+      "to": "private_information_bad_news",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_information_bad_news",
+      "relation": "decreases",
+      "to": "subsequent_stock_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information_bad_news"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE/AMEX-listed common stocks)",
+  "country_region": "United States",
+  "time_period": "1983-2013 (April 1983 to December 2013)",
+  "sample_description": "NYSE/AMEX-listed common stocks (order flow from ISSM/TAQ, returns from CRSP); M&A tender offers (both completed and withdrawn) from SDC Platinum with transaction value of at least $50 million, requiring both bidder and target firms to be listed on the NYSE/AMEX",
+  "sample_size": "2,623 target firms and 7,172 bidder firms (M&A sample)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "ISSM/TAQ databases",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LOBSTER.com",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Probit: bid withdrawal on informed-trading probabilities (whole target sample)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "whole sample of target firms",
+    "dv": {
+     "name": "bid withdrawal",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed buying/selling of target (post-bid)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Probit: bid withdrawal on informed-trading probabilities (cash-only bids)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "target firms of cash-only bids",
+    "dv": {
+     "name": "bid withdrawal",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed selling of target (post-bid)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Probit: emergence of a competing bid on informed-trading probabilities (full sample)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "full sample of target firms",
+    "dv": {
+     "name": "emergence of a competing bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed buying/selling of target (post-bid)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Probit: emergence of a competing bid on informed-trading probabilities (cash-only bids)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "cash-only bids",
+    "dv": {
+     "name": "emergence of a competing bid",
+     "measure": "the emergence of a competing bid",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed buying of target (post-bid)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "OLS: post-bid target return on informed-trading probabilities (all-cash bids)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all-cash bids",
+    "dv": {
+     "name": "average daily target return (post-bid to resolution)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed trading in target (first 10 days)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "OLS: target-minus-bidder relative return on informed buying (all-stock bids)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all-stock bids",
+    "dv": {
+     "name": "target-bidder relative daily return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed buying in target (first 10 days)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "OLS: post-dividend-initiation returns on informed buying",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "dividend initiations",
+    "dv": {
+     "name": "post-announcement returns (dividend initiation)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed buying (post-DID)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "OLS: post-SEO returns on informed selling",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "seasoned equity offerings",
+    "dv": {
+     "name": "post-announcement returns (SEO)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed selling (post-SEO)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "OLS: post-earnings-announcement returns on informed trading",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "quarterly earnings announcements",
+    "dv": {
+     "name": "post-announcement returns (earnings)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "probability of informed trading (post-earnings, 2 days)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "ISSM/TAQ databases"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "relative-value arbitrage",
+    "informed trading",
+    "return differences"
+   ],
+   "mechanism_named": "relative-value arbitrage",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "pre-announcement informed trading"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "informed trading",
+    "private information",
+    "public announcements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

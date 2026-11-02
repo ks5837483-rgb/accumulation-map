@@ -1,0 +1,780 @@
+{
+ "paper_id": "10.1007_s11142-022-09723-y",
+ "title": "The role of external regulators in mergers and acquisitions: evidence from SEC comment letters",
+ "journal": "RAS",
+ "year": 2022,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "disclosure regulation theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "decreases",
+      "to": "shareholder_disagreement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_disagreement",
+      "relation": "decreases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "shareholder_disagreement"
+   ],
+   "moderators": [
+    {
+     "construct": "shareholder_approval_requirement",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "shareholder_disagreement",
+     "moderated_from": "sec_comment_letter",
+     "moderated_to": "deal_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "deals withdrawn for reasons unrelated to information asymmetry (e.g., antitrust or lack of financing) drive the completion result",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "offer_price_revision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "increases",
+      "to": "disclosure_of_withheld_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disclosure_of_withheld_information",
+      "relation": "increases",
+      "to": "offer_price_revision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "disclosure_of_withheld_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sec_comment_letter",
+      "relation": "increases",
+      "to": "comment_letter_resolution_time",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "comment_letter_resolution_time",
+      "relation": "increases",
+      "to": "deal_duration",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "comment_letter_resolution_time"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A deals involving domestic publicly traded target firms; industry fixed effects included)",
+  "country_region": "United States (domestic publicly traded target firms)",
+  "time_period": "2005-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,527 deals"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Thomson One Banker SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (securities pricing data)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics (SEC comment letter data)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Manually hand-collected comment letter issues/content and merger filing data (exchange ratio, shareholder-approval requirement)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "SEC merger filings (proxy statements, Form S-4, amendments; comment letter correspondence)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "deal completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl (comment letter receipt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Cl_issue (number of comment letter issues)",
+      "measure": "the number of comment letter issues",
+      "source": "Audit Analytics / hand-collected"
+     },
+     {
+      "name": "Cl_amendment (comment letter filing amendment)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Cl_noamendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Nocl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal_size",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Going_private",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendly",
+      "source": "SDC"
+     },
+     {
+      "name": "Public_acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Serial_acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Target_res (target restatement history)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Bidder_res (bidder restatement history)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Target_cl (target comment letter history)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Bidder_cl (bidder comment letter history)",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Amend_price_reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl (comment letter receipt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control variables as main deal-completion analyses",
+      "source": "SDC / Audit Analytics"
+     },
+     {
+      "name": "Industry & Year fixed effects (Columns 2, 4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A: Cross-sectional test on ex ante disclosure quality",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl (comment letter receipt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Cl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Disclosure_Quality (sample-splitting moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same deal and firm controls as Table 3",
+      "source": "SDC / Audit Analytics"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B: The role of shareholder approval",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "N=2348",
+    "dv": {
+     "name": "Completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl_approval",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected / SEC filings"
+     },
+     {
+      "name": "Cl_no_approval",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected / SEC filings"
+     },
+     {
+      "name": "Cl_both_approval",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected / SEC filings"
+     },
+     {
+      "name": "Cl_target_approval",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected / SEC filings"
+     },
+     {
+      "name": "Cl_amendment_approval / Cl_amendment_both_approval / Cl_amendment_target_approval / Cl_amendment_no_approval",
+      "measure": "filing-amendment counterparts of the shareholder-approval indicators (Columns 3-4)",
+      "source": "hand-collected / Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same deal and firm controls as Table 3",
+      "source": "SDC / Audit Analytics"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl (comment letter receipt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Cl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same deal and firm controls as Table 3",
+      "source": "SDC / Audit Analytics"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Col 1 N=2267, Col 2 N=2248; also univariate comparison of merger arbitrage spread between Cl=1 and Cl=0 deals (Panel A)",
+    "dv": {
+     "name": "Cl (Col 1) and Completion (Col 2)",
+     "measure": "Col 1 DV = comment letter receipt indicator (probit); Col 2 DV = deal completion indicator",
+     "source": "Audit Analytics / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger_Spread (merger arbitrage spread)",
+      "measure": "for cash mergers, cash offer price minus target stock price two days after announcement scaled by target stock price; for stock mergers, fixed exchange ratio times bidder stock price minus target stock price two days after announcement scaled by target stock price",
+      "source": "CRSP / hand-collected (exchange ratio)"
+     },
+     {
+      "name": "Neg_Spread",
+      "measure": "an indicator variable for deals with negative arbitrage spreads",
+      "source": "CRSP / hand-collected"
+     },
+     {
+      "name": "Cl (comment letter receipt, Col 2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control variables as Table 5",
+      "source": "SDC / Audit Analytics"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A: SEC comment letters and offer price revision",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "completed deals (N=2082; Col 4 N=1903)",
+    "dv": {
+     "name": "Price_revision",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / hand-collected"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl (comment letter receipt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Cl_issue",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / hand-collected"
+     },
+     {
+      "name": "Cl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Cl_noamendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Nocl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal_size",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Going_private",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Premium",
+      "source": "SDC"
+     },
+     {
+      "name": "Board_size",
+      "source": ""
+     },
+     {
+      "name": "Ind_director",
+      "source": ""
+     },
+     {
+      "name": "Insider_own",
+      "source": ""
+     },
+     {
+      "name": "Dual_class",
+      "source": ""
+     },
+     {
+      "name": "Target_cl",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Bidder_cl",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Target_res",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Bidder_res",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendly",
+      "source": "SDC"
+     },
+     {
+      "name": "Public_acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Serial_acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Multiple_bidder",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "completed deals; Pos_revision N=2082, Neg_revision N=1903",
+    "dv": {
+     "name": "Pos_revision / Neg_revision",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / hand-collected"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl (comment letter receipt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Cl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control variables as Table 7 Panel A",
+      "source": "SDC / Audit Analytics"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=2082",
+    "dv": {
+     "name": "Deal_duration",
+     "measure": "deal duration in calendar days (per summary stats, mean 131 calendar days from announcement to completion/withdrawal)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Cl (comment letter receipt)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Cl_issue",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / hand-collected"
+     },
+     {
+      "name": "Cl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Cl_noamendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics / SEC filings"
+     },
+     {
+      "name": "Nocl_amendment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal_size",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Going_private",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Premium",
+      "source": "SDC"
+     },
+     {
+      "name": "Board_size",
+      "source": ""
+     },
+     {
+      "name": "Ind_director",
+      "source": ""
+     },
+     {
+      "name": "Insider_own",
+      "source": ""
+     },
+     {
+      "name": "Dual_class",
+      "source": ""
+     },
+     {
+      "name": "Target_cl",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Bidder_cl",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Target_res",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Bidder_res",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Friendly",
+      "source": "SDC"
+     },
+     {
+      "name": "Public_acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Serial_acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry & Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "sec comment letter",
+    "deal outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "sec comment letter",
+    "deal outcomes"
+   ],
+   "mechanism_named": "entropy balancing",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

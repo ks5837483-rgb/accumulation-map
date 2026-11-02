@@ -1,0 +1,841 @@
+{
+ "paper_id": "10.1111_joms.13071",
+ "title": "A Contingency View of Impression Management: Heterogeneous Investor Responses to CEO Positive Portrayal of Mergers and Acquisitions",
+ "journal": "JMS",
+ "year": 2024,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "expectancy violation theory",
+  "impression management theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_positive_portrayal",
+      "relation": "increases",
+      "to": "expectancy_violation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expectancy_violation",
+      "relation": "decreases",
+      "to": "portfolio_weight_change",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expectancy_violation"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_duality",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "expectancy_violation",
+     "moderated_from": "ceo_positive_portrayal",
+     "moderated_to": "portfolio_weight_change",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "CEO power (a broader index of CEO tenure, duality, and equity ownership) rather than CEO duality specifically as the driver of the moderation"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "ceo_positive_portrayal",
+      "relation": "increases",
+      "to": "expectancy_violation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expectancy_violation",
+      "relation": "decreases",
+      "to": "portfolio_weight_change",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expectancy_violation"
+   ],
+   "moderators": [
+    {
+     "construct": "acquisition_foreshadowing",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "expectancy_violation",
+     "moderated_from": "ceo_positive_portrayal",
+     "moderated_to": "portfolio_weight_change",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "ceo_positive_portrayal",
+      "relation": "increases",
+      "to": "expectancy_violation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expectancy_violation",
+      "relation": "decreases",
+      "to": "portfolio_weight_change",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expectancy_violation"
+   ],
+   "moderators": [
+    {
+     "construct": "transient_investor",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "expectancy_violation",
+     "moderated_from": "ceo_positive_portrayal",
+     "moderated_to": "portfolio_weight_change",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. acquiring firms announcing M&As via conference calls; industry dummies included)",
+  "country_region": "USA",
+  "time_period": "2003-2018",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "291,598 institutional-investor holding records (975 M&A announcement conference calls; 4,815 institutional investors)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters StreetEvents",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Company (SDC) M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBES (I/B/E/S)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RavenPack Dow Jones",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "seasoned equity offerings prospectus",
+    "category": "other",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II Model 1 (baseline / control variables only)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction in the Heckman first-stage probit)",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters StreetEvents"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (natural logarithm of total revenues)",
+      "source": "Compustat"
+     },
+     {
+      "name": "firm performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash holding ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "debt ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "financial constraint (KZ-index)",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquisition experience",
+      "source": "Securities Data Company (SDC) M&A database"
+     },
+     {
+      "name": "firm diversification (entropy measure)",
+      "source": "Compustat"
+     },
+     {
+      "name": "analyst sentiment",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "analyst recommendation",
+      "source": "IBES (I/B/E/S)"
+     },
+     {
+      "name": "media sentiment",
+      "source": "RavenPack Dow Jones"
+     },
+     {
+      "name": "impression offsetting (count of positive press releases in 3-day window)",
+      "source": ""
+     },
+     {
+      "name": "related deal",
+      "source": "Securities Data Company (SDC) M&A database"
+     },
+     {
+      "name": "relative size",
+      "source": "Securities Data Company (SDC) M&A database"
+     },
+     {
+      "name": "tender offer",
+      "source": "Securities Data Company (SDC) M&A database"
+     },
+     {
+      "name": "target public",
+      "source": "Securities Data Company (SDC) M&A database"
+     },
+     {
+      "name": "percentage of stock payment",
+      "source": "Securities Data Company (SDC) M&A database"
+     },
+     {
+      "name": "toehold",
+      "source": "Securities Data Company (SDC) M&A database"
+     },
+     {
+      "name": "total portfolio size change",
+      "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+     },
+     {
+      "name": "portfolio performance changes",
+      "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+     },
+     {
+      "name": "prior CEO positive portrayal",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "CEO language concreteness",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "CEO gender",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO age",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "board independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO status",
+      "source": ""
+     },
+     {
+      "name": "CEO overconfidence",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO contingent compensation",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "CEO equity ownership",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "industry, investor, and quarterly fixed-effect dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II Model 2 (CEO duality moderation)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction in the Heckman first-stage probit)",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal",
+      "measure": "amount of CEO positive sentiment (JF coefficient of imbalance from Loughran-McDonald dictionaries)",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "CEO duality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "CEO positive portrayal x CEO duality",
+      "measure": "interaction of CEO positive portrayal and CEO duality",
+      "source": "Thomson Reuters StreetEvents; BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full firm-, deal-, CEO-, and portfolio-level control set (as in Model 1)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II Model 3 (acquisition foreshadowing moderation)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction in the Heckman first-stage probit)",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal",
+      "measure": "amount of CEO positive sentiment (JF coefficient of imbalance from Loughran-McDonald dictionaries)",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "acquisition foreshadowing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "seasoned equity offerings prospectus"
+     },
+     {
+      "name": "CEO positive portrayal x acquisition foreshadowing",
+      "measure": "interaction of CEO positive portrayal and acquisition foreshadowing",
+      "source": "Thomson Reuters StreetEvents; seasoned equity offerings prospectus"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full firm-, deal-, CEO-, and portfolio-level control set (as in Model 1)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II Model 4 (transient investor moderation)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction in the Heckman first-stage probit)",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal",
+      "measure": "amount of CEO positive sentiment (JF coefficient of imbalance from Loughran-McDonald dictionaries)",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "transient investor",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+     },
+     {
+      "name": "CEO positive portrayal x transient investor",
+      "measure": "interaction of CEO positive portrayal and transient investor",
+      "source": "Thomson Reuters StreetEvents; Thomson Reuters 13F"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full firm-, deal-, CEO-, and portfolio-level control set (as in Model 1)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II Model 6 (fully saturated model, all three interactions)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction in the Heckman first-stage probit)",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal x CEO duality",
+      "measure": "interaction of CEO positive portrayal and CEO duality",
+      "source": "Thomson Reuters StreetEvents; BoardEx"
+     },
+     {
+      "name": "CEO positive portrayal x acquisition foreshadowing",
+      "measure": "interaction of CEO positive portrayal and acquisition foreshadowing",
+      "source": "Thomson Reuters StreetEvents; seasoned equity offerings prospectus"
+     },
+     {
+      "name": "CEO positive portrayal x transient investor",
+      "measure": "interaction of CEO positive portrayal and transient investor",
+      "source": "Thomson Reuters StreetEvents; Thomson Reuters 13F"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full firm-, deal-, CEO-, and portfolio-level control set (as in Model 1)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction)",
+    "sample": "deal-level selection sample (6496 completed majority US acquisitions >$100M; 4963 with complete controls)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters StreetEvents; Securities Data Company (SDC) M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "number of a CEO's public speeches",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters StreetEvents"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all control variables used in testing the hypotheses (full second-stage control set)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III (robustness: model retaining the negative sentiment dimension of the JF coefficient)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction)",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO portrayal",
+      "measure": "JF coefficient of CEO sentiment keeping negative values (not replaced with 0), i.e. including the negative sentiment dimension",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "CEO portrayal x CEO duality",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; BoardEx"
+     },
+     {
+      "name": "CEO portrayal x acquisition foreshadowing",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; seasoned equity offerings prospectus"
+     },
+     {
+      "name": "CEO portrayal x transient investor",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; Thomson Reuters 13F"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (as in main models)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV (robustness: percentage-based measurement of CEO positive portrayal)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction)",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal (percentage-based)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "CEO positive portrayal x CEO duality",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; BoardEx"
+     },
+     {
+      "name": "CEO positive portrayal x acquisition foreshadowing",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; seasoned equity offerings prospectus"
+     },
+     {
+      "name": "CEO positive portrayal x transient investor",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; Thomson Reuters 13F"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (as in main models) plus percentage of CEO negative words",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table V (robustness: abnormal portfolio weight change as dependent variable)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "number of a CEO's public speeches (exclusion restriction)",
+    "sample": "",
+    "dv": {
+     "name": "abnormal portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal",
+      "measure": "JF coefficient of CEO positive sentiment (Loughran-McDonald dictionaries)",
+      "source": "Thomson Reuters StreetEvents"
+     },
+     {
+      "name": "CEO positive portrayal x CEO duality",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; BoardEx"
+     },
+     {
+      "name": "CEO positive portrayal x acquisition foreshadowing",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; seasoned equity offerings prospectus"
+     },
+     {
+      "name": "CEO positive portrayal x transient investor",
+      "measure": "interaction term",
+      "source": "Thomson Reuters StreetEvents; Thomson Reuters 13F"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (as in main models)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Impact threshold of a confounding variable (ITCV) analysis (omitted-variable-bias / endogeneity robustness)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "portfolio weight change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters 13F (Thomson-Reuters Institutional Holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO positive portrayal",
+      "measure": "JF coefficient of CEO positive sentiment (Loughran-McDonald dictionaries)",
+      "source": "Thomson Reuters StreetEvents"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (as in main models)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "alternative tactics",
+    "factors most salient to stakeholder expectations",
+    "contingency view",
+    "im"
+   ],
+   "mechanism_named": "stakeholder expectations",
+   "proposed_edge": {
+    "from": "alternative tactics",
+    "relation": "affects",
+    "to": "factors most salient to stakeholder expectations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "contingency view"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "language utilized by actors with certain characteristics",
+    "efficacy of other im tactics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "language utilized by actors with certain characteristics",
+    "relation": "affects",
+    "to": "efficacy of other IM tactics"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "im tactics",
+    "communicator, context, and audience characteristics",
+    "audience perceptions",
+    "stakeholders’ expectations"
+   ],
+   "mechanism_named": "expectancy violation theory",
+   "proposed_edge": {
+    "from": "im tactics",
+    "relation": "affects",
+    "to": "stakeholders’ expectations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "multiple tactics"
+   ],
+   "mechanism_named": "expectancy violation theory",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "foreshadowing",
+    "ceos’ positive portrayal of m&as",
+    "reaction of investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "im tactics utilized by peers",
+    "[withheld: wording matches the source]",
+    "network effects of peer organizations"
+   ],
+   "mechanism_named": "network effects of peer organizations",
+   "proposed_edge": {
+    "from": "im tactics utilized by peers",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "audience-specific characteristics",
+    "efficacy of im tactics",
+    "contingency view of im",
+    "stakeholder groups"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "aggregate market reactions",
+    "investor perception",
+    "divergent investor interests"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "investors’ portfolio weight change",
+    "stakeholder responses to other strategic actions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "other actions taken by firms",
+    "relation": "affects",
+    "to": "investors’ portfolio weight change"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "investor responses to im tactics",
+    "m&a announcements",
+    "im efficacy",
+    "other organizational events"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

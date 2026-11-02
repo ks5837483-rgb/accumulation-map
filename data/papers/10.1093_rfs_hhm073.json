@@ -1,0 +1,612 @@
+{
+ "paper_id": "10.1093_rfs_hhm073",
+ "title": "Market Valuation and Acquisition Quality: Empirical Evidence",
+ "journal": "RFS",
+ "year": 2007,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market misvaluation theory",
+  "signaling theory",
+  "herding theory",
+  "information cascades"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_valuation",
+      "relation": "decreases",
+      "to": "target_filtering_of_market_wide_misvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_filtering_of_market_wide_misvaluation",
+      "relation": "increases",
+      "to": "acquirer_long_run_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_filtering_of_market_wide_misvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "market valuation simply proxying for firm (acquirer) valuation"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_valuation",
+      "relation": "increases",
+      "to": "market_perceived_deal_attractiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_perceived_deal_attractiveness",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_perceived_deal_attractiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_valuation",
+      "relation": "increases",
+      "to": "bid_premium",
+      "from_measured": true,
+      "to_measured": true,
+      "derived": true
+     },
+     {
+      "from": "bid_premium",
+      "relation": "decreases",
+      "to": "acquirer_long_run_performance",
+      "from_measured": true,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_premium"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "hidden premium from targets being overvalued in high-valuation markets"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financed_acquisition",
+      "relation": "increases",
+      "to": "signal_of_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_overvaluation",
+      "relation": "decreases",
+      "to": "acquirer_long_run_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_of_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market timing (exploiting overvalued stock) rather than deal quality"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "late_mover_in_merger_wave",
+      "relation": "decreases",
+      "to": "use_of_own_private_signals",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "use_of_own_private_signals",
+      "relation": "increases",
+      "to": "acquirer_long_run_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "use_of_own_private_signals"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "industry effect (early and late movers in different industries)",
+    "overpayment by late acquirers due to targets in short supply",
+    "differences in acquirer or target characteristics (leftover targets)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded firms; industry effects controlled via the 17 Fama-French industry groupings)",
+  "country_region": "United States (acquirers are U.S. firms listed on NYSE, NASDAQ, or AMEX)",
+  "time_period": "1979-2002 (1 January 1979 to 31 December 2002)",
+  "sample_description": "Completed tender offers and mergers from the SDC US Mergers and Acquisitions Database; target not a subsidiary; transaction value ≥ $50 million; acquirer obtains at least 50% of target shares; acquirer prior-month closing price ≥ $3; payment in cash, stock, or a mix",
+  "sample_size": "2944 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "equally weighted CRSP index (daily and monthly acquirer return data)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (EBITDA = Compustat #13; average total assets = Compustat #6)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "P/E data on Bob Shiller's Web site (www.irrationalexuberance.com)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Three-day CARs (univariate announcement effect study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "three-day cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "market valuation state",
+      "measure": "[withheld: wording matches the source]",
+      "source": "P/E data on Bob Shiller's Web site"
+     },
+     {
+      "name": "method of payment",
+      "measure": "cash, stock, or mixed-payment acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "mode of acquisition",
+      "measure": "tender offer vs merger",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3: Two-year BHARs (univariate long-run stock performance study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "two-year buy-and-hold abnormal return",
+     "measure": "two-year BHAR relative to a size and book-to-market matched reference portfolio (methodology of Lyon, Barber, and Tsai 1999); inference based on skewness-adjusted t-statistics",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "market valuation state",
+      "measure": "[withheld: wording matches the source]",
+      "source": "P/E data on Bob Shiller's Web site"
+     },
+     {
+      "name": "method of payment",
+      "measure": "cash, stock, or mixed-payment acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "mode of acquisition",
+      "measure": "tender offer vs merger",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pooled high-market and low-market event portfolios (339 portfolio-months)",
+    "dv": {
+     "name": "monthly calendar-time event-portfolio abnormal return",
+     "measure": "monthly event-portfolio return regressed on the four-factor model; the intercept is the monthly abnormal return (0.66% full sample), with a dummy D capturing the high- vs low-market intercept difference in the pooled regression",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "high-market vs low-market dummy (D)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "P/E data on Bob Shiller's Web site"
+     }
+    ],
+    "controls": [
+     {
+      "name": "market factor (Rmt - Rft)",
+      "source": ""
+     },
+     {
+      "name": "SMB",
+      "source": ""
+     },
+     {
+      "name": "HML",
+      "source": ""
+     },
+     {
+      "name": "PR1YR (momentum)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Two-year AROOI (univariate long-run operating performance study)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "2596 acquisitions with available operating (Compustat) data and a matched control firm",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "market valuation state",
+      "measure": "[withheld: wording matches the source]",
+      "source": "P/E data on Bob Shiller's Web site"
+     },
+     {
+      "name": "method of payment",
+      "measure": "cash, stock, or mixed-payment acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "mode of acquisition",
+      "measure": "tender offer vs merger",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel A: Multivariate regression, dependent variable = three-day CAR",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "three-day CAR",
+     "measure": "three-day cumulative abnormal return (equally weighted index)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "HighValMktDummy",
+      "measure": "=1 if the acquisition was announced in a high-valuation market, 0 otherwise",
+      "source": "P/E data on Bob Shiller's Web site"
+     },
+     {
+      "name": "NeutralValMktDummy",
+      "measure": "=1 if the acquisition was announced in a neutral-valuation market, 0 otherwise",
+      "source": "P/E data on Bob Shiller's Web site"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CashDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "MixedPaymentDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "TenderDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "LogRelSize (log relative deal size)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "HighMBDummy",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "MediumMBDummy",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "PoolingDummy (pooling accounting)",
+      "source": "SDC"
+     },
+     {
+      "name": "PreAnnReturn",
+      "source": "CRSP"
+     },
+     {
+      "name": "YearDummy",
+      "source": ""
+     },
+     {
+      "name": "IndustryDummy",
+      "source": ""
+     },
+     {
+      "name": "LogRelSize x PaymentMethod / Tender / StateOfMarket / Pooling interactions",
+      "source": ""
+     },
+     {
+      "name": "StateOfMarket x PaymentMethod / Tender interactions",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B: Multivariate regression, dependent variable = two-year BHAR",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "two-year BHAR",
+     "measure": "two-year buy-and-hold abnormal return (size and book-to-market matched reference portfolio)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "HighValMktDummy",
+      "measure": "=1 if the acquisition was announced in a high-valuation market, 0 otherwise",
+      "source": "P/E data on Bob Shiller's Web site"
+     },
+     {
+      "name": "NeutralValMktDummy",
+      "measure": "=1 if the acquisition was announced in a neutral-valuation market, 0 otherwise",
+      "source": "P/E data on Bob Shiller's Web site"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CashDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "MixedPaymentDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "TenderDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "LogRelSize",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "HighMBDummy",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "MediumMBDummy",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "PoolingDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "PreAnnReturn",
+      "source": "CRSP"
+     },
+     {
+      "name": "YearDummy",
+      "source": ""
+     },
+     {
+      "name": "IndustryDummy",
+      "source": ""
+     },
+     {
+      "name": "LogRelSize and StateOfMarket interaction terms",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel C: Multivariate regression, dependent variable = two-year AROOI",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "AROOI regressions exclude PreAnnRet and industry dummies (industry accounted for via industry matching)",
+    "dv": {
+     "name": "two-year AROOI",
+     "measure": "two-year abnormal return on operating income = EBITDA (Compustat #13) / average total assets (Compustat #6), acquirer minus industry-size-performance matched control firm",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "HighValMktDummy",
+      "measure": "=1 if the acquisition was announced in a high-valuation market, 0 otherwise",
+      "source": "P/E data on Bob Shiller's Web site"
+     },
+     {
+      "name": "NeutralValMktDummy",
+      "measure": "=1 if the acquisition was announced in a neutral-valuation market, 0 otherwise",
+      "source": "P/E data on Bob Shiller's Web site"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CashDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "MixedPaymentDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "TenderDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "LogRelSize",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "HighMBDummy",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "MediumMBDummy",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "PoolingDummy",
+      "source": "SDC"
+     },
+     {
+      "name": "YearDummy",
+      "source": ""
+     },
+     {
+      "name": "LogRelSize and StateOfMarket interaction terms",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 4.2: Market-timing analysis (market timers vs nontimers)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "high-valuation-market acquisitions split into market timers and nontimers",
+    "dv": {
+     "name": "two-year BHAR / AROOI / calendar-time returns of market timers vs nontimers",
+     "measure": "two-year BHAR, two-year abnormal operating performance (AROOI), and calendar-time returns compared between market timers and nontimers within high-valuation markets",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "market timer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "high-valuation markets",
+    "acquirer performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "high-valuation markets",
+    "relation": "decreases",
+    "to": "acquirer performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "market timing",
+    "underperformance of high-market acquisitions"
+   ],
+   "mechanism_named": "market timing",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "herding behavior"
+   ],
+   "mechanism_named": "herding behavior",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

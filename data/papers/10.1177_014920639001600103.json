@@ -1,0 +1,315 @@
+{
+ "paper_id": "10.1177_014920639001600103",
+ "title": "Relationships Between Type of Acquisition, The Autonomy Given to the Acquired Firm, and Acquisition Success: An Empirical Analysis",
+ "journal": "JOM",
+ "year": 1990,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "acquisition relatedness and synergy perspective",
+  "organizational autonomy and decentralization theory",
+  "post-acquisition integration"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unrelated_acquisition",
+      "relation": "decreases",
+      "to": "integration_opportunities",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "integration_opportunities",
+      "relation": "decreases",
+      "to": "autonomy_given",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "unrelated_acquisition",
+      "relation": "decreases",
+      "to": "acquirer_familiarity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_familiarity",
+      "relation": "decreases",
+      "to": "autonomy_given",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "integration_opportunities",
+    "acquirer_familiarity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "autonomy_given",
+      "relation": "increases",
+      "to": "acquiree_managerial_initiative",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquiree_managerial_initiative",
+      "relation": "increases",
+      "to": "post_acquisition_success",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "autonomy_given",
+      "relation": "increases",
+      "to": "managerial_morale_and_motivation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_morale_and_motivation",
+      "relation": "increases",
+      "to": "post_acquisition_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquiree_managerial_initiative",
+    "managerial_morale_and_motivation"
+   ],
+   "moderators": [
+    {
+     "construct": "unrelated_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "integration_opportunities",
+     "moderated_from": "autonomy_given",
+     "moderated_to": "post_acquisition_success",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2/H3 (split-groups test)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "autonomy_given",
+      "relation": "decreases",
+      "to": "synergy_realization",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_realization",
+      "relation": "increases",
+      "to": "post_acquisition_success",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_realization"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "U.S. manufacturing and mining sectors",
+  "country_region": "United States",
+  "time_period": "January 1980-March 1984",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "129 acquisitions (70 related, 59 unrelated), from 191 total questionnaire responses"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "mail questionnaire to senior executives in the acquiring firm (perceptual data on autonomy, acquisition success, and relatedness)",
+    "category": "survey",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moodys' Industrial Manuals",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 (Summary Statistics) - t-test of autonomy across related vs. unrelated acquisitions (H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "70 related and 59 unrelated acquisitions (n=129)",
+    "dv": {
+     "name": "Autonomy given to the acquired firm management",
+     "measure": "[withheld: wording matches the source]",
+     "source": "mail questionnaire to senior executives in the acquiring firm"
+    },
+    "key_ivs": [
+     {
+      "name": "Type of acquisition (related vs. unrelated)",
+      "measure": "classified into related vs. unrelated based on manufacturing/R&D and marketing relatedness scales (Likert 5-point, 1 = very low to 5 = very high relatedness); related = both manufacturing and marketing relatedness scores in excess of 3.0, unrelated = both values less than 3.0",
+      "source": "mail questionnaire to senior executives in the acquiring firm"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - bivariate regression SUCCESS = a + B(AUTON) + e, Unrelated Acquisitions subgroup (H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "unrelated acquisitions subgroup (59 cases)",
+    "dv": {
+     "name": "Acquisition success",
+     "measure": "weighted-average composite 'acquisition success' index from respondents' assessments of acquisition impact along five performance criteria (ROI, EPS, stock price, cash flow, sales growth) on a 5-point Likert scale (1 = very unsuccessful, 5 = very successful), weighted by respondent-assigned importance scores",
+     "source": "mail questionnaire to senior executives in the acquiring firm"
+    },
+    "key_ivs": [
+     {
+      "name": "Autonomy given to the acquired firm management (AUTON)",
+      "measure": "composite measure of total autonomy (adapted Vancil 1979 17-item scale, 5-point Likert)",
+      "source": "mail questionnaire to senior executives in the acquiring firm"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - bivariate regression SUCCESS = a + B(AUTON) + e, Related Acquisitions subgroup (H3)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "related acquisitions subgroup (76 cases per Table 5)",
+    "dv": {
+     "name": "Acquisition success",
+     "measure": "weighted-average composite 'acquisition success' index from respondents' assessments along five performance criteria (ROI, EPS, stock price, cash flow, sales growth) on a 5-point Likert scale (1 = very unsuccessful, 5 = very successful), weighted by importance scores",
+     "source": "mail questionnaire to senior executives in the acquiring firm"
+    },
+    "key_ivs": [
+     {
+      "name": "Autonomy given to the acquired firm management (AUTON)",
+      "measure": "composite measure of total autonomy (adapted Vancil 1979 17-item scale, 5-point Likert)",
+      "source": "mail questionnaire to senior executives in the acquiring firm"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Split-groups slope-comparison t-test (Arnold 1982) comparing autonomy->success beta weights across related vs. unrelated acquisitions",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "pooled related and unrelated acquisition subgroups",
+    "dv": {
+     "name": "Acquisition success (difference in autonomy->success regression slopes across acquisition types)",
+     "measure": "t-test on the difference between raw-score beta weights (slopes of acquisition success on autonomy) estimated separately for related and unrelated acquisitions, t = (B1 - B2)/(SE^2_B1 + SE^2_B2)^(1/2), df = n1 + n2 - 4",
+     "source": "mail questionnaire to senior executives in the acquiring firm"
+    },
+    "key_ivs": [
+     {
+      "name": "Autonomy x Type of acquisition (moderation of the autonomy-success slope by related vs. unrelated)",
+      "measure": "comparison of regression slopes across the two acquisition-type subgroups via the Arnold (1982) split-groups technique",
+      "source": "mail questionnaire to senior executives in the acquiring firm"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 - non-response bias t-test comparing respondents vs. non-respondents on firm sales",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "respondent and non-respondent acquiring and acquired firms",
+    "dv": {
+     "name": "Firm sales revenue ($ million) of acquiring and acquired firms",
+     "measure": "annual sales revenue ($ million), compared via t-tests between respondent and non-respondent subsamples",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Respondent vs. non-respondent status",
+      "measure": "dichotomous indicator of whether the firm's executive responded to the questionnaire",
+      "source": "mail questionnaire to senior executives in the acquiring firm"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - early vs. late respondent t-test on autonomy and acquisition performance (Oppenheim 1966)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "early (related n=44, unrelated n=36) and late (related n=26, unrelated n=23) respondents",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "5-point Likert-type scale measures of autonomy and acquisition performance, compared via t-tests between early and late respondents",
+     "source": "mail questionnaire to senior executives in the acquiring firm"
+    },
+    "key_ivs": [
+     {
+      "name": "Early vs. late respondent status",
+      "measure": "early vs. late respondents, late defined as responses received after the second mailing",
+      "source": "mail questionnaire to senior executives in the acquiring firm"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

@@ -1,0 +1,559 @@
+{
+ "paper_id": "10.1017_s0022109018000959",
+ "title": "Investor Inattention and Stock Prices: Evidence from Acquisitions with a Choice of Payment Type",
+ "journal": "JFQA",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "limited attention",
+  "investor inattention",
+  "ambiguity aversion"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "value_wedge",
+      "relation": "increases",
+      "to": "relative_value_of_stock_payment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relative_value_of_stock_payment",
+      "relation": "increases",
+      "to": "fraction_of_shares_submitted_for_stock",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relative_value_of_stock_payment"
+   ],
+   "moderators": [
+    {
+     "construct": "payment_term_complexity",
+     "type": "moderator",
+     "effect": "weakens",
+     "effect_derived": true,
+     "mechanism": "ability to value the stock payment",
+     "moderated_from": "value_wedge",
+     "moderated_to": "fraction_of_shares_submitted_for_stock",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "value_wedge",
+      "relation": "increases",
+      "to": "relative_value_of_stock_payment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relative_value_of_stock_payment",
+      "relation": "decreases",
+      "to": "fraction_of_shares_submitted_for_cash",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relative_value_of_stock_payment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "absolute_value_wedge",
+      "relation": "decreases",
+      "to": "shareholder_indifference",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_indifference",
+      "relation": "increases",
+      "to": "fraction_of_non_elections",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shareholder_indifference"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "toeholds held by the acquiring firms"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "payment_term_complexity",
+      "relation": "decreases",
+      "to": "investor_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_attention",
+      "relation": "decreases",
+      "to": "fraction_of_non_elections",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_attention"
+   ],
+   "moderators": [
+    {
+     "construct": "market_capitalization_of_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "investor_attention",
+     "moderated_from": "payment_term_complexity",
+     "moderated_to": "fraction_of_non_elections",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "payment_term_complexity",
+      "relation": "increases",
+      "to": "ambiguity_aversion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ambiguity_aversion",
+      "relation": "decreases",
+      "to": "fraction_of_shares_submitted_for_stock",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ambiguity_aversion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "value_wedge",
+      "relation": "increases",
+      "to": "anticipated_wealth_transfer_to_attentive_shareholders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipated_wealth_transfer_to_attentive_shareholders",
+      "relation": "increases",
+      "to": "election_day_price_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipated_wealth_transfer_to_attentive_shareholders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "value_wedge",
+      "relation": "increases",
+      "to": "adverse_value_of_residual_shares",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_value_of_residual_shares",
+      "relation": "decreases",
+      "to": "post_election_price_ratio",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_value_of_residual_shares"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquisitions of publicly traded firms with a choice of cash/stock payment)",
+  "country_region": "United States",
+  "time_period": "1985-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "131 final observations (62 with complete election results; 120 with data to estimate values around election dates)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "13-F filings with the SEC",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "various news sources",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 Panel A - election results by VALUE_WEDGE range (descriptive)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "62 acquisitions with complete election results",
+    "dv": {
+     "name": "FR_STOCK_ELECTION / FR_CASH_ELECTION / FR_NON_ELECTION",
+     "measure": "[withheld: wording matches the source]",
+     "source": "company filings with the SEC (election results)"
+    },
+    "key_ivs": [
+     {
+      "name": "VALUE_WEDGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 Panel B - inattention estimate at extreme value wedge (descriptive)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "18 cases with value wedge below -0.15 (7 cases) or above +0.05 (11 cases)",
+    "dv": {
+     "name": "fraction of shares submitted for the inferior payment type",
+     "measure": "[withheld: wording matches the source]",
+     "source": "company filings with the SEC (election results)"
+    },
+    "key_ivs": [
+     {
+      "name": "VALUE_WEDGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 Panel C - regression of fraction of stock elections",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "62 acquisitions with complete election results",
+    "dv": {
+     "name": "FR_STOCK_ELECTION",
+     "measure": "the fraction of shares submitted for stock",
+     "source": "company filings with the SEC (election results)"
+    },
+    "key_ivs": [
+     {
+      "name": "VALUE_WEDGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     },
+     {
+      "name": "SIMPLE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-coded from payment terms (SDC / SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LN_MKT_CAP_TARGET",
+      "source": "market capitalization data"
+     },
+     {
+      "name": "INST_HOLDINGS",
+      "source": "13-F filings with the SEC"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel D - regression of fraction of cash elections",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "62 acquisitions with complete election results",
+    "dv": {
+     "name": "FR_CASH_ELECTION",
+     "measure": "the fraction of shares submitted for cash",
+     "source": "company filings with the SEC (election results)"
+    },
+    "key_ivs": [
+     {
+      "name": "VALUE_WEDGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     },
+     {
+      "name": "SIMPLE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-coded from payment terms (SDC / SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LN_MKT_CAP_TARGET",
+      "source": "market capitalization data"
+     },
+     {
+      "name": "INST_HOLDINGS",
+      "source": "13-F filings with the SEC"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Panel E - regression of fraction of non-elections",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "62 acquisitions with complete election results",
+    "dv": {
+     "name": "FR_NON_ELECTION",
+     "measure": "[withheld: wording matches the source]",
+     "source": "company filings with the SEC (election results)"
+    },
+    "key_ivs": [
+     {
+      "name": "ABS_VALUE_WEDGE",
+      "measure": "the absolute value of VALUE_WEDGE (absolute value wedge)",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     },
+     {
+      "name": "SIMPLE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-coded from payment terms (SDC / SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LN_MKT_CAP_TARGET",
+      "source": "market capitalization data"
+     },
+     {
+      "name": "INST_HOLDINGS",
+      "source": "13-F filings with the SEC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Panel A/B - fraction of PRICE_RATIO above one by value wedge (descriptive)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "PRICE_RATIO above one",
+     "measure": "fraction of cases in which the election-day PRICE_RATIO (weighted deal value per share relative to reference) exceeds one, tabulated by VALUE_WEDGE and ABS_VALUE_WEDGE ranges",
+     "source": "acquirer and target stock prices around election dates"
+    },
+    "key_ivs": [
+     {
+      "name": "VALUE_WEDGE / ABS_VALUE_WEDGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel C/D - regression of election-day price premium",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "120 observations (Panel D excludes six observations with an election-day price ratio of 95% or less)",
+    "dv": {
+     "name": "PREMIUM",
+     "measure": "[withheld: wording matches the source]",
+     "source": "acquirer and target stock prices around election dates"
+    },
+    "key_ivs": [
+     {
+      "name": "ABS_VALUE_WEDGE",
+      "measure": "the absolute value of VALUE_WEDGE (absolute value wedge)",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel C/D - regression of post-election-day price discount",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "120 observations (Panel D excludes six observations with an election-day price ratio of 95% or less)",
+    "dv": {
+     "name": "DISCOUNT_AFTER",
+     "measure": "[withheld: wording matches the source]",
+     "source": "acquirer and target stock prices around election dates"
+    },
+    "key_ivs": [
+     {
+      "name": "ABS_VALUE_WEDGE",
+      "measure": "the absolute value of VALUE_WEDGE (absolute value wedge)",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel C/D - regression of change in price ratio",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "120 observations (Panel D excludes six observations with an election-day price ratio of 95% or less)",
+    "dv": {
+     "name": "PRICE_RATIO_CHANGE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "acquirer and target stock prices around election dates"
+    },
+    "key_ivs": [
+     {
+      "name": "ABS_VALUE_WEDGE",
+      "measure": "the absolute value of VALUE_WEDGE (absolute value wedge)",
+      "source": "author estimation from acquirer stock prices and payment terms"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "partially inattentive shareholders",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "inattention",
+    "cost of inattention"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "inattentive shareholders",
+    "attentive shareholders",
+    "stock price",
+    "price effect"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "substantial ownership of inattentive shareholders",
+    "relation": "increases",
+    "to": "stock price"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,938 @@
+{
+ "paper_id": "10.1287_mnsc.2024.04492",
+ "title": "SPAC IPOs and Sponsor Network Centrality",
+ "journal": "MNSC",
+ "year": 2025,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory",
+  "social network theory",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pe_network_centrality",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "postmerger_long_term_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "sponsor_shareholding_in_combined_company",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_incentives",
+     "moderated_from": "pe_network_centrality",
+     "moderated_to": "postmerger_long_term_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P6"
+    },
+    {
+     "construct": "sponsor_private_placement_at_ipo",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_incentives",
+     "moderated_from": "pe_network_centrality",
+     "moderated_to": "postmerger_long_term_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P7"
+    },
+    {
+     "construct": "cold_market_period",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "investor_sentiment",
+     "moderated_from": "pe_network_centrality",
+     "moderated_to": "postmerger_long_term_performance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P8"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sponsors' PE/VC work experience, rather than their network position, drives the predictability"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pe_network_centrality",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "ma_success_probability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pe_network_centrality",
+      "relation": "increases",
+      "to": "access_to_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_capital",
+      "relation": "increases",
+      "to": "ipo_proceeds",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "pe_network_centrality",
+      "relation": "increases",
+      "to": "access_to_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_capital",
+      "relation": "increases",
+      "to": "pipe_investment",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sponsors' PE/VC work experience, rather than network centrality, explains fundraising"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pe_network_centrality",
+      "relation": "increases",
+      "to": "deal_sourcing_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_sourcing_ability",
+      "relation": "decreases",
+      "to": "target_search_time",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_sourcing_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "high-centrality sponsors mechanically raise the completion rate by lowering the redemption-threshold bar for approval"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pe_network_centrality",
+      "relation": "increases",
+      "to": "target_picking_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_picking_ability",
+      "relation": "increases",
+      "to": "target_profitability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_picking_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "the SPAC (special purpose acquisition company) market",
+  "country_region": "United States",
+  "time_period": "2003-2022 (SPAC IPOs from 2003 to June 30, 2022)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,306 SPACs"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "VentureXpert",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR (Form 424B, Form S-4, DEFM14A, Form 8-K)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bloomberg",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Gritstone Asset Management's OmniView",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SPAC Research",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SPAC Track database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Web search",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A: Cross-sectional regression of PE network centrality on post-M&A long-term performance",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "356 SPACs with completed business combinations and 24-month post-merger returns",
+    "dv": {
+     "name": "FF_alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Bloomberg / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Degree",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Closeness",
+      "measure": "closeness network centrality of sponsors in the PE/VC network",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Eigenvector",
+      "measure": "eigenvector network centrality of sponsors in the PE/VC network",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Betweenness",
+      "measure": "betweenness network centrality of sponsors in the PE/VC network",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Alpha (high-minus-low portfolio monthly return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Bloomberg / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate quartile grouping (high Q4 vs low Q1)",
+      "measure": "firms categorized into quartiles by PE Net_Aggregate; low = lowest centrality (Q1), high = highest centrality (Q4)",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Mkt_rf",
+      "source": ""
+     },
+     {
+      "name": "SMB",
+      "source": ""
+     },
+     {
+      "name": "HML",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "949 SPACs (197 successful, 752 unsuccessful)",
+    "dv": {
+     "name": "M&A Success",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum / Bloomberg"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Degree",
+      "measure": "degree network centrality one year before the SPAC IPO",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Closeness",
+      "measure": "closeness network centrality one year before the SPAC IPO",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Eigenvector",
+      "measure": "eigenvector network centrality one year before the SPAC IPO",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Betweenness",
+      "measure": "betweenness network centrality one year before the SPAC IPO",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, columns (1)-(5): Cross-sectional regression of PE network centrality on IPO proceeds",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,306 SPAC issuances",
+    "dv": {
+     "name": "IPO size",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Degree",
+      "measure": "degree network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Closeness",
+      "measure": "closeness network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Eigenvector",
+      "measure": "eigenvector network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Betweenness",
+      "measure": "betweenness network centrality",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, columns (6)-(10): Cross-sectional regression of PE network centrality on PIPE investment",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "580 SPACs that consummated business combinations",
+    "dv": {
+     "name": "PIPE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR (Form S-4/DEFM14A, hand collected)"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Degree",
+      "measure": "degree network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Closeness",
+      "measure": "closeness network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Eigenvector",
+      "measure": "eigenvector network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Betweenness",
+      "measure": "betweenness network centrality",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "580 SPACs that consummated business combinations",
+    "dv": {
+     "name": "M&A Completion (hazard event)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Degree",
+      "measure": "degree network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Closeness",
+      "measure": "closeness network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Eigenvector",
+      "measure": "eigenvector network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Betweenness",
+      "measure": "betweenness network centrality",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, column (1): PE network centrality and target firm revenue",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "378 SPAC targets with pre-merger revenue",
+    "dv": {
+     "name": "Revenue_bf",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR (Form S-4/DEFM14A) / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, column (2): PE network centrality and target firm ROA",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "400 SPAC targets with pre-merger ROA",
+    "dv": {
+     "name": "ROA_bf",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR (Form S-4/DEFM14A) / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, column (1): Interaction of PE network centrality and sponsors' stake (Share_pct) on post-M&A performance",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "356 SPACs with completed business combinations",
+    "dv": {
+     "name": "FF_alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Bloomberg / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate x Share_pct",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert / SEC EDGAR"
+     },
+     {
+      "name": "Share_pct",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR"
+     },
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, column (2): Interaction of PE network centrality and sponsors' private placement on post-M&A performance",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "356 SPACs with completed business combinations",
+    "dv": {
+     "name": "FF_alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Bloomberg / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate x Private Placement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert / SEC EDGAR (424B)"
+     },
+     {
+      "name": "Private Placement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR (Form 424B)"
+     },
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "179 SPAC deals completed during market booms (2020-2021)",
+    "dv": {
+     "name": "FF_alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Bloomberg / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Degree",
+      "measure": "degree network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Closeness",
+      "measure": "closeness network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Eigenvector",
+      "measure": "eigenvector network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Betweenness",
+      "measure": "betweenness network centrality",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9, Panel B: PE network centrality on post-M&A long-term performance during cold periods (2003-2019)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "177 SPAC deals completed during cold periods (2003-2019)",
+    "dv": {
+     "name": "FF_alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Bloomberg / CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PE Net_Aggregate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Degree",
+      "measure": "degree network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Closeness",
+      "measure": "closeness network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Eigenvector",
+      "measure": "eigenvector network centrality",
+      "source": "BoardEx / VentureXpert"
+     },
+     {
+      "name": "PE Betweenness",
+      "measure": "betweenness network centrality",
+      "source": "BoardEx / VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Team Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Team Age",
+      "source": "BoardEx"
+     },
+     {
+      "name": "LnSize",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Lead Bank Rank",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "IPO year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

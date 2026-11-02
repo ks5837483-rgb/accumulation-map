@@ -1,0 +1,798 @@
+{
+ "paper_id": "10.1016_j.jfineco.2018.09.003",
+ "title": "The value of access to finance: Evidence from M&amp;As",
+ "journal": "JFE",
+ "year": 2019,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "financial synergy theory",
+  "financing frictions / financial constraints",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "attractive target hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_access_to_bank_finance",
+      "relation": "increases",
+      "to": "expected_financing_efficiency_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_financing_efficiency_gains",
+      "relation": "increases",
+      "to": "cross_state_acquisition_flows",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_financing_efficiency_gains"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_intangible_assets",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "expected_financing_efficiency_gains",
+     "moderated_from": "target_access_to_bank_finance",
+     "moderated_to": "cross_state_acquisition_flows",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional split (intangible assets)"
+    },
+    {
+     "construct": "acquirer_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "expected_financing_efficiency_gains",
+     "moderated_from": "target_access_to_bank_finance",
+     "moderated_to": "cross_state_acquisition_flows",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional split (small vs. big)"
+    },
+    {
+     "construct": "acquirer_growth_opportunities",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "unobserved_growth_opportunities",
+     "moderated_from": "target_access_to_bank_finance",
+     "moderated_to": "cross_state_acquisition_flows",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional split (high vs. low growth)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "unobserved growth opportunities in deregulated target states that coincide with banking deregulation",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "aggressive acquirer hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_access_to_bank_finance",
+      "relation": "increases",
+      "to": "capacity_to_fund_targets_underfunded_growth",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capacity_to_fund_targets_underfunded_growth",
+      "relation": "decreases",
+      "to": "cross_state_acquisition_flows",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "capacity_to_fund_targets_underfunded_growth"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "pushing effect",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_state_access_to_bank_finance",
+      "relation": "decreases",
+      "to": "incentive_to_escape_poor_banking_conditions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_escape_poor_banking_conditions",
+      "relation": "increases",
+      "to": "cross_state_acquisition_flows",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_escape_poor_banking_conditions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "synergy: leverage",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_access_to_bank_finance",
+      "relation": "increases",
+      "to": "merged_firm_borrowing_capacity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "merged_firm_borrowing_capacity",
+      "relation": "increases",
+      "to": "merged_firm_leverage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "merged_firm_borrowing_capacity"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_growth_opportunities",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "merged_firm_funding_needs",
+     "moderated_from": "target_access_to_bank_finance",
+     "moderated_to": "merged_firm_leverage",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Table 9 interaction (High-growth acquirer)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "synergy: bank debt usage",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_access_to_bank_finance",
+      "relation": "increases",
+      "to": "access_to_competitive_bank_credit_supply",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_competitive_bank_credit_supply",
+      "relation": "increases",
+      "to": "merged_firm_bank_debt_usage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_competitive_bank_credit_supply"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_intangible_assets",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquirer_opacity_and_lack_of_collateral",
+     "moderated_from": "target_access_to_bank_finance",
+     "moderated_to": "merged_firm_bank_debt_usage",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Table 10 interaction (High-intangible acquirer)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "synergy: financing cost savings",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_access_to_bank_finance",
+      "relation": "increases",
+      "to": "access_to_more_competitive_banking_system",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_more_competitive_banking_system",
+      "relation": "decreases",
+      "to": "merged_firm_financing_costs",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_access_to_bank_finance",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "merged_firm_financing_costs",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_more_competitive_banking_system",
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_financing_frictions",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "access_to_more_competitive_banking_system",
+     "moderated_from": "target_access_to_bank_finance",
+     "moderated_to": "merged_firm_financing_costs",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Table 11 interactions (small / high-intangible / high-growth acquirers)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US M&A deals, excluding firms in the financial and utility industries)",
+  "country_region": "United States",
+  "time_period": "1981-1997",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "31,097 state-pair–year observations (baseline regression sample)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (incl. Compustat Snapshot for historical headquarters location)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP); CRSP/Compustat Merged Database",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuter's DealScan (loan facilities, spreads; matched to Compustat via Chava and Roberts (2008) link file)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bureau of Economic Analysis (BEA) (GDP growth, GDP per capita, industry GDP)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Bureau of Labor Statistics (BLS) (unemployment rates)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Council of State Governments, Book of the States (median corporate income tax rates)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Federal Reserve Bank of Philadelphia (state coincident index data)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "NBER Patent Citation Data File (Hall, Jaffe, and Trajtenberg, 2001)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Amel (2000) interstate banking deregulation schedule and entrant-state data",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Atanassov (2013) state anti-business-combination laws",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 (Baseline)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "panel of state-pair-year observations, 1981-1997",
+    "dv": {
+     "name": "Acquisition volume A buys B",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B-A",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Amel (2000); interstate banking deregulation dates (Table 2)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Within-state acquisition growth B",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Within-state acquisition growth A",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "GDP growth B-A",
+      "source": "BEA"
+     },
+     {
+      "name": "GDP per capita B-A",
+      "source": "BEA"
+     },
+     {
+      "name": "Unemployment B-A",
+      "source": "BLS"
+     },
+     {
+      "name": "Corporate tax B-A",
+      "source": "Council of State Governments, Book of the States"
+     },
+     {
+      "name": "Anti-combination B-A",
+      "source": "Atanassov (2013)"
+     },
+     {
+      "name": "Industry dissimilarity A&B (three-digit SIC industry share differences)",
+      "source": "BEA (industry GDP)"
+     },
+     {
+      "name": "Economic correlation A&B (correlation of state coincident indexes)",
+      "source": "Federal Reserve Bank of Philadelphia"
+     },
+     {
+      "name": "State-pair dummies",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (Robustness: Cols 1-7, incl. dynamic effects and placebo)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition volume A buys B",
+     "measure": "same as baseline (state-pair-year cross-state acquisition flow, value and number)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B-A",
+      "measure": "difference in the Open interstate-banking dummy between target state B and acquirer state A",
+      "source": "Amel (2000); deregulation dates"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "state B minus state A differences in four dummies for opening one year after, same year, one year prior, and two+ years prior to the observation",
+      "source": "Amel (2000); deregulation dates"
+     },
+     {
+      "name": "Placebo Open B-A (Col 7)",
+      "measure": "Open B-A recreated after randomly reassigning states to deregulation years while preserving the annual count of deregulated states",
+      "source": "Amel (2000); deregulation dates"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline controls (within-state acquisition growth B/A, stock return B-A, GDP growth/per capita B-A, unemployment B-A, corporate tax B-A, anti-combination B-A, industry dissimilarity A&B, economic correlation A&B, year dummies)",
+      "source": "SDC/CRSP/BEA/BLS/Book of the States/Atanassov/Fed Philadelphia"
+     },
+     {
+      "name": "Acquirer state x year fixed effects (Col 1)",
+      "source": ""
+     },
+     {
+      "name": "Intrastate B-A (intrastate branching deregulation, Col 2)",
+      "source": "Table 2 / deregulation dates"
+     },
+     {
+      "name": "Open AB (either state allows the other's banks to enter; bank-network channel, Col 3)",
+      "source": "Amel (2000)"
+     },
+     {
+      "name": "Patents B-A (difference in patent output per capita, Col 4)",
+      "source": "NBER Patent Citation Data File (Hall, Jaffe, Trajtenberg, 2001)"
+     },
+     {
+      "name": "State-pair-specific quadratic time trend (Col 6)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Pulling and pushing effects)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition volume A buys B",
+     "measure": "state-pair-year cross-state acquisition flow (value and number)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B",
+      "measure": "indicator that the target state B is open to interstate banking (pulling effect)",
+      "source": "Amel (2000); deregulation dates"
+     },
+     {
+      "name": "Open A",
+      "measure": "indicator that the acquirer state A is open to interstate banking (pushing effect)",
+      "source": "Amel (2000); deregulation dates"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline state-pair controls + state-pair and year fixed effects",
+      "source": "SDC/CRSP/BEA/BLS/Book of the States/Atanassov/Fed Philadelphia"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (Split-sample by acquirer characteristics, Panels A-D)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "state-pair-year flows decomposed by acquirer size, ownership (public/private), intangible-asset intensity, and growth opportunities",
+    "dv": {
+     "name": "Acquisition volume [small/big; private/public; high/low-intangible; high/low-growth] A buys B",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum; Compustat; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B-A",
+      "measure": "difference in the Open interstate-banking dummy between target state B and acquirer state A",
+      "source": "Amel (2000); deregulation dates"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline state-pair controls + state-pair and year fixed effects",
+      "source": "SDC/CRSP/BEA/BLS/Book of the States/Atanassov/Fed Philadelphia"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "firm-year observations in the CRSP/Compustat Merged Database, 1981-1997 (private firms largely absent)",
+    "dv": {
+     "name": "Likelihood of receiving an out-of-state acquisition bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP/Compustat Merged Database"
+    },
+    "key_ivs": [
+     {
+      "name": "Open",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Amel (2000); deregulation dates"
+     },
+     {
+      "name": "Open x Small",
+      "measure": "interaction of Open with Small (potential target's total assets below the annual sample median)",
+      "source": "Amel (2000); Compustat"
+     },
+     {
+      "name": "Small",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Asset liquidity (4-yr avg net liquid assets / total assets)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Debt-to-equity (4-yr avg)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Market-to-book (4-yr avg)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "P/E (4-yr avg year-end price to EPS)",
+      "source": "CRSP/Compustat"
+     },
+     {
+      "name": "Sales growth (over 4 prior years)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROE (4-yr avg earnings/equity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Abnormal return (4-yr avg daily market-model abnormal return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Home-state characteristics (state stock market performance, GDP growth, GDP per capita, economic correlation with US, unemployment, median corporate tax, anti-business-combination laws)",
+      "source": "CRSP/BEA/BLS/Book of the States/Fed Philadelphia/Atanassov"
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (Synergy: leverage increases for merged firms)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "merged firms in the three years after mergers",
+    "dv": {
+     "name": "Leverage",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B-A",
+      "measure": "difference in the Open interstate-banking dummy between target state B and acquirer state A",
+      "source": "Amel (2000); deregulation dates"
+     },
+     {
+      "name": "Open B-A x Small acquirer / x High-intangible acquirer / x High-growth acquirer",
+      "measure": "Open B-A interacted with indicators for acquirer total assets below sample median (Small), intangible-assets ratio above median (High-intangible), and market-to-book above median (High-growth), pre-announcement",
+      "source": "Amel (2000); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "Fixed assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 10 (Synergy: bank debt usage for merged firms)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "merged firms in the three years after mergers",
+    "dv": {
+     "name": "Bank debt",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuter's DealScan (matched to Compustat via Chava and Roberts, 2008)"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B-A",
+      "measure": "difference in the Open interstate-banking dummy between target state B and acquirer state A",
+      "source": "Amel (2000); deregulation dates"
+     },
+     {
+      "name": "Open B-A x Small acquirer / x High-intangible acquirer / x High-growth acquirer",
+      "measure": "Open B-A interacted with the same acquirer financing-friction and growth indicators as Table 9",
+      "source": "Amel (2000); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Standard leverage determinants (profitability, fixed assets, total assets, Tobin's q)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 11 (Synergy: financing cost savings - interest expense)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "merged firms in the three years after mergers",
+    "dv": {
+     "name": "Interest expense",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B-A",
+      "measure": "difference in the Open interstate-banking dummy between target state B and acquirer state A",
+      "source": "Amel (2000); deregulation dates"
+     },
+     {
+      "name": "Open B-A x Small acquirer / x High-intangible acquirer / x High-growth acquirer",
+      "measure": "Open B-A interacted with the same acquirer indicators as Tables 9-10",
+      "source": "Amel (2000); Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Standard leverage determinants (profitability, fixed assets, total assets, Tobin's q)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 12 (Loan-level: borrowing cost / loan spreads)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Loan spread (borrowing cost)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuter's DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Open L-A",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Amel (2000); deregulation dates; DealScan (lender HQ state)"
+     },
+     {
+      "name": "Target lender",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "Target lender x Open L-A",
+      "measure": "interaction capturing whether target-state lenders in more competitive banking markets offer cheaper loans",
+      "source": "DealScan; Amel (2000)"
+     },
+     {
+      "name": "Target lender x Open L-A x High entry",
+      "measure": "triple interaction with High entry (cumulative out-of-state bank-holding-company acquisitions of banks in target's state above annual median)",
+      "source": "DealScan; Amel (2000)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table 11 (profitability, fixed assets, total assets, Tobin's q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Borrower fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-pair fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Appendix Table A1 (Headquarter changes / relocation)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "interstate banking deregulation",
+    "sample": "cross-state headquarter relocations, 1986-1997 (period when Compustat Snapshot data are well populated)",
+    "dv": {
+     "name": "Firm headquarter relocation flow (A to B)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat Snapshot"
+    },
+    "key_ivs": [
+     {
+      "name": "Open B-A",
+      "measure": "difference in the Open interstate-banking dummy between target state B and acquirer state A",
+      "source": "Amel (2000); deregulation dates"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Baseline state-pair controls (as in Table 4)",
+      "source": "SDC/CRSP/BEA/BLS/Book of the States/Atanassov/Fed Philadelphia"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "bank headquarters location"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

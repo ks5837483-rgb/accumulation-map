@@ -1,0 +1,70 @@
+=== grades per silo (count of mechanisms)
+grade       single  thin  replicated  credible
+field                                         
+accounting      91    33           3        24
+finance        179    42          35        47
+strategy       138    45          34        16
+
+=== pairings (mechanism x outcome) within silo: share tested by ONE paper
+            pairings   once  ge2
+field                           
+accounting       441  0.937   28
+finance         1042  0.847  159
+strategy         628  0.873   80
+
+=== design: share of papers with a causal design, per silo
+field
+accounting    0.292
+finance       0.210
+strategy      0.106
+
+--- finance: top mechanisms (>=4 papers)
+                             mech_g  papers  support  causal_share      grade
+              information_asymmetry      58     0.77          0.22   credible
+                         monitoring      37     0.76          0.22   credible
+                   bargaining_power      28     0.86          0.25   credible
+                  adverse_selection      27     0.77          0.19   credible
+manager_shareholder_agency_conflict      26     0.68          0.19 replicated
+                 bidder_competition      25     0.84          0.32   credible
+            signal_of_private_value      23     0.75          0.09   credible
+         private_information_access      22     0.74          0.23   credible
+               equity_overvaluation      19     0.70          0.11 replicated
+                  operating_synergy      18     0.75          0.06   credible
+
+--- strategy: top mechanisms (>=4 papers)
+                     mech_g  papers  support  causal_share      grade
+      information_asymmetry      91     0.85          0.09   credible
+          adverse_selection      24     0.94          0.21   credible
+          operating_synergy      16     0.92          0.19   credible
+           transaction_cost      13     0.88          0.08   credible
+           integration_cost      12     0.78          0.08   credible
+      valuation_uncertainty      11     0.91          0.27   credible
+          coordination_cost      11     0.86          0.09   credible
+ flexible_staged_commitment      11     0.80          0.00 replicated
+        managerial_learning       9     0.56          0.33 replicated
+managerial_risk_preferences       9     0.97          0.00 replicated
+
+--- accounting: top mechanisms (>=4 papers)
+                         mech_g  papers  support  causal_share    grade
+          information_asymmetry      29     0.84          0.24 credible
+             disclosure_quality      14     0.96          0.21 credible
+        accounting_manipulation      11     0.73          0.45 credible
+              adverse_selection      11     0.98          0.27 credible
+financial_reporting_reliability      10     0.89          0.40 credible
+                     monitoring      10     0.70          0.30 credible
+               transaction_cost       9     0.94          0.33 credible
+              public_disclosure       9     0.89          0.44 credible
+          valuation_uncertainty       9     0.81          0.11 credible
+       asset_valuation_accuracy       8     0.84          0.25 credible
+
+=== credible mechanisms and the silos where they are credible
+field
+finance                        31
+accounting                     11
+accounting,finance              8
+strategy                        7
+accounting,finance,strategy     4
+finance,strategy                4
+accounting,strategy             1
+
+mechanisms credible in 2+ silos: ['accounting_manipulation', 'adverse_selection', 'asset_valuation_accuracy', 'bidder_competition', 'deal_selection_quality', 'due_diligence', 'information_asymmetry', 'information_opacity', 'information_processing_capacity', 'monitoring', 'operating_synergy', 'ownership_control_value', 'price_discovery', 'signal_credibility', 'signal_of_firm_quality', 'transaction_cost', 'valuation_uncertainty']

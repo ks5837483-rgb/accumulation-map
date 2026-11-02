@@ -1,0 +1,536 @@
+{
+ "paper_id": "10.1017_s0022109010000827",
+ "title": "Venture Capital Conflicts of Interest: Evidence from Acquisitions of Venture-Backed Firms",
+ "journal": "JFQA",
+ "year": 2010,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "conflicts of interest",
+  "certification hypothesis",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "VC certification hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vc_backing",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vc_fund_maturity",
+      "relation": "increases",
+      "to": "liquidity_pressure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "liquidity_pressure",
+      "relation": "decreases",
+      "to": "target_purchase_price",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "vc_fund_maturity",
+      "relation": "increases",
+      "to": "liquidity_pressure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "liquidity_pressure",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "liquidity_pressure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vc_acquirer_financial_relationship",
+      "relation": "increases",
+      "to": "conflict_of_interest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "conflict_of_interest",
+      "relation": "decreases",
+      "to": "target_purchase_price",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "vc_acquirer_financial_relationship",
+      "relation": "increases",
+      "to": "conflict_of_interest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "conflict_of_interest",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "conflict_of_interest"
+   ],
+   "moderators": [
+    {
+     "construct": "vc_shareholdings_in_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "conflict of interest",
+     "moderated_from": "vc_acquirer_financial_relationship",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cvc_strategic_focus",
+      "relation": "decreases",
+      "to": "competitive_bidding",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_bidding",
+      "relation": "increases",
+      "to": "target_purchase_price",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "cvc_strategic_focus",
+      "relation": "decreases",
+      "to": "competitive_bidding",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_bidding",
+      "relation": "decreases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_bidding"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (U.S.-headquartered acquirers; U.S.-incorporated private targets)",
+  "time_period": "1991-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "337 VC-backed and 2,452 non-VC-backed completed deals (matched sample: 245 in each)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "VentureXpert database (Thomson Financial)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings (proxy statements, prospectuses and registration statements, SC13G, S-4, 8K)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Lexis-Nexis and Factiva databases (announcement-date verification)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hand-collected data (target total assets, VC shareholdings in acquirers, CVC-target strategic-fit coding via SEC filings and Web searches)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Logistic regression predicting VC-backed target (first stage of propensity score matching)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "all VC-backed and non-VC-backed private-target acquisitions (337 VC-backed; 2,452 non-VC-backed), matched to 245 pairs",
+    "dv": {
+     "name": "VC-backed target indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "VentureXpert / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "High-technology indicator",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (SIC codes)"
+     },
+     {
+      "name": "Method-of-payment indicator",
+      "measure": "common stock as acquisition currency",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal size",
+      "measure": "target purchase price",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative deal size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Univariate analysis of acquirer CARs by method of payment and VC backing",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "245 VC-backed and 245 matched non-VC-backed targets (490 obs; 374 stock-financed)",
+    "dv": {
+     "name": "Acquirer cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "VC-backed target indicator",
+      "measure": "VC-backed vs non-VC-backed (matched) targets",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "Method of payment",
+      "measure": "acquisitions involving stock (incl. mixed offers) vs not involving stock",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "matched pairs of privately held acquisitions (490 obs; 374 for stock-offer model 4)",
+    "dv": {
+     "name": "Acquirer cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "VC-backed target",
+      "measure": "indicates when a target has VC backing",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "Stock acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(acquirer size) (equity market value 1 month prior to announcement)",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC / CRSP"
+     },
+     {
+      "name": "Intraindustry deal indicator (same 2-digit SIC code)",
+      "source": "SDC"
+     },
+     {
+      "name": "High-technology target indicator",
+      "source": "SDC (SIC codes)"
+     },
+     {
+      "name": "Target industry market-to-book (median M/B ratio in target's industry in takeover year)",
+      "source": ""
+     },
+     {
+      "name": "Acquirer stock return volatility (SD of excess returns, trading days -6 to -270)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - OLS analysis of acquirer CARs for VC-backed targets (H1/H2/H3 individually and jointly)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of VC-backed targets only (239-245 obs)",
+    "dv": {
+     "name": "Acquirer cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "VC liquidity (H1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "VC self-dealing (H2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected from SEC filings"
+     },
+     {
+      "name": "CVC strategic focus (H3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureXpert / hand-collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Early/seed stage target indicator",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "VC inexperience (third of least experienced VC funds by age of lead VC firm)",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "Stock acquisition indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "log(acquirer size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Relative deal size",
+      "source": "SDC / CRSP"
+     },
+     {
+      "name": "Intraindustry deal indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "High-technology target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Target industry market-to-book ratio",
+      "source": ""
+     },
+     {
+      "name": "Acquirer stock return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - OLS analysis of target takeover premia of VC-backed targets (H1/H2/H3 individually and jointly)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of VC-backed targets only (222-228 obs)",
+    "dv": {
+     "name": "Target takeover premium, log(P/B)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected target book value (SEC filings) / SDC purchase price"
+    },
+    "key_ivs": [
+     {
+      "name": "VC liquidity (H1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "VC self-dealing (H2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected from SEC filings"
+     },
+     {
+      "name": "CVC strategic focus (H3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "VentureXpert / hand-collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Seed/early stage target indicator",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "VC inexperience (age of lead VC firm at announcement)",
+      "source": "VentureXpert"
+     },
+     {
+      "name": "Stock acquisition indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative deal size",
+      "source": "SDC / CRSP"
+     },
+     {
+      "name": "Intraindustry deal indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "High-technology target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "Target industry market-to-book ratio",
+      "source": ""
+     },
+     {
+      "name": "Acquirer stock return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section VI robustness - Heckman (1979) 2-step self-selection correction",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquirer CAR / target takeover premium",
+     "measure": "same acquirer 5-day CAR and target takeover premium outcomes, re-estimated correcting for self-selection into VC backing",
+     "source": "CRSP / hand-collected SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "VC-backed target (and the three VC conflict indicators)",
+      "measure": "VC backing modeled as a potentially self-selected treatment",
+      "source": "VentureXpert"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same deal-characteristic controls as the main CAR/premium regressions",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

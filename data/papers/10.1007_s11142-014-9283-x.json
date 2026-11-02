@@ -1,0 +1,602 @@
+{
+ "paper_id": "10.1007_s11142-014-9283-x",
+ "title": "The effect of target-firm accounting quality on valuation in acquisitions",
+ "journal": "RAS",
+ "year": 2014,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information asymmetry",
+  "winner's curse",
+  "principal-agent theory",
+  "hubris hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_accounting_quality",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_profitability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "target_value_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "target_accounting_quality",
+     "moderated_to": "acquirer_profitability",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the acquirer's own accounting quality (rather than the target's) drives acquirer returns",
+    "acquirers select targets on the basis of accounting quality (target accounting quality predicts being acquired)",
+    "general information uncertainty, rather than accounting quality / information asymmetry, drives the result"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_accounting_quality",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "target_profitability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "synergy identification: higher target accounting quality helps acquirers identify higher-synergy combinations, which would predict higher (not lower) target returns",
+    "valuation discount: low accounting quality depresses the target's pre-announcement stock price, so its announcement return rises more mechanically rather than through bidding"
+   ]
+  },
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_value_uncertainty",
+      "relation": "increases",
+      "to": "acquirer_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_overpayment",
+      "relation": "decreases",
+      "to": "acquirer_profitability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_value_uncertainty",
+      "relation": "increases",
+      "to": "acquirer_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_overpayment",
+      "relation": "increases",
+      "to": "target_profitability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquisitions of public U.S. firms across industries)",
+  "country_region": "United States (domestic U.S. acquisitions)",
+  "time_period": "1990-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,427 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "statement of cash flows / accounting (financial statement) data used to construct accruals and cash-flow measures",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "stock return data (three-day market-adjusted announcement returns and monthly return volatility)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel A - Acquirer announcement returns and target accounting quality (uncertainty = UNC_RET)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ACQ_RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock return data (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "F_AQ (target firm-level accounting quality)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "I_AQ (target industry-level accounting quality)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "UNC_RET (target value uncertainty)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "stock return data (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE (natural log of acquirer market value of equity)",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "ACQ_DOTCOM (acquirer is a dot-com company)",
+      "source": "SDC"
+     },
+     {
+      "name": "REL_SIZE (target MV of equity / acquirer MV of equity)",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "TARG_GROWTH (target's annual revenue growth prior to acquisition)",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "TARG_DOTCOM (target is a dot-com company)",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_LIQUID (industry deal intensity: sum of deal prices / aggregate assets in industry)",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "SAME_IND (acquirer and target same two-digit SIC code)",
+      "source": "Compustat / SDC"
+     },
+     {
+      "name": "STOCK (at least 90% of price paid with equity)",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER (tender offer)",
+      "source": "SDC"
+     },
+     {
+      "name": "NEGOTIATED (friendly/negotiated deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "COMPETING (competing bids)",
+      "source": "SDC"
+     },
+     {
+      "name": "EARNOUT (deal included an earnout)",
+      "source": "SDC"
+     },
+     {
+      "name": "POISONPILL (target had a poison pill in place)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B - Acquirer returns with alternative uncertainty measures (UNC_CFO and UNC_DTV)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ACQ_RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock return data (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "F_AQ / I_AQ (target accounting quality, firm- and industry-level)",
+      "measure": "mean of F_AQ1/F_AQ2 (firm) or I_AQ1/I_AQ2 (industry), standard deviations of residuals from models (2) and (3), each multiplied by -1 so higher values represent higher accounting quality",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "UNC_CFO (target value uncertainty, cash-flow based)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "UNC_DTV (target value uncertainty, difficult-to-value)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "accounting/financial statement data (Compustat) and stock return data (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE (natural log of acquirer market value of equity)",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "ACQ_DOTCOM",
+      "source": "SDC"
+     },
+     {
+      "name": "REL_SIZE",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "TARG_GROWTH",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "TARG_DOTCOM",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_LIQUID",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "SAME_IND",
+      "source": "Compustat / SDC"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "NEGOTIATED",
+      "source": "SDC"
+     },
+     {
+      "name": "COMPETING",
+      "source": "SDC"
+     },
+     {
+      "name": "EARNOUT",
+      "source": "SDC"
+     },
+     {
+      "name": "POISONPILL",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 - Acquirer returns controlling for acquirer accounting quality and acquirer uncertainty",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ACQ_RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock return data (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "F_AQ / I_AQ (target accounting quality, firm- and industry-level)",
+      "measure": "mean of firm-specific (F_AQ) or industry (I_AQ) standard deviations of residuals from models (2) and (3), multiplied by -1 so higher values represent higher accounting quality",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "ACQ_F_AQ / ACQ_I_AQ (acquirer accounting quality)",
+      "measure": "acquirer's accounting quality measured at the firm level (ACQ_F_AQ) and industry level (ACQ_I_AQ), analogous to the target accounting quality measures",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "ACQ_UNC_RET (acquirer value uncertainty)",
+      "measure": "acquirer counterpart to UNC_RET (volatility of the acquirer's stock returns)",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "UNC_RET (target value uncertainty)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "stock return data (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "ACQ_DOTCOM",
+      "source": "SDC"
+     },
+     {
+      "name": "REL_SIZE",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "TARG_GROWTH",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "TARG_DOTCOM",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_LIQUID",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "SAME_IND",
+      "source": "Compustat / SDC"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "NEGOTIATED",
+      "source": "SDC"
+     },
+     {
+      "name": "COMPETING",
+      "source": "SDC"
+     },
+     {
+      "name": "EARNOUT",
+      "source": "SDC"
+     },
+     {
+      "name": "POISONPILL",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A - Target announcement returns and target accounting quality",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "all acquisitions of at least $1 million (target-return tests use the full sample; acquirer-return tests additionally require deal value >=10% of acquirer market value)",
+    "dv": {
+     "name": "TARG_RET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock return data (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "F_AQ (target firm-level accounting quality)",
+      "measure": "mean of F_AQ1 and F_AQ2 (standard deviation of firm-specific residuals from models (2) and (3) over the eight-year period, multiplied by -1 so higher values represent higher accounting quality)",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "I_AQ (target industry-level accounting quality)",
+      "measure": "mean of I_AQ1 and I_AQ2 (standard deviation of industry residuals from models (2) and (3), estimated cross-sectionally in the target's two-digit SIC industry, multiplied by -1)",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "UNC_RET (target value uncertainty)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "stock return data (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQ_SIZE",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "ACQ_DOTCOM",
+      "source": "SDC"
+     },
+     {
+      "name": "REL_SIZE",
+      "source": "stock return data (CRSP)"
+     },
+     {
+      "name": "TARG_GROWTH",
+      "source": "accounting/financial statement data (Compustat)"
+     },
+     {
+      "name": "TARG_DOTCOM",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_LIQUID",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "SAME_IND",
+      "source": "Compustat / SDC"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "NEGOTIATED",
+      "source": "SDC"
+     },
+     {
+      "name": "COMPETING",
+      "source": "SDC"
+     },
+     {
+      "name": "EARNOUT",
+      "source": "SDC"
+     },
+     {
+      "name": "POISONPILL",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "uncertain value",
+    "low accounting quality",
+    "acquire targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "low accounting quality",
+    "relation": "affects",
+    "to": "firms acquire targets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "lower accounting quality",
+    "dollar value losses"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "lower accounting quality",
+    "relation": "affects",
+    "to": "dollar value losses"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "timing of acquisitions",
+    "informational disadvantage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "timing of acquisitions",
+    "relation": "decreases",
+    "to": "informational disadvantage"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "quality of accounting information",
+    "information disclosures",
+    "cost of capital",
+    "one-time gains from a possible future acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "quality of accounting information",
+    "relation": "affects",
+    "to": "one-time gains from a possible future acquisition"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,434 @@
+{
+ "paper_id": "10.1016_j.jacceco.2008.03.001",
+ "title": "Earnings management, lawsuits, and stock-for-stock acquirers’ market performance",
+ "journal": "JAE",
+ "year": 2008,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market efficiency",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "abnormal_accruals",
+      "relation": "increases",
+      "to": "misleading_of_investors",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "misleading_of_investors",
+      "relation": "increases",
+      "to": "lawsuits",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "misleading_of_investors"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the accruals-lawsuit association reflects ex-post performance rather than earnings management having an independent, first-order effect"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "probability_of_lawsuit",
+      "relation": "increases",
+      "to": "anticipated_litigation_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipated_litigation_costs",
+      "relation": "decreases",
+      "to": "merger_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipated_litigation_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality - the merger announcement return itself drives the likelihood of a lawsuit, rather than the market anticipating lawsuits"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "probability_of_lawsuit",
+      "relation": "increases",
+      "to": "litigation_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "litigation_costs",
+      "relation": "decreases",
+      "to": "long_term_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "probability_of_lawsuit",
+      "relation": "increases",
+      "to": "underestimation_of_contingent_losses",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "underestimation_of_contingent_losses",
+      "relation": "decreases",
+      "to": "long_term_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "litigation_costs",
+    "underestimation_of_contingent_losses"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "pre-merger abnormal accruals (accrual reversal) drive the long-term underperformance (Louis, 2004a)",
+    "reverse causality - market performance is itself a determinant of lawsuits, so a lawsuit-performance association need not mean lawsuits cause underperformance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1996-2002",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "495 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Class Action Clearinghouse at Stanford University",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Wharton Research Data Services' executive compensation database (ExecuComp)",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal current accruals",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "litigation status (litigated vs non-litigated acquisitions)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Class Action Clearinghouse at Stanford University / news searches"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirers' abnormal returns (pre-merger year and around announcement)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "litigation status (litigated vs non-litigated acquisitions)",
+      "measure": "Non-litigated acquisitions (N = 392) vs Litigated acquisitions (N = 103)",
+      "source": "Securities Class Action Clearinghouse at Stanford University / news searches"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "long-term abnormal returns (ABRETYP4)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "litigation status (litigated vs non-litigated acquisitions)",
+      "measure": "Non-litigated acquisitions vs Litigated acquisitions",
+      "source": "Securities Class Action Clearinghouse at Stanford University / news searches"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "SUIT (post-merger lawsuit indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Class Action Clearinghouse at Stanford University / news searches"
+    },
+    "key_ivs": [
+     {
+      "name": "ABCA (abnormal current accruals)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ABRETYM1 (pre-merger abnormal return)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "VOLATILITY (std dev of acquirer's daily returns over year ending 2 days prior)",
+      "source": "CRSP"
+     },
+     {
+      "name": "TURNOVER (share turnover over year ending 2 days prior)",
+      "source": "CRSP"
+     },
+     {
+      "name": "POOL (pooling-of-interest method indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "INTRA (target and acquirer in same state indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "COLLAR (merger has a collar indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "LNUMBERM (log of one plus number of recent stock-for-stock mergers)",
+      "source": "SDC"
+     },
+     {
+      "name": "LTVALUE (log of one plus total value of recent stock-for-stock mergers)",
+      "source": "SDC"
+     },
+     {
+      "name": "LVALUE (log of value of current transaction)",
+      "source": "SDC"
+     },
+     {
+      "name": "LMKTV (log of acquirer's market value of equity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BIG4 (Big 4 auditor indicator)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TECH (technology company indicator by SIC code)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RETAIL (retail company indicator by SIC code)",
+      "source": "Compustat"
+     },
+     {
+      "name": "REG (regulated company indicator by SIC code)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "CAR (market reaction to merger announcement, Column 2/3)",
+      "source": "CRSP"
+     },
+     {
+      "name": "ABRETYP4 (long-run abnormal returns, Column 2/3)",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Conditional association between market reaction (CAR) and probability of post-merger lawsuits (two-step IV, N = 495)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Two-step instrumental-variable approach: predicted lawsuit probability (PSUIT) instrumented by ex-ante determinants of the lawsuit from the first-step probit (Eq. 2)",
+    "sample": "",
+    "dv": {
+     "name": "CAR (announcement market reaction)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PSUIT (probability of a lawsuit)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Class Action Clearinghouse / Compustat / CRSP / SDC (first-step model inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ABCA (abnormal current accruals)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BM (acquirer's book-to-market ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RSIZE (ratio of target's to acquirer's total assets)",
+      "source": "SDC"
+     },
+     {
+      "name": "PRIVATE (privately held target indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL (pooling-of-interest method indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "SAME_IND (same two-digit SIC industry indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "CEOSH (CEO common shares controlled / shares outstanding)",
+      "source": "ExecuComp / SEC filings"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Conditional association between post-merger long-term abnormal returns (ABRETYP4) and probability of post-merger lawsuits (two-step IV)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Two-step instrumental-variable approach: predicted lawsuit probability (PSUIT) instrumented by ex-ante determinants of the lawsuit from the first-step probit (Eq. 2)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ABRETYP4 (post-merger long-term abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PSUIT (probability of a lawsuit)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Class Action Clearinghouse / Compustat / CRSP / SDC (first-step model inputs)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ABCA (abnormal current accruals)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BM (acquirer's book-to-market ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RSIZE (ratio of target's to acquirer's total assets)",
+      "source": "SDC"
+     },
+     {
+      "name": "PRIVATE (privately held target indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL (pooling-of-interest method indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "SAME_IND (same two-digit SIC industry indicator)",
+      "source": "SDC"
+     },
+     {
+      "name": "CEOSH (CEO common shares controlled / shares outstanding)",
+      "source": "ExecuComp / SEC filings"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

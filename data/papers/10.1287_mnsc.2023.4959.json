@@ -1,0 +1,609 @@
+{
+ "paper_id": "10.1287_mnsc.2023.4959",
+ "title": "Are Third-Party Fundamental Valuations Relevant in Public Company Takeovers?",
+ "journal": "MNSC",
+ "year": 2023,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "agency theory",
+  "corporate governance",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fairness_opinion_valuation",
+      "relation": "increases",
+      "to": "expected_transaction_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_transaction_synergies",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_transaction_synergies"
+   ],
+   "moderators": [
+    {
+     "construct": "synergy_inclusive_valuation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "expected_transaction_synergies",
+     "moderated_from": "fairness_opinion_valuation",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the target’s predeal stock price is a sufficient benchmark (market-sufficiency), so the fairness valuation carries no incremental information"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_price_runup",
+      "relation": "increases",
+      "to": "information_leakage",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_leakage",
+      "relation": "decreases",
+      "to": "fairness_valuation_relative_to_price",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_leakage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the price runup reflects aggregate market-wide movement (e.g. discount-rate news) rather than target-specific rumors, and providers merely index on the overall reported price change"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fairness_opinion_valuation",
+      "relation": "increases",
+      "to": "fundamental_mispricing",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "fundamental_mispricing",
+      "relation": "increases",
+      "to": "target_long_term_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "fundamental_mispricing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the fairness valuation is public, so it could itself drive (rather than merely predict) the market revaluation of the former target"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "negotiated_deal_premium",
+      "relation": "increases",
+      "to": "catering",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "catering",
+      "relation": "increases",
+      "to": "fairness_valuation",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "catering"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_side_advisor",
+      "relation": "increases",
+      "to": "catering",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "catering",
+      "relation": "decreases",
+      "to": "target_dcf_valuation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "catering"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_side_advisor",
+      "relation": "increases",
+      "to": "catering",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "catering",
+      "relation": "increases",
+      "to": "dcf_discount_rate",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "catering"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public company M&A / takeovers, DCF fairness-opinion valuations)",
+  "country_region": "United States (U.S. targets)",
+  "time_period": "deals announced through January 1, 2020",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,263 unique target DCF fairness valuations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wharton Research Data Services (WRDS) Event Study",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "merger proxy",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 — Acquirer Announcement Returns (Validation Test 1)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "main sample requiring acquirer to be public (columns split into synergy-inclusive vs synergy-exclusive subsamples)",
+    "dv": {
+     "name": "Acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wharton Research Data Services (WRDS) Event Study"
+    },
+    "key_ivs": [
+     {
+      "name": "FOPRa (fairness opinion predicted return for acquirer)",
+      "measure": "(Mean DCF - Deal Price) / Acquirer MCAP",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "TSPRa (target predeal stock price predicted return for acquirer)",
+      "measure": "-(One Month Premium) x (TargetMCAP / AcquirerMCAP)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "FOPRa x I(Synergy) interaction",
+      "measure": "FOPRa interacted with I(Synergy), an indicator set to one when the DCF valuation is likely inclusive of transaction synergies (the higher of two same-transaction valuations coded Synergy=1)",
+      "source": "merger proxy"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel A — Acquirer Announcement Returns, FOPRa using high point of DCF range",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wharton Research Data Services (WRDS) Event Study"
+    },
+    "key_ivs": [
+     {
+      "name": "High DCF FOPRa",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "TSPRa",
+      "measure": "-(One Month Premium) x (TargetMCAP / AcquirerMCAP)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "High DCF FOPRa x I(Synergy) interaction",
+      "measure": "High DCF FOPRa interacted with I(Synergy)",
+      "source": "merger proxy"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Panel B — Acquirer Announcement Returns, FOPRa using low point of DCF range",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wharton Research Data Services (WRDS) Event Study"
+    },
+    "key_ivs": [
+     {
+      "name": "Low DCF FOPRa",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "TSPRa",
+      "measure": "-(One Month Premium) x (TargetMCAP / AcquirerMCAP)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Low DCF FOPRa x I(Synergy) interaction",
+      "measure": "Low DCF FOPRa interacted with I(Synergy)",
+      "source": "merger proxy"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 — Unraveling (Validation Test 2)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "DCF fairness valuation of target relative to predeal stock price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Price Runup(t-30,t-1) / Target Price Runup(t-30,t-7)",
+      "measure": "the target's abnormal price runup measured from 30 days to 1 day (or 7 days) prior to the acquisition announcement",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target Abnormal Return(t-30,t-7)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "S&P 500 Runup(t-30,t-i)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Target post-termination cumulative abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wharton Research Data Services (WRDS) Event Study"
+    },
+    "key_ivs": [
+     {
+      "name": "Above-median FOPRt",
+      "measure": "indicator equal to one if FOPRt is above the in-sample median, where FOPRt = (Mean DCF / TSPRt-3) - 1",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "TSPRt (Panel B control benchmark)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 — Catering: Valuations (DCF responsiveness & target vs. acquirer advisor level)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "column 4 uses transaction fixed effects to compare same-target valuations within a deal; column 5 restricts to stand-alone (synergy-exclusive) valuations",
+    "dv": {
+     "name": "DCF fairness valuation ratio",
+     "measure": "DCF / TSP(t-30) (columns 1-2) and DCF / Deal Price (columns 3-5)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "One month premium",
+      "measure": "one-month premium (%) of the negotiated deal price over the target's predeal stock price",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "I(Target Advisor)",
+      "measure": "indicator equal to one if the DCF valuation is produced by a target-side (versus acquirer-side) fairness-opinion advisor",
+      "source": "merger proxy"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 8 — Catering: Discount Rate (WACC) Assumptions, target vs. acquirer advisors",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "columns use industry-year, transaction, and transaction-provider fixed effects; column 3 compares target- vs acquirer-side WACC within the same transaction; column 5 excludes synergy-inclusive valuations",
+    "dv": {
+     "name": "DCF WACC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "merger proxy"
+    },
+    "key_ivs": [
+     {
+      "name": "I(Target Advisor)",
+      "measure": "indicator equal to one if the DCF valuation is produced by a target-side (versus acquirer-side) advisor",
+      "source": "merger proxy"
+     },
+     {
+      "name": "Synergy",
+      "measure": "indicator equal to one if the DCF valuation is likely inclusive of transaction synergies",
+      "source": "merger proxy"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROA",
+      "source": ""
+     },
+     {
+      "name": "Leverage",
+      "source": ""
+     },
+     {
+      "name": "Market-to-Book",
+      "source": ""
+     },
+     {
+      "name": "EBIT Margin",
+      "source": ""
+     },
+     {
+      "name": "Deal Size ($bn)",
+      "source": "SDC Platinum"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "fairness valuation",
+    "market revaluation"
+   ],
+   "mechanism_named": "market reac­tion interpretation",
+   "proposed_edge": {
+    "from": "fairness valuation",
+    "relation": "affects",
+    "to": "market revaluation"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "alternative governance mechanism"
+   ],
+   "mechanism_named": "alternative governance mechanism",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "potential value and biases",
+    "settings",
+    "deal types",
+    "advisors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "settings, deal types, advisors",
+    "on_path": [
+     "fairness valuations",
+     "potential value and biases"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "bias",
+    "valuations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "what factors constrain the bias",
+    "on_path": [
+     "fairness valuations",
+     "bias"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "market tests"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "when",
+    "on_path": [
+     "market tests",
+     "suspect"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "practices",
+    "valuations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "practices",
+    "relation": "affects",
+    "to": "incrementally informative valuations"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

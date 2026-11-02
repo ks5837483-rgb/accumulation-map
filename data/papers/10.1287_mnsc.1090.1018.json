@@ -1,0 +1,691 @@
+{
+ "paper_id": "10.1287_mnsc.1090.1018",
+ "title": "Technological Innovation and Acquisitions",
+ "journal": "MNSC",
+ "year": 2009,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "knowledge-based view",
+  "information economics",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "innovation_output_quality",
+      "relation": "decreases",
+      "to": "need_to_acquire_knowledge_externally",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "need_to_acquire_knowledge_externally",
+      "relation": "increases",
+      "to": "acquisition_propensity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "need_to_acquire_knowledge_externally"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "innovation_output_quality",
+      "relation": "decreases",
+      "to": "pressure_to_complete_deal",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "pressure_to_complete_deal",
+      "relation": "increases",
+      "to": "deal_completion_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "pressure_to_complete_deal"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technological_innovation",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "future_stock_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "completed_acquisition",
+      "relation": "increases",
+      "to": "access_to_external_knowledge",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_external_knowledge",
+      "relation": "increases",
+      "to": "innovation_output_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "completed_acquisition",
+      "relation": "increases",
+      "to": "integration_and_agency_problems",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "integration_and_agency_problems",
+      "relation": "decreases",
+      "to": "innovation_output_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_external_knowledge",
+    "integration_and_agency_problems"
+   ],
+   "moderators": [
+    {
+     "construct": "prebid_innovation_level",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "access_to_external_knowledge",
+     "moderated_from": "completed_acquisition",
+     "moderated_to": "innovation_output_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection bias (bidding and nonbidding firms differ in innovation even before the deal)",
+    "the innovation-output decline is driven by a decrease in innovation input (R&D), not the acquisition"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1984-1997",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,053 acquisitions (988 completed, 65 failed)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "NBER patent (citation) database",
+    "category": "patents",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 Panel A: Innovation and three-year cumulative stock returns (Eq. 1)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Bidding and nonbidding manufacturing firms in Compustat before 1989; 8,851 firm-year observations",
+    "dv": {
+     "name": "Three-year cumulative stock returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Patents(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInPatents(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "Citations(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInCitations(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B (market-to-book ratio)",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return (annual stock return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "Industry dummies (Fama-French 48)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B: Innovation and two-year cumulative stock returns (Eq. 1)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Two-year cumulative stock returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Patents(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInPatents(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "Citations(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInCitations(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market leverage",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel C: Innovation and one-year cumulative stock returns (Eq. 1)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "One-year cumulative stock returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Patents(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInPatents(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "Citations(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInCitations(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market leverage",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Propensity to engage in acquisitions (probit, Eq. 3)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Bidder indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A"
+    },
+    "key_ivs": [
+     {
+      "name": "Patents(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInPatents(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "Citations(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInCitations(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "R&D expenditure",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market leverage",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Deal completion (probit, Eq. 3)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "Bidders only (successful vs failed bidders)",
+    "dv": {
+     "name": "Deal completion indicator",
+     "measure": "Pr(Complete)_it; probability of deal completion among bidders",
+     "source": "SDC M&A"
+    },
+    "key_ivs": [
+     {
+      "name": "Patents(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInPatents(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "Citations(t-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     },
+     {
+      "name": "ChangeInCitations(t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log sales",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Market leverage",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC M&A"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC M&A, Compustat"
+     },
+     {
+      "name": "All cash",
+      "source": "SDC M&A"
+     },
+     {
+      "name": "All stock",
+      "source": "SDC M&A"
+     },
+     {
+      "name": "Competing (Compete)",
+      "source": "SDC M&A"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Bidders matched to nonbidding firms, split by prebid innovation (patent count <=1 vs >1) and deal outcome (successful vs failed); Panel A1 715, A2 41, B1 273, B2 24 observations",
+    "dv": {
+     "name": "Postacquisition innovation and performance (patent counts, citation counts, R&D, cumulative returns)",
+     "measure": "Bidder-minus-matched-nonbidder difference in patent counts, citation counts, R&D, and cumulative returns at 1, 2, and 3 years after completion/announcement (CYR+1..+3 / AYR+1..+3)",
+     "source": "NBER patent database; Compustat; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition (bidder treatment)",
+      "measure": "Treatment = being a bidder (successful or failed), estimated against matched nonbidding firms",
+      "source": "SDC M&A"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Matching on Fama-French 48 industry-year",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Matching on market-to-book ratio",
+      "source": "Compustat, CRSP"
+     },
+     {
+      "name": "No bid within a seven-year period (matching-firm restriction)",
+      "source": "SDC M&A"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "technological innovation",
+    "successful acquisition",
+    "acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "successful acquisition",
+    "relation": "affects",
+    "to": "technological innovation"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "innovation output",
+    "bidding firms",
+    "targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "target innovation activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "patent counts",
+    "failed bidders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "citations",
+    "bidders completing the deals",
+    "nonbidding firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "patent and citation counts",
+    "synergy",
+    "abnormal performance"
+   ],
+   "mechanism_named": "synergy of the two firms",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "cumulative stock return"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

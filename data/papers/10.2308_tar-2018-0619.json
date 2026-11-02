@@ -1,0 +1,918 @@
+{
+ "paper_id": "10.2308_tar-2018-0619",
+ "title": "Corporate Control Contests and the Asymmetric Disclosure of Bad News Evidence from Peer Firm Disclosure Response to Takeover Threat",
+ "journal": "AR",
+ "year": 2021,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "voluntary disclosure theory",
+  "information economics",
+  "agency theory",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "control_threat",
+      "relation": "increases",
+      "to": "manager_incentive_to_resist_takeover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "manager_incentive_to_resist_takeover",
+      "relation": "increases",
+      "to": "bad_news_voluntary_disclosure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "manager_incentive_to_resist_takeover"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_age",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "manager_incentive_to_resist_takeover",
+     "moderated_from": "control_threat",
+     "moderated_to": "bad_news_voluntary_disclosure",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross_sectional_ceo_age"
+    },
+    {
+     "construct": "ceo_total_compensation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "manager_incentive_to_resist_takeover",
+     "moderated_from": "control_threat",
+     "moderated_to": "bad_news_voluntary_disclosure",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross_sectional_ceo_compensation"
+    },
+    {
+     "construct": "firm_level_anti_takeover_defense",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "manager_incentive_to_resist_takeover",
+     "moderated_from": "control_threat",
+     "moderated_to": "bad_news_voluntary_disclosure",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross_sectional_anti_takeover_defense"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "prediction_earnings_management",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "control_threat",
+      "relation": "increases",
+      "to": "manager_incentive_to_signal_consistency_with_bad_news_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "manager_incentive_to_signal_consistency_with_bad_news_disclosure",
+      "relation": "decreases",
+      "to": "abnormal_accruals",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "manager_incentive_to_signal_consistency_with_bad_news_disclosure"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms classified by two-digit SIC / three-digit SIC / Hoberg and Phillips TNIC3 codes; no focal sector)",
+  "country_region": "",
+  "time_period": "1997-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S guidance dataset",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "StreetEvents (quarterly earnings conference call transcripts)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Validation Tests of Treatment Sample (univariate DID on manager mentions)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "1,216 peer (treatment) firms and 2,416 control firms in conference-call quarters q-1 and q+1",
+    "dv": {
+     "name": "Number of manager mentions of acquirer/target names",
+     "measure": "[withheld: wording matches the source]",
+     "source": "StreetEvents (quarterly earnings conference call transcripts)"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post (control threat shock)",
+      "measure": "treatment (TNIC3 peer with positive announcement-window CAR) vs control (SIC2), pre vs post hostile takeover announcement",
+      "source": "SDC database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Tables 4-5 - DID regression: Bad News Forecasts",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "25,633 firm-year obs (8,743 treatment / 16,890 control), singleton firms dropped",
+    "dv": {
+     "name": "Bad News Forecasts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE (firm size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB (growth and valuation)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA (accounting performance)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LOSS (loss indicator)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RET (stock performance)",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV (leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SPI (special items)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST (institutional ownership)",
+      "source": ""
+     },
+     {
+      "name": "NAF (analyst coverage)",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "RETVOL / RET_STD (return volatility)",
+      "source": "CRSP"
+     },
+     {
+      "name": "SPREAD / QBAS (bid-ask spread)",
+      "source": "CRSP"
+     },
+     {
+      "name": "FLUID (fluidity)",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "SIMILAR (similarity score)",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "INVEST (adjusted investment ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "FIRM FE",
+      "source": ""
+     },
+     {
+      "name": "TIME FE (year)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tables 4-5 - DID regression: Good News Forecasts",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "25,633 firm-year obs",
+    "dv": {
+     "name": "Good News Forecasts",
+     "measure": "number of good news earnings forecasts, defined as those that exceed prevailing consensus analyst forecasts (annual interval)",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "Treat (=1 treatment, 0 control) x Post (=1 post hostile takeover announcement, 0 pre)",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "RET",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "SPI",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "NAF",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "RETVOL / RET_STD",
+      "source": "CRSP"
+     },
+     {
+      "name": "SPREAD / QBAS",
+      "source": "CRSP"
+     },
+     {
+      "name": "FLUID",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "SIMILAR",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat"
+     },
+     {
+      "name": "FIRM FE",
+      "source": ""
+     },
+     {
+      "name": "TIME FE (year)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tables 4-5 - DID regression: Bad News Bundling",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "25,633 firm-year obs",
+    "dv": {
+     "name": "Bad News Bundling",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "Treat (=1 treatment, 0 control) x Post (=1 post hostile takeover announcement, 0 pre)",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "RET",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "SPI",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "NAF",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "RETVOL / RET_STD",
+      "source": "CRSP"
+     },
+     {
+      "name": "SPREAD / QBAS",
+      "source": "CRSP"
+     },
+     {
+      "name": "FLUID",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "SIMILAR",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat"
+     },
+     {
+      "name": "FIRM FE",
+      "source": ""
+     },
+     {
+      "name": "TIME FE (year)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tables 4-5 - DID regression: Good News Bundling",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "25,633 firm-year obs",
+    "dv": {
+     "name": "Good News Bundling",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "Treat (=1 treatment, 0 control) x Post (=1 post hostile takeover announcement, 0 pre)",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "RET",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "SPI",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "NAF",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "RETVOL / RET_STD",
+      "source": "CRSP"
+     },
+     {
+      "name": "SPREAD / QBAS",
+      "source": "CRSP"
+     },
+     {
+      "name": "FLUID",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "SIMILAR",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat"
+     },
+     {
+      "name": "FIRM FE",
+      "source": ""
+     },
+     {
+      "name": "TIME FE (year)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tables 4-5 - DID regression: Tone_Presentation",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "16,407 firm-quarter obs (6,227 treatment / 10,180 control)",
+    "dv": {
+     "name": "Tone_Presentation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "StreetEvents (quarterly earnings conference call transcripts)"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "Treat (=1 treatment, 0 control) x Post (=1 post hostile takeover announcement, 0 pre)",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "RET",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "SPI",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "NAF",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "RETVOL / RET_STD",
+      "source": "CRSP"
+     },
+     {
+      "name": "SPREAD / QBAS",
+      "source": "CRSP"
+     },
+     {
+      "name": "FLUID",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "SIMILAR",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat"
+     },
+     {
+      "name": "SUE (earnings surprise, tone regressions only)",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "TONE_QA (tone of Q&A section, tone regressions only)",
+      "source": "StreetEvents (quarterly earnings conference call transcripts)"
+     },
+     {
+      "name": "FIRM FE",
+      "source": ""
+     },
+     {
+      "name": "TIME FE (year and quarter)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tables 4-5 - DID regression: Negative Tone Distribution",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "16,407 firm-quarter obs",
+    "dv": {
+     "name": "Negative Tone Distribution",
+     "measure": "[withheld: wording matches the source]",
+     "source": "StreetEvents (quarterly earnings conference call transcripts)"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "Treat (=1 treatment, 0 control) x Post (=1 post hostile takeover announcement, 0 pre)",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "RET",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "SPI",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "NAF",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "RETVOL / RET_STD",
+      "source": "CRSP"
+     },
+     {
+      "name": "SPREAD / QBAS",
+      "source": "CRSP"
+     },
+     {
+      "name": "FLUID",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "SIMILAR",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat"
+     },
+     {
+      "name": "SUE (earnings surprise, tone regressions only)",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "TONE_QA (tone of Q&A section, tone regressions only)",
+      "source": "StreetEvents (quarterly earnings conference call transcripts)"
+     },
+     {
+      "name": "FIRM FE",
+      "source": ""
+     },
+     {
+      "name": "TIME FE (year and quarter)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Tables 4-5 - DID regression: Management Forecasts (quantity; descriptive, not for inference)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "25,633 firm-year obs",
+    "dv": {
+     "name": "Management Forecasts",
+     "measure": "total number of management-issued forecasts (all forecasts, not just forecasts of earnings, following Guay, Samuels, and Taylor 2016; annual interval)",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "Treat (=1 treatment, 0 control) x Post (=1 post hostile takeover announcement, 0 pre)",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "RET",
+      "source": "CRSP"
+     },
+     {
+      "name": "LEV",
+      "source": "Compustat"
+     },
+     {
+      "name": "SPI",
+      "source": "Compustat"
+     },
+     {
+      "name": "INST",
+      "source": ""
+     },
+     {
+      "name": "NAF",
+      "source": "I/B/E/S guidance dataset"
+     },
+     {
+      "name": "RETVOL / RET_STD",
+      "source": "CRSP"
+     },
+     {
+      "name": "SPREAD / QBAS",
+      "source": "CRSP"
+     },
+     {
+      "name": "FLUID",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "SIMILAR",
+      "source": "Hoberg and Phillips (2010) TNIC3 (text-based network industry classifications)"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat"
+     },
+     {
+      "name": "FIRM FE",
+      "source": ""
+     },
+     {
+      "name": "TIME FE (year)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel A - Parallel trend validation (dynamic DID with event-period indicators)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "",
+    "dv": {
+     "name": "Disclosure proxies (Bad News Forecasts, Bad News Bundling, Negative Tone Distribution, Tone_Presentation)",
+     "measure": "same disclosure proxies as main tests, regressed on event-period indicators (t-1 omitted) in place of Post",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x event-period indicators",
+      "measure": "Treat interacted with indicator for each event period (t-2, t+1, t+2), t-1 omitted group",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same time-varying controls and FE as Table 5 (control coefficients untabulated)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B - Falsification test using pseudo-event window",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "pseudo/placebo event window (four years before actual hostile takeover announcement)",
+    "sample": "pseudo-event window four years before the hostile takeover announcement",
+    "dv": {
+     "name": "Disclosure proxies (all voluntary disclosure measures)",
+     "measure": "same disclosure proxies as main tests",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post (pseudo-event)",
+      "measure": "main DID specification with the event window shifted to four years before the actual hostile takeover announcement",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same time-varying controls and FE as Table 5",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Robustness - Entropy balancing of control variables",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "entropy-balanced treatment vs control",
+    "dv": {
+     "name": "Disclosure proxies",
+     "measure": "same disclosure proxies as main tests",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "control variables balanced via entropy balancing (mean, sd, skewness)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Robustness - Random Compustat control sample (500 iterations)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "random Compustat control firms not in treatment set (500 draws)",
+    "dv": {
+     "name": "Disclosure proxies",
+     "measure": "same disclosure proxies as main tests",
+     "source": "I/B/E/S guidance dataset"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "main DID re-estimated using a random control sample drawn from Compustat firms (equal number to treatment per event, without replacement); regression estimated 500 times and distribution of DID coefficients tabulated",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same time-varying controls and FE as main DID",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Additional test - Downward earnings management by treatment firms",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover announcement in the industry (control threat shock)",
+    "sample": "",
+    "dv": {
+     "name": "Earnings management",
+     "measure": "whether treatment firm managers manage earnings downward (measure detailed in a later section not covered by read windows)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "main DID specification with earnings management as outcome",
+      "source": "SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "not specified in read windows",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

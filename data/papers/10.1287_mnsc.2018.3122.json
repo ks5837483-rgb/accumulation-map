@@ -1,0 +1,816 @@
+{
+ "paper_id": "10.1287_mnsc.2018.3122",
+ "title": "Informed Options Trading Prior to Takeover Announcements: Insider Trading?",
+ "journal": "MNSC",
+ "year": 2019,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market microstructure theory",
+  "information economics",
+  "informed trading theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "informed_options_trading",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "informed_options_trading",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informed_options_trading"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "speculation / rational anticipation of takeovers from observable stock activity and firm characteristics",
+    "news and rumors heard on the street (media speculation)",
+    "legal trading by registered corporate insiders in the target's derivatives",
+    "information leakage / informed trading in the underlying stock market",
+    "[withheld: wording matches the source]",
+    "trading by activist investors (Schedule 13D beneficial ownership filings)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "preference_for_high_leverage_calls",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "preference_for_high_leverage_calls",
+      "relation": "increases",
+      "to": "otm_call_volume_ratio",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "bullish_directional_strategy",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "bullish_directional_strategy",
+      "relation": "increases",
+      "to": "itm_put_volume_ratio",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "preference_for_high_leverage_calls",
+    "bullish_directional_strategy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "size_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_size",
+      "relation": "increases",
+      "to": "options_market_liquidity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "options_market_liquidity",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "deal_size",
+      "relation": "increases",
+      "to": "information_leakage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_leakage",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "options_market_liquidity",
+    "information_leakage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "cash_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_financing",
+      "relation": "increases",
+      "to": "abnormal_announcement_return",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "abnormal_announcement_return",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "cash_financing",
+      "relation": "increases",
+      "to": "deal_completion_likelihood",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_completion_likelihood",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "abnormal_announcement_return",
+    "deal_completion_likelihood"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "toe_prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "toehold",
+      "relation": "increases",
+      "to": "incentive_to_conceal_trading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_conceal_trading",
+      "relation": "decreases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_conceal_trading"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a toehold investor gathers and trades on private information, predicting higher (not lower) abnormal volume"
+   ]
+  },
+  {
+   "hypothesis": "collar_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "collar_structure",
+      "relation": "increases",
+      "to": "price_certainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "price_certainty",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "price_certainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "term_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "termination_fee",
+      "relation": "increases",
+      "to": "deal_completion_certainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_completion_certainty",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_completion_certainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "total_premium_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "total_premium",
+      "relation": "increases",
+      "to": "anticipated_informed_trading_gain",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipated_informed_trading_gain",
+      "relation": "increases",
+      "to": "abnormal_options_trading_volume",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipated_informed_trading_gain"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "sec_litigation_deal_size",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "deal_size",
+      "relation": "increases",
+      "to": "prosecution_cost_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "prosecution_cost_effectiveness",
+      "relation": "increases",
+      "to": "sec_litigation_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "prosecution_cost_effectiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. takeover transactions across sectors; 53.4% same-industry by two-digit SIC)",
+  "country_region": "United States (U.S. target firms)",
+  "time_period": "1996-2012",
+  "sample_description": "U.S. takeover transactions (change-of-control M&As of majority interest, with transaction value above USD 1 million and matching stock and option data for the target), from SDC Platinum, CRSP, and OptionMetrics databases",
+  "sample_size": "1,859 takeover transactions"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "OptionMetrics database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "RavenPack News Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters insider filings",
+    "category": "thomson_refinitiv",
+    "kind": "filings"
+   },
+   {
+    "name": "SEC litigation records",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Schedule 13D beneficial ownership reports",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "International Securities Exchange (signed options volume data)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "1,859 takeover transactions for U.S. target firms, Jan 1996-Dec 2012",
+    "dv": {
+     "name": "cumulative abnormal options trading volume",
+     "measure": "[withheld: wording matches the source]",
+     "source": "OptionMetrics database"
+    },
+    "key_ivs": [
+     {
+      "name": "takeover announcement event",
+      "measure": "event-study abnormal volume for call and put options on target firms in the 30-day preannouncement window",
+      "source": "OptionMetrics database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "OptionMetrics database"
+     },
+     {
+      "name": "CBOE Volatility Index",
+      "source": "other"
+     },
+     {
+      "name": "contemporaneous return of the underlying stock",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "market return (return on the S&P 500 Index)",
+      "source": "other"
+     },
+     {
+      "name": "lagged values of dependent and independent variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1,859 takeover transactions",
+    "dv": {
+     "name": "difference in mean cumulative abnormal options volume across moneyness",
+     "measure": "[withheld: wording matches the source]",
+     "source": "OptionMetrics database"
+    },
+    "key_ivs": [
+     {
+      "name": "option moneyness category",
+      "measure": "[withheld: wording matches the source]",
+      "source": "OptionMetrics database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Columns (1)-(3): Characteristics of Cumulative Abnormal Call Volume (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CABVOLC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "OptionMetrics database"
+    },
+    "key_ivs": [
+     {
+      "name": "SIZE",
+      "measure": "the takeover deal value (indicator/level for deal above median transaction value)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "CASH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TOE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "COLLAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TERM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TRUNUP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TOT_PREMIUM",
+      "measure": "the total premium paid by the bidder (sum of preannouncement run-up TRUNUP, announcement effect TANNRET, and postannouncement return TTPRET1)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PRIVATE",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "FRIENDLY",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "US",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TANNRET",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TTPRET1",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "ARUNUP",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "MKTVOL",
+      "source": "OptionMetrics database"
+     },
+     {
+      "name": "year fixed effects (YEAR FE)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Columns (4)-(5): Logistic regression, indicator DV",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "I(CABVOLC)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "OptionMetrics database"
+    },
+    "key_ivs": [
+     {
+      "name": "SIZE",
+      "measure": "the takeover deal value",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "CASH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "COLLAR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TERM",
+      "measure": "value 1 for deals with a termination fee",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "TRUNUP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TOE",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "PRIVATE",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "FRIENDLY",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "US",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "ARUNUP",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "MKTVOL",
+      "source": "OptionMetrics database"
+     },
+     {
+      "name": "year fixed effects (YEAR FE)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "matched control samples of firms for completed deals, sampled with replacement using Mahalanobis distance metric",
+    "dv": {
+     "name": "cumulative abnormal options trading volume (all/call/put)",
+     "measure": "average cumulative abnormal total, call, and put options volume using the MMV model, controlling for lagged values of dependent and independent variables",
+     "source": "OptionMetrics database"
+    },
+    "key_ivs": [
+     {
+      "name": "treatment vs. control group membership",
+      "measure": "takeover sample (Treatment Group PS0) vs. matched control samples (first best PS1 and two first best PS2)",
+      "source": "OptionMetrics database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "three-month moving average of stock return",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "stock return volatility (exponential-weighted moving average model)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "stock trading volume",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "percentage bid-ask spread (illiquidity)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "three-month cumulative stock returns (momentum)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "SEC litigation prediction (probability of litigation on deal/return characteristics)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "probability of SEC litigation for insider trading",
+     "measure": "likelihood that the SEC examines/litigates a takeover for insider trading in options or stocks",
+     "source": "SEC litigation records"
+    },
+    "key_ivs": [
+     {
+      "name": "preannouncement abnormal options volume",
+      "measure": "target preannouncement cumulative abnormal options volume",
+      "source": "OptionMetrics database"
+     },
+     {
+      "name": "target firm size",
+      "measure": "large target firms",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "substantial abnormal returns after the takeover announcement",
+      "measure": "target abnormal announcement returns",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "foreign acquirer",
+      "measure": "acquirers headquartered outside the United States",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "deals",
+    "public information channels"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "unexplained preannouncement option volumes",
+    "illegal trading activity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "unexplained preannouncement option volumes",
+    "relation": "unspecified",
+    "to": "identified cases of illegal trading activity"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "deal characteristics",
+    "insider trading",
+    "attention of the SEC"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "traders with inside information",
+    "larger companies",
+    "SEC litigation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "abnormal option volumes",
+    "takeover announcements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "informed traders",
+    "itm put transactions",
+    "call trading",
+    "put trading activity"
+   ],
+   "mechanism_named": "arbitrage-based put trading activity",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "unusual options volume",
+    "tips originating with senior executives",
+    "former school ties"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "regulatory enforcement"
+   ],
+   "mechanism_named": "time\nvariation in regulatory enforcement",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

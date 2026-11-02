@@ -1,0 +1,384 @@
+{
+ "paper_id": "10.1016_j.jfineco.2013.06.005",
+ "title": "Mutual fund skill and the performance of corporate acquirers",
+ "journal": "JFE",
+ "year": 2013,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "shareholder monitoring theory",
+  "agency theory",
+  "informed stock selection (market efficiency)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mutual_fund_stock_selection_skill",
+      "relation": "increases",
+      "to": "value_enhancing_acquisitions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_enhancing_acquisitions",
+      "relation": "increases",
+      "to": "post_merger_acquirer_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_enhancing_acquisitions"
+   ],
+   "moderators": [
+    {
+     "construct": "active_share",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "value_enhancing_acquisitions",
+     "moderated_from": "mutual_fund_stock_selection_skill",
+     "moderated_to": "post_merger_acquirer_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1a"
+    },
+    {
+     "construct": "industry_concentration",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "value_enhancing_acquisitions",
+     "moderated_from": "mutual_fund_stock_selection_skill",
+     "moderated_to": "post_merger_acquirer_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirers held by high skill funds perform better because those funds monitor management (shareholder/institutional monitoring), not because of active stock picking",
+    "the fund-skill/performance relation is driven by a stronger presence of independent long-term institutional (ILTI) monitors"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mutual_fund_stock_selection_skill",
+      "relation": "increases",
+      "to": "acquisition_opportunities",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_opportunities",
+      "relation": "increases",
+      "to": "likelihood_of_becoming_acquirer",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_opportunities"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "independent_long_term_institutional_ownership",
+      "relation": "increases",
+      "to": "institutional_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "institutional_monitoring",
+      "relation": "increases",
+      "to": "post_merger_acquirer_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "institutional_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the positive institutional-ownership/performance relation reflects mutual fund stock selection skill (informed stock picking) rather than monitoring"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (universe of publicly traded Compustat firms with positive total assets; acquirers and targets across sectors)",
+  "country_region": "United States",
+  "time_period": "1990-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,988 mergers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) / SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Post-merger performance (BHAR and change in ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "ILTI (concentrated independent long-term institutional ownership)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Other Institutions (OTHERINST)",
+      "source": "Thomson Reuters"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": ""
+     },
+     {
+      "name": "Acquirer MB (market-to-book)",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Size",
+      "source": ""
+     },
+     {
+      "name": "Past Returns",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer calendar time abnormal returns (CTAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Top Alpha24 / Top Alpha12 / Top CCP (deal-level top-quartile fund skill)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; Thomson Reuters"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer calendar time abnormal returns (CTAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Weighted Alpha24 / Weighted Alpha12 / Weighted CCP (deal-level weighted-average fund skill)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; Thomson Reuters"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6: BHAR and change in ROA on fund skill measures (Eq. 1 with skill measures)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Post-merger performance (BHAR and change in ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Top Alpha24 / Top Alpha12 / Top CCP (deal-level top-quartile fund skill)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; Thomson Reuters"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ILTI",
+      "source": "Thomson Reuters"
+     },
+     {
+      "name": "Top Holdings",
+      "source": "Thomson Reuters"
+     },
+     {
+      "name": "Other Institutions",
+      "source": "Thomson Reuters"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": ""
+     },
+     {
+      "name": "Acquirer MB",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Size",
+      "source": ""
+     },
+     {
+      "name": "Past Returns",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "shareholder activism",
+    "mutual fund activism"
+   ],
+   "mechanism_named": "mutual fund activism",
+   "proposed_edge": {
+    "from": "shareholder activism",
+    "relation": "unspecified",
+    "to": "merger performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "institutional ownership",
+    "stock picking"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "stock picking",
+    "relation": "affects",
+    "to": "institutional ownership"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "fund skill measures",
+    "performance-predictive power",
+    "fund sample size"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

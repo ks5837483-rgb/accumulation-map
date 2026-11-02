@@ -1,0 +1,347 @@
+{
+ "paper_id": "10.1016_j.jfineco.2015.08.013",
+ "title": "Target revaluation after failed takeover attempts: Cash versus stock",
+ "journal": "JFE",
+ "year": 2016,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "medium_of_exchange",
+      "relation": "increases",
+      "to": "information_about_target_stand_alone_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_about_target_stand_alone_value",
+      "relation": "increases",
+      "to": "target_revaluation",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_about_target_stand_alone_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogenous selection into deal failure differing between cash and stock targets"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "medium_of_exchange",
+      "relation": "increases",
+      "to": "future_takeover_premia",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "future_takeover_premia",
+      "relation": "increases",
+      "to": "target_revaluation",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "future_takeover_premia"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "medium_of_exchange",
+      "relation": "increases",
+      "to": "operational_improvements",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "operational_improvements",
+      "relation": "increases",
+      "to": "target_revaluation",
+      "from_measured": true,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "operational_improvements"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms involved in failed takeover bids; industry fixed effects based on one-digit SIC codes)",
+  "country_region": "United States",
+  "time_period": "1980-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "236 unsuccessful takeover bids (183 pure deals) in the main sample; 675 deals in the large sample"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis news search and SDC deal synopses (hand-collected failure reasons)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Failure categories (cash coefficient by failure reason)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "150 bids with an identified failure reason; sub-samples N and C formed to reduce endogenous selection to target value",
+    "dv": {
+     "name": "Target (and acquirer) cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Fraction offered in cash",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Monthly portfolio excess return / CAPM alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Monthly market excess return (CAPM)",
+      "measure": "the monthly market excess return",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Main (236), Main Pure (183), N (192), N Pure (152) unsuccessful bids",
+    "dv": {
+     "name": "Target cumulative abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Cash",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Target size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Log(Relative deal size)",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "Offer premium",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "q of acquirer",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "q of target",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects (one-digit SIC)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Hazard-rate models of subsequent takeover activity (future bids)",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Time to future successful takeover bid",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Cash versus stock target",
+      "measure": "targets of unsuccessful cash versus stock bids",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Test of differential post-failure operational policies",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "targets of unsuccessful pure-cash and pure-stock bids",
+    "dv": {
+     "name": "Post-failure operational outcome variables",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Cash versus stock target",
+      "measure": "targets of failed cash versus stock bids",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "selection into deal failure",
+    "cash effect on target cars"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "catalyst channel",
+    "cash and stock targets"
+   ],
+   "mechanism_named": "the catalyst channel",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "operational policies",
+    "managerial decision making"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "information revelation about the target",
+    "real effects induced by takeover bids"
+   ],
+   "mechanism_named": "information effects of takeover bids",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "informational implications of the medium of exchange",
+    "the side of the target"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "medium of exchange",
+    "relation": "affects",
+    "to": "the side of the target"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

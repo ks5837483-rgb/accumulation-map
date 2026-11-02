@@ -1,0 +1,750 @@
+{
+ "paper_id": "10.1287_stsc.2023.0193",
+ "title": "Acquisitions and Corporate Purpose",
+ "journal": "SS",
+ "year": 2023,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "theory of the firm",
+  "corporate purpose theory",
+  "information asymmetry",
+  "signaling theory",
+  "uniqueness paradox"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "strength_of_purpose",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection / omitted-variable bias: the drop reflects preexisting differences among acquiring firms rather than the acquisition itself"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "transaction_uniqueness",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "strength_of_purpose",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "standard predictors of acquisition performance (relatedness, revenue growth, firm diversification) driving the drop rather than uniqueness"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "transaction_uniqueness",
+      "relation": "increases",
+      "to": "strategic_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "strategic_value",
+      "relation": "increases",
+      "to": "cumulative_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "strategic_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "transaction_uniqueness",
+      "relation": "increases",
+      "to": "strategic_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "strategic_value",
+      "relation": "increases",
+      "to": "long_run_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "strategic_value"
+   ],
+   "moderators": [
+    {
+     "construct": "strength_of_purpose",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "employee_motivation",
+     "moderated_from": "transaction_uniqueness",
+     "moderated_to": "long_run_stock_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_experience",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "strength_of_purpose",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (large, well-managed firms that applied to Fortune magazine's \"100 Best Companies to Work For\" list; industry fixed effects included)",
+  "country_region": "",
+  "time_period": "2006-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,732 firm-year applications (panel level; 1.72 million employee survey responses); 831 acquisition transactions (transaction-level main analysis)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Great Place to Work (GPTW) Institute application packages: Trust Index (TI) survey and Culture Audit (CA)",
+    "category": "survey",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5 (Purpose and Acquisitions: Primary Specification, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Panel level, 2,732 firm-year observations",
+    "dv": {
+     "name": "Purpose-Clarity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public",
+      "source": ""
+     },
+     {
+      "name": "Employees",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     },
+     {
+      "name": "Firm age",
+      "source": "Compustat"
+     },
+     {
+      "name": "Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Revenue growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate Uniqueness",
+      "source": "Compustat"
+     },
+     {
+      "name": "Halo control",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     },
+     {
+      "name": "Industry concentration",
+      "source": "Compustat"
+     },
+     {
+      "name": "Job-level controls",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Nearest Neighbor Matching Specification)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Matched samples on propensity to acquire, 2,709-2,713 observations",
+    "dv": {
+     "name": "Purpose-Clarity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Public",
+      "source": ""
+     },
+     {
+      "name": "Employees",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     },
+     {
+      "name": "Firm age",
+      "source": "Compustat"
+     },
+     {
+      "name": "Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Revenue growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate Uniqueness",
+      "source": "Compustat"
+     },
+     {
+      "name": "Halo control",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     },
+     {
+      "name": "Industry concentration",
+      "source": "Compustat"
+     },
+     {
+      "name": "Job-level controls",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (Generalized Difference-in-Differences Specification, stacked TWFE)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "Stacked regression, treated = firms switching to acquiring, control = never-acquiring firms; 959 observations",
+    "dv": {
+     "name": "Purpose-Clarity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm-level covariates (mirror Table 5)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry-level covariates (mirror Table 5)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Halo control",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     },
+     {
+      "name": "Job-level controls",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     },
+     {
+      "name": "Lagged Purpose-Clarity",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (Purpose and Acquisition Characteristics, transaction level OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Transaction level, 831 transactions",
+    "dv": {
+     "name": "Purpose-Clarity",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+    },
+    "key_ivs": [
+     {
+      "name": "Uniqueness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Related",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Unrelated",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquisition experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Time elapsed",
+      "source": "SDC"
+     },
+     {
+      "name": "Employees",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     },
+     {
+      "name": "Firm age",
+      "source": "Compustat"
+     },
+     {
+      "name": "Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Revenue growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate uniqueness",
+      "source": "Compustat"
+     },
+     {
+      "name": "Halo control",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     },
+     {
+      "name": "Acquirer industry concentration",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer industry acquisition intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "Target industry acquisition intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "Lagged Purpose-Clarity",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     },
+     {
+      "name": "Job-level controls",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Transaction level, 786 observations",
+    "dv": {
+     "name": "Cumulative abnormal returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Uniqueness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Related",
+      "source": "SDC"
+     },
+     {
+      "name": "Unrelated",
+      "source": "SDC"
+     },
+     {
+      "name": "Time elapsed",
+      "source": "SDC"
+     },
+     {
+      "name": "Employees",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     },
+     {
+      "name": "Firm age",
+      "source": "Compustat"
+     },
+     {
+      "name": "Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Revenue growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Diversification",
+      "source": "Compustat"
+     },
+     {
+      "name": "Corporate uniqueness",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Halo control",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     },
+     {
+      "name": "Acquirer industry concentration",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer industry acquisition intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "Target industry acquisition intensity",
+      "source": "SDC"
+     },
+     {
+      "name": "Lagged Purpose-Clarity",
+      "source": "Great Place to Work (GPTW) Trust Index (TI) survey"
+     },
+     {
+      "name": "Job-level controls",
+      "source": "Great Place to Work (GPTW) Culture Audit (CA)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Equal-weighted portfolios of sample firms; monthly returns over the study period",
+    "dv": {
+     "name": "Alpha (monthly abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "High-uniqueness portfolio (split by residual Purpose-Clarity)",
+      "measure": "high-uniqueness portfolio of firms engaging in above-median uniqueness transactions, split into low (below-median) and high (above-median) residual purpose subportfolios using residual Purpose-Clarity from a first-stage model of full acquisition, firm, and industry characteristics",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market return",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "firm ownership",
+    "corporate structure",
+    "purpose"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "purposefulness",
+    "purpose"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "acquisition",
+    "purpose of the organization"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "misalignment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target's purpose",
+    "acquiror"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target purpose"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "weaker purpose",
+    "acquiring organization"
+   ],
+   "mechanism_named": "spills over",
+   "proposed_edge": {
+    "from": "targets have weaker purpose",
+    "relation": "decreases",
+    "to": "acquiring organization purpose"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "purpose-clarity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "purpose",
+    "clarity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "purpose",
+    "clarity",
+    "identity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "employee beliefs",
+    "purpose-clarity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

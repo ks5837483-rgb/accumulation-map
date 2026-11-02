@@ -1,0 +1,55 @@
+Extract this empirical study's CONTEXT, EXACTLY as the paper states it, WITH a verbatim quote
+grounding each field.
+
+CORE RULE: report ONLY what the paper actually says. Do NOT infer, generalize, or map to a
+taxonomy. Do NOT add industries, filters, or numbers the paper does not mention. If a field is
+genuinely absent from the paper, its value is "" (empty string). Never guess.
+
+Within what the paper states, be COMPLETE — capture the specific detail, not a clipped label.
+
+FIVE FIELDS. For EACH, give {"value": ..., "evidence_span": ...}:
+
+- industry_setting: the industry, sector, or market studied, named as SPECIFICALLY as the paper
+  names it. If the paper names particular sectors, list them (e.g. "electronic equipment,
+  electronic components, and 3 other Chinese manufacturing sectors" — not just "manufacturing").
+  Keep any qualifier the paper uses (e.g. "leading-edge / high-tech industries"). If the study
+  deliberately spans MANY industries with no focal sector (e.g. "all Compustat firms", "cross-
+  border M&A across sectors"), set value to "cross-industry" and, if the paper says so, name the
+  population (e.g. "cross-industry (publicly traded U.S. firms)"). Do NOT leave this blank for a
+  multi-industry study. value="" ONLY if the paper never describes its industry scope at all.
+
+- country_region: the country or region of the sample. Report it even if it appears only in the
+  data/sample description or the data source. If acquirers and targets differ, say so
+  (e.g. "U.S. acquirers, targets in 44 countries"). value="" if truly not stated.
+
+- time_period: the study's actual DATA/SAMPLE calendar years (e.g. "1990-2011"). If different
+  analyses use different periods, give the overall span covering the main sample. NEVER put a
+  variable's measurement window here (e.g. "the five years preceding the survey" is a measure, not
+  the sample period). value="" if the paper states no sample period.
+
+- sample_description: the units of analysis in the paper's words, INCLUDING the key sampling
+  screens — exclusions ("excluding financial firms and utilities"), size/rank filters ("largest
+  chemicals firms", "Fortune 500"), and the source database if named (Compustat, CRSP, SDC, IRRC,
+  Census of Manufactures, etc.).
+
+- sample_size: the N, as stated. If there is no single N (e.g. an annually-changing panel), give
+  the paper's OWN figure rather than "" (e.g. "each IRRC volume: 1,400-1,800 firms"). Report the
+  primary N of the main analysis. value="" only if no count appears.
+
+EVIDENCE_SPAN (grounding, REQUIRED):
+- For each field whose value is non-empty, evidence_span = a BYTE-EXACT quote copied from the
+  paper (a phrase or sentence) that states the fact. Copy it EXACTLY: same whitespace, dashes,
+  soft-hyphens, and quote characters. Do NOT straighten quotes, rejoin hyphenated line-breaks, or
+  paraphrase. The span must be findable by exact string search in the source text.
+- The value may be cleaned/normalized (e.g. "1990-2011", "cross-industry"); the evidence_span is
+  the raw supporting quote.
+- If a field's value is "", its evidence_span is "".
+
+Return ONLY strict JSON (no prose), exactly this shape:
+{"paper_id":"<the DOI you were given>",
+ "context":{
+   "industry_setting":{"value":"","evidence_span":""},
+   "country_region":{"value":"","evidence_span":""},
+   "time_period":{"value":"","evidence_span":""},
+   "sample_description":{"value":"","evidence_span":""},
+   "sample_size":{"value":"","evidence_span":""}}}

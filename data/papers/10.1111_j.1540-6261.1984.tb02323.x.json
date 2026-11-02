@@ -1,0 +1,225 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1984.tb02323.x",
+ "title": "Investigating the Valuation Effects of Announcements of Voluntary Corporate Selloffs",
+ "journal": "JF",
+ "year": 1984,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient markets hypothesis",
+  "information asymmetry",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "primary",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "voluntary_selloff_announcement",
+      "relation": "increases",
+      "to": "investor_beliefs_about_firm_prospects",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_beliefs_about_firm_prospects",
+      "relation": "increases",
+      "to": "abnormal_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_beliefs_about_firm_prospects"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "secondary",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "semistrong_market_efficiency",
+      "relation": "increases",
+      "to": "speed_of_price_adjustment",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "speed_of_price_adjustment",
+      "relation": "decreases",
+      "to": "pre_and_post_announcement_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "speed_of_price_adjustment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "model misspecification (the observed abnormal returns are an artifact of the return-generating model rather than real information effects)"
+   ]
+  },
+  {
+   "hypothesis": "info_release_prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "voluntary_selloff_announcement",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "abnormal_stock_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "model misspecification (the pre-event negative abnormal returns are an artifact of the return-generating model rather than a real information release)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (New York Stock Exchange-listed parent firms making voluntary corporate selloffs)",
+  "country_region": "United States",
+  "time_period": "1964-1973",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "53 selloffs (main sample; subsample of 39)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP tapes",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "overall test sample N = 53 selloffs (announced 1964-1973, NYSE-listed) and subsample N = 39 firms with no other selloff announcements",
+    "dv": {
+     "name": "abnormal stock return around selloff announcement",
+     "measure": "cumulative average residual returns (CARs), t = -30 through t = +30, computed as deviations from mean-adjusted expected return using three estimation procedures (both-but-separate, both-combined, pre-only)",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "voluntary corporate selloff announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II - t-tests of cumulative average standardized residual returns (CASRs)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "test sample N = 53 (with a paired control sample of 53 firms drawn from CRSP for the model-misspecification check)",
+    "dv": {
+     "name": "abnormal stock return (standardized)",
+     "measure": "cumulative average standardized residual returns (CASRs) and associated t-statistics over event windows: two-day announcement period (t = -1, 0), overall CASR (t = -30 to +30 excluding t = -1 and t = 0), pre-event CASR (t = -30 through t = -2), and post-event CASR; tested under three estimation procedures plus a Market Adjusted Returns technique (residuals as Rit - Rmt vs. CRSP equally-weighted index)",
+     "source": "CRSP tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "voluntary corporate selloff announcement",
+      "measure": "announcement date (event day t = 0) from the Wall Street Journal; two-day (t = -1, 0), pre-event, post-event, and overall event windows",
+      "source": "Wall Street Journal"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "large and small selloffs",
+    "valuation effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "size of selloff",
+    "on_path": [
+     "selloff",
+     "valuation effects"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "financial characteristics of firms announcing selloffs and spinoffs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "financial characteristics of firms announcing selloffs and spinoffs",
+    "relation": "unspecified",
+    "to": "shareholder wealth"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "subsample",
+    "overall sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

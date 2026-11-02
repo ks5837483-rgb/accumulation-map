@@ -1,0 +1,885 @@
+{
+ "paper_id": "10.1002_smj.2672",
+ "title": "Stakeholder Orientation and Acquisition Performance",
+ "journal": "SMJ",
+ "year": 2017,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "stakeholder theory",
+  "stakeholder-based view of the firm",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stakeholder_orientation",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "stakeholder_orientation",
+      "relation": "increases",
+      "to": "accuracy_of_target_valuation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "accuracy_of_target_valuation",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "stakeholder_orientation",
+      "relation": "decreases",
+      "to": "causal_ambiguity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "causal_ambiguity",
+      "relation": "decreases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "accuracy_of_target_valuation",
+    "causal_ambiguity"
+   ],
+   "moderators": [
+    {
+     "construct": "business_relatedness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "accuracy_of_target_valuation",
+     "moderated_from": "stakeholder_orientation",
+     "moderated_to": "acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    },
+    {
+     "construct": "structural_integration",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "causal_ambiguity",
+     "moderated_from": "stakeholder_orientation",
+     "moderated_to": "acquisition_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogeneity / self-selection: the acquirer's nonrandom choice to be stakeholder-oriented is driven by firm characteristics that themselves drive acquisition performance (so the association is spurious rather than causal)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (large US-based listed acquiring firms across industries)",
+  "country_region": "United States (listed US acquiring firms)",
+  "time_period": "2002-2010",
+  "sample_description": "Acquisitions completed by large US-based listed firms (2002-2010) whose stakeholder orientation was mapped by the Thomson Reuters Asset4 database; acquisition data from the Zephyr BvD database, with stock returns and controls from CRSP and Compustat; excluding acquisitions of minority stakes (<60%), business units, assets, or factories, purely financial acquisitions by banks/funds, group reorganizations, partially owned joint ventures, and extreme return outliers",
+  "sample_size": "1,884 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters Asset4 database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Zephyr BvD database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Kinder, Lynderburg and Domini (KLD) database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model 0 (baseline, controls only)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "acquiring firm's growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "concentration of the market (Four-Firm Concentration Ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer's experience",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "minority share",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "cross-border",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "motivation - technological innovation",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "motivation - cost efficiency",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "acquirer's previous performance (ROA)",
+      "source": "Compustat"
+     },
+     {
+      "name": "size difference",
+      "source": "Compustat/Zephyr BvD database"
+     },
+     {
+      "name": "acquirer's resource slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "business relatedness",
+      "source": "SIC codes"
+     },
+     {
+      "name": "structural integration",
+      "source": "Businessweek/Bloomberg database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 1 (main effect of stakeholder orientation on CAR-36)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "aggregate stakeholder orientation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters Asset4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquiring firm's growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "concentration of the market",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer's experience",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "minority share",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "cross-border",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "motivation - technological innovation",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "motivation - cost efficiency",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "acquirer's previous performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "size difference",
+      "source": "Compustat/Zephyr BvD database"
+     },
+     {
+      "name": "acquirer's resource slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "business relatedness",
+      "source": "SIC codes"
+     },
+     {
+      "name": "structural integration",
+      "source": "Businessweek/Bloomberg database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2 (business relatedness moderation)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "aggregate stakeholder orientation",
+      "measure": "average of the four normalized (0-1) stakeholder category scores; standardized",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "business relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SIC codes (Zephyr BvD/Compustat)"
+     },
+     {
+      "name": "aggregate stakeholder orientation x business relatedness",
+      "measure": "interaction of standardized aggregate stakeholder orientation and standardized business relatedness",
+      "source": "Thomson Reuters Asset4 database; SIC codes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquiring firm's growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "concentration of the market",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer's experience",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "minority share",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "cross-border",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "motivation - technological innovation",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "motivation - cost efficiency",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "acquirer's previous performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "size difference",
+      "source": "Compustat/Zephyr BvD database"
+     },
+     {
+      "name": "acquirer's resource slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "structural integration",
+      "source": "Businessweek/Bloomberg database"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (structural integration moderation, second-step with inverse Mills ratio)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "aggregate stakeholder orientation",
+      "measure": "average of the four normalized (0-1) stakeholder category scores; standardized",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "structural integration",
+      "measure": "hand coded from Businessweek company snapshots; = 0 if target reported 'operating as a subsidiary' (not integrated), = 1 if reported 'acquired' with no separate existence (integrated)",
+      "source": "Businessweek/Bloomberg database"
+     },
+     {
+      "name": "aggregate stakeholder orientation x structural integration",
+      "measure": "interaction of standardized aggregate stakeholder orientation and structural integration",
+      "source": "Thomson Reuters Asset4 database; Businessweek/Bloomberg database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "inverse Mills ratio (integration)",
+      "source": "computed from Table 4 first-stage selection model"
+     },
+     {
+      "name": "acquiring firm's growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "concentration of the market",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer's experience",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "minority share",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "cross-border",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "motivation - technological innovation",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "motivation - cost efficiency",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "acquirer's previous performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "size difference",
+      "source": "Compustat/Zephyr BvD database"
+     },
+     {
+      "name": "acquirer's resource slack",
+      "source": "Compustat"
+     },
+     {
+      "name": "business relatedness",
+      "source": "SIC codes"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 8 (first-stage selection model predicting structural integration)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "structural integration",
+     "measure": "hand coded binary indicator of whether the target was integrated (=1) versus remained a separate subsidiary (=0), from Businessweek company snapshots",
+     "source": "Businessweek/Bloomberg database"
+    },
+    "key_ivs": [
+     {
+      "name": "target firm's age (instrument)",
+      "measure": "logarithm of the years from foundation",
+      "source": "Businessweek/Bloomberg database"
+     },
+     {
+      "name": "aggregate stakeholder orientation",
+      "measure": "average of the four normalized (0-1) stakeholder category scores; standardized",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "business relatedness",
+      "measure": "score between zero and nine from primary/secondary four-digit SIC code matching",
+      "source": "SIC codes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "cross-border",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "size difference",
+      "source": "Compustat/Zephyr BvD database"
+     },
+     {
+      "name": "acquirer's experience",
+      "source": "Zephyr BvD database"
+     },
+     {
+      "name": "motivation - cost efficiency",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "motivation - technological innovation",
+      "source": "hand-coded press releases (Zephyr BvD)"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Models 4 & 5 (split-sample by business relatedness: LOW vs HIGH, median cutoff)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample split along business relatedness (HIGH vs LOW) using the median as cutoff (N=772 HIGH, N=1112 LOW)",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "aggregate stakeholder orientation",
+      "measure": "average of the four normalized (0-1) stakeholder category scores; standardized",
+      "source": "Thomson Reuters Asset4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (growth, market concentration, experience, minority share, cross-border, motivations, previous performance, size difference, resource slack, business relatedness, structural integration)",
+      "source": "Compustat/Zephyr BvD/SIC codes/Businessweek"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Models 6 & 7 (sub-groups: non-integrated vs integrated targets)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sub-groups split by whether target was integrated (N=890) vs not integrated (N=994)",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "aggregate stakeholder orientation",
+      "measure": "average of the four normalized (0-1) stakeholder category scores; standardized",
+      "source": "Thomson Reuters Asset4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (growth, market concentration, experience, minority share, cross-border, motivations, previous performance, size difference, resource slack, business relatedness, structural integration)",
+      "source": "Compustat/Zephyr BvD/SIC codes/Businessweek"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Models 9-12 (separate stakeholder category main effects: employee, customer, supplier, community)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "employee orientation",
+      "measure": "sum of four dummy items in the Asset4 'Employment quality' macro-category, ranges 0 (low) to 4 (high); log-transformed (natural log plus one)",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "customer orientation",
+      "measure": "Asset4's 'Customer loyalty' macro-item constructed from 46 raw items, ranges 0 to 100",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "supplier orientation",
+      "measure": "sum of four Asset4 dummy items on commitment/practices toward suppliers, ranges 0 (low) to 4 (high); log-transformed (natural log plus one)",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "local community orientation",
+      "measure": "Asset4's 'Local communities' macro-variable aggregating 126 raw items, ranges 0 to 100",
+      "source": "Thomson Reuters Asset4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (growth, market concentration, experience, minority share, cross-border, motivations, previous performance, size difference, resource slack, business relatedness, structural integration)",
+      "source": "Compustat/Zephyr BvD/SIC codes/Businessweek"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Model 13 (orthogonalized full model of the four categories + Wald tests)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "employee orientation (orthogonalized)",
+      "measure": "log-transformed employee orientation, orthogonalized before inclusion (McCallum, 1970)",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "customer orientation (orthogonalized)",
+      "measure": "customer loyalty macro-item, orthogonalized",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "supplier orientation (orthogonalized)",
+      "measure": "log-transformed supplier orientation, orthogonalized",
+      "source": "Thomson Reuters Asset4 database"
+     },
+     {
+      "name": "community orientation (orthogonalized)",
+      "measure": "local communities macro-variable, orthogonalized",
+      "source": "Thomson Reuters Asset4 database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set (growth, market concentration, experience, minority share, cross-border, motivations, previous performance, size difference, resource slack, business relatedness, structural integration)",
+      "source": "Compustat/Zephyr BvD/SIC codes/Businessweek"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Models 14 & 15 (single-category x business relatedness interactions: employee, customer)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "employee orientation x business relatedness",
+      "measure": "interaction of log-transformed employee orientation and standardized business relatedness",
+      "source": "Thomson Reuters Asset4 database; SIC codes"
+     },
+     {
+      "name": "customer orientation x business relatedness",
+      "measure": "interaction of customer orientation and standardized business relatedness",
+      "source": "Thomson Reuters Asset4 database; SIC codes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set + constituent main effects",
+      "source": "Compustat/Zephyr BvD/SIC codes/Businessweek"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Models 20 & 21 (single-category x structural integration interactions: supplier, community)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "acquisition long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "supplier orientation x structural integration",
+      "measure": "interaction of log-transformed supplier orientation and structural integration",
+      "source": "Thomson Reuters Asset4 database; Businessweek/Bloomberg database"
+     },
+     {
+      "name": "community orientation x structural integration",
+      "measure": "interaction of local community orientation and structural integration",
+      "source": "Thomson Reuters Asset4 database; Businessweek/Bloomberg database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "full control set + constituent main effects + inverse Mills ratio",
+      "source": "Compustat/Zephyr BvD/SIC codes/Businessweek"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "postacquisition integration",
+    "acquisition performance",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "postacquisition integration",
+     "acquisition performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "acquirer’s orientation toward stakeholders",
+    "different phases of the acquisition process"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquirer’s orientation toward stakeholders",
+    "relation": "affects",
+    "to": "different phases of the acquisition process"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "heterogeneity within the same stakeholder group",
+    "firm performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "heterogeneity within the same stakeholder group",
+    "relation": "affects",
+    "to": "firm performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "acquired firm’s stakeholder orientation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "structural integration"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "business relatedness",
+    "structural integration",
+    "networks of stakeholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "stakeholder-based view of the firm",
+    "corporate strategy decisions and processes"
+   ],
+   "mechanism_named": "stakeholder-based view of the firm",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

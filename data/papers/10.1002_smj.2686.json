@@ -1,0 +1,862 @@
+{
+ "paper_id": "10.1002_smj.2686",
+ "title": "Acquisition Motives and the Distribution of Acquisition Performance",
+ "journal": "SMJ",
+ "year": 2017,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "resource-based view",
+  "synergy theory",
+  "behavioral decision theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "operating_synergy_acquisition",
+      "relation": "increases",
+      "to": "resource_uniqueness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "resource_uniqueness",
+      "relation": "increases",
+      "to": "extreme_positive_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "operating_synergy_acquisition",
+      "relation": "increases",
+      "to": "uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "uncertainty",
+      "relation": "increases",
+      "to": "extreme_positive_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "resource_uniqueness",
+    "uncertainty"
+   ],
+   "moderators": [
+    {
+     "construct": "prior_acquisition_experience",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "uncertainty",
+     "moderated_from": "operating_synergy_acquisition",
+     "moderated_to": "extreme_positive_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered_moderation"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the upside is due to luck / serendipity rather than acquirer information advantage"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "operating_synergy_acquisition",
+      "relation": "increases",
+      "to": "valuation_and_implementation_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_and_implementation_difficulty",
+      "relation": "increases",
+      "to": "extreme_negative_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_and_implementation_difficulty"
+   ],
+   "moderators": [
+    {
+     "construct": "prior_alliance_tie",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "valuation_and_implementation_difficulty",
+     "moderated_from": "operating_synergy_acquisition",
+     "moderated_to": "extreme_negative_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered_moderation"
+    },
+    {
+     "construct": "geographic_proximity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "valuation_and_implementation_difficulty",
+     "moderated_from": "operating_synergy_acquisition",
+     "moderated_to": "extreme_negative_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered_moderation"
+    },
+    {
+     "construct": "prior_acquisition_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "valuation_and_implementation_difficulty",
+     "moderated_from": "operating_synergy_acquisition",
+     "moderated_to": "extreme_negative_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "unnumbered_moderation"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the downside reflects agency-driven acquisitions (managers claiming operating synergies for self-interested reasons)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (domestic acquisitions by publicly traded, non-financial acquirers, covering 55 two-digit SIC industries)",
+  "country_region": "United States (domestic acquisitions)",
+  "time_period": "2000-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,222 acquisition transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Factiva (press release and conference call transcript disclosures)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1a",
+     "H1b"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Buy-and-hold abnormal returns (BHARs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Operating synergy acquisition",
+      "measure": "indicator for acquisition motive inferred from managers' public rationales at announcement, coded as operating vs. financial synergy from press releases, conference call transcripts, and S-4/14A/14D filings (=1 for operating synergy)",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer pre-acquisition profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "Research & Development intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Free cash flows",
+      "source": "Compustat"
+     },
+     {
+      "name": "Private target (pre-acquisition status)",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size of transaction",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bidders for target",
+      "source": "SDC"
+     },
+     {
+      "name": "Four-digit same industry membership",
+      "source": "SDC"
+     },
+     {
+      "name": "Geographical proximity",
+      "source": ""
+     },
+     {
+      "name": "100% cash-financed deal (all cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "100% stock-financed deal (all stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior alliance partnership",
+      "source": "SDC"
+     },
+     {
+      "name": "Dot-com bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Housing bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Post-acquisition divestiture",
+      "source": "SDC"
+     },
+     {
+      "name": "Two-digit SIC industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Buy-and-hold abnormal returns (BHARs)",
+     "measure": "2-year buy-and-hold abnormal returns (BHARs), compounding 24 monthly market-adjusted returns after the acquisition announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Operating synergy acquisition",
+      "measure": "indicator for operating vs. financial synergy motive coded from managers' public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Operating synergy acquisition x prior alliance tie",
+      "measure": "interaction of operating synergy indicator with a dummy variable that indicates a prior alliance tie between the acquirer and target firms",
+      "source": "SDC"
+     },
+     {
+      "name": "Operating synergy acquisition x geographical proximity",
+      "measure": "interaction of operating synergy indicator with a dummy variable indicating whether the firms are geographically proximate",
+      "source": ""
+     },
+     {
+      "name": "Operating synergy acquisition x prior experience",
+      "measure": "interaction of operating synergy indicator with a dummy variable indicating whether the acquirer has prior acquisition experience",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer pre-acquisition profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "Research & Development intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Free cash flows",
+      "source": "Compustat"
+     },
+     {
+      "name": "Private target (pre-acquisition status)",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size of transaction",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bidders for target",
+      "source": "SDC"
+     },
+     {
+      "name": "Four-digit same industry membership",
+      "source": "SDC"
+     },
+     {
+      "name": "Geographical proximity",
+      "source": ""
+     },
+     {
+      "name": "100% cash-financed deal (all cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "100% stock-financed deal (all stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior alliance partnership",
+      "source": "SDC"
+     },
+     {
+      "name": "Dot-com bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Housing bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Post-acquisition divestiture",
+      "source": "SDC"
+     },
+     {
+      "name": "Two-digit SIC industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Quantile Regressions of BHARS and Granular Acquisition Reasons - 8 disaggregated synergy reasons at 10th and 90th percentiles",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Buy-and-hold abnormal returns (BHARs)",
+     "measure": "2-year buy-and-hold abnormal returns (BHARs), compounding 24 monthly market-adjusted returns after the acquisition announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Economies of scale",
+      "measure": "indicator for economies of scale/scope acquisition reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Innovation",
+      "measure": "indicator for revenue growth via innovation/new product creation reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Revenue growth - geographic expansion",
+      "measure": "indicator for revenue growth via access to target's geographic footprint reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Revenue growth - product offering",
+      "measure": "indicator for revenue growth via target's product offerings reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Reducing competition",
+      "measure": "indicator for market capitalization/competition reduction reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Diversification of cash flows",
+      "measure": "indicator for diversification of revenue streams/cash flows reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Financing alternative",
+      "measure": "indicator for financing alternatives/resources reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     },
+     {
+      "name": "Liquidity",
+      "measure": "indicator for market liquidity reason hand-coded from public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer pre-acquisition profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "Research & Development intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Free cash flows",
+      "source": "Compustat"
+     },
+     {
+      "name": "Private target (pre-acquisition status)",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size of transaction",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bidders for target",
+      "source": "SDC"
+     },
+     {
+      "name": "Four-digit same industry membership",
+      "source": "SDC"
+     },
+     {
+      "name": "Geographical proximity",
+      "source": ""
+     },
+     {
+      "name": "100% cash-financed deal (all cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "100% stock-financed deal (all stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior alliance partnership",
+      "source": "SDC"
+     },
+     {
+      "name": "Dot-com bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Housing bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Post-acquisition divestiture",
+      "source": "SDC"
+     },
+     {
+      "name": "Two-digit SIC industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Column (1): Post-Acquisition Goodwill Impairment Likelihood (Logit)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1,222 acquisition transactions; 2,067 observations (post-acquisition goodwill impairment tests)",
+    "dv": {
+     "name": "Goodwill impairment incidence",
+     "measure": "indicator for whether the acquirer reported a post-acquisition goodwill impairment (goodwill impairments reported on the firm's income statement)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Operating synergy acquisition",
+      "measure": "indicator for operating vs. financial synergy motive coded from managers' public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer pre-acquisition profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "Research & Development intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Free cash flows",
+      "source": "Compustat"
+     },
+     {
+      "name": "Private target (pre-acquisition status)",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size of transaction",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bidders for target",
+      "source": "SDC"
+     },
+     {
+      "name": "Four-digit same industry membership",
+      "source": "SDC"
+     },
+     {
+      "name": "Geographical proximity",
+      "source": ""
+     },
+     {
+      "name": "100% cash-financed deal (all cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "100% stock-financed deal (all stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior alliance partnership",
+      "source": "SDC"
+     },
+     {
+      "name": "Dot-com bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Housing bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Post-acquisition divestiture",
+      "source": "SDC"
+     },
+     {
+      "name": "Two-digit SIC industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, Column (2): Post-Acquisition Goodwill Impairment Magnitude (Tobit)",
+    "hypotheses": [
+     "H1a"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1,222 acquisition transactions; 2,067 observations (post-acquisition goodwill impairment tests)",
+    "dv": {
+     "name": "Goodwill impairment magnitude",
+     "measure": "magnitude of post-acquisition goodwill impairment (reported on the firm's income statement)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Operating synergy acquisition",
+      "measure": "indicator for operating vs. financial synergy motive coded from managers' public disclosures",
+      "source": "SEC EDGAR filings; Factiva (hand-coded)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer pre-acquisition profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "Research & Development intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Advertising intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Free cash flows",
+      "source": "Compustat"
+     },
+     {
+      "name": "Private target (pre-acquisition status)",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size of transaction",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing bidders for target",
+      "source": "SDC"
+     },
+     {
+      "name": "Four-digit same industry membership",
+      "source": "SDC"
+     },
+     {
+      "name": "Geographical proximity",
+      "source": ""
+     },
+     {
+      "name": "100% cash-financed deal (all cash deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "100% stock-financed deal (all stock deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "Prior alliance partnership",
+      "source": "SDC"
+     },
+     {
+      "name": "Dot-com bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Housing bubble transaction",
+      "source": ""
+     },
+     {
+      "name": "Post-acquisition divestiture",
+      "source": "SDC"
+     },
+     {
+      "name": "Two-digit SIC industry dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "acquiring firm characteristics",
+    "acquisition motives"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "acquiring firm characteristics",
+    "on_path": [
+     "acquisition motives",
+     "acquisition performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "stated motivation",
+    "competitor response"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "stated motivation",
+    "relation": "affects",
+    "to": "competitor response"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "acquisition motives",
+    "acquisition performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "unobservable differences between acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "managerial hubris"
+   ],
+   "mechanism_named": "managerial hubris",
+   "proposed_edge": {
+    "from": "managerial hubris",
+    "relation": "affects",
+    "to": "acquisition motives"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "strategic motives"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "manager-provided reasons"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "operating synergies",
+    "left-hand tail of acquisitions",
+    "agency-driven acquisitions"
+   ],
+   "mechanism_named": "agency-driven acquisitions",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "manager-provided reasons",
+    "reasons articulated by other players"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "reasons given by a manager",
+    "acquisition success or failure"
+   ],
+   "mechanism_named": "discourse as a strategic tool",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "cost-savings synergies",
+    "revenue enhancement synergies",
+    "synergy-specific effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "operating synergy acquisitions",
+    "financial synergy acquisitions",
+    "downside and greater upside"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "upside of operating synergy acquisitions",
+    "luck",
+    "superior information"
+   ],
+   "mechanism_named": "luck",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "acquisition motives",
+    "acquisition outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "acquisition motives",
+    "relation": "affects",
+    "to": "acquisition outcomes"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

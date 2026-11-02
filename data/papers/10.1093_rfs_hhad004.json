@@ -1,0 +1,549 @@
+{
+ "paper_id": "10.1093_rfs_hhad004",
+ "title": "Neglected Peers in Merger Valuations",
+ "journal": "RFS",
+ "year": 2023,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "limited attention theory",
+  "investor inattention",
+  "information economics",
+  "acquisition probability hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_peer_selection",
+      "relation": "increases",
+      "to": "attractiveness_to_other_bidders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "attractiveness_to_other_bidders",
+      "relation": "increases",
+      "to": "takeover_target_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "attractiveness_to_other_bidders"
+   ],
+   "moderators": [
+    {
+     "construct": "target_information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information asymmetry",
+     "moderated_from": "investment_bank_peer_selection",
+     "moderated_to": "takeover_target_likelihood",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "observable product market or industry effect (peers become targets merely because they are in the same industry/product market space)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_peer_selection",
+      "relation": "increases",
+      "to": "takeover_induced_demand",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_induced_demand",
+      "relation": "increases",
+      "to": "institutional_ownership",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "takeover_induced_demand"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_peer_selection",
+      "relation": "increases",
+      "to": "analyst_switching_from_delisted_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "analyst_switching_from_delisted_target",
+      "relation": "increases",
+      "to": "analyst_coverage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "analyst_switching_from_delisted_target"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_peer_selection",
+      "relation": "increases",
+      "to": "institutional_ownership_and_investor_recognition_and_analyst_coverage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "institutional_ownership_and_investor_recognition_and_analyst_coverage",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "institutional_ownership_and_investor_recognition_and_analyst_coverage"
+   ],
+   "moderators": [
+    {
+     "construct": "abnormal_turnover",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "investor attention",
+     "moderated_from": "investment_bank_peer_selection",
+     "moderated_to": "abnormal_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "momentum effect / continuation of pre-deal outperformance rather than an effect of bank selection",
+    "temporary overpricing (returns reflect mispricing that later reverses)",
+    "short-sale constraints / limits to arbitrage explanation for the anomaly"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_confidential_information_access",
+      "relation": "increases",
+      "to": "advisor_informational_advantage",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "advisor_informational_advantage",
+      "relation": "increases",
+      "to": "takeover_target_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "advisor_informational_advantage"
+   ],
+   "moderators": [
+    {
+     "construct": "target_information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information asymmetry",
+     "moderated_from": "investment_bank_confidential_information_access",
+     "moderated_to": "takeover_target_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_peer_selection_by_bank",
+      "relation": "increases",
+      "to": "bank_deal_facilitation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_deal_facilitation",
+      "relation": "increases",
+      "to": "likelihood_bank_hired_as_advisor",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_deal_facilitation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_peer_selection",
+      "relation": "increases",
+      "to": "investor_monitoring_and_governance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_monitoring_and_governance",
+      "relation": "decreases",
+      "to": "corporate_investment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_monitoring_and_governance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_peer_selection",
+      "relation": "increases",
+      "to": "investor_monitoring_and_governance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_monitoring_and_governance",
+      "relation": "increases",
+      "to": "total_payout",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_monitoring_and_governance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "nonsignificant",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "nonsalience_and_complexity_of_peer_disclosure",
+      "relation": "increases",
+      "to": "investor_inattention",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "investor_inattention",
+      "relation": "decreases",
+      "to": "market_price_reaction_at_filing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_inattention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market-efficiency explanation: the market already incorporated the peer information before the public disclosure of merger filings"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquisitions of publicly traded U.S. firms)",
+  "country_region": "United States",
+  "time_period": "1994-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "32,682 pairs of peer and matched control firms (from 3,984 deals disclosing comparable companies)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Panel C: Summary statistics comparing takeover targets, selected peers, and control firms (test of differences in medians)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "32,682 pairs of comparable companies (selected peers) and matched control firms; 3,984 deals",
+    "dv": {
+     "name": "Firm characteristics (size, valuation multiples, fundamentals)",
+     "measure": "Median values of total assets, market cap, enterprise value, M/B, EV/EBITDA, sales growth, operating cash flow, ROA, gross/EBITDA/EBIT/net income margins, EPS, and EBITDA- and EBIT-to-interest coverage ratios",
+     "source": "Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Firm group (selected peer vs. target; selected peer vs. control)",
+      "measure": "Group membership: selected peer firms vs. takeover target firms, and selected peer firms vs. matched control firms",
+      "source": "Hand-collected (merger documents)/SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, Panel B: Probability of peers becoming a takeover target (Equation 1)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Peer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected (merger documents/EDGAR)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(AT)",
+      "source": "Compustat"
+     },
+     {
+      "name": "B/M",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Prior return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Ivol",
+      "source": "CRSP"
+     },
+     {
+      "name": "Illiquidity",
+      "source": "CRSP"
+     },
+     {
+      "name": "Sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash holding",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A: Short-term CAR surrounding the filing date (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "Public disclosure of merger filing documents (merger filing date)",
+    "sample": "",
+    "dv": {
+     "name": "CAR (cumulative abnormal return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Peer vs. control firm",
+      "measure": "Peer firm vs. matched (industry and size) control firm indicator",
+      "source": "Hand-collected (merger documents)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Panel B: Short-term CAR surrounding the deal announcement date (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "Merger/deal announcement",
+    "sample": "",
+    "dv": {
+     "name": "CAR (cumulative abnormal return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Peer vs. control firm",
+      "measure": "Peer firm vs. matched (industry and size) control firm indicator",
+      "source": "Hand-collected (merger documents)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Panels A-D: Calendar-time portfolio returns (long peers, short controls), 3/6/12/24-month holding periods with asset pricing factor models",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Monthly calendar-time portfolio return / alpha",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Peer-control portfolio (long peers, short controls)",
+      "measure": "Long selected peer firms and short matched control firms; equal-weighted calendar-time portfolio",
+      "source": "Hand-collected (merger documents)/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market (CAPM) factor",
+      "source": ""
+     },
+     {
+      "name": "Fama-French factors (SMB, HML)",
+      "source": ""
+     },
+     {
+      "name": "Momentum factor (UMD)",
+      "source": ""
+     },
+     {
+      "name": "Profitability and investment factors (RMW, CMA)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "edgar downloads",
+    "investor attention"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

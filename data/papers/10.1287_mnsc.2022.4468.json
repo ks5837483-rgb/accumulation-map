@@ -1,0 +1,833 @@
+{
+ "paper_id": "10.1287_mnsc.2022.4468",
+ "title": "Analysts’ Connections and M&amp;A Outcomes",
+ "journal": "MNSC",
+ "year": 2023,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "financial intermediation",
+  "career concerns theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "acquirer_deal_screening",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_deal_screening",
+      "relation": "decreases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_deal_screening"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection of analysts into deals (analysts initiating coverage of deals they view favorably)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "acquirer_deal_screening",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_deal_screening",
+      "relation": "increases",
+      "to": "expected_synergy_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_deal_screening"
+   ],
+   "moderators": [
+    {
+     "construct": "deal_completion",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquirer_deal_screening",
+     "moderated_from": "shared_analyst_coverage",
+     "moderated_to": "expected_synergy_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection of analysts into deals (analysts initiating coverage of deals they view favorably)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "acquirer_deal_screening",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_deal_screening",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_deal_screening"
+   ],
+   "moderators": [
+    {
+     "construct": "deal_completion",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "acquirer_deal_screening",
+     "moderated_from": "shared_analyst_coverage",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selection of analysts into deals (analysts initiating coverage of deals they view favorably)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "acquirer_surplus_extraction",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_surplus_extraction",
+      "relation": "decreases",
+      "to": "target_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_surplus_extraction"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "relevant_information_pricing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relevant_information_pricing",
+      "relation": "decreases",
+      "to": "acquirer_cash_flow_uncertainty",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relevant_information_pricing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "acquirer_performance_prospects",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_performance_prospects",
+      "relation": "increases",
+      "to": "acquirer_return_on_assets",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_performance_prospects"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "acquirer_performance_prospects",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_performance_prospects",
+      "relation": "increases",
+      "to": "acquirer_buy_and_hold_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_performance_prospects"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "timely_information_access",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "timely_information_access",
+      "relation": "increases",
+      "to": "likelihood_of_issuing_estimate",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "timely_information_access"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_estimate_issuance",
+      "relation": "increases",
+      "to": "cross_firm_information_diffusion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cross_firm_information_diffusion",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cross_firm_information_diffusion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "selective (private) disclosure as the information channel rather than diffusion of public information"
+   ]
+  },
+  {
+   "hypothesis": "P10",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "coverage_post_completion",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P11",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "top_broker_employment",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P12",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shared_analyst_coverage",
+      "relation": "increases",
+      "to": "superior_information_about_combination",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "superior_information_about_combination",
+      "relation": "increases",
+      "to": "forecast_accuracy",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "superior_information_about_combination"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry M&A of public firms, excluding financial firms, utilities, and government companies",
+  "country_region": "",
+  "time_period": "1990-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,869 completed and 403 withdrawn deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Broker's Estimate System (IBES / I/B/E/S)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Optionmetrics Volatility Surface database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Investors Magazine (IIM) All-Americans rankings",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Federal Trade Commission Website (list of deals withdrawn for regulatory reasons)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Hoberg and Phillips (2010/2016) text-based measure of product-market proximity",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3: Likelihood of Completion (Probit, Sample-1)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Sample-1: 786 shared-analyst deals matched without replacement to 786 non-shared deals (1,572/1,532 obs)",
+    "dv": {
+     "name": "Completed",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (FTC website used to identify/exclude regulatory withdrawals)"
+    },
+    "key_ivs": [
+     {
+      "name": "Shared",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IBES"
+     },
+     {
+      "name": "Shared (non-affiliated)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IBES"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market Cap. Acquirer",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Market Cap. Target",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Leverage Acquirer",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage Target",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Market-to-Book Acquirer",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Market-to-Book Target",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "ROA Acquirer (profitability)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ROA Target (profitability)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Cash Ratio Acquirer",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Cash Ratio Target",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Stock Run-up Acquirer",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock Run-up Target",
+      "source": "CRSP"
+     },
+     {
+      "name": "High-Tech Acquirer",
+      "source": "SDC/COMPUSTAT"
+     },
+     {
+      "name": "High-Tech Target",
+      "source": "SDC/COMPUSTAT"
+     },
+     {
+      "name": "Stock Payment Perc. (method of payment)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC/COMPUSTAT"
+     },
+     {
+      "name": "Type of Deal (diversifying/horizontal, four-digit GICS)",
+      "source": "SDC/GICS"
+     },
+     {
+      "name": "H-P peer (product-market rivalry, text-based industry classification)",
+      "source": "Hoberg and Phillips text-based measure"
+     },
+     {
+      "name": "Acquirer Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Target Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Experience-Only/Shared (Target & Acquirer)",
+      "source": "IBES"
+     },
+     {
+      "name": "Accuracy-Only/Shared (Target & Acquirer)",
+      "source": "IBES"
+     },
+     {
+      "name": "Acquirer and target industry fixed effects (four-digit GICS)",
+      "source": "GICS"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Deal Quality - Expected synergy gains (OLS on Sample-2, Eq. (3))",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Sample-2: 366 withdrawn deals matched to 366 completed deals (732 obs); SEs clustered at acquirer and target industry level",
+    "dv": {
+     "name": "Synergy[-1,+1] (Expected Synergy Gains)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (returns), COMPUSTAT/CRSP (equity market value)"
+    },
+    "key_ivs": [
+     {
+      "name": "Shared x Completed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "IBES x SDC"
+     },
+     {
+      "name": "Shared(non-affiliated) x Completed",
+      "measure": "interaction of Shared (non-affiliated) with the Completed indicator",
+      "source": "IBES x SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Completed",
+      "source": "SDC/FTC"
+     },
+     {
+      "name": "Shared (main effect)",
+      "source": "IBES"
+     },
+     {
+      "name": "Market Cap. Acquirer",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Market Cap. Target",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Leverage Acquirer",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Leverage Target",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Market-to-Book Acquirer",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Market-to-Book Target",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "ROA Acquirer",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "ROA Target",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Cash Ratio Acquirer",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Cash Ratio Target",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Stock Run-up Acquirer",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock Run-up Target",
+      "source": "CRSP"
+     },
+     {
+      "name": "High-Tech Acquirer",
+      "source": "SDC/COMPUSTAT"
+     },
+     {
+      "name": "High-Tech Target",
+      "source": "SDC/COMPUSTAT"
+     },
+     {
+      "name": "Stock Payment Perc.",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC/COMPUSTAT"
+     },
+     {
+      "name": "Type of Deal / H-P peer",
+      "source": "GICS / Hoberg-Phillips"
+     },
+     {
+      "name": "Acquirer Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Target Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Experience-Only/Shared, Accuracy-Only/Shared",
+      "source": "IBES"
+     },
+     {
+      "name": "Acquirer and target industry fixed effects (four-digit GICS)",
+      "source": "GICS"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Acquirer announcement returns ACAR[-1,+1] (Eq. (3), Sample-2)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Sample-2 (matched withdrawn/completed); SEs clustered at the acquirer level",
+    "dv": {
+     "name": "Acquirer CAR ACAR[-1,+1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Shared x Completed",
+      "measure": "interaction of Shared with the Completed indicator",
+      "source": "IBES x SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Completed",
+      "source": "SDC/FTC"
+     },
+     {
+      "name": "Shared (main effect)",
+      "source": "IBES"
+     },
+     {
+      "name": "Same control set as Table 3/4 (acquirer & target market cap, leverage, M/B, ROA, cash ratio, run-up, high-tech, method of payment, relative size, type of deal, H-P peer, coverage)",
+      "source": "COMPUSTAT/CRSP/SDC/IBES/Hoberg-Phillips"
+     },
+     {
+      "name": "Acquirer and target industry fixed effects, Year fixed effects (GICS)",
+      "source": "GICS"
+     }
+    ]
+   },
+   {
+    "label": "Target announcement returns TCAR[-1,+1] (Eq. (3), Sample-2)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "Sample-2 (matched withdrawn/completed); SEs clustered at the target level",
+    "dv": {
+     "name": "Target CAR TCAR[-1,+1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Shared x Completed",
+      "measure": "interaction of Shared with the Completed indicator",
+      "source": "IBES x SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Completed",
+      "source": "SDC/FTC"
+     },
+     {
+      "name": "Shared (main effect)",
+      "source": "IBES"
+     },
+     {
+      "name": "Same control set as Table 3/4",
+      "source": "COMPUSTAT/CRSP/SDC/IBES/Hoberg-Phillips"
+     },
+     {
+      "name": "Acquirer and target industry fixed effects, Year fixed effects (GICS)",
+      "source": "GICS"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "incentive/compensation structure of analysts",
+    "career outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "toeholds"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

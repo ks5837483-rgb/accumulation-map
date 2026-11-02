@@ -1,0 +1,343 @@
+{
+ "paper_id": "10.1016_0304-405x(95)00865-c",
+ "title": "Markup pricing in mergers and acquisitions",
+ "journal": "JFE",
+ "year": 1996,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "auction theory",
+  "efficient markets hypothesis",
+  "hubris hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "markup pricing prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_bid_runup",
+      "relation": "increases",
+      "to": "perceived_competing_bidder",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "perceived_competing_bidder",
+      "relation": "increases",
+      "to": "total_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_competing_bidder"
+   ],
+   "moderators": [
+    {
+     "construct": "insider_trading",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_competing_bidder",
+     "moderated_from": "pre_bid_runup",
+     "moderated_to": "total_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "markup pricing prediction"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "hubris hypothesis (Roll 1986) — bidders irrationally overpay to win takeover contests, which would also produce a lack of substitution between runup and markup",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "hubris hypothesis (Roll 1986)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_pre_bid_runup",
+      "relation": "increases",
+      "to": "bidder_overpayment",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "bidder_overpayment",
+      "relation": "decreases",
+      "to": "bidder_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_overpayment"
+   ],
+   "moderators": [
+    {
+     "construct": "multiple_bidder_auction",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "genuine_competition",
+     "moderated_from": "target_pre_bid_runup",
+     "moderated_to": "bidder_stock_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "hubris hypothesis (Roll 1986)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE- and AMEX-listed exchange-listed target firms)",
+  "country_region": "United States",
+  "time_period": "1975-91",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,814 total takeovers (main sample 1,523)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval (DJNR)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Commerce Clearing House's Capital Changes Reporter",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Corporate Control Alert",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis S.E.C. Release file",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Average pre-bid runups and post-announcement markups for total and main samples and deal-characteristic subsamples",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "Total sample 1,814 takeovers; main sample 1,523 (excludes deals >1 year to consummate, target equity value <$10 million, or pre-runup price <$2/share)",
+    "dv": {
+     "name": "Runup and Markup (target abnormal returns)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Deal characteristic subsample (Success, News, Pill, Auctions, Tender Offers, MBO, Cash, Equity, Insiders, year)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Robert Comment's proprietary database; News/Insiders from Dow Jones News Retrieval, Wall Street Journal Index, Lexis S.E.C. Release file; Pills from Corporate Control Alert"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Simple regressions of total premium on pre-bid runup (Eq. 5) across samples",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Estimated separately for All (1,814), Main (1,523), Successful, Unsuccessful, News/No news, with/without Pills, single/multiple bidders, tender offers/mergers, MBOs, all-cash/all-equity, insider-prosecution/no-prosecution, and by year of first bid; White's (1980) heteroskedasticity-consistent standard errors",
+    "dv": {
+     "name": "Premium (total premium paid to target stockholders)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Runup (pre-bid runup)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Multiple regression of total premium on runup and deal-characteristic dummies with interactions (Eq. 7)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Main sample, 1,503 degrees of freedom; White's (1980) heteroskedasticity-consistent standard errors; joint chi-square(9) tests for slope-change and intercept-change coefficients",
+    "dv": {
+     "name": "Premium (total premium paid to target stockholders)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Runup (pre-bid runup)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Robert Comment's proprietary database; News/Insider from Dow Jones News Retrieval, Wall Street Journal Index, Lexis S.E.C. Release file; Pill from Corporate Control Alert"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Multiple regressions of markups over 11 markup periods on runups measured over 9 nonoverlapping pre-bid periods (Eq. 8)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Markup measured over various post-bid spans (11 markup periods)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Runups over nine nonoverlapping pre-bid periods",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bidder's stock price",
+    "target's stock price"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "probability",
+    "target"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "pre-bid trading volumes",
+    "s.e.c. investigations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "pre-bid trading volumes",
+    "relation": "affects",
+    "to": "s.e.c. investigations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "market price of the target stock",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "market price of the target stock",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "market price of the target firm",
+    "offers and counteroffers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "market price of the target firm",
+    "relation": "affects",
+    "to": "offers and counteroffers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "market price of the target firm"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "market price of the target firm",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "time series of valuations",
+    "target’s stock price"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "target’s stock price",
+    "relation": "affects",
+    "to": "time series of valuations"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

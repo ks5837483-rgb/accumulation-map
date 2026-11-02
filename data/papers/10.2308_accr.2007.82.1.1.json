@@ -1,0 +1,419 @@
+{
+ "paper_id": "10.2308_accr.2007.82.1.1",
+ "title": "Segment Profitability, Misvaluation, and Corporate Divestment",
+ "journal": "AR",
+ "year": 2007,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "real options valuation theory",
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reported_segment_profitability_divergence",
+      "relation": "increases",
+      "to": "undervaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "undervaluation",
+      "relation": "increases",
+      "to": "divestment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "undervaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divestment",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "abnormal_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "expected improvements in future operating performance",
+    "decreased firm risk"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reported_segment_profitability_divergence",
+      "relation": "increases",
+      "to": "undervaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "undervaluation",
+      "relation": "increases",
+      "to": "abnormal_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "undervaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "separating out a poor-performing segment",
+    "information asymmetry proxied by dispersion of analyst forecasts (Krishnaswami and Subramaniam 1999)"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_structural_complexity",
+      "relation": "increases",
+      "to": "undervaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "undervaluation",
+      "relation": "increases",
+      "to": "abnormal_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "undervaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (divested segments span a wide range of industries, e.g. industrial machinery, chemicals, oil and gas exploration)",
+  "country_region": "United States (NYSE/AMEX-listed firms; CRSP/Compustat)",
+  "time_period": "1990-2001",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "554 segment divestments undertaken by 518 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Industry Segment file",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP tape",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "News Library on Lexis/Nexis",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "consensus analyst earnings forecasts",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "profitability divergence between divested and continuing segments",
+     "measure": "operating return (operating earnings divided by assets), profitabilities of the divested and continuing segments computed from year -5 to year -1",
+     "source": "Compustat Industry Segment file"
+    },
+    "key_ivs": [
+     {
+      "name": "relative year to divestment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "full sample of 554 segmental divestments plus subsamples of sell-offs (455) and spin-offs (99)",
+    "dv": {
+     "name": "CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP tape"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Changes in analyst earnings forecasts (Panel A) and firm risk beta/total risk (Panel B) before vs after divestment (H2b)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "change in earnings expectations and firm risk after vs before divestment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "consensus analyst earnings forecasts; CRSP"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "operating performance of continuing segments after divestment",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat Industry Segment file"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 7 Panel A - Regression of CAR on profitability divergence and firm complexity (H3, H4)",
+    "hypotheses": [
+     "H3",
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "overall sample (n=554)",
+    "dv": {
+     "name": "CAR",
+     "measure": "two-day cumulative abnormal stock return to the divestment announcement",
+     "source": "CRSP tape"
+    },
+    "key_ivs": [
+     {
+      "name": "DIVPROF (profitability divergence)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industry Segment file"
+     },
+     {
+      "name": "M (firm complexity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industry Segment file"
+     },
+     {
+      "name": "ASYINF (information asymmetry / firm complexity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "consensus analyst earnings forecasts"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPINOFF",
+      "source": "hand-collected (News Library on Lexis/Nexis); Compustat"
+     },
+     {
+      "name": "Qi (profitability of divested segment, asset-weighted)",
+      "source": "Compustat Industry Segment file"
+     },
+     {
+      "name": "delta EF0 (change in current-year earnings forecast)",
+      "source": "consensus analyst earnings forecasts"
+     },
+     {
+      "name": "delta EF1 (change in year-ahead earnings forecast)",
+      "source": "consensus analyst earnings forecasts"
+     },
+     {
+      "name": "delta Beta (change in systematic risk)",
+      "source": "CRSP"
+     },
+     {
+      "name": "FOCUS (asset-weighted dummy for divested segment outside parent two-digit SIC)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel B - Pre- vs post-SFAS No. 131 subperiod robustness of Model 10f (H3, H4)",
+    "hypotheses": [
+     "H3",
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "SFAS No. 131",
+    "sample": "pre-SFAS No. 131 (1990-1997) and post-SFAS No. 131 (1998-2001) subperiods",
+    "dv": {
+     "name": "CAR",
+     "measure": "two-day cumulative abnormal stock return to the divestment announcement",
+     "source": "CRSP tape"
+    },
+    "key_ivs": [
+     {
+      "name": "DIVPROF (profitability divergence)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industry Segment file"
+     },
+     {
+      "name": "ASYINF (information asymmetry)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "consensus analyst earnings forecasts"
+     },
+     {
+      "name": "M (firm complexity)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat Industry Segment file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPINOFF",
+      "source": "hand-collected; Compustat"
+     },
+     {
+      "name": "Qi",
+      "source": "Compustat Industry Segment file"
+     },
+     {
+      "name": "delta EF0",
+      "source": "consensus analyst earnings forecasts"
+     },
+     {
+      "name": "delta EF1",
+      "source": "consensus analyst earnings forecasts"
+     },
+     {
+      "name": "delta Beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "FOCUS",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "valuation-based motive for divestment",
+    "sfas no. 131"
+   ],
+   "mechanism_named": "valuation-based motive for divestment",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "sfas no. 131",
+    "cross-segment earnings manipulation",
+    "quality of segment reporting",
+    "misvaluation problem"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "sfas no. 131",
+    "relation": "decreases",
+    "to": "cross-segment earnings manipulation"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "divestment sample sizes",
+    "information asymmetry",
+    "sfas no. 131"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "sfas no. 131",
+    "relation": "decreases",
+    "to": "information asymmetry"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

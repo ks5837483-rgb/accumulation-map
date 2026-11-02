@@ -1,0 +1,982 @@
+{
+ "paper_id": "10.1002_smj.2120",
+ "title": "Performance of acquirers of divested assets: Evidence from the\n                    <scp>U.S</scp>\n                    . software industry",
+ "journal": "SMJ",
+ "year": 2013,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient market hypothesis",
+  "relative bargaining power",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_of_divested_assets",
+      "relation": "decreases",
+      "to": "market_competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_competition",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquisition_of_divested_assets",
+      "relation": "decreases",
+      "to": "overpayment",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "overpayment",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_competition",
+    "overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "self-selection / endogeneity bias (acquirers' nonrandom decision to acquire divested assets rather than a genuine divested-asset return effect)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "increase_in_asset_relatedness",
+      "relation": "increases",
+      "to": "synergistic_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergistic_value",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "increase_in_asset_relatedness",
+      "relation": "increases",
+      "to": "information_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_advantage",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergistic_value",
+    "information_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "seller_financial_distress",
+      "relation": "decreases",
+      "to": "seller_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "seller_bargaining_power",
+      "relation": "decreases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "seller_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "increase_in_asset_relatedness",
+      "relation": "increases",
+      "to": "value_creation_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_creation_potential",
+      "relation": "increases",
+      "to": "acquirer_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_creation_potential"
+   ],
+   "moderators": [
+    {
+     "construct": "seller_financial_distress",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "buyer_bargaining_power",
+     "moderated_from": "increase_in_asset_relatedness",
+     "moderated_to": "acquirer_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (publicly listed U.S.-based acquirers)",
+  "time_period": "1988-2008 (January 1988 to January 2009)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,079 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson SDC database / SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Reuters Business Briefs",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "First Order databases",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database / SDC Platinum database"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "5,079 acquisitions split by type (4,056 stand-alone [584 public, 3,472 private], 1,023 divested-asset)",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "event-study abnormal returns (event dates/announcements from Thomson SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "divestiture flag in SDC Platinum: acquisitions of divested assets = 1, acquisitions of stand-alone firms = 0 (1,023 of 5,079 classified as acquisitions of divested assets); public vs private stand-alone split",
+      "source": "Thomson SDC database / SDC Platinum database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3, Model 1: Heckman two-stage CAR regression, controls only",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR(-2, +2); cumulative difference between observed and expected return surrounding the divestiture announcement; estimation window 250 trading days from 295 to 45 days before the event; market portfolio = NASDAQ Composite Index",
+     "source": "event-study abnormal returns"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Acquirer size (log of acquirer's total assets)",
+      "source": ""
+     },
+     {
+      "name": "Acquirer diversification (number of different SIC code industries the acquirer operates in)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Foreign bid (dummy = 1 for acquisition of non-U.S. assets, 0 for U.S. assets)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Method of payment (= 1 for cash deals, 0 for share deals or cash+share combination)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Deal price disclosure (= 1 if deal price disclosed, 0 otherwise)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio (lambda) from first-stage selection model",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2: CAR regression, private stand-alone acquisition dummy (private vs public firms)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR(-2, +2); event-study cumulative abnormal return around divestiture announcement; market portfolio = NASDAQ Composite Index",
+     "source": "event-study abnormal returns"
+    },
+    "key_ivs": [
+     {
+      "name": "Private stand-alone acquisition dummy",
+      "measure": "dummy distinguishing acquisitions of private firms from acquisitions of public firms",
+      "source": "Thomson SDC database / SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquirer-to-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Foreign bid",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Method of payment",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Deal price disclosure",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio (lambda)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3: CAR regression, acquisition of divested assets dummy (divested assets vs stand-alone) - test of H1",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR(-2, +2); event-study cumulative abnormal return around divestiture announcement; market portfolio = NASDAQ Composite Index",
+     "source": "event-study abnormal returns"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition of divested assets (dummy)",
+      "measure": "based on the SDC Platinum divestiture flag, acquisitions of divested assets assigned a value of 1 and acquisitions of stand-alone firms a value of 0",
+      "source": "Thomson SDC database / SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquirer-to-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Foreign bid",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Method of payment",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Deal price disclosure",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio (lambda)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "stand-alone acquisitions of private targets vs acquisitions of divested assets",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR(-2, +2); event-study cumulative abnormal return around divestiture announcement; market portfolio = NASDAQ Composite Index",
+     "source": "event-study abnormal returns"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquisition of divested assets (dummy), compared against private-target stand-alone acquisitions",
+      "measure": "SDC Platinum divestiture-flag-based dummy (divested assets = 1) contrasted with stand-alone acquisitions of private targets",
+      "source": "Thomson SDC database / SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquirer-to-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Foreign bid",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Method of payment",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Deal price disclosure",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio (lambda)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 5: CAR regression, increase in asset relatedness - test of H2 (divested-asset subsample)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR(-2, +2); event-study cumulative abnormal return around divestiture announcement; market portfolio = NASDAQ Composite Index",
+     "source": "event-study abnormal returns"
+    },
+    "key_ivs": [
+     {
+      "name": "Increase in asset relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC database / SDC Platinum database (SIC codes)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquirer-to-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Foreign bid",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Method of payment",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Deal price disclosure",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio (lambda)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 6: CAR regression, seller distress - test of H3",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "observations drop to 451 due to absence of financial-leverage data for privately held sellers",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR(-2, +2); event-study cumulative abnormal return around divestiture announcement; market portfolio = NASDAQ Composite Index",
+     "source": "event-study abnormal returns"
+    },
+    "key_ivs": [
+     {
+      "name": "Seller distress",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquirer-to-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Foreign bid",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Method of payment",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Deal price disclosure",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio (lambda)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "acquisitions of divested assets",
+    "dv": {
+     "name": "Acquirer cumulative abnormal returns (CAR)",
+     "measure": "CAR(-2, +2); event-study cumulative abnormal return around divestiture announcement; market portfolio = NASDAQ Composite Index",
+     "source": "event-study abnormal returns"
+    },
+    "key_ivs": [
+     {
+      "name": "Increase in asset relatedness and seller distress (co-occurrence dummy)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC database / SDC Platinum database (SIC codes) and firm leverage data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer diversification",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Acquirer-to-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Foreign bid",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Method of payment",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Deal price disclosure",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio (lambda)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 1: Fixed effects panel regression, controls only (DV = longer-term change in market value)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-level three-year panel (435 observations)",
+    "dv": {
+     "name": "Acquirer's longer-term (three-year) change in market value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock market value data (NASDAQ Composite Index as market adjustment)"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "General acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of foreign bids (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of cash deals (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions with price disclosure (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 2: FE panel regression, percentage of acquisitions of divested assets and percentage of private targets - H1 (panel, divested vs private)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-level three-year panel (379 observations)",
+    "dv": {
+     "name": "Acquirer's longer-term (three-year) change in market value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock market value data"
+    },
+    "key_ivs": [
+     {
+      "name": "Percentage of acquisitions of divested assets (three years)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions of private targets (three years)",
+      "measure": "three-year percentage of acquisitions of private targets",
+      "source": "Thomson SDC database / SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "General acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of foreign bids (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of cash deals (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions with price disclosure (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 3: FE panel regression, percentage of acquisitions of divested assets - H1 (panel)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-level three-year panel (435 observations)",
+    "dv": {
+     "name": "Acquirer's longer-term (three-year) change in market value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock market value data"
+    },
+    "key_ivs": [
+     {
+      "name": "Percentage of acquisitions of divested assets (three years)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC database / SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "General acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of foreign bids (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of cash deals (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions with price disclosure (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 4: FE panel regression, percentage of divested-asset acquisitions with increased asset relatedness - test of H2 (panel)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-level three-year panel (435 observations)",
+    "dv": {
+     "name": "Acquirer's longer-term (three-year) change in market value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock market value data"
+    },
+    "key_ivs": [
+     {
+      "name": "Percentage of acquisition of divested assets with increased asset relatedness (three years)",
+      "measure": "three-year percentage of divested-asset acquisitions with an increase in asset relatedness (SIC-code-based relatedness score, acquirer-to-target minus seller-to-target)",
+      "source": "Thomson SDC database / SDC Platinum database (SIC codes)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "General acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of foreign bids (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of cash deals (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions with price disclosure (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions of divested assets (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model 5: FE panel regression, percentage of divested-asset acquisitions with distressed seller - test of H3 (panel)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-level three-year panel (435 observations)",
+    "dv": {
+     "name": "Acquirer's longer-term (three-year) change in market value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock market value data"
+    },
+    "key_ivs": [
+     {
+      "name": "Percentage of acquisitions of divested assets with distressed seller (three years)",
+      "measure": "three-year percentage of divested-asset acquisitions in which the seller is in financial distress (debt-to-total-assets ratio, top-quartile leverage)",
+      "source": "firm leverage data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "General acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of foreign bids (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of cash deals (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions with price disclosure (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions of divested assets (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-level three-year panel (435 observations)",
+    "dv": {
+     "name": "Acquirer's longer-term (three-year) change in market value",
+     "measure": "[withheld: wording matches the source]",
+     "source": "stock market value data"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC database / SDC Platinum database (SIC codes) and firm leverage data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer size",
+      "source": ""
+     },
+     {
+      "name": "Acquirer-target similarity",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "General acquisition experience",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of foreign bids (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of cash deals (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions with price disclosure (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Percentage of acquisitions of divested assets (three years)",
+      "source": "Thomson SDC database / SDC Platinum database"
+     },
+     {
+      "name": "Year trend",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

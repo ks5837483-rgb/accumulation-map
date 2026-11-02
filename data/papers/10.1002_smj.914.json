@@ -1,0 +1,798 @@
+{
+ "paper_id": "10.1002_smj.914",
+ "title": "Geographic distance and corporate acquisitions: signals from IPO firms",
+ "journal": "SMJ",
+ "year": 2011,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "venture_capitalist_backing",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "geographic_distance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target's geographic location (states with high VC activity coinciding with more active M&A markets) drives the VC-distance association rather than signaling"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_reputation",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "geographic_distance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ipo_underpricing",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "geographic_distance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (broad cross-section of industries; manufacturing (SIC 2000-3900) and services (SIC 7000-8900) together over 76% of observations)",
+  "country_region": "United States (domestic acquisitions)",
+  "time_period": "1993-2002",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "212 transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Security Data Corporation (SDC) database (IPO / new issues, M&A, and alliance modules)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Carter and Manaster (1990) / Carter et al. (1998) / Loughran and Ritter (2004) underwriter reputation rankings",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Panel A: Actual deals (N=212) - univariate geographic distance by signal class",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "212 actual acquisition deals",
+    "dv": {
+     "name": "Geographic distance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target IPO VC backed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (new issues module)"
+     },
+     {
+      "name": "Target IPO IB reputation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Carter-Manaster / Loughran-Ritter underwriter reputation rankings"
+     },
+     {
+      "name": "Target IPO underpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 1, Panel B: Actual and alternative deals - localization / geographic bias by signal",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "212 actual and 5,265 alternative deals",
+    "dv": {
+     "name": "Geographic distance (actual vs. alternative acquirers)",
+     "measure": "Great Circle distance in miles from IPO target to the actual acquirer versus to alternative acquirers (comparable-size, same 2-digit SIC, active +/-3 years)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target IPO VC backed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (new issues module)"
+     },
+     {
+      "name": "Target IPO IB reputation",
+      "measure": "Carter-Manaster / Loughran-Ritter reputation score (1-9), dichotomized at most reputable",
+      "source": "Carter-Manaster / Loughran-Ritter underwriter reputation rankings"
+     },
+     {
+      "name": "Target IPO underpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2: Descriptive statistics and correlation matrix",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Geographic distance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target IPO VC backed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (new issues module)"
+     },
+     {
+      "name": "Target IPO IB reputation",
+      "measure": "Carter-Manaster / Loughran-Ritter reputation score (1-9)",
+      "source": "Carter-Manaster / Loughran-Ritter underwriter reputation rankings"
+     },
+     {
+      "name": "Target IPO underpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Partial acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "Target analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Target size",
+      "source": ""
+     },
+     {
+      "name": "Target alliance activity",
+      "source": "SDC (alliance module)"
+     },
+     {
+      "name": "Target high-tech industry",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, OLS models (Columns I-IV): Geographic distance regressions",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Geographic distance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target IPO VC backed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (new issues module)"
+     },
+     {
+      "name": "Target IPO IB reputation",
+      "measure": "Carter and Manaster (1990) / Carter et al. (1998) / Loughran and Ritter (2004) reputation scale (1-9); dichotomized (most reputable = nine) and also modeled as raw reputation scores",
+      "source": "Carter-Manaster / Loughran-Ritter underwriter reputation rankings"
+     },
+     {
+      "name": "Target IPO underpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Partial acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "Target analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Target size",
+      "source": ""
+     },
+     {
+      "name": "Target alliance activity",
+      "source": "SDC (alliance module)"
+     },
+     {
+      "name": "Target high-tech industry",
+      "source": ""
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Tobit models (Columns V-VIII): Geographic distance regressions",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Geographic distance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target IPO VC backed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (new issues module)"
+     },
+     {
+      "name": "Target IPO IB reputation",
+      "measure": "Carter-Manaster / Loughran-Ritter reputation scale (1-9); dichotomized and raw score specifications",
+      "source": "Carter-Manaster / Loughran-Ritter underwriter reputation rankings"
+     },
+     {
+      "name": "Target IPO underpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Partial acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "Target analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Target size",
+      "source": ""
+     },
+     {
+      "name": "Target alliance activity",
+      "source": "SDC (alliance module)"
+     },
+     {
+      "name": "Target high-tech industry",
+      "source": ""
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Effects of geographic location (Tobit models with state indicators)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Geographic distance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target IPO VC backed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (new issues module)"
+     },
+     {
+      "name": "Target IPO IB reputation",
+      "measure": "Carter-Manaster / Loughran-Ritter reputation scale (1-9)",
+      "source": "Carter-Manaster / Loughran-Ritter underwriter reputation rankings"
+     },
+     {
+      "name": "Target IPO underpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Partial acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "Target analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Target size",
+      "source": ""
+     },
+     {
+      "name": "Target alliance activity",
+      "source": "SDC (alliance module)"
+     },
+     {
+      "name": "Target high-tech industry",
+      "source": ""
+     },
+     {
+      "name": "California state indicator",
+      "source": ""
+     },
+     {
+      "name": "Massachusetts state indicator",
+      "source": ""
+     },
+     {
+      "name": "New York state indicator",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Geographic bias OLS estimation results",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Geographic bias",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Target IPO VC backed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (new issues module)"
+     },
+     {
+      "name": "Target IPO IB reputation",
+      "measure": "Carter-Manaster / Loughran-Ritter reputation scale (1-9)",
+      "source": "Carter-Manaster / Loughran-Ritter underwriter reputation rankings"
+     },
+     {
+      "name": "Target IPO underpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer M&A experience",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Partial acquisition",
+      "source": "SDC"
+     },
+     {
+      "name": "Target analyst coverage",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Target size",
+      "source": ""
+     },
+     {
+      "name": "Target alliance activity",
+      "source": "SDC (alliance module)"
+     },
+     {
+      "name": "Target high-tech industry",
+      "source": ""
+     },
+     {
+      "name": "California state indicator",
+      "source": ""
+     },
+     {
+      "name": "Massachusetts state indicator",
+      "source": ""
+     },
+     {
+      "name": "New York state indicator",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "signals",
+    "imitation or market entry",
+    "entrepreneurial firms"
+   ],
+   "mechanism_named": "signaling theory",
+   "proposed_edge": {
+    "from": "signals",
+    "relation": "affects",
+    "to": "imitation or market entry"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "geographic proximity",
+    "signals",
+    "contingent contracts",
+    "shared ownership",
+    "trust"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "social and asocial remedies",
+    "relation": "unspecified",
+    "to": "adverse selection"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "domestic acquisitions",
+    "newly public targets",
+    "cross-border transactions",
+    "more established targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "contingencies",
+    "geographic distance",
+    "corporate acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "contingencies",
+    "on_path": [
+     "geographic distance",
+     "corporate acquisitions"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "geographic distance",
+    "geography of other facilities or interfirm networks",
+    "acquisition deal making"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "geographic distance",
+    "other types of corporate investments",
+    "strategic alliances",
+    "organic expansion"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "geographic distance",
+    "relation": "affects",
+    "to": "other types of corporate investments"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "governance changes",
+    "top management shifts",
+    "liquidity constraints",
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "other features of these organizations",
+    "relation": "affects",
+    "to": "acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "signaling characteristics of IPO firms",
+    "target selection",
+    "deal structuring choices",
+    "post-acquisition management",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "signaling characteristics of IPO firms",
+    "relation": "affects",
+    "to": "other aspects of the M&A process"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "IPO firms on the buy side of transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "performance implications",
+    "M&As",
+    "sellers",
+    "buyers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "M&As",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "geographic distance",
+    "performance implications",
+    "acquirers",
+    "targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "geographic distance",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "signaling",
+    "contingent contracts",
+    "shared ownership",
+    "effectiveness",
+    "sellers",
+    "buyers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "remedies",
+    "relation": "affects",
+    "to": "effectiveness"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "adverse selection",
+    "investment behavior"
+   ],
+   "mechanism_named": "adverse selection",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ex ante exchange hazards",
+    "ex post exchange hazards",
+    "corporate acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ex post exchange hazards",
+    "relation": "affects",
+    "to": "corporate acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "geographic distance",
+    "ex ante and ex post hazards",
+    "acquisition management",
+    "acquisitions"
+   ],
+   "mechanism_named": "information impactedness, agency",
+   "proposed_edge": {
+    "from": "geographic distance",
+    "relation": "affects",
+    "to": "acquisitions"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

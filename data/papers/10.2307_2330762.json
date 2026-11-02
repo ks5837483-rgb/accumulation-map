@@ -1,0 +1,497 @@
+{
+ "paper_id": "10.2307_2330762",
+ "title": "Predicting Tender Offer Success: A Logistic Analysis",
+ "journal": "JFQA",
+ "year": 1985,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "supply and demand theory",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bid_premium",
+      "relation": "increases",
+      "to": "obtainable_shares",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "obtainable_shares",
+      "relation": "increases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "obtainable_shares"
+   ],
+   "moderators": [
+    {
+     "construct": "contested_offer",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "obtainable_shares",
+     "moderated_from": "bid_premium",
+     "moderated_to": "tender_offer_success",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_resistance",
+      "relation": "decreases",
+      "to": "obtainable_shares",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "obtainable_shares",
+      "relation": "increases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "obtainable_shares"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bidder_ownership",
+      "relation": "increases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "increases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "bidder_ownership",
+      "relation": "increases",
+      "to": "perceived_bidder_motivation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_bidder_motivation",
+      "relation": "increases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power",
+    "perceived_bidder_motivation"
+   ],
+   "moderators": [
+    {
+     "construct": "contested_offer",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "obtainable_shares",
+     "moderated_from": "bidder_ownership",
+     "moderated_to": "tender_offer_success",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "solicitation_fees",
+      "relation": "increases",
+      "to": "offer_information_dissemination",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "offer_information_dissemination",
+      "relation": "increases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "solicitation_fees",
+      "relation": "increases",
+      "to": "obtainable_shares",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "obtainable_shares",
+      "relation": "increases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "offer_information_dissemination",
+    "obtainable_shares"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "not_reported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "competing_bids",
+      "relation": "increases",
+      "to": "excess_demand_for_shares",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "excess_demand_for_shares",
+      "relation": "decreases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "competing_bids",
+      "relation": "increases",
+      "to": "possibility_of_bid_revision",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "possibility_of_bid_revision",
+      "relation": "decreases",
+      "to": "tender_offer_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "excess_demand_for_shares",
+    "possibility_of_bid_revision"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cash tender offers filed at the SEC)",
+  "country_region": "United States",
+  "time_period": "1972-1977",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "158 offers (108 estimation + 50 validation)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal and The Wall Street Journal Index",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Value Lines Investments Survey",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Funk and Scott's Index of Corporations",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Compustat's Annual, Over the Counter, and Research Tapes",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Panel A: LOGIT probability-of-success model (full sample), three alternative bid premium specifications",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "estimation sample of 108 cash tender offers filed at the SEC, January 1972 through September 1976",
+    "dv": {
+     "name": "Tender offer success",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Statements 13D and 14D filed at the SEC"
+    },
+    "key_ivs": [
+     {
+      "name": "BP (bid premium)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC; Stock Price Guide (Standard and Poors)"
+     },
+     {
+      "name": "RESIST (managerial resistance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC; The Wall Street Journal"
+     },
+     {
+      "name": "BIDSHARE (percentage of shares owned by the bidder)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC"
+     },
+     {
+      "name": "SOLFEE (solicitation fees)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC"
+     },
+     {
+      "name": "OPPBID (opposing/competing bid)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC; The Wall Street Journal"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 1, Panel B: reduced LOGIT success models estimated separately on uncontested and contested subsamples",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "estimation sample split into separate subsamples of uncontested and contested offers",
+    "dv": {
+     "name": "Tender offer success",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Statements 13D and 14D filed at the SEC"
+    },
+    "key_ivs": [
+     {
+      "name": "BP (bid premium)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC; Stock Price Guide (Standard and Poors)"
+     },
+     {
+      "name": "RESIST (managerial resistance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC; The Wall Street Journal"
+     },
+     {
+      "name": "BIDSHARE (percentage of shares owned by the bidder)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC"
+     },
+     {
+      "name": "SOLFEE (solicitation fees)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Tables 2 and 3: distribution and success rate of Control vs. Clean-Up vs. Investment offers in the estimation sample (descriptive)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "estimation sample (108 offers)",
+    "dv": {
+     "name": "Success rate by offer type",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Statements 13D and 14D filed at the SEC"
+    },
+    "key_ivs": [
+     {
+      "name": "Offer type (control / clean-up / investment)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4: predictive accuracy of LOGIT models (reduced models from Panel B) on estimation and validation samples for uncontested and contested subgroupings",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "estimation sample of 108 offers (Jan 1972-Sep 1976) and chronological validation sample of 50 offers (Oct 1976-Dec 1977), split into uncontested and contested subgroupings",
+    "dv": {
+     "name": "Predicted tender offer success (classification)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Statements 13D and 14D filed at the SEC"
+    },
+    "key_ivs": [
+     {
+      "name": "BP (bid premium)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC; Stock Price Guide (Standard and Poors)"
+     },
+     {
+      "name": "RESIST (managerial resistance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC; The Wall Street Journal"
+     },
+     {
+      "name": "BIDSHARE (percentage of shares owned by the bidder)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC"
+     },
+     {
+      "name": "SOLFEE (solicitation fees)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statements 13D and 14D filed at the SEC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "OLS sensitivity re-run (footnote 22): entire analysis re-estimated with OLS regression, Spearman rank correlation vs. LOGIT predictions",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "estimation sample (108) and validation sample (50)",
+    "dv": {
+     "name": "Tender offer success",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Statements 13D and 14D filed at the SEC"
+    },
+    "key_ivs": [
+     {
+      "name": "BP, RESIST, BIDSHARE, SOLFEE, OPPBID",
+      "measure": "same independent variables as the LOGIT model, estimated by ordinary least squares",
+      "source": "Statements 13D and 14D filed at the SEC; Stock Price Guide (Standard and Poors); The Wall Street Journal"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "managerial power",
+    "target management opposition"
+   ],
+   "mechanism_named": "managerial power",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "unsuccessful, uncontested offers",
+    "validation sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "investment offers",
+    "clean-up offers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "investment offers",
+    "clean-up offers",
+    "success rate"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,327 @@
+{
+ "paper_id": "10.1016_0304-405x(87)90040-7",
+ "title": "The market for interfirm asset sales",
+ "journal": "JFE",
+ "year": 1987,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "synergy hypothesis",
+  "information hypothesis",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "asset_sale_completion",
+      "relation": "increases",
+      "to": "real_productive_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "real_productive_gains",
+      "relation": "increases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "real_productive_gains"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information hypothesis (bid conveys information that assets are undervalued; transfer of ownership not necessary to sustain the revaluation)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "not_reported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "asset_sale",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "total_liquidation",
+      "relation": "increases",
+      "to": "resource_reallocation_to_higher_valued_uses",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "resource_reallocation_to_higher_valued_uses",
+      "relation": "increases",
+      "to": "shareholder_wealth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "resource_reallocation_to_higher_valued_uses"
+   ],
+   "moderators": [
+    {
+     "construct": "prior_control_bid",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "total_liquidation",
+     "moderated_to": "shareholder_wealth",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "security-market inefficiency / prior undervaluation as the source of the revaluation, rather than movement of resources to higher-valued uses"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "mining and manufacturing",
+  "country_region": "",
+  "time_period": "1963-1983",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "55 successful sellers and 51 successful bidders; 59 unsuccessful sellers and 54 unsuccessful bidders; 49 voluntary liquidations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Statistical Report on Mergers and Acquisitions (Federal Trade Commission)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP) daily and monthly return files / stock master file",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Mergers and Acquisitions ('Out the Window' section)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poor's and Moody's annual dividend records",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "proxy statements and annual statements",
+    "category": "hand_collected",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Daily stock price reactions to voluntary sell-off proposals (sellers and bidders, completed and terminated)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "voluntary sell-off (divestiture) proposal announcement",
+    "sample": "55 successful and 59 unsuccessful sellers; 51 successful and 54 unsuccessful bidders; 1963-1981",
+    "dv": {
+     "name": "abnormal returns (mean cumulative daily prediction errors)",
+     "measure": "Mean cumulative daily prediction errors (in percent) over various intervals; excess return PEjt = Rjt - (aj + bjRmt), market model estimated from day -400 to -201 relative to announcement, Rmt = equal-weighted CRSP index; standardized per Dodd-Warner (1983)",
+     "source": "Center for Research in Security Prices (CRSP) daily return files"
+    },
+    "key_ivs": [
+     {
+      "name": "voluntary sell-off (divestiture) proposal announcement",
+      "measure": "two-day (-1,0) and five-day announcement-period return around the initial press announcement and the outcome (bid/termination) announcement; event dates from WSJ",
+      "source": "The Wall Street Journal Index and WSJ; FTC Statistical Report"
+     },
+     {
+      "name": "transaction success (completed vs terminated)",
+      "measure": "subsample partition: successful sellers/bidders (FTC completed) vs unsuccessful sellers/bidders (Mergers and Acquisitions 'Out the Window' cancellations)",
+      "source": "FTC Statistical Report; Mergers and Acquisitions"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Unsuccessful sellers partitioned by presence/absence of a follow-up bid (information vs synergy hypothesis test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "sell-off termination (cancellation) announcement",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "abnormal returns (cumulative daily prediction errors)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP) daily return files"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of a follow-up (second) bid within two years of cancellation",
+      "measure": "binary partition: firms with follow-up bid for the original target assets within two years vs firms without (30 without, 29 with)",
+      "source": "The Wall Street Journal (press reports tracked for two years)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Monthly abnormal returns around voluntary liquidation announcements, partitioned by prior control bid",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "voluntary liquidation (dissolution) proposal announcement",
+    "sample": "45 of 49 liquidating firms with sufficient monthly CRSP returns; 22 with control bids, 23 without; 1963-1983",
+    "dv": {
+     "name": "abnormal returns (monthly cumulative prediction errors)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP) monthly return files"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of a control bid within two years before liquidation",
+      "measure": "binary partition: firm involved in a control contest (merger proposals, tender offers, contests for board representation, leveraged buyout proposals) within two years prior vs not (22 with control bids, 23 without)",
+      "source": "The Wall Street Journal press reports"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 - Daily abnormal returns around voluntary total liquidations, partitioned by prior control bid",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "voluntary total liquidation announcement",
+    "sample": "49 voluntary total liquidations; 24 firms with prior control bids and 25 without; 1963-1983",
+    "dv": {
+     "name": "abnormal returns (cumulative daily prediction errors)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP) daily return files"
+    },
+    "key_ivs": [
+     {
+      "name": "presence of a prior control bid within two years before liquidation",
+      "measure": "binary partition: liquidations with prior control bids vs without (24 with, 25 without)",
+      "source": "The Wall Street Journal press reports"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "return series",
+    "abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "abnormal returns",
+    "sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "senior claimholders",
+    "valuation increases",
+    "liquidation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "security market inefficiency",
+    "organizational inefficiency"
+   ],
+   "mechanism_named": "organizational inefficiency",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "going-concern value",
+    "liquidation value"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "overall losses",
+    "unsuccessful sellers without second bids",
+    "announcement-period gains"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

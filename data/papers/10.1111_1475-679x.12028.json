@@ -1,0 +1,796 @@
+{
+ "paper_id": "10.1111_1475-679x.12028",
+ "title": "The Relation Between Bank Resolutions and Information Environment: Evidence from the Auctions for Failed Banks",
+ "journal": "JAR",
+ "year": 2013,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "information economics",
+  "adverse selection",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disclosure_requirements",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "estimated_cost_of_bank_resolution",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "disclosure_requirements",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "estimated_cost_of_bank_resolution",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection",
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "SEC-registered banks are less costly to resolve because of enhanced equity-market monitoring and visibility rather than stricter disclosure requirements",
+    "the SEC variable proxies for unobserved risks in the failed banks' loan portfolios that auction participants price but the econometrician cannot observe"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disclosure_requirements",
+      "relation": "decreases",
+      "to": "asymmetric_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asymmetric_information",
+      "relation": "decreases",
+      "to": "percentage_of_assets_sold",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asymmetric_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "SEC-registered banks are less costly to resolve because of enhanced equity-market monitoring and visibility rather than stricter disclosure requirements"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disclosure_requirements",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "distant_bidder_auction_participation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": [
+    "the P&A transactions for non-SEC banks are independent private values auctions in which neighboring banks bid more because they have higher private valuations, not because of information asymmetry"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "failed U.S. banks (commercial banks and savings institutions) resolved by the FDIC through purchase-and-assumption (P&A) auctions",
+  "country_region": "United States",
+  "time_period": "2008-2010",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "273 P&A transactions (270 observations for percentage of assets sold)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SNL Financial",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "FDIC (proprietary least cost test estimates / press releases / merger documents)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Federal Housing Finance Agency (FHFA) house price data",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "SEC filings (10-K, 8-K, NT-10K, DEF14A)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5, specs (1)-(2): Estimated cost of resolution vs. SEC registration",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Estimated cost of bank resolution (% total deposits)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FDIC least cost test (via SNL Financial)"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "PublicSEC",
+      "measure": "indicator for SEC-registered publicly owned banks (spec 2)",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "Dark",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "PrivateSEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets and size splines (Medium, Large)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Tier 1 capital ratio",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Liquidity ratio",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "ROA",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Real estate loans",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "NPL (Texas ratio)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Ln Asset growth",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Brokered deposits",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, specs (3)-(4): Percentage of assets sold vs. SEC registration",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "270 P&A transactions (assets-sold data missing for 3 deals)",
+    "dv": {
+     "name": "Percentage of assets sold (% total assets)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "PublicSEC",
+      "measure": "indicator for SEC-registered publicly owned banks (spec 4)",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "Dark",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "PrivateSEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets and size splines (Medium, Large)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Tier 1 capital ratio",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Liquidity ratio",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "ROA",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Real estate loans",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "NPL (Texas ratio)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Ln Asset growth",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Brokered deposits",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Probit of potential-bidder participation in the auction",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1,598 failed bank-potential bidder pairs (pairs with bidder/failed-bank size ratio below 40); SEs clustered at P&A transaction level",
+    "dv": {
+     "name": "Bidder participation (D)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial / FDIC"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "DiffRegion",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "DiffRegion x SEC",
+      "measure": "an interaction variable between DiffRegion and SEC",
+      "source": "SNL Financial"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets of failed bank (2007:Q4) and three splines for size",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Size ratio (failed bank assets / potential bidder assets, 2007:Q4)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Failed bank state-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, specs (1)&(3): Discontinuity in call-report requirements around the $300M threshold - estimated cost",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "$300 million total-asset threshold above which banks must file more detailed regulatory call reports (local linear regression, rectangular and triangular kernels)",
+    "sample": "failed banks within a $250 million range of the $300M size threshold ($50M-$550M)",
+    "dv": {
+     "name": "Estimated cost of bank resolution (% total deposits)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FDIC least cost test (via SNL Financial)"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "Assets above $300M",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Assets above $300M x SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets and size splines (Medium, Large)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Tier 1 capital ratio, Liquidity ratio, ROA, Real estate loans, NPL, Ln Asset growth, Brokered deposits",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Region-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7, specs (2)&(4): Discontinuity around the $300M threshold - assets sold",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "$300 million total-asset threshold above which banks must file more detailed regulatory call reports (local linear regression, rectangular and triangular kernels)",
+    "sample": "failed banks within a $250 million range of the $300M size threshold ($50M-$550M)",
+    "dv": {
+     "name": "Percentage of assets sold (% total assets)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "Assets above $300M",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Assets above $300M x SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets and size splines (Medium, Large)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Tier 1 capital ratio, Liquidity ratio, ROA, Real estate loans, NPL, Ln Asset growth, Brokered deposits",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Region-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, specs (1)&(3): Heterogeneity in informativeness of SEC filings - estimated cost",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "SEC-registered failed banks (10-K informativeness subsample)",
+    "dv": {
+     "name": "Estimated cost of bank resolution (% total deposits)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FDIC least cost test (via SNL Financial)"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "SEC x Ln (Time elapsed)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (10-K)"
+     },
+     {
+      "name": "SEC x NT 10-K",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (NT-10K)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets and size splines (Medium, Large)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Tier 1 capital ratio, Liquidity ratio, ROA, Real estate loans, NPL, Ln Asset growth, Brokered deposits",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, specs (2)&(4): Heterogeneity in informativeness of SEC filings - assets sold",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "SEC-registered failed banks (10-K informativeness subsample)",
+    "dv": {
+     "name": "Percentage of assets sold (% total assets)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     },
+     {
+      "name": "SEC x Ln (Time elapsed)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (10-K)"
+     },
+     {
+      "name": "SEC x NT 10-K",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC filings (NT-10K)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets and size splines (Medium, Large)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Tier 1 capital ratio, Liquidity ratio, ROA, Real estate loans, NPL, Ln Asset growth, Brokered deposits",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 Panel A: Main specification within the common support of size (OLS)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "P&A outcomes: estimated cost (% deposits) and assets sold (% total assets)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FDIC least cost test / SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Tier 1 capital ratio, Liquidity ratio, ROA, Real estate loans, NPL, Ln Asset growth, Brokered deposits, Ln Total Assets and splines (unreported)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 Panel B: Propensity score matching (average treatment effect on the treated)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "propensity-score matched failed banks (n=272; results reported for different levels of k)",
+    "dv": {
+     "name": "P&A outcomes: estimated cost (% deposits) and assets sold (% total assets)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FDIC least cost test / SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC registration (treatment)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of main-specification control variables used to estimate the propensity score",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     }
+    ]
+   },
+   {
+    "label": "Table 10: Robustness - subsample of banks registering with the SEC prior to 2004",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "SEC-registered failed banks whose initial SEC filing was prior to January 1, 2004",
+    "dv": {
+     "name": "P&A outcomes: estimated cost (% deposits) and assets sold (% total assets)",
+     "measure": "Estimated cost (% deposits) and percentage of assets sold (% total assets), as defined in the main specification",
+     "source": "FDIC least cost test / SNL Financial"
+    },
+    "key_ivs": [
+     {
+      "name": "SEC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SNL Financial / SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln Total Assets and size splines (Medium, Large)",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "Tier 1 capital ratio, Liquidity ratio, ROA, Real estate loans, NPL, Ln Asset growth, Brokered deposits",
+      "source": "SNL Financial"
+     },
+     {
+      "name": "House price shock",
+      "source": "Federal Housing Finance Agency (FHFA)"
+     },
+     {
+      "name": "Quarter-fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "method",
+   "constructs": [
+    "empirical implementation of this hypothesis",
+    "real approved bid list",
+    "p&a transaction"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "disclosure requirements",
+    "resolution outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "disclosure requirements",
+    "relation": "affects",
+    "to": "resolution outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "additional requirements",
+    "information asymmetries",
+    "p&a transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "additional requirements",
+    "relation": "decreases",
+    "to": "information asymmetries"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "market participants",
+    "[withheld: wording matches the source]",
+    "valuation of the failed bank"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "valuation of the failed bank"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "method",
+   "constructs": [
+    "instrument",
+    "registration with the sec",
+    "unobserved risks"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "method",
+   "constructs": [
+    "unobserved risks"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

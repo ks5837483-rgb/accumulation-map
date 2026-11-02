@@ -1,0 +1,400 @@
+{
+ "paper_id": "10.2307_2331267",
+ "title": "Share Repurchase as a Takeover Defense",
+ "journal": "JFQA",
+ "year": 1991,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "information economics",
+  "signaling theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "takeover_probability",
+      "relation": "increases",
+      "to": "takeover_deterrence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_deterrence",
+      "relation": "increases",
+      "to": "open_market_share_repurchases",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "takeover_deterrence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the result is an artifact of differences in sample or variable construction rather than the latent-variable treatment of takeover probability"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_size",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "open_market_share_repurchases",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "temporary_cash_flow",
+      "relation": "increases",
+      "to": "financial_flexibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "financial_flexibility",
+      "relation": "increases",
+      "to": "open_market_share_repurchases",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_flexibility"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (exchange-listed U.S. firms, excluding financial firms and utilities)",
+  "country_region": "United States (NYSE, Amex, and NASDAQ)",
+  "time_period": "1985-1996",
+  "sample_description": "All exchange-listed firms (NYSE, Amex, NASDAQ) with required data from CRSP and Compustat, excluding financial firms, utilities, and firms with share price below five dollars or total assets under five million; open market repurchase announcements obtained from Securities Data Corporation (SDC)",
+  "sample_size": "23,208 firm-year observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Corporation (SDC) / SDC's Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II - Probit model of takeover probability (first stage)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Takeover target (TODUM)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "ROAIA (industry-adjusted return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZEEQ (size of equity, log of common equity)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "LEVBIA (industry-adjusted book value of leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "MKBK (market-to-book ratio)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "SALEGR (sales growth)",
+      "source": "Compustat"
+     },
+     {
+      "name": "NPPE (fixed assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ITODUM (industry takeover dummy)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "Time trend dummies (D1-D4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III (Tobit), columns (1)-(2) - repurchase on ex post takeover dummy (Dittmar 2000 replication)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Repurchase (REP)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Targeted dummy (TARGET)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "FCF (free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROE (return on equity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZEASST (size of assets, log of total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "NONOPI (nonoperating income)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASHDIV (cash dividends)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVIA (industry-adjusted market value of leverage)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "MKBK (market-to-book ratio)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "EXRET (excess return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "OPTIONS (shares reserved for option exercise)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Time trend dummies (D1-D4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III (Tobit), columns (3)-(4) - repurchase on ex ante latent takeover probability (two-stage IV)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Two-stage instrumental variables approach (following Hodrick 1999): NPPE (fixed assets) and SALEGR (sales growth) included in the takeover equation but excluded from the repurchase equation serve as instruments for takeover probability",
+    "sample": "",
+    "dv": {
+     "name": "Repurchase (REP)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat (Data item #115) and CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Takeover probability (TOPROB)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "estimated (first-stage probit); underlying data Compustat/CRSP/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "FCF (free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROE (return on equity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZEASST (size of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "NONOPI (nonoperating income)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CASHDIV (cash dividends)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVIA (industry-adjusted market value of leverage)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "MKBK (market-to-book ratio)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "EXRET (excess return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "OPTIONS (shares reserved for option exercise)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Time trend dummies (D1-D4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV - Censored Quantile Regression (CQR) model of repurchases on takeover probability (two-stage IV, 95% quantile)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Two-stage instrumental variables approach: NPPE and SALEGR serve as instruments (excluded from repurchase equation); estimated via Powell (1986) censored quantile regression at the 95% quantile",
+    "sample": "",
+    "dv": {
+     "name": "Repurchase (REP)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat (Data item #115) and CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Takeover probability (TOPROB)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "estimated (first-stage probit); underlying data Compustat/CRSP/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "FCF (free cash flow)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROE (return on equity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIZEASST (size of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVIA (industry-adjusted market value of leverage)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "NONOPI (nonoperating income)",
+      "source": "Compustat"
+     },
+     {
+      "name": "MKBK (market-to-book ratio)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "CASHDIV (cash dividends)",
+      "source": "Compustat"
+     },
+     {
+      "name": "EXRET (excess return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "OPTIONS (shares reserved for option exercise)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Time trend dummies (D1-D4)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "repurchasing an additional 3.31% of shares",
+    "economically meaningful deterrent"
+   ],
+   "mechanism_named": "takeover market",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "specification tests of the tobit model",
+    "censored data"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

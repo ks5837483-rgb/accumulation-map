@@ -1,0 +1,634 @@
+{
+ "paper_id": "10.1016_j.jfineco.2021.05.038",
+ "title": "Does target firm insider trading signal the target's synergy potential in mergers and acquisitions?",
+ "journal": "JFE",
+ "year": 2021,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "adverse selection"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_insider_net_purchases",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_insider_net_purchases",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "acquirer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "target_information_environment",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "target_insider_net_purchases",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "[withheld: wording matches the source]"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality — the target opportunistically increases insider purchases before the deal to look more attractive to bidders, so the association runs from the anticipated acquisition to the trading rather than from trading signaling synergy"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_insider_net_purchases",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquisition_synergies",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality / endogeneity — target insiders' pre-M&A trading is driven by anticipation of the deal rather than signaling synergy potential"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_insider_net_purchases",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_insider_net_purchases",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the higher premium reflects the acquirer's overpayment or target overvaluation rather than an informative value signal about the target"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_insider_net_purchases",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "target_announcement_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality — the target strategically increases insider purchases to make itself look more attractive, so the announcement reaction reflects that manipulation rather than an informative signal"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_insider_net_purchases",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "merger_completion_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US publicly traded firms; M&A deals across sectors, industry-adjusted by two-digit SIC code)",
+  "country_region": "United States (US public acquirers and targets)",
+  "time_period": "1987-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,313 M&As"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters Insider Filing dataset (Thompson Financial insider trading database)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A - Acquirer CAR portfolio analysis (high vs low NIP/NVIP)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "sets of similar (matched) M&A deals; two-portfolio and quintile sorts",
+    "dv": {
+     "name": "Acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NIP (volume-based net insider purchase ratio) portfolio",
+      "measure": "high vs low NIP portfolios; NIP = [Purchase - Sold]/[Purchase + Sold] of shares by target firm top executives through open markets over day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     },
+     {
+      "name": "NVIP (value-based net insider purchase ratio) portfolio",
+      "measure": "high vs low NVIP portfolios; value-based analog of NIP over day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Combined CAR (and acquirer CAR) regression, Eq. (4), Models 1-8",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Combined CAR (Com_CAR)",
+     "measure": "combined (acquirer and target) cumulative abnormal returns around the acquisition announcement (Com1_CAR2, Com2_CAR1, Com2_CAR2); 3-3-day and 3-22-day windows, market model and four-factor model",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NIP",
+      "measure": "net insider purchase ratio (volume-based), [Purchase - Sold]/[Purchase + Sold], day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     },
+     {
+      "name": "NVIP",
+      "measure": "net insider purchase ratio (value-based), day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer_Controls (Acq_SIZE, Acq_MTB, Acq_LEV, Acq_FCF, Acq_ROA)",
+      "source": ""
+     },
+     {
+      "name": "Target_Controls (Tgt_SIZE, Tgt_MTB, Tgt_LEV, Tgt_ROA, Tgt_BLOCK)",
+      "source": ""
+     },
+     {
+      "name": "Deal_Controls (TENDER, MULBIDDER, Pct_STOCK)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Post-acquisition operating performance (delta ROA / delta SALE) regression, Models 1-4+",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in long-term operating performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "NIP",
+      "measure": "net insider purchase ratio (volume-based), day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     },
+     {
+      "name": "NVIP",
+      "measure": "net insider purchase ratio (value-based), day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "VWROA / VWSALE (last year acquirer-target market value-weighted average ROA/SALE)",
+      "source": ""
+     },
+     {
+      "name": "Acquirer_Controls",
+      "source": ""
+     },
+     {
+      "name": "Target_Controls",
+      "source": ""
+     },
+     {
+      "name": "Deal_Controls",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer industry fixed effects (Models 3-4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Takeover premium regression, Eq. (5)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Takeover premium (Premium)",
+     "measure": "OfferP4W, OfferP1W, OfferP1D = (Offer price - Target closing stock price 4 weeks / 1 week / 1 day before announcement) / Target closing stock price at that date",
+     "source": "SDC; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NIP",
+      "measure": "net insider purchase ratio (volume-based), day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     },
+     {
+      "name": "NVIP",
+      "measure": "net insider purchase ratio (value-based), day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer_Controls (Acq_SIZE, Acq_MTB, Acq_LEV, Acq_FCF, Acq_ROA)",
+      "source": ""
+     },
+     {
+      "name": "Target_Controls (Tgt_SIZE, Tgt_MTB, Tgt_LEV, Tgt_ROA, Tgt_BLOCK)",
+      "source": ""
+     },
+     {
+      "name": "Deal_Controls (TENDER, MULBIDDER, Pct_STOCK)",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Target abnormal returns around announcement regression, Eq. (5) replicated",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NIP",
+      "measure": "net insider purchase ratio (volume-based), day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     },
+     {
+      "name": "NVIP",
+      "measure": "net insider purchase ratio (value-based), day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer_Controls",
+      "source": ""
+     },
+     {
+      "name": "Target_Controls",
+      "source": ""
+     },
+     {
+      "name": "Deal_Controls",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 - Instrumental variables (2SLS) analysis, Models 3-10",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR, combined CAR, takeover premium, target CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "I_NIP / I_NVIP (instrumented target insider net purchase ratios)",
+      "measure": "fitted NIP/NVIP from first stage instrumented by lagged target insider net purchase ratios over day -730 to day -366",
+      "source": "Thomson Reuters Insider Filing dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer_Controls",
+      "source": ""
+     },
+     {
+      "name": "Target_Controls",
+      "source": ""
+     },
+     {
+      "name": "Deal_Controls",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10 - Cross-sectional analysis: heterogeneity in target firm information environment",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsamples split by target size and analyst coverage (operating-performance DV excluded due to endogeneity)",
+    "dv": {
+     "name": "Acquirer CAR, combined CAR, takeover premium, target CAR",
+     "measure": "acquirer returns, combined returns, takeover premiums, and target CAR (as in main tests), split by target information environment",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "NIP / NVIP",
+      "measure": "net insider purchase ratios, day -365 to day -1",
+      "source": "Thomson Reuters Insider Filing dataset"
+     },
+     {
+      "name": "Target information environment (moderator)",
+      "measure": "small vs large target firms; low vs high analyst coverage firms",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer_Controls",
+      "source": ""
+     },
+     {
+      "name": "Target_Controls",
+      "source": ""
+     },
+     {
+      "name": "Deal_Controls",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 12 - Logit: probability of merger completion",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "announced deals under negotiation",
+    "dv": {
+     "name": "COMPLETE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "NIP / NVIP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters Insider Filing dataset"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Explanatory variables from the acquisition performance model, Eq. (4) (Acquirer_Controls, Target_Controls, Deal_Controls)",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "matched pairs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "information structure",
+    "regulatory environment",
+    "predictability of target insider trading",
+    "short-run abnormal returns"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

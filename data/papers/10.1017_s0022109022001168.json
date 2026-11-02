@@ -1,0 +1,1055 @@
+{
+ "paper_id": "10.1017_s0022109022001168",
+ "title": "Assimilation Effects in Financial Markets",
+ "journal": "JFQA",
+ "year": 2022,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "assimilation effects (assimilation bias)",
+  "salience theory",
+  "behavioral finance",
+  "overreaction (De Bondt and Thaler)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "perceived_deal_favorability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_deal_favorability",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_deal_favorability"
+   ],
+   "moderators": [
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_deal_favorability",
+     "moderated_from": "earnings_surprise",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Table 8 Panel B (1-2)"
+    },
+    {
+     "construct": "bidder_firm_size",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_deal_favorability",
+     "moderated_from": "earnings_surprise",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Table 8 Panel B (3-4)"
+    },
+    {
+     "construct": "analyst_coverage",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_deal_favorability",
+     "moderated_from": "earnings_surprise",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Table 8 Panel B (5-6)"
+    },
+    {
+     "construct": "temporal_distance_of_surprise",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "perceived_deal_favorability",
+     "moderated_from": "earnings_surprise",
+     "moderated_to": "acquirer_announcement_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Table 8 Panel A"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information transmission hypothesis (the t-1 earnings surprise conveys value-relevant new information to the bidder)",
+    "strategic timing (bidders intentionally announce the M&A just after peers' positive earnings surprises)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "deviation_from_fundamental_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deviation_from_fundamental_value",
+      "relation": "decreases",
+      "to": "post_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deviation_from_fundamental_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information transmission (the earnings surprise is relevant news that should be permanently priced, implying no reversal)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "perceived_acquirer_gain",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_acquirer_gain",
+      "relation": "decreases",
+      "to": "division_of_merger_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_acquirer_gain"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "perceived_acquirer_gain",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_acquirer_gain",
+      "relation": "increases",
+      "to": "competing_bid_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_acquirer_gain"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "rational updating from same 4-digit SIC earnings news (rational information transmission driving bid competition)"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "bid_competition",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "bid_competition",
+      "relation": "increases",
+      "to": "offer_premium",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "target_premium_demand",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_premium_demand",
+      "relation": "increases",
+      "to": "deal_withdrawal_probability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "bid_competition",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "bid_competition",
+      "relation": "increases",
+      "to": "deal_withdrawal_probability",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_premium_demand",
+    "bid_competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "rational information transmission (4-digit-SIC-linked rational deals, which show no price reversal, should not exhibit distortion-driven terminations)"
+   ]
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_surprise",
+      "relation": "increases",
+      "to": "perceived_ipo_favorability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_ipo_favorability",
+      "relation": "increases",
+      "to": "ipo_opening_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_ipo_favorability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A deals spanning 1-digit SIC industries: Agriculture, Mining, Construction, Manufacturing, Transportation and utilities, Wholesale, Retailing, Services)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1989-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "7,882 M&A observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum M&A Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson's IBES database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis/Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "The Wall Street Journal",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Regressions 1-2 (Salience and Acquisition Return, full sample, same SIC-1)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "entire sample of 7,882 M&A observations (acquirer and target in same 1-digit SIC)",
+    "dv": {
+     "name": "bidder 2-day M&A CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Regressions 3-4 (Non-zero SURPRISEt-1 subsample)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidder 2-day M&A CAR",
+     "measure": "bidder's 2-day M&A CAR [0,+1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Regressions 5-6 (Exclude obs where bidder t-1 return has same sign as SURPRISEt-1)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidder 2-day M&A CAR",
+     "measure": "bidder's 2-day M&A CAR [0,+1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Regressions 7-8 (Same SIC-4 industry matching)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "4,007 transactions in which bidder and target are in the same 4-digit SIC",
+    "dv": {
+     "name": "bidder 2-day M&A CAR",
+     "measure": "bidder's 2-day M&A CAR [0,+1]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1 (SIC-4)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Untabulated (Section III.A.1) - Alternative specification, exclude same-sign bidder/target and private/subsidiary targets",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "1,087 observations, removing deals where bidder and/or target return has same sign as SURPRISEt-1 at t-1 and excluding private and subsidiary targets",
+    "dv": {
+     "name": "bidder [0,+1] CAR",
+     "measure": "bidder's [0,+1] CAR",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Untabulated (Section III.A.1) - Target firm response, all-cash deals",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "all-cash-financed deals",
+    "dv": {
+     "name": "target CAR",
+     "measure": "the target's CAR (replacing the bidder's CAR in tests like those in Table 2)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A (Overreaction and price reversal, same SIC-1)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "7,882 acquirers and targets in the same 1-digit SIC",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B (Terciles of earnings surprises - monotonicity/symmetry)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "non-zero surprise subsample split into terciles (~1,081-1,087 obs per tercile)",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1 (by tercile)",
+      "measure": "value-weighted (non-zero) earnings surprise split into terciles (most positive top, most negative bottom)",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel D (Considering bundled announcements)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "8,163 observations, adding back M&A announcements bundled with bidders' own earnings releases",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel E (Further excluding zero-surprise observations)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "3,015 observations after removing cases where SURPRISEt-1 equals 0",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel F (Further excluding withdrawn transactions)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "2,751 observations after further dropping withdrawn (non-completed) M&A transactions",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "323 observations with non-zero t-1 surprise and M&A deal covered by The Wall Street Journal",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel H (\"Pure salience\" surprise)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "7,882 observations, surprise from earnings firms matched only to the target's 1-digit SIC (not 2-digit or higher)",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "PURE_SALIENCE_SURPRISEt-1",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel I (Same SIC-4 industry)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "4,007 acquirers and targets in the same 4-digit SIC",
+    "dv": {
+     "name": "bidder CAR over multiple windows",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "SURPRISEt-1 (SIC-4)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson's IBES database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVE_SIZE",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "UNSOLICITED",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder size",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash payment indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "private/subsidiary target indicator",
+      "source": "SDC"
+     },
+     {
+      "name": "bidder Q",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "perception",
+    "competing bids"
+   ],
+   "mechanism_named": "behaviorally biased perception",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "assimilation effects",
+    "cognitive biases",
+    "mispricing",
+    "distortions",
+    "sequentially announced salient events"
+   ],
+   "mechanism_named": "assimilation effects",
+   "proposed_edge": {
+    "from": "assimilation effects",
+    "relation": "affects",
+    "to": "mispricing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "behavioral phenomena",
+    "corporate activities",
+    "distortions",
+    "firms",
+    "investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "behavioral phenomena",
+    "relation": "affects",
+    "to": "corporate activities"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

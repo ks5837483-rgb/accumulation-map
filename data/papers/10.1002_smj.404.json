@@ -1,0 +1,436 @@
+{
+ "paper_id": "10.1002_smj.404",
+ "title": "Do early birds get the returns? An empirical investigation of early‐mover advantages in acquisitions",
+ "journal": "SMJ",
+ "year": 2004,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "first-mover advantage theory",
+  "resource-based view of the firm",
+  "information asymmetry",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "early_mover_acquisition",
+      "relation": "increases",
+      "to": "access_to_undervalued_targets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "access_to_undervalued_targets",
+      "relation": "increases",
+      "to": "total_shareholder_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "access_to_undervalued_targets"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "early_mover_acquirer",
+      "relation": "increases",
+      "to": "superior_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "superior_information",
+      "relation": "increases",
+      "to": "acquirer_shareholder_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "superior_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "early_mover_acquirer",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquirer_shareholder_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "relatedness",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "information_asymmetry",
+     "moderated_from": "early_mover_acquirer",
+     "moderated_to": "acquirer_shareholder_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "expansionary_industry",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "early_mover_acquirer",
+     "moderated_to": "acquirer_shareholder_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "cash_financing",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "information_asymmetry",
+     "moderated_from": "early_mover_acquirer",
+     "moderated_to": "acquirer_shareholder_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "happenstance early movers who acted early by luck or coincidence rather than superior information"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (industrial firms in nine industries with merger waves: oil & gas extraction, chemicals and allied products, machinery and computer equipment, electronic and other electrical equipment, medical and photographic equipment, communications, electric/gas/sanitary services, business services, and health services; excludes financial services (1-digit SIC=6))",
+  "country_region": "United States (U.S. acquirers and U.S. targets)",
+  "time_period": "1979-1998",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "520 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4. Multivariate regressions of combined (weighted target and acquirer) industry-adjusted acquisition announcement returns (Models 1-3)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Combined industry-adjusted acquisition announcement return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Early-mover acquisitions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Log of acquirer's equity market value",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Relative equity market values (target/acquirer)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Acquirer's cash & equivalents/total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's Q of acquirer (market-to-book ratio of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer industry-adjusted acquisition announcement period return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Early-mover acquisitions",
+      "measure": "Early-mover acquisitions (N = 98) [1,0] (test of Hypothesis 2)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Strategic pioneer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Log of acquirer's equity market value",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Relative equity market values (target/acquirer)",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Acquirer's cash & equivalents/total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin's Q of acquirer (market-to-book ratio of assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "Strategic pioneers (20 acquisitions) vs. all other acquirers within an industry merger wave",
+    "dv": {
+     "name": "Long-term industry-adjusted stock returns",
+     "measure": "long-term industry-adjusted stock returns through 1, 2, and 3 years after the acquisition; differences in means tested via t-tests and differences in medians via median score tests",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Strategic pioneer group",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Fixed-effects regressions robustness check (footnote 4; constant terms allowed to vary across acquirers, nested F-tests vs. OLS)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "520 acquisitions, 378 unique acquirers",
+    "dv": {
+     "name": "Combined and acquirer industry-adjusted announcement returns",
+     "measure": "same announcement-return dependent variables as Tables 4 and 5, re-estimated with acquirer fixed effects (378 unique acquirers for the 520 acquisitions; 91 made more than one acquisition)",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Early-mover / strategic pioneer indicators",
+      "measure": "same hypothesis variables as Tables 4 and 5, re-estimated with fixed effects",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "strategic pioneers",
+    "corporate practices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "acquirers' motives",
+    "superior information"
+   ],
+   "mechanism_named": "asymmetric information",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "early-mover advantages",
+    "corporate practices",
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "early adopters",
+    "competitive advantages",
+    "corporate practices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "early adopters",
+    "relation": "increases",
+    "to": "competitive advantages"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "early-mover advantages",
+    "acquisition wave"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "strategic pioneers",
+    "acquirers",
+    "outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

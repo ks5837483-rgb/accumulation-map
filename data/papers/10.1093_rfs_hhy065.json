@@ -1,0 +1,606 @@
+{
+ "paper_id": "10.1093_rfs_hhy065",
+ "title": "Vote Avoidance and Shareholder Voting in Mergers and Acquisitions",
+ "journal": "RFS",
+ "year": 2018,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "corporate governance",
+  "institutional monitoring"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "institutional_ownership",
+      "relation": "decreases",
+      "to": "uninformed_individual_investor_interference",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "uninformed_individual_investor_interference",
+      "relation": "increases",
+      "to": "vote_avoidance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "deal_risk",
+      "relation": "increases",
+      "to": "cost_of_shareholder_ratification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_shareholder_ratification",
+      "relation": "increases",
+      "to": "vote_avoidance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "uninformed_individual_investor_interference",
+    "cost_of_shareholder_ratification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vote_avoidance",
+      "relation": "decreases",
+      "to": "deviation_from_superior_managerial_choices",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deviation_from_superior_managerial_choices",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deviation_from_superior_managerial_choices"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "agency_costs_of_free_cash_flow",
+      "relation": "increases",
+      "to": "managerial_private_benefits_from_value_destroying_deals",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_private_benefits_from_value_destroying_deals",
+      "relation": "increases",
+      "to": "vote_avoidance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "institutional_ownership",
+      "relation": "increases",
+      "to": "institutional_investor_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "institutional_investor_monitoring",
+      "relation": "decreases",
+      "to": "vote_avoidance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_private_benefits_from_value_destroying_deals",
+    "institutional_investor_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vote_avoidance",
+      "relation": "decreases",
+      "to": "institutional_investor_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "institutional_investor_monitoring",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "institutional_investor_monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Corollary",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "shareholder_voting",
+      "relation": "decreases",
+      "to": "acquirer_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_overpayment",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_overpayment"
+   ],
+   "moderators": [
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "institutional_investor_monitoring",
+     "moderated_from": "shareholder_voting",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Section 5.1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. acquisitions; industry and year fixed effects, no focal sector)",
+  "country_region": "United States",
+  "time_period": "1995-2015",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,223 stock deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson One Banker SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "13F institutions",
+    "category": "other",
+    "kind": "filings"
+   },
+   {
+    "name": "data on boards",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Figure 1 / McCrary density test (evidence of vote avoidance)",
+    "hypotheses": [],
+    "identification": "RDD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "2,535 mixed-payment deals (panel A) and 2,688 all-stock deals (panel B), 1995-2015",
+    "dv": {
+     "name": "density of percentage of shares to be issued",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC's EDGAR (hand-collected % shares to be issued); Thomson One Banker SDC database"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Panel A: Explaining vote avoidance (baseline)",
+    "hypotheses": [
+     "H1a",
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Vote avoidance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC's EDGAR (hand-collected); Thomson One Banker SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Institutional ownership",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F institutions"
+     },
+     {
+      "name": "Deal risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Agency",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M/B ratio",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Relative size",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Diversifying",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Tender offer",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Private target",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Industry/year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B: Explaining vote avoidance, controlling for additional corporate governance measures",
+    "hypotheses": [
+     "H1a",
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "same vote-avoidance sample as Panel A across bands centered on the 20% threshold; OLS cols 1-4, WLS col 5",
+    "dv": {
+     "name": "Vote avoidance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC's EDGAR (hand-collected); Thomson One Banker SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Institutional ownership",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F institutions"
+     },
+     {
+      "name": "Deal risk",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Agency",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "High insider ownership",
+      "source": "data on boards"
+     },
+     {
+      "name": "Board size",
+      "source": "data on boards"
+     },
+     {
+      "name": "Board independence",
+      "source": "data on boards"
+     },
+     {
+      "name": "CEO-COB duality",
+      "source": "data on boards"
+     },
+     {
+      "name": "Other controls (M/B, leverage, cash, ROA, prior year return, relative size, diversifying, tender offer, private target)",
+      "source": "Compustat/CRSP/Thomson One Banker SDC database"
+     },
+     {
+      "name": "Industry/year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel A: Vote avoidance and acquirer CAR3",
+    "hypotheses": [
+     "H1b",
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "same sample as Table 4 across bands centered on the 20% threshold; OLS cols 1-4, WLS col 5",
+    "dv": {
+     "name": "acquirer CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Vote avoidance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR (hand-collected); Thomson One Banker SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "M/B ratio",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Prior year return",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(deal value)",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Relative size",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Diversifying",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Tender offer",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Private target",
+      "source": "Thomson One Banker SDC database"
+     },
+     {
+      "name": "Industry/year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: Vote avoidance and offer premium (value/assets multiple)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "same sample as Table 4 across bands centered on the 20% threshold; OLS cols 1-4, WLS col 5",
+    "dv": {
+     "name": "offer premium (value/assets multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One Banker SDC database (transaction value); SEC filings (hand-collected book value of assets for private targets)"
+    },
+    "key_ivs": [
+     {
+      "name": "Vote avoidance",
+      "measure": "indicator variable Vote avoidance (=1 for mixed-payment deals issuing <20% with deal value/market cap between 20% and 35%; =0 for all-stock deals issuing >20%)",
+      "source": "SEC's EDGAR (hand-collected); Thomson One Banker SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Other controls",
+      "source": "Compustat/CRSP/Thomson One Banker SDC database"
+     },
+     {
+      "name": "Industry/year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel C: Vote avoidance and offer premium (target CAR over (-63,+126))",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "public targets with CRSP return data (target CAR window), across bands centered on the 20% threshold; OLS cols 1-4, WLS col 5",
+    "dv": {
+     "name": "offer premium (target CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Vote avoidance",
+      "measure": "indicator variable Vote avoidance (=1 for mixed-payment deals issuing <20% with deal value/market cap between 20% and 35%; =0 for all-stock deals issuing >20%)",
+      "source": "SEC's EDGAR (hand-collected); Thomson One Banker SDC database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Other controls",
+      "source": "Compustat/CRSP/Thomson One Banker SDC database"
+     },
+     {
+      "name": "Industry/year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "RDD: causal impact of acquirer shareholder voting on deal quality (all-stock deals near 20% threshold)",
+    "hypotheses": [],
+    "identification": "RDD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquirer price reaction",
+     "measure": "acquirer price reaction (announcement abnormal return) used to measure deal quality",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "shareholder voting requirement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC's EDGAR (hand-collected % shares to be issued); Thomson One Banker SDC database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "external validity",
+    "rdd"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "rdd",
+    "causal effect of shareholder voting"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "shareholder voting"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "ceo turnover",
+    "shareholder voting"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

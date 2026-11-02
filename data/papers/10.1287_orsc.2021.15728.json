@@ -1,0 +1,1587 @@
+{
+ "paper_id": "10.1287_orsc.2021.15728",
+ "title": "Analyst Reaction to War-Related Language: Source Domains and the Role of Market Structure and Market Share",
+ "journal": "ORSC",
+ "year": 2025,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "conceptual metaphor theory",
+  "risk-as-feelings perspective",
+  "language expectancy theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Baseline Hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "metaphorical_language",
+      "relation": "increases",
+      "to": "cognitive_effort",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cognitive_effort",
+      "relation": "decreases",
+      "to": "analyst_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "metaphorical_language",
+      "relation": "increases",
+      "to": "obfuscation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "obfuscation",
+      "relation": "decreases",
+      "to": "analyst_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cognitive_effort",
+    "obfuscation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "war_language",
+      "relation": "increases",
+      "to": "risk_perception",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_perception",
+      "relation": "decreases",
+      "to": "analyst_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_perception"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "audiences perceive the strategic decision as driven by emotion (rather than as evoking risk perception)",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "war_language",
+      "relation": "increases",
+      "to": "risk_perception",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_perception",
+      "relation": "decreases",
+      "to": "analyst_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_perception"
+   ],
+   "moderators": [
+    {
+     "construct": "market_concentration",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "expected loss associ­\nated with increased competition",
+     "moderated_from": "war_language",
+     "moderated_to": "analyst_reaction",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "war_language",
+      "relation": "increases",
+      "to": "risk_perception",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_perception",
+      "relation": "decreases",
+      "to": "analyst_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_perception"
+   ],
+   "moderators": [
+    {
+     "construct": "market_share",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "exercising restraint in\ncompetition",
+     "moderated_from": "war_language",
+     "moderated_to": "analyst_reaction",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded acquirers announcing mergers and acquisitions, spanning SIC market divisions)",
+  "country_region": "United States",
+  "time_period": "2004-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "999"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters Eikon",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson One",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP/Compustat merged database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Executive Compensation data set",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Amazon Mechanical Turk (MTurk) master workers",
+    "category": "survey",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Firms' press releases (searched online)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5, Model (1) - baseline: overall metaphorical language",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Metaphorical language",
+      "measure": "Percentage of words in top management's conference-call remarks used metaphorically (LIWC), summed across all metaphor family core members",
+      "source": "Thomson Reuters Eikon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Model (2) - three metaphor families (interconnection, cooperation, competition)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Interconnection metaphor family",
+      "measure": "Percentage of interconnection-family metaphors (organisms, constructed objects, natural objects) used metaphorically in top management's remarks (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Cooperation metaphor family",
+      "measure": "Percentage of cooperation-family metaphors (family, friends, partners, work crew, community, animal group) used metaphorically (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Competition metaphor family",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters Eikon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Model (3) - war language main effect",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Competition metaphor family, only war (war language)",
+      "measure": "Percentage of war-language words used metaphorically in top management's remarks (LIWC), based on a 42-word validated dictionary (MTurk-rated, Pragglejaz metaphor-identification screened)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Competition metaphor family, excluding war",
+      "measure": "Percentage of non-war competition-family metaphors used metaphorically (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Competition metaphor family, excluding war",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Interconnection metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Cooperation metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Model (4) - war language x market concentration interaction",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Competition metaphor family, only war (war language)",
+      "measure": "Percentage of war-language words used metaphorically in top management's remarks (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "War language x Acquirer market concentration",
+      "measure": "Interaction of war language and (transformed) acquirer market concentration",
+      "source": "Thomson Reuters Eikon; CRSP/Compustat merged database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Competition metaphor family, excluding war",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Interconnection metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Cooperation metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Models (5)-(6) - market concentration subsample split (high vs low)",
+    "hypotheses": [
+     "H2a"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Sample split at the market concentration median (0.172): high market concentration (n=499) vs low market concentration (n=500)",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Competition metaphor family, only war (war language)",
+      "measure": "Percentage of war-language words used metaphorically in top management's remarks (LIWC), estimated separately within each market-concentration subsample",
+      "source": "Thomson Reuters Eikon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Competition metaphor family, excluding war",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Interconnection metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Cooperation metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Model (7) - war language x market share interaction",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Competition metaphor family, only war (war language)",
+      "measure": "Percentage of war-language words used metaphorically in top management's remarks (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Acquirer market share",
+      "measure": "Acquirer's total sales for the fiscal year divided by entire market sales (four-digit SIC code) for that fiscal year (inverted and symmetrically transformed for the continuous interaction)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "War language x Acquirer market share",
+      "measure": "Interaction of war language and (transformed) acquirer market share",
+      "source": "Thomson Reuters Eikon; CRSP/Compustat merged database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Competition metaphor family, excluding war",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Interconnection metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Cooperation metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Models (8)-(9) - market share subsample split (high vs low)",
+    "hypotheses": [
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Sample split at the market share median: high market share (n=499) vs low market share (n=500)",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Competition metaphor family, only war (war language)",
+      "measure": "Percentage of war-language words used metaphorically in top management's remarks (LIWC), estimated separately within each market-share subsample",
+      "source": "Thomson Reuters Eikon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Model (10) - both interactions simultaneously (war x concentration and war x share)",
+    "hypotheses": [
+     "H2a",
+     "H2b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Competition metaphor family, only war (war language)",
+      "measure": "Percentage of war-language words used metaphorically in top management's remarks (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "War language x Acquirer market concentration",
+      "measure": "Interaction of war language and (transformed) acquirer market concentration",
+      "source": "Thomson Reuters Eikon; CRSP/Compustat merged database"
+     },
+     {
+      "name": "War language x Acquirer market share",
+      "measure": "Interaction of war language and (transformed) acquirer market share",
+      "source": "Thomson Reuters Eikon; CRSP/Compustat merged database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Competition metaphor family, excluding war",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Interconnection metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Cooperation metaphor family",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - robustness: relative war language and violence/death-related metaphors",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst reaction",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson One"
+    },
+    "key_ivs": [
+     {
+      "name": "Relative war language",
+      "measure": "War language divided by total metaphorical language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Violence-related metaphors",
+      "measure": "Percentage of violence-related metaphors per Morgan (2008) classification (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Death-related metaphors",
+      "measure": "Percentage of death-related metaphors per Morgan (2008) classification (LIWC)",
+      "source": "Thomson Reuters Eikon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Metaphor family controls (interconnection, cooperation, competition excl. war)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Acquirer market concentration (HHI)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer market share",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer debt-to-equity ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer cash-to-assets ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer book-to-market ratio",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer financial performance (lagged ROA)",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Acquirer acquisition experience",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "New CEO",
+      "source": "Compustat Executive Compensation data set"
+     },
+     {
+      "name": "Acquirer market division dummies",
+      "source": "CRSP/Compustat merged database"
+     },
+     {
+      "name": "Target is a public company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "National company",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Relatedness",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Value of the transaction",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Consideration structure (cash-only)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Number of competing bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Length of the press release",
+      "source": "Firms' press releases (searched online)"
+     },
+     {
+      "name": "Length of the conference call transcript",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Number of analyst reports",
+      "source": "Thomson One"
+     },
+     {
+      "name": "Language complexity (Fog Index)",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Language concreteness",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Positive-negative language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Active-passive language",
+      "source": "Thomson Reuters Eikon"
+     },
+     {
+      "name": "Announcement year dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "cooperation metaphor family",
+    "interconnection metaphor family",
+    "source domains"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "reactions to strategic communication"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "source domains",
+    "reactions to strategic communication"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "war language"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "contextual variations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "source domains",
+    "analyst reactions",
+    "strategy disclosures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "metaphors",
+    "stakeholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "metaphors",
+    "stakeholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "metaphors",
+    "relation": "affects",
+    "to": "reactions from stakeholders"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_mediator",
+   "section": "discussion",
+   "constructs": [
+    "war language",
+    "perception of risk"
+   ],
+   "mechanism_named": "perception of risk",
+   "proposed_edge": {
+    "from": "war language",
+    "relation": "affects",
+    "to": "perception of risk"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "war language",
+    "perception of risk"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "war metaphors",
+    "managers' behavior",
+    "adversarial relationships with competitors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "use of war metaphors by managers",
+    "relation": "affects",
+    "to": "subsequent changes in their behavior"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "war-related language",
+    "managers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "analyst reactions",
+    "metaphorical communication"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "whether metaphorical communication is deliberately chosen or emerges naturally",
+    "on_path": [
+     "metaphorical communication",
+     "analyst reactions"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "source domains"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "metaphors",
+    "analyst reactions",
+    "conventional metaphors",
+    "creative metaphors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "whether metaphors are conventional or novel/creative",
+    "on_path": [
+     "metaphors",
+     "analyst reactions"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "strategic complements and substitutes",
+    "competitive actions",
+    "firm performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "strategic complements and substitutes",
+    "on_path": [
+     "competitive actions",
+     "firm performance"
+    ]
+   }
+  }
+ ]
+}

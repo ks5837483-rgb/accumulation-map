@@ -1,0 +1,479 @@
+{
+ "paper_id": "10.1016_0304-405x(83)90007-7",
+ "title": "The gains to bidding firms from merger",
+ "journal": "JFE",
+ "year": 1983,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient markets hypothesis",
+  "value-maximization",
+  "capitalization hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger",
+      "relation": "increases",
+      "to": "net_present_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "net_present_value",
+      "relation": "increases",
+      "to": "bidding_firm_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "net_present_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_order",
+      "relation": "decreases",
+      "to": "uncertainty_resolution",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "uncertainty_resolution",
+      "relation": "increases",
+      "to": "bidding_firm_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "uncertainty_resolution"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_size_of_target",
+      "relation": "increases",
+      "to": "measured_abnormal_return_scaling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "measured_abnormal_return_scaling",
+      "relation": "increases",
+      "to": "bidding_firm_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "measured_abnormal_return_scaling"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_1969_regulation",
+      "relation": "increases",
+      "to": "change_in_merger_market",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "change_in_merger_market",
+      "relation": "decreases",
+      "to": "bidding_firm_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "change_in_merger_market"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Fortune 1000 firms, 1979 list)",
+  "country_region": "United States",
+  "time_period": "1963-1979",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "214 merger bids"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Fortune 1000 list of 1979",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Industrial Guide",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "156 first-bid merger programs by Fortune 1000 firms after an 8-year hiatus, 1963-1979",
+    "dv": {
+     "name": "proportion of firms making subsequent merger bids",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Moody's Industrial Guide / Wall Street Journal Index"
+    },
+    "key_ivs": [
+     {
+      "name": "merger order",
+      "measure": "sequence of merger bid in the program (first through fourth bid)",
+      "source": "Moody's Industrial Guide / Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "214 merger bids",
+    "dv": {
+     "name": "announcement-day excess return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "merger order",
+      "measure": "merger number 1 through 4 in the bidding firm's merger program",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "214 merger bids",
+    "dv": {
+     "name": "cumulative excess return (CER -20,0)",
+     "measure": "average cumulative excess return over days t=-20 until the announcement day (t=0), formed by summing daily excess returns relative to the Scholes-Williams beta control portfolios",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "merger order",
+      "measure": "merger number 1 through 4 in the merger program",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Relative-size split - CER(-20,0) for target greater than vs less than 10% of bidder equity (pairwise t-test)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "99 bids with target > 10% of bidder; 115 bids with target < 10% of bidder",
+    "dv": {
+     "name": "cumulative excess return (CER -20,0)",
+     "measure": "21-day cumulative excess return from t=-20 until the announcement day",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "relative size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Time-period split - CER(-20,0) before Oct 1969 vs Oct 1969 and after (pairwise t-test)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "October 1969 SEC adoption of permanent binding Williams Act rules",
+    "sample": "92 bids before 10/69; 122 bids 10/69 and after",
+    "dv": {
+     "name": "cumulative excess return (CER -20,0)",
+     "measure": "21-day cumulative excess return from t=-20 until the announcement day",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "time period",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Success split - CER(-20,0) for successful vs unsuccessful merger bids",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "170 successful bids; 41 unsuccessful bids (outcome undetermined for 3)",
+    "dv": {
+     "name": "cumulative excess return (CER -20,0)",
+     "measure": "21-day cumulative excess return from t=-20 until the announcement day",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "merger success",
+      "measure": "successful vs unsuccessful merger attempt",
+      "source": "Moody's Industrial Guide / Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - CER(-20,0) categorized by relative size, time period, and success",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative excess return (CER -20,0)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "relative size",
+      "measure": "target firm greater than vs less than 10% of bidding firm equity",
+      "source": "CRSP"
+     },
+     {
+      "name": "time period",
+      "measure": "before Oct 1, 1969 vs Oct 1, 1969 and after",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "merger success",
+      "measure": "successful vs unsuccessful merger bid",
+      "source": "Moody's Industrial Guide / Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 - Cross-sectional OLS regression of 21-day CER on ln(size), time, success, and order",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3",
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=211 (merger outcome could not be determined for 3 merger bids)",
+    "dv": {
+     "name": "21-day cumulative excess return (CER -20,0)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "ln(relative size)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "time period (TIME)",
+      "measure": "dummy variable = 1 before 10/69 and = 0 in 10/69 and after",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "success (SUCCESS)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Moody's Industrial Guide / Wall Street Journal Index"
+     },
+     {
+      "name": "merger order (ORDER)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "First-merger 2-day CER(-1,0) OLS regression on ln(size), time, and success",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N=69 first merger bids",
+    "dv": {
+     "name": "two-day announcement excess return for first mergers",
+     "measure": "cumulative excess return over t=-1 and t=0 (CER -1,0) for first merger bids",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "ln(relative size)",
+      "measure": "log of relative size = market value of target's equity divided by market value of bidder's equity",
+      "source": "CRSP"
+     },
+     {
+      "name": "time period (TIME)",
+      "measure": "dummy = 1 before 10/69 and = 0 in 10/69 and after",
+      "source": "Wall Street Journal Index"
+     },
+     {
+      "name": "success (SUCCESS)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Moody's Industrial Guide / Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Long-window pre-bid CER from 480 to 20 trading days before announcement (first vs 2-4 mergers)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative excess return (CER -480,-20)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "merger order",
+      "measure": "first merger vs mergers 2-4 in the program",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "size of target firms",
+    "excess returns to stockholders of bidding firms",
+    "firm size"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "size of target firms",
+    "relation": "affects",
+    "to": "excess returns to stockholders of bidding firms"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "success of a merger bid",
+    "return"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "success of a merger bid",
+    "relation": "increases",
+    "to": "return"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "target firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "first merger bid",
+    "excess return"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,928 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2011.01667.x",
+ "title": "Did Structured Credit Fuel the LBO Boom?",
+ "journal": "JF",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "trade-off theory of capital structure",
+  "credit supply theory",
+  "agency theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cdo_issuance_volume",
+      "relation": "increases",
+      "to": "credit_supply",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_supply",
+      "relation": "increases",
+      "to": "lbo_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credit_supply"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: higher demand for LBOs drove CDO/CLO issuance rather than credit supply fueling LBOs"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_cdo_underwriting",
+      "relation": "increases",
+      "to": "credit_supply",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_supply",
+      "relation": "increases",
+      "to": "bank_lbo_lending",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credit_supply"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: LBO demand drove CDO underwriting volume",
+    "a spurious bank-level trend, in which case investment-grade lending would move with CDO underwriting too"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "lender_cdo_funding",
+      "relation": "increases",
+      "to": "credit_supply",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_supply",
+      "relation": "decreases",
+      "to": "institutional_loan_spread",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credit_supply"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the lower spreads merely reflect differences in the loans' credit ratings (borrower credit risk) rather than credit supply"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "lender_cdo_funding",
+      "relation": "decreases",
+      "to": "bank_monitoring_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_monitoring_incentive",
+      "relation": "increases",
+      "to": "loan_covenant_strictness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "lender_cdo_funding",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "loan_covenant_strictness",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_monitoring_incentive",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "lender_cdo_funding",
+      "relation": "increases",
+      "to": "credit_supply",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_supply",
+      "relation": "increases",
+      "to": "bank_debt_usage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credit_supply"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the relation is driven by time trends during the boom rather than CDO funding"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "structured_credit_access",
+      "relation": "decreases",
+      "to": "bank_screening_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bank_screening_incentive",
+      "relation": "increases",
+      "to": "lbo_deal_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bank_screening_incentive"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (leveraged buyouts of U.S. publicly traded target firms; targets classified by Fama-French 48 industry)",
+  "country_region": "United States",
+  "time_period": "1996-2008 (announced 1996 to Q2 2008)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "345 LBOs"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Loan Pricing Corporation's (LPC) DealScan",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Asset-Backed Alert's ABS Database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P's Leveraged Commentary & Data (LCD)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II, Models 1-3 (aggregate LBO volume ~ CDO market)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "quarterly aggregate time series, 1996 to second quarter of 2008",
+    "dv": {
+     "name": "LBO volume",
+     "measure": "natural log of quarterly aggregate LBO volume (aggregate transaction value of LBO deals announced each quarter)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "CDO issuance volume",
+      "measure": "log of quarterly CDO issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Structured CDO volume",
+      "measure": "log of structured CDO issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "ABS volume",
+      "measure": "log of ABS issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP Growth",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "difference between prime and fed funds rates",
+      "source": ""
+     },
+     {
+      "name": "equity market risk premium (equity market return over 90-day Treasury bill return)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II, Models 4-6 (aggregate LBO loan volume ~ CDO market)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "quarterly aggregate time series, 1996 to second quarter of 2008",
+    "dv": {
+     "name": "LBO loan volume",
+     "measure": "aggregate quarterly LBO loan volume",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "CDO issuance volume",
+      "measure": "log of quarterly CDO issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Structured CDO volume",
+      "measure": "log of structured CDO issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "ABS volume",
+      "measure": "log of ABS issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP Growth",
+      "source": ""
+     },
+     {
+      "name": "high-yield spread",
+      "source": ""
+     },
+     {
+      "name": "difference between prime and fed funds rates",
+      "source": ""
+     },
+     {
+      "name": "equity market risk premium",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table II, Models 7-10 (institutional loan spreads ~ CDO issuance)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "quarterly aggregate time series, 1996 to second quarter of 2008",
+    "dv": {
+     "name": "institutional spread",
+     "measure": "spread on the term loan B tranche (BB-rated and B-rated institutional tranches of leveraged loans)",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "CDO issuance volume",
+      "measure": "log of CDO issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Structured CDO volume",
+      "measure": "log of structured CDO underwriting volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "ABS volume",
+      "measure": "log of ABS issuance volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "high-yield spread",
+      "source": ""
+     },
+     {
+      "name": "GDP Growth",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Models 1-3 (bank LBO lending, bank fixed effects)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "LBO loan panel of 36 banks and 368 bank-year observations",
+    "dv": {
+     "name": "LBO lending volume",
+     "measure": "volume of a bank's LBO lending in a given year",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "CDO underwriting volume",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Structured CDO underwriting volume",
+      "measure": "bank's underwriting volume of structured CDOs",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "ABS underwriting volume",
+      "measure": "bank's underwriting volume in the broader ABS market",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bank balance sheet variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Models 4-6 (investment-grade lending control group, bank fixed effects)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "LBO loan panel of 36 banks and 368 bank-year observations",
+    "dv": {
+     "name": "investment-grade lending",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "CDO underwriting volume",
+      "measure": "bank's CDO underwriting volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Structured CDO underwriting volume",
+      "measure": "bank's structured CDO underwriting volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "ABS underwriting volume",
+      "measure": "bank's ABS underwriting volume",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bank balance sheet variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III, Models 7-9 (cross-sectional boom LBO lending on preboom CDO underwriting)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "cross-section of banks; LBO lending 2004 to 2008 predicted by preboom (1996 to 2003) underwriting",
+    "dv": {
+     "name": "LBO lending during 2004 to 2008",
+     "measure": "bank's LBO lending during the boom period 2004 to 2008",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "preboom CDO underwriting volume",
+      "measure": "bank's CDO underwriting volume in the preboom period 1996 to 2003",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "preboom structured CDO underwriting volume",
+      "measure": "bank's structured CDO underwriting volume 1996 to 2003",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "preboom ABS underwriting volume",
+      "measure": "bank's ABS underwriting volume 1996 to 2003",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table III, Models 10-12 (cross-sectional boom investment-grade lending on preboom CDO underwriting)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "cross-section of banks; investment-grade lending 2004 to 2008 predicted by preboom underwriting",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "bank's investment-grade lending during 2004 to 2008",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "preboom CDO underwriting volume",
+      "measure": "bank's CDO underwriting activity prior to the LBO boom",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "preboom structured CDO underwriting volume",
+      "measure": "bank's structured CDO underwriting prior to the boom",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "preboom ABS underwriting volume",
+      "measure": "bank's ABS underwriting prior to the boom",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "170 LBO loan observations",
+    "dv": {
+     "name": "percentage of institutional tranches",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Log(Total Lender CDO)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Log(Total Lender Structured CDO)",
+      "measure": "log of total structured CDO underwriting of the lead banks (excludes all CLOs and CBOs)",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Loan Amount/LBO Deal Value",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Loan Amount/EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Log(LBO Deal Value)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target EBITDA (operating income over total assets in year before deal)",
+      "source": ""
+     },
+     {
+      "name": "Std. Dev. of Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Industry Std. Dev. of EBITDA (Fama-French 48 industry)",
+      "source": ""
+     },
+     {
+      "name": "Number of Banks (number of lead arrangers)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "year dummies",
+      "source": ""
+     },
+     {
+      "name": "bank dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table V, Models 1-4 (OLS: institutional spreads on Lender CDO Funding)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "LBO loans; model 4 uses bank fixed effects",
+    "dv": {
+     "name": "institutional spread",
+     "measure": "spread on the term loan B tranche (representing spread on institutional tranches)",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Lender CDO Funding",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP Growth",
+      "source": ""
+     },
+     {
+      "name": "Fed Funds Rate",
+      "source": ""
+     },
+     {
+      "name": "Prime Rate",
+      "source": ""
+     },
+     {
+      "name": "loan credit rating",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Loan Maturity (value-weighted average maturity of term loan B tranches)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Log(Loan Amount)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Loan Amount/EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Std. Dev. of Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Industry Std. Dev. of EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Number of Banks",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Bank Size",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table V, Models 5-7 (Probit: likelihood of covenant-lite term loan B tranche)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "LBO loans with term loan B tranches",
+    "dv": {
+     "name": "covenant-lite indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "S&P's Leveraged Commentary & Data (LCD)"
+    },
+    "key_ivs": [
+     {
+      "name": "Lender CDO Funding",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Loan Maturity",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Log(Loan Amount)",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Loan Amount/EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Std. Dev. of Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Industry Std. Dev. of EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Number of Banks",
+      "source": "Loan Pricing Corporation's (LPC) DealScan"
+     },
+     {
+      "name": "Bank Size",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI, Models 1-4 (OLS: use of bank loans, Loan/EBITDA)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "222 LBO deal observations",
+    "dv": {
+     "name": "bank loan use (Loan/EBITDA)",
+     "measure": "total bank loan amount over target EBITDA (loans aggregated across multiple loans supporting the same deal), winsorized at 5%",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Lender CDO Funding",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Lender Structured CDO Funding",
+      "measure": "lead bank's structured CDO underwriting as percentage of assets (excludes CLOs and CBOs)",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Target Asset)",
+      "source": ""
+     },
+     {
+      "name": "Target EBITDA (operating income scaled by total assets)",
+      "source": ""
+     },
+     {
+      "name": "Market-to-Book",
+      "source": ""
+     },
+     {
+      "name": "Book Leverage",
+      "source": ""
+     },
+     {
+      "name": "Std. Dev. of Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Growth of Sales",
+      "source": ""
+     },
+     {
+      "name": "Tangible Asset",
+      "source": ""
+     },
+     {
+      "name": "Industry EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Industry Std. Dev. of EBITDA",
+      "source": ""
+     },
+     {
+      "name": "year dummy",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI, Models 5-8 (OLS: use of bank loans, EBITDA/Interest)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "184 LBO deal observations",
+    "dv": {
+     "name": "bank loan use (EBITDA/Interest)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Loan Pricing Corporation's (LPC) DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Lender CDO Funding",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Asset-Backed Alert's ABS Database"
+     },
+     {
+      "name": "Lender Structured CDO Funding",
+      "measure": "lead bank's structured CDO underwriting as percentage of assets (excludes CLOs and CBOs)",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Target Asset)",
+      "source": ""
+     },
+     {
+      "name": "Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Market-to-Book",
+      "source": ""
+     },
+     {
+      "name": "Book Leverage",
+      "source": ""
+     },
+     {
+      "name": "Std. Dev. of Target EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Growth of Sales",
+      "source": ""
+     },
+     {
+      "name": "Tangible Asset",
+      "source": ""
+     },
+     {
+      "name": "Industry EBITDA",
+      "source": ""
+     },
+     {
+      "name": "Industry Std. Dev. of EBITDA",
+      "source": ""
+     },
+     {
+      "name": "year dummy",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VII (univariate comparison: CDO-driven vs non-CDO-driven deals post-2004)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "LBO deals announced during 2004 to June 2008",
+    "dv": {
+     "name": "target characteristics and deal pricing",
+     "measure": "transaction value, operating cash flow margin (EBITDA), free cash flow, tax payment, market-to-book, leverage, and operating risk (volatility of cash flows / growth)",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "CDO-driven vs non-CDO-driven deal indicator",
+      "measure": "deals financed by lenders with high vs low Lender CDO Funding (above vs below the median of all LBO deals)",
+      "source": "Asset-Backed Alert's ABS Database"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "structured credit investors",
+    "lower spreads",
+    "higher leverage",
+    "weaker covenant protection"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "structured credit",
+    "credit rating agency process"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "structured credit markets",
+    "lbo boom"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "regulatory initiatives toward risk-based capital management",
+    "capital requirements"
+   ],
+   "mechanism_named": "risk-based capital management",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

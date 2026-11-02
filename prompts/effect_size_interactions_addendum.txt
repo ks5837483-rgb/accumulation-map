@@ -1,0 +1,11 @@
+INTERACTION-ROW PASS (es-1.0 addendum, 2026-09-05). In this run our_hypotheses contains ONLY moderator/interaction
+hypotheses (kind='interaction'): statements of the form "the effect of X on Y is stronger/weaker when Z". For EACH such row:
+- The target estimate is the INTERACTION TERM (X x Z, or the moderated slope / subsample difference the paper actually reports
+  as its test of that hypothesis) - NOT the main effect of X and NOT the main effect of Z. Name the exact table row you read.
+- Record coef, se_or_t (+ se_or_t_type), stars/p as printed, N, model_type as usual. If the paper tests the moderation by
+  split-sample comparison instead of a product term, record the two subsample coefficients in `robustness` and put the
+  difference test (chi2/t/z) in se_or_t with se_or_t_type set accordingly; set coef=null if no single interaction estimate exists.
+- sign_supports_hypothesis: judge against the STATED moderation direction ('stronger' = larger magnitude of the parent effect in
+  its own sign; e.g. a NEGATIVE main effect made 'greater' means a NEGATIVE interaction coefficient). State this reasoning in
+  dv_coding_note. `parent_main_effects_for_context` lists the parent chain(s) - use them only to orient signs, do not extract them.
+- Keep every other rule of es-1.0 (image-first numbers; significance only from images/prose; never guess; valid JSON to OUT_PATH).

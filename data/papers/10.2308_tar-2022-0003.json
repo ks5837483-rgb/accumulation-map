@@ -1,0 +1,676 @@
+{
+ "paper_id": "10.2308_tar-2022-0003",
+ "title": "Investor Reaction to SPACs’ Voluntary Disclosures",
+ "journal": "AR",
+ "year": 2023,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "voluntary disclosure theory",
+  "information asymmetry",
+  "limited investor sophistication (behavioral finance)",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "forecast_optimism",
+      "relation": "increases",
+      "to": "retail_investor_deception",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "retail_investor_deception",
+      "relation": "increases",
+      "to": "retail_share_purchasing",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "retail_investor_deception"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "trading is driven by private communication before the projections' public release rather than by the public forecast itself"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "forecast_optimism",
+      "relation": "increases",
+      "to": "discernment_of_optimistic_bias",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "discernment_of_optimistic_bias",
+      "relation": "decreases",
+      "to": "institutional_share_purchasing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "discernment_of_optimistic_bias"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "trading is driven by private communication before the projections' public release rather than by the public forecast itself"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "forecast_optimism",
+      "relation": "increases",
+      "to": "suspicion_of_hype",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "suspicion_of_hype",
+      "relation": "increases",
+      "to": "shareholder_redemptions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "suspicion_of_hype"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "SPAC Mafia 13-F filers who redeem or sell regardless of forecast optimism drive the redemption result"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "forecast_optimism",
+      "relation": "increases",
+      "to": "detection_of_optimism",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "detection_of_optimism",
+      "relation": "increases",
+      "to": "institutional_divestiture",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "detection_of_optimism"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "forecast_optimism",
+      "relation": "increases",
+      "to": "share_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "share_overvaluation",
+      "relation": "decreases",
+      "to": "post_combination_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "share_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a mechanical relationship between missed projections and returns (firms underperform because they missed their projections, not because of hyping-induced mispricing)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "SPACs (special purpose acquisition companies) / SPAC combinations taking private firms public via reverse merger",
+  "country_region": "United States",
+  "time_period": "2009-2020",
+  "sample_description": "All SPAC combinations that went public since 2009 and successfully combined before 2021, identified from SPACInsider and manually verified from EDGAR filings; restricted to combinations with revenue forecasts having available forecast errors (realizations from Compustat), with trading, redemption, divestiture, and return data from TAQ, CRSP/Bloomberg, WRDS SEC Analytics Suite/FactSet",
+  "sample_size": "109 unique combinations (214 revenue forecasts)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SPACInsider",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "EDGAR / SEC filings (SPAC variables, revenue projections, and redemptions collected by hand)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bloomberg",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Trade and Quote (TAQ)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Execucomp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "WRDS SEC Analytics Suite",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "FactSet",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (cols 1-3) — Retail investor trade imbalance",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Retail Trade Imbalance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Trade and Quote (TAQ)"
+    },
+    "key_ivs": [
+     {
+      "name": "Forecast Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPAC Size",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "Disclosures (number of 8-K filings in window)",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Days to Completion",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "At Risk (sponsor investment in SPAC)",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Dilution",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Trust Percentage",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Days to Announce",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "Days to Announce squared",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "Board Representation",
+      "source": "EDGAR"
+     },
+     {
+      "name": "SPAC Dual Role",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Tenure",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Forecasted Years",
+      "source": "EDGAR (hand-collected)"
+     },
+     {
+      "name": "Forecasted Measures",
+      "source": "EDGAR (hand-collected)"
+     },
+     {
+      "name": "Revenue Growth",
+      "source": "Compustat/EDGAR"
+     },
+     {
+      "name": "Contemp. Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Media Mentions",
+      "source": "other"
+     },
+     {
+      "name": "Closing year, forecast horizon, and Fama-French 49 industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (cols 5-7) — Institutional investor trade imbalance",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Institutional Trade Imbalance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Trade and Quote (TAQ)"
+    },
+    "key_ivs": [
+     {
+      "name": "Forecast Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPAC Size",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "Disclosures",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Days to Completion",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "At Risk",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Dilution",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Trust Percentage",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Days to Announce (+ squared)",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "Board Representation",
+      "source": "EDGAR"
+     },
+     {
+      "name": "SPAC Dual Role",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Tenure",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Forecasted Years",
+      "source": "EDGAR (hand-collected)"
+     },
+     {
+      "name": "Forecasted Measures",
+      "source": "EDGAR (hand-collected)"
+     },
+     {
+      "name": "Revenue Growth",
+      "source": "Compustat/EDGAR"
+     },
+     {
+      "name": "Contemp. Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Media Mentions",
+      "source": "other"
+     },
+     {
+      "name": "Closing year, forecast horizon, and Fama-French 49 industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (cols 4 and 8) — Placebo test (pre-release window)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "placebo/falsification test over the window between SPAC IPO and public release of projections",
+    "dv": {
+     "name": "Retail / Institutional Trade Imbalance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Trade and Quote (TAQ)"
+    },
+    "key_ivs": [
+     {
+      "name": "Forecast Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set and fixed effects as main trade imbalance tests",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (cols 1-4) — Shareholder redemptions",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Disclosures, Days to Completion, and Contemp. Return removed from control set relative to trade tests",
+    "dv": {
+     "name": "Redemptions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR (hand-collected from current reports, quarterly reports, or annual reports)"
+    },
+    "key_ivs": [
+     {
+      "name": "Forecast Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     },
+     {
+      "name": "SPAC Mafia (col 4 only)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "WRDS SEC Analytics Suite/FactSet (13-F)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SPAC Size",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "At Risk",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Dilution",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Trust Percentage",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Days to Announce (+ squared)",
+      "source": "SPACInsider/EDGAR"
+     },
+     {
+      "name": "Board Representation",
+      "source": "EDGAR"
+     },
+     {
+      "name": "SPAC Dual Role",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Tenure",
+      "source": "Execucomp"
+     },
+     {
+      "name": "Forecasted Years",
+      "source": "EDGAR (hand-collected)"
+     },
+     {
+      "name": "Forecasted Measures",
+      "source": "EDGAR (hand-collected)"
+     },
+     {
+      "name": "Revenue Growth",
+      "source": "Compustat/EDGAR"
+     },
+     {
+      "name": "Media Mentions",
+      "source": "other"
+     },
+     {
+      "name": "Industry, year, and forecast horizon fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (col 5) — Modified Redemptions",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Modified Redemptions",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR (hand-collected); WRDS SEC Analytics/FactSet (SPAC Mafia 13-F holdings)"
+    },
+    "key_ivs": [
+     {
+      "name": "Forecast Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set and fixed effects as Table 4 redemption model",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (cols 1-3) — Institutional investor divestiture",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "13-F filers whose holdings are publicly visible around the combination close",
+    "dv": {
+     "name": "Divest",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WRDS SEC Analytics Suite/FactSet (13-F filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "Forecast Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set and fixed effects as Table 4 redemption model",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (cols 4-8) — Divestiture by investor type/preference (DED/QIX/TRA/Growth/Value)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "subsamples split by 13-F filer investor type and investment style",
+    "dv": {
+     "name": "DED / QIX / TRA / Growth / Value Divest",
+     "measure": "[withheld: wording matches the source]",
+     "source": "WRDS SEC Analytics Suite/FactSet (13-F filings)"
+    },
+    "key_ivs": [
+     {
+      "name": "Forecast Error",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set and fixed effects as Table 5 divestiture model",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panels A & B — Post-combination calendar-time portfolio returns",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "SPACs with post-combination monthly returns; three-/six-/12-/24-month holding portfolios (97/91/87/68 firms)",
+    "dv": {
+     "name": "Monthly post-combination portfolio return (net of risk-free rate)",
+     "measure": "monthly returns of rolling optimistic vs pessimistic SPAC portfolios (SPACs remaining in portfolios for three, six, 12, or 24 months), Winsorized at top/bottom percentiles, net of the risk-free rate; Panel B = long pessimistic / short optimistic hedge portfolio return",
+     "source": "CRSP or Bloomberg"
+    },
+    "key_ivs": [
+     {
+      "name": "Optimistic vs pessimistic portfolio classification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand-collected forecasts); Compustat (realizations)"
+     },
+     {
+      "name": "Fama-French three factors + momentum (Carhart) factor",
+      "measure": "monthly portfolio excess returns regressed on the Fama-French (1993) three factors and a Carhart (1997) momentum factor to control for known risk factors",
+      "source": "other"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Fama-French three factors (MKT, SMB, HML)",
+      "source": "other"
+     },
+     {
+      "name": "Momentum factor (Carhart 1997)",
+      "source": "other"
+     }
+    ]
+   },
+   {
+    "label": "Appendix C — Forecast optimism relative to benchmarks (matched)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "universe of all revenue forecasts, post-IPO firm forecasts, and nearest-neighbor matched forecasts",
+    "dv": {
+     "name": "Forecast Error",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR (hand-collected forecasts); Compustat; I/B/E/S (non-SPAC forecasts)"
+    },
+    "key_ivs": [
+     {
+      "name": "SPAC indicator",
+      "measure": "comparison of SPAC-issued revenue projections versus non-SPAC/post-IPO forecasts and nearest-neighbor matched forecasts",
+      "source": "EDGAR; I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Observable SPAC combination and forecast characteristics",
+      "source": "EDGAR"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "hyping",
+    "volatility",
+    "option value",
+    "warrant divestiture",
+    "common share divestiture"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

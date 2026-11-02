@@ -1,0 +1,420 @@
+{
+ "paper_id": "10.1007_s11142-012-9184-9",
+ "title": "The change in information uncertainty and acquirer wealth losses",
+ "journal": "RAS",
+ "year": 2012,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "asset pricing",
+  "cost of capital theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "fundamental_volatility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "fundamental_volatility",
+      "relation": "increases",
+      "to": "information_uncertainty",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "acquisition",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "information_uncertainty",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "fundamental_volatility",
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the increase in dispersion reflects changes in fundamental performance (fundamental news) rather than an acquisition-driven rise in information uncertainty"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_uncertainty",
+      "relation": "increases",
+      "to": "cost_of_capital",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_capital",
+      "relation": "decreases",
+      "to": "stock_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_capital"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the negative dispersion-return relation is spurious because DDISP captures fundamental news related to stock returns rather than an information-uncertainty (discount-rate) effect"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A across many 2-digit SIC industries; top three: Business Services (73), Commercial Machinery/Computers (35), Communications (48))",
+  "country_region": "United States (both acquirer and target are U.S. firms)",
+  "time_period": "1985-2003",
+  "sample_description": "Mergers and acquisitions completed 1985-2003 from the Securities Data Corporation database, both acquirer and target U.S. firms, acquirer market value of equity at least $200 million, deal value at least 10% of acquirer market value, acquirer obtains 100% of the target, with earnings forecasts and actual earnings from I/B/E/S",
+  "sample_size": "1,915 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Kenneth French's website",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (Panel A & B): Information uncertainty (DISP) around the acquisition",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Analyst forecast dispersion (DISP)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Post-acquisition period (years t+1 and t+2 vs. pre-acquisition year t-1)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 Model (1): Dep. Var. = ARET i+1,i+36",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "36-month acquirer abnormal stock return (ARET i+1,i+36)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Change in information uncertainty (DDISP)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DEAL/MV (relative deal size)",
+      "source": "Securities Data Corporation database"
+     },
+     {
+      "name": "COVERED (target covered by I/B/E/S indicator)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SIZE (log market value of equity, acquirer, end of year t-1)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BM (book-to-market ratio, acquirer, end of year t-1)",
+      "source": ""
+     },
+     {
+      "name": "DROE (change in return on equity)",
+      "source": ""
+     },
+     {
+      "name": "DSGR (change in sales growth)",
+      "source": ""
+     },
+     {
+      "name": "DGROWTH (change in analysts' forecasts of long-term earnings growth)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "FEt+1 (analyst forecast error, year t+1)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "FEt+2 (analyst forecast error, year t+2)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "FEt+3 (analyst forecast error, year t+3)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "ABCA (abnormal current accruals, earnings management proxy)",
+      "source": ""
+     },
+     {
+      "name": "CASH (acquirer cash and short-term investments / total assets)",
+      "source": ""
+     },
+     {
+      "name": "ALLSTOCK (100% stock acquisition dummy)",
+      "source": "Securities Data Corporation database"
+     },
+     {
+      "name": "Year dummy variables / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model (2): Dep. Var. = ARET i+1,i+60",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "60-month acquirer abnormal stock return (ARET i+1,i+60)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Change in information uncertainty (DDISP)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DEAL/MV (relative deal size)",
+      "source": "Securities Data Corporation database"
+     },
+     {
+      "name": "COVERED (target covered by I/B/E/S indicator)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SIZE (log market value of equity, acquirer, end of year t-1)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BM (book-to-market ratio, acquirer, end of year t-1)",
+      "source": ""
+     },
+     {
+      "name": "DROE (change in return on equity)",
+      "source": ""
+     },
+     {
+      "name": "DSGR (change in sales growth)",
+      "source": ""
+     },
+     {
+      "name": "DGROWTH (change in analysts' forecasts of long-term earnings growth)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "FEt+1 (analyst forecast error, year t+1)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "FEt+2 (analyst forecast error, year t+2)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "FEt+3 (analyst forecast error, year t+3)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "ABCA (abnormal current accruals, earnings management proxy)",
+      "source": ""
+     },
+     {
+      "name": "CASH (acquirer cash and short-term investments / total assets)",
+      "source": ""
+     },
+     {
+      "name": "ALLSTOCK (100% stock acquisition dummy)",
+      "source": "Securities Data Corporation database"
+     },
+     {
+      "name": "Year dummy variables / year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "36-month post-acquisition stock return (ARET i+1,i+36)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "DDISP quintile (conditional on DROE)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "DROE (conditioning variable held constant across quintiles)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B: Three-factor and four-factor model alphas for five DDISP quintiles",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "monthly returns (months t+1 to t+36) per DDISP quintile portfolio",
+    "dv": {
+     "name": "Monthly portfolio excess return (Rit - Rft)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "DDISP quintile portfolio (conditional on DROE)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Fama-French / Carhart factors (RM-Rf, SMB, HML, MOM)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kenneth French's website"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "limitations",
+   "constructs": [
+    "information uncertainty",
+    "acquirers’ long-term stock returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "changes in information uncertainty"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "acquirers’ wealth loss",
+    "negative post-acquisition returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "information uncertainty",
+    "relation": "unspecified",
+    "to": "negative post-acquisition returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "market efficiency"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "proxy for information uncertainty",
+    "unidentified fundamentals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

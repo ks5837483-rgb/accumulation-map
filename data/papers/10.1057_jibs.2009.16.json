@@ -1,0 +1,584 @@
+{
+ "paper_id": "10.1057_jibs.2009.16",
+ "title": "A real options perspective on sequential acquisitions in China",
+ "journal": "JIBS",
+ "year": 2009,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "real options theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_acquirer",
+      "relation": "increases",
+      "to": "information_disadvantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_disadvantage",
+      "relation": "increases",
+      "to": "sequential_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_disadvantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "diversification",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "sequential_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "Chinese listed firms, highly concentrated in manufacturing sectors (financial services and investment sectors excluded)",
+  "country_region": "China",
+  "time_period": "1995-2003",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "272"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 Model 1 (controls-only baseline logistic regression)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Sequential acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Sinofin"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Dual-share listing",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Debt-asset ratio",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Log assets (logarithm-transformed total assets)",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Return on equity",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Acquirer experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Target experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Intangible assets (ratio of intangible assets to total assets)",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry total acquisitions",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry dummies (CSRC industry codes; 3-digit manufacturing, 2-digit non-manufacturing)",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Year dummies (1998-2003)",
+      "source": "Sinofin"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Model 2 (controls + Private acquirer)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Sequential acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Sinofin"
+    },
+    "key_ivs": [
+     {
+      "name": "Private acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Sinofin (originally coded by Sinofin, verified case-by-case against company home pages and related websites)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Concentration",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Dual-share listing",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Debt-asset ratio",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Log assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Return on equity",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Acquirer experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Target experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Intangible assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry total acquisitions",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Year dummies",
+      "source": "Sinofin"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Model 3 (controls + Diversification)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Sequential acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Sinofin"
+    },
+    "key_ivs": [
+     {
+      "name": "Diversification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-coded by two coders from Sinofin business-scope descriptions (CSRC three-digit SIC industry codes) plus supplementary web sources"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Concentration",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Dual-share listing",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Debt-asset ratio",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Log assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Return on equity",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Acquirer experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Target experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Intangible assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry total acquisitions",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Year dummies",
+      "source": "Sinofin"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Model 4 (full model: controls + Private acquirer + Diversification)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Sequential acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Sinofin"
+    },
+    "key_ivs": [
+     {
+      "name": "Private acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Sinofin (originally coded by Sinofin, verified against company home pages and related websites)"
+     },
+     {
+      "name": "Diversification",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-coded by two coders from Sinofin business-scope descriptions (CSRC three-digit SIC industry codes) plus supplementary web sources"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Concentration",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Dual-share listing",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Debt-asset ratio",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Log assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Return on equity",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Acquirer experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Target experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Intangible assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry total acquisitions",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Year dummies",
+      "source": "Sinofin"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "same 272 cases with sequential acquisition recoded under 60- and 90-day intervals and three-step-collapsed-to-two-step",
+    "dv": {
+     "name": "Sequential acquisition (recoded)",
+     "measure": "sequential acquisition recoded using alternative minimum block-purchase intervals of 60 and 90 days; and with three-step sequential cases collapsed to two-step cases",
+     "source": "Sinofin"
+    },
+    "key_ivs": [
+     {
+      "name": "Private acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Diversification",
+      "measure": "1 if no overlap between acquirer's and target's main businesses, 0 otherwise",
+      "source": "hand-coded from Sinofin business-scope descriptions"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Concentration",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Dual-share listing",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Debt-asset ratio",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Log assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Return on equity",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Acquirer experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Target experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Intangible assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry total acquisitions",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Year dummies",
+      "source": "Sinofin"
+     }
+    ]
+   },
+   {
+    "label": "Subsample analyses by initial-stake (toehold) size",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Sequential acquisition",
+     "measure": "coded 1 if two or three block-share purchases, 0 if one-time transaction",
+     "source": "Sinofin"
+    },
+    "key_ivs": [
+     {
+      "name": "Private acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Diversification",
+      "measure": "1 if no overlap between acquirer's and target's main businesses, 0 otherwise",
+      "source": "hand-coded from Sinofin business-scope descriptions"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Concentration",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Dual-share listing",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Debt-asset ratio",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Log assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Return on equity",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Acquirer experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Target experience",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Intangible assets",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry total acquisitions",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Industry dummies",
+      "source": "Sinofin"
+     },
+     {
+      "name": "Year dummies",
+      "source": "Sinofin"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "endogenous uncertainty",
+    "exogenous uncertainty",
+    "real options approach"
+   ],
+   "mechanism_named": "real options approach",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "capital-constrained",
+    "sequential acquisition behavior",
+    "private firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "capital constraints",
+    "relation": "affects",
+    "to": "sequential acquisition behavior"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "capital constraints",
+    "propensity of employing sequential acquisitions",
+    "acquirer’s financial strengths"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "capital constraints",
+    "relation": "affects",
+    "to": "propensity of employing sequential acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "market institutions and intermediaries",
+    "phenomenon we identified"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "market institutions and intermediaries maturity",
+    "on_path": [
+     "institutional context",
+     "sequential acquisition"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "other emerging-market firms",
+    "acquisition process",
+    "institutional development"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

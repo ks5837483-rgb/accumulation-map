@@ -1,0 +1,12 @@
+setting_attributes v1 (2026-10-31) — prompt of record. Codes each study's NOMINAL setting (already-extracted context record) into
+contextual attributes (Levinthal & Rosenkopf step 1). Input per paper: industry_setting, country_region, time_period,
+sample_description, sample_size (values as extracted; no other source).
+Return per paper:
+- country_scope: "us_only" | "non_us" (one or more non-US countries, no US) | "multi_incl_us" | "unclear"
+- industry_scope: "single" (one industry) | "few" (2-5 named industries) | "cross" (cross-industry / broad samples) | "unclear"
+- target_listing: "public" (targets/firms studied are listed) | "private" (unlisted targets) | "both" | "na" (not about targets) | "unclear"
+- year_start, year_end: integers read from time_period (null if not stated)
+- confidence: high | medium | low ; note: <= 12 words
+STRICT JUDGMENT RULE: decide every field by reading; no scripts, regexes, keyword lists or lookup tables to assign values. Code may
+only read the input file and write the output file.
+Output: one JSON per line {"paper_id","country_scope","industry_scope","target_listing","year_start","year_end","confidence","note"}.

@@ -1,0 +1,530 @@
+{
+ "paper_id": "10.1093_rfs_hhr024",
+ "title": "The Private Equity Advantage: Leveraged Buyout Firms and Relationship Banking",
+ "journal": "RFS",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "relationship banking theory",
+  "information economics",
+  "asymmetric information theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_relationship",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "loan_spread",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "bank_relationship",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "contracting_flexibility",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "cross-selling hypothesis (H2): repeated lending relationships merely capture the commitment to future fees rather than lower information costs"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cross_selling_potential",
+      "relation": "increases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "decreases",
+      "to": "loan_spread",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_relationship",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "spread_net_of_fees",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "cross-selling benefits (H2) that accrue only to the lead bank, rather than information benefits shared by the whole syndicate"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "leveraged buyout / private-equity-sponsored syndicated leveraged loan market (cross-industry portfolio companies, 2-digit SIC industry fixed effects)",
+  "country_region": "United States",
+  "time_period": "1993-2005",
+  "sample_description": "Syndicated loans financing private-equity-sponsored leveraged buyouts, flagged as sponsored loans in Reuters' LPC DealScan (augmented with Private Equity Performance Monitor, S&P Capital IQ, and Compustat); one first-chronological observation per LBO firm/borrower pair; 124 LBO firms and 49 lead banks",
+  "sample_size": "1,590 loans (124 LBO firms and 49 lead banks)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Reuters' LPC DealScan loan database (DealScan)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "S&P's Capital IQ database",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Private Equity Performance Monitor",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "DealLogic database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Loan spread (OLS, specifications 1-6 and 8)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1,590 sponsored loans, 1993-2005; specification 8 restricted to the 386 borrowers with Compustat data available",
+    "dv": {
+     "name": "Loan spread (Spread)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank relationship (amount)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "Bank relationship (N)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal amount (log of total loan amount)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Maturity (in months)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Unsecured (dummy=1 if loan not secured)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Number of lenders in the syndicate",
+      "source": "DealScan"
+     },
+     {
+      "name": "Lender rank (ordinal rank of bank by five-year rolling market share)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Traded loan (dummy=1 if sold in secondary market)",
+      "source": "DealScan"
+     },
+     {
+      "name": "New lead bank-borrower (dummy)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Fund size (log of fund equity capital)",
+      "source": "Private Equity Performance Monitor / Capital IQ"
+     },
+     {
+      "name": "Previous loans (log of 1 + dollar value of loans sponsored in previous five years)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Book leverage (book debt/assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA / EBIT to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "No Compustat (dummy for missing Compustat data)",
+      "source": "Compustat"
+     },
+     {
+      "name": "No loan rating (dummy=1 if loan not rated)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "DealScan"
+     },
+     {
+      "name": "Industry fixed effects (two-digit SIC codes)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Credit rating fixed effects (S&P loan rating dummies)",
+      "source": "DealScan"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, specification 7: Loan spread (2SLS, instrumented bank relationship)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "Loan spread (Spread)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank relationship (amount) - instrumented",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Lagged bank relationship 2nd (PE firm's second-highest bank relationship, level control)",
+      "source": "DealScan"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "Fund size, Previous loans (LBO firm size controls)",
+      "source": "DealScan / Private Equity Performance Monitor / Capital IQ"
+     },
+     {
+      "name": "Year, industry (two-digit SIC), and credit rating fixed effects",
+      "source": "DealScan"
+     }
+    ]
+   },
+   {
+    "label": "Loan spread - cross-selling / potential fee business (test of H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Loan spread (Spread)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Previous fee transactions (same bank)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "S&P's Capital IQ (hand-match of LBO firm and lead bank names)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Previous fee transactions (other banks) (log of 1 + total enterprise value advised by other banks in previous five years)",
+      "source": "S&P's Capital IQ"
+     },
+     {
+      "name": "Previous loans (LBO firm size control)",
+      "source": "DealScan"
+     },
+     {
+      "name": "Fund size (LBO firm size control)",
+      "source": "Private Equity Performance Monitor / Capital IQ"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "No Compustat, No loan rating dummies",
+      "source": "Compustat / DealScan"
+     },
+     {
+      "name": "Year, industry (two-digit SIC), and credit rating fixed effects",
+      "source": "DealScan"
+     }
+    ]
+   },
+   {
+    "label": "Maximum debt to EBITDA covenant regression (tests H1 and H2)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "474 sponsored loans with Maximum debt to EBITDA covenant information available",
+    "dv": {
+     "name": "Maximum debt to EBITDA covenant",
+     "measure": "the Maximum debt to EBITDA covenant (identified by industry participants as the most important covenant and the covenant best represented in the sample, used in 29% of the loans); computed where covenant data are available",
+     "source": "DealScan"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank relationship (amount)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "Previous fee transactions (same bank)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "S&P's Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Book leverage (book debt/total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "EBIT to assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales to assets (net sales/total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "No Compustat (dummy for missing Compustat data)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Previous loans, Fund size (LBO firm size controls)",
+      "source": "DealScan / Private Equity Performance Monitor / Capital IQ"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "DealScan"
+     },
+     {
+      "name": "Year, industry (two-digit SIC), and credit rating fixed effects",
+      "source": "DealScan"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "cross-selling potential",
+    "bank relationship",
+    "information asymmetry"
+   ],
+   "mechanism_named": "reduced information asymmetry",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "previous fee transactions",
+    "bank relationship"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "bank relationship",
+    "previous fee transactions",
+    "loan syndicate structure"
+   ],
+   "mechanism_named": "information benefits of the banking relationship",
+   "proposed_edge": {
+    "from": "bank relationship",
+    "relation": "affects",
+    "to": "loan syndicate structure"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bank relationships",
+    "equity returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "loan terms",
+    "availability",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "bank relationships",
+    "transaction prices",
+    "equity returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "bank relationship",
+    "loan terms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "bank relationship",
+    "bankruptcy",
+    "borrower quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "bank relationship",
+    "loan performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "banking relationships",
+    "loan terms",
+    "non-sponsored borrowers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

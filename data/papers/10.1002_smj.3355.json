@@ -1,0 +1,634 @@
+{
+ "paper_id": "10.1002_smj.3355",
+ "title": "The market value spillovers of technological acquisitions: Evidence from\n                    <scp>patent‐text</scp>\n                    analysis",
+ "journal": "SMJ",
+ "year": 2021,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "resource-based view"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technological_similarity",
+      "relation": "increases",
+      "to": "signal_that_acquired_technologies_are_in_demand",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_that_acquired_technologies_are_in_demand",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_that_acquired_technologies_are_in_demand"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "competitive effects of the acquisition on product rivals (product-market rivalry rather than technological signaling)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public patenting firms and their technological/product rivals across product markets, studied in the context of technological acquisitions)",
+  "country_region": "United States",
+  "time_period": "1997-2018",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "294,630 outsiders' CAR observations (4,102 unique outsiders; 843 acquisition announcements)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thompson SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat segments",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "USPTO PatentsView data set",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Vertical TNIC (Fresard et al., 2020)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Census Gazetteer",
+    "category": "census_gov",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model (1) — baseline controls",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target ProductProx",
+      "measure": "[withheld: wording matches the source]",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Outsider-target VerticalProx",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Vertical TNIC (Fresard et al., 2020)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquisition premium (%)",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "Local deal (within 100 km dummy)",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "High-tech sector dummy",
+      "source": "other"
+     },
+     {
+      "name": "Technological acquisitions wave",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "Target relative size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Outsider/acquirer log(assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer net leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer total patents",
+      "source": "USPTO PatentsView data set"
+     },
+     {
+      "name": "Outsider/target/acquirer diversification",
+      "source": "Compustat segments"
+     },
+     {
+      "name": "Outsider/target/acquirer R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer marketing intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer capital intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Target industry dummies (FIC-25 Hoberg-Phillips)",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model (2) — adds Outsider-target TechProx",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target TechProx",
+      "measure": "[withheld: wording matches the source]",
+      "source": "USPTO PatentsView data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Outsider-target ProductProx",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Outsider-target VerticalProx",
+      "source": "Vertical TNIC (Fresard et al., 2020)"
+     },
+     {
+      "name": "Acquisition premium (%)",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "Local deal (within 100 km dummy)",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "High-tech sector dummy",
+      "source": "other"
+     },
+     {
+      "name": "Technological acquisitions wave",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "Target relative size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Outsider/acquirer log(assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer net leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer total patents",
+      "source": "USPTO PatentsView data set"
+     },
+     {
+      "name": "Outsider/target/acquirer diversification",
+      "source": "Compustat segments"
+     },
+     {
+      "name": "Outsider/target/acquirer R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer marketing intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer capital intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Target industry dummies (FIC-25 Hoberg-Phillips)",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model (3) — adds outsider-acquirer product and vertical proximity controls",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target TechProx",
+      "measure": "text similarity (cosine similarity) between the patent portfolios of the outsider and the target in the year before the acquisition announcement",
+      "source": "USPTO PatentsView data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Outsider-target ProductProx",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Outsider-target VerticalProx",
+      "source": "Vertical TNIC (Fresard et al., 2020)"
+     },
+     {
+      "name": "Outsider-acquirer ProductProx",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Outsider-acquirer VerticalProx",
+      "source": "Vertical TNIC (Fresard et al., 2020)"
+     },
+     {
+      "name": "Acquisition premium (%)",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "Local deal (within 100 km dummy)",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "Technological acquisitions wave",
+      "source": "Thompson SDC Platinum database"
+     },
+     {
+      "name": "Target relative size",
+      "source": "CRSP"
+     },
+     {
+      "name": "Outsider/acquirer log(assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer net leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer Tobin's Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer total patents",
+      "source": "USPTO PatentsView data set"
+     },
+     {
+      "name": "Outsider/target/acquirer diversification",
+      "source": "Compustat segments"
+     },
+     {
+      "name": "Outsider/target/acquirer R&D intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer marketing intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Outsider/target/acquirer capital intensity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Target industry dummies (FIC-25 Hoberg-Phillips)",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target TechProx",
+      "measure": "text similarity (cosine similarity) between the patent portfolios of the outsider and the target in the year before the acquisition announcement",
+      "source": "USPTO PatentsView data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Outsider-target VerticalProx",
+      "source": "Vertical TNIC (Fresard et al., 2020)"
+     },
+     {
+      "name": "Outsider-acquirer product and vertical proximity",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Deal/target/acquirer/outsider characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Target industry dummies (FIC-25 Hoberg-Phillips)",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target TechProx",
+      "measure": "text similarity (cosine similarity) between the patent portfolios of the outsider and the target in the year before the acquisition announcement",
+      "source": "USPTO PatentsView data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Outsider-target VerticalProx",
+      "source": "Vertical TNIC (Fresard et al., 2020)"
+     },
+     {
+      "name": "Outsider-acquirer product and vertical proximity",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Deal/target/acquirer/outsider characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     },
+     {
+      "name": "Target industry dummies (FIC-25 Hoberg-Phillips)",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     }
+    ]
+   },
+   {
+    "label": "Table A6 (Online Appendix D) — deal fixed effects",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "market-model cumulative abnormal returns on the outsider's stock over the [-2, +2] window at the acquisition announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target TechProx",
+      "measure": "text similarity (cosine similarity) between the patent portfolios of the outsider and the target in the year before the acquisition announcement",
+      "source": "USPTO PatentsView data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Outsider-target ProductProx and VerticalProx",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Outsider characteristics",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table A7 (Online Appendix D) — SIC-based product and vertical relatedness measures",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "market-model cumulative abnormal returns on the outsider's stock over the [-2, +2] window at the acquisition announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target TechProx",
+      "measure": "text similarity (cosine similarity) between the patent portfolios of the outsider and the target",
+      "source": "USPTO PatentsView data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIC-based product relatedness (Bloom et al., 2013)",
+      "source": "Compustat"
+     },
+     {
+      "name": "SIC-based vertical relatedness (Shahrur, 2005)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal/target/acquirer/outsider characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year and target industry dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table A10 (Online Appendix D) — Jaffe class-based technological similarity measure",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Outsider CAR [-2, +2] (%)",
+     "measure": "market-model cumulative abnormal returns on the outsider's stock over the [-2, +2] window at the acquisition announcement",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Outsider-target technological similarity (Jaffe class-based index)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "USPTO PatentsView data set"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Outsider-target ProductProx and VerticalProx",
+      "source": "TNIC-3 data (Hoberg and Phillips, 2010, 2016)"
+     },
+     {
+      "name": "Deal/target/acquirer/outsider characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year and target industry dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "technological signaling effects",
+    "market value spillovers"
+   ],
+   "mechanism_named": "technological signaling effects",
+   "proposed_edge": {
+    "from": "technological signaling effects",
+    "relation": "affects",
+    "to": "market value spillovers"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "technological resources",
+    "outsiders' resource base",
+    "revaluation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "outsiders' resource base",
+    "relation": "affects",
+    "to": "revaluation"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "resource similarity",
+    "spillover effects"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "value of resources",
+    "firms' actions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "signaling effects",
+    "outsiders' technologies",
+    "patent portfolios"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "technological proximity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

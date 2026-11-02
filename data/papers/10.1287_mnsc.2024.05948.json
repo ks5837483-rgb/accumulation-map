@@ -1,0 +1,615 @@
+{
+ "paper_id": "10.1287_mnsc.2024.05948",
+ "title": "Takeover Threats and Mandatory Disclosure Avoidance: Evidence from Contract Redactions",
+ "journal": "MNSC",
+ "year": 2025,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "proprietary cost theory",
+  "real options theory",
+  "information asymmetry"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "takeover_threats",
+      "relation": "increases",
+      "to": "incentive_to_thwart_takeover",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_thwart_takeover",
+      "relation": "increases",
+      "to": "contract_redactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "takeover_threats",
+      "relation": "increases",
+      "to": "incentive_to_fend_off_technological_acquisitions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_fend_off_technological_acquisitions",
+      "relation": "increases",
+      "to": "contract_redactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_thwart_takeover",
+    "incentive_to_fend_off_technological_acquisitions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "industry-wide changes (new technology waves or deregulation) that affect both hostile takeovers and contract redactions"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "takeover_threats",
+      "relation": "increases",
+      "to": "incentive_to_protect_unpatented_innovations",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_protect_unpatented_innovations",
+      "relation": "increases",
+      "to": "rd_contract_redactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_protect_unpatented_innovations"
+   ],
+   "moderators": [
+    {
+     "construct": "trade_secrecy",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "protect unpatented innovations",
+     "moderated_from": "takeover_threats",
+     "moderated_to": "rd_contract_redactions",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "takeover_threats",
+      "relation": "increases",
+      "to": "incentive_to_protect_private_control_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_protect_private_control_benefits",
+      "relation": "increases",
+      "to": "nonproprietary_contract_redactions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_protect_private_control_benefits"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_excessive_compensation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "private control benefits",
+     "moderated_from": "takeover_threats",
+     "moderated_to": "nonproprietary_contract_redactions",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "contract_redactions",
+      "relation": "decreases",
+      "to": "firm_specific_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_specific_information",
+      "relation": "decreases",
+      "to": "stock_price_synchronicity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_specific_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: firms with a more opaque information environment tend to redact contracts more frequently"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "rd_contract_redactions",
+      "relation": "increases",
+      "to": "estimation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "estimation_risk",
+      "relation": "increases",
+      "to": "cost_of_equity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "rd_contract_redactions",
+      "relation": "increases",
+      "to": "expected_future_cash_flows",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_future_cash_flows",
+      "relation": "decreases",
+      "to": "cost_of_equity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "estimation_risk",
+    "expected_future_cash_flows"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: firms with a more opaque information environment tend to redact contracts more frequently"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "nonproprietary_contract_redactions",
+      "relation": "increases",
+      "to": "estimation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "estimation_risk",
+      "relation": "increases",
+      "to": "cost_of_equity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "estimation_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: firms with a more opaque information environment tend to redact contracts more frequently"
+   ]
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "industry_rd_contract_redaction",
+      "relation": "increases",
+      "to": "acquirer_information_processing_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_information_processing_cost",
+      "relation": "decreases",
+      "to": "technological_acquisitions",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_information_processing_cost"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "industry_rd_contract_redaction",
+      "relation": "decreases",
+      "to": "technological_acquisitions",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "technological_acquisitions",
+      "relation": "increases",
+      "to": "future_innovation",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technological_acquisitions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2008-2018 (redaction data), with hostile takeover bids announced 2009-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "6,022 firm-year observations (2,456 treatment, 3,566 control)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters Institutional Holdings database (13F)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBES",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "EDGAR Confidential Treatment Orders (CTOs) and SEC filings (10-Ks, 10-Qs, 8-Ks)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Hoberg and Phillips TNIC3 codes / Hoberg et al. (2014) fluidity measure (Hoberg-Phillips Data Library)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "hostile takeover bids involving public targets announced 2009-2017 (29 bids, from SDC)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Ln(DOWNLOAD)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR download logs"
+    },
+    "key_ivs": [
+     {
+      "name": "Treatment vs. control group",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Securities Data Company (SDC) database; Hoberg-Phillips Data Library (TNIC3); CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover bids in the industry announced 2009-2017 (from SDC)",
+    "sample": "6,022 firm-year observations (2,456 treatment, 3,566 control) within a four-year window",
+    "dv": {
+     "name": "REDACT_FILE_RATE / REDACT_EX_RATE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR Confidential Treatment Orders (CTOs)"
+    },
+    "key_ivs": [
+     {
+      "name": "TREAT x POST (difference in differences)",
+      "measure": "difference in the change in redaction rates before vs. after the hostile takeover announcement between treatment and control firms, two-year window each side",
+      "source": "SDC; Hoberg-Phillips Data Library (TNIC3)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "staggered hostile takeover bids in the industry announced 2009-2017 (from SDC)",
+    "sample": "6,022 firm-year observations, four-year window (two years before/after the bid); standard errors clustered by firm",
+    "dv": {
+     "name": "REDACT_FILE_RATE / REDACT_EX_RATE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR Confidential Treatment Orders (CTOs)"
+    },
+    "key_ivs": [
+     {
+      "name": "TREAT x POST",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; Hoberg-Phillips Data Library (TNIC3); CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "FLUIDITY (product market competition / competitive threat)",
+      "source": "Hoberg-Phillips Data Library (Hoberg et al. 2014)"
+     },
+     {
+      "name": "R&D (R&D investment)",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D_MISSING (missing R&D indicator)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA (return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RETURN (stock returns in past 12 months)",
+      "source": "CRSP"
+     },
+     {
+      "name": "RETVOL (return volatility)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Ln(SIZE) (firm size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "MTB (market-to-book ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEV (leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(ANALYST) (analyst following)",
+      "source": "IBES"
+     },
+     {
+      "name": "INST (institutional ownership)",
+      "source": "Thomson Reuters Institutional Holdings database (13F)"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 columns 1-2 - Dynamic analyses / parallel-trends test",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "hostile takeover bids announced 2009-2017 (from SDC)",
+    "sample": "6,022 firm-year observations",
+    "dv": {
+     "name": "REDACT_FILE_RATE / REDACT_EX_RATE",
+     "measure": "contract redaction rates (filings-level and exhibit-level, as defined in Equation 1)",
+     "source": "EDGAR Confidential Treatment Orders (CTOs)"
+    },
+    "key_ivs": [
+     {
+      "name": "TREAT x PRE2, TREAT x POST1, TREAT x POST2",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; Hoberg-Phillips Data Library (TNIC3)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of control variables from Equation 1 (FLUIDITY, R&D, R&D_MISSING, ROA, RETURN, RETVOL, Ln(SIZE), MTB, LEV, Ln(ANALYST), INST)",
+      "source": "Compustat / CRSP / IBES / Thomson Reuters 13F / Hoberg-Phillips"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 4.3 matched sample - matching latest pre-event redaction rates between treatment and control firms (robustness, untabulated)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "hostile takeover bids announced 2009-2017 (from SDC)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "REDACT_FILE_RATE / REDACT_EX_RATE",
+     "measure": "contract redaction rates (filings-level and exhibit-level, as defined in Equation 1)",
+     "source": "EDGAR Confidential Treatment Orders (CTOs)"
+    },
+    "key_ivs": [
+     {
+      "name": "TREAT x POST",
+      "measure": "DiD interaction estimated on a matched sample of treatment and control firms matched on the latest pre-event redaction rates",
+      "source": "SDC; Hoberg-Phillips Data Library (TNIC3)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 Panel A - Alternative DiD design (never-treated control group; stacked DiD; entropy balancing robustness)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "staggered hostile takeover bids announced 2009-2017 (from SDC)",
+    "sample": "treatment firms and never-treated control firms",
+    "dv": {
+     "name": "REDACT_FILE_RATE / REDACT_EX_RATE",
+     "measure": "contract redaction rates (filings-level and exhibit-level, as defined in Equation 1)",
+     "source": "EDGAR Confidential Treatment Orders (CTOs)"
+    },
+    "key_ivs": [
+     {
+      "name": "TREAT x POST",
+      "measure": "DiD interaction estimated after excluding from the control group firms that were ever close industry peers of any hostile takeover target, leaving only never-treated firms; also stacked DiD and entropy-balancing approaches",
+      "source": "SDC; Hoberg-Phillips Data Library (TNIC3)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full set of control variables from Equation 1",
+      "source": "Compustat / CRSP / IBES / Thomson Reuters 13F / Hoberg-Phillips"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "hostile takeovers",
+    "takeover threats",
+    "control firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "contract redactions",
+    "materiality rule",
+    "potential acquirers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

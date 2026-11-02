@@ -1,0 +1,784 @@
+{
+ "paper_id": "10.1057_jibs.2016.23",
+ "title": "Family involvement and firms’ establishment mode choice in foreign markets",
+ "journal": "JIBS",
+ "year": 2016,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "socioemotional wealth perspective",
+  "agency theory",
+  "stewardship theory",
+  "liability of foreignness",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "family_involvement",
+      "relation": "increases",
+      "to": "risk_aversion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_aversion",
+      "relation": "increases",
+      "to": "greenfield_investment_propensity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "family_involvement",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "greenfield_investment_propensity",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "family_involvement",
+      "relation": "increases",
+      "to": "self_financing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "self_financing",
+      "relation": "increases",
+      "to": "greenfield_investment_propensity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_aversion",
+    "information_asymmetry",
+    "self_financing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the family-vs-greenfield result is an artifact of a different (minority vs majority) ownership choice in the foreign subsidiary that varies across non-FFs, FOs and FMs, rather than of the establishment mode choice itself"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "family_involvement",
+      "relation": "increases",
+      "to": "risk_aversion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "risk_aversion",
+      "relation": "increases",
+      "to": "greenfield_investment_propensity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "risk_aversion"
+   ],
+   "moderators": [
+    {
+     "construct": "host_country_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "risk_aversion",
+     "moderated_from": "family_involvement",
+     "moderated_to": "greenfield_investment_propensity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the moderated family-vs-greenfield effect is driven by differences in the (minority vs majority) ownership choice in the foreign subsidiary across non-FFs, FOs and FMs rather than by the establishment mode choice"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "Italian manufacturing industries (2-digit NACE codes 10-33)",
+  "country_region": "Italian firms (home country Italy) entering 63 foreign countries",
+  "time_period": "2003-2013",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1045 foreign entries by 311 Italian firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4, Model (1) - Probit, controls only",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Establishment mode choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Reprint database"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Horizontal expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Vertical expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Diversification",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Parent size",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent age",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent diversification",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Labor cost",
+      "source": ""
+     },
+     {
+      "name": "Listed",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Leverage",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Cash flow on business",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Psychic distance",
+      "source": ""
+     },
+     {
+      "name": "Market capitalization",
+      "source": ""
+     },
+     {
+      "name": "Economic freedom",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model (2) - Probit, tests Hypothesis 1 (family involvement)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Establishment mode choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Reprint database"
+    },
+    "key_ivs": [
+     {
+      "name": "Family owned",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Family managed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Horizontal expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Vertical expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Diversification",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Parent size",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent age",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent diversification",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Labor cost",
+      "source": ""
+     },
+     {
+      "name": "Listed",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Leverage",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Cash flow on business",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Psychic distance",
+      "source": ""
+     },
+     {
+      "name": "Market capitalization",
+      "source": ""
+     },
+     {
+      "name": "Economic freedom",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model (3) - Probit, adds host country experience",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Establishment mode choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Reprint database"
+    },
+    "key_ivs": [
+     {
+      "name": "Family owned",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Family managed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Host country experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reprint database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Horizontal expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Vertical expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Diversification",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Parent size",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent age",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent diversification",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Labor cost",
+      "source": ""
+     },
+     {
+      "name": "Listed",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Leverage",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Cash flow on business",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Psychic distance",
+      "source": ""
+     },
+     {
+      "name": "Market capitalization",
+      "source": ""
+     },
+     {
+      "name": "Economic freedom",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Model (4) - Probit, interaction effects (tests Hypothesis 2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Establishment mode choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Reprint database"
+    },
+    "key_ivs": [
+     {
+      "name": "Family owned",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Family managed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Host country experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Family owned x Host country experience",
+      "measure": "interaction term between Family owned and Host country experience",
+      "source": "Reprint database; Observatory AUB"
+     },
+     {
+      "name": "Family managed x Host country experience",
+      "measure": "interaction term between Family managed and Host country experience",
+      "source": "Reprint database; Observatory AUB"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Horizontal expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Vertical expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Diversification",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Parent size",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent age",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent diversification",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Labor cost",
+      "source": ""
+     },
+     {
+      "name": "Listed",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Leverage",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Cash flow on business",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Psychic distance",
+      "source": ""
+     },
+     {
+      "name": "Market capitalization",
+      "source": ""
+     },
+     {
+      "name": "Economic freedom",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Average marginal effects of the probit models (1)-(4)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Establishment mode choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Reprint database"
+    },
+    "key_ivs": [
+     {
+      "name": "Family owned",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Family managed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Host country experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reprint database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Horizontal expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Vertical expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Diversification",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Parent size",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent age",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent diversification",
+      "source": "Observatory AUB"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Multinomial logit robustness check (establishment mode x ownership joint decision)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1045 entries modeled as a four-class joint establishment-mode and ownership decision with firm-level clustered standard errors (multinomial logit)",
+    "dv": {
+     "name": "Establishment mode and ownership joint choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Reprint database"
+    },
+    "key_ivs": [
+     {
+      "name": "Family owned",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Family managed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Host country experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Family owned x Host country experience",
+      "measure": "interaction between Family owned and Host country experience",
+      "source": "Reprint database; Observatory AUB"
+     },
+     {
+      "name": "Family managed x Host country experience",
+      "measure": "interaction between Family managed and Host country experience",
+      "source": "Reprint database; Observatory AUB"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Horizontal expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Vertical expansion",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Diversification",
+      "source": "Reprint database"
+     },
+     {
+      "name": "Parent size",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent age",
+      "source": "Observatory AUB"
+     },
+     {
+      "name": "Parent diversification",
+      "source": "Observatory AUB"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "establishment mode",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "establishment mode",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "performance metrics relevant to foreign investment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "establishment mode choice",
+    "consequences of this choice"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "establishment mode choice",
+    "relation": "affects",
+    "to": "consequences"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "ex ante heterogeneity of MNEs",
+    "parents’ performances"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "family involvement",
+     "establishment mode choice"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "cross-border acquisitions",
+    "greenfield",
+    "efficient investing firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "firm efficiency",
+    "relation": "affects",
+    "to": "cross-border acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "host country experience",
+    "learning",
+    "selfselection"
+   ],
+   "mechanism_named": "learning vs selfselection mechanisms",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "firm-level information"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "family involvement"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "FF’s heterogeneity",
+    "managerial structure",
+    "board of directors composition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "Italian market",
+    "country specificities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "non-FFs' investments",
+    "Italian context"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "share of FFs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "omitted variables",
+    "family involvement",
+    "establishment mode choice"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "family ownership",
+    "establishment mode choice",
+    "endogeneity",
+    "FFs’ internationalization strategies"
+   ],
+   "mechanism_named": "endogeneity",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

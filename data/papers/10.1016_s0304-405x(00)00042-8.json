@@ -1,0 +1,555 @@
+{
+ "paper_id": "10.1016_s0304-405x(00)00042-8",
+ "title": "Investment bank market share, contingent fee payments, and the performance of acquiring firms",
+ "journal": "JFE",
+ "year": 2000,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "signaling theory",
+  "reputation theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "contingent_fee_payments",
+      "relation": "increases",
+      "to": "quality_signaling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "quality_signaling",
+      "relation": "increases",
+      "to": "investment_bank_market_share",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "contingent_fee_payments",
+      "relation": "increases",
+      "to": "deal_completion_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_completion_incentives",
+      "relation": "increases",
+      "to": "investment_bank_market_share",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "quality_signaling",
+    "deal_completion_incentives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_deal_completion_rate",
+      "relation": "increases",
+      "to": "deal_completion_ability",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_completion_ability",
+      "relation": "increases",
+      "to": "investment_bank_market_share",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_completion_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquiror_post_acquisition_performance",
+      "relation": "increases",
+      "to": "investment_bank_reputation",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "investment_bank_reputation",
+      "relation": "increases",
+      "to": "investment_bank_market_share",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investment_bank_reputation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "deal completion hypothesis: banks build market share by completing deals rather than by preventing poor deals"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_tier",
+      "relation": "increases",
+      "to": "advisory_quality",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "advisory_quality",
+      "relation": "increases",
+      "to": "acquiror_announcement_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "advisory_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "deal completion hypothesis: predicts no positive relation between acquiror excess returns and the tier/market share of the advising bank"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_tier",
+      "relation": "increases",
+      "to": "deal_screening",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_screening",
+      "relation": "increases",
+      "to": "completion_of_value_enhancing_deals",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_screening"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "deal completion hypothesis: completion is driven by deal-completion incentives, not by screening deal value"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_tier",
+      "relation": "increases",
+      "to": "deal_completion_incentives",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_completion_incentives",
+      "relation": "increases",
+      "to": "deal_completion_rate",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_completion_incentives"
+   ],
+   "moderators": [
+    {
+     "construct": "transaction_type",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "deal_completion_incentives",
+     "moderated_from": "investment_bank_tier",
+     "moderated_to": "deal_completion_rate",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P6"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "completion-rate differences across bank tiers are driven by the tier of the target's advisor rather than by the acquiror bank"
+   ]
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_tier",
+      "relation": "increases",
+      "to": "deal_completion_incentives",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "deal_completion_incentives",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_completion_incentives"
+   ],
+   "moderators": [
+    {
+     "construct": "transaction_type",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "deal_completion_incentives",
+     "moderated_from": "investment_bank_tier",
+     "moderated_to": "acquisition_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P7"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "premium differences reflect the acquiror's book-to-market ratio, method of payment, presence of multiple bidders, or deal attitude rather than the tier of the advising bank"
+   ]
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "contingent_fee_payments",
+      "relation": "increases",
+      "to": "deal_completion_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_completion_incentives",
+      "relation": "decreases",
+      "to": "post_acquisition_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_completion_incentives"
+   ],
+   "moderators": [
+    {
+     "construct": "transaction_type",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "effect_derived": false,
+     "mechanism": "deal_completion_incentives",
+     "moderated_from": "contingent_fee_payments",
+     "moderated_to": "post_acquisition_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P8"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1980-1994",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "372 mergers and 388 tender offers (contingent-fee/post-acquisition sample)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 Panel C: size quintiles of acquirors by bank tier",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "acquirors in mergers and tender offers announced and completed 1980-1991",
+    "dv": {
+     "name": "acquiror size quintile",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank tier",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5: percentage breakdown of contingent fee payments by bank tier",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "372 mergers and 388 tender offers announced and completed January 1980-December 1991 with fee breakdown data (sample IIIA)",
+    "dv": {
+     "name": "proportion of fees paid as contingent fees",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank tier",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6: regression of investment bank market share on past acquiror performance (GMM)",
+    "hypotheses": [],
+    "identification": "GMM",
+    "shock_or_instrument": "",
+    "sample": "pooled cross-sectional and time-series regression of bank-year observations, 1981-1994 (horizon varied one to ten years)",
+    "dv": {
+     "name": "investment bank market share",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "percentage of deals completed in the past",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "average post-acquisition acquiror CARs",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "one-year lagged market share",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "tier of the bank",
+      "measure": "the tier of the bank",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "percentage of stock-financed bids",
+      "source": "SDC"
+     },
+     {
+      "name": "percentage of challenged bids (more than one bidder)",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 7: completion vs withdrawal rates of acquisitions by bank tier",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquisition completion status",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "acquiror investment bank tier",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target investment bank advisor tier",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 8: announcement-period CARs for acquirors by bank tier (event study)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "acquisitions announced January 1980-December 1994 listed on CRSP (sample III: 2683 mergers and 438 tender offers)",
+    "dv": {
+     "name": "acquiror announcement-period cumulative abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank tier",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 9: proportion of 'good' vs 'bad' deals completed by bank tier",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "proportion of good/bad deals completed",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP; SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "investment bank tier",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "ability to conclude a deal",
+    "tender o!ers",
+    "mergers"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "incentives to complete a deal",
+    "value maximization",
+    "acquiror"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,627 @@
+{
+ "paper_id": "10.1016_s0304-405x(96)00886-0",
+ "title": "Do independent directors enhance target shareholder wealth during tender offers?",
+ "journal": "JFE",
+ "year": 1997,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "corporate governance",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_independence",
+      "relation": "increases",
+      "to": "monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring",
+      "relation": "increases",
+      "to": "target_shareholder_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring"
+   ],
+   "moderators": [
+    {
+     "construct": "poison_pill",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "monitoring",
+     "moderated_from": "board_independence",
+     "moderated_to": "target_shareholder_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "model (iii)"
+    },
+    {
+     "construct": "resisted_offer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "monitoring",
+     "moderated_from": "board_independence",
+     "moderated_to": "target_shareholder_gains",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "model (iv)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "omitted firm-quality / performance effect (better managers form more-outsider boards, or poor performers add outsiders)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "independent_outside_director_equity_ownership",
+      "relation": "increases",
+      "to": "monitoring_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_incentives",
+      "relation": "increases",
+      "to": "target_shareholder_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring_incentives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "director_reputation_capital",
+      "relation": "increases",
+      "to": "monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring",
+      "relation": "increases",
+      "to": "target_shareholder_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "monitoring"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_independence",
+      "relation": "increases",
+      "to": "shareholder_value_maximization",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "shareholder_value_maximization",
+      "relation": "increases",
+      "to": "initial_bid_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "board_independence",
+      "relation": "increases",
+      "to": "prebid_bargaining_intensity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "prebid_bargaining_intensity",
+      "relation": "increases",
+      "to": "initial_bid_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shareholder_value_maximization",
+    "prebid_bargaining_intensity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "board_independence",
+      "relation": "increases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "increases",
+      "to": "premium_revision",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "interlocking_directorship",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "target_shareholder_gains",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (industrial firms; utilities excluded because affected by regulation and not comparable to takeovers of industrial firms)",
+  "country_region": "United States (targets traded on the NYSE, AMEX, or NASDAQ)",
+  "time_period": "1989-1992",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "169 tender offers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "proxy statements",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis/Nexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Corporate Control Alert",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Descriptive statistics (univariate comparison of 47 targets with independent boards vs 122 targets without)",
+    "hypotheses": [],
+    "identification": "",
+    "shock_or_instrument": "",
+    "sample": "169 tender offer targets (47 with an independent board, 122 without)",
+    "dv": {
+     "name": "target shareholder gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+    },
+    "key_ivs": [
+     {
+      "name": "independent board",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, Model (i) - Regression of target shareholder gains on board composition and controls (base model)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target shareholder gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+    },
+    "key_ivs": [
+     {
+      "name": "independent board",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements"
+     },
+     {
+      "name": "interlocking directorship",
+      "measure": "Indicator variable equal to 1 if at least one director of the target firm is an insider (director or manager) of the bidder, and 0 otherwise",
+      "source": "proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "logarithm of market value of equity of target 30 days prior to the initial tender offer",
+      "source": ""
+     },
+     {
+      "name": "poison pill",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "golden parachute",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "managerial (inside director) stock ownership",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of affiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of unaffiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "target industry-adjusted operating return on assets over the three years prior to the offer",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model (ii) - Adds equity ownership and additional directorships of independent directors",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target shareholder gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+    },
+    "key_ivs": [
+     {
+      "name": "independent board",
+      "measure": "Indicator variable equal to 1 if targets have at least 50% independent outside directors on the board",
+      "source": "proxy statements"
+     },
+     {
+      "name": "interlocking directorship",
+      "measure": "Indicator variable equal to 1 if at least one director of the target firm is an insider (director or manager) of the bidder, and 0 otherwise",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of independent outside directors",
+      "measure": "percentage share ownership of independent outside directors",
+      "source": "proxy statements"
+     },
+     {
+      "name": "number of additional outside directorships per independent director",
+      "measure": "average number of additional corporate directorships held by each independent outside director",
+      "source": "proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "logarithm of market value of equity of target 30 days prior to the initial tender offer",
+      "source": ""
+     },
+     {
+      "name": "poison pill",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "golden parachute",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "managerial (inside director) stock ownership",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of affiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of unaffiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "target industry-adjusted operating return on assets over the three years prior to the offer",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model (iii) - Adds independent board x poison pill interaction",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target shareholder gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+    },
+    "key_ivs": [
+     {
+      "name": "independent board",
+      "measure": "Indicator variable equal to 1 if targets have at least 50% independent outside directors on the board",
+      "source": "proxy statements"
+     },
+     {
+      "name": "independent board x poison pill",
+      "measure": "[withheld: wording matches the source]",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "interlocking directorship",
+      "measure": "Indicator variable equal to 1 if at least one director of the target firm is an insider (director or manager) of the bidder, and 0 otherwise",
+      "source": "proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "logarithm of market value of equity of target 30 days prior to the initial tender offer",
+      "source": ""
+     },
+     {
+      "name": "poison pill",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "golden parachute",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "managerial (inside director) stock ownership",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of affiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of unaffiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "target industry-adjusted operating return on assets over the three years prior to the offer",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model (iv) - Adds resisted offer dummy and independent board x resisted offer interaction",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target shareholder gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+    },
+    "key_ivs": [
+     {
+      "name": "independent board",
+      "measure": "Indicator variable equal to 1 if targets have at least 50% independent outside directors on the board",
+      "source": "proxy statements"
+     },
+     {
+      "name": "resisted offer",
+      "measure": "Indicator variable equal to 1 if the target firm resists the offer, and 0 otherwise",
+      "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+     },
+     {
+      "name": "independent board x resisted offer",
+      "measure": "Interaction variable between two indicator variables: targets with an independent board and resisted offers",
+      "source": "proxy statements; Wall Street Journal (WSJ)"
+     },
+     {
+      "name": "interlocking directorship",
+      "measure": "Indicator variable equal to 1 if at least one director of the target firm is an insider (director or manager) of the bidder, and 0 otherwise",
+      "source": "proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "logarithm of market value of equity of target 30 days prior to the initial tender offer",
+      "source": ""
+     },
+     {
+      "name": "poison pill",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "golden parachute",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "managerial (inside director) stock ownership",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of affiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of unaffiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "target industry-adjusted operating return on assets over the three years prior to the offer",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model (v) - Adds successful offer dummy and independent board x successful offer interaction",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target shareholder gain",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+    },
+    "key_ivs": [
+     {
+      "name": "independent board",
+      "measure": "Indicator variable equal to 1 if targets have at least 50% independent outside directors on the board",
+      "source": "proxy statements"
+     },
+     {
+      "name": "successful offer",
+      "measure": "Indicator variable equal to 1 if the tender offer is successful, that is, the target firm is successfully taken over, and 0 otherwise",
+      "source": "Wall Street Journal (WSJ) via Dow Jones News Retrieval database of WSJ abstracts"
+     },
+     {
+      "name": "independent board x successful offer",
+      "measure": "Interaction variable between two indicator variables: targets with an independent board and tender offer is successful",
+      "source": "proxy statements; Wall Street Journal (WSJ)"
+     },
+     {
+      "name": "interlocking directorship",
+      "measure": "Indicator variable equal to 1 if at least one director of the target firm is an insider (director or manager) of the bidder, and 0 otherwise",
+      "source": "proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "logarithm of market value of equity of target 30 days prior to the initial tender offer",
+      "source": ""
+     },
+     {
+      "name": "poison pill",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "golden parachute",
+      "source": "proxy statements, WSJ, Lexis/Nexis, and Corporate Control Alert"
+     },
+     {
+      "name": "managerial (inside director) stock ownership",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of affiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "ownership of unaffiliated blockholders",
+      "source": "proxy statements"
+     },
+     {
+      "name": "target industry-adjusted operating return on assets over the three years prior to the offer",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "unsuccessful tender offer sample",
+    "subsequent actions",
+    "independent boards"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

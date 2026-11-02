@@ -1,0 +1,619 @@
+{
+ "paper_id": "10.1287/mnsc.2020.3629",
+ "title": "Informed Trading Reactions to New Private Information: Evidence from Nonpublic Merger Negotiations",
+ "journal": "MNSC",
+ "year": 2021,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market microstructure theory",
+  "informed trading theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_negotiation_event",
+      "relation": "increases",
+      "to": "informed_trading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informed_trading",
+      "relation": "increases",
+      "to": "target_abnormal_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informed_trading"
+   ],
+   "moderators": [
+    {
+     "construct": "number_of_informed_investors",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "number of informed investors",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "target_abnormal_stock_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1a"
+    },
+    {
+     "construct": "probability_of_informed_trading",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "number of informed investors",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "target_abnormal_stock_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1c"
+    },
+    {
+     "construct": "institutional_ownership",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "reputational concerns",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "target_abnormal_stock_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    },
+    {
+     "construct": "likelihood_of_deal_completion",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "expected trading profits",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "target_abnormal_stock_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3a"
+    },
+    {
+     "construct": "initial_offer_premium",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "litigation risk",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "target_abnormal_stock_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3b"
+    },
+    {
+     "construct": "press_rumor",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "litigation risk",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "target_abnormal_stock_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    },
+    {
+     "construct": "informed_trade",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "informed_trading",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "target_abnormal_stock_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "public-information hypothesis (runups reflect better predictions from public information as the deal approaches, not knowledge of private negotiations)",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_negotiation_event",
+      "relation": "increases",
+      "to": "informed_trading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informed_trading",
+      "relation": "decreases",
+      "to": "bidder_abnormal_stock_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informed_trading"
+   ],
+   "moderators": [
+    {
+     "construct": "value_of_private_information",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "informed_trading",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "bidder_abnormal_stock_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5a"
+    },
+    {
+     "construct": "number_of_informed_investors",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "number of informed investors",
+     "moderated_from": "private_negotiation_event",
+     "moderated_to": "bidder_abnormal_stock_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P5b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_negotiation_event",
+      "relation": "increases",
+      "to": "informed_options_trading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informed_options_trading",
+      "relation": "increases",
+      "to": "option_to_stock_volume_ratio",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informed_options_trading"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "private_negotiation_event",
+      "relation": "increases",
+      "to": "informed_trading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informed_trading",
+      "relation": "increases",
+      "to": "order_imbalance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "private_negotiation_event",
+      "relation": "increases",
+      "to": "informed_trading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informed_trading",
+      "relation": "increases",
+      "to": "abnormal_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "private_negotiation_event",
+      "relation": "increases",
+      "to": "informed_trading",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "informed_trading",
+      "relation": "increases",
+      "to": "medium_size_trades",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "informed_trading"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "initial_offer_premium",
+      "relation": "increases",
+      "to": "expected_trading_profits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_trading_profits",
+      "relation": "increases",
+      "to": "likelihood_of_prosecution",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_trading_profits"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (completed acquisitions with targets in the S&P 1500)",
+  "country_region": "United States (U.S.-listed firms; foreign bidders not on CRSP excluded)",
+  "time_period": "1995-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "545 completed acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (quarterly earnings announcement dates)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "background disclosures (hand-collected precise dates and nature of private negotiation events from target/bidder filings)",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva (news reports used to identify press rumors of a possible deal)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target daily abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Negotiation event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "background disclosures (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "lagged abnormal return (ARt-1)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Rumor and Rumor(t-1) (press speculation of a possible deal on day t or t-1)",
+      "source": "Factiva"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR / Compustat / Thomson First Call CIG / Thomson-Reuters IBES"
+     },
+     {
+      "name": "Days until announcement (number of trading days until deal announcement, column 4)",
+      "source": ""
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Event-month fixed effects (column 3)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target daily abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Target board meeting",
+      "measure": "indicator = one if a target board meeting occurs on day t (and lagged t-1)",
+      "source": "background disclosures (hand-collected)"
+     },
+     {
+      "name": "Acquirer board meeting",
+      "measure": "indicator = one if an acquirer board meeting occurs on day t (and lagged t-1)",
+      "source": "background disclosures (hand-collected)"
+     },
+     {
+      "name": "Bid",
+      "measure": "indicator = one if a bid (new or revised) is made for the target on day t (and lagged t-1)",
+      "source": "background disclosures (hand-collected)"
+     },
+     {
+      "name": "Target retains financial advisor",
+      "measure": "indicator = one if target retains a financial advisor on day t (and lagged t-1)",
+      "source": "background disclosures (hand-collected)"
+     },
+     {
+      "name": "All other negotiation events",
+      "measure": "indicator = one for any other negotiation event on day t (and lagged t-1)",
+      "source": "background disclosures (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "lagged abnormal return (ARt-1)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Rumor (press speculation of a possible deal on day t or t-1)",
+      "source": "Factiva"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR / Compustat / Thomson First Call CIG / Thomson-Reuters IBES"
+     },
+     {
+      "name": "Days until announcement (column 4)",
+      "source": ""
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Event-month fixed effects (column 3)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A: Price impact of negotiation events, full period, fixed effects omitted",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "target daily abnormal stock return (ARit)",
+     "measure": "the abnormal return on day t (same market-model daily abnormal return)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Negotiation event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "background disclosures (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Rumor (press rumor day of or before)",
+      "source": "Factiva"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR / Compustat / Thomson First Call CIG / Thomson-Reuters IBES"
+     },
+     {
+      "name": "lagged returns",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "15-day subintervals from (-3,-1) through (-123,-109), extending 60 trading days prior to the primary -63 to -1 window; fixed effects omitted",
+    "dv": {
+     "name": "target daily abnormal stock return (ARit)",
+     "measure": "the abnormal return on day t (same market-model daily abnormal return)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Negotiation event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "background disclosures (hand-collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Rumor (press rumor day of or before)",
+      "source": "Factiva"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR / Compustat / Thomson First Call CIG / Thomson-Reuters IBES"
+     },
+     {
+      "name": "lagged returns",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bidder returns",
+    "abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "option liquidity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "institutional ownership",
+    "selective disclosure"
+   ],
+   "mechanism_named": "comparative information disadvantage",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "press rumor",
+    "price reactions to negotiation events",
+    "litigation risk"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "new private information",
+    "trading activities of specific investor groups"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "media coverage",
+    "target firm excess abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "deal insider counts",
+    "informed trading"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

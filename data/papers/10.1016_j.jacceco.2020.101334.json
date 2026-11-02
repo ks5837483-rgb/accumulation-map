@@ -1,0 +1,809 @@
+{
+ "paper_id": "10.1016_j.jacceco.2020.101334",
+ "title": "Can social media distort price discovery? Evidence from merger rumors",
+ "journal": "JAE",
+ "year": 2020,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "persuasion bias theory",
+  "bounded rationality",
+  "behavioral finance",
+  "market efficiency and price discovery",
+  "wisdom of the crowd",
+  "limits to arbitrage"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "nonsignificant",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "twitter_activity",
+      "relation": "increases",
+      "to": "perceived_rumor_validity",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "perceived_rumor_validity",
+      "relation": "increases",
+      "to": "merger_realization",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_rumor_validity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "twitter_activity",
+      "relation": "increases",
+      "to": "rumor_reach",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "rumor_reach",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "twitter_activity",
+      "relation": "increases",
+      "to": "persuasion_bias",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "persuasion_bias",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "rumor_reach",
+    "persuasion_bias"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality (abnormal returns causing abnormal tweets)",
+    "unobservable correlated omitted variables such as perceived rumor validity or anticipated merger gains"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "twitter_activity",
+      "relation": "increases",
+      "to": "inflated_assessment_of_rumor_validity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inflated_assessment_of_rumor_validity",
+      "relation": "increases",
+      "to": "abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inflated_assessment_of_rumor_validity"
+   ],
+   "moderators": [
+    {
+     "construct": "author_social_influence",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "inflated_assessment_of_rumor_validity",
+     "moderated_from": "twitter_activity",
+     "moderated_to": "abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross_sectional_author_influence"
+    },
+    {
+     "construct": "low_institutional_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "limits_to_arbitrage",
+     "moderated_from": "twitter_activity",
+     "moderated_to": "abnormal_returns",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross_sectional_investor_base"
+    },
+    {
+     "construct": "rumor_specificity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "inflated_assessment_of_rumor_validity",
+     "moderated_from": "twitter_activity",
+     "moderated_to": "abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross_sectional_rumor_specificity"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality (abnormal returns causing abnormal tweets)",
+    "anticipated merger gains as a correlated omitted variable driving both tweets and returns"
+   ]
+  },
+  {
+   "hypothesis": "P_realized",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "twitter_activity",
+      "relation": "increases",
+      "to": "accelerated_price_discovery",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "accelerated_price_discovery",
+      "relation": "decreases",
+      "to": "takeover_announcement_car",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "accelerated_price_discovery"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms that were takeover/merger rumor targets, spanning industries classified by Fama-French 17 industry codes)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2009-2014",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "304 rumors"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Ahern and Sosyura (2015) rumor sample",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Crimson Hexagon (full Twitter Firehose; also Klout influence scores)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Interbrand and BrandZ (100 most valuable global brands lists)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Thomson Reuters 13(f) filings",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Twitter API / @TwitterSupport outage tweets (manually classified)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Hand-collected rumor article characteristics from scoop articles",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 (logistic regressions: Twitter activity and merger realization)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "304 (Model 1) / 291 (Models 2-3) rumors",
+    "dv": {
+     "name": "REALIZED (Probability of Merger Realization)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR [0]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Crimson Hexagon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "VALUABLE_BRAND",
+      "source": "Interbrand and BrandZ"
+     },
+     {
+      "name": "LN_ASSET",
+      "source": "Compustat"
+     },
+     {
+      "name": "TOBINQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADV",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAR_PRE [-5, -1]",
+      "source": "CRSP"
+     },
+     {
+      "name": "TAKEOVER_PROBABILITY",
+      "source": "Compustat (Cremers et al. 2009 model)"
+     },
+     {
+      "name": "#MEDIA_ARTICLES [0, +1]",
+      "source": "Factiva"
+     },
+     {
+      "name": "SPECIFIC",
+      "source": "Hand-collected rumor article characteristics"
+     },
+     {
+      "name": "SPECULATIVE",
+      "source": "Hand-collected rumor article characteristics"
+     },
+     {
+      "name": "BIDDER_MENTIONED",
+      "source": "Hand-collected rumor article characteristics"
+     },
+     {
+      "name": "PRICE_MENTIONED",
+      "source": "Hand-collected rumor article characteristics"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (CARs around rumor announcement dates; High/Low Twitter portfolios)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "304 rumors, split All / Realized / Unrealized and High vs Low Twitter portfolios",
+    "dv": {
+     "name": "Cumulative abnormal returns (CARs)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "High/Low Twitter portfolio (median split of TWEET_RUMOR [0])",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Crimson Hexagon"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 (OLS: event-window CARs and Twitter activity)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "All (304/291), Realized rumors (65/63), Unrealized rumors (239/228)",
+    "dv": {
+     "name": "CAR_RUMOR [0, +1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR [0]",
+      "measure": "the standardized abnormal user tweet volume",
+      "source": "Crimson Hexagon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "VALUABLE_BRAND",
+      "source": "Interbrand and BrandZ"
+     },
+     {
+      "name": "CAR_PRE [-5, -1]",
+      "source": "CRSP"
+     },
+     {
+      "name": "LN_ASSET",
+      "source": "Compustat"
+     },
+     {
+      "name": "TOBINQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADV",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAKEOVER_PROBABILITY",
+      "source": "Compustat (Cremers et al. 2009 model)"
+     },
+     {
+      "name": "#MEDIA_ARTICLES [0, +1]",
+      "source": "Factiva"
+     },
+     {
+      "name": "SPECIFIC",
+      "source": "Hand-collected rumor article characteristics"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (OLS: price reversals and Twitter activity, unrealized rumors)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Unrealized rumors (228 / 226 / 224 obs across windows)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR [0]",
+      "measure": "standardized abnormal user tweet volume",
+      "source": "Crimson Hexagon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "VALUABLE_BRAND (target characteristic control)",
+      "source": "Interbrand and BrandZ"
+     },
+     {
+      "name": "CAR_PRE [-5, -1] (target characteristic control)",
+      "source": "CRSP"
+     },
+     {
+      "name": "LN_ASSET (target characteristic control)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TOBINQ (target characteristic control)",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D (target characteristic control)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADV (target characteristic control)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAKEOVER_PROBABILITY (target characteristic control)",
+      "source": "Compustat"
+     },
+     {
+      "name": "#MEDIA_ARTICLES [0, +1] (rumor characteristic control)",
+      "source": "Factiva"
+     },
+     {
+      "name": "SPECIFIC (rumor characteristic control)",
+      "source": "Hand-collected rumor article characteristics"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Panel A (cross-sectional: author influence, unrealized rumors)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Unrealized rumors (239 / 228)",
+    "dv": {
+     "name": "CAR_RUMOR [0, +1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR[0] × HIGH_INFLUENCE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Crimson Hexagon (Klout score)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP/Interbrand and BrandZ"
+     },
+     {
+      "name": "Rumor characteristic controls (#MEDIA_ARTICLES [0,+1], SPECIFIC) in Column 2",
+      "source": "Factiva / Hand-collected"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Panel B (cross-sectional: institutional ownership, unrealized rumors)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Unrealized rumors (239 / 228)",
+    "dv": {
+     "name": "CAR_RUMOR [0, +1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR[0] × LOW_INST",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters 13(f) filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP/Interbrand and BrandZ"
+     },
+     {
+      "name": "Rumor characteristic controls (#MEDIA_ARTICLES [0,+1], SPECIFIC)",
+      "source": "Factiva / Hand-collected"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Panel C (cross-sectional: rumor specificity, unrealized rumors)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Unrealized rumors",
+    "dv": {
+     "name": "CAR_RUMOR [0, +1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR[0] × SPECIFIC",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hand-collected rumor article characteristics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP/Interbrand and BrandZ"
+     },
+     {
+      "name": "Rumor characteristic controls (#MEDIA_ARTICLES [0,+1])",
+      "source": "Factiva"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9, Panel A (rumors on non-trading days: reverse-causality test)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR_RUMOR [0] at day +1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR [0]",
+      "measure": "rumor-day tweet volume measured in the non-trading window (Friday aftermarket, Saturday, and Sunday)",
+      "source": "Crimson Hexagon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LN_ASSET",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP/Interbrand and BrandZ"
+     },
+     {
+      "name": "Industry/Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9, Panel B (rumors during non-trading hours: reverse-causality test)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR_RUMOR [0] at day +1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TWEET_RUMOR [0]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Crimson Hexagon"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LN_ASSET",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP/Interbrand and BrandZ"
+     },
+     {
+      "name": "Industry/Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10, Panel A (2SLS: Twitter outages as instrument)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Twitter outage (OUTAGE; OUTAGE_SEVERE) collected from @TwitterSupport tweets via Twitter API",
+    "sample": "228 obs (unrealized-rumor sample with instrument data)",
+    "dv": {
+     "name": "CAR_RUMOR [0, +1]",
+     "measure": "second-stage DV; rumor-window abnormal return regressed on instrumented tweet volume",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Predicted TWEET_RUMOR [0] (instrumented)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Crimson Hexagon (instrumented via Twitter outage data)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP/Interbrand and BrandZ"
+     },
+     {
+      "name": "Rumor characteristic controls (#MEDIA_ARTICLES [0,+1], SPECIFIC)",
+      "source": "Factiva / Hand-collected"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10, Panel B (2SLS: viral tweets as instrument)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Presence of a viral tweet (VIRAL_TWEET), alone or combined with severe Twitter outage (OUTAGE_SEVERE)",
+    "sample": "228 obs (unrealized-rumor sample with instrument data)",
+    "dv": {
+     "name": "CAR_RUMOR [0, +1]",
+     "measure": "second-stage DV; rumor-window abnormal return regressed on instrumented tweet volume",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Predicted TWEET_RUMOR [0] (instrumented)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Crimson Hexagon (instrumented via viral tweets / severe outage)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP/Interbrand and BrandZ"
+     },
+     {
+      "name": "Rumor characteristic controls (#MEDIA_ARTICLES [0,+1], SPECIFIC)",
+      "source": "Factiva / Hand-collected"
+     },
+     {
+      "name": "Industry/Year/Outlet fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "rumor-day tweet volume",
+    "price discovery",
+    "crowd wisdom role"
+   ],
+   "mechanism_named": "crowd wisdom role",
+   "proposed_edge": {
+    "from": "rumor-day tweet volume",
+    "relation": "affects",
+    "to": "price discovery"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "merger rumors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "rumor mill effect",
+    "crowd wisdom role",
+    "social media"
+   ],
+   "mechanism_named": "crowd wisdom effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "social media",
+    "origination of rumors",
+    "proliferation of social media use",
+    "origination of financial rumors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "proliferation of social media use",
+    "relation": "affects",
+    "to": "origination of financial rumors"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "social media",
+    "traditional press"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "social media",
+    "relation": "unspecified",
+    "to": "traditional press"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

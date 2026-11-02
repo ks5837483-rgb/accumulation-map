@@ -1,0 +1,870 @@
+{
+ "paper_id": "10.1093_rof_rfv009",
+ "title": "Do Stock-Financed Acquisitions Destroy Value? New Methods and Evidence",
+ "journal": "RF",
+ "year": 2015,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency costs of overvalued equity",
+  "adverse selection",
+  "information asymmetry",
+  "signaling theory",
+  "market timing"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "merger_arbitrage_price_pressure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "merger_arbitrage_price_pressure",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection",
+    "merger_arbitrage_price_pressure"
+   ],
+   "moderators": [
+    {
+     "construct": "deal_size_relative_to_trading_volume",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "merger_arbitrage_price_pressure",
+     "moderated_from": "stock_financing",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 5.6"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "price pressure from merger arbitrage short-selling (non-information-based trading)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "overvalued_equity_financing",
+      "relation": "increases",
+      "to": "managerial_discretion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_discretion",
+      "relation": "decreases",
+      "to": "pure_takeover_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_discretion"
+   ],
+   "moderators": [
+    {
+     "construct": "market_overvaluation_bubble_period_1998_2001",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "overvalued_equity_financing",
+     "moderated_to": "pure_takeover_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "Section 5.1"
+    },
+    {
+     "construct": "acquirer_overvaluation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "overvalued_equity_financing",
+     "moderated_to": "pure_takeover_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 5.2"
+    },
+    {
+     "construct": "cash_holdings",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "overvalued_equity_financing",
+     "moderated_to": "pure_takeover_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 5.3"
+    },
+    {
+     "construct": "leverage",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "overvalued_equity_financing",
+     "moderated_to": "pure_takeover_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 5.3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the information effects of the payment choice (adverse selection equity-financing effect)",
+    "downward price pressure from merger arbitrage short-selling"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "private_placement_information_effect",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_placement_information_effect",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "overpayment_risk_sharing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overpayment_risk_sharing",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_placement_information_effect",
+    "overpayment_risk_sharing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US public firm M&As across the Fama-French 48 industries)",
+  "country_region": "United States (US public bidders and targets)",
+  "time_period": "1985-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,002 deals satisfy the criteria (1,991 stock, 1,011 cash); main analysis N=2,576 with control variables available (1,665 stock, 911 cash)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial SDC M&A Database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Financial SDC New Issues Database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Financial (SDC) bond issues",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table III Panel A, Specification (1): cross-sectional OLS regression of SEO issuer CAR (ICAR)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "SEO sample, 3,212 observations, US issuers 1985-2009",
+    "dv": {
+     "name": "issuer CAR (ICAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "LN (MARCAP)",
+      "measure": "firm size (LN (MARCAP))",
+      "source": "CRSP"
+     },
+     {
+      "name": "BEME",
+      "measure": "book-to-market ratio (BEME)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "RUN-UP",
+      "measure": "stock price run-up (RUN-UP)",
+      "source": "CRSP"
+     },
+     {
+      "name": "SIGMA",
+      "measure": "stock return idiosyncratic volatility (SIGMA)",
+      "source": "CRSP"
+     },
+     {
+      "name": "RELSIZE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Financial SDC New Issues Database"
+     },
+     {
+      "name": "CASH HOLD",
+      "measure": "cash holdings (CASH HOLD)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "measure": "leverage ratio (LEVERAGE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "OPER PERFORM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "CF/EQ",
+      "measure": "cash-flow-to-equity (CF/EQ)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "calendar year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry (Fama-French 48 industries) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III Panel A, Specification (2): probit model of equity issuance choice (propensity score model)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "pooled stock-financed acquisitions and SEOs",
+    "dv": {
+     "name": "equity issuance choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Financial SDC M&A Database"
+    },
+    "key_ivs": [
+     {
+      "name": "LN (MARCAP)",
+      "measure": "firm size (LN (MARCAP))",
+      "source": "CRSP"
+     },
+     {
+      "name": "BEME",
+      "measure": "book-to-market ratio (BEME)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "RUN-UP",
+      "measure": "stock price run-up (RUN-UP)",
+      "source": "CRSP"
+     },
+     {
+      "name": "SIGMA",
+      "measure": "stock return idiosyncratic volatility (SIGMA)",
+      "source": "CRSP"
+     },
+     {
+      "name": "RELSIZE",
+      "measure": "the relative size of the deal (RELSIZE)",
+      "source": "Thomson Financial SDC M&A Database"
+     },
+     {
+      "name": "CASH HOLD",
+      "measure": "cash holdings (CASH HOLD)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "measure": "leverage ratio (LEVERAGE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "OPER PERFORM",
+      "measure": "operating performance / return on assets (OPER PERFORM)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CF/EQ",
+      "measure": "cash-flow-to-equity (CF/EQ)",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "calendar year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry (Fama-French 48 industries) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table III Panel B/C: predicted (matched) HCARs via linear prediction and propensity-score matching + matching diagnostics",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "sub-sample of stock acquirers (1,665) matched to SEO issuers",
+    "dv": {
+     "name": "HCAR (hypothetical SEO CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "propensity score",
+      "measure": "one-dimensional propensity score from the probit equity-issuance-choice model",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LN (MARCAP)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BEME",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "RUN-UP",
+      "source": "CRSP"
+     },
+     {
+      "name": "SIGMA",
+      "source": "CRSP"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Thomson Financial SDC M&A Database"
+     },
+     {
+      "name": "CASH HOLD",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "OPER PERFORM",
+      "source": "Compustat"
+     },
+     {
+      "name": "CF/EQ",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "2,576 deals (1,665 stock, 911 cash)",
+    "dv": {
+     "name": "PCAR (pure takeover CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK (method of payment)",
+      "measure": "indicator for stock-financed vs cash-financed acquisition (cash vs stock deal comparison)",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table V: multivariate cross-sectional regression of PCAR and ACAR on method of payment (STOCK) and controls",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "PCAR / ACAR (acquirer returns)",
+     "measure": "PCAR as the dependent variable (and conventional acquirer CAR, ACAR, for comparison) regressed against the method of payment variable and other acquirer and deal-specific characteristics",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK",
+      "measure": "the method of payment variable (STOCK) - stock dummy",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LN (MARCAP)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BEME",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "RUN-UP",
+      "source": "CRSP"
+     },
+     {
+      "name": "SIGMA",
+      "source": "CRSP"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Thomson Financial SDC M&A Database"
+     },
+     {
+      "name": "CASH HOLD",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "OPER PERFORM",
+      "source": "Compustat"
+     },
+     {
+      "name": "CF/EQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "tender offers indicator",
+      "source": "Thomson Financial SDC M&A Database"
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     },
+     {
+      "name": "Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel A: Wealth destruction of 1998-2001 (bubble-period dummy and interaction)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "PCAR / ACAR",
+     "measure": "cross-sectional regressions of PCAR (and ACAR) as in Table V",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK",
+      "measure": "stock dummy",
+      "source": "Thomson Financial SDC M&A Database"
+     },
+     {
+      "name": "98-2001",
+      "measure": "bubble period (1998-2001) dummy",
+      "source": "Thomson Financial SDC M&A Database"
+     },
+     {
+      "name": "STOCK x 98-2001",
+      "measure": "interaction term of the 1998-2001 dummy with the STOCK indicator",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all other Table V independent variables (year fixed effects dropped)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel B: Overvaluation tests (OV DUMMY and continuous relative overvaluation ROV)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "",
+    "dv": {
+     "name": "PCAR / ACAR",
+     "measure": "cross-sectional regressions of PCAR (and ACAR)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "OV DUMMY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "ROV",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "STOCK",
+      "measure": "stock dummy",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all other Table V independent variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.3 (Table VI): Governance interactions - STOCK interacted with indirect governance proxies",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "PCAR / ACAR",
+     "measure": "cross-sectional regressions of PCAR (and ACAR)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x free cash flow",
+      "measure": "stock indicator interacted with free cash flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "STOCK x cash holdings",
+      "measure": "stock indicator interacted with cash holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "STOCK x leverage",
+      "measure": "stock indicator interacted with leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "STOCK x operating performance",
+      "measure": "stock indicator interacted with operating performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "STOCK x IND COMP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all other Table V independent variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel E: Equity-for-debt exchange offers (HCARs re-estimated using debt-retiring SEOs)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "PCAR",
+     "measure": "PCAR recomputed after re-estimating HCARs from the restricted set of SEOs; regression of STOCK indicator",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK",
+      "measure": "stock dummy",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all other Table V independent variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel F: Cash-financed deals and bond issues (cash ACAR decomposed using bond-issue HCAR)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "3,067 unique corporate bond issue announcements from Thomson Financial (SDC); cash-financed deals",
+    "dv": {
+     "name": "PCAR / ACAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK",
+      "measure": "stock dummy",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all other Table V independent variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI Panel G: Price pressure effects (IMPACT variable and interaction with STOCK)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "M&A sample restricted to deals worth at least $10M and at least $100M",
+    "dv": {
+     "name": "PCAR / ACAR",
+     "measure": "ACAR and PCAR regressions including the IMPACT variable and its interaction with STOCK",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IMPACT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "IMPACT x STOCK",
+      "measure": "interaction of IMPACT with STOCK deals",
+      "source": "Thomson Financial SDC M&A Database"
+     },
+     {
+      "name": "STOCK",
+      "measure": "stock dummy",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all other Table V independent variables",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.8: Endogeneity of method-of-payment choice - propensity-score matching treatment effect (stock vs matched cash deals)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "stock-financed deals matched to cash-financed deals",
+    "dv": {
+     "name": "ACAR / PCAR",
+     "measure": "treatment effect of the method of payment on the outcome variable (ACAR and PCAR_LINEAR, PCAR_PROP1, PCAR_PROP10, PCAR_PROP50), matching each stock-financed deal to 50 (or 1 or 10) cash deals closest on the propensity score",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK (treatment)",
+      "measure": "method of payment treatment (stock vs matched cash deals) via propensity-score matching estimator",
+      "source": "Thomson Financial SDC M&A Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "all control variables used in Table V (basis of the propensity score)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "market-to-book decomposition",
+    "overvaluation"
+   ],
+   "mechanism_named": "market-to-book decomposition",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "agency costs of overvalued equity",
+    "earnings manipulation",
+    "outright fraud"
+   ],
+   "mechanism_named": "agency costs of overvalued equity",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "endogeneity of the payment choice",
+    "method of payment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "public firm acquisitions",
+    "private firm acquisitions",
+    "stock-financed deals",
+    "announcement returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "takeover part",
+    "investment value creation",
+    "announcement returns",
+    "financing decision"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "financing decision",
+    "relation": "affects",
+    "to": "announcement returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "differential returns",
+    "cash and stock private firm acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "methodology",
+    "joint announcements"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "downward price pressure from merger arbitrage",
+    "PCARs",
+    "STOCK indicator"
+   ],
+   "mechanism_named": "agency costs of overvalued equity hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "investor inertia",
+    "investment value creation component",
+    "PCAR",
+    "stock-financed deals"
+   ],
+   "mechanism_named": "investor inertia",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,506 @@
+{
+ "paper_id": "10.2307_2490943",
+ "title": "The Impact of Merger-Related Regulations on the Shareholders of Acquiring Firms",
+ "journal": "JAR",
+ "year": 1983,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient markets / event study",
+  "regulation cost hypothesis",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Williams Amendments prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "williams_amendments",
+      "relation": "decreases",
+      "to": "quasi_rents_to_acquirers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "quasi_rents_to_acquirers",
+      "relation": "increases",
+      "to": "acquiring_firm_share_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "quasi_rents_to_acquirers"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "1969 Tax Reform Act prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "tax_reform_act_1969",
+      "relation": "increases",
+      "to": "cost_of_acquisitions_activity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cost_of_acquisitions_activity",
+      "relation": "decreases",
+      "to": "acquiring_firm_share_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cost_of_acquisitions_activity"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "SEC segment disclosure prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "segment_disclosure_rules",
+      "relation": "increases",
+      "to": "competitive_disadvantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_disadvantage",
+      "relation": "decreases",
+      "to": "acquiring_firm_share_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_disadvantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "APB Opinions 16 and 17 prediction",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "apb_opinions_16_and_17",
+      "relation": "decreases",
+      "to": "reported_income",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reported_income",
+      "relation": "increases",
+      "to": "acquiring_firm_share_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reported_income"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms engaged in active acquisitions programs / acquisitive conglomerates operating in many lines of business)",
+  "country_region": "United States",
+  "time_period": "1966-1970 (extended to June 1972 in some tests)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "39 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 - Individual firm parameter estimates (Panels A & B), regression equation (1), 1/66-12/70",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "39 acquiring firms, January 1966-December 1970",
+    "dv": {
+     "name": "excess returns to security j",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+    },
+    "key_ivs": [
+     {
+      "name": "Williams Amendments (of 1968, 1970)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "1969 Tax Reform Act",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SEC segment disclosure requirements",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "APB Opinions 16 and 17",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "excess return on the market portfolio proxy (beta / market model term)",
+      "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+     },
+     {
+      "name": "intercept (alpha)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Traditional residual analysis (average abnormal returns / forecast errors) per regulatory change",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "equal-weighted portfolio of the 39 acquiring firms, 1/66-12/70",
+    "dv": {
+     "name": "abnormal return (cross-sectional average)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+    },
+    "key_ivs": [
+     {
+      "name": "Williams Amendments (of 1968, 1970)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "1969 Tax Reform Act",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SEC segment disclosure requirements",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "APB Opinions 16 and 17",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "alpha and beta estimates from an unconditional market model (excluding announcement months of the regulatory change)",
+      "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Tests of H1 (sum of firm coefficients equals zero), chi-squared with full and diagonal covariance matrix, 1/66-12/70",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "39 acquiring firms, January 1966-December 1970",
+    "dv": {
+     "name": "excess returns to security j",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+    },
+    "key_ivs": [
+     {
+      "name": "Williams Amendments (of 1968, 1970)",
+      "measure": "sum across firms of the event parameters for the regulatory change (uniform and differential treatment of announcement reversals)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "1969 Tax Reform Act",
+      "measure": "sum across firms of the event parameters for the regulatory change (uniform and differential treatment of announcement reversals)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SEC segment disclosure requirements",
+      "measure": "sum across firms of the event parameters for the regulatory change (uniform and differential treatment of announcement reversals)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "APB Opinions 16 and 17",
+      "measure": "sum across firms of the event parameters for the regulatory change (uniform and differential treatment of announcement reversals)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "excess return on the market portfolio proxy (beta / market model term)",
+      "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+     },
+     {
+      "name": "intercept (alpha)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (cols 3-6) - H1 and H2 tests for the 37-firm subsample over the extended period, full & diagonal covariance matrix",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "excess returns to security j",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+    },
+    "key_ivs": [
+     {
+      "name": "Williams Amendments (of 1968, 1970)",
+      "measure": "event parameters (sum across firms for H1; individual firm parameters for H2) under uniform and differential treatment",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "1969 Tax Reform Act",
+      "measure": "event parameters (sum across firms for H1; individual firm parameters for H2) under uniform and differential treatment",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SEC segment disclosure requirements",
+      "measure": "event parameters (sum across firms for H1; individual firm parameters for H2) under uniform and differential treatment",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "APB Opinions 16 and 17",
+      "measure": "event parameters (sum across firms for H1; individual firm parameters for H2) under uniform and differential treatment",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "excess return on the market portfolio proxy (beta / market model term)",
+      "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+     },
+     {
+      "name": "intercept (alpha)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 - Joint test of H2 (all 39 individual firm coefficients equal zero), full & diagonal covariance matrix, 1/66-12/70",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "39 acquiring firms, January 1966-December 1970",
+    "dv": {
+     "name": "excess returns to security j",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+    },
+    "key_ivs": [
+     {
+      "name": "Williams Amendments (of 1968, 1970)",
+      "measure": "the 39 individual firm event-parameter coefficients tested jointly against zero (chi-squared, 39 df)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "1969 Tax Reform Act",
+      "measure": "the 39 individual firm event-parameter coefficients tested jointly against zero (chi-squared, 39 df)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SEC segment disclosure requirements",
+      "measure": "the 39 individual firm event-parameter coefficients tested jointly against zero (chi-squared, 39 df)",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "APB Opinions 16 and 17",
+      "measure": "the 39 individual firm event-parameter coefficients tested jointly against zero (chi-squared, 39 df)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "excess return on the market portfolio proxy (beta / market model term)",
+      "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+     },
+     {
+      "name": "intercept (alpha)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.5 - Tests of H3 (identical event parameters across firms): GLS estimates of the four regulatory change parameters (equation 7)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "39 acquiring firms, 1/66-12/70 (also 37 firms, 1/66-6/72)",
+    "dv": {
+     "name": "excess returns to security j",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+    },
+    "key_ivs": [
+     {
+      "name": "Williams Amendments (of 1968, 1970)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "1969 Tax Reform Act",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "SEC segment disclosure requirements",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "APB Opinions 16 and 17",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "grand alpha and grand beta (market portfolio excess return) for the firms in the sample",
+      "source": "CRSP (equal-weighted CRSP NYSE index / CRSP tapes)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "tests of h2"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "benchmark",
+    "regulation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "regulatory changes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "regulatory changes",
+    "announcement process"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "redistributional effects"
+   ],
+   "mechanism_named": "redistributional effects",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "event parameters",
+    "joint return-generating process"
+   ],
+   "mechanism_named": "joint return-generating process",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

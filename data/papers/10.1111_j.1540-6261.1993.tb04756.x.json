@@ -1,0 +1,423 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1993.tb04756.x",
+ "title": "The Reverse LBO Decision and Firm Performance: Theory and Evidence",
+ "journal": "JF",
+ "year": 1993,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection",
+  "signaling theory",
+  "behavioral finance",
+  "prospect theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1_reverse_vs_continuing",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "reverse_lbo_status",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "preoffering_operating_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "poor performance being a special feature of the continuing-LBO comparison sample rather than reverse LBOs outperforming"
+   ]
+  },
+  {
+   "hypothesis": "H1_postIPO_decline",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "manager_private_information",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "postoffering_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "manager_equity_stake",
+      "relation": "increases",
+      "to": "performance_manipulation",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "performance_manipulation",
+      "relation": "decreases",
+      "to": "postoffering_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection",
+    "performance_manipulation"
+   ],
+   "moderators": [
+    {
+     "construct": "manager_retained_holdings",
+     "type": "moderator",
+     "effect": "weakens",
+     "effect_derived": true,
+     "mechanism": "performance_manipulation",
+     "moderated_from": "manager_equity_stake",
+     "moderated_to": "postoffering_operating_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "footnote_6"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "pure selection (behavioral decision and debt overhang) inducing good performers to go public without any information asymmetry, so the post-IPO decline is merely normal regression toward the mean",
+    "debt overhang selection effect (risky debt discourages weak LBOs from going public) explaining the strong pre-IPO performance",
+    "lost incentives after the reverse LBO (return to traditional corporate governance and its agency problems) causing the post-IPO performance decline",
+    "change in strategy / cash-flow rebalancing (rising capital expenditures and depreciation after the IPO relieves debt pressure) explaining the operating-income decline"
+   ]
+  },
+  {
+   "hypothesis": "H1_stock_price_anticipation",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "disappointing_operating_performance",
+      "relation": "increases",
+      "to": "market_underanticipation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_underanticipation",
+      "relation": "decreases",
+      "to": "postoffering_stock_price_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_underanticipation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (reverse LBOs; comparison firms matched within the same COMPUSTAT four-digit SIC category)",
+  "country_region": "",
+  "time_period": "1983-1987",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "62 reverse LBOs"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "IPO prospectus",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10-k forms",
+    "category": "hand_collected",
+    "kind": "filings"
+   },
+   {
+    "name": "Going Public: The IPO Reporter and Mergers and Acquisitions (published reverse-LBO lists; Ferenbach 1987)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "industry-adjusted operating performance improvement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "reverse vs. continuing LBO status",
+      "measure": "indicator: reverse LBO (went public again) vs. continuing LBO (LBO with public debt outstanding but no public equity)",
+      "source": "Going Public: The IPO Reporter / Mergers and Acquisitions lists; Lehn and Poulsen (1989) list; 10-k forms"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "operating performance improvement",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "continuing LBO vs. matched public control firm",
+      "measure": "matched control chosen as next firm in alphabetical order in COMPUSTAT list in same four-digit SIC category with total assets 50-200 percent of the continuing LBO",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "62 reverse LBOs and matched control firms",
+    "dv": {
+     "name": "operating performance improvement, pre- and post-IPO (incl. industry-adjusted)",
+     "measure": "[AOI/AT](IPO year) and [AOI/AT](IPO year + 1); [AOI/AT](year) = [OI/AT](year) - [OI/AT](year-1); also industry-adjusted",
+     "source": "COMPUSTAT; IPO prospectus (pre-IPO figures)"
+    },
+    "key_ivs": [
+     {
+      "name": "reverse LBO vs. matched control firm; pre-IPO vs. post-IPO timing",
+      "measure": "matched control chosen as next firm in alphabetical order in COMPUSTAT list in same four-digit SIC category with assets 50-200 percent of the reverse LBO; performance compared for IPO year vs. IPO year + 1",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Regression toward the mean / informational-effects test (Section IV.B) - reverse LBOs vs. performance-matched comparison firms",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "62 reverse LBOs vs. performance-matched comparison firms",
+    "dv": {
+     "name": "post-offering operating performance",
+     "measure": "[AOI/AT](IPO year + 1)",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "reverse LBO vs. performance-matched comparison firm",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "debt rating",
+     "measure": "Standard and Poor's bond ratings",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "reverse-LBO debt riskiness at time of going public",
+      "measure": "S&P bond ratings of reverse LBOs; also LBO-code firms with 1989/1990 performance data and bond ratings",
+      "source": "COMPUSTAT; Going Public: The IPO Reporter"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Change in strategy / capital expenditures test (Section D.2)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "reverse LBOs and matched control firms",
+    "dv": {
+     "name": "capital expenditures",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "reverse LBO vs. control firm, pre- vs. post-IPO capital expenditures",
+      "measure": "change in capital expenditures for reverse LBOs vs. control firms across preoffering and postoffering years",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Figure 2 - Long-run stock price performance of reverse LBOs (Section V, Finding 5)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "long-run stock price performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "reverse LBO status (post-IPO holding period)",
+      "measure": "reverse LBOs vs. matching control firms (same as operating-performance study) over a two-year horizon; methodology as in Ritter (1991)",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "debt overhang",
+    "decision to go public",
+    "firm performance"
+   ],
+   "mechanism_named": "debt overhang",
+   "proposed_edge": {
+    "from": "debt overhang",
+    "relation": "affects",
+    "to": "decision to go public"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "strip financing",
+    "selection effect",
+    "debt overhang",
+    "reverse lbos"
+   ],
+   "mechanism_named": "selection effect due to debt overhang",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "reverse lbos",
+    "stock price performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "superior performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "excess performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "reverse lbos",
+    "large ipos",
+    "spinoffs",
+    "abnormal stock price performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "sample period bias",
+    "lbo studies"
+   ],
+   "mechanism_named": "sample period bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

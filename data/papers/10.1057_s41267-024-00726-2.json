@@ -1,0 +1,506 @@
+{
+ "paper_id": "10.1057_s41267-024-00726-2",
+ "title": "Foreign-origin managers and FDI location choice",
+ "journal": "JIBS",
+ "year": 2024,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "upper echelons theory",
+  "behavioral theory of the firm",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_origin_managers",
+      "relation": "increases",
+      "to": "managerial_knowledge_of_country_of_origin",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_knowledge_of_country_of_origin",
+      "relation": "increases",
+      "to": "likelihood_of_targeting_country_of_origin",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_knowledge_of_country_of_origin"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality / self-selection: foreign-origin managers join (or are hired by) firms that already intend to invest in the managers’ country of origin",
+    "the effect is an artifact of name-analysis measurement noise/bias in identifying foreign-origin managers"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_origin_managers",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "likelihood_of_targeting_country_of_origin",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "establishment_mode",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "foreign_origin_managers",
+     "moderated_to": "likelihood_of_targeting_country_of_origin",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the null greenfield result reflects the greater heterogeneity of the GI sample rather than a true absence of the manager-from-target effect"
+   ]
+  },
+  {
+   "hypothesis": "H3a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_origin_managers",
+      "relation": "increases",
+      "to": "managerial_knowledge_of_country_of_origin",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_knowledge_of_country_of_origin",
+      "relation": "increases",
+      "to": "likelihood_of_targeting_country_of_origin",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_knowledge_of_country_of_origin"
+   ],
+   "moderators": [
+    {
+     "construct": "tmt_diversity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "openness_to_managerial_inputs",
+     "moderated_from": "foreign_origin_managers",
+     "moderated_to": "likelihood_of_targeting_country_of_origin",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "foreign_origin_managers",
+      "relation": "increases",
+      "to": "managerial_knowledge_of_country_of_origin",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_knowledge_of_country_of_origin",
+      "relation": "increases",
+      "to": "likelihood_of_targeting_country_of_origin",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_knowledge_of_country_of_origin"
+   ],
+   "moderators": [
+    {
+     "construct": "tmt_diversity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "intra_team_conflict",
+     "moderated_from": "foreign_origin_managers",
+     "moderated_to": "likelihood_of_targeting_country_of_origin",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "worldwide (FDI across most countries; 172 target countries, reduced to 111 in the regression sample)",
+  "time_period": "2013-2019",
+  "sample_description": "Worldwide foreign direct investment operations (greenfield investments and M&As) from Bureau van Dijk's Orbis Cross-border Investment (OCI) database, linked to top management team members' names, roles, and employment years from Orbis Historical Data (OHD)",
+  "sample_size": "4348 observations in the main regression sample (887 M&As: 359 cases and 528 controls; 3454 GIs: 1190 cases and 2264 controls)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Orbis Historical Data (OHD)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBM-GNR data library",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Column 1 (All FDI) - baseline Eq. (1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Full case-control matched FDI sample (4341 observations)",
+    "dv": {
+     "name": "FDI (case vs control)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Managers from target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis Historical Data (OHD) + IBM-GNR name analysis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Subsidiary in target",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Investor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Target's sector fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Corridor (country-pair) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Columns 2-3 (M&As vs GIs split, basic matching)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Split by entry mode: M&As (887 obs) and GIs (3454 obs)",
+    "dv": {
+     "name": "FDI (case vs control)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Managers from target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis Historical Data (OHD) + IBM-GNR name analysis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Subsidiary in target",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Investor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Target's sector fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Corridor (country-pair) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "GIs matched additionally on investment motive (Dunning 1994 classes); 719 obs",
+    "dv": {
+     "name": "FDI (case vs control)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Managers from target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis Historical Data (OHD) + IBM-GNR name analysis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Subsidiary in target",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Investor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Target's sector fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Corridor (country-pair) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2 (Testing for moderating effects: TMT diversity)",
+    "hypotheses": [
+     "H3a",
+     "H3b"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Full, M&A, and GI (basic and alternative-matching) samples",
+    "dv": {
+     "name": "FDI (case vs control)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Managers from target (MFT)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis Historical Data (OHD) + IBM-GNR name analysis"
+     },
+     {
+      "name": "TMT diversity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Orbis Historical Data (OHD) + IBM-GNR name analysis"
+     },
+     {
+      "name": "MFT x TMT diversity (interaction)",
+      "measure": "interaction term between Managers from target and TMT diversity",
+      "source": "Orbis Historical Data (OHD) + IBM-GNR name analysis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Subsidiary in target",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Investor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Target's sector fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Corridor (country-pair) fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "manager-from-target effect",
+    "lack of alternative knowledge resources",
+    "characteristics of the target countries’ business environment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "[withheld: wording matches the source]",
+    "on_path": [
+     "managers from target",
+     "manager-from-target effect"
+    ]
+   }
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "foreign-origin managers",
+    "biased view of their target locations’ potential",
+    "strong personal interests"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "foreign-origin managers from the target country",
+    "fdi",
+    "cross-border m&as",
+    "performs better"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "foreign-origin managers from the target country",
+    "relation": "affects",
+    "to": "FDI performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "managers from target countries",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "name-based methodology",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "time spent in the country of origin",
+    "orientation toward it"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "access to sensitive data"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "matched-sample regression"
+   ],
+   "mechanism_named": "matched-sample regression",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "fdi",
+    "tmt member comes from the target country",
+    "investment actually takes place"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

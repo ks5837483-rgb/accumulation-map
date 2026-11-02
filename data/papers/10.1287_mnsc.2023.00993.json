@@ -1,0 +1,905 @@
+{
+ "paper_id": "10.1287_mnsc.2023.00993",
+ "title": "The Role of Lockups in Stock Mergers",
+ "journal": "MNSC",
+ "year": 2025,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "market-timing theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Prediction 1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_lockup",
+      "relation": "increases",
+      "to": "market_inference_of_strong_long_term_fundamentals",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_inference_of_strong_long_term_fundamentals",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_inference_of_strong_long_term_fundamentals"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "Prediction 2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_lockup",
+      "relation": "increases",
+      "to": "market_inference_of_strong_long_term_fundamentals",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_inference_of_strong_long_term_fundamentals",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_inference_of_strong_long_term_fundamentals"
+   ],
+   "moderators": [
+    {
+     "construct": "acquirer_stock_market_valuation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "market_inference_of_strong_long_term_fundamentals",
+     "moderated_from": "stock_lockup",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Prediction 2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction 3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_lockup",
+      "relation": "increases",
+      "to": "target_shareholder_confidence_in_long_term_fundamentals",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_shareholder_confidence_in_long_term_fundamentals",
+      "relation": "increases",
+      "to": "acquirer_long_term_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_shareholder_confidence_in_long_term_fundamentals"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction 4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_stock_overvaluation",
+      "relation": "increases",
+      "to": "acquirer_incentive_to_use_stock_and_signal_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_incentive_to_use_stock_and_signal_synergies",
+      "relation": "increases",
+      "to": "stock_lockup_adoption",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_incentive_to_use_stock_and_signal_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction 5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_lockup",
+      "relation": "increases",
+      "to": "target_shareholder_investment_horizon",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_shareholder_investment_horizon",
+      "relation": "decreases",
+      "to": "target_investor_turnover",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_shareholder_investment_horizon"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction 6",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_lockup",
+      "relation": "increases",
+      "to": "endogenous_equilibrium_takeover_price",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "endogenous_equilibrium_takeover_price",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "endogenous_equilibrium_takeover_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "quid pro quo — acquirers compensate target shareholders for the illiquidity cost of a lockup via a higher takeover premium"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public-firm stock M&A deals; financial services industry, SIC Codes 6000-6999, excluded)",
+  "country_region": "United States (both acquirers and targets U.S. corporations)",
+  "time_period": "1996-2018",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,128 pure stock deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Electronic Data Gathering, Analysis, and Retrieval system (EDGAR) SEC filings (S-4, DEFM14A, DEF14A, PREM14A, 8-K); stock lockup data hand collected",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Standard & Poor's Compustat files",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Centre for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson/Refinitiv insider transaction data (Rule 144 disclosures)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Univariate comparisons (lockup vs no-lockup; lockup vs all-cash; valuation)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1,128 pure stock deals, 1996-2018 (Panel B compares stock-with-lockup deals to all-cash deals)",
+    "dv": {
+     "name": "Deal performance and valuation variables (Acquirer CAR, change in operating performance, buy-and-hold abnormal return, market-to-book, misvaluation)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup (subsample split)",
+      "measure": "subsample of deals with lockups versus the subsample of deals without lockups",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - Stock Lockups and Acquirer CARs (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Lockup duration",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Lockup %",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target status",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal attitude",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Related industry",
+      "source": "SDC/Compustat SIC"
+     },
+     {
+      "name": "Multibid (multiple bidders)",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-Book (acquirer)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Firm size (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Payout (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return volatility (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Collar",
+      "source": "SDC"
+     },
+     {
+      "name": "Counterparty lockup",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup x Market-to-Book (and Lockup duration x MB, Lockup % x MB)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR x Compustat/CRSP"
+     },
+     {
+      "name": "Lockup x Misvaluation (and duration x, % x)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR x Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market-to-Book / Misvaluation (main effect)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Lockup / Lockup duration / Lockup %",
+      "source": "EDGAR"
+     },
+     {
+      "name": "Other controls (same X vector as Table 4)",
+      "source": "SDC/Compustat/CRSP"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - Heckman self-selection into all-stock payment; lockups and acquirer CARs",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR (second stage); all-stock means of payment (selection stage)",
+     "measure": "acquirers' announcement returns in the window (-5,+5); selection modeled with a probit for the choice of the all-stock means of payment, augmenting the OLS equations with inverse Mills ratios (IMRs)",
+     "source": "CRSP / SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup, Lockup duration, Lockup intensity (and Lockup x Market-to-Book)",
+      "measure": "stock lockups, lockup duration, and lockup intensity ... controlling for the IMRs",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer stock market valuation (V_i)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Inverse Mills ratio (IMR)",
+      "source": "derived"
+     },
+     {
+      "name": "Control vector X_i (same as Table 4)",
+      "source": "SDC/Compustat/CRSP"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "completed pure stock deals with two years of post-announcement data (n=616 for change AROA; n=603 for BHAR)",
+    "dv": {
+     "name": "Long-term operating performance (change AROA 2Y) and long-run stock return (BHAR 2Y)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat (change AROA) / CRSP (BHAR)"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Lockup duration",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Lockup %",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat/CRSP"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (Models 1,4) - Determinants of stock lockup incidence (linear probability model)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pure stock deals 1996-2018 (n=1,045)",
+    "dv": {
+     "name": "Lockup",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR (hand collected)"
+    },
+    "key_ivs": [
+     {
+      "name": "Market-to-Book (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Misvaluation (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target status",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal attitude",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Related industry",
+      "source": "SDC/Compustat SIC"
+     },
+     {
+      "name": "Multibid",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Payout",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Collar",
+      "source": "SDC"
+     },
+     {
+      "name": "Counterparty lockup",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8 (Models 2,3,5,6) - Determinants of lockup duration and lockup percent (Tobit)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "pure stock deals 1996-2018 (n=1,099 duration; n=1,097 lockup %)",
+    "dv": {
+     "name": "Lockup duration; Lockup %",
+     "measure": "[withheld: wording matches the source]",
+     "source": "EDGAR (hand collected)"
+    },
+    "key_ivs": [
+     {
+      "name": "Market-to-Book (acquirer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Misvaluation (acquirer)",
+      "measure": "misvaluation, computed following Rhodes-Kropf et al. (2005)",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat/CRSP/EDGAR"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (Cols 1-2) - Stock lockups and deal completion (Probit / LPM)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "pure stock deals 1996-2018 (n=1,099 probit; n=1,045 LPM)",
+    "dv": {
+     "name": "Deal completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer CAR (-5,+5)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Collar",
+      "source": "SDC"
+     },
+     {
+      "name": "Counterparty lockup",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Other controls (same X vector)",
+      "source": "SDC/Compustat/CRSP"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9 (Cols 3-4) - Stock lockups and time to completion (Tobit / OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pure stock deals 1996-2018 (n=1,014 Tobit; n=958 OLS)",
+    "dv": {
+     "name": "Time to completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer CAR (-5,+5)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Collar",
+      "source": "SDC"
+     },
+     {
+      "name": "Counterparty lockup",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Other controls (same X vector)",
+      "source": "SDC/Compustat/CRSP"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10 - Investor turnover (univariate comparison)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "publicly listed targets only (turnover computable only for public targets; n=850 acquirers, 430 public targets, 16 target-lockup, 414 target-no-lockup)",
+    "dv": {
+     "name": "Investor turnover (proxy for shareholder horizon)",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup (subsample split among public targets); acquirer vs target",
+      "measure": "public targets with versus without stock lockups; and acquirers versus all public targets; t-test and Wilcoxon test of differences in means and medians",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 11 / Figure 3 - Abnormal returns, trading volume, and insider sales around lockup expiration (event study, alternative-explanation test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "lockup expiration",
+    "sample": "262 completed pure stock deals with lockups (insider sales detected in 53 of 262 deals)",
+    "dv": {
+     "name": "Abnormal returns / buy-and-hold returns / abnormal trading volume around lockup expiration; insider sales",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / Thomson/Refinitiv (Rule 144)"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table 12 - Stock Lockups and Takeover Premium (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "deals with publicly listed targets only (n=398; premium requires target to be publicly listed)",
+    "dv": {
+     "name": "Takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup, Lockup duration, Lockup %",
+      "measure": "lockup indicator, lockup duration (months), lockup % (share of shares locked)",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Lockup x Market-to-Book (and duration x MB, % x MB)",
+      "measure": "lockup, lockup duration, and lockup percent interacted with the acquirer market-to-book ratio",
+      "source": "EDGAR x Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market-to-Book",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC"
+     },
+     {
+      "name": "Deal attitude",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Related industry",
+      "source": "SDC/Compustat SIC"
+     },
+     {
+      "name": "Multibid",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Payout",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Collar",
+      "source": "SDC"
+     },
+     {
+      "name": "Counterparty lockup",
+      "source": "EDGAR (hand collected)"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 4.3 / Online Appendix A12 - Customized vs regulatory lockups (OLS with Lockup x Customized Lockup interaction)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer announcement returns and long-term performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Lockup x Customized Lockup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "EDGAR (hand collected)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control vector X_i as Equations 4.1/4.2/4.6",
+      "source": "SDC/Compustat/CRSP"
+     },
+     {
+      "name": "Industry, year, and industry x year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "financial contracting arrangements",
+    "capital market mispricing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "financial contracting arrangements",
+    "relation": "affects",
+    "to": "capital market mispricing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "customized lockups",
+    "regulatory lockups"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "share turnover"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "investor horizon",
+    "lockup"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "takeover premium",
+    "quid pro quo arrangements"
+   ],
+   "mechanism_named": "quid pro quo",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

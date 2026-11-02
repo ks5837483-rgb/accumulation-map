@@ -1,0 +1,438 @@
+{
+ "paper_id": "10.1016_j.jfineco.2003.08.004",
+ "title": "Earnings management and the market performance of acquiring firms",
+ "journal": "JFE",
+ "year": 2004,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "earnings management",
+  "market efficiency",
+  "rational expectations hypothesis",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_swap_financing",
+      "relation": "increases",
+      "to": "incentive_to_inflate_stock_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_inflate_stock_price",
+      "relation": "increases",
+      "to": "earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_inflate_stock_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "overoptimistic expectation hypothesis (the elevated abnormal accruals of stock-for-stock acquirers reflect optimistic growth expectations rather than deliberate earnings management)"
+   ]
+  },
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_management",
+      "relation": "increases",
+      "to": "stock_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stock_overvaluation",
+      "relation": "decreases",
+      "to": "announcement_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "stock_overvaluation"
+   ],
+   "moderators": [
+    {
+     "construct": "stock_swap_financing",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "stock_overvaluation",
+     "moderated_from": "earnings_management",
+     "moderated_to": "announcement_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the abnormal-accrual/abnormal-return correlation reflects contemporaneous earnings-announcement effects rather than pre-merger earnings management"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_management",
+      "relation": "increases",
+      "to": "stock_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "stock_overvaluation",
+      "relation": "decreases",
+      "to": "long_term_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "stock_overvaluation"
+   ],
+   "moderators": [
+    {
+     "construct": "stock_swap_financing",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "stock_overvaluation",
+     "moderated_from": "earnings_management",
+     "moderated_to": "long_term_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "overoptimistic expectation hypothesis (the negative accrual/long-term-return relation reflects the unraveling of overly optimistic growth expectations rather than the reversal of earnings management)",
+    "the general accrual anomaly of Sloan (1996) (accruals predict long-term returns for all firms, so the effect is not specific to stock-for-stock mergers)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "earnings_management",
+      "relation": "increases",
+      "to": "unanticipated_earnings_reversal",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "unanticipated_earnings_reversal",
+      "relation": "increases",
+      "to": "analyst_forecast_optimism",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unanticipated_earnings_reversal"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. nonfinancial firms across manufacturing, communications, business services, and other SIC industries; financial firms excluded)",
+  "country_region": "United States",
+  "time_period": "1992-2000",
+  "sample_description": "Completed mergers of publicly traded U.S. companies, restricted to pure stock swaps or pure cash purchases with nonfinancial acquirers, obtained from the Security Data Company (SDC) online database of domestic mergers and acquisitions, with required quarterly data on Compustat, returns on CRSP, and CEO-ownership/board data from WRDS executive compensation database and SEC filings (LexisNexis Academic)",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Security Data Company's (SDC) online database of domestic mergers and acquisitions",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (quarterly data)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings through LexisNexis Academic",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 (Median acquirer characteristics; Wilcoxon two-sample test, stock swap vs. cash)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer characteristics (stock swap vs. cash comparison)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat / CRSP / SDC / WRDS executive compensation database / SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment",
+      "measure": "binary: stock swap vs. pure cash purchase",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquirer abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal current accrual (ABCA), proxy for earnings management",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment",
+      "measure": "binary: stock swap vs. cash purchase (Wilcoxon two-sample test comparing abnormal accruals of the two groups)",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Restricted ABRET[-21,1] model uses acquirers announcing earnings between 30 and 92 days prior to the merger announcement",
+    "dv": {
+     "name": "acquirer abnormal return (ABRET)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "abnormal current accrual (ABCA), earnings management proxy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "BM (book-to-market ratio of the acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "CEOSH (acquirer's common shares controlled by CEO / common shares outstanding)",
+      "source": "WRDS executive compensation database / SEC filings through LexisNexis Academic"
+     },
+     {
+      "name": "BSIZE (total number of directors on the board)",
+      "source": "SEC filings through LexisNexis Academic"
+     },
+     {
+      "name": "OUTSIDER (proportion of outsiders on the board)",
+      "source": "SEC filings through LexisNexis Academic"
+     },
+     {
+      "name": "POOL (equals one if merger accounted for by pooling-of-interest method, zero if purchase method; stock swaps only)",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL x CEOSH interaction",
+      "source": "SDC / WRDS executive compensation database"
+     },
+     {
+      "name": "POOL x BSIZE interaction",
+      "source": "SDC / SEC filings through LexisNexis Academic"
+     },
+     {
+      "name": "POOL x OUTSIDER interaction",
+      "source": "SDC / SEC filings through LexisNexis Academic"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Analysts' quarterly forecast errors around merger announcements; Panel A deflated by actual earnings, Panel B deflated by price)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "analysts' quarterly forecast errors",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC filings through LexisNexis Academic"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment / timing around merger announcement",
+      "measure": "binary stock swap vs. cash purchase; forecast horizon relative to merger announcement",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 (Sensitivity: Sloan's (1996) model specification of long-term returns on accruals)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "long-term (raw) stock return",
+     "measure": "raw return regressed on accruals (univariate) and on accruals with controls (multivariate), following Sloan (1996)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "accruals (interacted with method of payment)",
+      "measure": "acquirer's accruals; coefficient examined separately for stock-for-stock vs. cash acquirers",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "beta",
+      "source": "CRSP"
+     },
+     {
+      "name": "log market value",
+      "source": "CRSP / Compustat"
+     },
+     {
+      "name": "earnings-to-price ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "book-to-market",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Robustness: Heckman (1979) two-step self-selection correction (footnote 20)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "probit model of stock-payment likelihood (inverse Mills' ratio)",
+    "sample": "",
+    "dv": {
+     "name": "acquirer abnormal return (ABRET) with self-selection control",
+     "measure": "regression models of abnormal return re-estimated including the inverse Mills' ratio to control for potential self-selection bias in the choice to pay with stock",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "abnormal current accrual (ABCA)",
+      "measure": "acquirer's pre-merger abnormal accruals, coefficient assessed with inverse Mills' ratio included",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "inverse Mills' ratio from a probit model of the likelihood that an acquiring firm pays with stock",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "pre-merger earnings management",
+    "post-merger performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

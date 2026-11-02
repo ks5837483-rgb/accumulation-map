@@ -1,0 +1,412 @@
+{
+ "paper_id": "10.1287_mnsc.1100.1212",
+ "title": "Investor Inattention and the Market Reaction to Merger Announcements",
+ "journal": "MNSC",
+ "year": 2010,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "limited attention theory",
+  "behavioral finance",
+  "market efficiency"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "friday_announcement",
+      "relation": "increases",
+      "to": "investor_inattention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_inattention",
+      "relation": "decreases",
+      "to": "abnormal_trading_volume",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_inattention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "greater information leakage of Friday merger announcements",
+    "managers' strategic timing of overvaluation-driven announcements on Fridays",
+    "disproportionate after-hours Friday announcements"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "friday_announcement",
+      "relation": "increases",
+      "to": "investor_inattention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_inattention",
+      "relation": "decreases",
+      "to": "abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_inattention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "managers' strategic timing of overvaluation-driven acquisitions on Fridays rather than inattention",
+    "greater information leakage of Friday announcements"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "friday_announcement",
+      "relation": "increases",
+      "to": "investor_inattention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_inattention",
+      "relation": "increases",
+      "to": "abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_inattention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "managers' strategic timing of announcements rather than investor inattention",
+    "greater information leakage of Friday announcements"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (stock swap merger announcements between U.S. companies, no focal sector)",
+  "country_region": "United States",
+  "time_period": "1994-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "3,995 stock swap announcements (564 Friday, 3,431 non-Friday)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CDA/Spectrum Institutional Money Manager Holdings database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Brokers Estimate (IBES) database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (bivariate: acquirers' average abnormal trading volume, Friday vs. non-Friday)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal trading volume",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "public status of target (privately vs. publicly owned targets)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (bivariate: acquirers' average abnormal returns, Friday vs. non-Friday, conditional on public status)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Friday announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "public status of target (privately vs. publicly owned targets)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (multivariate OLS: abnormal trading volume ATV, N = 3,992)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "N = 3,992 stock swap announcements",
+    "dv": {
+     "name": "ATV (abnormal trading volume)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "FRIDAY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "PUBLIC (target is a publicly owned company = 1, privately owned = 0)",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL (merger accounted for by pooling-of-interest method = 1, purchase method = 0)",
+      "source": "SDC"
+     },
+     {
+      "name": "SAME_IND (two merging partners in same two-digit SIC code = 1)",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "RSIZE (relative size = ratio of transaction's total value to acquirer's market value of equity)",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADJ_ROA (acquirer's ROA minus average ROA for its market-cap quintile and two-digit SIC industry portfolio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "IO (proportion of institutional ownership in the acquirer)",
+      "source": "CDA/Spectrum Institutional Money Manager Holdings database"
+     },
+     {
+      "name": "LCOVERAGE (logarithm of one plus number of analysts in last consensus annual earnings forecast)",
+      "source": "IBES"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "IBES"
+     },
+     {
+      "name": "MONDAY (indicator variable for Monday announcement; column 2 only)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (multivariate OLS: cumulative abnormal returns CAR, estimated separately by target public status)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "estimated separately for stock swaps involving privately owned targets (N = 1,767) and publicly owned targets (N = 2,228)",
+    "dv": {
+     "name": "CAR (cumulative abnormal return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "FRIDAY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "POOL (pooling-of-interest method = 1, purchase method = 0)",
+      "source": "SDC"
+     },
+     {
+      "name": "SAME_IND (two merging partners in same two-digit SIC code = 1)",
+      "source": "SDC"
+     },
+     {
+      "name": "LBIDDER (logarithm of the number of bidders)",
+      "source": "SDC"
+     },
+     {
+      "name": "LSIZE (natural log of acquirer's total market value of equity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RSIZE (ratio of transaction's total value to acquirer's market value of equity)",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADJ_ROA (industry/size-adjusted return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "PRE_ABRET3 (buy-and-hold abnormal return over three months prior)",
+      "source": "CRSP"
+     },
+     {
+      "name": "IO (proportion of institutional ownership)",
+      "source": "CDA/Spectrum Institutional Money Manager Holdings database"
+     },
+     {
+      "name": "LCOVERAGE (analyst coverage)",
+      "source": "IBES"
+     },
+     {
+      "name": "DISPERSION (analyst long-term forecast dispersion)",
+      "source": "IBES"
+     }
+    ]
+   },
+   {
+    "label": "After-hour announcements robustness (Section 5.2.2, untabulated)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ATV and CAR",
+     "measure": "acquirer's abnormal trading volume and abnormal returns over days 0 and 1",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "FRIDAY",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control set as main multivariate models (PUBLIC, POOL, SAME_IND, LBIDDER, LSIZE, RSIZE, BM, ADJ_ROA, PRE_ABRET3, IO, LCOVERAGE, DISPERSION)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "targets’ returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "targets’ prices",
+    "inattention",
+    "target returns"
+   ],
+   "mechanism_named": "inattention hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "inattention"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

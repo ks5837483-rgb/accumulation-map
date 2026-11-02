@@ -1,0 +1,930 @@
+{
+ "paper_id": "10.1007_s11142-022-09679-z",
+ "title": "Expert advice in the presence of conflicts of interest: the case of star-crossed acquisitions",
+ "journal": "RAS",
+ "year": 2022,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "principal-agent theory",
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "star_crossed_adviser",
+      "relation": "increases",
+      "to": "conflict_of_interest",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "conflict_of_interest",
+      "relation": "decreases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "conflict_of_interest"
+   ],
+   "moderators": [
+    {
+     "construct": "target_opacity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "conflict_of_interest",
+     "moderated_from": "star_crossed_adviser",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "opacity_interaction"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information hypothesis (star-crossed deals are higher quality due to the adviser's superior information)",
+    "overpayment hypothesis (lower returns reflect overpayment driven by competition, not poor quality)",
+    "endogenous deal selection on unobservable managerial, firm, or deal characteristics",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "star_crossed_adviser",
+      "relation": "decreases",
+      "to": "deal_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_quality",
+      "relation": "decreases",
+      "to": "goodwill_impairment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "goodwill impairments attributable to acquisitions prior to the star-crossed deal"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "star_crossed_adviser",
+      "relation": "increases",
+      "to": "competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competition",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_experience",
+      "relation": "decreases",
+      "to": "reliance_on_adviser",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reliance_on_adviser",
+      "relation": "increases",
+      "to": "star_crossed_selection",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reliance_on_adviser"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "star_crossed_adviser",
+      "relation": "increases",
+      "to": "blame_deflection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "blame_deflection",
+      "relation": "increases",
+      "to": "ceo_retention",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "blame_deflection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "star_crossed_deal",
+      "relation": "increases",
+      "to": "mutually_beneficial_relationship",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "mutually_beneficial_relationship",
+      "relation": "increases",
+      "to": "adviser_rehiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "mutually_beneficial_relationship"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (mergers and acquisitions of public acquirers and public targets)",
+  "country_region": "",
+  "time_period": "2002-2011",
+  "sample_description": "Completed mergers, acquisitions, and acquisitions of majority control from Thomson's SDC M&A database, valued over $10 million, where both acquirer and target are public; merged with Compustat (accounting), CRSP (stock prices), and IBES (analyst data); star analysts identified via Institutional Investor's annual rankings",
+  "sample_size": "1116 bids (97 star-crossed, 1019 nonstar-crossed)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson's SDC mergers and acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBES's EPS detail history files",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Institutional Investor's annual rankings of analysts",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1: Summary statistics (univariate mean comparisons)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "full sample 1116 bids; star-crossed subsample 97, nonstar-crossed 1019",
+    "dv": {
+     "name": "Acquirer announcement CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 Column 1: Announcement returns, full sample, CAR(−2,+2)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquirer CAR (−2,+2)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap (acquirer size, log of market value)",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size (target to acquirer)",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing Bid",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Earnout",
+      "source": "SDC"
+     },
+     {
+      "name": "Poison Pill",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Column 2: Announcement returns, star-crossed possible subsample",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "star-crossed possible: a star analyst covered the target and that analyst's bank was ranked in the top 10 of the prior year's league table (269 obs)",
+    "dv": {
+     "name": "Acquirer CAR (−2,+2)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing Bid",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Earnout",
+      "source": "SDC"
+     },
+     {
+      "name": "Poison Pill",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Column 3: Announcement returns, top one-third of deal values",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquirer CAR (−2,+2)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing Bid",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Earnout",
+      "source": "SDC"
+     },
+     {
+      "name": "Poison Pill",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Column 4: Announcement returns, full sample with Top-Tier Adviser control",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "full sample (1116 obs)",
+    "dv": {
+     "name": "Acquirer CAR (−2,+2)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing Bid",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Earnout",
+      "source": "SDC"
+     },
+     {
+      "name": "Poison Pill",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2 Column 5: Announcement returns, full sample, extended CAR(−2,+21)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "full sample, CAR window (−2,+21) (1116 obs)",
+    "dv": {
+     "name": "Acquirer CAR (−2,+21)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing Bid",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Earnout",
+      "source": "SDC"
+     },
+     {
+      "name": "Poison Pill",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3: Switching model (endogenous switching regression with selection correction)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "selection stage 910 obs; star-crossed regime 85 obs; nonstar-crossed regime 825 obs",
+    "dv": {
+     "name": "Acquirer CAR (−2,+2) (with first-stage selection into star-crossed deals)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed / selection into star-crossed deal",
+      "measure": "endogenous switching regression estimating returns for star-crossed vs nonstar-crossed regimes with 'what if' counterfactual returns",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Competing Bid",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Earnout",
+      "source": "SDC"
+     },
+     {
+      "name": "Poison Pill",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "IBES; CRSP"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Column 1: Goodwill — max change in goodwill/assets (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1115 obs",
+    "dv": {
+     "name": "Max change in goodwill / assets",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Column 2: Goodwill — goodwill impairments/assets (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "1116 obs",
+    "dv": {
+     "name": "Goodwill impairments / assets",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Columns 3-4: Goodwill impairment indicator (probit + marginal effects)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1108 obs",
+    "dv": {
+     "name": "Any goodwill impairment (indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Column 1: Overpayment — target premium (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Column 2: Overpayment — target CAR(−2,+2) (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Target CAR (−2,+2)",
+     "measure": "the target (−2, +2) announcement CAR",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Star-Crossed",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Institutional Investor; IBES; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ordinary-Crossed",
+      "source": "IBES; SDC"
+     },
+     {
+      "name": "Log Market Cap",
+      "source": "Compustat; CRSP"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC; CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "competition",
+    "prices",
+    "star-crossed deals"
+   ],
+   "mechanism_named": "overpayment hypothesis",
+   "proposed_edge": {
+    "from": "competition",
+    "relation": "affects",
+    "to": "prices"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "competition",
+    "acquisition prices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "competition",
+    "relation": "affects",
+    "to": "acquisition prices"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "decisionmaking"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

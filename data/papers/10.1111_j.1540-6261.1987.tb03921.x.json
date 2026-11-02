@@ -1,0 +1,258 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1987.tb03921.x",
+ "title": "Corporate Takeover Bids, Methods of Payment, and Bidding Firms' Stock Returns",
+ "journal": "JF",
+ "year": 1987,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "agency theory",
+  "co-insurance theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_stock_financing",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "bidding_firm_stock_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "higher probability of failure of stock exchange offers relative to cash offers driving their negative returns"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "common_stock_exchange_offer",
+      "relation": "increases",
+      "to": "wealth_transfer_to_bondholders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "wealth_transfer_to_bondholders",
+      "relation": "decreases",
+      "to": "bidding_firm_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "wealth_transfer_to_bondholders"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "proportion_financed_with_common_stock",
+      "relation": "decreases",
+      "to": "fractional_managerial_stockholdings",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "fractional_managerial_stockholdings",
+      "relation": "increases",
+      "to": "bidding_firm_stock_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "fractional_managerial_stockholdings"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "type of acquisition (tender offer versus merger) rather than method of payment driving the abnormal returns"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (NYSE/AMEX-listed bidding firms; no focal sector)",
+  "country_region": "United States",
+  "time_period": "1972-1981",
+  "sample_description": "Bidding firms engaged in successful takeovers (tender offers or mergers), identified from the July 1981 FTC Statistical Report on Mergers and Acquisitions and the Wall Street Journal Index, with daily stock returns available on the CRSP tapes; screened to exclude firms with concurrent major corporate events",
+  "sample_size": "167 acquiring firms (60 stock exchange offers, 100 cash offers, 7 combinations)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT tapes",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Moody's Industrials",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Funk and Scott Index",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Bond Record",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "W. T. Grimm & Co. Mergerstat Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table III - Event Study Analysis: Overall Results (60 stock exchange offers vs 100 cash offers)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidding firms' common stock abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment (stock exchange offer vs cash offer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index and SEC forms 13D and 14D"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "successful takeovers classified by type of acquisition x method of payment: merger stock exchange (60), merger cash (64), tender combinations (5), tender cash (36)",
+    "dv": {
+     "name": "bidding firms' common stock abnormal returns",
+     "measure": "daily average abnormal return (AR) computed from the market model over event days -5 to +5",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment interacted with type of acquisition (merger vs tender offer)",
+      "measure": "method of payment (stock exchange, cash, or combination) cross-classified with 126 merger proposals vs 41 tender offers",
+      "source": "Wall Street Journal Index and SEC forms 13D and 14D"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table V - Abnormal Returns for Unsuccessful Bids (12 unsuccessful stock exchange offers vs 47 unsuccessful cash offers)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "bidding firms' common stock abnormal returns",
+     "measure": "daily average abnormal return (AR) and cumulative abnormal return (CAR) around the initial announcement, event days -5 to +5",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment (stock exchange offer vs cash offer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index and W. T. Grimm & Co. Mergerstat Review"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VI - Abnormal Returns of Bidding Firms' Nonconvertible Bonds (12 stock exchange offers = 24 bonds vs 16 cash offers = 28 bonds); wealth-transfer test",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "thirty bidding firms with fifty-eight publicly traded nonconvertible bond issues: twelve stock exchange offers (24 bonds) and sixteen cash offers (28 bonds), 1972-1981",
+    "dv": {
+     "name": "nonconvertible bond abnormal returns of bidding firms",
+     "measure": "daily average abnormal return (AR) of nonconvertible bonds; daily bond returns computed from closing prices including daily accrued interest, event days -5 to +5",
+     "source": "Moody's Bond Record"
+    },
+    "key_ivs": [
+     {
+      "name": "method of payment (stock exchange offer vs cash offer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index and SEC forms 13D and 14D"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

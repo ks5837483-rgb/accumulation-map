@@ -1,0 +1,230 @@
+{
+ "paper_id": "10.1016_0304-405x(83)90010-7",
+ "title": "The rationale behind interfirm tender offers",
+ "journal": "JFE",
+ "year": 1983,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "synergy theory",
+  "information hypothesis",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "absence_of_control_transfer",
+      "relation": "decreases",
+      "to": "anticipation_of_future_successful_acquisition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipation_of_future_successful_acquisition",
+      "relation": "increases",
+      "to": "permanent_target_share_revaluation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipation_of_future_successful_acquisition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information hypothesis (revaluation from newly revealed information does not require control transfer, so should not fall back)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "subsequent_successful_acquisition",
+      "relation": "increases",
+      "to": "anticipation_of_future_successful_acquisition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipation_of_future_successful_acquisition",
+      "relation": "increases",
+      "to": "permanent_target_share_revaluation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipation_of_future_successful_acquisition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information hypothesis (permanent revaluation from released information alone, without transfer of control of target resources)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "loss_of_target_to_rival_bidder",
+      "relation": "increases",
+      "to": "competitive_disadvantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_disadvantage",
+      "relation": "decreases",
+      "to": "unsuccessful_bidder_share_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_disadvantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information hypothesis (bidder loss reflects information-production costs, unrelated to whether a rival acquires the target, so predicts no difference by control disposition)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_retains_control",
+      "relation": "decreases",
+      "to": "competitive_disadvantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "competitive_disadvantage",
+      "relation": "decreases",
+      "to": "unsuccessful_bidder_share_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "competitive_disadvantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "information hypothesis (predicts no relation between unsuccessful-bidder returns and disposition of control, i.e. also predicts no effect here)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (interfirm tender offers among firms listed on the NYSE or AMEX)",
+  "country_region": "United States (NYSE/AMEX-listed firms)",
+  "time_period": "1963-1980",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "112 unsuccessful target firms; 94 unsuccessful bidding attempts by 91 unique bidding firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal (index and newspaper)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poors Guide to Common Stocks",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "112 first-time unsuccessful control-oriented target firms, 1963-1980 (86 subsequently taken over, 26 not taken over)",
+    "dv": {
+     "name": "abnormal returns to unsuccessful target shareholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Daily Return File"
+    },
+    "key_ivs": [
+     {
+      "name": "announcement of an unsuccessful tender offer (event)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP Daily Return File"
+     },
+     {
+      "name": "subsequent change in control of target resources",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal / hand-collected"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "94 unsuccessful attempts by 91 unique unsuccessful bidding firms, 1963-1980",
+    "dv": {
+     "name": "abnormal returns to unsuccessful bidding firm shareholders",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP Daily Return File"
+    },
+    "key_ivs": [
+     {
+      "name": "change in control of target resources following the unsuccessful bid",
+      "measure": "subsample split: unsuccessful bidding firms that lose the target to a rival bidding firm (change in control) vs. firms whose target is not acquired by another bidder (no change in control)",
+      "source": "Wall Street Journal / hand-collected"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

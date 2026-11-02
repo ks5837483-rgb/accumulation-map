@@ -1,0 +1,931 @@
+{
+ "paper_id": "10.1111_1911-3846.12049",
+ "title": "The Sarbanes‐Oxley Act and Exit Strategies of Private Firms",
+ "journal": "CAR",
+ "year": 2014,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "cost of regulation / compliance-cost theory",
+  "going-public decision theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sarbanes_oxley_act",
+      "relation": "increases",
+      "to": "ipo_sox_compliance_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ipo_sox_compliance_cost",
+      "relation": "decreases",
+      "to": "ipo_propensity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ipo_sox_compliance_cost"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sarbanes_oxley_act",
+      "relation": "increases",
+      "to": "relative_sox_compliance_cost_for_small_firms",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relative_sox_compliance_cost_for_small_firms",
+      "relation": "increases",
+      "to": "ipo_size_threshold",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relative_sox_compliance_cost_for_small_firms"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pre_acquisition_sox_compliance",
+      "relation": "decreases",
+      "to": "acquirer_due_diligence_and_internal_control_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_due_diligence_and_internal_control_cost",
+      "relation": "decreases",
+      "to": "deal_multiple",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_due_diligence_and_internal_control_cost"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. and U.K. private firms choosing between an IPO and acquisition by a public firm; financial industry excluded, SIC 6000-6999)",
+  "country_region": "United States (primary sample), with a United Kingdom benchmark sample",
+  "time_period": "1994-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,253 combined U.S. and U.K. observations for the IPO-vs-takeover decision (U.S. IPO 2,735 + U.S. takeover 1,003; U.K. IPO 1,266 + U.K. takeover 249); primary deal-multiple sample = 1,003 U.S. private targets"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC IPO database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC Mergers and Acquisitions database (SDC Platinum)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Pratt's Stats Private Transaction Database (Business Valuation Resources)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR filings (8-K, 8-K/A, S-1)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Model (1) - U.S. IPO vs. takeover, mean pre/post-SOX effect",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX), effective post-2003",
+    "sample": "3,738 U.S. private IPO and takeover firms, 1994-2009",
+    "dv": {
+     "name": "IPO choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC IPO database; Pratt's Stats Private Transaction Database"
+    },
+    "key_ivs": [
+     {
+      "name": "SOX",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "SDC IPO database; Pratt's Stats"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Pratt's Stats; SDC IPO database"
+     },
+     {
+      "name": "HHI",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "PB",
+      "source": "constructed (Rajan-Wulf perk industries)"
+     },
+     {
+      "name": "IND_DA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_TAN",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_MTB",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "HITECH",
+      "source": "constructed"
+     },
+     {
+      "name": "IND_FERROR",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MKTRF",
+      "source": ""
+     },
+     {
+      "name": "HML",
+      "source": ""
+     },
+     {
+      "name": "SMB",
+      "source": ""
+     },
+     {
+      "name": "RF",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model (2) - U.S. IPO vs. takeover, SOX x firm-size interactions",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX), effective post-2003",
+    "sample": "3,738 U.S. private IPO and takeover firms, 1994-2009",
+    "dv": {
+     "name": "IPO choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC IPO database; Pratt's Stats Private Transaction Database"
+    },
+    "key_ivs": [
+     {
+      "name": "SOX x SIZE_LARGE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed; SDC IPO database; Pratt's Stats"
+     },
+     {
+      "name": "SOX x SIZE_SMALL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed; SDC IPO database; Pratt's Stats"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "SDC IPO database; Pratt's Stats"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Pratt's Stats; SDC IPO database"
+     },
+     {
+      "name": "HHI",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "PB",
+      "source": "constructed"
+     },
+     {
+      "name": "IND_DA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_TAN",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_MTB",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "HITECH",
+      "source": "constructed"
+     },
+     {
+      "name": "IND_FERROR",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MKTRF",
+      "source": ""
+     },
+     {
+      "name": "HML",
+      "source": ""
+     },
+     {
+      "name": "SMB",
+      "source": ""
+     },
+     {
+      "name": "RF",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Models (1)-(2) - U.K. benchmark IPO vs. takeover decision",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX) - U.K. did not adopt SOX-like regulation (placebo/benchmark)",
+    "sample": "1,515 U.K. private IPO and takeover firms, 1994-2009",
+    "dv": {
+     "name": "IPO choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC IPO database; SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SOX",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed"
+     },
+     {
+      "name": "SOX x SIZE_LARGE / SOX x SIZE_SMALL",
+      "measure": "SOX interacted with median-split firm-size indicators",
+      "source": "constructed; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "SDC"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "SDC"
+     },
+     {
+      "name": "HHI",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "PB",
+      "source": "constructed"
+     },
+     {
+      "name": "IND_DA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_TAN",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_MTB",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "HITECH",
+      "source": "constructed"
+     },
+     {
+      "name": "IND_FERROR",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MKTRF",
+      "source": ""
+     },
+     {
+      "name": "HML",
+      "source": ""
+     },
+     {
+      "name": "SMB",
+      "source": ""
+     },
+     {
+      "name": "RF",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Models (3)-(4) - pooled U.S. + U.K. difference-in-difference IPO choice",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX), with U.K. as the non-adopting control group",
+    "sample": "5,253 pooled U.S. and U.K. private firms, 1994-2009",
+    "dv": {
+     "name": "IPO choice",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC IPO database; Pratt's Stats; SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SOX x US",
+      "measure": "SOX indicator interacted with a U.S.-firm indicator",
+      "source": "constructed"
+     },
+     {
+      "name": "SOX x UK",
+      "measure": "SOX indicator interacted with a U.K.-firm indicator",
+      "source": "constructed"
+     },
+     {
+      "name": "SOX x SIZE_SMALL x US / SOX x SIZE_LARGE x US (and U.K. counterparts)",
+      "measure": "triple interactions of SOX, median-split firm size, and country of origin",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "SDC; Pratt's Stats"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "SDC; Pratt's Stats"
+     },
+     {
+      "name": "HHI",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "PB",
+      "source": "constructed"
+     },
+     {
+      "name": "IND_DA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_TAN",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "IND_MTB",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "HITECH",
+      "source": "constructed"
+     },
+     {
+      "name": "IND_FERROR",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MKTRF",
+      "source": ""
+     },
+     {
+      "name": "HML",
+      "source": ""
+     },
+     {
+      "name": "SMB",
+      "source": ""
+     },
+     {
+      "name": "RF",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A - SALES/EV deal multiple, SIZE as SOX-compliance proxy",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX), effective post-2003",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SALES/EV (inverse deal multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Pratt's Stats Private Transaction Database"
+    },
+    "key_ivs": [
+     {
+      "name": "SIZE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "SOX x LARGE / SOX x SMALL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed; Pratt's Stats"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GROWTH",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "MARGIN",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "RD",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "WORKING_CAP",
+      "source": "Pratt's Stats"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B - SALES/EV deal multiple, BIG4 as SOX-compliance proxy",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX), effective post-2003",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SALES/EV (inverse deal multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Pratt's Stats Private Transaction Database"
+    },
+    "key_ivs": [
+     {
+      "name": "BIG4",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pratt's Stats; SEC EDGAR filings"
+     },
+     {
+      "name": "SOX x BIG4 / SOX x NONBIG4",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed; Pratt's Stats"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "MARGIN",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "RD",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "WORKING_CAP",
+      "source": "Pratt's Stats"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel C - SALES/EV deal multiple, DEAL TIME as SOX-compliance proxy",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX), effective post-2003",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SALES/EV (inverse deal multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Pratt's Stats Private Transaction Database"
+    },
+    "key_ivs": [
+     {
+      "name": "DEAL_TIME",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "SOX x LONG / SOX x SHORT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed; SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "MARGIN",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "RD",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "WORKING_CAP",
+      "source": "Pratt's Stats"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel D - SALES/EV deal multiple, PRED_ICW (imputed) as SOX-compliance proxy",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX), effective post-2003",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SALES/EV (inverse deal multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Pratt's Stats Private Transaction Database"
+    },
+    "key_ivs": [
+     {
+      "name": "PRED_ICW",
+      "measure": "imputed probability of internal control weakness, computed by fitting the eq. (4) coefficients (estimated on Audit Analytics ICW data) to sample firms",
+      "source": "Audit Analytics; Pratt's Stats"
+     },
+     {
+      "name": "SOX x LARGEP / SOX x SMALLP",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed; Audit Analytics; Pratt's Stats"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "MARGIN",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "RD",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "WORKING_CAP",
+      "source": "Pratt's Stats"
+     }
+    ]
+   },
+   {
+    "label": "Equation (4) - ICW prediction model (first stage for PRED_ICW)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ICW (internal control weakness)",
+     "measure": "indicator for 302 or 404 material weakness disclosure",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "SIZE",
+      "measure": "natural logarithm of sales",
+      "source": "Audit Analytics; COMPUSTAT"
+     },
+     {
+      "name": "MARGIN",
+      "measure": "operating margin",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "SALES_GR",
+      "measure": "sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "LEV",
+      "measure": "leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "BIG4",
+      "measure": "Big 4 auditor indicator",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5, Panels A-B - U.K. private-target benchmark deal multiples",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX) - U.K. non-adopting benchmark (placebo)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SALES/EV (inverse deal multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SIZE",
+      "measure": "natural logarithm of sales (proxy for SOX compliance)",
+      "source": "SDC"
+     },
+     {
+      "name": "DEAL TIME",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GROWTH",
+      "source": "SDC"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "SDC"
+     },
+     {
+      "name": "WORKING_CAP",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel C - U.S. private-acquirer benchmark deal multiples",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX) - both acquirer and target private/unaffected (placebo)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SALES/EV (inverse deal multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Pratt's Stats Private Transaction Database"
+    },
+    "key_ivs": [
+     {
+      "name": "SIZE",
+      "measure": "natural logarithm of sales (only usable SOX-compliance proxy for this benchmark)",
+      "source": "Pratt's Stats"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GROWTH",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "MARGIN",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "RD",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Pratt's Stats"
+     },
+     {
+      "name": "WORKING_CAP",
+      "source": "Pratt's Stats"
+     }
+    ]
+   },
+   {
+    "label": "U.S. public-target benchmark deal multiples (public-public deals)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "Sarbanes-Oxley Act (SOX) - public targets' SOX costs largely sunk (benchmark)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SALES/EV (inverse deal multiple)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "SOX-compliance proxies (SIZE, BIG4, DEAL TIME, PRED_ICW)",
+      "measure": "same set of SOX-compliance proxies as the primary model; DEAL TIME here = ln days between announcement and effective date from SDC",
+      "source": "SDC; Audit Analytics; COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "SIZE",
+      "source": "COMPUSTAT; SDC"
+     },
+     {
+      "name": "GROWTH",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "MARGIN",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "RD",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "WORKING_CAP",
+      "source": "COMPUSTAT"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "sox",
+    "propensity for private firms to stay private"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "sox",
+    "relation": "increases",
+    "to": "propensity for private firms to stay private"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "sox costs",
+    "regulators"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "firm size",
+    "pre-acquisition sox compliance",
+    "risk",
+    "growth",
+    "proxy for firm growth"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "sox compliance",
+    "information asymmetry",
+    "discount rates",
+    "deal multiple"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": {
+    "from": "sox compliance",
+    "relation": "decreases",
+    "to": "information asymmetry"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "sample size",
+    "correlated omitted variable bias"
+   ],
+   "mechanism_named": "correlated omitted variable bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "sox infrastructure",
+    "costs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

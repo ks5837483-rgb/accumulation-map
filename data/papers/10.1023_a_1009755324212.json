@@ -1,0 +1,343 @@
+{
+ "paper_id": "10.1023_a_1009755324212",
+ "title": "The Effect of Illegal Insider Trading on Takeover Premia",
+ "journal": "RF",
+ "year": 1997,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "illegal_insider_trading",
+      "relation": "increases",
+      "to": "perceived_target_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_target_value",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "illegal_insider_trading",
+      "relation": "increases",
+      "to": "bidding_competition",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "bidding_competition",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_target_value",
+    "bidding_competition"
+   ],
+   "moderators": [
+    {
+     "construct": "timing_of_insider_trading",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "bidding_competition",
+     "moderated_from": "illegal_insider_trading",
+     "moderated_to": "takeover_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "detection bias: takeovers with larger premia are more likely to trigger SEC detection, overrepresenting large-premia deals in the detected-insider-trading sample"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (takeovers across 50 Mergerstat industries)",
+  "country_region": "United States",
+  "time_period": "1974-1989",
+  "sample_description": "U.S. takeover transactions with detected illegal insider trading (from the Meulbroek (1992) SEC civil/administrative case data), each individually matched by industry, time period, and deal size to a control takeover with no detected illegal insider trading; sources: Mergerstat Review Transactions Roster, CRSP, IDD",
+  "sample_size": "112 insider-trading takeovers + 112 matched control takeovers (224 total)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "internal SEC documents / SEC litigation releases (Meulbroek (1992) illegal-insider-trading sample)",
+    "category": "hand_collected",
+    "kind": "government_public"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergerstat Review (Transactions Roster)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IDD Information Services merger reports",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Industrial Manual",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Value Line",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "112 insider-trading takeovers vs. 112 matched control takeovers",
+    "dv": {
+     "name": "Total Premium (20)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (abnormal returns from event-study market-model regressions)"
+    },
+    "key_ivs": [
+     {
+      "name": "detected illegal insider trading (sample membership)",
+      "measure": "sample with detected illegal insider trading vs. matched control sample with no detected illegal insider trading",
+      "source": "internal SEC documents / SEC litigation releases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "112 insider-trading takeovers vs. 112 matched control takeovers",
+    "dv": {
+     "name": "Total Premium (50)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (abnormal returns from event-study market-model regressions)"
+    },
+    "key_ivs": [
+     {
+      "name": "detected illegal insider trading (sample membership)",
+      "measure": "sample with detected illegal insider trading vs. matched control sample with no detected illegal insider trading",
+      "source": "internal SEC documents / SEC litigation releases"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "run on illegal-insider-trading sample, control sample, and both samples combined",
+    "dv": {
+     "name": "Total Premium (20)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (abnormal returns from event-study market-model regressions)"
+    },
+    "key_ivs": [
+     {
+      "name": "Illegal insider trading",
+      "measure": "[withheld: wording matches the source]",
+      "source": "internal SEC documents / SEC litigation releases"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Auction",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Hostile",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Cash",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Inside ownership",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Merger (dummy = 1 if transaction is a merger)",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Tender offer (dummy = 1 if transaction is a tender offer)",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Industry (49 industry dummies)",
+      "source": "Mergerstat industry (CRSP/IDD S.I.C. codes)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "run on illegal-insider-trading sample, control sample, and both samples combined",
+    "dv": {
+     "name": "Total Premium (50)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (abnormal returns from event-study market-model regressions)"
+    },
+    "key_ivs": [
+     {
+      "name": "Illegal insider trading",
+      "measure": "[withheld: wording matches the source]",
+      "source": "internal SEC documents / SEC litigation releases"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Auction",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Hostile",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Cash",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Inside ownership",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Merger (dummy = 1 if transaction is a merger)",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Tender offer (dummy = 1 if transaction is a tender offer)",
+      "source": "Mergerstat Review / IDD"
+     },
+     {
+      "name": "Industry (49 industry dummies)",
+      "source": "Mergerstat industry (CRSP/IDD S.I.C. codes)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "illegal insider trading",
+    "takeover premia",
+    "omitted variables"
+   ],
+   "mechanism_named": "self-select",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "takeover premia",
+    "factors omitted"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "illegal insider trading",
+    "takeover premia"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "illegal insider trading",
+    "relation": "increases",
+    "to": "takeover premia"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "illegal insider trading",
+    "takeover premia",
+    "immediate price impact"
+   ],
+   "mechanism_named": "immediate price impact",
+   "proposed_edge": {
+    "from": "illegal insider trading",
+    "relation": "increases",
+    "to": "takeover premia"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "insider trading",
+    "takeover premia",
+    "forgone mergers",
+    "information flow"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "enforcement and penalty strategy",
+    "flow of non-insider information"
+   ],
+   "mechanism_named": "chilling effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,506 @@
+{
+ "paper_id": "10.1017_s0022109021000582",
+ "title": "Expert Advice: Industry Expertise of M&amp;A Advisors and Acquirer Shareholder Returns",
+ "journal": "JFQA",
+ "year": 2021,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "financial intermediation",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "synergy-creation hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_target_industry_expertise",
+      "relation": "increases",
+      "to": "deal_synergy",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "deal_synergy",
+      "relation": "increases",
+      "to": "acquirer_shareholder_returns",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_synergy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "synergy-capture hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_target_industry_expertise",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_shareholder_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "advisor_target_industry_expertise",
+      "relation": "decreases",
+      "to": "takeover_premium",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "takeover_premium",
+      "relation": "decreases",
+      "to": "acquirer_shareholder_returns",
+      "from_measured": true,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "takeover_premium"
+   ],
+   "moderators": [
+    {
+     "construct": "diversifying_acquisition",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_target_industry_expertise",
+     "moderated_to": "acquirer_shareholder_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross-sectional: diversifying acquisitions"
+    },
+    {
+     "construct": "acquirer_no_target_industry_ma_experience",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_target_industry_expertise",
+     "moderated_to": "acquirer_shareholder_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross-sectional: no acquirer M&A experience in target industry"
+    },
+    {
+     "construct": "target_industry_opacity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_target_industry_expertise",
+     "moderated_to": "acquirer_shareholder_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross-sectional: more opaque target industries"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "ex-ante deal selection: industry-expert banks only accept advising mandates for deals likely to generate value",
+    "omitted variables: unobservable deal/acquirer characteristics drive both acquirer returns and the hiring of industry-expert advisors"
+   ]
+  },
+  {
+   "hypothesis": "perverse-incentive hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_target_industry_expertise",
+      "relation": "increases",
+      "to": "deal_consummation_incentive",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_consummation_incentive",
+      "relation": "decreases",
+      "to": "acquirer_shareholder_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_consummation_incentive"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. domestic M&A across industries, industries defined by 3-digit SIC codes)",
+  "country_region": "United States (U.S. domestic M&A)",
+  "time_period": "1985-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum Domestic Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "National Information Center",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 - Baseline: Acquirer Returns and Advisor Industry Expertise (Models 1 number-based, 2 value-based)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "5,359 completed U.S. M&A deals 1985-2012 with acquirer financial advisor",
+    "dv": {
+     "name": "acquirer returns (acquirer CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (returns); SDC (announcement date)"
+    },
+    "key_ivs": [
+     {
+      "name": "IND_EXPERTISE_NUM",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_EXPERTISE_VAL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MARKET_SHARE",
+      "source": "SDC"
+     },
+     {
+      "name": "log(ACQUIRER_SIZE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_STOCK_RUNUP",
+      "source": "CRSP"
+     },
+     {
+      "name": "RELATIVE_DEAL_SIZE",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFYING_ACQUISITION",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "TENDER_OFFER",
+      "source": "SDC"
+     },
+     {
+      "name": "HOSTILE_DEAL",
+      "source": "SDC"
+     },
+     {
+      "name": "COMPETED_DEAL",
+      "source": "SDC"
+     },
+     {
+      "name": "ALL_CASH_DEAL",
+      "source": "SDC"
+     },
+     {
+      "name": "PUBLIC_TARGET",
+      "source": "SDC"
+     },
+     {
+      "name": "PRIVATE_TARGET",
+      "source": "SDC"
+     },
+     {
+      "name": "SUBSIDIARY_TARGET",
+      "source": "SDC"
+     },
+     {
+      "name": "acquirer industry and announcement-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A - Full-Sample Regressions including in-house deals",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "5,794 deals = 5,359 advisor deals + 435 in-house deals without a financial advisor",
+    "dv": {
+     "name": "acquirer returns (acquirer CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IND_EXPERTISE_NUM",
+      "measure": "number-based acquirer-advisor target-industry expertise (takes value 0 for in-house deals without a financial advisor)",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_EXPERTISE_VAL",
+      "measure": "value-based acquirer-advisor target-industry expertise (takes value 0 for in-house deals without a financial advisor)",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "MARKET_SHARE",
+      "source": "SDC"
+     },
+     {
+      "name": "IN_HOUSE_EXPERTISE",
+      "source": "SDC"
+     },
+     {
+      "name": "log(ACQUIRER_SIZE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_STOCK_RUNUP",
+      "source": "CRSP"
+     },
+     {
+      "name": "RELATIVE_DEAL_SIZE",
+      "source": "SDC"
+     },
+     {
+      "name": "acquirer and deal characteristics (as in Table 3)",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B - Heckman (1979) 2-Step Regressions of Acquirer Returns",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "first-stage probit on 5,794 expanded sample; second-stage on 5,359 advisor deals",
+    "dv": {
+     "name": "col 1 acquirer hire-advisor decision; cols 2-3 acquirer returns (acquirer CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP (CAR); SDC (advisor/hiring)"
+    },
+    "key_ivs": [
+     {
+      "name": "IND_EXPERTISE_NUM",
+      "measure": "number-based acquirer-advisor target-industry expertise (second-stage IV)",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_EXPERTISE_VAL",
+      "measure": "value-based acquirer-advisor target-industry expertise (second-stage IV)",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "IN_HOUSE_EXPERTISE (first-stage exclusion/determinant of hiring)",
+      "source": "SDC"
+     },
+     {
+      "name": "inverse Mills ratio (second stage)",
+      "source": ""
+     },
+     {
+      "name": "MARKET_SHARE",
+      "source": "SDC"
+     },
+     {
+      "name": "log(ACQUIRER_SIZE)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_Q",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_STOCK_RUNUP",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "acquirer returns (acquirer CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "IND_EXPERTISE_NUM",
+      "measure": "number-based acquirer-advisor target-industry expertise",
+      "source": "SDC"
+     },
+     {
+      "name": "IND_EXPERTISE_VAL",
+      "measure": "value-based acquirer-advisor target-industry expertise",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ACQUIRER_G_INDEX (Gompers, Ishii, and Metrick (2003) governance index)",
+      "source": "IRRC (Gompers-Ishii-Metrick G-index)"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "BoardEx"
+     },
+     {
+      "name": "inverse Mills ratio",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "industry expertise",
+    "synergistic gains",
+    "deal synergy"
+   ],
+   "mechanism_named": "synergy-creation hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

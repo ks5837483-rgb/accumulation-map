@@ -1,0 +1,361 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1989.tb02404.x",
+ "title": "The Winner's Curse and Bidder Competition in Acquisitions: Evidence from Failed Bank Auctions",
+ "journal": "JF",
+ "year": 1989,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "common value auction model",
+  "independent private values model",
+  "winner's curse",
+  "hubris hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_winning_bid",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_competing_bidders",
+      "relation": "increases",
+      "to": "high_order_statistic_of_bidder_value_estimates",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "high_order_statistic_of_bidder_value_estimates",
+      "relation": "increases",
+      "to": "winning_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "high_order_statistic_of_bidder_value_estimates"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "independent private values (IPV) model versus common value (CV) model as the mechanism generating the winning-bid increase"
+   ]
+  },
+  {
+   "hypothesis": "P2_winners_curse_adjustment",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_competing_bidders",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "bid_level",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3_uncertainty",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "uncertainty_about_true_value",
+      "relation": "increases",
+      "to": "value_estimate_discount",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_estimate_discount",
+      "relation": "decreases",
+      "to": "bid_level",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_estimate_discount"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4_franchise_value",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "volume_of_core_deposits",
+      "relation": "increases",
+      "to": "expected_franchise_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_franchise_value",
+      "relation": "increases",
+      "to": "bid_level",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_franchise_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "1975-1985",
+  "sample_description": "FDIC first-price sealed-bid purchase and assumption (P&A) failed-bank auction transactions; data on insured commercial bank failures obtained from the FDIC; sample contains only positive (nonzero) bids",
+  "sample_size": "219 P&A transactions (572 nonzero bids)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table II - OLS estimates of Eq (1), tests based on all bids (bid level vs. number of bidders and uncertainty)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "572 nonzero bids across 219 P&A auctions",
+    "dv": {
+     "name": "bid level",
+     "measure": "[withheld: wording matches the source]",
+     "source": "FDIC"
+    },
+    "key_ivs": [
+     {
+      "name": "number of bidders",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FDIC"
+     },
+     {
+      "name": "value uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FDIC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deposit base (log TDDA)",
+      "source": "FDIC"
+     },
+     {
+      "name": "time dummies (Ts2, Ts3, Ts4, Ts5)",
+      "source": "FDIC"
+     },
+     {
+      "name": "Federal Reserve district dummies (Fk)",
+      "source": "FDIC"
+     }
+    ]
+   },
+   {
+    "label": "Table III - OLS estimation of the unrestricted version of Eq (2), tests based on winning bids",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "219 winning bids (one per P&A auction)",
+    "dv": {
+     "name": "winning bid",
+     "measure": "log WBID_j, the winning bid for the jth auction (dependent variable in equation (2))",
+     "source": "FDIC"
+    },
+    "key_ivs": [
+     {
+      "name": "number of bidders",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FDIC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deposit base (log TDDA)",
+      "source": "FDIC"
+     },
+     {
+      "name": "time dummies",
+      "source": "FDIC"
+     },
+     {
+      "name": "Federal Reserve district dummies",
+      "source": "FDIC"
+     }
+    ]
+   },
+   {
+    "label": "Eq (4) - modified version of Eq (2), winning bids with grouped number-of-bidders dummies",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "sample divided into three groups: one bidder (33%), two or three bidders (44%), four or more bidders (23%)",
+    "dv": {
+     "name": "winning bid",
+     "measure": "log WBID_j, the winning bid for the jth auction",
+     "source": "FDIC"
+    },
+    "key_ivs": [
+     {
+      "name": "number of bidders (grouped)",
+      "measure": "D1 = 1 if two or three bidders, D1 = 0 otherwise; D2 = 1 if four or more bidders, D2 = 0 otherwise (single-bidder auctions the omitted group)",
+      "source": "FDIC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "deposit base (log TDDA)",
+      "source": "FDIC"
+     },
+     {
+      "name": "time dummies",
+      "source": "FDIC"
+     },
+     {
+      "name": "Federal Reserve district dummies",
+      "source": "FDIC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "volatile time deposits",
+    "core deposits"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "inexperience on the part of bidders",
+    "winner’s curse"
+   ],
+   "mechanism_named": "winner’s curse",
+   "proposed_edge": {
+    "from": "inexperience on the part of bidders",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "ipv elements"
+   ],
+   "mechanism_named": "IPV",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "unadjusted cv or winner’s curse model",
+    "ipv model"
+   ],
+   "mechanism_named": "winner’s curse model",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "nonfinancial takeovers",
+    "p&a auctions",
+    "corporate takeover auctions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "nonfinancial takeovers",
+    "ipv elements",
+    "synergistic complementarities between specific bidder-target combinations",
+    "source of takeover gains"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "synergistic complementarities between specific bidder-target combinations",
+    "relation": "affects",
+    "to": "ipv elements"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "winners"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

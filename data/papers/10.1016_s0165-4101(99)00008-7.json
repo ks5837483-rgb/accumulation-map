@@ -1,0 +1,448 @@
+{
+ "paper_id": "10.1016_s0165-4101(99)00008-7",
+ "title": "Earnings management by acquiring firms in stock for stock mergers",
+ "journal": "JAE",
+ "year": 1999,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "positive accounting theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_for_stock_financing",
+      "relation": "increases",
+      "to": "incentive_to_increase_stock_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_increase_stock_price",
+      "relation": "increases",
+      "to": "income_increasing_earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_increase_stock_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "pre-merger positive accruals reflect general operational/performance changes rather than opportunistic earnings management (cash-merger firms with similar operations should show the same accruals)",
+    "positive unexpected accruals are an artifact of extreme financial performance / accrual-model misspecification (Dechow et al. 1995)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_deal_size",
+      "relation": "increases",
+      "to": "economic_benefits_from_earnings_management",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "economic_benefits_from_earnings_management",
+      "relation": "increases",
+      "to": "income_increasing_earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "economic_benefits_from_earnings_management"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the deal-size / accruals relation is confounded by merger costs being correlated with deal size"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_ownership",
+      "relation": "increases",
+      "to": "economic_benefits_to_manager_shareholders",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "economic_benefits_to_manager_shareholders",
+      "relation": "increases",
+      "to": "income_increasing_earnings_management",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "management_ownership",
+      "relation": "increases",
+      "to": "managerial_accounting_discretion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_accounting_discretion",
+      "relation": "increases",
+      "to": "income_increasing_earnings_management",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "economic_benefits_to_manager_shareholders",
+    "managerial_accounting_discretion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_firm_in_stock_merger",
+      "relation": "increases",
+      "to": "incentive_to_increase_transaction_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_increase_transaction_price",
+      "relation": "increases",
+      "to": "income_increasing_earnings_management",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_increase_transaction_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (24 industries; greatest concentration in business services, SIC 73)",
+  "country_region": "",
+  "time_period": "1985-1990",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "55 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergerstat Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers & Acquisitions",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat quarterly PST tapes",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal (WSJ)",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "firm proxy statements",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Spectrum 6",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Value Line",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (Models A & B) - Estimates of pre-merger unexpected accruals for stock and cash mergers",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "total working capital accruals",
+     "measure": "TWAC/AS: total working capital accruals scaled by lagged total assets, per the modified-Jones accrual model (Eqs. (1)-(3))",
+     "source": "Compustat quarterly PST tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "pre-merger event-period indicator (T)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal (WSJ)"
+     },
+     {
+      "name": "quarterly event dummies (D)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal (WSJ)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "1/AS (inverse lagged assets)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "change in revenues (dREV/AS)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "gross property, plant and equipment (PPE/AS)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "quarterly dummy variables (Q)",
+      "source": "Compustat quarterly PST tapes"
+     }
+    ]
+   },
+   {
+    "label": "Section 4.1 - Accrual-component analysis by industry (inventory model with manufacturing indicator)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "55 stock-merger acquiring firms, partitioned into manufacturing (first-digit SIC=3) vs non-manufacturing",
+    "dv": {
+     "name": "change in inventory",
+     "measure": "change in inventory (dINV/AS) substituted for TWAC in Eq. (1), scaled by lagged total assets",
+     "source": "Compustat quarterly PST tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "manufacturing indicator (MAN)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat quarterly PST tapes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "1/AS (inverse lagged assets)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "change in revenues (dREV/AS)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "quarterly dummy variables (Q)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "intercept",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "55 stock-merger and 64 cash-merger acquiring firms; univariate t-tests and Wilcoxon tests",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat quarterly PST tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "event vs. non-event period",
+      "measure": "event quarters (t to t) vs. all non-event quarters",
+      "source": "Wall Street Journal (WSJ)"
+     },
+     {
+      "name": "stock vs. cash merger firm",
+      "measure": "stock-merger sample firms vs. cash-merger control firms",
+      "source": "Securities Data Company"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 (Models A & B) - Economic incentives analysis (Eq. (4))",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "55 stock-for-stock mergers; 142 firm quarters",
+    "dv": {
+     "name": "unexpected accruals (UACC)",
+     "measure": "unexpected accruals (residuals from Eq. (1)) for firm i in quarters t to t",
+     "source": "Compustat quarterly PST tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "deal ratio (DR)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergerstat Review"
+     },
+     {
+      "name": "management ownership (OWN)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "firm proxy statements"
+     },
+     {
+      "name": "high/low deal ratio dummy (DRA)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergerstat Review"
+     },
+     {
+      "name": "high/low management ownership dummy (OWNA)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "firm proxy statements"
+     }
+    ],
+    "controls": [
+     {
+      "name": "intercept",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 4.4 - Earnings management by target firms (Eq. (2) re-estimated for targets)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "target firms of the 55 stock-for-stock mergers",
+    "dv": {
+     "name": "target firm total working capital accruals",
+     "measure": "TWAC/AS unexpected accruals for target firms, using the same event-date and accrual definitions as for acquiring firms",
+     "source": "Compustat quarterly PST tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "pre-merger event-period indicator (T)",
+      "measure": "dummy variable for quarters t to t (pre-merger event quarters)",
+      "source": "Wall Street Journal (WSJ)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "1/AS (inverse lagged assets)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "change in revenues (dREV/AS)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "gross property, plant and equipment (PPE/AS)",
+      "source": "Compustat quarterly PST tapes"
+     },
+     {
+      "name": "quarterly dummy variables (Q)",
+      "source": "Compustat quarterly PST tapes"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "accrual models",
+    "extreme \"nancial performance",
+    "unexpected accruals"
+   ],
+   "mechanism_named": "accrual models may be mis-speci\"ed",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "asset write-downs",
+    "negative accruals"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "unexpected accruals",
+    "working capital",
+    "operating synergies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "target \"rm unexpected accruals",
+    "timing of the acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

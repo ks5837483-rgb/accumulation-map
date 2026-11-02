@@ -1,0 +1,680 @@
+{
+ "paper_id": "10.1007_s11142-024-09848-2",
+ "title": "Riding the merger wave: the gatekeeping role of auditors",
+ "journal": "RAS",
+ "year": 2024,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auditor risk-response theory",
+  "gatekeeping theory",
+  "agency theory",
+  "COSO enterprise risk management framework",
+  "merger wave theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_wave",
+      "relation": "increases",
+      "to": "audit_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "audit_risk",
+      "relation": "increases",
+      "to": "audit_effort",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "merger_wave",
+      "relation": "increases",
+      "to": "auditor_business_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "auditor_business_risk",
+      "relation": "increases",
+      "to": "audit_effort",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "audit_risk",
+    "auditor_business_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "low_board_monitoring",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "audit_risk",
+     "moderated_from": "merger_wave",
+     "moderated_to": "audit_effort",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional test (board monitoring)"
+    },
+    {
+     "construct": "low_external_monitoring",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "audit_risk",
+     "moderated_from": "merger_wave",
+     "moderated_to": "audit_effort",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional test (external monitoring)"
+    },
+    {
+     "construct": "value_destroying_acquisition_likelihood",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "auditor_business_risk",
+     "moderated_from": "merger_wave",
+     "moderated_to": "audit_effort",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional test (agency-driven M&A)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the effect is an artifact of ongoing audit trends over time rather than a merger-wave-specific response",
+    "higher audit fees reflect auditor busyness during high-volume periods rather than a risk response"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_wave",
+      "relation": "increases",
+      "to": "auditor_effort",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "auditor_effort",
+      "relation": "increases",
+      "to": "audit_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "auditor_effort"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the audit-quality effect is an artifact of ongoing audit trends over time rather than a merger-wave response"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "merger_wave",
+      "relation": "increases",
+      "to": "audit_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "audit_risk",
+      "relation": "increases",
+      "to": "auditor_resignation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "merger_wave",
+      "relation": "increases",
+      "to": "auditor_business_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "auditor_business_risk",
+      "relation": "increases",
+      "to": "auditor_resignation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "audit_risk",
+    "auditor_business_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "client_portfolio_risk",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "auditor_business_risk",
+     "moderated_from": "merger_wave",
+     "moderated_to": "auditor_resignation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional test (auditor portfolio risk)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the resignation effect is an artifact of ongoing audit trends over time rather than a merger-wave response",
+    "strategic auditor–client matching (firms strategically selecting/changing auditors around deals) drives the resignation result"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US public companies, across Fama-French 48 industries)",
+  "country_region": "United States",
+  "time_period": "2003-2018",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson/Refinitiv",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Material acquisitions completed by US public companies, 2003-2018; two samples: Relative Deal Size > 5% (N=5,376) and > 1% (N=8,713)",
+    "dv": {
+     "name": "Log Audit Fee",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger Wave",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log Deal Value",
+      "source": "SDC"
+     },
+     {
+      "name": "Relative Deal Size",
+      "source": "SDC"
+     },
+     {
+      "name": "Months Out",
+      "source": "SDC"
+     },
+     {
+      "name": "Private",
+      "source": "SDC"
+     },
+     {
+      "name": "Domestic",
+      "source": "SDC"
+     },
+     {
+      "name": "Toehold",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Target Specialist",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "M&A CAR",
+      "source": "CRSP"
+     },
+     {
+      "name": "Stock Financing",
+      "source": "SDC"
+     },
+     {
+      "name": "Log Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "RecInv",
+      "source": "Compustat"
+     },
+     {
+      "name": "Current Ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Issuance",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Restructure",
+      "source": "Compustat"
+     },
+     {
+      "name": "Going Concern",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Foreign Operations",
+      "source": "Compustat"
+     },
+     {
+      "name": "Log Segments",
+      "source": "Compustat"
+     },
+     {
+      "name": "ICD",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Restate Announcement",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Big 4",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Busy Season",
+      "source": "Compustat"
+     },
+     {
+      "name": "Log Tax Fees",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "M&A Specialist",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Industry Specialist",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "First Audit",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Log Auditor Tenure",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Log Office Size",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Accelerated Filer",
+      "source": "Compustat"
+     },
+     {
+      "name": "Large Accelerated Filer",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Audit fees, Merger Wave interacted with lower-quality governance proxies (Panel A board monitoring, Panel B external monitoring, Panel C agency-driven M&A)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Log Audit Fee",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger Wave",
+      "measure": "indicator for an industry merger wave",
+      "source": "SDC"
+     },
+     {
+      "name": "Merger Wave x Low Board Monitoring",
+      "measure": "[withheld: wording matches the source]",
+      "source": "other"
+     },
+     {
+      "name": "Merger Wave x Low External Monitoring",
+      "measure": "Merger Wave interacted with composite of Low Institutional Ownership, High Forecast Error, High Forecast Dispersion",
+      "source": "Thomson/Refinitiv"
+     },
+     {
+      "name": "Merger Wave x Agency-Driven M&A",
+      "measure": "[withheld: wording matches the source]",
+      "source": "other"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same M&A and company controls as Eq. 1",
+      "source": "SDC/Compustat/Audit Analytics/CRSP"
+     },
+     {
+      "name": "Industry Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Audit Quality - Material Restatements (H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Material Restatement",
+     "measure": "indicator for material restatements (also Severe Restatement) of financial statements audited in year t",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger Wave",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same M&A and company controls as Eq. 1",
+      "source": "SDC/Compustat/Audit Analytics/CRSP"
+     },
+     {
+      "name": "Industry Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Audit Quality - Timely Material Weakness Reporting (H2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Timely MW",
+     "measure": "indicator for auditors timely reporting a material weakness (also Non-Timely MW) in year t",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger Wave",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same M&A and company controls as Eq. 1",
+      "source": "SDC/Compustat/Audit Analytics/CRSP"
+     },
+     {
+      "name": "Industry Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Auditor Resignations (H3)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Auditor Resign",
+     "measure": "indicator equal to one if the auditor resigned from the client in year t",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger Wave",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same M&A and firm variables from the audit fee model (Eq. 1)",
+      "source": "SDC/Compustat/Audit Analytics/CRSP"
+     },
+     {
+      "name": "Industry Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9: Auditor Resignations interacted with auditor portfolio risk proxies",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Auditor Resign",
+     "measure": "indicator equal to one if the auditor resigned from the client in year t",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "Merger Wave interacted with proxies for ex ante audit, litigation, and mismatch risk plus a composite Client Portfolio Risk measure",
+      "source": "other"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same M&A and firm variables from Eq. 1",
+      "source": "SDC/Compustat/Audit Analytics/CRSP"
+     },
+     {
+      "name": "Industry Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 6.2 / Table 10: Acquiring and non-acquiring firms analysis (combined sample)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "50,951 firm-years of all acquiring and non-acquiring firms, 2003-2018",
+    "dv": {
+     "name": "Audit response outcomes (Log Audit Fee, restatements, material weaknesses, auditor resignations)",
+     "measure": "re-estimates main models (Eqs. 1-4) substituting M&A deal controls with an M&A indicator and adding company-fixed effects",
+     "source": "Audit Analytics"
+    },
+    "key_ivs": [
+     {
+      "name": "Merger Wave",
+      "measure": "indicator equal to one if a firm-year is in an industry merger wave, zero otherwise",
+      "source": "SDC"
+     },
+     {
+      "name": "M&A(t)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Company controls from Eq. 1",
+      "source": "Compustat/Audit Analytics"
+     },
+     {
+      "name": "Company Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "auditor supply",
+    "firm demand",
+    "auditor assurance"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "auditor monitoring",
+    "merger waves",
+    "boards",
+    "weaker governance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "boards",
+    "relation": "affects",
+    "to": "auditor monitoring"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "audit labor usage",
+    "quality"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "empirical proxies for auditor activity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

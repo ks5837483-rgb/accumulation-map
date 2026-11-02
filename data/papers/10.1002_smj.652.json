@@ -1,0 +1,745 @@
+{
+ "paper_id": "10.1002_smj.652",
+ "title": "Restructuring through spin‐off or sell‐off: transforming information asymmetries into financial gain",
+ "journal": "SMJ",
+ "year": 2007,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information asymmetry",
+  "agency theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "asset_relatedness",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "spin_off_adoption",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "financial and agency determinants of the restructuring choice (factors other than information asymmetries)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "spin_off_adoption",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "stock_market_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "diversification",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "spin_off_adoption",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "financial and agency determinants of the restructuring choice (factors other than information asymmetries)"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "sell_off_adoption",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "stock_market_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly held U.S. restructuring firms across sectors; industry entered only as a control, the firm's primary two-digit SIC code)",
+  "country_region": "United States",
+  "time_period": "1990-1997",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "204 restructuring firms (82 spin-offs, 122 sell-offs)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC's Merger & Acquisition Database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergerstat",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research Security Prices (CRSP) data tapes",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Lexis-Nexis popular press / analyst / annual / proxy reports (content analysis by graduate-student coder teams)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compact Disclosure",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Company financial statements / annual reports / 10-k reports",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Moody's and Standard & Poor's registers",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Model 1 (Controls) - logistic regression",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "restructuring alternative",
+     "measure": "coded as a 1 for spin-offs and as a 0 for sell-offs",
+     "source": "SDC's Merger & Acquisition Database and Mergerstat"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt/sales ratio (total debt/revenues)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     },
+     {
+      "name": "Blockholder equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Managerial equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Year",
+      "source": ""
+     },
+     {
+      "name": "Industry (primary two-digit SIC code)",
+      "source": "company financial statements / COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 2 (Primary and related business assets) - logistic regression, test of H1",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "restructuring alternative",
+     "measure": "coded as a 1 for spin-offs and as a 0 for sell-offs",
+     "source": "SDC's Merger & Acquisition Database and Mergerstat"
+    },
+    "key_ivs": [
+     {
+      "name": "Physical assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Human assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Brand-name assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt/sales ratio (total debt/revenues)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     },
+     {
+      "name": "Blockholder equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Managerial equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Year",
+      "source": ""
+     },
+     {
+      "name": "Industry (primary two-digit SIC code)",
+      "source": "company financial statements / COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 3 (Diversification) - logistic regression, test of H3",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "restructuring alternative",
+     "measure": "coded as a 1 for spin-offs and as a 0 for sell-offs",
+     "source": "SDC's Merger & Acquisition Database and Mergerstat"
+    },
+    "key_ivs": [
+     {
+      "name": "Diversification of business lines",
+      "measure": "measured using Rumelt's (1974) classification typology (specialization and relatedness ratios); coded as 1 single businesses, 2 dominant, 3 related-constrained, 4 related-linked, 5 unrelated businesses",
+      "source": "financial statements and disclosures"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt/sales ratio (total debt/revenues)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     },
+     {
+      "name": "Blockholder equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Managerial equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Year",
+      "source": ""
+     },
+     {
+      "name": "Industry (primary two-digit SIC code)",
+      "source": "company financial statements / COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 4 (Full model) - logistic regression, joint test of H1 and H3",
+    "hypotheses": [
+     "H1",
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "restructuring alternative",
+     "measure": "coded as a 1 for spin-offs and as a 0 for sell-offs",
+     "source": "SDC's Merger & Acquisition Database and Mergerstat"
+    },
+    "key_ivs": [
+     {
+      "name": "Physical assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Human assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Brand-name assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Diversification of business lines",
+      "measure": "Rumelt (1974) typology, coded 1 single, 2 dominant, 3 related-constrained, 4 related-linked, 5 unrelated",
+      "source": "financial statements and disclosures"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt/sales ratio (total debt/revenues)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     },
+     {
+      "name": "Blockholder equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Managerial equity",
+      "source": "Compact Disclosure, SEC filings, proxy statements"
+     },
+     {
+      "name": "Year",
+      "source": ""
+     },
+     {
+      "name": "Industry (primary two-digit SIC code)",
+      "source": "company financial statements / COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 1 (Controls) - hierarchical linear (OLS) regression",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (stock market value)",
+     "measure": "cumulative abnormal return over the two-day window (day 0 announcement and +1) from a market model estimated over 250 days (-300 to -50) using the S&P 500 as market index; AR_it = R_it - (a_i + b_i R_mt)",
+     "source": "Center for Research Security Prices (CRSP) data tapes"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt to sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2 (Assets) - OLS regression, mediation step for H2",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (stock market value)",
+     "measure": "two-day (0,+1) cumulative abnormal return from a market model estimated over 250 days (-300 to -50) against the S&P 500",
+     "source": "Center for Research Security Prices (CRSP) data tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "Physical assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Human assets",
+      "measure": "coded 1 if restructured assets were personnel from primary and related businesses",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Brand-name assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt to sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (Assets + restructuring alternative) - OLS regression, mediation test of H2 (Baron & Kenny 1986)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (stock market value)",
+     "measure": "two-day (0,+1) cumulative abnormal return from a market model estimated over 250 days (-300 to -50) against the S&P 500",
+     "source": "Center for Research Security Prices (CRSP) data tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "Physical assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Human assets",
+      "measure": "coded 1 if restructured assets were personnel from primary and related businesses",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Brand-name assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": "content analysis of published reports (Lexis-Nexis / popular press)"
+     },
+     {
+      "name": "Restructuring alternative (mediator)",
+      "measure": "coded 1 for spin-offs, 0 for sell-offs",
+      "source": "SDC's Merger & Acquisition Database and Mergerstat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt to sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 4 (Diversification) - OLS regression, mediation step for H4",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (stock market value)",
+     "measure": "two-day (0,+1) cumulative abnormal return from a market model estimated over 250 days (-300 to -50) against the S&P 500",
+     "source": "Center for Research Security Prices (CRSP) data tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "Diversification of business lines",
+      "measure": "Rumelt (1974) typology, coded 1 single, 2 dominant, 3 related-constrained, 4 related-linked, 5 unrelated",
+      "source": "financial statements and disclosures"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt to sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 5 (Diversification + restructuring alternative) - OLS regression, mediation test of H4 (Baron & Kenny 1986)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (stock market value)",
+     "measure": "two-day (0,+1) cumulative abnormal return from a market model estimated over 250 days (-300 to -50) against the S&P 500",
+     "source": "Center for Research Security Prices (CRSP) data tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "Diversification of business lines",
+      "measure": "Rumelt (1974) typology, coded 1 single, 2 dominant, 3 related-constrained, 4 related-linked, 5 unrelated",
+      "source": "financial statements and disclosures"
+     },
+     {
+      "name": "Restructuring alternative (mediator)",
+      "measure": "coded 1 for spin-offs, 0 for sell-offs",
+      "source": "SDC's Merger & Acquisition Database and Mergerstat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Return on assets (ROA)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Debt to sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Transaction price (log)",
+      "source": "SDC's Merger & Acquisition Database"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (CARs by diversification strategy type x restructuring alternative) - ANOVA and t-tests, supporting H4",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (cumulative abnormal return)",
+     "measure": "two-day (0,+1) cumulative abnormal return tabulated by diversification strategy type and restructuring mode",
+     "source": "Center for Research Security Prices (CRSP) data tapes"
+    },
+    "key_ivs": [
+     {
+      "name": "Diversification strategy type",
+      "measure": "Rumelt (1974) categories: single, dominant, related-constrained, related-linked, unrelated",
+      "source": "financial statements and disclosures"
+     },
+     {
+      "name": "Restructuring alternative",
+      "measure": "spin-off vs. sell-off",
+      "source": "SDC's Merger & Acquisition Database and Mergerstat"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "implementation actions",
+    "explanations of corporate strategies"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "implementation actions",
+    "relation": "affects",
+    "to": "explanations of corporate strategies"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "implementation",
+    "value creation"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "spin-offs",
+    "sell-offs",
+    "smaller-sized restructurings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "voluntary restructuring",
+    "involuntary spin-offs and\nsell-offs"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "value maximization"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "limitations",
+   "constructs": [
+    "restructuring alternatives",
+    "dissolution",
+    "liquidation",
+    "MBOs and\nEBOs",
+    "partial stock sales (equity carve-outs)"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "limitations",
+   "constructs": [
+    "restructured assets",
+    "internal growth",
+    "acquisition",
+    "entry\nand exit behaviors",
+    "restructuring behavior"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "restructured assets origin (internal growth or acquisition)",
+    "relation": "unspecified",
+    "to": "restructuring behavior"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

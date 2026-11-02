@@ -1,0 +1,260 @@
+{
+ "paper_id": "10.1002_smj.4250090208",
+ "title": "The prognostics of diversifying acquisitions",
+ "journal": "SMJ",
+ "year": 1988,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "market efficiency",
+  "synergy / economies of scope",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "nonsignificant",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": false,
+   "chains": [
+    [
+     {
+      "from": "prior_market_entry_signals",
+      "relation": "increases",
+      "to": "anticipation_of_synergy_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "anticipation_of_synergy_gains",
+      "relation": "decreases",
+      "to": "acquiring_firm_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "anticipation_of_synergy_gains"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "diversification_commitment_news",
+      "relation": "increases",
+      "to": "signal_of_recognized_resource_potential",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_recognized_resource_potential",
+      "relation": "increases",
+      "to": "acquiring_firm_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "diversification_commitment_news",
+      "relation": "increases",
+      "to": "capitalization_of_synergy_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "capitalization_of_synergy_value",
+      "relation": "increases",
+      "to": "acquiring_firm_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_of_recognized_resource_potential",
+    "capitalization_of_synergy_value"
+   ],
+   "moderators": [
+    {
+     "construct": "information_asymmetry",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "effect_derived": true,
+     "mechanism": "information_asymmetry",
+     "moderated_from": "diversification_commitment_news",
+     "moderated_to": "acquiring_firm_abnormal_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "PBX (private branch exchange) market, a submarket of the telecommunications equipment market; and the computer industry (the IBM-Rolm acquisition)",
+  "country_region": "United States",
+  "time_period": "1979-1984 (event history of IBM's entry into the PBX industry; market-model parameters estimated 1 January 1977 to 31 December 1978)",
+  "sample_description": "A single diversifying acquisition (IBM's acquisition of Rolm Corporation), analyzed via an event study of 16 events in IBM's entry into the U.S. PBX industry; abnormal returns calculated only for IBM using daily returns from CRSP (Center for Research in Security Prices)",
+  "sample_size": "one acquisition (16 events); 504 trading days used for market-model estimation"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRISP (Center for Research in Security Prices at the University of Chicago)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Predicasts F&S Index",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1. Market model estimation for IBM",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "504 trading days, daily returns 1 January 1977 to 31 December 1978 (estimation period)",
+    "dv": {
+     "name": "IBM daily stock return",
+     "measure": "daily return on IBM's stock",
+     "source": "CRISP (Center for Research in Security Prices at the University of Chicago)"
+    },
+    "key_ivs": [
+     {
+      "name": "market return",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRISP (Center for Research in Security Prices at the University of Chicago)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "IBM's series of announcements and actions related to entering the U.S. PBX industry, culminating in the acquisition of Rolm, Inc.",
+    "sample": "IBM only; 16 events, 1979-1983 (abnormal returns calculated for the acquiring firm only)",
+    "dv": {
+     "name": "abnormal return",
+     "measure": "forecast error ARi,t = Ri,t - (ai + bi Rm,t), cumulative abnormal return around each event date",
+     "source": "CRISP (Center for Research in Security Prices at the University of Chicago)"
+    },
+    "key_ivs": [
+     {
+      "name": "IBM PBX-entry events",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Predicasts F&S Index; Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "size factor",
+    "abnormal return"
+   ],
+   "mechanism_named": "the size\nfactor",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "abnormal returns",
+    "economic\nimpact of earlier strategic events"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "gains from synergy"
+   ],
+   "mechanism_named": "synergy",
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "gains from synergy"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "abnormal returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "mergers",
+    "event histories"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "diversifying\nacquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

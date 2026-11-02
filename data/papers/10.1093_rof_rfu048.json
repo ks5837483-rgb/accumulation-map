@@ -1,0 +1,681 @@
+{
+ "paper_id": "10.1093_rof_rfu048",
+ "title": "Corporate Aging and Takeover Risk",
+ "journal": "RF",
+ "year": 2015,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control (disciplinary takeover) theory",
+  "agency theory",
+  "organizational rigidity theory",
+  "firm life-cycle theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_age",
+      "relation": "increases",
+      "to": "governance_inadequacy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "governance_inadequacy",
+      "relation": "increases",
+      "to": "takeover_hazard",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "governance_inadequacy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_age",
+      "relation": "increases",
+      "to": "merger_integration_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "merger_integration_costs",
+      "relation": "decreases",
+      "to": "takeover_hazard",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "firm_age",
+      "relation": "increases",
+      "to": "organizational_rigidity",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "organizational_rigidity",
+      "relation": "decreases",
+      "to": "takeover_hazard",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "merger_integration_costs",
+    "organizational_rigidity"
+   ],
+   "moderators": [
+    {
+     "construct": "industry_distress",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "merger_integration_costs",
+     "moderated_from": "firm_age",
+     "moderated_to": "takeover_hazard",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2-shock"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "general lack of synergies",
+    "search-cost hypothesis (shrinking pool of merger partners)",
+    "perceived overpricing of established firms"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_age",
+      "relation": "increases",
+      "to": "managerial_takeover_resistance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_takeover_resistance",
+      "relation": "decreases",
+      "to": "takeover_hazard",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_takeover_resistance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_age",
+      "relation": "decreases",
+      "to": "residual_acquirer_pool",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "residual_acquirer_pool",
+      "relation": "increases",
+      "to": "takeover_hazard",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "residual_acquirer_pool"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_age",
+      "relation": "increases",
+      "to": "perceived_overpricing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_overpricing",
+      "relation": "decreases",
+      "to": "takeover_hazard",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_overpricing"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "firm_age",
+      "relation": "increases",
+      "to": "creditor_networks",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "creditor_networks",
+      "relation": "decreases",
+      "to": "financial_failure_hazard",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "creditor_networks"
+   ],
+   "moderators": [
+    {
+     "construct": "industry_distress",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "asset_devaluation",
+     "moderated_from": "firm_age",
+     "moderated_to": "financial_failure_hazard",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P6-distress"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "standard failure drivers (low leverage, low uncertainty, better profitability)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US listed firms, excluding utilities and financial-sector firms, SIC 6000-6999)",
+  "country_region": "US",
+  "time_period": "1978-2009",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT Industry Segment (COMPUSTAT Segments)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Jay Ritter's website (incorporation age)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergent Webreports (hand-collected incorporation age)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "IRRC / Risk Metrics (governance provisions)",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hoberg and Phillips (2010, 2014) product similarity / fluidity data",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "US real gross domestic product",
+    "category": "other",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Figure 1 - nonparametric age/takeover relation",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "sample truncated at incorporation age 75 years (90th percentile)",
+    "dv": {
+     "name": "takeover hazard",
+     "measure": "takeover risk (delisting via CRSP codes 200-299) as a function of firm age",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "firm age",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Jay Ritter's website / Mergent Webreports"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II - Company age and takeover hazard (single-destination models, Reg. 1-6)",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "takeover hazard",
+     "measure": "discrete-time takeover hazard; takeovers identified with CRSP delisting codes 200-299",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "ln(Age)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Jay Ritter's website / Mergent Webreports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "s Sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s MTB equity",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "s Cash",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Excess return",
+      "source": "CRSP"
+     },
+     {
+      "name": "s Tangibility",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Size",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "s Focus",
+      "source": "COMPUSTAT Segments"
+     },
+     {
+      "name": "s MTB similarity",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Product similarity",
+      "source": "Hoberg and Phillips (2010)"
+     },
+     {
+      "name": "s Size similarity",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Industry concentration",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Takeover intensity",
+      "source": "CRSP"
+     },
+     {
+      "name": "GDP growth",
+      "source": "US real GDP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "exit type (competing risks)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "ln(Age)",
+      "measure": "log of firm age (years since incorporation, plus one)",
+      "source": "Jay Ritter's website / Mergent Webreports"
+     },
+     {
+      "name": "b Old",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Jay Ritter's website / Mergent Webreports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Naive PD",
+      "source": "CRSP/COMPUSTAT (Merton 1974 model)"
+     },
+     {
+      "name": "s 1/Volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "s Size",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "s Debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Excess return",
+      "source": "CRSP"
+     },
+     {
+      "name": "s Profitability",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s MTB equity",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "s Cash",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Tangibility",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "s Focus",
+      "source": "COMPUSTAT Segments"
+     },
+     {
+      "name": "s Size similarity",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "s MTB similarity",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Product similarity",
+      "source": "Hoberg and Phillips (2010)"
+     },
+     {
+      "name": "Industry concentration",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table V - Search-cost explanation of declining takeover hazard (Reg. 1-3)",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "takeover hazard",
+     "measure": "takeover hazard (extends M-Logit hazard Model 2 from Table III)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "b Old",
+      "measure": "binary variable identifying firms older than the sample median",
+      "source": "Jay Ritter's website / Mergent Webreports"
+     },
+     {
+      "name": "C&I spread",
+      "measure": "proxy for market liquidity (commercial & industrial loan spread)",
+      "source": "other"
+     },
+     {
+      "name": "b High valuation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Age at listing",
+      "measure": "incorporation age split component: age at the date of listing",
+      "source": "Jay Ritter's website / Mergent Webreports / CRSP"
+     },
+     {
+      "name": "Listing age",
+      "measure": "incorporation age split component: years since listing",
+      "source": "CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full control set from Table II (included, not reported to preserve space)",
+      "source": "COMPUSTAT/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "1990-2009 (governance data start in 1990); firms already having/lacking a provision excluded from adoption/removal analyses respectively",
+    "dv": {
+     "name": "antitakeover provision change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IRRC / Risk Metrics"
+    },
+    "key_ivs": [
+     {
+      "name": "b Old",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Jay Ritter's website / Mergent Webreports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables from Table II (included, not reported)",
+      "source": "COMPUSTAT/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "Regression 2 estimated in the subsample of firms operating in distressed industries (1,712 obs)",
+    "dv": {
+     "name": "exit type (competing risks)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "b Industry distress",
+      "measure": "binary variable identifying industries in distress: median sales growth negative and median stock return below -30% in any given year",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "b Old x b Industry distress",
+      "measure": "interaction term of the old-firm dummy with the industry distress dummy (Norton, Wang, and Ai 2004 interaction correction applied)",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "b Old",
+      "measure": "old firm dummy (firms older than sample median)",
+      "source": "Jay Ritter's website / Mergent Webreports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables from Table III M-Logit 3 (included, not reported)",
+      "source": "COMPUSTAT/CRSP"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "takeover hazard",
+     "measure": "takeover hazard (extends standard hazard model Table III M-Logit 2 with rigidity measures)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Cost rigidity",
+      "measure": "cost-structure rigidity proxy (sensitivity of overhead expenses to sales declines; sticky costs per Anderson, Banker, and Janakiraman 2003)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Investment rigidity",
+      "measure": "rigid investment policy proxy (failure to respond to positive NPV investment opportunities)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Product portfolio rigidity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hoberg, Phillips, and Prabhala (2014)"
+     },
+     {
+      "name": "Organizational rigidity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT Segments / hand-collected"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control variables from Table III M-Logit 2 (included)",
+      "source": "COMPUSTAT/CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "mature firms",
+    "forms of restructuring other than merger"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "mature firms",
+    "relation": "affects",
+    "to": "forms of restructuring other than merger"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "restructuring activities"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "failure rate of mature firms",
+    "industry distress",
+    "value premium"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "value premium"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

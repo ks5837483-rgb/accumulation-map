@@ -1,0 +1,417 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1994.tb05155.x",
+ "title": "Efficiency Gains in Unsuccessful Management Buyouts",
+ "journal": "JF",
+ "year": 1994,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "free cash flow theory",
+  "information economics",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout",
+      "relation": "increases",
+      "to": "organizational_changes",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "organizational_changes",
+      "relation": "increases",
+      "to": "operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "management_buyout",
+      "relation": "increases",
+      "to": "managerial_incentives",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentives",
+      "relation": "increases",
+      "to": "operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "organizational_changes",
+    "managerial_incentives"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "private information hypothesis (improvements would have occurred without the buyout)",
+    "self-selection bias (management cancels because it receives unfavorable information)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout_offer",
+      "relation": "increases",
+      "to": "private_information",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "private_information",
+      "relation": "increases",
+      "to": "operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_information"
+   ],
+   "moderators": [
+    {
+     "construct": "defensive_offer",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "private_information",
+     "moderated_from": "management_buyout_offer",
+     "moderated_to": "operating_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "management_buyout_offer",
+      "relation": "increases",
+      "to": "firm_undervaluation",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "firm_undervaluation",
+      "relation": "increases",
+      "to": "cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_undervaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unsuccessful_management_buyout_offer",
+      "relation": "increases",
+      "to": "firm_put_in_play",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_put_in_play",
+      "relation": "increases",
+      "to": "management_turnover",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_put_in_play"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms undergoing unsuccessful management buyouts, matched to same four-digit SIC-code industries on COMPUSTAT)",
+  "country_region": "",
+  "time_period": "1974-1989",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "120"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Wall Street Journal Index (WSJI)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "W. T. Grimm Mergerstat Review",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard & Poor's Corporation Directory",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I: Sample Description and management turnover rate",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "108 of 120 unsuccessful-MBO firms with determinable turnover; compared to the 18% random-sample benchmark of Warner, Watts, and Wruck (1988)",
+    "dv": {
+     "name": "management turnover",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Wall Street Journal Index (WSJI); Standard & Poor's Corporation Directory"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "118 full sample; 47 received another bid; 71 did not receive another bid",
+    "dv": {
+     "name": "cumulative average abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "received a competing/rival bid",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "41 firms that remained publicly traded at least two years after cancellation (26 terminated, 15 rejected)",
+    "dv": {
+     "name": "cumulative abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "cancellation type (voluntarily terminated vs. rejected offer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table IV Panel A: Change in Operating Income (full sample)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "63 firms (Year -1 to +1), 52 (to +2), 35 (to +3)",
+    "dv": {
+     "name": "change in operating income (EBITD)",
+     "measure": "median percentage change in operating income (earnings before interest, taxes, and depreciation, EBITD), unadjusted and industry-adjusted (change minus median change of the variable for firms with the same four-digit SIC code on COMPUSTAT Industrial/Research tapes and assets >= $5 million at end of Year -1), from Years -3/-2 to -1 and Year -1 to +1/+2/+3; Wilcoxon signed rank test",
+     "source": "Industrial COMPUSTAT"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table IV Panel B: Change in Sales (full sample)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "63 firms (Year -1 to +1), 52 (to +2), 35 (to +3)",
+    "dv": {
+     "name": "change in sales",
+     "measure": "median percentage change in sales, unadjusted and industry-adjusted, from Years -3/-2 to -1 and Year -1 to +1/+2/+3; Wilcoxon signed rank test",
+     "source": "Industrial COMPUSTAT"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table IV Panel C: Change in EBITD/Assets (ROA) (full sample)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "63 firms (Year -1 to +1), 52 (to +2), 35 (to +3)",
+    "dv": {
+     "name": "change in EBITD/total assets (ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Industrial COMPUSTAT"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Table IV Panel D: Change in EBITD/Sales (operating margins) (full sample)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "63 firms (Year -1 to +1), 52 (to +2), 35 (to +3)",
+    "dv": {
+     "name": "change in EBITD/sales (operating margins)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Industrial COMPUSTAT"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "subsample whose offer was unwillingly canceled (rejected by the board, rejected by stockholders, or accepted a higher bid): 28 firms Year -1 to +1, 22 to +2, 15 to +3",
+    "dv": {
+     "name": "operating performance (operating income, sales, EBITD/assets, EBITD/sales)",
+     "measure": "median absolute and industry-adjusted changes in operating income (EBITD), sales, EBITD/assets, and EBITD/sales, from Years -3/-2 to -1 and Year -1 to +1/+2/+3; Wilcoxon signed rank test (Panels A-D)",
+     "source": "Industrial COMPUSTAT"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "48 firms (38 for the abnormal-return regression)",
+    "dv": {
+     "name": "change in performance from Year -1 to Year +2",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Industrial COMPUSTAT (accounting measures); Center for Research in Security Prices (CRSP) (abnormal return)"
+    },
+    "key_ivs": [
+     {
+      "name": "management replaced",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI); Standard & Poor's Corporation Directory"
+     },
+     {
+      "name": "canceled within 1 month",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     },
+     {
+      "name": "defensive offer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index (WSJI)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "board's rejection",
+    "withdrawal by management"
+   ],
+   "mechanism_named": "selfselection bias",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "bad information",
+    "selection bias"
+   ],
+   "mechanism_named": "private information hypothesis",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "poor performance",
+    "management replacement",
+    "unfavorable information"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "poor performance",
+    "relation": "unspecified",
+    "to": "management replacement"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

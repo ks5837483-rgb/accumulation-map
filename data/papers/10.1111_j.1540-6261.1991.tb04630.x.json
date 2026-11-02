@@ -1,0 +1,370 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1991.tb04630.x",
+ "title": "The Intra‐Industry Effects of Going‐Private Transactions",
+ "journal": "JF",
+ "year": 1991,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "going_private_bid",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "rival_firm_capitalized_value",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "going_private_bid",
+     "moderated_to": "rival_firm_value",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "arbitrager purchases of an industry portfolio in response to takeover rumors (not an external information effect)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "buyout_specialist_participation",
+      "relation": "increases",
+      "to": "bid_credibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bid_credibility",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "buyout_specialist_participation",
+      "relation": "decreases",
+      "to": "signal_content",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_content",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bid_credibility",
+    "signal_content"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "outside_bidder",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "incumbent managers possess more valuable inside information than outsiders (opposite prediction: MBO bids convey a larger signal via undiversified managerial ownership, Leland-Pyle)"
+   ]
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "rival_firm_capitalized_value",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "rival_firm_value",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (going-private target firms and their horizontal industry rivals spanning 37 two-digit SIC codes; excludes conglomerates, utilities, and financial firms)",
+  "country_region": "United States",
+  "time_period": "1980-1988",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "128 going-private bid announcements (78 by incumbent management, 50 by outsiders)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Mergers and Acquisitions",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Wall Street Journal",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "daily CRSP file",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poor's",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Value Line",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I, Panel A -- Cumulative Excess Returns for Target Firms grouped into portfolios by event",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (LBO/MBO) bid announcement",
+    "sample": "128 initial going-private bid announcements, 1980-1988, NYSE/AMEX targets (full N=128; subsamples N=84 first / 44 subsequent / 33 with specialist / 95 without / 78 management / 50 outsiders)",
+    "dv": {
+     "name": "cumulative excess return to target firms",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP file"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     },
+     {
+      "name": "buyout specialist participation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "management buyout vs. bids by outsiders",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     },
+     {
+      "name": "first vs. subsequent bid in industry",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected from Mergers and Acquisitions"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table I, Panel B -- Cumulative Excess Returns for Industry Rivals grouped into portfolios by event",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (LBO/MBO) bid announcement",
+    "sample": "Rivals sharing target's 4-digit SIC code, pooled into an equally weighted portfolio per bid; 128 portfolios covering 940 rival firms",
+    "dv": {
+     "name": "cumulative excess return to industry rival portfolios",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP file"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     },
+     {
+      "name": "buyout specialist participation",
+      "measure": "bids with vs. without buyout specialist equity participation",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "management buyout vs. bids by outsiders",
+      "measure": "management buyout bids vs. bids by outside investors",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     },
+     {
+      "name": "first vs. subsequent bid in industry",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected from Mergers and Acquisitions"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (LBO/MBO) bid announcement",
+    "sample": "940 individual rival firms equally weighted (not pooled); subsamples 471 first / 469 subsequent / 214 with specialist / 726 without / 520 management / 420 outsiders",
+    "dv": {
+     "name": "cumulative excess return to equally weighted rival firms",
+     "measure": "Excess returns to all rival firms with equal weight (not pooled into industry portfolios by event), calculated as realized minus market-model expected returns estimated over days -215 to -96.",
+     "source": "daily CRSP file"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     },
+     {
+      "name": "buyout specialist participation",
+      "measure": "bids with vs. without buyout specialist equity participation",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "management buyout vs. bids by outsiders",
+      "measure": "management buyout bids vs. bids by outside investors",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II, Panel B -- Cumulative Excess Returns for a Matched Sample of Rival Firms (matched by size and nature of operations)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (LBO/MBO) bid announcement",
+    "sample": "One size- and operations-matched rival per target, N=128; matching aided by Standard and Poor's and Value Line product information",
+    "dv": {
+     "name": "cumulative excess return to matched rival firm",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP file"
+    },
+    "key_ivs": [
+     {
+      "name": "going-private bid announcement",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     },
+     {
+      "name": "buyout specialist participation",
+      "measure": "bids with vs. without buyout specialist equity participation",
+      "source": "Wall Street Journal"
+     },
+     {
+      "name": "management buyout vs. bids by outsiders",
+      "measure": "management buyout bids vs. bids by outside investors",
+      "source": "Wall Street Journal / Mergers and Acquisitions"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "going-private (LBO/MBO) bid announcement",
+    "sample": "Rivals split by market value relative to target: Panel A N=96 vs 104 portfolios; Panel B N=500 vs 440 rival firms",
+    "dv": {
+     "name": "cumulative excess return to industry rivals split by relative firm size",
+     "measure": "[withheld: wording matches the source]",
+     "source": "daily CRSP file"
+    },
+    "key_ivs": [
+     {
+      "name": "rival capitalized value relative to target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "daily CRSP file"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

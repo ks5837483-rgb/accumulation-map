@@ -1,0 +1,26 @@
+ma_eval_selection v2 (2026-10-31; v2 widens "deal" only — v1 judgments with deal=="yes" are unaffected) — prompt of record. One judgment per paper, from its already-extracted tested claims.
+
+You decide whether a paper belongs to the "firm under evaluation in M&A" set. Read the paper's packet (primary
+theories, hypotheses, causal chains X -> mechanism -> Y, mechanism names). Judge by meaning, not by keywords.
+
+Fields to return per paper:
+- deal: "yes" if the paper's tested claims concern an M&A transaction (merger, acquisition, takeover, tender offer,
+  LBO, divestiture/spin-off/asset sale, bids or deal terms); "alliance" if they concern alliances/JVs/partnerships
+  only; "no" otherwise.
+  INCLUSIVE RULE (user ruling 2026-10-31, same as ma_topic_screen v2: "if it has M&A taste, keep them in"): deal is
+  also "yes" for the market for corporate control without a completed deal (takeover threat, takeover defenses,
+  anti-takeover laws, takeover exposure — a firm evaluated as a potential target), choices where acquisition is one
+  of the options (acquire vs build vs ally), acquisitions as one of several studied outcomes, and accounting for deals
+  (purchase accounting, goodwill). Use "no" only when the tested claims have no M&A content at all.
+- evaluator: who evaluates a FIRM (target, acquirer, rival, seller, merged firm) in the tested claims:
+  "firm" (another firm: acquirer, bidder, target board, buyer, partner), "investors" (stock market, shareholders as
+  price-setters, analysts, lenders, arbitrageurs, rating agencies), "both", or "none".
+- info_mechanism: "yes" if at least one tested mechanism is about information (information asymmetry, adverse
+  selection, signaling/screening, disclosure, valuation uncertainty, search or due diligence, attention, private
+  information, learning about the other firm, verification, certification); else "no".
+- include: "yes" only if deal=="yes" AND evaluator != "none" AND info_mechanism=="yes".
+- reason: one sentence citing the chain(s) that drove the decision.
+
+STRICT JUDGMENT RULE: decide every field by reading. Do not write or run scripts, regexes, keyword lists or lookup
+tables to assign any field. Code may only read the packet files and write your output file.
+Output: one JSON object per line: {"paper_id","deal","evaluator","info_mechanism","include","reason"}.

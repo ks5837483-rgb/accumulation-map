@@ -1,0 +1,614 @@
+{
+ "paper_id": "10.1287_mnsc.2023.00654",
+ "title": "Venture Capital and Private M&amp;A Contracting",
+ "journal": "MNSC",
+ "year": 2025,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "certification theory",
+  "signaling theory",
+  "reputation and repeated games"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vc_participation",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "use_of_earnouts",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "vc_participation",
+      "relation": "decreases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "increases",
+      "to": "use_of_earnouts",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "valuation_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "VCs reduce earnouts by influencing negotiation power / bargaining strength rather than by mitigating information asymmetry",
+    "earnouts are used to address moral hazard (incentivizing key employees/founders) rather than information asymmetry"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vc_participation",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "use_of_regulatory_based_earnouts",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "regulatory-based earnouts address third-party regulatory decision uncertainty (FDA approval) rather than insider information asymmetry, so VCs should have no effect on them"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "vc_buyer_proximity",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "use_of_earnouts",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_vc_buyer_relationship",
+      "relation": "decreases",
+      "to": "information_frictions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_frictions",
+      "relation": "decreases",
+      "to": "likelihood_of_future_transactions",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_frictions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_vc_buyer_relationship",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "use_of_earnouts",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "private startups, concentrated in IT (software and nonsoftware) and healthcare sectors (also commercial and consumer products and services); Pitchbook industry classifications",
+  "country_region": "United States",
+  "time_period": "2015-2020",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "851 startup M&A transactions"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Specialized private M&A financial services firm (proprietary sample of 851 private M&A transactions 2015-2020: M&A term sheets and executed M&A agreements including separate earnout agreements)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Pitchbook",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dealstats database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4: VC Participation and Earnouts (Model 1, columns 1-5)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "851 private M&A transactions, 2015-2020, transaction level (columns add startup-industry x year, startup legal advisor, startup-industry x buyer-industry x year, and startup-industry x PP-quintile x year fixed effects)",
+    "dv": {
+     "name": "Use of earnouts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Specialized private M&A financial services firm (proprietary)"
+    },
+    "key_ivs": [
+     {
+      "name": "VC participation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Specialized private M&A financial services firm (proprietary); VC classification from Pitchbook Primary Investor Type"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Investor Concentration) (HHI of investor startup ownership)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Firm Age (target/startup firm age)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Ln(Purchase Price incl. Earnouts)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(PE Deal)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Cash Consideration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Public Buyer)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: Industry-specific subsample robustness",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "Subsamples: excluding energy and financial services (830 obs); excluding IT-software (439 obs)",
+    "dv": {
+     "name": "Use of earnouts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Specialized private M&A financial services firm (proprietary)"
+    },
+    "key_ivs": [
+     {
+      "name": "VC participation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Investor Concentration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Firm Age",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Ln(Purchase Price incl. Earnouts)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(PE Deal)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Cash Consideration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Public Buyer)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel C: Regulatory vs nonregulatory earnouts (placebo)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "851 M&A transactions; startup-industry x year fixed effects",
+    "dv": {
+     "name": "Regulatory vs nonregulatory earnout use",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Specialized private M&A financial services firm (proprietary)"
+    },
+    "key_ivs": [
+     {
+      "name": "VC participation",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Investor Concentration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Firm Age",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Ln(Purchase Price incl. Earnouts)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(PE Deal)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Cash Consideration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Public Buyer)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Distance Analysis (Model 2, VC-buyer geographic distance)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "1,184 unique VC-startup-buyer observations (VC-backed transactions), 2015-2020; VC x year and startup-industry x year fixed effects; SE clustered at VC level",
+    "dv": {
+     "name": "Use of earnouts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Specialized private M&A financial services firm (proprietary)"
+    },
+    "key_ivs": [
+     {
+      "name": "VC-buyer distance (proxy for information asymmetry)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pitchbook (headquarters locations)"
+     },
+     {
+      "name": "VC-startup distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pitchbook (headquarters locations)"
+     },
+     {
+      "name": "Startup-buyer distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pitchbook (headquarters locations)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Investor Concentration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Firm Age",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Ln(Purchase Price incl. Earnouts)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(PE Deal)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Cash Consideration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Public Buyer)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "All true and counterfactual VC-startup-buyer observations, sample period 2015-2020; VCs with >100 investments by 2015 (195 VCs; 2,358,876 obs) and VCs with >200 investments by 2015 (86 VCs; 1,317,753 obs); VC and startup-industry x buyer-industry fixed effects",
+    "dv": {
+     "name": "Prior VC-buyer relationship",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Pitchbook (all VC portfolio-firm investments 1996-2020)"
+    },
+    "key_ivs": [
+     {
+      "name": "Actual (vs counterfactual) transaction indicator",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pitchbook"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "1,028 VC-startup-buyer observations (187 unique VCs), 2015-2020; VC x year and startup-industry x year fixed effects; SE clustered at VC level",
+    "dv": {
+     "name": "Use of earnouts",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Specialized private M&A financial services firm (proprietary)"
+    },
+    "key_ivs": [
+     {
+      "name": "Prior VC-buyer relationship (mechanism)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Pitchbook (relationship) / proprietary (earnout)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Investor Concentration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Firm Age",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "Ln(Purchase Price incl. Earnouts)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(PE Deal)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Cash Consideration)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     },
+     {
+      "name": "I(Public Buyer)",
+      "source": "Specialized private M&A financial services firm (proprietary)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "earnouts",
+    "information asymmetry"
+   ],
+   "mechanism_named": "information asymmetry",
+   "proposed_edge": {
+    "from": "earnouts",
+    "relation": "unspecified",
+    "to": "information asymmetry"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "startup M&A transactions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "VC-specific contractual arrangements",
+    "VC characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "limited partnership agreements between VCs and their investors",
+    "incentives for earnouts",
+    "contracts between VCs and entrepreneurs",
+    "cash flow and control rights",
+    "M&A likelihood"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "limited partnership agreements between VCs and their investors",
+    "relation": "affects",
+    "to": "incentives for earnouts"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "degree of alignment between VCs and entrepreneurs",
+    "exit dynamics",
+    "need for an earnout"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "degree of alignment between VCs and entrepreneurs",
+    "relation": "affects",
+    "to": "exit dynamics"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "VC’s experience",
+    "reputation",
+    "educational background of VC managers",
+    "use of earnouts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "VC’s experience",
+    "on_path": [
+     "VC participation",
+     "use of earnouts"
+    ]
+   }
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "VC heterogeneity",
+    "deal structuring",
+    "exit outcomes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "preferences regarding the use of earnouts",
+    "immediate payment",
+    "contingent future payment"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "divergence in preferences between VCs and other investors",
+    "outcomes for investors",
+    "deal options without earnouts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "divergence in preferences between VCs and other investors",
+    "relation": "decreases",
+    "to": "outcomes for investors"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

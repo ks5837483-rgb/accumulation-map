@@ -1,0 +1,367 @@
+{
+ "paper_id": "10.2307_256607",
+ "title": "PERFORMANCE OF ACQUISITIONS OF DISTRESSED FIRMS.",
+ "journal": "AMJ",
+ "year": 1994,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "resource-based view",
+  "market for corporate control",
+  "organizational learning"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "business_relatedness",
+      "relation": "decreases",
+      "to": "winners_curse",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "winners_curse",
+      "relation": "decreases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "business_relatedness",
+      "relation": "increases",
+      "to": "operating_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "operating_synergies",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "winners_curse",
+    "operating_synergies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "business relatedness improves acquisition performance generally, not specifically for acquisitions of distressed firms",
+    "a body of generalizable turnaround skills (rather than related-specific tacit knowledge) drives acquisition success"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prior_acquisition_experience",
+      "relation": "increases",
+      "to": "tacit_knowledge_about_acquisition_process",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "tacit_knowledge_about_acquisition_process",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "tacit_knowledge_about_acquisition_process"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "prior acquisition experience improves performance for acquisitions in general, not specifically for acquisitions of distressed firms"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ratio_of_acquired_to_acquirer_size",
+      "relation": "increases",
+      "to": "top_management_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "top_management_attention",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "ratio_of_acquired_to_acquirer_size",
+      "relation": "decreases",
+      "to": "acquirer_slack_resources",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_slack_resources",
+      "relation": "increases",
+      "to": "acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "top_management_attention",
+    "acquirer_slack_resources"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "absolute target and acquirer firm sizes, rather than the ratio between them, drive acquisition performance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms acquired between 1979 and 1987 from the COMPUSTAT research file, spanning multiple sectors with no focal industry)",
+  "country_region": "",
+  "time_period": "1979-1987",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "51 distressed acquisitions (research group) plus 46 control acquisitions"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "1988 COMPUSTAT research file",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergers & Acquisitions",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Moody's manuals",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Panel of three academic evaluators (subjective acquisition-performance ratings)",
+    "category": "other",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Published accounts of acquisition results by industry experts, stock analysts, and business writers (business press)",
+    "category": "other",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Business and industry indexes, directories, trade journals, and telephone conversations with firm employees and trade associations (relatedness data)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Regression Analysis, research group (distressed acquisitions)",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "51 acquired distressed firms (research group)",
+    "dv": {
+     "name": "Acquisition performance",
+     "measure": "mean value of three academics' ratings of the success of each acquisition on a seven-point scale ranging from 1, 'very unsuccessful' to 7, 'very successful'",
+     "source": "Panel of three academic evaluators (subjective acquisition-performance ratings)"
+    },
+    "key_ivs": [
+     {
+      "name": "Business relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business and industry indexes, directories, trade journals, and telephone conversations with firm employees and trade associations (relatedness data)"
+     },
+     {
+      "name": "Acquirer experience with prior acquisitions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergers & Acquisitions"
+     },
+     {
+      "name": "Ratio of acquired to acquirer revenue",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1988 COMPUSTAT research file"
+     },
+     {
+      "name": "Acquired/acquirer revenue squared",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1988 COMPUSTAT research file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "1988 COMPUSTAT research file"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 - Regression Analysis, control group (nondistressed acquisitions)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "46 acquisitions of nondeclining (nondistressed) targets (control group)",
+    "dv": {
+     "name": "Acquisition performance",
+     "measure": "mean value of three academics' ratings of the success of each acquisition on a seven-point scale ranging from 1, 'very unsuccessful' to 7, 'very successful'",
+     "source": "Panel of three academic evaluators (subjective acquisition-performance ratings)"
+    },
+    "key_ivs": [
+     {
+      "name": "Business relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Business and industry indexes, directories, trade journals, and telephone conversations with firm employees and trade associations (relatedness data)"
+     },
+     {
+      "name": "Acquirer experience with prior acquisitions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergers & Acquisitions"
+     },
+     {
+      "name": "Ratio of acquired to acquirer revenue",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1988 COMPUSTAT research file"
+     },
+     {
+      "name": "Acquired/acquirer revenue squared",
+      "measure": "[withheld: wording matches the source]",
+      "source": "1988 COMPUSTAT research file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "1988 COMPUSTAT research file"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "relative firm size",
+    "acquisition performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "postacquisition turnaround actions",
+    "relatedness"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "unsuccessful acquisitions"
+   ],
+   "mechanism_named": "comparative case studies",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "distressed firm"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "industry conditions",
+    "preacquisition corporate strategies",
+    "cultural differences",
+    "alternative implementation choices",
+    "acquisition performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "industry conditions",
+    "relation": "affects",
+    "to": "acquisition performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "distressed firms",
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

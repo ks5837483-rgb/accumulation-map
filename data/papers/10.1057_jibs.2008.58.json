@@ -1,0 +1,551 @@
+{
+ "paper_id": "10.1057_jibs.2008.58",
+ "title": "Mars–Venus marriages: Culture and cross-border M&amp;A",
+ "journal": "JIBS",
+ "year": 2008,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "resource-based view",
+  "organizational learning",
+  "transaction cost economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cultural_distance",
+      "relation": "increases",
+      "to": "cultural_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "cultural_synergies",
+      "relation": "increases",
+      "to": "long_term_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "cultural_distance",
+      "relation": "increases",
+      "to": "screening_stringency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "screening_stringency",
+      "relation": "increases",
+      "to": "long_term_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "cultural_synergies",
+    "screening_stringency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the long-term performance effect is driven by economic disparity between the acquirer and target nations rather than by cultural distance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (cross-border acquisitions across sectors, matched by four-digit SIC codes)",
+  "country_region": "acquirers from 43 countries, targets from 65 countries (covering all six continents)",
+  "time_period": "1991-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1157 unique acquisitions (main regressions have slightly over 800 observations, e.g., N=814)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum Mergers & Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "DataStream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Global Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Hofstede (1980, 2001)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Stulz and Williamson (2003)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 5, Panel A (long-term BHAR on cultural distance)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "36-month acquirer buy-and-hold abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "Log(Hofstede Dist) (cultural distance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hofstede (1980, 2001)"
+     },
+     {
+      "name": "Religion_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Stulz and Williamson (2003)"
+     },
+     {
+      "name": "Language_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Stulz and Williamson (2003)"
+     },
+     {
+      "name": "Legal_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "La Porta et al. (1998)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Friendly_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "No_of_Bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Log(Acquirer MV)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Openness_Target",
+      "source": "DataStream"
+     },
+     {
+      "name": "PCI_diff (per capita income difference)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Forex_Volatility",
+      "source": "DataStream"
+     },
+     {
+      "name": "Log(Bilateral Trade)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Corp_Gov_Diff (antidirector index difference)",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "Target-country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B (individual Hofstede dimensions on BHAR)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "36-month acquirer buy-and-hold abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "Power_Dist_Diff",
+      "measure": "the simple difference (acquirer-target) on power distance",
+      "source": "Hofstede (1980, 2001)"
+     },
+     {
+      "name": "Individualism_Diff",
+      "measure": "the simple difference (acquirer-target) on individualism",
+      "source": "Hofstede (1980, 2001)"
+     },
+     {
+      "name": "Masculinity_Diff",
+      "measure": "the simple difference (acquirer-target) on masculinity",
+      "source": "Hofstede (1980, 2001)"
+     },
+     {
+      "name": "Uncertainty_Avoid_Diff",
+      "measure": "the simple difference (acquirer-target) on uncertainty avoidance",
+      "source": "Hofstede (1980, 2001)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Friendly_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "No_of_Bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Log(Acquirer MV)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Openness_Target",
+      "source": "DataStream"
+     },
+     {
+      "name": "PCI_diff",
+      "source": "DataStream"
+     },
+     {
+      "name": "Forex_Volatility",
+      "source": "DataStream"
+     },
+     {
+      "name": "Log(Bilateral Trade)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Corp_Gov_Diff",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "Target-country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (long-term BHAR, US acquirers subsample)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "subsample of US acquirers making cross-border acquisitions (~282 observations)",
+    "dv": {
+     "name": "36-month acquirer buy-and-hold abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "Log(Hofstede Dist) (cultural distance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hofstede (1980, 2001)"
+     },
+     {
+      "name": "Religion_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Stulz and Williamson (2003)"
+     },
+     {
+      "name": "Language_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Stulz and Williamson (2003)"
+     },
+     {
+      "name": "Legal_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "La Porta et al. (1998)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Friendly_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "No_of_Bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Log(Acquirer MV)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Openness_Target",
+      "source": "DataStream"
+     },
+     {
+      "name": "PCI_diff",
+      "source": "DataStream"
+     },
+     {
+      "name": "Forex_Volatility",
+      "source": "DataStream"
+     },
+     {
+      "name": "Log(Bilateral Trade)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Corp_Gov_Diff",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "Target-country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 (announcement-period abnormal returns / CARs)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "announcement-period abnormal return (CAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "DataStream"
+    },
+    "key_ivs": [
+     {
+      "name": "Log(Hofstede Dist) (cultural distance)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hofstede (1980, 2001)"
+     },
+     {
+      "name": "Religion_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Stulz and Williamson (2003)"
+     },
+     {
+      "name": "Language_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Stulz and Williamson (2003)"
+     },
+     {
+      "name": "Legal_Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "La Porta et al. (1998)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Friendly_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Tender_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash_Dummy",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "No_of_Bidders",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Log(Acquirer MV)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Openness_Target",
+      "source": "DataStream"
+     },
+     {
+      "name": "PCI_diff",
+      "source": "DataStream"
+     },
+     {
+      "name": "Forex_Volatility",
+      "source": "DataStream"
+     },
+     {
+      "name": "Log(Bilateral Trade)",
+      "source": "DataStream"
+     },
+     {
+      "name": "Corp_Gov_Diff",
+      "source": "La Porta et al. (1998)"
+     },
+     {
+      "name": "Target-country fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "m&a success",
+    "cultural"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "cultural differences",
+    "business transactions"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "cultural differences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "integration troubles",
+    "cross-border acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "cultural synergies",
+    "acquirer’s performance",
+    "cultural dissonance",
+    "integration\nprocess"
+   ],
+   "mechanism_named": "cultural synergies",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "measure of\nculture",
+    "cultural difference"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "measures of culture",
+    "cross-border M&A performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "corporate cultures",
+    "national cultures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "corporate cultures",
+    "relation": "unspecified",
+    "to": "national cultures"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

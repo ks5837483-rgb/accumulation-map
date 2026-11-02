@@ -1,0 +1,896 @@
+{
+ "paper_id": "10.1093_rof_rfaa043",
+ "title": "Central Hub M&amp;A Advisors",
+ "journal": "RF",
+ "year": 2021,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "social network theory",
+  "information asymmetry theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_network_centrality",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "cross_industry_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_network_centrality",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross-sectional test: industry relatedness"
+    },
+    {
+     "construct": "loner_acquirer",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_network_centrality",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "cross-sectional test: acquisition experience"
+    },
+    {
+     "construct": "small_advisor",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_network_centrality",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional test: advisor size"
+    },
+    {
+     "construct": "low_target_industry_expertise_advisor",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_network_centrality",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "cross-sectional test: advisor expertise in target industry"
+    },
+    {
+     "construct": "equity_underwriting_network_contact",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "advisor_network_centrality",
+     "moderated_to": "acquirer_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "information channel test: equity underwriting"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "advisor ability / omitted variable bias",
+    "systemic risk / contagion (affiliated advisors more problematic post-Lehman)",
+    "boutique advisors (Song, Wei, and Zhou 2013)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_network_centrality",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "advisor_network_centrality",
+      "relation": "decreases",
+      "to": "bidder_competition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_competition",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "bidder_competition"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target financial advisor's network centrality (target-side bargaining)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisor_network_centrality",
+      "relation": "increases",
+      "to": "information_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_advantage",
+      "relation": "increases",
+      "to": "advisory_fee",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_tie_with_appointed_advisor",
+      "relation": "increases",
+      "to": "advisor_recommendation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "advisor_recommendation",
+      "relation": "increases",
+      "to": "co_advisor_selection",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "advisor_recommendation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (US M&A transactions across industries)",
+  "country_region": "United States",
+  "time_period": "1990-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "6,722 observations"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial Securities Data Company (SDC) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (Center for Research in Security Prices)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "news articles and merging firms' SEC filings (used to identify lead advisors in co-advised deals)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "6,722 US M&A transactions announced January 1990–December 2016",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Degree centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed from co-advising ties)"
+     },
+     {
+      "name": "Eigenvector centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed from co-advising ties)"
+     },
+     {
+      "name": "Betweenness centrality",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed from co-advising ties)"
+     },
+     {
+      "name": "PC (first principal component of centralities)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     },
+     {
+      "name": "Orthogonally transformed centrality measures",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Top tier / Second tier advisor (advisor market share terciles)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size (market value of equity 6 days before announcement)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Run-up (market-adjusted buy-and-hold return over (−210, −11))",
+      "source": "CRSP"
+     },
+     {
+      "name": "Free cash flow (FCF)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "CRSP and Compustat"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP and Compustat"
+     },
+     {
+      "name": "Relative size (deal value / acquirer equity)",
+      "source": "SDC and CRSP"
+     },
+     {
+      "name": "Competing (more than one bidder)",
+      "source": "SDC"
+     },
+     {
+      "name": "Related (same two-digit SIC)",
+      "source": "SDC"
+     },
+     {
+      "name": "Target listing status × payment method dummies (public/private/subsidiary × all cash / stock)",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender offer",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2008 sudden collapse (bankruptcy) of Lehman Brothers (Sept 15, 2008)",
+    "sample": "deals announced Sept 14, 2005–Sept 16, 2011 (36 months before/after Lehman bankruptcy); N=1,389",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Affiliated × Post (interaction, main variable of interest)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed from co-advising ties)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Top tier / Second tier advisor",
+      "source": "SDC"
+     },
+     {
+      "name": "Ln(acquirer size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Run-up",
+      "source": "CRSP"
+     },
+     {
+      "name": "FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "CRSP and Compustat"
+     },
+     {
+      "name": "Tobin's Q",
+      "source": "CRSP and Compustat"
+     },
+     {
+      "name": "Relative size",
+      "source": "SDC and CRSP"
+     },
+     {
+      "name": "Related",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Public/Private × payment-include-stock dummies",
+      "source": "SDC"
+     },
+     {
+      "name": "Advisor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Time (year-month) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Panel A — Parallel-trends test (pre-shock CAR differences)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "collapse of Lehman Brothers (pre-trend window)",
+    "sample": "treatment and control groups in the 3 years before Sept 15, 2008",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "average acquirer CAR (−1, +1) for treatment vs control group at t=−1, −2, −3 years relative to Sept 15, 2008, with t-test of the difference",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Treatment (Lehman-affiliated advisor) vs control group difference in pre-period years",
+      "measure": "difference in average acquirer CAR between treatment (affiliated) and control groups for years t=−1, −2, −3 before the shock",
+      "source": "SDC (affiliation) / CRSP (CAR)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table IV Panel B — Falsification (placebo) tests",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "placebo Lehman event years 2007 / 2006 / 2005",
+    "sample": "placebo windows around 2005–2007",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "acquirer CAR (−1, +1); coefficient on Affiliated × Post reported for placebo event years",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Affiliated × Post at placebo event years",
+      "measure": "Affiliated × Post where the Lehman shock is 'falsely' assumed to occur 1-, 2-, or 3-years earlier (2007, 2006, 2005)",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table III",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Advisor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year-month fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Panel C — DiD on propensity-score-matched sample",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "collapse of Lehman Brothers",
+    "sample": "propensity-score-matched treated and control advisors (matched on 3-year average market share)",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "acquirer CAR (−1, +1); coefficient on Affiliated × Post",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Affiliated × Post (matched sample)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Advisor-, deal-, and acquirer-specific controls (as Table III) in Column (2)",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Advisor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Time fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV Panel D — DiD with alternative control group (equity/debt-affiliated banks)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "collapse of Lehman Brothers (alternative control group of equity/debt-syndicate-affiliated banks)",
+    "sample": "N=1,057 (treated plus equity/debt-affiliated control banks)",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "acquirer CAR (−1, +1); coefficient on Affiliated × Post",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Affiliated × Post (alternative control group)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table III (Column 2)",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Advisor fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year-month fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Affiliated × Post (Lehman Brothers bankruptcy) used as a shock-based instrument for advisor centrality; first-stage F-stats vs Stock–Yogo thresholds",
+    "sample": "M&A deals announced Sept 14, 2005–Sept 16, 2011 (36 months before/after Lehman); N=1,389",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "acquirer CAR (−1, +1); second-stage dependent variable with centrality instrumented",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Advisor centrality (instrumented): degree / eigenvector / betweenness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Affiliated dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Other controls as in Table II",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Time fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI — Cross-sectional heterogeneity (OLS sample splits, Panels A–D)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "6,722 deals split by relatedness, acquisition experience, advisor tier, and advisor target-industry expertise",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "acquirer CAR (−1, +1) estimated separately within each subsample",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Degree / Eigenvector / Betweenness centrality (focal IV within each split)",
+      "measure": "the three individual centrality measures, with the equality of coefficients tested across subsamples (Chi-squared)",
+      "source": "SDC (constructed)"
+     },
+     {
+      "name": "Industry relatedness split (Panel A)",
+      "measure": "cross-industry vs same-industry deals, defined by two-digit SIC codes",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer acquisition experience split (Panel B)",
+      "measure": "loners vs marathoners from ex-post k-median cluster analysis (Macias, Rau, and Stouraitis 2020) on total number, frequency, and intensity of acquisitions",
+      "source": "SDC (constructed)"
+     },
+     {
+      "name": "Advisor bank size split (Panel C)",
+      "measure": "third-tier vs top-tier acquirer advisor (by advisor market share tercile)",
+      "source": "SDC"
+     },
+     {
+      "name": "Advisor target-industry expertise split (Panel D)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table II",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VII — Information channels (OLS, degree centrality × channel)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "2,959 public acquisitions (firm-specific channels); full sample 6,722 (industry channel); 5,849 domestic deals (regional channel)",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "acquirer CAR (−1, +1) regressed on degree centrality decomposed by presence/absence of an information channel",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Degree centrality × firm-specific channels (equity underwriting / debt underwriting / M&A advisory)",
+      "measure": "degree centrality of acquirer advisors whose network contacts had previously acted as lead underwriter/co-manager on the target's equity or debt issues, or provided the target M&A advisory, over the last 3 years, vs those without such a channel",
+      "source": "SDC (constructed)"
+     },
+     {
+      "name": "Degree centrality × industry-specific channel",
+      "measure": "degree centrality when one or more network contacts are specialists in the target industry (ranked first–fifteenth by percentage of M&A deals advised in the target three-digit SIC industry over prior 3 years)",
+      "source": "SDC (constructed)"
+     },
+     {
+      "name": "Degree centrality × regional-specific channel",
+      "measure": "degree centrality when network contacts specialize in the target's geographic region (target state)",
+      "source": "SDC (constructed)"
+     },
+     {
+      "name": "Degree centrality × combined channel",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer advisor's own information via each channel (equity/debt/M&A/industry/regional/combined)",
+      "source": "SDC"
+     },
+     {
+      "name": "Advisor tier, deal characteristics, acquirer characteristics (as Table II)",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VIII — Other robustness (acquirer FE / target-advisor centrality / boutique advisor / value-weighted centrality / equity-debt-market centrality)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "N=4,928 (acquirer-FE serial-acquirer sample, Panel A); 6,722 (Panel B)",
+    "dv": {
+     "name": "acquirer 3-day CAR",
+     "measure": "acquirer CAR (−1, +1) under alternative specifications",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Advisor centrality (degree / eigenvector / betweenness) under robustness specifications",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same controls as Table II",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Target advisor centrality (Panel B)",
+      "source": "SDC"
+     },
+     {
+      "name": "Boutique advisor dummy (Panel C)",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer fixed effects (Panel A)",
+      "source": ""
+     },
+     {
+      "name": "Industry and year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IX — Advisor centrality and takeover premium (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "US public acquisitions 1990–2016 with target stock price data",
+    "dv": {
+     "name": "takeover premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Degree / Eigenvector / Betweenness centrality",
+      "measure": "the three advisor network centrality measures (one per column)",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Top tier / Second tier advisor",
+      "source": "SDC"
+     },
+     {
+      "name": "Advisor-, acquirer-, and deal-specific characteristics (as Table II)",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Deal completion probit (centrality, takeover premium, controls)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "public deals for which information on takeover premiums is available",
+    "dv": {
+     "name": "deal completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Advisor centrality, takeover premium, and their interaction",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Other control variables (as premium/CAR models)",
+      "source": "SDC/CRSP/Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table X — Advisor centrality and advisory fees (OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "US public acquisitions 1990–2016 with advisory fee data (fee data ~84% public deals); Tobit as robustness",
+    "dv": {
+     "name": "advisory fee",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Degree / Eigenvector / Betweenness centrality",
+      "measure": "the three advisor network centrality measures (one per column)",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Natural logarithm of deal value (economies of scale)",
+      "source": "SDC"
+     },
+     {
+      "name": "Other controls as in Table IX",
+      "source": "SDC/CRSP/Compustat"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table XI Panel B — Probit for M&A co-advisor choice",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "460 unique advisors × 1,014 co-advised deals = 466,440 bank-deal observations; standard errors clustered at the deal level",
+    "dv": {
+     "name": "M&A co-advisor selection",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Bank's tie with other co-advisors",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (constructed)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Market share (fraction of aggregate M&A value advised by candidate bank over last 3 years)",
+      "source": "SDC"
+     },
+     {
+      "name": "Bank's share of acquirer's deals (proportion of acquirer's M&A value advised by candidate bank over prior 10 years)",
+      "source": "SDC"
+     },
+     {
+      "name": "Logarithm of transaction size",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "information sources",
+    "network contacts"
+   ],
+   "mechanism_named": "information gained from network contacts",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "acquirer advisor's network centrality",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

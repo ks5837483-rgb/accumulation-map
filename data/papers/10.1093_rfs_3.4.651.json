@@ -1,0 +1,253 @@
+{
+ "paper_id": "10.1093_rfs_3.4.651",
+ "title": "Asymmetric Information and the Medium of Exchange in Takeovers: Theory and Tests",
+ "journal": "RFS",
+ "year": 1990,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "monotonicity (Corollary 1 / main empirical hypothesis)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_portion",
+      "relation": "increases",
+      "to": "revealed_bidder_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "revealed_bidder_value",
+      "relation": "increases",
+      "to": "bidder_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "revealed_bidder_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "synergy revaluation (the mixed-offer gain is a larger synergy revaluation, not a signaling gain)",
+    "taxes (payment-method return differences driven by tax treatment)"
+   ]
+  },
+  {
+   "hypothesis": "convexity (Proposition 2 / Corollary 2)",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "cash_portion",
+      "relation": "increases",
+      "to": "revealed_bidder_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "revealed_bidder_value",
+      "relation": "increases",
+      "to": "bidder_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "revealed_bidder_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "taxes (payment-method return differences driven by tax treatment)"
+   ]
+  },
+  {
+   "hypothesis": "mixed-offer signaling premium (mean comparison across payment methods)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "mixed_payment_offer",
+      "relation": "increases",
+      "to": "signaling_component",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signaling_component",
+      "relation": "increases",
+      "to": "bidder_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signaling_component"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "synergy revaluation (the incremental mixed-offer gain is a larger synergy revaluation rather than a signaling gain)",
+    "taxes (the larger all-cash premium attributed to tax penalties)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Canadian corporate takeovers/acquisitions, no focal sector)",
+  "country_region": "Canada",
+  "time_period": "1964-1982",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "182 takeovers (92 all-cash, 34 all-stock, 56 mixed cash-stock offers; cross-sectional regressions use the 56 mixed offers)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "the University of Laval data tape (monthly stock returns for TSE-listed firms)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "the corporate database of the Financial Post or Moody's Industrial Manual",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "the Bank of Canada Review (risk-free rate)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "newspaper accounts / acquisition announcements in major newspapers, compiled by Eckbo (1986), used to build the acquisition propensity index a_-1 (and hand-searched for competing/hostile bids)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "182 Canadian takeovers, 1964-1982 (92 all-cash, 34 all-stock, 56 mixed cash-stock)",
+    "dv": {
+     "name": "announcement-month abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "the University of Laval data tape (monthly stock returns for TSE-listed firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "medium of exchange / payment method",
+      "measure": "[withheld: wording matches the source]",
+      "source": "the corporate database of the Financial Post or Moody's Industrial Manual"
+     }
+    ],
+    "controls": [
+     {
+      "name": "value-weighted index of TSE-listed firms (market return, r_m)",
+      "source": "the University of Laval data tape"
+     },
+     {
+      "name": "riskless asset return / Treasury bills (r_f)",
+      "source": "the Bank of Canada Review"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "56 mixed cash-stock offers, 1964-1982",
+    "dv": {
+     "name": "percent merger-induced abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "the University of Laval data tape (monthly stock returns for TSE-listed firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "cash portion of the payment (Box-Cox transformed)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "the corporate database of the Financial Post or Moody's Industrial Manual"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "the University of Laval data tape"
+     },
+     {
+      "name": "bidder's acquisition propensity index, a_-1j",
+      "source": "newspaper acquisition announcements compiled by Eckbo (1986)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "56 mixed cash-stock offers, 1964-1982",
+    "dv": {
+     "name": "percent merger-induced abnormal return",
+     "measure": "the percent merger-induced abnormal returns, y_bar_j (same abnormal-return estimate as in Tables 3 and 4)",
+     "source": "the University of Laval data tape (monthly stock returns for TSE-listed firms)"
+    },
+    "key_ivs": [
+     {
+      "name": "cash portion of the payment (linear and quadratic)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "the corporate database of the Financial Post or Moody's Industrial Manual"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "the University of Laval data tape"
+     },
+     {
+      "name": "bidder's acquisition propensity, a_-1j",
+      "source": "newspaper acquisition announcements compiled by Eckbo (1986)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

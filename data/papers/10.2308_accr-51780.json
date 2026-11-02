@@ -1,0 +1,887 @@
+{
+ "paper_id": "10.2308_accr-51780",
+ "title": "Internal Control Weaknesses and Acquisition Performance",
+ "journal": "AR",
+ "year": 2017,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "signaling theory",
+  "efficient markets hypothesis"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "internal_control_weaknesses",
+      "relation": "decreases",
+      "to": "forecasting_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "forecasting_ability",
+      "relation": "increases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "internal_control_weaknesses",
+      "relation": "decreases",
+      "to": "monitoring_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "monitoring_effectiveness",
+      "relation": "increases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "internal_control_weaknesses",
+      "relation": "decreases",
+      "to": "integration_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "integration_effectiveness",
+      "relation": "increases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "forecasting_ability",
+    "monitoring_effectiveness",
+    "integration_effectiveness"
+   ],
+   "moderators": [
+    {
+     "construct": "acquisition_relevance_of_icw",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "forecasting_monitoring_and_integration_abilities",
+     "moderated_from": "internal_control_weaknesses",
+     "moderated_to": "post_acquisition_operating_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the ICW-performance association is spurious, driven by deal and target characteristics correlated with ICWs rather than by the internal control environment",
+    "correlated omitted variables (unobservable firm characteristics associated with both ICWs and poor performance) drive the relationship",
+    "the RNOA result is a mechanical artifact of ICW-induced accounting noise/bias in reported accruals rather than a real operating decline"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "internal_control_weaknesses",
+      "relation": "decreases",
+      "to": "market_expected_acquisition_performance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "market_expected_acquisition_performance",
+      "relation": "increases",
+      "to": "announcement_period_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_expected_acquisition_performance"
+   ],
+   "moderators": [
+    {
+     "construct": "acquisition_relevance_of_icw",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "forecasting_monitoring_and_integration_abilities",
+     "moderated_from": "internal_control_weaknesses",
+     "moderated_to": "announcement_period_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the announcement-return result is driven by deal and target characteristics correlated with ICWs rather than by the internal control environment"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "internal_control_weaknesses",
+      "relation": "decreases",
+      "to": "post_acquisition_operating_performance",
+      "from_measured": true,
+      "to_measured": true
+     },
+     {
+      "from": "post_acquisition_operating_performance",
+      "relation": "increases",
+      "to": "post_acquisition_abnormal_returns",
+      "from_measured": true,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "post_acquisition_operating_performance"
+   ],
+   "moderators": [
+    {
+     "construct": "acquisition_relevance_of_icw",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "forecasting_monitoring_and_integration_abilities",
+     "moderated_from": "internal_control_weaknesses",
+     "moderated_to": "post_acquisition_abnormal_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the post-acquisition return result is driven by deal and target characteristics correlated with ICWs rather than by the internal control environment"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public acquirers, excluding financial services and utilities industries)",
+  "country_region": "United States (U.S. public acquirers purchasing U.S. targets)",
+  "time_period": "2002-2011",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,042 acquisitions (matched with 2,042 control firms; 4,084 total observations)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Audit Analytics",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "BoardEx",
+    "category": "boardex",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thompson Financial 13F databases",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Eventus",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "20,889 firm-years used to estimate the propensity-to-acquire model",
+    "dv": {
+     "name": "Acquisition decision (acquirer)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Natural Log Market Cap ($M)",
+      "measure": "natural log of market capitalization",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free Cash Flow",
+      "measure": "Free Cash Flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "measure": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional Ownership %",
+      "measure": "percentage of stock held by institutional investors",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Institutional Ownership Concentration",
+      "measure": "institutional ownership concentration",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Board Size",
+      "measure": "Board Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Board Independence",
+      "measure": "Board Independence",
+      "source": "BoardEx"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Year indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": null,
+    "sample": "univariate mean/median difference tests for 1,980 no-ICW vs 62 ICW acquirers (and matched non-acquirers)",
+    "dv": {
+     "name": "Change in operating performance",
+     "measure": "changes in RNOA, Change in Profitability, Change in Gross Margin, Change in Return on Equity (average two years after effective date minus average two years before announcement)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Any ICW status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Change in RNOA",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Any ICW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Any ICW x Acquirer",
+      "measure": "interaction of Any ICW and Acquirer (primary variable of interest)",
+      "source": "Audit Analytics; SDC"
+     },
+     {
+      "name": "AQ-Relevant ICW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Other ICW",
+      "measure": "indicator for ICWs not classified as AQ-Relevant",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "AQ-Relevant ICW x Acquirer",
+      "measure": "interaction of AQ-Relevant ICW and Acquirer",
+      "source": "Audit Analytics; SDC"
+     },
+     {
+      "name": "Other ICW x Acquirer",
+      "measure": "interaction of Other ICW and Acquirer",
+      "source": "Audit Analytics; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior RNOA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book-to-Market",
+      "source": "Compustat"
+     },
+     {
+      "name": "Momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free Cash Flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional Ownership %",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Institutional Ownership Concentration",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Board Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Board Independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Ln Firm Age",
+      "source": "Compustat"
+     },
+     {
+      "name": "Inventory",
+      "source": "Compustat"
+     },
+     {
+      "name": "Segments",
+      "source": "Compustat"
+     },
+     {
+      "name": "Auditor Resignation",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Foreign",
+      "source": "Compustat"
+     },
+     {
+      "name": "Restructure",
+      "source": "Compustat"
+     },
+     {
+      "name": "Losses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Big 6 Auditor",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Year Indicators",
+      "source": ""
+     },
+     {
+      "name": "Industry Indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Announcement Period BHARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Any ICW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Acquirer",
+      "measure": "indicator of whether the firm is an acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Any ICW x Acquirer",
+      "measure": "interaction of Any ICW and Acquirer (primary variable of interest)",
+      "source": "Audit Analytics; SDC"
+     },
+     {
+      "name": "AQ-Relevant ICW x Acquirer",
+      "measure": "interaction of AQ-Relevant ICW and Acquirer",
+      "source": "Audit Analytics; SDC"
+     },
+     {
+      "name": "Other ICW x Acquirer",
+      "measure": "interaction of Other ICW and Acquirer",
+      "source": "Audit Analytics; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior RNOA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book-to-Market",
+      "source": "Compustat"
+     },
+     {
+      "name": "Momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free Cash Flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional Ownership %",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Institutional Ownership Concentration",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Board Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Board Independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Ln Firm Age",
+      "source": "Compustat"
+     },
+     {
+      "name": "Inventory",
+      "source": "Compustat"
+     },
+     {
+      "name": "Segments",
+      "source": "Compustat"
+     },
+     {
+      "name": "Auditor Resignation",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Foreign",
+      "source": "Compustat"
+     },
+     {
+      "name": "Restructure",
+      "source": "Compustat"
+     },
+     {
+      "name": "Losses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Big 6 Auditor",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Year Indicators",
+      "source": ""
+     },
+     {
+      "name": "Industry Indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Post-Acquisition Period BHARs",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Any ICW",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Acquirer",
+      "measure": "indicator of whether the firm is an acquirer",
+      "source": "SDC"
+     },
+     {
+      "name": "Any ICW x Acquirer",
+      "measure": "interaction of Any ICW and Acquirer (primary variable of interest)",
+      "source": "Audit Analytics; SDC"
+     },
+     {
+      "name": "AQ-Relevant ICW x Acquirer",
+      "measure": "interaction of AQ-Relevant ICW and Acquirer",
+      "source": "Audit Analytics; SDC"
+     },
+     {
+      "name": "Other ICW x Acquirer",
+      "measure": "interaction of Other ICW and Acquirer",
+      "source": "Audit Analytics; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Prior RNOA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln Market Cap",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book-to-Market",
+      "source": "Compustat"
+     },
+     {
+      "name": "Momentum",
+      "source": "CRSP"
+     },
+     {
+      "name": "Total Accruals",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "Free Cash Flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Institutional Ownership %",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Institutional Ownership Concentration",
+      "source": "Thompson Financial 13F"
+     },
+     {
+      "name": "Board Size",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Board Independence",
+      "source": "BoardEx"
+     },
+     {
+      "name": "Ln Firm Age",
+      "source": "Compustat"
+     },
+     {
+      "name": "Inventory",
+      "source": "Compustat"
+     },
+     {
+      "name": "Segments",
+      "source": "Compustat"
+     },
+     {
+      "name": "Auditor Resignation",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Foreign",
+      "source": "Compustat"
+     },
+     {
+      "name": "Restructure",
+      "source": "Compustat"
+     },
+     {
+      "name": "Losses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Big 6 Auditor",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Year Indicators",
+      "source": ""
+     },
+     {
+      "name": "Industry Indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8: Likelihood of Post-Acquisition Restructuring Charges (alternate measure)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "expanded sample of acquisitions not restricted to RNOA data availability or a suitable peer match; removes deals closing after Dec 31, 2008 (SFAS 141R)",
+    "dv": {
+     "name": "Post-acquisition restructuring charge",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Any ICW",
+      "measure": "indicator for any SOX Section 302 material weakness at the acquirer prior to announcement",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "AQ-Relevant ICW",
+      "measure": "indicator for ICWs relevant to acquisitions",
+      "source": "Audit Analytics"
+     },
+     {
+      "name": "Other ICW",
+      "measure": "indicator for ICWs not relevant to acquisitions",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Controls following Bens and Johnston (2009)",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Untabulated: Likelihood of Post-Acquisition Goodwill Impairment (alternate measure)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "goodwill impairments not linkable to specific acquisitions with SDC/Compustat data",
+    "dv": {
+     "name": "Post-acquisition goodwill impairment",
+     "measure": "likelihood of recording a subsequent goodwill impairment (following Goodman et al. 2014 methodology)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "ICW acquirer",
+      "measure": "indicator for acquirer with a SOX Section 302 ICW prior to announcement",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Untabulated: Within-firm Change in Internal Control Effectiveness analysis",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "29 acquirers with at least one acquisition made with an ICW and one made without an ICW",
+    "dv": {
+     "name": "Change in RNOA",
+     "measure": "changes in RNOA (pre- to post-acquisition) compared within the same acquiring firm across an ICW deal and a non-ICW deal",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "ICW presence at deal",
+      "measure": "whether the acquirer had an ICW just before a given acquisition (within-firm comparison across the firm's own multiple deals)",
+      "source": "Audit Analytics"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "goodwill impairments",
+    "acquisitions"
+   ],
+   "mechanism_named": "managerial discretion in applying impairment rules",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "restructuring charges",
+    "acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "icws at the target firm",
+    "acquisition outcomes",
+    "financial reporting quality"
+   ],
+   "mechanism_named": "their impact on financial reporting quality",
+   "proposed_edge": {
+    "from": "icws at the target firm",
+    "relation": "affects",
+    "to": "acquisition outcomes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "target characteristics"
+   ],
+   "mechanism_named": "correlated omitted variables problems",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "conclusion",
+   "constructs": [
+    "icws at the acquirer",
+    "target characteristics"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "target characteristics",
+    "on_path": [
+     "icws at the acquirer",
+     "acquisition performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "icw effects",
+    "acquisition underperformance",
+    "forecasting",
+    "monitoring",
+    "integration"
+   ],
+   "mechanism_named": "forecasting, monitoring, and integration",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "ineffective internal control over financial reporting",
+    "other significant operational decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ineffective internal control over financial reporting",
+    "relation": "affects",
+    "to": "other significant operational decisions"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

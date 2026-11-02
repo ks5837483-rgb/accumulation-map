@@ -1,0 +1,1053 @@
+{
+ "paper_id": "10.1287_mnsc.2020.3947",
+ "title": "Bank Dependence and Bank Financing in Corporate M&amp;A",
+ "journal": "MNSC",
+ "year": 2022,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "certification theory",
+  "financial intermediation theory",
+  "implicit contracting theory",
+  "hold-up theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_financing",
+      "relation": "increases",
+      "to": "certification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "certification",
+      "relation": "increases",
+      "to": "acquirer_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "bank_financing",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquirer_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "certification",
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "bank_dependence",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "certification",
+     "moderated_from": "bank_financing",
+     "moderated_to": "acquirer_cumulative_abnormal_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    },
+    {
+     "construct": "bank_skin_in_the_game",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "bank_financing",
+     "moderated_to": "acquirer_cumulative_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1a"
+    },
+    {
+     "construct": "relationship_bank",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "bank_financing",
+     "moderated_to": "acquirer_cumulative_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1b"
+    },
+    {
+     "construct": "institutional_investor_lender",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "bank_financing",
+     "moderated_to": "acquirer_cumulative_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1c"
+    },
+    {
+     "construct": "bank_reputation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "certification",
+     "moderated_from": "bank_financing",
+     "moderated_to": "acquirer_cumulative_abnormal_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1d"
+    },
+    {
+     "construct": "bridge_loan",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "bank_financing",
+     "moderated_to": "acquirer_cumulative_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1e"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "certification of an existing prior banking relationship (relationship-bank monitoring) rather than certification of the M&A bank financing",
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_dependence",
+      "relation": "increases",
+      "to": "hold_up",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "hold_up",
+      "relation": "increases",
+      "to": "loan_pricing",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "hold_up"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_dependence",
+      "relation": "increases",
+      "to": "hold_up",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "hold_up",
+      "relation": "increases",
+      "to": "restrictive_nonprice_loan_terms",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "hold_up"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "future access to the bond market lets banks anticipate cheaper alternative financing, explaining why they do not charge higher spreads",
+    "prior outstanding loans with restrictive covenants/collateral already control borrower risk, reducing the need for tighter M&A loan terms"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_financing",
+      "relation": "increases",
+      "to": "implicit_contracting",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "implicit_contracting",
+      "relation": "increases",
+      "to": "future_lending_share",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "implicit_contracting"
+   ],
+   "moderators": [
+    {
+     "construct": "bank_dependence",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "implicit_contracting",
+     "moderated_from": "bank_financing",
+     "moderated_to": "future_lending_share",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the postdeal increase in lending share is driven by other unobservable factors about these banks rather than informational advantage accumulated through M&A financing"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public acquirers; excluding financial firms (SIC 6000-6999) and utility firms (SIC 4900-4949))",
+  "country_region": "U.S. (domestic M&As by U.S. public acquirers; targets are public U.S. firms or nonpublic subsidiaries of U.S. firms)",
+  "time_period": "1990-2017",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "8,449 M&A transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters LPC Dealscan database (Thomson Financial Dealscan)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Michael Roberts Dealscan-to-CRSP/Compustat matching file (supplemented with additional hand matching)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "BF (bank-financed)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database"
+     },
+     {
+      "name": "BF × Small",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database / Compustat"
+     },
+     {
+      "name": "BF × Not Rated",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Public",
+      "source": "SDC"
+     },
+     {
+      "name": "All-cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Ln(Mcap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "IO (institutional ownership)",
+      "source": ""
+     },
+     {
+      "name": "Tobin's q",
+      "source": "Compustat"
+     },
+     {
+      "name": "FreeCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Holding",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "N Analyst",
+      "source": ""
+     },
+     {
+      "name": "Run-up",
+      "source": "CRSP"
+     },
+     {
+      "name": "HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "Uniqueness",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects / Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "BF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database"
+     },
+     {
+      "name": "BF × Small",
+      "measure": "interaction of BF with Small (deflated total asset less than sample median)",
+      "source": "Compustat / Dealscan"
+     },
+     {
+      "name": "BF × Not Rated",
+      "measure": "interaction of BF with Not Rated (no credit rating)",
+      "source": "Compustat / Dealscan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics (as in Table 15)",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Deal characteristics (as in Table 15)",
+      "source": "SDC"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 12: CAR controlling for prior banking relationship (Rel_prior)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "BF × Small",
+      "measure": "interaction of BF with Small",
+      "source": "Dealscan / Compustat"
+     },
+     {
+      "name": "BF × Not Rated",
+      "measure": "interaction of BF with Not Rated",
+      "source": "Dealscan / Compustat"
+     },
+     {
+      "name": "Rel_prior and Rel_prior × bank dependence",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics (as in Table 15)",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Deal characteristics (as in Table 15)",
+      "source": "SDC"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "full sample (N=8,449); Loan vs. Bond subsample restricted to deals funded only by bank loans or bond issuance (N=3,159)",
+    "dv": {
+     "name": "CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "BF / BF_only",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dealscan / SDC"
+     },
+     {
+      "name": "BondF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "SeoF",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Interactions with Small / Not Rated",
+      "measure": "BF/BondF/SeoF/BF_only each interacted with the bank-dependence dummies",
+      "source": "Compustat / Dealscan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Deal characteristics",
+      "source": "SDC"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "N=8,416",
+    "dv": {
+     "name": "CAR3 (2nd stage); BF and BF×Small / BF×Not Rated (1st stage)",
+     "measure": "second-stage DV is CAR3, the (−1,+1) abnormal return; first-stage DVs are the endogenous BF and its interactions with bank dependence",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "BF (instrumented) and interactions with bank dependence",
+      "measure": "bank-financed dummy and its interactions with Small / Not Rated, instrumented",
+      "source": "Dealscan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Deal characteristics",
+      "source": "SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 16: Long-run performance (BHAR6M, BHAR1Y)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "N=7,994 (BHAR6M), 8,000 (BHAR1Y)",
+    "dv": {
+     "name": "BHAR6M / BHAR1Y",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "BF",
+      "measure": "bank-financed dummy",
+      "source": "Dealscan"
+     },
+     {
+      "name": "BF × Small",
+      "measure": "interaction of BF with Small",
+      "source": "Compustat / Dealscan"
+     },
+     {
+      "name": "BF × Not Rated",
+      "measure": "interaction of BF with Not Rated",
+      "source": "Compustat / Dealscan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative size",
+      "source": "SDC / Compustat"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC"
+     },
+     {
+      "name": "Tender",
+      "source": "SDC"
+     },
+     {
+      "name": "Public",
+      "source": "SDC"
+     },
+     {
+      "name": "All-cash",
+      "source": "SDC"
+     },
+     {
+      "name": "Ln(Mcap)",
+      "source": "CRSP"
+     },
+     {
+      "name": "IO",
+      "source": ""
+     },
+     {
+      "name": "Tobin's q",
+      "source": "Compustat"
+     },
+     {
+      "name": "FreeCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Holding",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "N Analyst",
+      "source": ""
+     },
+     {
+      "name": "Run-up",
+      "source": "CRSP"
+     },
+     {
+      "name": "HHI",
+      "source": "Compustat"
+     },
+     {
+      "name": "Uniqueness",
+      "source": "Compustat"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 16: Long-run operating performance (EBIT_diff)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "N=6,516",
+    "dv": {
+     "name": "EBIT_diff",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "BF",
+      "measure": "bank-financed dummy",
+      "source": "Dealscan"
+     },
+     {
+      "name": "BF × Small",
+      "measure": "interaction of BF with Small",
+      "source": "Compustat / Dealscan"
+     },
+     {
+      "name": "BF × Not Rated",
+      "measure": "interaction of BF with Not Rated",
+      "source": "Compustat / Dealscan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm and deal characteristics (same set as BHAR regressions)",
+      "source": "Compustat / CRSP / SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "all Dealscan corporate loans (M&A vs. non-M&A loans); N up to 50,277 (OLS for spread/maturity, logit for collateral, Poisson for covenants)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "Spread = all-in-drawn spread (bps) over LIBOR from Dealscan; Collateral = dummy=1 if loan secured; Ln(maturity) = log of debt maturity in months; Fin/Gen/All Cov = counts of financial, general, and total covenants",
+     "source": "Thomson Reuters LPC Dealscan database"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A Loan",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Collateral",
+      "source": "Dealscan"
+     },
+     {
+      "name": "Fin Cov / Gen Cov",
+      "source": "Dealscan"
+     },
+     {
+      "name": "Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Profitability",
+      "source": "Compustat"
+     },
+     {
+      "name": "Current ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset maturity",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(asset)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Book-to-Market",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(loansize)",
+      "source": "Dealscan"
+     },
+     {
+      "name": "Perform-pricing",
+      "source": "Dealscan"
+     },
+     {
+      "name": "Credit Spread",
+      "source": ""
+     },
+     {
+      "name": "Term Spread",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "all corporate loans; SmallNR subset has 1,012 M&A loans with spread info",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "same loan-contract term measures as Table 17 (all-in-drawn spread, collateral dummy, log maturity, covenant counts)",
+     "source": "Thomson Reuters LPC Dealscan database"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A Loan × Small / × Not Rated / × SmallNR",
+      "measure": "M&A Loan dummy interacted with bank-dependence indicators; SmallNR = one if bidder is both small and not rated",
+      "source": "Dealscan / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loan characteristics",
+      "source": "Dealscan"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 19: Total borrowing cost (TBC) and bank dependence",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "credit lines only; N=16,503",
+    "dv": {
+     "name": "TBC (Total Borrowing Cost)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters LPC Dealscan database"
+    },
+    "key_ivs": [
+     {
+      "name": "M&A Loan × Small / × Not Rated (and SmallNR)",
+      "measure": "M&A Loan dummy interacted with bank-dependence indicators",
+      "source": "Dealscan / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loan characteristics",
+      "source": "Dealscan"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 20: M&A loan-contract terms within bank-dependence subgroups (BF loans only)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters LPC Dealscan database"
+    },
+    "key_ivs": [
+     {
+      "name": "Small / Not Rated / SmallNR",
+      "measure": "bank-dependence indicators within the M&A-loan subsample",
+      "source": "Compustat / Dealscan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loan characteristics",
+      "source": "Dealscan"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 21 Panel A: Future loans and bank dependence (lending share pre/post M&A)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "N=2,597 (predeal vs. postdeal firm-period observations)",
+    "dv": {
+     "name": "Lending share",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters LPC Dealscan database"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMA",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database"
+     },
+     {
+      "name": "PostMA × Small / × Not Rated / × SmallNR",
+      "measure": "PostMA interacted with the three bank-dependence dummies",
+      "source": "Dealscan / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm controls (firm characteristics as in Table 15)",
+      "source": "Compustat / CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 21 Panel B: Placebo test on future lending share",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "placebo M&A announcement/completion dates shifted three years forward (falsification test)",
+    "sample": "N=1,664",
+    "dv": {
+     "name": "Lending share",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson Reuters LPC Dealscan database"
+    },
+    "key_ivs": [
+     {
+      "name": "Placebo",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson Reuters LPC Dealscan database"
+     },
+     {
+      "name": "Placebo × Small / × Not Rated / × SmallNR",
+      "measure": "Placebo interacted with the three bank-dependence dummies",
+      "source": "Dealscan / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm controls (firm characteristics as in Table 15)",
+      "source": "Compustat / CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 22: Cross-sectional variation in CAR (skin in game, relationship, institutional-investor loan, reputation, bridge)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR3",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Loan_Deal_ratio (and interactions)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dealscan / SDC"
+     },
+     {
+      "name": "BF_Rel / BF_NRel",
+      "measure": "BF done by a relationship vs. nonrelationship bank",
+      "source": "Dealscan"
+     },
+     {
+      "name": "BF_BankLoan / BF_IILoan",
+      "measure": "loan financing led by a bank vs. by institutional investors",
+      "source": "Dealscan"
+     },
+     {
+      "name": "BF_Big3 / BF_NBig3",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dealscan"
+     },
+     {
+      "name": "BF_Bridge / BF_NBridge",
+      "measure": "loan originated as bridge financing vs. not",
+      "source": "Dealscan"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm characteristics (as in Table 15)",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Deal characteristics (as in Table 15)",
+      "source": "SDC"
+     },
+     {
+      "name": "Firm fixed effects / Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "future bond market access",
+    "loan spreads"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "future bond market access",
+    "relation": "increases",
+    "to": "loan spreads"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "bf effect",
+    "bank-dependent firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "switching for m&a financing",
+    "returns",
+    "relationship bank"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,322 @@
+{
+ "paper_id": "10.1016_0304-405x(85)90026-1",
+ "title": "Raiders or saviors? The evidence on six controversial investors",
+ "journal": "JFE",
+ "year": 1985,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market for corporate control",
+  "agency theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "raiding_hypothesis",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "block_stock_acquisition_by_controversial_investor",
+      "relation": "increases",
+      "to": "expropriation_of_corporate_assets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expropriation_of_corporate_assets",
+      "relation": "decreases",
+      "to": "target_firm_stockholder_wealth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expropriation_of_corporate_assets"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "improved_management_hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "block_stock_acquisition_by_controversial_investor",
+      "relation": "increases",
+      "to": "improved_management_of_target_firm",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "improved_management_of_target_firm",
+      "relation": "increases",
+      "to": "target_firm_value",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "improved_management_of_target_firm"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "increase in demand for the stock (price pressure)"
+   ]
+  },
+  {
+   "hypothesis": "superior_security_analyst_hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "block_stock_acquisition_by_controversial_investor",
+      "relation": "increases",
+      "to": "perceived_undervaluation_of_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_undervaluation_of_target",
+      "relation": "increases",
+      "to": "target_firm_stock_price",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_undervaluation_of_target"
+   ],
+   "moderators": [
+    {
+     "construct": "investor_identity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "effect_derived": true,
+     "mechanism": "perceived_undervaluation_of_target",
+     "moderated_from": "block_stock_acquisition_by_controversial_investor",
+     "moderated_to": "target_firm_stock_price",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "increase in demand for the stock (price pressure)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. firms in which six investors acquired stock)",
+  "country_region": "United States (NYSE/AMEX-listed firms)",
+  "time_period": "1977-1982 (six investors); random sample 1977-1981",
+  "sample_description": "Target firms in which the six investors (Icahn, Jacobs, Lindner, Murdock, Posner, Bluhdorn) filed an initial 13(d), collected from the SEC News Digest, listed on the NYSE or AMEX with sufficient CRSP daily stock-return data; compared against a random sample of 13(d) filers",
+  "sample_size": "99 target firms (main analysis)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SEC News Digest",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "CRSP computer file of daily stock prices",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones Free Text Search",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "ABI/INFORM Data Base",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - Target firms' abnormal returns around first public announcement of stockholding",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "target firms filing initial 13(d)'s, N=99, 1977-1982",
+    "dv": {
+     "name": "target firm stockholder abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP computer file of daily stock prices"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC News Digest"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Target firm abnormal returns by sub-period, six vs random sample and by individual investor (two-sample t-test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "target firm abnormal returns over event sub-periods",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP computer file of daily stock prices"
+    },
+    "key_ivs": [
+     {
+      "name": "investor group (six controversial investors vs random sample; individual investor)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC News Digest"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Simple regressions of event day return and cumulative return on size of initial holding",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "80 target firms for which initial holding percent was reported",
+    "dv": {
+     "name": "event day return and eighty-day cumulative return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP computer file of daily stock prices"
+    },
+    "key_ivs": [
+     {
+      "name": "size of initial holding",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC News Digest"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "filing firms, six N=72 (1977-1982), random sample N=30 (1977-1981)",
+    "dv": {
+     "name": "filing firm stockholder abnormal returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP computer file of daily stock prices"
+    },
+    "key_ivs": [
+     {
+      "name": "first public announcement of stockholding (filing firm event)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC News Digest"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 6 - Event day abnormal returns for initial/intermediate/final announcements grouped by category of outcome",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "successful reorganization N=13, unsuccessful reorganization N=5, repurchase N=12, other N=39",
+    "dv": {
+     "name": "target firm event day abnormal returns and total returns by outcome",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP computer file of daily stock prices"
+    },
+    "key_ivs": [
+     {
+      "name": "category of outcome and type of follow-up event",
+      "measure": "four categories according to outcome (successful reorganization, unsuccessful reorganization, repurchase, other) x three event types (announcement of initial stock purchase, significant intermediate events, final event)",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "market role of the six"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "management changes",
+    "the six investors"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "the six investors",
+    "relation": "affects",
+    "to": "management changes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "initial abnormal returns",
+    "skills at identifying under-priced stocks"
+   ],
+   "mechanism_named": "superior security analyst hypothesis",
+   "proposed_edge": {
+    "from": "skills at identifying under-priced stocks",
+    "relation": "affects",
+    "to": "initial abnormal returns"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "corporate raider",
+    "the six investors",
+    "wealth of other stockholders"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

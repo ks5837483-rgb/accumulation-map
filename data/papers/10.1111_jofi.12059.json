@@ -1,0 +1,769 @@
+{
+ "paper_id": "10.1111_jofi.12059",
+ "title": "Corporate Innovations and Mergers and Acquisitions",
+ "journal": "JF",
+ "year": 2014,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "synergy hypothesis",
+  "asset complementarity theory",
+  "information asymmetry",
+  "theory of the firm"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "innovation_activity",
+      "relation": "increases",
+      "to": "information_sensitivity_of_assets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_sensitivity_of_assets",
+      "relation": "increases",
+      "to": "mergers_and_acquisitions_participation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_sensitivity_of_assets"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market overvaluation"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technological_overlap",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "merger_pair_formation",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "technological_overlap",
+      "relation": "increases",
+      "to": "economies_of_scale_and_scope_in_innovation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "economies_of_scale_and_scope_in_innovation",
+      "relation": "increases",
+      "to": "merger_pair_formation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "technological_overlap",
+      "relation": "increases",
+      "to": "strengthened_innovation_capability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "strengthened_innovation_capability",
+      "relation": "increases",
+      "to": "merger_pair_formation",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "economies_of_scale_and_scope_in_innovation",
+    "strengthened_innovation_capability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technological_overlap",
+      "relation": "increases",
+      "to": "technological_synergy",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "technological_synergy",
+      "relation": "increases",
+      "to": "merger_pair_formation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technological_synergy"
+   ],
+   "moderators": [
+    {
+     "construct": "product_market_overlap",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "product_market_rivalry",
+     "moderated_from": "technological_overlap",
+     "moderated_to": "merger_pair_formation",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "premerger_technological_overlap",
+      "relation": "increases",
+      "to": "technological_synergy",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "technological_synergy",
+      "relation": "increases",
+      "to": "postmerger_innovation_output",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "technological_synergy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "endogenous selection of firm pairs into the treatment group",
+    "some alternative (non-treatment) force"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (economy-wide U.S. public firms; technological-overlap measures deliberately transcend SIC/Fama-French industry classifications; financial-sector firms excluded)",
+  "country_region": "United States",
+  "time_period": "1984-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,621 deals with acquirer information available; 1,762 deals with both acquirer and target information available"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "worldwide Patent Statistical Database (PATSTAT, April 2008)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "NBER Patent Data Project (January 2011) GVKEY-patent number link",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "news articles read for each withdrawn bid (to classify reason for withdrawal)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table III, Panel A: conditional logit predicting acquirers (eq. 1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "actual acquirers vs. random / industry-and-size-matched / industry-size-and-B/M-matched control acquirers, U.S. deals 1984-2006 (1,000-draw bootstrap for random control)",
+    "dv": {
+     "name": "Event Firm (acquirer indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Patent Index",
+      "measure": "Patent Index ... as a measure of innovation output",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "Citation-Weighted Patents",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "R&D expenses",
+      "measure": "R&D expenses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Self-Cites Ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "Age of Patent Portfolio",
+      "measure": "Age of Patent Portfolio",
+      "source": "PATSTAT / NBER Patent Data Project"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "operating performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "book-to-market (B/M) ratio",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "prior year stock return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "acquirers vs. matched control acquirers, 1984-2006",
+    "dv": {
+     "name": "Event Firm (acquirer indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "level of innovation output (Patent Index / Citation-Weighted Patents)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "growth rate of innovation output",
+      "measure": "growth rates of innovation output",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "growth rate of R&D expenses",
+      "measure": "growth rates of ... R&D expenses",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "operating performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "book-to-market (B/M) ratio",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "prior year stock return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table IV, Panel A: conditional logit predicting target firms (eq. 1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "actual target firms vs. random / industry-and-size-matched / industry-size-and-B/M-matched control target firms, 1984-2006 (1,000-draw bootstrap for random control)",
+    "dv": {
+     "name": "Event Firm (target firm indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "innovation output (Patent Index / Citation-Weighted Patents)",
+      "measure": "measure of innovation output",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "R&D expenses",
+      "measure": "R&D expenses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Self-Cites Ratio",
+      "measure": "Self-Cites Ratio",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "Age of Patent Portfolio",
+      "measure": "Age of Patent Portfolio",
+      "source": "PATSTAT / NBER Patent Data Project"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "operating performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "book-to-market (B/M) ratio",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "prior year stock return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "target firms vs. matched control target firms, 1984-2006",
+    "dv": {
+     "name": "Event Firm (target firm indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "level of R&D expenses",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "growth rate of innovation output",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT / NBER Patent Data Project"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat"
+     },
+     {
+      "name": "sales growth",
+      "source": "Compustat"
+     },
+     {
+      "name": "operating performance",
+      "source": "Compustat"
+     },
+     {
+      "name": "book-to-market (B/M) ratio",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "prior year stock return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table V: conditional logit predicting merger pairs (eq. 2)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "actual deals vs. control deals involving acquirers and target firms innovative before the bid, 1984-2006 (1,000-draw bootstrap for random control)",
+    "dv": {
+     "name": "Acquirer-Target (merger pair indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Technological Proximity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT"
+     },
+     {
+      "name": "Knowledge Base Overlap",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT"
+     },
+     {
+      "name": "Acquirer's (Target's) Base Overlap Ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT"
+     },
+     {
+      "name": "Acquirer's (Target's) Cross-Cites Ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer Innovation Characteristics",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "Target Innovation Characteristics",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "Acquirer Characteristics",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Target Characteristics",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Same State",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI, Panel A: conditional logit merger pairs (eq. 2) adding Product Market Relatedness and its interactions with technological overlap",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "actual deals vs. control deals, innovative acquirers and targets, 1984-2006",
+    "dv": {
+     "name": "Acquirer-Target (merger pair indicator)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC; Compustat/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Product Market Relatedness",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hoberg and Phillips (2010)"
+     },
+     {
+      "name": "Product Market Relatedness x Technological Overlap interactions",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Hoberg and Phillips (2010); PATSTAT"
+     },
+     {
+      "name": "Technological overlap measures",
+      "measure": "our measures of technological overlap",
+      "source": "PATSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer Innovation Characteristics",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "Target Innovation Characteristics",
+      "source": "PATSTAT / NBER Patent Data Project"
+     },
+     {
+      "name": "Acquirer Characteristics",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Target Characteristics",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Diversifying",
+      "source": "SDC"
+     },
+     {
+      "name": "Same State",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VII, Panel B: difference-in-differences of postmerger innovation output (eqs. 3 and 4)",
+    "hypotheses": [
+     "H4"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Patent Index",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PATSTAT / NBER Patent Data Project"
+    },
+    "key_ivs": [
+     {
+      "name": "After",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "After x Treat",
+      "measure": "After x Treat interaction; Treat equals one for treatment deals (completed deals), and zero otherwise (control bids withdrawn)",
+      "source": "SDC"
+     },
+     {
+      "name": "Any Tech Overlap x After",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT; SDC"
+     },
+     {
+      "name": "Any Tech Overlap x After x Treat",
+      "measure": "triple interaction of Any Tech Overlap, After, and Treat",
+      "source": "PATSTAT; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VII, Panel C: falsification (placebo) tests assuming treatment onset 3 or 4 years before actual bid",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "placebo/falsification of the withdrawn-bids quasi-experiment (Roberts and Whited 2011)",
+    "sample": "five-year panel ending before actual bid announcement, treatment and control deals",
+    "dv": {
+     "name": "Patent Index",
+     "measure": "[withheld: wording matches the source]",
+     "source": "PATSTAT / NBER Patent Data Project"
+    },
+    "key_ivs": [
+     {
+      "name": "Any Tech Overlap x After x Treat (placebo timing)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PATSTAT; SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "r&d expenses",
+    "merger",
+    "operating performance",
+    "long-run performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "merger",
+    "relation": "affects",
+    "to": "r&d expenses"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "omitted time-varying variables",
+    "treatment and control samples"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "synergistic gains",
+    "product markets",
+    "technological innovations",
+    "m&as"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "m&as",
+    "relation": "affects",
+    "to": "synergistic gains"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "governance mechanisms",
+    "synergistic gains",
+    "acquirer and target firms"
+   ],
+   "mechanism_named": "governance mechanisms",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "governance mechanisms",
+    "on_path": [
+     "technological synergy-driven acquisitions",
+     "synergistic gains"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "multiple sources of synergy",
+    "likelihood of transaction incidence",
+    "product market rivalry",
+    "overlapping technologies"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": {
+    "from": "multiple sources of synergy",
+    "relation": "affects",
+    "to": "likelihood of transaction incidence"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

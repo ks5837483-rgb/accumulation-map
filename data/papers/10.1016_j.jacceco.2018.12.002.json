@@ -1,0 +1,561 @@
+{
+ "paper_id": "10.1016_j.jacceco.2018.12.002",
+ "title": "Does short-selling threat discipline managers in mergers and acquisitions decisions?",
+ "journal": "JAE",
+ "year": 2019,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "corporate governance",
+  "information economics",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "governance hypothesis (main)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "short_selling_threat",
+      "relation": "increases",
+      "to": "managerial_discipline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_discipline",
+      "relation": "increases",
+      "to": "acquirer_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_discipline"
+   ],
+   "moderators": [
+    {
+     "construct": "peer_hostile_takeover",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discipline",
+     "moderated_from": "short_selling_threat",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "governance hypothesis (main)"
+    },
+    {
+     "construct": "wealth_performance_sensitivity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discipline",
+     "moderated_from": "short_selling_threat",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "governance hypothesis (main)"
+    },
+    {
+     "construct": "pre_fas123r_period",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discipline",
+     "moderated_from": "short_selling_threat",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "governance hypothesis (main)"
+    },
+    {
+     "construct": "stock_financed_payment",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "managerial_discipline",
+     "moderated_from": "short_selling_threat",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "governance hypothesis (main)"
+    },
+    {
+     "construct": "financial_constraints",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "managerial_discipline",
+     "moderated_from": "short_selling_threat",
+     "moderated_to": "acquirer_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "governance hypothesis (main)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "institutional investors identify good (value-enhancing) managers and also lend out shares, so LS reflects manager quality rather than a short-selling governance threat",
+    "supply-side information: passive lenders (index funds/ETFs) increase lending supply when they expect the manager to make good M&A decisions"
+   ]
+  },
+  {
+   "hypothesis": "likelihood of being an acquiring firm",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "short_selling_threat",
+      "relation": "increases",
+      "to": "managerial_discipline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_discipline",
+      "relation": "decreases",
+      "to": "m_and_a_announcement_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_discipline"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "price-correction channel (post-announcement drift)",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "short_selling_activity",
+      "relation": "increases",
+      "to": "price_efficiency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "price_efficiency",
+      "relation": "decreases",
+      "to": "post_announcement_negative_return_drift",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "price_efficiency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. domestic M&A across two-digit / Fama-French five industries; no focal sector)",
+  "country_region": "United States (U.S. domestic M&A)",
+  "time_period": "2003-2012",
+  "sample_description": "Completed U.S. domestic M&A deals (acquirer <50% target shares before and >50% after acquisition; deal value >$1 million and >10% of acquirer market value), from the SDC U.S. Mergers and Acquisitions database, with acquirer financial data in COMPUSTAT, stock returns in CRSP (≥100 days before announcement), and matching equity lending-supply data in Markit; filters follow Masulis, Wang, and Xie (2007) and Chen et al. (2015)",
+  "sample_size": "452 completed M&A deals"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson-Reuters Institutional Holdings (13F)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Kenneth R. French data library (Fama-French five-industry classification)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "AcqCAR(-2,+2)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqLS(-360,-3)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Markit Data Explorers"
+     }
+    ],
+    "controls": [
+     {
+      "name": "AcqIOR (institutional ownership ratio)",
+      "source": "Thomson-Reuters Institutional Holdings (13F)"
+     },
+     {
+      "name": "AcqSize (total assets)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqLeverage (leverage)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqROA (return on assets)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqTobin's Q",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqFixedAsset (ratio of property, plant, and equipment to sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqPastStockReturn (past stock returns)",
+      "source": "CRSP"
+     },
+     {
+      "name": "AcqFreeCashFlow (free cash flow)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqNonCashWorking (non-cash working capital)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "RelativeDealSize (relative size of the deal)",
+      "source": "SDC"
+     },
+     {
+      "name": "FriendlyDeal (friendly deal dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "High-tech (high-tech dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "TenderOffer (tender offer dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "CashDeal (100% cash payment method dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "E-Index (Bebchuk, Cohen, and Ferrell 2009)",
+      "source": ""
+     },
+     {
+      "name": "G-Index (Gompers, Ishii, and Metrick 2003)",
+      "source": ""
+     },
+     {
+      "name": "two-digit industry dummies and year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Online Appendix Table 2 (Eq. 2 & 3) - Likelihood of Being an Acquiring Firm (propensity score matching + probit)",
+    "hypotheses": [],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "nearest-neighbor propensity-score-matched sample of 882 observations (441 unique treated-control pairs)",
+    "dv": {
+     "name": "Treat",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqLS (lagged)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Markit Data Explorers"
+     }
+    ],
+    "controls": [
+     {
+      "name": "AcqIOR (institutional ownership ratio)",
+      "source": "Thomson-Reuters Institutional Holdings (13F)"
+     },
+     {
+      "name": "AcqSize (total assets)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqBM (book to market ratio)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqFreeCashFlow (free cash flow)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqCash (cash to assets ratio)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqROA (return on assets)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AcqPastStockReturn (past stock returns)",
+      "source": "CRSP"
+     },
+     {
+      "name": "AcqSaleGrowth (sales growth)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "year and 2-digit industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "also run on subsamples: deals not using only cash as payment; and deals with negative announcement returns (AcqCAR(-2,+2)<=0)",
+    "dv": {
+     "name": "AcqCAR(+3,+60)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqFiveDaySI(-2,+2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Markit Data Explorers"
+     },
+     {
+      "name": "AcqCAR(-2,+2)",
+      "measure": "5-day announcement-window cumulative abnormal return (market model residuals, window (-2,+2))",
+      "source": "CRSP"
+     },
+     {
+      "name": "AcqFiveDaySI(-2,+2) x AcqCAR(-2,+2) (interaction term)",
+      "measure": "interaction of 5-day event-window short interest with 5-day announcement CAR",
+      "source": "Markit Data Explorers / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same set of acquirer- and deal-specific controls as Eq. (1) (X'_{i,t-1})",
+      "source": "COMPUSTAT / CRSP / SDC / Thomson-Reuters 13F"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B Column (2) (Eq. 5) - Industry Peers of Hostile Takeover Attempts",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "AcqCAR(-2,+2)",
+     "measure": "5-day announcement-window cumulative abnormal return for the acquirer (market model residuals, window (-2,+2))",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqLS",
+      "measure": "average ratio of shares available for lending to market capitalization",
+      "source": "Markit Data Explorers"
+     },
+     {
+      "name": "PHT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Kenneth R. French data library"
+     },
+     {
+      "name": "AcqLS x PHT (interaction term)",
+      "measure": "interaction of AcqLS with the peer-hostile-takeover dummy",
+      "source": "Markit Data Explorers / SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same set of controls as Eq. (1) (X'_{i,t-1}); two-digit industry and year dummies",
+      "source": "COMPUSTAT / CRSP / SDC / Thomson-Reuters 13F"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B Column (4) (Eq. 6) - Wealth Performance Sensitivity (ScaledWPS moderation)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "sample partitioned into three groups based on ScaledWPS",
+    "dv": {
+     "name": "AcqCAR(-2,+2)",
+     "measure": "5-day announcement-window cumulative abnormal return for the acquirer (market model residuals, window (-2,+2))",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqLS",
+      "measure": "average ratio of shares available for lending to market capitalization",
+      "source": "Markit Data Explorers"
+     },
+     {
+      "name": "AcqHighWPS",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "AcqLS x AcqHighWPS (interaction term)",
+      "measure": "interaction of AcqLS with the high wealth-performance-sensitivity dummy",
+      "source": "Markit Data Explorers"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same set of controls as Eq. (1) (X'_{i,t-1})",
+      "source": "COMPUSTAT / CRSP / SDC / Thomson-Reuters 13F"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B Column (6) (Eq. 7) - FAS 123R (PreFAS moderation)",
+    "hypotheses": [],
+    "identification": "natural_experiment",
+    "shock_or_instrument": "issuance of FAS 123R by the FASB (2004), requiring fair-value expensing of stock options after June 2005",
+    "sample": "2002-2004 (PreFAS=1) vs 2006-2008 (PreFAS=0)",
+    "dv": {
+     "name": "AcqCAR(-2,+2)",
+     "measure": "5-day announcement-window cumulative abnormal return for the acquirer (market model residuals, window (-2,+2))",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqLS",
+      "measure": "average ratio of shares available for lending to market capitalization",
+      "source": "Markit Data Explorers"
+     },
+     {
+      "name": "PreFAS",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "AcqLS x PreFAS (interaction term)",
+      "measure": "interaction of AcqLS with the pre-FAS-123R indicator",
+      "source": "Markit Data Explorers"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same set of controls as Eq. (1) (X'_{i,t-1}); year fixed effects (PreFAS main term excluded to avoid collinearity)",
+      "source": "COMPUSTAT / CRSP / SDC / Thomson-Reuters 13F"
+     }
+    ]
+   },
+   {
+    "label": "Section 5.2.1 - Instrumental Variable Estimation (quasi-indexer institutional ownership instrument)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "quasi-index investor ownership (Bushee 2001 institutional investor classification) as the instrument for LS",
+    "sample": "",
+    "dv": {
+     "name": "AcqCAR(-2,+2)",
+     "measure": "5-day announcement-window cumulative abnormal return for the acquirer (market model residuals, window (-2,+2))",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqLS (instrumented)",
+      "measure": "average ratio of shares available for lending to market capitalization, instrumented",
+      "source": "Markit Data Explorers"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same set of controls as Eq. (1) (X'_{i,t-1})",
+      "source": "COMPUSTAT / CRSP / SDC / Thomson-Reuters 13F"
+     }
+    ]
+   },
+   {
+    "label": "Section 5.2.2 - Instrumental Variable Estimation (Russell index inclusion instrument)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "Russell index inclusion as an instrumental variable for LS",
+    "sample": "",
+    "dv": {
+     "name": "AcqCAR(-2,+2)",
+     "measure": "5-day announcement-window cumulative abnormal return for the acquirer (market model residuals, window (-2,+2))",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "AcqLS (instrumented)",
+      "measure": "average ratio of shares available for lending to market capitalization, instrumented",
+      "source": "Markit Data Explorers"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same set of controls as Eq. (1) (X'_{i,t-1})",
+      "source": "COMPUSTAT / CRSP / SDC / Thomson-Reuters 13F"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

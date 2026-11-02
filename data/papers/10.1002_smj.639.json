@@ -1,0 +1,686 @@
+{
+ "paper_id": "10.1002_smj.639",
+ "title": "On the role of acquisition premium in acquisition research",
+ "journal": "SMJ",
+ "year": 2007,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "resource-based view"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "r_and_d_investment",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "competition for targets (competing bids drive up premia)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_market_to_book_ratio",
+      "relation": "decreases",
+      "to": "acquirer_realizable_growth_options",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquirer_realizable_growth_options",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquirer_realizable_growth_options"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "r_and_d_investment",
+      "relation": "increases",
+      "to": "private_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_benefits",
+      "relation": "increases",
+      "to": "acquirer_market_reaction",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_benefits"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_market_to_book_ratio",
+      "relation": "decreases",
+      "to": "private_benefits",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_benefits",
+      "relation": "increases",
+      "to": "acquirer_market_reaction",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "private_benefits"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1989-1999",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "458 acquisitions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Mergers and Acquisitions database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "U.S. Patent Office databases",
+    "category": "patents",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1, Model I (R&D -> acquisition premium)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "research and development (4-year accumulated R&D / target market value)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm's sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's return on equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "management's resistance to takeover",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "existence of competing bids",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "method of payment",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "mergers of equals",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "target firm's industry sector (two-digit SIC dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquisition timing (acquisition-year dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquirers' investment advisors (dummies for seven most common advisors)",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model II (R&D growth rate -> acquisition premium)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "research and development growth rate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm's sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's return on equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "management's resistance to takeover",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "existence of competing bids",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "method of payment",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "mergers of equals",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "target firm's industry sector (two-digit SIC dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquisition timing (acquisition-year dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquirers' investment advisors (dummies for seven most common advisors)",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model III (target market-to-book -> acquisition premium)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "14 firms with negative equity excluded (market-to-book analyses)",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "target market-to-book ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm's sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's return on equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "management's resistance to takeover",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "existence of competing bids",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "method of payment",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "mergers of equals",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "target firm's industry sector (two-digit SIC dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquisition timing (acquisition-year dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquirers' investment advisors (dummies for seven most common advisors)",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model IV (all determinants combined -> acquisition premium)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "14 firms with negative equity excluded (market-to-book included)",
+    "dv": {
+     "name": "acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Mergers and Acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "research and development (4-year accumulated R&D / target market value)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; CRSP"
+     },
+     {
+      "name": "research and development growth rate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target market-to-book ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm's sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's return on equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "management's resistance to takeover",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "existence of competing bids",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "method of payment",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "mergers of equals",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "target firm's industry sector (two-digit SIC dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquisition timing (acquisition-year dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquirers' investment advisors (dummies for seven most common advisors)",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model V (acquisition premium -> acquirer CAR)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal returns (acquirer)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition premium",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm's sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's return on equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "management's resistance to takeover",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "existence of competing bids",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "method of payment",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "mergers of equals",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "target firm's industry sector (two-digit SIC dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquisition timing (acquisition-year dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquirers' investment advisors (dummies for seven most common advisors)",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model VI (target market-to-book -> acquirer CAR)",
+    "hypotheses": [
+     "H3",
+     "H4"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "14 firms with negative equity excluded (market-to-book included)",
+    "dv": {
+     "name": "cumulative abnormal returns (acquirer)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target market-to-book ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP; COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm's sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's return on equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "management's resistance to takeover",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "existence of competing bids",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "method of payment",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "mergers of equals",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "target firm's industry sector (two-digit SIC dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquisition timing (acquisition-year dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquirers' investment advisors (dummies for seven most common advisors)",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ]
+   },
+   {
+    "label": "Table 1, Model VII (R&D growth rate -> acquirer CAR)",
+    "hypotheses": [
+     "H3",
+     "H4"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "cumulative abnormal returns (acquirer)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "research and development growth rate",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target firm's sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's debt ratio",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "target firm's return on equity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "management's resistance to takeover",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "existence of competing bids",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "industry relatedness",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "method of payment",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "tender offers",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "mergers of equals",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "target firm's industry sector (two-digit SIC dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquisition timing (acquisition-year dummies)",
+      "source": "SDC Mergers and Acquisitions database"
+     },
+     {
+      "name": "acquirers' investment advisors (dummies for seven most common advisors)",
+      "source": "SDC Mergers and Acquisitions database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": []
+}

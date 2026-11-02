@@ -1,0 +1,739 @@
+{
+ "paper_id": "10.1093_rof_rfaa037",
+ "title": "Financial Media, Price Discovery, and Merger Arbitrage",
+ "journal": "RF",
+ "year": 2020,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "efficient markets hypothesis",
+  "limits to arbitrage",
+  "underreaction / slow-moving information",
+  "limited attention theory",
+  "textual analysis of media"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "media_content",
+      "relation": "increases",
+      "to": "information_not_yet_incorporated_in_stock_prices",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_not_yet_incorporated_in_stock_prices",
+      "relation": "increases",
+      "to": "subsequent_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_not_yet_incorporated_in_stock_prices"
+   ],
+   "moderators": [
+    {
+     "construct": "high_yield_spread",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_not_yet_incorporated_in_stock_prices",
+     "moderated_from": "media_content",
+     "moderated_to": "subsequent_stock_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "high-yield spread interaction"
+    },
+    {
+     "construct": "merger_monday",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "media_information_precision",
+     "moderated_from": "media_content",
+     "moderated_to": "subsequent_stock_return",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Merger Monday"
+    },
+    {
+     "construct": "top_news_sources",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_not_yet_incorporated_in_stock_prices",
+     "moderated_from": "media_content",
+     "moderated_to": "subsequent_stock_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "top news sources"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "returns reflect efficient-market compensation for risk under a misspecified asset pricing model, not underreaction",
+    "the predictable returns are compensation for systematic risk"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "media_content_threshold",
+      "relation": "increases",
+      "to": "probability_of_merger_completion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "probability_of_merger_completion",
+      "relation": "increases",
+      "to": "risk_adjusted_arbitrage_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "media_content_threshold",
+      "relation": "decreases",
+      "to": "trading_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "trading_costs",
+      "relation": "decreases",
+      "to": "risk_adjusted_arbitrage_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "probability_of_merger_completion",
+    "trading_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the arbitrage alpha reflects known merger-arbitrage risk premia / limits to arbitrage rather than media information"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "media_content",
+      "relation": "increases",
+      "to": "aggregated_information_about_merger_completion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "aggregated_information_about_merger_completion",
+      "relation": "increases",
+      "to": "ex_post_merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "aggregated_information_about_merger_completion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the predictive words are spurious artifacts of data dredging rather than economically meaningful content"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "media_coverage",
+      "relation": "increases",
+      "to": "media_manipulation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "media_manipulation",
+      "relation": "decreases",
+      "to": "merger_arbitrage_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "media_manipulation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "weak_modal_words",
+      "relation": "increases",
+      "to": "uncertainty_about_merger_completion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "uncertainty_about_merger_completion",
+      "relation": "decreases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "uncertainty_about_merger_completion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "tonal_words",
+      "relation": "increases",
+      "to": "favorable_information_about_merger",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_information_about_merger",
+      "relation": "increases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "favorable_information_about_merger"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (non-US companies removed to avoid cross-border mergers)",
+  "time_period": "1999-2009 (main sample; extended-sample robustness check runs through the beginning of 2016)",
+  "sample_description": "Merger deals from Thomson Reuters SDC Platinum (disclosed value M&A, tender offers, exchange offers), with both target and acquirer being US public companies; challenged deals, self-tenders/recapitalizations, and strongly regulated industries excluded; keep deals completed or withdrawn where acquirer owns >50% after and purchases >=20% of shares; keep the largest 1,200 deals by deal value; matched to press articles from Dow Jones Factiva, stock data from CRSP, and accounting data from Compustat",
+  "sample_size": "1,107 mergers (after merging all databases; 130,589 press articles from Factiva)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "articles released on the announcement day only",
+    "dv": {
+     "name": "ex post merger completion",
+     "measure": "an ex post merger completion dummy (completion vs. withdrawal)",
+     "source": "Thomson Reuters SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "ex ante media content",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "merger arbitrage returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "ContentDA (media content)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva"
+     },
+     {
+      "name": "CoverageDA (media coverage)",
+      "measure": "EWMA-adjusted media coverage surprises, announcement day",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(Tar. cash/total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Acq. cash/total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Tar. B/M)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "log(Acq. B/M)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "log(Tar. size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "log(Acq. size)",
+      "source": "CRSP"
+     },
+     {
+      "name": "rDA,Tar (target announcement-day return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "rDA,Acq (acquirer announcement-day return)",
+      "source": "CRSP"
+     },
+     {
+      "name": "Unsolicited",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Stock deal",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Premium",
+      "source": "SDC Platinum"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "media measures restricted to top news sources (Dow Jones News Service / top newspapers); newspaper columns have fewer than 200 observations",
+    "dv": {
+     "name": "merger arbitrage returns",
+     "measure": "cumulative merger arbitrage returns from first trading day after announcement until 12 trading days later",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "media content (top news)",
+      "measure": "media-implied probability of merger completion constructed only from top news sources (top newswire Dow Jones News Service; top newspapers)",
+      "source": "Dow Jones Factiva"
+     },
+     {
+      "name": "media coverage (top news)",
+      "measure": "EWMA-adjusted media coverage surprises from top news sources only",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control set as Table V (target/acquirer cash, B/M, size, announcement returns, Unsolicited, Stock deal, Premium)",
+      "source": "Compustat/CRSP/SDC"
+     }
+    ]
+   },
+   {
+    "label": "Figure 4. Slow-moving information (cross-sectional regressions varying the holding period 1-30 days)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "separate cross-sectional regression per holding period (1-30 days)",
+    "dv": {
+     "name": "long-only merger arbitrage return",
+     "measure": "cumulative long-only merger arbitrage return over holding periods of 1 to 30 trading days",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "media content measure",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same controls as Table V",
+      "source": "Compustat/CRSP/SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "daily time series of merger arbitrage portfolio returns (equal-weighted)",
+    "dv": {
+     "name": "merger arbitrage portfolio returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Content lagged",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva"
+     },
+     {
+      "name": "Coverage lagged",
+      "measure": "lagged media coverage capturing press/newswire articles released per deal day",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "rMkt-rf (market excess return)",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "SMB",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "HML",
+      "source": "Fama-French factors"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "daily time series, value-weighted",
+    "dv": {
+     "name": "value-weighted merger arbitrage returns",
+     "measure": "value-weighted long-only (rTar-rf) and long-short (rTar-drAcq) merger arbitrage returns; returns value-weighted using target's market capitalization",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "lagged value-weighted media content",
+      "measure": "lagged value-weighted media-implied completion probability, weighted using acquirer's market capitalization",
+      "source": "Dow Jones Factiva"
+     },
+     {
+      "name": "lagged value-weighted media coverage",
+      "measure": "lagged value-weighted number of press articles released, weighted using acquirer's market capitalization",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "rMkt-rf (market excess return)",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "SMB",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "HML",
+      "source": "Fama-French factors"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "merger arbitrage portfolio returns",
+     "measure": "returns of long-only (rTar-rf) and long-short (rTar-drAcq) merger arbitrage portfolios",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Content lagged",
+      "measure": "lagged textual media content (media-implied completion probability)",
+      "source": "Dow Jones Factiva"
+     },
+     {
+      "name": "High-yield spread",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Federal Reserve Bank of St. Louis"
+     },
+     {
+      "name": "Content lagged * high-yield spread (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva / Federal Reserve Bank of St. Louis"
+     }
+    ],
+    "controls": [
+     {
+      "name": "rMkt-rf (market excess return)",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "SMB",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "HML",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "Coverage lagged",
+      "source": "Dow Jones Factiva"
+     }
+    ]
+   },
+   {
+    "label": "Table XI. Merger Monday (Content lagged x Tuesday interaction)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "one specification restricts to a 577-observation Tuesday subsample; interaction specification uses full sample (2,820)",
+    "dv": {
+     "name": "merger arbitrage portfolio returns",
+     "measure": "long-only and long-short merger arbitrage portfolio returns (Tuesday returns)",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "Content lagged",
+      "measure": "lagged textual media content",
+      "source": "Dow Jones Factiva"
+     },
+     {
+      "name": "Tuesday dummy",
+      "measure": "dummy for Tuesday's returns (media information released on Monday, lagged)",
+      "source": "calendar / hand-constructed"
+     },
+     {
+      "name": "Content lagged * Tuesday (interaction)",
+      "measure": "interaction of lagged media content with the Monday/Tuesday dummy",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "rMkt-rf (market excess return)",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "SMB",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "HML",
+      "source": "Fama-French factors"
+     },
+     {
+      "name": "Coverage lagged",
+      "source": "Dow Jones Factiva"
+     }
+    ]
+   },
+   {
+    "label": "Table XII. Weak modal words predict merger outcomes",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ex post merger completion",
+     "measure": "actual merger outcome dummy (completion = one, withdrawal = zero)",
+     "source": "Thomson Reuters SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "fraction of weak modal words",
+      "measure": "fraction of weak modal words (uncertainty words) in press/newswire articles as an alternative ex ante media content measure",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table XIII. Tonal words predict merger outcomes",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ex post merger completion",
+     "measure": "a merger completion dummy variable",
+     "source": "Thomson Reuters SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "ex ante media content (tonal words)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva / Loughran and McDonald (2011) word lists"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table XV. Regularized logit predicts merger completion",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ex post merger completion",
+     "measure": "an ex post merger completion dummy",
+     "source": "Thomson Reuters SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "ex ante media content (regularized logit)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "portfolio/trading-strategy sort by completion-probability threshold",
+    "dv": {
+     "name": "risk-adjusted annualized returns (alphas)",
+     "measure": "risk-adjusted annualized returns (alphas) from a trading strategy that removes all mergers with completion probability below a threshold",
+     "source": "Center for Research in Security Prices (CRSP)"
+    },
+    "key_ivs": [
+     {
+      "name": "media content (random forests)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Dow Jones Factiva"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "media coverage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "information processing by financial media",
+    "number of merger deals announced"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "textual analysis",
+    "information aggregation in financial markets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

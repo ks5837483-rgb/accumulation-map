@@ -1,0 +1,663 @@
+{
+ "paper_id": "10.1093_rfs_hhp043",
+ "title": "Investment Banks as Insiders and the Market for Corporate Control",
+ "journal": "RFS",
+ "year": 2009,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "asymmetric information",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_advisory_stake",
+      "relation": "increases",
+      "to": "inside_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inside_information",
+      "relation": "increases",
+      "to": "probability_of_becoming_target",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inside_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_advisory_stake",
+      "relation": "increases",
+      "to": "inside_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inside_information",
+      "relation": "increases",
+      "to": "target_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inside_information"
+   ],
+   "moderators": [
+    {
+     "construct": "bidder_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "bidder_susceptibility_to_advisor_influence",
+     "moderated_from": "investment_bank_advisory_stake",
+     "moderated_to": "target_premium",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sample selection bias, because the advisor's stake is itself related to the probability of the bid so the premium relation could be a selection artifact"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "advisory_relationship",
+      "relation": "increases",
+      "to": "inside_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inside_information",
+      "relation": "increases",
+      "to": "trading_strategy_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "inside_information"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the advisory bank's proprietary trading desk and asset management arm simply have superior forecasting/stock-picking ability rather than inside information"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_distance",
+      "relation": "decreases",
+      "to": "information_about_target",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_about_target",
+      "relation": "increases",
+      "to": "probability_of_taking_position",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_about_target"
+   ],
+   "moderators": [
+    {
+     "construct": "advisory_relationship",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_about_target",
+     "moderated_from": "geographic_distance",
+     "moderated_to": "probability_of_taking_position",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_advisory_stake",
+      "relation": "increases",
+      "to": "advisor_incentive_to_influence_deal_outcome",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "advisor_incentive_to_influence_deal_outcome",
+      "relation": "increases",
+      "to": "probability_of_success",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "advisor_incentive_to_influence_deal_outcome"
+   ],
+   "moderators": [
+    {
+     "construct": "bidder_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "bidder_susceptibility_to_advisor_influence",
+     "moderated_from": "investment_bank_advisory_stake",
+     "moderated_to": "probability_of_success",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P5"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_advisory_stake",
+      "relation": "increases",
+      "to": "advisor_interest_in_deal_completion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "advisor_interest_in_deal_completion",
+      "relation": "increases",
+      "to": "target_termination_fees",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "advisor_interest_in_deal_completion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the bidder's board hired a deal-advocate advisor and gave it a stake to help the bidder complete the deal (i.e. a beneficial toehold-like service), not self-interested manipulation"
+   ]
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "investment_bank_advisory_stake",
+      "relation": "increases",
+      "to": "target_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_overvaluation",
+      "relation": "decreases",
+      "to": "postmerger_profitability",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "scarcely monitored, empire-building bidder managers choose overvalued targets and overpay, so poor viability reflects bad governance rather than the advisor's stake"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. M&A market; financial firms excluded)",
+  "country_region": "United States (U.S. targets)",
+  "time_period": "1984-2003 (January 1984-February 2003)",
+  "sample_description": "M&A transactions with listed U.S. targets from the SDC M&A database, with the target CUSIP matched to CRSP and accounting data from COMPUSTAT; financial firms excluded",
+  "sample_size": "1641"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "13F Spectrum database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "database of financial conglomerates (“brands”), manually assembled from public sources",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "HRFI M&A Arbitrage Index",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "top-fifty most active M&A advisory brands each quarter, positions from q(−7) to q(2)",
+    "dv": {
+     "name": "brand position in upcoming target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "13F Spectrum database"
+    },
+    "key_ivs": [
+     {
+      "name": "advisory vs nonadvisory brand",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A database + 13F Spectrum database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "1641 deals split into advisor-takes-position (424) vs not (1217)",
+    "dv": {
+     "name": "bidder/target characteristics",
+     "measure": "Book-to-Market, Log(Size), ROE, Sales Growth, Cash Holdings for bidder and target, plus RRV (Rhodes-Kropf, Robinson, and Viswanathan 2005) valuation error, compared by whether advisor takes position",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "advisor takes position",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F Spectrum database"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3: Probability of becoming a target",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "matched set of potential targets (same two-digit SIC industry, size within 30% band of market cap), n=23,283",
+    "dv": {
+     "name": "becoming a takeover target",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Ownership by Adv. ($)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "Ownership by Adv.",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "Ownership by Adv. Dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F Spectrum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional Ownership",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "Change in Arbitrage Capital",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "ROE",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Log(B/M)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Growth of Sales",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Accounting Liquidity",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "P/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "D/E",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Volatility",
+      "source": "CRSP"
+     },
+     {
+      "name": "Lagged Returns",
+      "source": "CRSP"
+     },
+     {
+      "name": "Industry Herfindahl Index",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Time fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry (two-digit SIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Short-term premium (OLS with Heckman two-step selection correction)",
+    "hypotheses": [],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "n=1526 deals; standard errors clustered at two-digit SIC industry level",
+    "dv": {
+     "name": "target premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Ownership by Advisor to Acquirer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "Ownership by Advisor to Target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "EXPERIENCE interaction",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC M&A database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Institutional Ownership",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "Change in Arbitrage Capital",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "Top 3 IB Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "Indep. Inv. Advisor to Acquirer Dummy",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "Indep. Inv. Advisor to Target Dummy",
+      "source": "13F Spectrum database"
+     },
+     {
+      "name": "CASH Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "MERGER Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "HOSTILE Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "Same Industry Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "TOEHOLD Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "POISON Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "CLEANUP Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "PRECOMP Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "POSTCOMP Dummy",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "Residuals of target termination fee",
+      "source": "SDC M&A database"
+     },
+     {
+      "name": "Heckman Lambda",
+      "source": ""
+     },
+     {
+      "name": "Target and Acquirer controls",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Time fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry (SIC2) fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B: Fama-French-Carhart regressions of arbitrage strategy returns",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "230 monthly calendar-time portfolio observations",
+    "dv": {
+     "name": "net-of-risk (alpha) portfolio return of arbitrage strategy",
+     "measure": "monthly calendar-time portfolio returns (value-weighted, Mitchell-Pulvino 2001 and Baker-Savasoglu 2002 methodologies) regressed on mktrf, smb, hml, umd factors; alpha is the net-of-risk excess return",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "trading strategy type (AI vs ABI)",
+      "measure": "AI = long target/short bidder the day after announcement if advisors have a position; ABI = long target/short bidder at end of quarter before deal announced if advisors have a stake; plus long-ABI-short-AI portfolio",
+      "source": "13F Spectrum database + SDC M&A database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "mktrf (market excess return factor)",
+      "source": "CRSP"
+     },
+     {
+      "name": "smb (size factor)",
+      "source": ""
+     },
+     {
+      "name": "hml (value factor)",
+      "source": ""
+     },
+     {
+      "name": "umd (momentum factor)",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "transfer of information",
+    "asset managers of the brand",
+    "investment banking arm"
+   ],
+   "mechanism_named": "transfer of information",
+   "proposed_edge": {
+    "from": "investment banking arm",
+    "relation": "affects",
+    "to": "asset managers of the brand"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "deal-advocate/advisor",
+    "high-powered incentives"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "advisory banks",
+    "bidders",
+    "bank intervention with the bidder"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "advisory banks",
+    "relation": "affects",
+    "to": "bidders"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "advisory stake",
+    "outcome of the deal",
+    "deal-advocate/advisor",
+    "high-powered incentives"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

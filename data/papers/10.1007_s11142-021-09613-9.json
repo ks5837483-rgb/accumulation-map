@@ -1,0 +1,1273 @@
+{
+ "paper_id": "10.1007_s11142-021-09613-9",
+ "title": "Unpatented innovation and merger synergies",
+ "journal": "RAS",
+ "year": 2021,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "bargaining theory",
+  "proprietary cost theory",
+  "synergy theory of mergers"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unpatented_innovation",
+      "relation": "increases",
+      "to": "unrecognized_innovation_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "unrecognized_innovation_value",
+      "relation": "increases",
+      "to": "merger_synergy",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "unrecognized_innovation_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unpatented_innovation",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquirer_wealth_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "unpatented_innovation",
+      "relation": "decreases",
+      "to": "target_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining_power",
+      "relation": "increases",
+      "to": "target_relative_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "target_bargaining_power"
+   ],
+   "moderators": [
+    {
+     "construct": "unpatented_technology_versus_in_process_rd",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "target_bargaining_power",
+     "moderated_from": "unpatented_innovation",
+     "moderated_to": "acquirer_wealth_gains",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirers earn higher gains because they are better informed about the target's innovations (own related research experience or prior R&D partnership), not because the target's bargaining power is weakened"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States (publicly traded U.S. acquirers and targets)",
+  "time_period": "2001-2015",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,035 mergers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR filings (purchase price allocation disclosures)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Kogan et al. (2017) patent value database",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Google Patent website",
+    "category": "patents",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Model (1): synergy on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of the purchase price allocated to in-process R&D, fully attributable to unpatented innovation (IPR&D equals IPRD_UNPATENT)",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (2): acquirer return on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "579 mergers with targets having no patents in the 20 years prior",
+    "dv": {
+     "name": "ACAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of the purchase price allocated to in-process R&D, fully attributable to unpatented innovation",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (3): target premium on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "579 no-patent-target mergers (PREMIUM available subset)",
+    "dv": {
+     "name": "PREMIUM",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC/CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "fraction of purchase price allocated to technology, fully unpatented (no pre-merger patents)",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of purchase price allocated to in-process R&D, fully unpatented",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (4): relative target gain on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "579 no-patent-target mergers",
+    "dv": {
+     "name": "TGAIN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "fraction of purchase price allocated to technology, fully unpatented",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of purchase price allocated to in-process R&D, fully unpatented",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (5): adjusted synergy (ADJ_SYN) on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "579 no-patent-target mergers",
+    "dv": {
+     "name": "ADJ_SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "fraction of purchase price allocated to technology, fully unpatented",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of purchase price allocated to in-process R&D, fully unpatented",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (6): withdrawn-deal-adjusted synergy (WDADJ_SYN) on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "price reactions to exogenously withdrawn deals (Wang 2018) as proxy for standalone value change",
+    "sample": "523 no-patent-target mergers with withdrawn-deal adjustment",
+    "dv": {
+     "name": "WDADJ_SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "fraction of purchase price allocated to technology, fully unpatented",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of purchase price allocated to in-process R&D, fully unpatented",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (7): adjusted acquirer return (ADJ_ACAR) on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "579 no-patent-target mergers",
+    "dv": {
+     "name": "ADJ_ACAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "fraction of purchase price allocated to technology, fully unpatented",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of purchase price allocated to in-process R&D, fully unpatented",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 Model (8): withdrawn-deal-adjusted acquirer return (WDADJ_ACAR) on no-patent subsample",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "price reactions to exogenously withdrawn deals (Wang 2018)",
+    "sample": "523 no-patent-target mergers with withdrawn-deal adjustment",
+    "dv": {
+     "name": "WDADJ_ACAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "fraction of purchase price allocated to technology, fully unpatented",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "fraction of purchase price allocated to in-process R&D, fully unpatented",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model (1): full-sample synergy benchmark (controls + FE only)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "full sample of 1035 mergers",
+    "dv": {
+     "name": "SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model (2): full-sample synergy with seven acquired-intangible categories",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "full sample of 1035 mergers",
+    "dv": {
+     "name": "SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "IPR&D",
+      "measure": "fraction of the purchase price allocated to in-process R&D",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "TRADEMARK",
+      "measure": "fraction of the purchase price allocated to trademarks",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "CLIENTS",
+      "measure": "fraction of the purchase price allocated to client relationships",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "RIGHTS",
+      "measure": "fraction of the purchase price allocated to legal or contractual rights",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "GOODWILL",
+      "measure": "fraction of the purchase price allocated to goodwill",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "INT_OTHER",
+      "measure": "fraction of the purchase price allocated to other separately identifiable intangible assets",
+      "source": "SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model (3): full-sample synergy with decomposed patented/unpatented innovation",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "full sample of 1035 mergers",
+    "dv": {
+     "name": "SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "the difference between TECH and TECH_PATENT (residual unpatented technology), scaled by deal value",
+      "source": "SEC EDGAR filings + Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "the difference between IPR&D and IPRD_PATENT (residual unpatented in-process R&D), scaled by deal value",
+      "source": "SEC EDGAR filings + Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "TECH_PATENT",
+      "measure": "the fitted dollar value of patented technology divided by the deal value",
+      "source": "Kogan et al. (2017) patent values + SEC EDGAR filings"
+     },
+     {
+      "name": "IPRD_PATENT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kogan et al. (2017) patent values + SEC EDGAR filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TRADEMARK",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "CLIENTS",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "RIGHTS",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "GOODWILL",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "INT_OTHER",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model (4): full-sample adjusted synergy (ADJ_SYN) with decomposed innovation",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "full sample of 1035 mergers",
+    "dv": {
+     "name": "ADJ_SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "residual unpatented technology (TECH minus TECH_PATENT), scaled by deal value",
+      "source": "SEC EDGAR filings + Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "residual unpatented in-process R&D (IPR&D minus IPRD_PATENT), scaled by deal value",
+      "source": "SEC EDGAR filings + Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "TECH_PATENT",
+      "measure": "fitted patented technology divided by deal value",
+      "source": "Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "IPRD_PATENT",
+      "measure": "fitted patented in-process R&D divided by deal value",
+      "source": "Kogan et al. (2017) patent values"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TRADEMARK",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "CLIENTS",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "RIGHTS",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "GOODWILL",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "INT_OTHER",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Model (5): full-sample withdrawn-deal-adjusted synergy (WDADJ_SYN) with decomposed innovation",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "price reactions to exogenously withdrawn deals (Wang 2018)",
+    "sample": "942 mergers with withdrawn-deal adjustment (full-sample subset)",
+    "dv": {
+     "name": "WDADJ_SYN",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "TECH_UNPATENT",
+      "measure": "residual unpatented technology (TECH minus TECH_PATENT), scaled by deal value",
+      "source": "SEC EDGAR filings + Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "IPRD_UNPATENT",
+      "measure": "residual unpatented in-process R&D (IPR&D minus IPRD_PATENT), scaled by deal value",
+      "source": "SEC EDGAR filings + Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "TECH_PATENT",
+      "measure": "fitted patented technology divided by deal value",
+      "source": "Kogan et al. (2017) patent values"
+     },
+     {
+      "name": "IPRD_PATENT",
+      "measure": "fitted patented in-process R&D divided by deal value",
+      "source": "Kogan et al. (2017) patent values"
+     }
+    ],
+    "controls": [
+     {
+      "name": "TRADEMARK",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "CLIENTS",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "RIGHTS",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "GOODWILL",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "INT_OTHER",
+      "source": "SEC EDGAR filings"
+     },
+     {
+      "name": "RELATIVESIZE",
+      "source": "SDC/CRSP"
+     },
+     {
+      "name": "TENDER",
+      "source": "SDC"
+     },
+     {
+      "name": "DIVERSIFY",
+      "source": "SDC/Compustat"
+     },
+     {
+      "name": "SIZE (acquirer)",
+      "source": "CRSP"
+     },
+     {
+      "name": "BTM (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "TAX (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RUNUP (target)",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPRD (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "CAPADV (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "INTAN (acquirer)",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (acquirer Fama-French 12)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Eq (3): industry decomposition of acquired innovation into patented vs unpatented components",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pooled regression estimated separately for each Fama-French 12 target industry (332 deals recognizing technology or in-process R&D)",
+    "dv": {
+     "name": "TECH$/IPR&D$",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SEC EDGAR filings"
+    },
+    "key_ivs": [
+     {
+      "name": "PATENTSTOCK$ (target)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Kogan et al. (2017) patent values + Google Patent website"
+     }
+    ],
+    "controls": [
+     {
+      "name": "intercept set to zero",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "target wealth effect",
+    "acquirer level measurement",
+    "overvaluation",
+    "signals of future growth opportunities"
+   ],
+   "mechanism_named": "partial anticipation criticism",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "adjustment",
+    "withdrawn deal return"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

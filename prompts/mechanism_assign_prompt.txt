@@ -1,0 +1,7 @@
+MECHANISM ASSIGNMENT — prompt of record (mechassign-1.0, 2026-10-07)
+Stage 2. You are given taxonomy.jsonl (distinct mechanisms with definitions) and an input file of mechanism names, each with its row
+count and example chains. For EACH input line output ONE JSON line: {"mechanism": <copy>, "tax_id": <taxonomy entry exactly as written,
+or "NEW:<snake_case>" if none fits>, "polarity": "same" | "reverse" | "na" (relative to the entry's definition; e.g. entry
+information_asymmetry, name information_transparency -> reverse), "confidence": high|medium|low, "note": one sentence}.
+STRICT JUDGMENT RULE: judge every line yourself; do NOT write or run any program, script, regex, keyword list, lookup table or default
+to assign fields. The only code you may run reads the inputs and writes your composed JSON lines, one per input line, same order.

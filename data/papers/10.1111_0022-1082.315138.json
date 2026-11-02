@@ -1,0 +1,441 @@
+{
+ "paper_id": "10.1111_0022-1082.315138",
+ "title": "Takeovers of Privately Held Targets, Methods of Payment, and Bidder Returns",
+ "journal": "JF",
+ "year": 1998,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "agency theory",
+  "market for corporate control"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Limited Competition Hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "limited_competition",
+      "relation": "increases",
+      "to": "likelihood_of_underpayment",
+      "from_measured": false,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "likelihood_of_underpayment",
+      "relation": "increases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "likelihood_of_underpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Monitoring Hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "outside_blockholder_creation",
+      "relation": "increases",
+      "to": "managerial_monitoring",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_monitoring",
+      "relation": "increases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "outside_blockholder_creation",
+      "relation": "increases",
+      "to": "takeover_probability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "takeover_probability",
+      "relation": "increases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_monitoring",
+    "takeover_probability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "increased ownership concentration allowing managerial entrenchment (rather than monitoring) drives firm value"
+   ]
+  },
+  {
+   "hypothesis": "Information Hypothesis",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_offer_for_privately_held_target",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "stock_offer_for_privately_held_target",
+      "relation": "increases",
+      "to": "favorable_information_signaling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "favorable_information_signaling",
+      "relation": "increases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "favorable_information_signaling"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Relatedness Prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "business_relatedness",
+      "relation": "increases",
+      "to": "synergy_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_gains",
+      "relation": "increases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "business_relatedness",
+      "relation": "decreases",
+      "to": "likelihood_of_overpayment",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "likelihood_of_overpayment",
+      "relation": "decreases",
+      "to": "bidder_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_gains",
+    "likelihood_of_overpayment"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (firms that successfully acquired privately held targets; no focal sector)",
+  "country_region": "United States",
+  "time_period": "1981-1992",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "281 merger proposals (131 cash offers, 100 stock offers, 50 mixed offers)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "W. T. Grimm's Mergerstat Review",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval service",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal (WSJ) / Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dun and Bradstreet Million Dollar Directory",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Proxy statements and announcement articles following the merger",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "281 acquisitions of privately held targets (1981-1992) vs. 255 acquisitions of publicly traded targets (1981-1988)",
+    "dv": {
+     "name": "Acquisition and bidder characteristics (private vs. public targets)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Mergerstat Review / Dow Jones News Retrieval; CRSP; proxy statements and announcement articles"
+    },
+    "key_ivs": [
+     {
+      "name": "Target type (privately held vs. publicly traded)",
+      "measure": "Whether the acquired target is a privately held firm (sample, N=281) vs. a publicly traded firm (comparison sample, N=255)",
+      "source": "Mergerstat Review"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II Panel A: Two-day abnormal returns for bidders of privately held targets by method of payment",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "281 acquisitions of privately held targets (131 cash, 150 stock offers)",
+    "dv": {
+     "name": "Bidder announcement-period abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP file / CRSP Nasdaq file"
+    },
+    "key_ivs": [
+     {
+      "name": "Method of payment (cash vs. stock)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergerstat Review / Dow Jones News Retrieval; WSJ announcement articles"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table II Panel B: Two-day abnormal returns for bidders of publicly traded targets by method of payment",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Comparison sample of 255 acquisitions of publicly traded targets (101 cash, 154 stock offers)",
+    "dv": {
+     "name": "Bidder announcement-period abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP file / CRSP Nasdaq file"
+    },
+    "key_ivs": [
+     {
+      "name": "Method of payment (cash vs. stock)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Mergerstat Review; WSJ announcement articles"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table III Panel A: Two-day abnormal returns for stock-offer bidders of private targets by whether a new blockholder emerges",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Stock-offer bidders acquiring privately held targets (subset with new blockholder, N=41)",
+    "dv": {
+     "name": "Bidder announcement-period abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP file / CRSP Nasdaq file"
+    },
+    "key_ivs": [
+     {
+      "name": "New blockholder from target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Proxy statements and announcement articles following the merger"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table III Panel B: Two-day abnormal returns for stock-offer bidders of public targets by whether a new blockholder emerges",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "Stock-offer bidders acquiring publicly traded targets",
+    "dv": {
+     "name": "Bidder announcement-period abnormal stock return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP file / CRSP Nasdaq file"
+    },
+    "key_ivs": [
+     {
+      "name": "New blockholder from target",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Proxy statements and announcement articles following the merger"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Total sample of bidders acquiring privately held targets (Panel A)",
+    "dv": {
+     "name": "Bidder announcement-period abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP file / CRSP Nasdaq file"
+    },
+    "key_ivs": [
+     {
+      "name": "Fraction of outstanding shares exchanged",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Proxy statements / announcement articles"
+     },
+     {
+      "name": "New blockholder dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Proxy statements and announcement articles"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relatedness of business",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Relative size of acquisition",
+      "source": "Mergerstat Review; CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "sample size",
+    "findings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "monitoring effects",
+    "block size",
+    "negative information effects"
+   ],
+   "mechanism_named": "monitoring effects",
+   "proposed_edge": {
+    "from": "block size",
+    "relation": "increases",
+    "to": "monitoring effects"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "monitoring effects",
+    "[withheld: wording matches the source]",
+    "5 percent block ownership"
+   ],
+   "mechanism_named": "monitoring effects",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "fraction of outstanding shares exchanged",
+    "new-blockholder",
+    "monitoring effects",
+    "information effects"
+   ],
+   "mechanism_named": "information effects",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

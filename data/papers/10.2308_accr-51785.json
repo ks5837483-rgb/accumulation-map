@@ -1,0 +1,941 @@
+{
+ "paper_id": "10.2308_accr-51785",
+ "title": "Value is in the Eye of the Beholder: The Relative Valuation Roles of Earnings and Book Value in Merger Pricing",
+ "journal": "AR",
+ "year": 2017,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "value relevance of accounting",
+  "adaptation theory (Burgstahler and Dichev 1997)",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "expected_adaptation",
+      "relation": "decreases",
+      "to": "relevance_of_earnings_generating_process",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relevance_of_earnings_generating_process",
+      "relation": "increases",
+      "to": "weight_on_earnings_in_bid_price",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relevance_of_earnings_generating_process"
+   ],
+   "moderators": [
+    {
+     "construct": "merger_wave",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "market_discipline",
+     "moderated_from": "expected_adaptation",
+     "moderated_to": "weight_on_earnings_in_bid_price",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "bid_competition",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "market_discipline",
+     "moderated_from": "expected_adaptation",
+     "moderated_to": "weight_on_earnings_in_bid_price",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firm-level adaptation as reflected in target losses/performance (rather than acquirer-level strategic intent) drives the shift in weighting"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "expected_adaptation",
+      "relation": "increases",
+      "to": "relevance_of_firm_resources",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relevance_of_firm_resources",
+      "relation": "increases",
+      "to": "weight_on_book_value_in_bid_price",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relevance_of_firm_resources"
+   ],
+   "moderators": [
+    {
+     "construct": "merger_wave",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "market_discipline",
+     "moderated_from": "expected_adaptation",
+     "moderated_to": "weight_on_book_value_in_bid_price",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "bid_competition",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "market_discipline",
+     "moderated_from": "expected_adaptation",
+     "moderated_to": "weight_on_book_value_in_bid_price",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "book-value distortions (unrecorded intangibles / historical cost) rather than true resource relevance drive the increasing weight on book value"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (publicly traded U.S. nonfinancial firms; financial firms excluded)",
+  "country_region": "United States",
+  "time_period": "1994-2012",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "735 merger transactions"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) / SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC filings (acquirer 10-K; merger background 14A, S-4, 14D)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "PR Newswire",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Duchin and Schmidt (2013) merger-wave classification (provided by Ran Duchin)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "735 (n=580 in Specs 1 & 3 requiring EQ; n=735 in Spec 2) completed U.S. public-public non-financial mergers 1994-2012, SDC",
+    "dv": {
+     "name": "DEALVALUE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "NI",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "BV",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT (RESCO)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "10-K and Compustat"
+     },
+     {
+      "name": "ADAPT x NI",
+      "measure": "interaction of ADAPT (RESCO) and NI (captures incremental implied weight on earnings as adaptation increases)",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x BV",
+      "measure": "interaction of ADAPT (RESCO) and BV (captures incremental implied weight on book value as adaptation increases)",
+      "source": "10-K, Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "EQ (earnings quality, Dechow-Dichev 2002)",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Compustat"
+     },
+     {
+      "name": "SALES",
+      "source": "Compustat"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC, SEC filings 14A/S-4/14D"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL",
+      "source": "SDC"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "UNCERTAINTY",
+      "source": ""
+     },
+     {
+      "name": "ACQUIRER FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "WAVE",
+      "source": "Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Specification (4): profit targets only",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "profit (non-loss) targets only, n=391",
+    "dv": {
+     "name": "DEALVALUE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "NI",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "BV",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT (RESCO)",
+      "measure": "acquirer's expected restructuring costs divided by target's assets one year before the merger",
+      "source": "10-K and Compustat"
+     },
+     {
+      "name": "ADAPT x NI",
+      "measure": "interaction of ADAPT (RESCO) and NI",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x BV",
+      "measure": "interaction of ADAPT (RESCO) and BV",
+      "source": "10-K, Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "EQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Compustat"
+     },
+     {
+      "name": "SALES",
+      "source": "Compustat"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC, SEC filings"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL",
+      "source": "SDC"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "UNCERTAINTY",
+      "source": ""
+     },
+     {
+      "name": "ACQUIRER FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "WAVE",
+      "source": "Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Specification (1): Effect of Agency Conflicts (AGENCY = merger waves)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "n=580",
+    "dv": {
+     "name": "DEALVALUE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ADAPT x NI",
+      "measure": "interaction of ADAPT (RESCO) and NI",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x BV",
+      "measure": "interaction of ADAPT (RESCO) and BV",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x NI x AGENCY",
+      "measure": "triple interaction of ADAPT, NI and AGENCY where AGENCY = WAVE (H3 predicts a4a > 0)",
+      "source": "10-K, Compustat, Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "ADAPT x BV x AGENCY",
+      "measure": "triple interaction of ADAPT, BV and AGENCY where AGENCY = WAVE (H3 predicts a4b < 0)",
+      "source": "10-K, Compustat, Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "AGENCY = WAVE",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Duchin and Schmidt (2013)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "NI, BV (main effects)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT, ADAPT x AGENCY, NI x AGENCY, BV x AGENCY",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "EQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Compustat"
+     },
+     {
+      "name": "SALES",
+      "source": "Compustat"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC, SEC filings"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL",
+      "source": "SDC"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "UNCERTAINTY",
+      "source": ""
+     },
+     {
+      "name": "ACQUIRER FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "WAVE",
+      "source": "Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Specification (2): Effect of Agency Conflicts (AGENCY = existence of other bidders / MULTIBID)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "n=580",
+    "dv": {
+     "name": "DEALVALUE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ADAPT x NI",
+      "measure": "interaction of ADAPT (RESCO) and NI",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x BV",
+      "measure": "interaction of ADAPT (RESCO) and BV",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x NI x AGENCY",
+      "measure": "triple interaction of ADAPT, NI and AGENCY where AGENCY = MULTIBID (H3 predicts a4a > 0)",
+      "source": "10-K, Compustat, SDC, SEC filings"
+     },
+     {
+      "name": "ADAPT x BV x AGENCY",
+      "measure": "triple interaction of ADAPT, BV and AGENCY where AGENCY = MULTIBID (H3 predicts a4b < 0)",
+      "source": "10-K, Compustat, SDC, SEC filings"
+     },
+     {
+      "name": "AGENCY = MULTIBID",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC, SEC filings 14A/S-4/14D"
+     }
+    ],
+    "controls": [
+     {
+      "name": "NI, BV (main effects)",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT, ADAPT x AGENCY, NI x AGENCY, BV x AGENCY",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "EQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Compustat"
+     },
+     {
+      "name": "SALES",
+      "source": "Compustat"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL",
+      "source": "SDC"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "UNCERTAINTY",
+      "source": ""
+     },
+     {
+      "name": "ACQUIRER FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "WAVE",
+      "source": "Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "supplemental/descriptive counterfactual on the main sample split by AGENCY=0 vs AGENCY=1",
+    "dv": {
+     "name": "DIFF (PREDICTED - ACTUAL purchase price)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC (actual price); Table 5 regression coefficients (predicted)"
+    },
+    "key_ivs": [
+     {
+      "name": "AGENCY (counterfactual switch)",
+      "measure": "AGENCY set = 1 if merger occurred during a merger wave or a bidding war, else 0; counterfactual price computed by flipping AGENCY",
+      "source": "Duchin and Schmidt (2013), SDC, SEC filings"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "318 transactions with detailed purchase price allocation data",
+    "dv": {
+     "name": "DEALVALUE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "ROI",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP and 10-K"
+     },
+     {
+      "name": "FMV",
+      "measure": "[withheld: wording matches the source]",
+      "source": "10-K"
+     },
+     {
+      "name": "ADAPT x ROI",
+      "measure": "interaction of ADAPT (RESCO) and ROI",
+      "source": "10-K, CRSP, Compustat"
+     },
+     {
+      "name": "ADAPT x FMV",
+      "measure": "interaction of ADAPT (RESCO) and FMV",
+      "source": "10-K, Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ADAPT (RESCO)",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "EQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Compustat"
+     },
+     {
+      "name": "SALES",
+      "source": "Compustat"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC, SEC filings"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "UNCERTAINTY",
+      "source": ""
+     },
+     {
+      "name": "ACQUIRER FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "WAVE",
+      "source": "Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Panel B: Alternative Measure of Adaptation (Same Industry Membership)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "expanded sample of 1,047 completed U.S. public-public mergers 1990-2012 (target non-financial), SDC",
+    "dv": {
+     "name": "DEALVALUE",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "NI",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "BV",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT (SAME INDUSTRY MEMBERSHIP)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT x NI",
+      "measure": "interaction of ADAPT (same-industry membership) and NI",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT x BV",
+      "measure": "interaction of ADAPT (same-industry membership) and BV",
+      "source": "Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "LOSS",
+      "source": "Compustat"
+     },
+     {
+      "name": "EQ",
+      "source": "Compustat"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat"
+     },
+     {
+      "name": "GROWTH",
+      "source": "Compustat"
+     },
+     {
+      "name": "SALES",
+      "source": "Compustat"
+     },
+     {
+      "name": "MULTIBID",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "STOCK",
+      "source": "SDC"
+     },
+     {
+      "name": "POOL",
+      "source": "SDC"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "RELSIZE",
+      "source": "Compustat"
+     },
+     {
+      "name": "UNCERTAINTY",
+      "source": ""
+     },
+     {
+      "name": "ACQUIRER FCF",
+      "source": "Compustat"
+     },
+     {
+      "name": "WAVE",
+      "source": "Duchin and Schmidt (2013)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9: Scaling by Shares Outstanding (robustness)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "n=735 (per-share scaling)",
+    "dv": {
+     "name": "DEALVALUE (per share)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC, Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "NI (per share)",
+      "measure": "target's earnings scaled by target shares outstanding",
+      "source": "Compustat"
+     },
+     {
+      "name": "BV (per share)",
+      "measure": "target's net assets scaled by target shares outstanding",
+      "source": "Compustat"
+     },
+     {
+      "name": "ADAPT (RESCO)",
+      "measure": "acquirer's expected restructuring costs divided by target's assets one year before the merger",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x NI",
+      "measure": "interaction of ADAPT and per-share NI",
+      "source": "10-K, Compustat"
+     },
+     {
+      "name": "ADAPT x BV",
+      "measure": "interaction of ADAPT and per-share BV",
+      "source": "10-K, Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set as Table 4 (LOSS, EQ, LIQUIDITY, LEVERAGE, GROWTH, SALES, MULTIBID, STOCK, POOL, R&D, RELSIZE, UNCERTAINTY, ACQUIRER FCF, WAVE)",
+      "source": "Compustat, SDC, SEC filings"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Appendix B / Table 10: Validation Tests of Expected Restructuring Costs (RESCO) - autoregressive stability of target earnings and association with adaptation proxies",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "validation subsamples of the main sample",
+    "dv": {
+     "name": "Adaptation proxies (autoregressive stability of target earnings; target analyst turnover; target management turnover)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S (analyst turnover); PR Newswire (management turnover); Compustat (earnings)"
+    },
+    "key_ivs": [
+     {
+      "name": "RESCO",
+      "measure": "[withheld: wording matches the source]",
+      "source": "10-K and Compustat"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "disaggregated accounting information",
+    "target valuation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "disaggregated accounting information",
+    "relation": "affects",
+    "to": "target valuation"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

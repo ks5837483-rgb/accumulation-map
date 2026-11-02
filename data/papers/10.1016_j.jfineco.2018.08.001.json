@@ -1,0 +1,596 @@
+{
+ "paper_id": "10.1016_j.jfineco.2018.08.001",
+ "title": "How do valuations impact outcomes of asset sales with heterogeneous bidders?",
+ "journal": "JFE",
+ "year": 2019,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "auction theory",
+  "structural empirical models of asset sales",
+  "order statistics of valuation distributions"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "dispersion_of_valuations",
+      "relation": "increases",
+      "to": "expected_highest_valuation_within_type",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_highest_valuation_within_type",
+      "relation": "increases",
+      "to": "type_specific_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_highest_valuation_within_type"
+   ],
+   "moderators": [
+    {
+     "construct": "number_of_participants",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "expected_highest_valuation_within_type",
+     "moderated_from": "dispersion_of_valuations",
+     "moderated_to": "type_specific_premium",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the difference in average valuations (the common view that higher premiums reflect systematically higher average valuations)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "average_valuation",
+      "relation": "increases",
+      "to": "expected_highest_valuation_within_type",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "expected_highest_valuation_within_type",
+      "relation": "increases",
+      "to": "type_specific_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "expected_highest_valuation_within_type"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_bidders",
+      "relation": "decreases",
+      "to": "average_valuation_of_participants",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "average_valuation_of_participants",
+      "relation": "increases",
+      "to": "equilibrium_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "average_valuation_of_participants"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "not_reported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_about_targets",
+      "relation": "increases",
+      "to": "dispersion_of_valuations",
+      "from_measured": false,
+      "to_measured": false
+     },
+     {
+      "from": "dispersion_of_valuations",
+      "relation": "increases",
+      "to": "takeover_premium",
+      "from_measured": false,
+      "to_measured": false
+     }
+    ]
+   ],
+   "mechanisms": [
+    "dispersion_of_valuations"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (takeover auctions / mergers and acquisitions of publicly traded nonfinancial US companies; targets span the Fama-French 12-industry classification, top 5 by deals: business equipment, healthcare/medical, wholesale/retail, manufacturing)",
+  "country_region": "United States",
+  "time_period": "2000-2012 (January 1, 2000 to May 2, 2012)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "589 takeover auctions (7,176 bidders)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "quarterly Compustat database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SEC EDGAR filings (deal backgrounds and final deal value)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "S&P 500 index (cumulative 12-month return prior to announcement)",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "589 takeover auctions, 7,176 bidders, 01/01/2000-05/02/2012",
+    "dv": {
+     "name": "winning bid / bidder participation",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / SEC EDGAR deal backgrounds"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer type (strategic vs financial)",
+      "measure": "auctions won by strategic vs financial bidders (bidder type from deal backgrounds)",
+      "source": "SEC EDGAR / SDC deal backgrounds"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2 - Descriptive statistics of target characteristics (by acquirer type, industry, period)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target characteristics",
+     "measure": "Size (book value in $ millions); Leverage (book value of debt / (market value of equity + book value of debt)); M/B ratio; Cash flow (sum of last four quarterly cash flows); Cash (cash, short-term investments, marketable securities); R&D; Intangibles (Cash flow, Cash, R&D, Intangibles normalized by target size)",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer type (strategic vs financial)",
+      "measure": "auctions won by strategic vs financial bidders",
+      "source": "SEC EDGAR / SDC deal backgrounds"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Descriptive statistics of winning bids/premiums by strategic vs financial acquirers across industries, periods, and low/high tertiles of target characteristics",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "winning bid (takeover premium)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer type (strategic vs financial) and subsample (industry, period, low/high tertile of target characteristics)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / SEC EDGAR / Compustat"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 - OLS regressions of takeover premiums",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "takeover premium (winning bid)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC / SEC EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "strategic acquirer dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SEC EDGAR / SDC deal backgrounds"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size (book value of total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage (market leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash flow (cumulative over last four quarters)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash and short-term investments",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D expenses",
+      "source": "Compustat"
+     },
+     {
+      "name": "Intangible assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "period dummies (dot-com, postdot-com, precrisis/boom, crisis, postcrisis)",
+      "source": ""
+     },
+     {
+      "name": "market return (cumulative S&P 500 return over 12 months prior to announcement)",
+      "source": "S&P 500 index"
+     },
+     {
+      "name": "credit spread (Moody's Baa minus 10-year Treasury)",
+      "source": "Moody's / Treasury"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC / SEC EDGAR deal backgrounds"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (cols 1-3) - Structural (two-step MLE) estimation of average valuations, constant dispersions model",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "589 auctions, 7,176 bidders",
+    "dv": {
+     "name": "average log valuation premiums (strategic and financial bidders)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "recovered from bids (SDC / SEC EDGAR); target/market characteristics from Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D expenditures",
+      "measure": "R&D normalized by target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target size",
+      "measure": "book value of total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B ratio",
+      "measure": "market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash",
+      "measure": "cash and short-term investments (normalized by size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "measure": "market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "number of bidders",
+      "measure": "log(# Bidders) and interactions with period dummies",
+      "source": "SDC / SEC EDGAR deal backgrounds"
+     },
+     {
+      "name": "period dummies",
+      "measure": "five periods of economic activity",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "market return (S&P 500 growth)",
+      "source": "S&P 500 index"
+     },
+     {
+      "name": "credit spread",
+      "source": "Moody's / Treasury"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (cols 4-9) - Structural estimation, general model with target-specific dispersions of valuations (dispersions depend on controls Y)",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "average log valuations and dispersions of log valuations (strategic and financial bidders)",
+     "measure": "estimated sensitivities of average log valuation premiums and of dispersions of log valuation premiums (sigma = sigma_t^0 * e^{Y*delta_t}) to target and market characteristics",
+     "source": "recovered from bids (SDC / SEC EDGAR); characteristics from Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "R&D expenditures",
+      "measure": "R&D normalized by target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "target size",
+      "measure": "book value of total assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "M/B ratio",
+      "measure": "market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash flow",
+      "measure": "cumulative cash flow over last four quarters (normalized by size)",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash",
+      "measure": "cash and short-term investments (normalized)",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "measure": "market leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "intangibles",
+      "measure": "intangible assets normalized by size",
+      "source": "Compustat"
+     },
+     {
+      "name": "period dummies",
+      "measure": "five periods of economic activity",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "market return (S&P 500 growth)",
+      "source": "S&P 500 index"
+     },
+     {
+      "name": "credit spread",
+      "source": "Moody's / Treasury"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "estimated average valuations and dispersions of valuations (strategic vs financial bidders)",
+     "measure": "average valuation and SD of valuations (in units above current target value); numbers obtained from estimates in Table 5 general model; test for difference between two means at 5% level per subsample",
+     "source": "structural estimates (Table 5)"
+    },
+    "key_ivs": [
+     {
+      "name": "bidder type (strategic vs financial)",
+      "measure": "difference between strategic and financial average valuations / dispersions",
+      "source": "structural estimates"
+     },
+     {
+      "name": "subsample (industry, period, low/high tertile of target characteristic)",
+      "measure": "top 5 Fama-French industries, five periods, high/low tertiles of target characteristics",
+      "source": "Compustat / SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7 - Simulation of auction outcomes (premiums and allocations), Panels A-D for constant and target-specific dispersion models",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "",
+    "sample": "1,000 simulated samples",
+    "dv": {
+     "name": "simulated takeover premiums and allocations",
+     "measure": "[withheld: wording matches the source]",
+     "source": "simulated from structural estimates (Table 5)"
+    },
+    "key_ivs": [
+     {
+      "name": "bidder type (strategic vs financial) and model version",
+      "measure": "constant vs target-specific dispersions of valuations",
+      "source": "structural estimates"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "properties of valuations",
+    "participation costs",
+    "bidders’ participation decisions",
+    "numbers of bidders of each type"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "properties of valuations and participation costs",
+    "relation": "affects",
+    "to": "bidders’ participation decisions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "model of participation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "differences between bidder types",
+    "optimal selling mechanisms",
+    "seller revenue"
+   ],
+   "mechanism_named": "theoretically optimal selling mechanisms",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "endogenous entry stage",
+    "difference in takeover premiums",
+    "properties of valuations",
+    "participation"
+   ],
+   "mechanism_named": "endogenous entry stage",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "measurement errors",
+    "numbers of strategic and financial bidders",
+    "total number of bidders"
+   ],
+   "mechanism_named": "estimator of Erickson et al. (2014)",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "difference in dispersions",
+    "average number of participants",
+    "premiums"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "average number of participants",
+    "on_path": [
+     "difference in dispersions",
+     "premiums"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "restructuring of acquired assets",
+    "bankruptcy auctions",
+    "distressed assets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "number of bidders",
+    "ex-ante heterogeneity",
+    "estimate of dispersion of valuations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,392 @@
+{
+ "paper_id": "10.1111_j.1540-6261.1992.tb04674.x",
+ "title": "The Post‐Merger Performance of Acquiring Firms: A Re‐examination of an Anomaly",
+ "journal": "JF",
+ "year": 1992,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market efficiency",
+  "signaling theory",
+  "agency theory (free cash flow)",
+  "behavioral overreaction / mean-reversion"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_announcement_period_return",
+      "relation": "increases",
+      "to": "market_slow_adjustment_to_merger_news",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "market_slow_adjustment_to_merger_news",
+      "relation": "decreases",
+      "to": "post_merger_stock_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "market_slow_adjustment_to_merger_news"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "relative_size_of_acquisition",
+      "relation": "increases",
+      "to": "economic_importance_of_merger_to_acquirer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "economic_importance_of_merger_to_acquirer",
+      "relation": "increases",
+      "to": "post_merger_underperformance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "economic_importance_of_merger_to_acquirer"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "conglomerate_merger",
+      "relation": "increases",
+      "to": "managerial_unfamiliarity_with_target_industry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_unfamiliarity_with_target_industry",
+      "relation": "increases",
+      "to": "post_merger_underperformance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "conglomerate_merger",
+      "relation": "increases",
+      "to": "wasteful_free_cash_flow_spending",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "wasteful_free_cash_flow_spending",
+      "relation": "increases",
+      "to": "post_merger_underperformance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_unfamiliarity_with_target_industry",
+    "wasteful_free_cash_flow_spending"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "equity_financing_of_acquisition",
+      "relation": "increases",
+      "to": "signal_of_acquirer_overvaluation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_acquirer_overvaluation",
+      "relation": "decreases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "signal_of_acquirer_overvaluation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (conglomerate and non-conglomerate mergers spanning many SIC industries)",
+  "country_region": "United States (NYSE acquirers, NYSE/AMEX targets)",
+  "time_period": "1955-1987",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "765 mergers (main analysis); full sample 937 mergers and 227 tender offers"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Wall Street Journal Index",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table I - Results on Performance for the Entire Sample (Method #1, equation (1))",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-merger abnormal stock performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "merger completion event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP / Wall Street Journal Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (market capitalization decile)",
+      "source": "CRSP"
+     },
+     {
+      "name": "beta risk",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Method #2 (equation (2)) - Ibbotson RATS cross-sectional regression with firm-size adjustment",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "monthly abnormal return",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "merger completion event",
+      "measure": "event month t relative to the month of merger completion (RATS methodology of Ibbotson (1975))",
+      "source": "CRSP / Wall Street Journal Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP"
+     },
+     {
+      "name": "market risk premium (Rmt - Rft), NYSE value-weighted index, one-month Treasury-bill risk-free rate",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Section III.B - Tender Offers (unreported CAARs)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "227 tender offers",
+    "dv": {
+     "name": "post-acquisition abnormal performance of tender-offer acquirers",
+     "measure": "CAARs measured using both equations (1) and (2) and both value-weighted and equally-weighted market indices",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition type (tender offer)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP"
+     },
+     {
+      "name": "beta risk",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table II - Analysis of Subsamples by time subperiods",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "post-merger abnormal performance",
+     "measure": "CAARs over the five years after the merger, calculated using formula (1)",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "time subperiod",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Wall Street Journal Index / CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP"
+     },
+     {
+      "name": "beta risk",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table III - Conglomerate vs. Non-Conglomerate Mergers",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "937 mergers",
+    "dv": {
+     "name": "post-merger abnormal performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "conglomerate vs. non-conglomerate merger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-classified from four-digit SIC codes"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "CRSP"
+     },
+     {
+      "name": "beta risk",
+      "source": "CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "post-merger performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "efficient-market anomaly",
+    "negative post-merger performance"
+   ],
+   "mechanism_named": "efficient-market anomaly",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "large negative returns after the merger"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "slow adjustment",
+    "long-run post-merger performance"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "anomaly"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

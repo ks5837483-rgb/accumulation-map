@@ -1,0 +1,589 @@
+{
+ "paper_id": "10.1111_j.1540-6261.2007.01205.x",
+ "title": "Learning by Observing: Information Spillovers in the Execution and Valuation of Commercial Bank M&amp;As",
+ "journal": "JF",
+ "year": 2007,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "semistrong efficient markets hypothesis",
+  "experience effects theory",
+  "learning-by-observing",
+  "information spillover"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_merger",
+      "relation": "increases",
+      "to": "scale_economies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "scale_economies",
+      "relation": "increases",
+      "to": "postmerger_financial_performance",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "scale_economies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "information_spillover",
+      "relation": "increases",
+      "to": "best_practices",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "best_practices",
+      "relation": "increases",
+      "to": "postmerger_financial_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "best_practices"
+   ],
+   "moderators": [
+    {
+     "construct": "time",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "best_practices",
+     "moderated_from": "information_spillover",
+     "moderated_to": "postmerger_financial_performance",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "learning-by-doing (active internal learning from the acquirer's own previous mergers)",
+    "general passage-of-time effects (regulatory change, technological progress)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "postmerger_financial_performance",
+      "relation": "increases",
+      "to": "investor_anticipation_of_merger_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_anticipation_of_merger_value",
+      "relation": "increases",
+      "to": "announcement_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_anticipation_of_merger_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "postmerger_financial_performance",
+      "relation": "increases",
+      "to": "investor_anticipation_of_merger_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_anticipation_of_merger_value",
+      "relation": "increases",
+      "to": "announcement_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_anticipation_of_merger_value"
+   ],
+   "moderators": [
+    {
+     "construct": "information_spillover",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "investor_anticipation_of_merger_value",
+     "moderated_from": "postmerger_financial_performance",
+     "moderated_to": "announcement_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H4"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "U.S. commercial banking (large, publicly traded commercial banking companies)",
+  "country_region": "United States",
+  "time_period": "1987-1999",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "216 M&As"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Federal Reserve Y-9C Reports",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Datastream Index for U.S. Banks",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "World Bank (aggregate annual U.S. technology and GDP data)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "CEO tenure and CEO stock data (access provided by Hamid Mehran)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Event study of announcement CARs (Table II; eqs. 1-3)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Cumulative abnormal return (CAR) for acquirer, target, and combined banks",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP database; Datastream Index for U.S. Banks"
+    },
+    "key_ivs": [],
+    "controls": []
+   },
+   {
+    "label": "Split-sample changes in postmerger performance, uncontrolled test of H2 (Table IV)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Change in long-run postmerger financial performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Federal Reserve Y-9C Reports; FDIC Call Reports"
+    },
+    "key_ivs": [
+     {
+      "name": "Chronological subsample (first half vs. second half of sample)",
+      "measure": "subsample averages split by chronological ordering of the 216 mergers",
+      "source": "authors' calculations"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Cross-sectional OLS analyses of changes in performance, test of H2 (Table VI; eq. 4)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "delta postmerger performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Federal Reserve Y-9C Reports; FDIC Call Reports"
+    },
+    "key_ivs": [
+     {
+      "name": "LBYO(3) (learning by observing / information spillover)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; authors' calculations"
+     },
+     {
+      "name": "time",
+      "measure": "[withheld: wording matches the source]",
+      "source": "authors' calculations"
+     },
+     {
+      "name": "LBYO(3) * time",
+      "measure": "interaction of LBYO(3) with the time variable",
+      "source": "authors' calculations"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP growth",
+      "source": "World Bank"
+     },
+     {
+      "name": "Target equity-to-assets",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Target equity-to-assets * time",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Activity focus",
+      "source": "CRSP"
+     },
+     {
+      "name": "Geographic focus",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Learning by doing (LBYD)",
+      "source": "SDC"
+     },
+     {
+      "name": "Postmerger growth",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Log acquirer assets",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Equal size",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Megamerger",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "CEO data (Mehran)"
+     },
+     {
+      "name": "CEO stock",
+      "source": "CEO data (Mehran)"
+     },
+     {
+      "name": "Percent stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Hot market",
+      "source": "CRSP"
+     },
+     {
+      "name": "State M&As",
+      "source": "SDC"
+     },
+     {
+      "name": "delta HHI",
+      "source": "Y-9C/Call Reports"
+     }
+    ]
+   },
+   {
+    "label": "OLS with nonlinear technology time-trend variables, robustness of H2 (Table AI; eq. 4)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "delta postmerger performance",
+     "measure": "the change in industry-adjusted accounting performance (delta ROA, delta ROE, delta interest margin, delta efficiency ratio, delta loans-to-assets, delta core deposits-to-assets, delta noninterest income ratio) as in equation (4)",
+     "source": "Federal Reserve Y-9C Reports; FDIC Call Reports"
+    },
+    "key_ivs": [
+     {
+      "name": "LBYO (with alternative windows LBYO(1)-LBYO(7) and weighted LBYO)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC; authors' calculations"
+     },
+     {
+      "name": "Technology time-trend variables (replacing time)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "World Bank"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP growth",
+      "source": "World Bank"
+     },
+     {
+      "name": "Target equity-to-assets",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Activity focus",
+      "source": "CRSP"
+     },
+     {
+      "name": "Geographic focus",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Learning by doing (LBYD)",
+      "source": "SDC"
+     },
+     {
+      "name": "Postmerger growth",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Log acquirer assets",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Equal size",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Megamerger",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "CEO data (Mehran)"
+     },
+     {
+      "name": "CEO stock",
+      "source": "CEO data (Mehran)"
+     }
+    ]
+   },
+   {
+    "label": "CAR regression on postmerger performance and information state, tests of H3 and H4 (eq. 5)",
+    "hypotheses": [
+     "H3",
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "CAR (combined-bank cumulative abnormal return)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP database"
+    },
+    "key_ivs": [
+     {
+      "name": "delta postmerger performance",
+      "measure": "the ex post 3-year industry-adjusted change in merged-bank accounting performance (delta ROA, delta ROE, delta interest margin, delta cost efficiency, delta loans-to-assets, delta core deposits-to-assets, delta noninterest income ratio), a noisy proxy for investor knowledge at announcement",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "LBYO (information state variable)",
+      "measure": "the number of bank mergers predating the merger announcement (base LBYO(3) = cumulative mergers in the 1,095 days prior)",
+      "source": "SDC; authors' calculations"
+     },
+     {
+      "name": "delta postmerger performance * LBYO",
+      "measure": "interaction of delta postmerger performance with the information state variable LBYO",
+      "source": "authors' calculations"
+     }
+    ],
+    "controls": [
+     {
+      "name": "GDP growth",
+      "source": "World Bank"
+     },
+     {
+      "name": "Target equity-to-assets",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Activity focus",
+      "source": "CRSP"
+     },
+     {
+      "name": "Geographic focus",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Learning by doing (LBYD)",
+      "source": "SDC"
+     },
+     {
+      "name": "Postmerger growth",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Log acquirer assets",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Equal size",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "Megamerger",
+      "source": "Y-9C/Call Reports"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "CEO data (Mehran)"
+     },
+     {
+      "name": "CEO stock",
+      "source": "CEO data (Mehran)"
+     },
+     {
+      "name": "Percent stock",
+      "source": "SDC"
+     },
+     {
+      "name": "Pooling",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile",
+      "source": "SDC"
+     },
+     {
+      "name": "Hot market",
+      "source": "CRSP"
+     },
+     {
+      "name": "State M&As",
+      "source": "SDC"
+     },
+     {
+      "name": "delta HHI",
+      "source": "Y-9C/Call Reports"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "learning by doing",
+    "postmerger financial performance"
+   ],
+   "mechanism_named": "learning by doing",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "conclusion",
+   "constructs": [
+    "experience effects",
+    "information spillover"
+   ],
+   "mechanism_named": "experience effects and information spillover",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "accumulated experience",
+    "information spillover",
+    "applied knowledge"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "learning"
+   ],
+   "mechanism_named": "formal underlying theory of learning",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

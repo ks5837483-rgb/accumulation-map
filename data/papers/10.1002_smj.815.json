@@ -1,0 +1,1024 @@
+{
+ "paper_id": "10.1002_smj.815",
+ "title": "A multilevel framework of firm boundaries: firm characteristics, dyadic differences, and network attributes",
+ "journal": "SMJ",
+ "year": 2009,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "resource-based view",
+  "social network theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "knowledge_specialization",
+      "relation": "increases",
+      "to": "collaboration_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "collaboration_risk",
+      "relation": "increases",
+      "to": "non_partnering",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "collaboration_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "knowledge_specialization",
+      "relation": "increases",
+      "to": "coordination_difficulty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "coordination_difficulty",
+      "relation": "increases",
+      "to": "acquiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "coordination_difficulty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technical_distance",
+      "relation": "increases",
+      "to": "relational_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relational_uncertainty",
+      "relation": "increases",
+      "to": "non_partnering",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relational_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technical_distance",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "acquiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "technical_distance",
+      "relation": "increases",
+      "to": "hierarchical_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "hierarchical_control",
+      "relation": "increases",
+      "to": "acquiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "hierarchical_control"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "status_distance",
+      "relation": "increases",
+      "to": "mutual_benefit",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "mutual_benefit",
+      "relation": "increases",
+      "to": "partnering",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "mutual_benefit"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "status_distance",
+      "relation": "increases",
+      "to": "acquisition_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "acquisition_cost",
+      "relation": "decreases",
+      "to": "acquiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "acquisition_cost"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "network_status",
+      "relation": "increases",
+      "to": "opportunity_identification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "opportunity_identification",
+      "relation": "increases",
+      "to": "partnering",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "opportunity_identification"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_specialization",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "firm_vulnerability",
+     "moderated_from": "network_status",
+     "moderated_to": "partnering",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H6a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "network_status",
+      "relation": "decreases",
+      "to": "need_for_control",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "need_for_control",
+      "relation": "increases",
+      "to": "acquiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "need_for_control"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_specialization",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "need_for_hierarchical_control",
+     "moderated_from": "network_status",
+     "moderated_to": "acquiring",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H6b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "structural_holes",
+      "relation": "increases",
+      "to": "relationship_management_capability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "relationship_management_capability",
+      "relation": "increases",
+      "to": "partnering",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "relationship_management_capability"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_specialization",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "leverage_of_internal_strength",
+     "moderated_from": "structural_holes",
+     "moderated_to": "partnering",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H7a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H5b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "structural_holes",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "structural_holes",
+      "relation": "increases",
+      "to": "benefit_transience",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "benefit_transience",
+      "relation": "increases",
+      "to": "acquiring",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "benefit_transience"
+   ],
+   "moderators": [
+    {
+     "construct": "knowledge_specialization",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "integration_capability",
+     "moderated_from": "structural_holes",
+     "moderated_to": "acquiring",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H7b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "United States computer industry (both hardware and software sectors); a high-tech industry",
+  "country_region": "United States",
+  "time_period": "1989-1997",
+  "sample_description": "187 computer-industry firms identified in Compustat by SIC codes with reasonably complete firm-level data; unit of analysis = the announcement of new alliances and acquisitions; 273 alliance pairs and 84 acquisition pairs plus 242 matched non-event pairs; alliance/acquisition data from the SDC Platinum database (verified with LexisNexis and Dow Jones News Retrieval), patent data from USPTO, firm data from Compustat and Moody's FIS Online",
+  "sample_size": "N=597 (non-partnering vs. partnering model); N=338 (alliance vs. acquisition model)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "United States Patent and Trademark Office (USPTO)",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "Standard & Poor's Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's FIS Online",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis / Lexis-Nexis database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones News Retrieval Service",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dun & Bradstreet's Who Owns Whom database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Model 2 (relogit: non-partnering vs. partnering; main effects)",
+    "hypotheses": [
+     "H1a",
+     "H2a",
+     "H3a",
+     "H4a",
+     "H5a"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "597 dyads of computer-industry firms (partnering vs. non-partnering), 1989-1997",
+    "dv": {
+     "name": "Governance mode (non-partnering vs. partnering)",
+     "measure": "binary decision (1=partnering, 0=no partnering)",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal firm knowledge specialization",
+      "measure": "[withheld: wording matches the source]",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Technical distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Status distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm network status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm structural hole",
+      "measure": "Burt's (1992) network constraint index multiplied by -1",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size difference",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Combined alliance experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined acquisition experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined firm age",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Same business sector",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Previous dyadic ties",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Industrial partnering trend",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Passage of NCRPA",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Partner firm knowledge specialization",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Partner firm network status",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Partner firm structural hole",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Network density",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 3 (relogit: non-partnering vs. partnering; interaction effects)",
+    "hypotheses": [
+     "H6a",
+     "H7a"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "597 dyads of computer-industry firms (partnering vs. non-partnering), 1989-1997",
+    "dv": {
+     "name": "Governance mode (non-partnering vs. partnering)",
+     "measure": "binary decision (1=partnering, 0=no partnering)",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal firm network status x focal firm knowledge specialization",
+      "measure": "product of mean-centered focal firm network status and knowledge specialization",
+      "source": "SDC Platinum database; United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Focal firm structural hole x focal firm knowledge specialization",
+      "measure": "product of mean-centered focal firm structural hole and knowledge specialization",
+      "source": "SDC Platinum database; United States Patent and Trademark Office (USPTO)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size difference",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Combined alliance experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined acquisition experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined firm age",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Same business sector",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Previous dyadic ties",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Industrial partnering trend",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Passage of NCRPA",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Focal firm knowledge specialization",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Partner firm knowledge specialization",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Technical distance",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Status distance",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm network status",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm structural hole",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Partner firm network status",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Partner firm structural hole",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Network density",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2 (relogit: alliance vs. acquisition; main effects, Heckman-corrected)",
+    "hypotheses": [
+     "H1b",
+     "H2b",
+     "H3b",
+     "H4b",
+     "H5b"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "338 dyads of computer-industry firms that partnered (alliance vs. acquisition), 1989-1997",
+    "dv": {
+     "name": "Governance mode (alliance vs. acquisition)",
+     "measure": "binary decision (1=acquisition, 0=alliance)",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal firm knowledge specialization",
+      "measure": "[withheld: wording matches the source]",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Technical distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Technical distance squared",
+      "measure": "squared term of technical distance (Euclidean distance) to capture U-shaped relationship",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Status distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm network status",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm structural hole",
+      "measure": "Burt's (1992) network constraint index multiplied by -1",
+      "source": "SDC Platinum database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size difference",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Combined alliance experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined acquisition experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined firm age",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Same business sector",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Previous dyadic ties",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Inverse Mills ratio",
+      "source": ""
+     },
+     {
+      "name": "Partner firm knowledge specialization",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Partner firm network status",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Partner firm structural hole",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Network density",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (relogit: alliance vs. acquisition; interaction effects, Heckman-corrected)",
+    "hypotheses": [
+     "H6b",
+     "H7b"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "338 dyads of computer-industry firms that partnered (alliance vs. acquisition), 1989-1997",
+    "dv": {
+     "name": "Governance mode (alliance vs. acquisition)",
+     "measure": "binary decision (1=acquisition, 0=alliance)",
+     "source": "SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "Focal firm network status x focal firm knowledge specialization",
+      "measure": "product of mean-centered focal firm network status and knowledge specialization",
+      "source": "SDC Platinum database; United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Focal firm structural hole x focal firm knowledge specialization",
+      "measure": "product of mean-centered focal firm structural hole and knowledge specialization",
+      "source": "SDC Platinum database; United States Patent and Trademark Office (USPTO)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm size difference",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Combined alliance experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined acquisition experience",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Combined firm age",
+      "source": "Standard & Poor's Compustat"
+     },
+     {
+      "name": "Same business sector",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Previous dyadic ties",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Inverse Mills ratio",
+      "source": ""
+     },
+     {
+      "name": "Focal firm knowledge specialization",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Partner firm knowledge specialization",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Technical distance",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Technical distance squared",
+      "source": "United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "name": "Status distance",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm network status",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Focal firm structural hole",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Partner firm network status",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Partner firm structural hole",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Network density",
+      "source": "SDC Platinum database"
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "two-partner collaboration",
+    "multiparty collaboration"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "types of alliances and acquisitions",
+    "intra-group variances"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "institutional distance",
+    "culture distance",
+    "capability distance",
+    "governance modes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "multilevel factors",
+    "relation": "affects",
+    "to": "governance modes"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "dynamic capabilities",
+    "choices for either alliances or acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "differences in firms’ dynamic capabilities",
+    "relation": "affects",
+    "to": "choices for either alliances or acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "non-partnering",
+    "internal development",
+    "market failure"
+   ],
+   "mechanism_named": "market failure",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "social network",
+    "previous alliance network",
+    "structural positions",
+    "multiple key networks"
+   ],
+   "mechanism_named": "information flow",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "interplay of different networks",
+    "final choice between alliances and acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "interplay of different networks",
+    "relation": "affects",
+    "to": "final choice between alliances and acquisitions"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "asymmetric interests",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "asymmetric interests",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "antecedents of non-partnering, allying, or acquiring",
+    "ultimate firm performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "antecedents of non-partnering, allying, or acquiring",
+    "relation": "unspecified",
+    "to": "ultimate firm performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "antecedents for boundary choices",
+    "performance effect"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "antecedents for boundary choices",
+    "relation": "affects",
+    "to": "performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "knowledge specialization",
+    "risk perception",
+    "broker firms"
+   ],
+   "mechanism_named": "risk perception",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,692 @@
+{
+ "paper_id": "10.1016_j.jacceco.2024.101671",
+ "title": "Litigation risk and strategic M&amp;A valuations",
+ "journal": "JAE",
+ "year": 2024,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "strategic disclosure theory",
+  "litigation risk"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1_main",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "litigation_risk",
+      "relation": "increases",
+      "to": "incentive_to_mitigate_litigation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_mitigate_litigation_risk",
+      "relation": "decreases",
+      "to": "fo_valuation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_mitigate_litigation_risk"
+   ],
+   "moderators": [
+    {
+     "construct": "agency_conflicts",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "incentive_to_mitigate_litigation_risk",
+     "moderated_from": "litigation_risk",
+     "moderated_to": "fo_valuation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "agency conflicts (Section 4.2)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2_appraisal",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fo_valuation",
+      "relation": "decreases",
+      "to": "perceived_attractiveness_of_takeover_price",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "perceived_attractiveness_of_takeover_price",
+      "relation": "decreases",
+      "to": "appraisal_litigation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_attractiveness_of_takeover_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3_premium",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fo_valuation",
+      "relation": "increases",
+      "to": "takeover_price_reference_value",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "takeover_price_reference_value",
+      "relation": "increases",
+      "to": "merger_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "takeover_price_reference_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4_reversal",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "litigation_risk",
+      "relation": "increases",
+      "to": "incentive_to_mitigate_litigation_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_mitigate_litigation_risk",
+      "relation": "decreases",
+      "to": "fo_valuation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_mitigate_litigation_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (mergers involving publicly traded U.S. firms across two-digit SIC industries)",
+  "country_region": "United States (publicly traded U.S. firms)",
+  "time_period": "2000-2015 (main sample; extended through 2018 in additional analysis)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "1,490 mergers with 1,579 target-sought FOs (PPP sample); 1,406 mergers with 1,434 FOs (DCF-to-Deal Price sample)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Hand-collected target-sought FO valuations and merger negotiation process details from 'Background of the Merger' section",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Courthouse News Service (appraisal petitions filed in Delaware Chancery Court)",
+    "category": "other",
+    "kind": "other"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Column 1 (main DiD; DV = PPP; Post2007)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments: In re Appraisal of Transkaryotic Therapies ruling and Delaware code Sec. 262(h) amendment (rise in M&A litigation risk)",
+    "sample": "",
+    "dv": {
+     "name": "Peer Portfolio Percentile (PPP)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (FO peer comparables); peer valuation multiples (EVS) from Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post2007",
+      "measure": "Target Delaware (indicator = 1 if target firm is incorporated in Delaware, 0 otherwise) interacted with Post2007 (indicator = 1 if merger announced after December 31, 2007, 0 otherwise)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target Delaware",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROA (return on assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "BTM (book-to-market ratio)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Loss (operating loss indicator)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Lev (leverage)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset turnover",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal size (log deal dollar amount)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Deal length (days announcement to completion)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Percent cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Multiple FO",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "Acquirer-sought FO",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "Non-market exception state",
+      "source": "Hand-collected (Matthews 2020; Shaffer 2023b)"
+     },
+     {
+      "name": "Target-industry (two-digit SIC) fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Merger announcement-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 2 (subperiod DiD; DV = PPP)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments (Transkaryotic ruling and Sec. 262(h) amendment); dynamic/subperiod parallel-trends specification",
+    "sample": "",
+    "dv": {
+     "name": "Peer Portfolio Percentile (PPP)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings; peer multiples from Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Y2002-2004 / Y2005-2007 / Y2008-2010 / Y2011-2015",
+      "measure": "Target Delaware interacted with subperiod indicator variables replacing Post2007 (2000-2001 = baseline)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target Delaware",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Loss",
+      "source": "Compustat"
+     },
+     {
+      "name": "Lev",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset turnover",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal size",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Deal length",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Percent cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Multiple FO",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "Acquirer-sought FO",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "Non-market exception state",
+      "source": "Hand-collected"
+     },
+     {
+      "name": "Two-digit SIC industry FE",
+      "source": ""
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 3 (main DiD; DV = DCF-to-Deal Price; Post2007)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments (Transkaryotic ruling and Sec. 262(h) amendment)",
+    "sample": "",
+    "dv": {
+     "name": "DCF-to-Deal Price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings (FO DCF analyses); merger price from SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post2007",
+      "measure": "Target Delaware indicator interacted with Post2007 indicator (merger announced after December 31, 2007)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target Delaware",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "BTM",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Loss",
+      "source": "Compustat"
+     },
+     {
+      "name": "Lev",
+      "source": "Compustat"
+     },
+     {
+      "name": "Asset turnover",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal size",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Deal length",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Percent cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Multiple FO",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "Acquirer-sought FO",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "Non-market exception state",
+      "source": "Hand-collected"
+     },
+     {
+      "name": "Two-digit SIC industry FE",
+      "source": ""
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 4 (subperiod DiD; DV = DCF-to-Deal Price)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments (subperiod parallel-trends specification)",
+    "sample": "",
+    "dv": {
+     "name": "DCF-to-Deal Price",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Hand-collected from SEC filings; merger price from SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Y2002-2004 / Y2005-2007 / Y2008-2010 / Y2011-2015",
+      "measure": "Target Delaware interacted with subperiod indicators replacing Post2007",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Target Delaware",
+      "measure": "indicator = 1 if target incorporated in Delaware",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Full control vector (ROA, BTM, Loss, Lev, Asset turnover)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Deal size, Deal length, Percent cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Multiple FO, Acquirer-sought FO",
+      "source": "SEC filings (hand-collected)"
+     },
+     {
+      "name": "Non-market exception state",
+      "source": "Hand-collected"
+     },
+     {
+      "name": "Two-digit SIC industry FE + Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel A (cross-section by deal type / agency conflicts; DV = PPP cols 1-2, DCF-to-Deal Price cols 3-4)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments; split-sample moderation by deal type (MBO/going-private = High Agency Conflicts)",
+    "sample": "Split sample: High Agency Conflicts = MBOs and going-private deals (N=420 PPP / 462 DCF) vs Low Agency Conflicts = all other deals (N=1159 PPP / 972 DCF)",
+    "dv": {
+     "name": "PPP (cols 1-2) and DCF-to-Deal Price (cols 3-4)",
+     "measure": "PPP and DCF-to-Deal Price as defined in main analysis",
+     "source": "Hand-collected from SEC filings; Compustat; SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post2007",
+      "measure": "DiD interaction estimated separately for High Agency Conflicts (MBOs and going-private transactions) vs Low Agency Conflicts (all other deals)",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control vector as main model (target firm + deal characteristics)",
+      "source": "Compustat / SDC Platinum / hand-collected"
+     },
+     {
+      "name": "Two-digit SIC industry FE + Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B (cross-section by negotiation-process agency conflicts; DV = PPP cols 1-2, DCF cols 3-4)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments; split-sample moderation by hand-collected negotiation-process agency conflicts",
+    "sample": "Randomly selected ~20% subsample with hand-collected negotiation details (N=121 High / 183 Low for PPP; 71 High / 116 Low for DCF)",
+    "dv": {
+     "name": "PPP (cols 1-2) and DCF-to-Deal Price (cols 3-4)",
+     "measure": "PPP and DCF-to-Deal Price as defined in main analysis",
+     "source": "Hand-collected from SEC filings; Compustat; SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post2007",
+      "measure": "DiD interaction estimated separately for High Agency Conflicts (target CEO directly involved in negotiations AND board failed to appoint an independent special committee) vs Low Agency Conflicts (all other deals)",
+      "source": "Hand-collected from 'Background of the Merger' section of SEC filings"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control vector as main model",
+      "source": "Compustat / SDC Platinum / hand-collected"
+     },
+     {
+      "name": "One-digit SIC industry FE + Year FE (one-digit due to small sample)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B (FO valuations and incidence of appraisal litigation; DV = Appraisal Petition)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments (Transkaryotic ruling and Sec. 262(h) amendment); linear-probability DiD of appraisal petition incidence",
+    "sample": "PPP sample (cols 1-3) and DCF-to-Deal Price sample (cols 4-5) split into valuation terciles; 105 (35) matched appraisal petitions",
+    "dv": {
+     "name": "Appraisal Petition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post2007",
+      "measure": "DiD interaction estimated in the full sample and separately for Low vs High valuation groups (mergers sorted into yearly terciles: bottom two terciles = Low PPP / Low DCF-to-Deal Price; top tercile = High)",
+      "source": "SDC Platinum; valuation splits from hand-collected FO measures"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control vector as main model",
+      "source": "Compustat / SDC Platinum / hand-collected"
+     },
+     {
+      "name": "Industry FE + Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments; premium DiD partitioned by FO-valuation terciles",
+    "sample": "Main sample partitioned each year into bottom two terciles (Low) and top tercile (High) for PPP and DCF-to-Deal Price",
+    "dv": {
+     "name": "Deal Premium (merger premium)",
+     "measure": "",
+     "source": "SDC Platinum (variable defined in Appendix A, outside read windows)"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post2007",
+      "measure": "DiD interaction estimated overall and separately for Low vs High valuation terciles (Low/High PPP and Low/High DCF-to-Deal Price)",
+      "source": "SDC Platinum; valuation splits from hand-collected FO measures"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control vector as main model",
+      "source": "Compustat / SDC Platinum / hand-collected"
+     },
+     {
+      "name": "Industry FE + Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2015-2016 Delaware Supreme Court and Chancery Court rulings that dramatically decreased Delaware M&A (appraisal and non-appraisal) litigation risk",
+    "sample": "Sample extended through the end of 2018 to capture the reversal shock",
+    "dv": {
+     "name": "PPP and DCF-to-Deal Price",
+     "measure": "PPP and DCF-to-Deal Price as defined in main analysis",
+     "source": "Hand-collected from SEC filings; Compustat; SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post-reversal",
+      "measure": "DiD interaction exploiting the 2015-2016 rulings that decreased Delaware M&A litigation, sample extended through end of 2018",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control vector as main model",
+      "source": "Compustat / SDC Platinum / hand-collected"
+     },
+     {
+      "name": "Industry FE + Year FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Falsification test (alternative explanation: change in underlying deal economics)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "2007 Delaware appraisal developments; placebo/falsification on underlying target economics",
+    "sample": "Main sample",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "target's own valuation multiples and overall deal price (main analysis re-run with DV replaced to directly examine change in the target's valuation)",
+     "source": "Compustat / SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Target Delaware x Post2007",
+      "measure": "same DiD interaction as main analysis, applied to target valuation/deal-price outcomes",
+      "source": "SDC Platinum"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control vector as main model",
+      "source": "Compustat / SDC Platinum / hand-collected"
+     },
+     {
+      "name": "Industry FE + Year FE",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "acquirer-obtained fos",
+    "target-obtained fos",
+    "ppp"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "acquirers’ announcement returns",
+    "target fo valuations"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "m&a-related litigation",
+    "inefficiencies and\ncosts"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

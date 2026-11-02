@@ -1,0 +1,587 @@
+{
+ "paper_id": "10.1162_003465300558560",
+ "title": "Why do Banks Disappear? The Determinants of U.S. Bank Failures and Acquisitions",
+ "journal": "RESTAT",
+ "year": 2000,
+ "field": "economics",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "adverse selection",
+  "competing-risks hazard modeling"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_inefficiency",
+      "relation": "increases",
+      "to": "management_quality",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "management_quality",
+      "relation": "increases",
+      "to": "bank_failure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "management_quality"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "inefficiency merely reflecting bad luck / working out problem loans rather than poor cost management"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "managerial_inefficiency",
+      "relation": "increases",
+      "to": "value_enhancement_opportunity",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_enhancement_opportunity",
+      "relation": "increases",
+      "to": "bank_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "managerial_inefficiency",
+      "relation": "increases",
+      "to": "reorganization_cost",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reorganization_cost",
+      "relation": "decreases",
+      "to": "bank_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "managerial_inefficiency",
+      "relation": "increases",
+      "to": "signal_of_hidden_problems",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "signal_of_hidden_problems",
+      "relation": "decreases",
+      "to": "bank_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_enhancement_opportunity",
+    "reorganization_cost",
+    "signal_of_hidden_problems"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "capital_adequacy",
+      "relation": "increases",
+      "to": "protection_against_asset_losses",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "protection_against_asset_losses",
+      "relation": "decreases",
+      "to": "bank_failure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "protection_against_asset_losses"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "capital_adequacy",
+      "relation": "decreases",
+      "to": "proximity_to_insolvency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "proximity_to_insolvency",
+      "relation": "increases",
+      "to": "bank_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "proximity_to_insolvency"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquisition of skillful managers able to operate safely with little capital rather than imminent-failure acquisition"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "branching_permission",
+      "relation": "increases",
+      "to": "geographic_diversification",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "geographic_diversification",
+      "relation": "decreases",
+      "to": "bank_failure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "geographic_diversification"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "loan_concentration",
+      "relation": "increases",
+      "to": "asset_illiquidity_and_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asset_illiquidity_and_risk",
+      "relation": "increases",
+      "to": "bank_failure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asset_illiquidity_and_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_earnings",
+      "relation": "increases",
+      "to": "financial_health",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "financial_health",
+      "relation": "decreases",
+      "to": "bank_failure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "financial_health"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "bank_earnings",
+      "relation": "increases",
+      "to": "target_attractiveness",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "target_attractiveness",
+      "relation": "decreases",
+      "to": "bank_acquisition",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_attractiveness"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "U.S. commercial banks (banking industry)",
+  "country_region": "United States",
+  "time_period": "1984(3)-1993(4)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "4,022 banks (231 failed, 1,380 acquired)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "FDIC",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "filings"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1 - Failure Hazard (equations I-VI)",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "time to failure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "M1 - cost inefficiency",
+      "measure": "[withheld: wording matches the source]",
+      "source": "derived from quarterly call reports (inputs/outputs/prices defined as in Kaparakis et al. 1994)"
+     },
+     {
+      "name": "M2 - input technical inefficiency",
+      "measure": "nonparametric input distance-function estimator D-in (Shephard 1970 input distance function), estimated separately for each quarter; measures maximum feasible proportionate reduction in inputs holding outputs fixed",
+      "source": "derived from quarterly call reports"
+     },
+     {
+      "name": "M3 - output technical inefficiency",
+      "measure": "[withheld: wording matches the source]",
+      "source": "derived from quarterly call reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CAPAD = total equity/total assets (capital adequacy)",
+      "source": "call reports"
+     },
+     {
+      "name": "A1 = total loans/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "A2 = real estate loans/total loans",
+      "source": "call reports"
+     },
+     {
+      "name": "A3 = commercial and industrial loans/total loans",
+      "source": "call reports"
+     },
+     {
+      "name": "A4 = other real estate owned/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports"
+     },
+     {
+      "name": "A6 = nonperforming loans/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "EARN = net income after taxes/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports"
+     },
+     {
+      "name": "SIZE = log of total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports / NIC"
+     },
+     {
+      "name": "BR1 = 1 if bank in a state allowing limited branching",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "BR2 = 1 if bank in a state allowing unlimited branching",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports"
+     }
+    ]
+   },
+   {
+    "label": "Table 2 - Acquisition Hazard (equations VII-XII)",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "same panel; 4,022 banks (1,380 acquired) in M1 models, 3,972 banks (1,367 acquired) in M2/M3 models; failures censored",
+    "dv": {
+     "name": "time to acquisition",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Federal Reserve System / National Information Center (NIC) database (acquisition date)"
+    },
+    "key_ivs": [
+     {
+      "name": "M1 - cost inefficiency",
+      "measure": "cost inefficiency from parametric stochastic frontier (translog) cost function estimated cross-sectionally each quarter (as in Table 1)",
+      "source": "derived from quarterly call reports"
+     },
+     {
+      "name": "M2 - input technical inefficiency",
+      "measure": "nonparametric Shephard input distance-function estimator D-in (as in Table 1)",
+      "source": "derived from quarterly call reports"
+     },
+     {
+      "name": "M3 - output technical inefficiency",
+      "measure": "nonparametric Shephard output distance-function estimator D-out (as in Table 1)",
+      "source": "derived from quarterly call reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CAPAD = total equity/total assets (capital adequacy)",
+      "source": "call reports"
+     },
+     {
+      "name": "A1 = total loans/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "A2 = real estate loans/total loans",
+      "source": "call reports"
+     },
+     {
+      "name": "A3 = commercial and industrial loans/total loans",
+      "source": "call reports"
+     },
+     {
+      "name": "A4 = other real estate owned/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports"
+     },
+     {
+      "name": "A6 = nonperforming loans/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "EARN = net income after taxes/total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports"
+     },
+     {
+      "name": "SIZE = log of total assets",
+      "source": "call reports"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports / NIC"
+     },
+     {
+      "name": "BR1 = 1 if bank in a state allowing limited branching",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "BR2 = 1 if bank in a state allowing unlimited branching",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "call reports"
+     }
+    ]
+   },
+   {
+    "label": "Appendix B (Tables B.1-B.3) - difference-in-means comparison of inefficiency across failing, acquired, and surviving banks, 1984-1993",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "failing, acquired, and surviving banks in each year 1984-1993 (uncontrolled descriptive comparison)",
+    "dv": {
+     "name": "mean estimated inefficiency by bank outcome group",
+     "measure": "annual mean values of cost inefficiency (M1) and nonparametric input/output technical inefficiency (M2, M3) for failing, acquired, and surviving (never failed or acquired) banks; differences in means tested at 0.05",
+     "source": "derived from quarterly call reports; outcome groups from FDIC (failure) and NIC/Federal Reserve (acquisition)"
+    },
+    "key_ivs": [
+     {
+      "name": "bank outcome group (failing / acquired / surviving)",
+      "measure": "classification of each bank-year as failing, acquired, or surviving based on realized outcome",
+      "source": "FDIC (failure) and NIC / Federal Reserve System (acquisition)"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "technical efficiency estimates",
+    "nonparametric efficiency estimators",
+    "measurement-error problem"
+   ],
+   "mechanism_named": "measurement-error problem",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "variables in the hazard models",
+    "noise",
+    "attenuation effect",
+    "significance levels"
+   ],
+   "mechanism_named": "attenuation effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "cost inefficiency",
+    "technical inefficiency",
+    "acquisition hazard",
+    "noise"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "nonparametric efficiency scores",
+    "noise"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

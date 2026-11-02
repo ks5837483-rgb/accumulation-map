@@ -1,0 +1,558 @@
+{
+ "paper_id": "10.2308_accr-10131",
+ "title": "Overpriced Shares, Ill-Advised Acquisitions, and Goodwill Impairment",
+ "journal": "AR",
+ "year": 2011,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "misvaluation-driven acquisitions theory (Shleifer and Vishny 2003)",
+  "agency costs of overvalued equity (Jensen 2005)",
+  "catering / short-termism theory (Stein 1996)",
+  "hubris hypothesis (Roll 1986)"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "Q1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "share_overpricing",
+      "relation": "increases",
+      "to": "managerial_incentive_to_exploit_overpricing",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentive_to_exploit_overpricing",
+      "relation": "increases",
+      "to": "accounting_goodwill",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_incentive_to_exploit_overpricing"
+   ],
+   "moderators": [
+    {
+     "construct": "weak_corporate_governance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "monitoring_of_managerial_discretion",
+     "moderated_from": "share_overpricing",
+     "moderated_to": "accounting_goodwill",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Q1"
+    },
+    {
+     "construct": "managerial_share_ownership",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_incentive_to_exploit_overpricing",
+     "moderated_from": "share_overpricing",
+     "moderated_to": "accounting_goodwill",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Q1"
+    },
+    {
+     "construct": "foreign_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "search_for_growth_abroad",
+     "moderated_from": "share_overpricing",
+     "moderated_to": "accounting_goodwill",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Q1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "goodwill is a mechanical/automatic outcome of overvalued bidders acquiring overvalued targets"
+   ]
+  },
+  {
+   "hypothesis": "Q2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "share_overpricing",
+      "relation": "increases",
+      "to": "overpayment_relative_to_synergies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "overpayment_relative_to_synergies",
+      "relation": "increases",
+      "to": "goodwill_write_off",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "overpayment_relative_to_synergies"
+   ],
+   "moderators": [
+    {
+     "construct": "weak_corporate_governance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "monitoring_of_managerial_discretion",
+     "moderated_from": "share_overpricing",
+     "moderated_to": "goodwill_write_off",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Q2"
+    },
+    {
+     "construct": "foreign_target",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "high_premiums_for_foreign_growth",
+     "moderated_from": "share_overpricing",
+     "moderated_to": "goodwill_write_off",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Q2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Q3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquisition_with_overpriced_shares",
+      "relation": "increases",
+      "to": "ill_advised_acquisition",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ill_advised_acquisition",
+      "relation": "decreases",
+      "to": "post_acquisition_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ill_advised_acquisition"
+   ],
+   "moderators": [
+    {
+     "construct": "degree_of_share_overpricing",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "ill_advised_acquisition",
+     "moderated_from": "acquisition_with_overpriced_shares",
+     "moderated_to": "post_acquisition_stock_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Q3"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "Shleifer and Vishny (2003): acquisitions with overpriced shares benefit shareholders in the long run and the goodwill write-off is a benign non-event merely reflecting the overpricing reversal"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded firms undertaking mergers and acquisitions)",
+  "country_region": "U.S. acquirers; targets both U.S. and foreign",
+  "time_period": "1990-2006",
+  "sample_description": "Acquisitions from the SDC mergers and acquisitions database by all U.S. publicly traded firms (targets U.S. and foreign, public and private); requiring accounting data in Compustat and stock price/return data in CRSP; excluding observations with undisclosed transaction value, less than 90% of shares acquired, transaction value >100% or <1% of acquirer market value, or pooling-method deals",
+  "sample_size": "54,218 yearly observations (bidder subsample 7,055 observations)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC database on mergers and acquisitions",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Gompers et al. (2003) governance indicators",
+    "category": "irrc_iss",
+    "kind": "archival_database"
+   },
+   {
+    "name": "lawsuit data (provided by Mary Brooke Billings)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all available firms with required accounting and stock return data, 1990-2006 (54,218 firm-year obs)",
+    "dv": {
+     "name": "future abnormal stock returns",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "share overpricing indicators (OVE1, OVE2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     },
+     {
+      "name": "CAPM / Fama-French three-factor / Carhart four-factor risk factors",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 - Acquisition intensity by overpricing quintile (main-diagonal 5x5 portfolio classification)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "all firms and bidders subsamples (bidders n=7,055), also split by stock- vs cash-financed, 1990-2006",
+    "dv": {
+     "name": "acquisition intensity (value and frequency)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "share overpricing indicators (OVE1, OVE2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 - Change in goodwill (DGDWL) by overpricing quintile (portfolio classification)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "all firms and bidders subsamples, also split by stock- vs cash-financed acquisitions, 1990-2006",
+    "dv": {
+     "name": "change of goodwill (DGDWL)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "share overpricing indicators (OVE1, OVE2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Question 1 untabulated OLS - goodwill growth regressed on overpricing and controls",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "share overpricing composite indicators (OVE1, OVE2) and lagged indicators",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "weak corporate governance and its interaction with overpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Gompers et al. (2003) governance indicators"
+     },
+     {
+      "name": "managerial share ownership and foreign-target indicator (intervening variables)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "cash flows from operation",
+      "source": "Compustat"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Question 1 untabulated logistic regression - acquisition incidence on overpricing and controls",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "acquisition intensity (incidence)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "overpricing indicators and their components (lagged)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(MV)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "cash flows from operations",
+      "source": "Compustat"
+     },
+     {
+      "name": "change in the S&P 500 index",
+      "source": "CRSP"
+     },
+     {
+      "name": "industry indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Goodwill write-offs by overpricing quintile (portfolio classification, lines 1-4)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "line-specific subsamples: all firms with overpricing data; firms with acquisitions 1990-2000; firms with impairment 2001-2006; firms with both",
+    "dv": {
+     "name": "goodwill write-offs",
+     "measure": "Mean amount of goodwill write-offs (scaled by total assets), by main diagonal quintiles of OVE1 and OVE2",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "share overpricing indicators (OVE1, OVE2)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4 (lines 5-6) - Acquisition-related lawsuit frequency by overpricing quintile",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "all acquiring firms sued over 1996-2006; line 6 restricted to firms with goodwill write-offs in 2001-2006",
+    "dv": {
+     "name": "frequency of shareholder lawsuits",
+     "measure": "[withheld: wording matches the source]",
+     "source": "lawsuit data (provided by Mary Brooke Billings)"
+    },
+    "key_ivs": [
+     {
+      "name": "share overpricing indicators (OVE1, OVE2)",
+      "measure": "quintiles (main diagonal) of OVE1 and OVE2",
+      "source": "Compustat/CRSP"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Question 2 untabulated logistic and Tobit - write-off incidence and amount on overpricing and controls",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "goodwill write-off incidence (logit) and amount (Tobit)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "overpricing indicators and components",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "weak governance and its interaction with overpricing",
+      "measure": "weak governance and its interaction with overpricing (OVE1)",
+      "source": "Gompers et al. (2003) governance indicators"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "percentage of acquisition involving foreign targets",
+      "source": "SDC"
+     },
+     {
+      "name": "number of acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "amount of goodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "bidder's size",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "industry indicators",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (left) - Future stock returns on acquisition and overpricing (Fama-MacBeth monthly regressions)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "firms with and without acquisitions",
+    "dv": {
+     "name": "future stock returns (t+1, t+2, t+3)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition indicator (ACQ) and its interactions with overpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (Ln(MV))",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "book-to-market (Ln(B/M))",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "three-year lagged returns (Ret_1, Ret_2, Ret_3)",
+      "source": "CRSP"
+     },
+     {
+      "name": "overpricing composite indicators (OVE1, OVE2)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "amount of goodwill",
+      "source": "Compustat"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (right) - Future industry-adjusted ROA on acquisition and overpricing",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "future industry-adjusted ROA (t+1)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "acquisition indicator (ACQ) and its interactions with overpricing",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "overpricing indicators (OVE1, OVE2)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "amount of goodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "lagged industry-adjusted ROA",
+      "source": "Compustat"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "goodwill write-off",
+    "acquisition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

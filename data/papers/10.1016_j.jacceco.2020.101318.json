@@ -1,0 +1,989 @@
+{
+ "paper_id": "10.1016_j.jacceco.2020.101318",
+ "title": "PCAOB international inspections and Merger and Acquisition outcomes",
+ "journal": "JAE",
+ "year": 2020,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "signaling theory",
+  "information economics",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pcaob_inspection",
+      "relation": "increases",
+      "to": "perceived_audit_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_audit_quality",
+      "relation": "increases",
+      "to": "likelihood_of_receiving_acquisition_bid",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "pcaob_inspection",
+      "relation": "decreases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "decreases",
+      "to": "likelihood_of_receiving_acquisition_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_audit_quality",
+    "information_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "PCAOB oversight changing auditor market share / firms switching auditors"
+   ]
+  },
+  {
+   "hypothesis": "H1b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pcaob_inspection_report_disclosure",
+      "relation": "increases",
+      "to": "perceived_audit_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_audit_quality",
+      "relation": "increases",
+      "to": "likelihood_of_receiving_acquisition_bid",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "pcaob_inspection_report_disclosure",
+      "relation": "decreases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "decreases",
+      "to": "likelihood_of_receiving_acquisition_bid",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_audit_quality",
+    "information_uncertainty"
+   ],
+   "moderators": [
+    {
+     "construct": "rule_of_law",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "perceived_audit_quality",
+     "moderated_from": "pcaob_inspection_report_disclosure",
+     "moderated_to": "likelihood_of_receiving_acquisition_bid",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "engagement_deficiency",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_audit_quality",
+     "moderated_from": "pcaob_inspection_report_disclosure",
+     "moderated_to": "likelihood_of_receiving_acquisition_bid",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "quality_control_deficiency",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "perceived_audit_quality",
+     "moderated_from": "pcaob_inspection_report_disclosure",
+     "moderated_to": "likelihood_of_receiving_acquisition_bid",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality (firms receiving bids drive auditor inspection rather than vice versa)"
+   ]
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pcaob_inspection",
+      "relation": "increases",
+      "to": "perceived_audit_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_audit_quality",
+      "relation": "increases",
+      "to": "deal_completion_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "pcaob_inspection",
+      "relation": "decreases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "decreases",
+      "to": "deal_completion_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_audit_quality",
+    "information_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "auditors' M&A advisory role (rather than assurance role)",
+    "PCAOB inspection of the acquirer's auditor (financing/agency channel)"
+   ]
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pcaob_inspection_report_disclosure",
+      "relation": "increases",
+      "to": "perceived_audit_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_audit_quality",
+      "relation": "increases",
+      "to": "deal_completion_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "pcaob_inspection_report_disclosure",
+      "relation": "decreases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "decreases",
+      "to": "deal_completion_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_audit_quality",
+    "information_uncertainty"
+   ],
+   "moderators": [
+    {
+     "construct": "cross_border_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_uncertainty",
+     "moderated_from": "pcaob_inspection_report_disclosure",
+     "moderated_to": "deal_completion_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    },
+    {
+     "construct": "same_industry_acquisition",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "information_uncertainty",
+     "moderated_from": "pcaob_inspection_report_disclosure",
+     "moderated_to": "deal_completion_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "auditors' M&A advisory role (rather than assurance role)",
+    "PCAOB inspection of the acquirer's auditor (financing/agency channel)"
+   ]
+  },
+  {
+   "hypothesis": "H3a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pcaob_inspection",
+      "relation": "increases",
+      "to": "perceived_audit_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_audit_quality",
+      "relation": "increases",
+      "to": "deal_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "pcaob_inspection",
+      "relation": "decreases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "decreases",
+      "to": "deal_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_audit_quality",
+    "information_uncertainty"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "PCAOB inspection of the acquirer's auditor (financing/agency channel)"
+   ]
+  },
+  {
+   "hypothesis": "H3b",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pcaob_inspection_report_disclosure",
+      "relation": "increases",
+      "to": "perceived_audit_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_audit_quality",
+      "relation": "increases",
+      "to": "deal_announcement_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "pcaob_inspection_report_disclosure",
+      "relation": "decreases",
+      "to": "information_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_uncertainty",
+      "relation": "decreases",
+      "to": "deal_announcement_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_audit_quality",
+    "information_uncertainty"
+   ],
+   "moderators": [
+    {
+     "construct": "cross_border_acquisition",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "information_uncertainty",
+     "moderated_from": "pcaob_inspection_report_disclosure",
+     "moderated_to": "deal_announcement_returns",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": null
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "PCAOB inspection of the acquirer's auditor (financing/agency channel)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (non-U.S.-listed public firms, excluding financial industries)",
+  "country_region": "35 countries (non-U.S. targets)",
+  "time_period": "2002-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "70,503 firm-year observations (12,204 unique firms); deal-level: 1,285 deals (completion), 1,080 deals (announcement returns)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat Global database",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ database",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Securities Data Company (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "PCAOB inspection reports (from the PCAOB website)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Kaufmann et al. (2009) country-level rule of law measure (RULE)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Panel A, Column (1) - Eq. (1) full-sample logistic model, likelihood of receiving a bid",
+    "hypotheses": [
+     "H1a",
+     "H1b"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "PCAOB international inspection program (auditor inspection fieldwork and public disclosure of inspection report)",
+    "sample": "70,503 firm-year observations, 12,204 firms, 35 countries, 2002-2016",
+    "dv": {
+     "name": "TARGET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "INSPECT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "POSTINSPECT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "POSTREPORT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CAR (one-year cumulative abnormal return, managerial effectiveness proxy)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "GR (growth-resource mismatch indicator)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "SGROWTH (sales growth)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INDBIDS (bid in industry in prior year)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "ASSETSIZE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "MB (market-to-book ratio)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "PTE (price-to-earnings ratio)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INTANG (intangible asset intensity)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INVEST (investment intensity)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "Country*Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel A, Column (2) - Eq. (2) difference-in-differences using matched sample, likelihood of receiving a bid",
+    "hypotheses": [
+     "H1a",
+     "H1b"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "Public disclosure of PCAOB inspection report (treatment firms vs. size/country/industry/year-matched control firms, [-3,+3] window)",
+    "sample": "16,718 observations from 1,085 matched pairs of treatment and control firms, [-3,+3] years around report disclosure year",
+    "dv": {
+     "name": "TARGET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "TREAT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "POST",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "TREAT*POST",
+      "measure": "interaction of TREAT and POST; captures the incremental change in the dependent variable from pre- to post-inspection period for treatment targets relative to matched control targets",
+      "source": "PCAOB inspection reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CAR",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "GR",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "SGROWTH",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INDBIDS",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "ASSETSIZE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "MB",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "PTE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INTANG",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "Country*Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Panel B - dynamic effects analysis (event-time leads/lags around report year), full sample",
+    "hypotheses": [
+     "H1a",
+     "H1b"
+    ],
+    "identification": "event_study",
+    "shock_or_instrument": "Public disclosure of PCAOB inspection report (event date = first inspection report year; tests pre-trends / reverse causality)",
+    "sample": "70,503 firm-year observations (full sample)",
+    "dv": {
+     "name": "TARGET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "YEARt-2REPORT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "YEARt-1REPORT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "YEARtREPORT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "YEARt+nREPORT",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "INSPECT",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "POSTINSPECT",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "CAR",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "GR",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "SGROWTH",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "LIQUIDITY",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "LEVERAGE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INDBIDS",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "ASSETSIZE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "MB",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "PTE",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INTANG",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "R&D",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "INVEST",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "Country*Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - Eq. (3) logistic regression, likelihood of deal completion (deal-level)",
+    "hypotheses": [
+     "H2a",
+     "H2b"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "PCAOB inspection of the target's auditor and public disclosure of its inspection report before the deal announcement year",
+    "sample": "1,285 deals from 35 countries, 2002-2016",
+    "dv": {
+     "name": "COMPLETION",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "INSPECTAUDITOR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "REPORTAUDITOR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQINSPECT (acquirer auditor inspected)",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "ACQREPORT (acquirer auditor inspection report disclosed)",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "COMMONAUDITOR (target and acquirer share the same auditor)",
+      "source": "Capital IQ database"
+     },
+     {
+      "name": "VALUE (value of transaction)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "SAMESIC (same industry deal)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "TOEHOLD",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "TENDER (tender offer)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "HOSTILE",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "TERMIFEE (termination fees)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "OFBIDDERS (bid competition)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "CASHONLY (cash-only payment)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "Acquirer Country*Target Country*Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Target Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 - Eq. (4) OLS regression, deal announcement returns (deal-level)",
+    "hypotheses": [
+     "H3a",
+     "H3b"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "PCAOB inspection of the target's auditor and public disclosure of its inspection report before the deal announcement year",
+    "sample": "1,080 deals from 35 countries, 2002-2016",
+    "dv": {
+     "name": "COMBINECAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "INSPECTAUDITOR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "REPORTAUDITOR",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "ACQINSPECT",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "ACQREPORT",
+      "source": "PCAOB inspection reports"
+     },
+     {
+      "name": "COMMONAUDITOR",
+      "source": "Capital IQ database"
+     },
+     {
+      "name": "ACQASSETSIZE (acquirer size)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "ACQMB (acquirer market-to-book)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "TARASSETSIZE (target size)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "TARMB (target market-to-book)",
+      "source": "Compustat Global database"
+     },
+     {
+      "name": "VALUE",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "SAMESIC",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "TENDER",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "TERMIFEE",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "OFBIDDERS",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "CASHONLY",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "Acquirer Country*Target Country*Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Target Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 - cross-sectional (subsample) analyses re-estimating Eqs. (1), (3), (4) by legal institutions and information uncertainty",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "Public disclosure of PCAOB inspection report (subsample splits on country legal institutions and deal information uncertainty)",
+    "sample": "Subsamples of the full firm-year (70,503) and deal-level (1,285 / 1,080) samples split by RULE, CROSSBORDER, and SAMESIC",
+    "dv": {
+     "name": "M&A outcomes (TARGET / COMPLETION / COMBINECAR)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "RULE (country-level legal institutions; strong vs. weak split at median)",
+      "measure": "measure of country-level legal institutions (RULE) obtained from Kaufmann et al. (2009); targets split into strong vs. weak legal-institution subsamples at the median value of RULE",
+      "source": "Kaufmann et al. (2009) country-level rule of law measure (RULE)"
+     },
+     {
+      "name": "CROSSBORDER (cross-border vs. within-country M&As)",
+      "measure": "CROSSBORDER = 1 for cross-border M&As and 0 for within-country M&As (proxy for deal-level information uncertainty)",
+      "source": "Securities Data Company (SDC) database"
+     },
+     {
+      "name": "SAMESIC (diversifying/cross-industry vs. within-industry M&As)",
+      "measure": "SAMESIC = 0 for cross-industry (diversifying) M&As vs. SAMESIC = 1 for within-industry M&As (proxy for deal-level information uncertainty)",
+      "source": "Securities Data Company (SDC) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Same control set and fixed effects as Eqs. (1), (3), and (4)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 4.5 (content of inspection reports) - engagement-level (Part I) and quality-control (Part II) deficiencies added to the models",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "Same firm-year / deal-level samples as the main tests",
+    "dv": {
+     "name": "M&A activities and outcomes (TARGET, and deal-level outcomes)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Securities Data Company (SDC) database"
+    },
+    "key_ivs": [
+     {
+      "name": "POSTREPORT_ENGDEF (engagement deficiency, Part I)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "PCAOB inspection reports"
+     }
+    ],
+    "controls": [
+     {
+      "name": "POSTREPORT and same control set / fixed effects as the base equation",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "big 4 vs. non-big 4",
+    "cross-sectional analysis"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "part ii findings",
+    "quality control deficiencies"
+   ],
+   "mechanism_named": "low test power",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,598 @@
+{
+ "paper_id": "10.1177_0149206316687641",
+ "title": "Do Firms Learn More From Small or Big Successes and Failures? A Test of the Outcome-Based Feedback Learning Perspective",
+ "journal": "JOM",
+ "year": 2017,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "feedback-based learning perspective",
+  "organizational learning theory",
+  "behavioral theory of the firm"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "success_experience",
+      "relation": "decreases",
+      "to": "search_effort",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_effort",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "success_experience",
+      "relation": "increases",
+      "to": "managerial_overconfidence",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_overconfidence",
+      "relation": "increases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_effort",
+    "managerial_overconfidence"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "failure_experience",
+      "relation": "increases",
+      "to": "search_effort",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_effort",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "failure_experience",
+      "relation": "increases",
+      "to": "inferential_accuracy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "inferential_accuracy",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_effort",
+    "inferential_accuracy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a failure experience lowers the acquirer's profitability and equity value, reducing its financial capacity to afford expensive high-premium acquisitions"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "big_success_experience",
+      "relation": "decreases",
+      "to": "search_effort",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "search_effort",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "search_effort"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "big_failure_experience",
+      "relation": "increases",
+      "to": "causal_understanding",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "causal_understanding",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "causal_understanding"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Standard & Poor's 1,500 constituent U.S. firms making acquisitions)",
+  "country_region": "U.S. acquirers (non-U.S. acquirers excluded); targets could be non-U.S. companies listed on U.S. stock exchanges",
+  "time_period": "1996-2006",
+  "sample_description": "Acquisition events by Standard & Poor's 1,500 constituent firms; deal data from Securities Data Corporation (SDC) Platinum, financial data from the Compustat-CRSP merged database; included mergers, acquisitions, and acquisition of major interests; excluded transactions by non-U.S. acquirers",
+  "sample_size": "848 acquisitions undertaken by 462 firms"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Corporation (SDC) Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat (Compustat-CRSP merged database)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (Compustat-CRSP merged database)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Model 1 (baseline model with control variables only)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Total number of prior acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size (log total assets, prior quarter)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer profitability / ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer financial slack (inverse debt ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target profitability / ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative size (acquirer total assets / target total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Similarity of business between acquirer and target",
+      "source": "Compustat"
+     },
+     {
+      "name": "Similarity of business between prior and current targets (target similarity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Contested bid (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Foreign bid (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Use of advisor (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Rumor of deal (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock payment (dummy)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 2 (success and failure experience)",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Success experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (CAR via EVENTUS market model)"
+     },
+     {
+      "name": "Failure experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (CAR via EVENTUS market model)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Total number of prior acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size (log total assets, prior quarter)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer profitability / ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer financial slack (inverse debt ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target profitability / ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative size (acquirer total assets / target total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Similarity of business between acquirer and target",
+      "source": "Compustat"
+     },
+     {
+      "name": "Similarity of business between prior and current targets (target similarity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Contested bid (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Foreign bid (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Use of advisor (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Rumor of deal (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock payment (dummy)",
+      "source": "SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Model 3 (big/small success and failure experience)",
+    "hypotheses": [
+     "H3",
+     "H4"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Acquisition premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Big success experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (CAR via EVENTUS market model)"
+     },
+     {
+      "name": "Small success experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (CAR via EVENTUS market model)"
+     },
+     {
+      "name": "Big failure experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (CAR via EVENTUS market model)"
+     },
+     {
+      "name": "Small failure experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (CAR via EVENTUS market model)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Total number of prior acquisitions",
+      "source": "SDC"
+     },
+     {
+      "name": "Acquirer size (log total assets, prior quarter)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer profitability / ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer financial slack (inverse debt ratio)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target profitability / ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative size (acquirer total assets / target total assets)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Similarity of business between acquirer and target",
+      "source": "Compustat"
+     },
+     {
+      "name": "Similarity of business between prior and current targets (target similarity)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Contested bid (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Foreign bid (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Use of advisor (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Rumor of deal (dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "Stock payment (dummy)",
+      "source": "SDC"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "success and failure experiences",
+    "premium decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "success or failure",
+    "successes and failures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "big and small successes and failures"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "limitations",
+   "constructs": [
+    "firms’ knowledge stock or causal maps"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "future_research",
+   "constructs": [
+    "microprocesses involved in learning"
+   ],
+   "mechanism_named": "microprocesses involved in learning",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "interplay mechanisms of multilevel learning",
+    "learning from small and big failures"
+   ],
+   "mechanism_named": "interplay mechanisms of multilevel learning",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "interplay mechanisms of multilevel learning",
+    "on_path": [
+     "small and big failures",
+     "learning"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "future_research",
+   "constructs": [
+    "stock market reaction",
+    "outcome feedback"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "stock market reactions",
+    "future acquisition behavior"
+   ],
+   "mechanism_named": "signaling theory",
+   "proposed_edge": {
+    "from": "stock market reactions",
+    "relation": "affects",
+    "to": "future acquisition behavior"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_mediator",
+   "section": "future_research",
+   "constructs": [
+    "executive turnover after big acquisition failure",
+    "big failure experience",
+    "learning"
+   ],
+   "mechanism_named": "dismissal of top executives",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "conclusion",
+   "constructs": [
+    "success and failure experiences",
+    "acquisition-based financials and stock returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "these experiences",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "different elements of experiences"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

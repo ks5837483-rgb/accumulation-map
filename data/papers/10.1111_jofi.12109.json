@@ -1,0 +1,512 @@
+{
+ "paper_id": "10.1111_jofi.12109",
+ "title": "Who Writes the News? Corporate Press Releases during Merger Negotiations",
+ "journal": "JF",
+ "year": 2014,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "active media management",
+  "information economics",
+  "market efficiency",
+  "behavioral finance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "fixed_exchange_ratio",
+      "relation": "increases",
+      "to": "incentive_to_lower_takeover_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_lower_takeover_price",
+      "relation": "increases",
+      "to": "press_release_issuance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_lower_takeover_price"
+   ],
+   "moderators": [
+    {
+     "construct": "difficulty_of_firm_valuation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "incentive_to_lower_takeover_price",
+     "moderated_from": "incentive_to_lower_takeover_price",
+     "moderated_to": "press_release_issuance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "opportunistic acquisitions (firms time stock-payment acquisitions to overvalued prices, generating news passively)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "media_coverage",
+      "relation": "increases",
+      "to": "investor_attention",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_attention",
+      "relation": "increases",
+      "to": "market_equity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_attention"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality (extreme stock returns attract news coverage rather than coverage moving prices)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "market_equity",
+      "relation": "decreases",
+      "to": "shares_issued",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "shares_issued",
+      "relation": "increases",
+      "to": "takeover_price",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "shares_issued"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "public_merger_announcement",
+      "relation": "increases",
+      "to": "perceived_probability_of_media_management",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_probability_of_media_management",
+      "relation": "decreases",
+      "to": "market_equity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_probability_of_media_management"
+   ],
+   "moderators": [
+    {
+     "construct": "history_of_media_management",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "perceived_probability_of_media_management",
+     "moderated_from": "public_merger_announcement",
+     "moderated_to": "market_equity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P4a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "passive media management (run-up reflects fundamentals and therefore should persist, not reverse)"
+   ]
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "incentive_to_lower_takeover_price",
+      "relation": "decreases",
+      "to": "negative_news_tone",
+      "from_measured": false,
+      "to_measured": true
+     },
+     {
+      "from": "negative_news_tone",
+      "relation": "decreases",
+      "to": "market_equity",
+      "from_measured": true,
+      "to_measured": false
+     }
+    ]
+   ],
+   "mechanisms": [
+    "negative_news_tone"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_media_coverage",
+      "relation": "increases",
+      "to": "bargaining_advantage",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_advantage",
+      "relation": "increases",
+      "to": "acquirer_relative_merger_gain",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_advantage"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "difficulty_of_firm_valuation",
+      "relation": "increases",
+      "to": "effectiveness_of_media_on_price",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "effectiveness_of_media_on_price",
+      "relation": "increases",
+      "to": "abnormal_media_coverage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "effectiveness_of_media_on_price"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "2000-2008",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "507 mergers (377 fixed and 130 floating exchange ratio deals)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "507 mergers, 2000-2008",
+    "dv": {
+     "name": "acquirer and deal characteristics",
+     "measure": "firm size, dispersion in analyst estimates, institutional ownership, intangibles, R&D, relative size of target, and likelihood of horizontal merger",
+     "source": ""
+    },
+    "key_ivs": [
+     {
+      "name": "deal payment type (all-cash vs. fixed vs. floating stock)",
+      "measure": "form of payment used in the merger (all-cash, fixed exchange ratio, or floating exchange ratio)",
+      "source": "SDC database (form of payment) + hand-collected SEC filings (fixed/floating type)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "choice of payment method",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC database + hand-collected SEC filings"
+    },
+    "key_ivs": [
+     {
+      "name": "acquirer stock price volatility",
+      "measure": "acquirer's stock price volatility (historical firm-level volatility)",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "fixed versus floating stock exchange ratio (comparison groups)",
+    "sample": "507 mergers; firm-day observations",
+    "dv": {
+     "name": "media coverage (media counts)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "merger period x payment type (Negotiation vs. Prenegotiation, Fixed vs. Floating)",
+      "measure": "difference-in-differences of media counts across time periods (Prenegotiation, Negotiation, Transaction) for fixed exchange versus floating exchange mergers",
+      "source": "Factiva (counts) + hand-collected SEC filings (period dates and fixed/floating type)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "fixed versus floating stock exchange ratio (comparison groups)",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "number of media articles",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Factiva"
+    },
+    "key_ivs": [
+     {
+      "name": "Negotiation period dummy",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected SEC filings (negotiation start dates)"
+     },
+     {
+      "name": "Negotiation period x Fixed ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected SEC filings (fixed/floating type) + Factiva"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Sum of |return t-1,...,t-5| (absolute value of the daily return)",
+      "source": ""
+     },
+     {
+      "name": "Sum of |return t-1,...,t-5| x Fixed ratio",
+      "source": ""
+     },
+     {
+      "name": "Firm-deal fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "targets",
+    "media coverage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "relative gains of the acquirer and target"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "information leakage",
+    "media coverage"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "collars",
+    "media management"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "press releases",
+    "stock price",
+    "other channels"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "media coverage",
+    "stock prices",
+    "alternative channel"
+   ],
+   "mechanism_named": "active media management",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "alternative channels",
+    "media coverage",
+    "stock prices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "deal quality",
+    "long-run stock returns"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "strategic use of media",
+    "corporate actions",
+    "executive compensation",
+    "stock issues and repurchases",
+    "proxy contests",
+    "product market competition"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "strategic use of media",
+    "relation": "affects",
+    "to": "corporate actions"
+   },
+   "proposed_moderator": null
+  }
+ ]
+}

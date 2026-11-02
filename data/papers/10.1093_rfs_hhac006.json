@@ -1,0 +1,505 @@
+{
+ "paper_id": "10.1093/rfs/hhac006",
+ "title": "Acquiring Innovation under Information Frictions",
+ "journal": "RFS",
+ "year": 2022,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "adverse selection",
+  "market for lemons",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "curvilinear",
+   "net_direction": "curvilinear",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_innovation",
+      "relation": "increases",
+      "to": "target_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_value",
+      "relation": "increases",
+      "to": "takeover_exposure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_innovation",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "takeover_exposure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_value",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_innovation",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "equity_usage",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "ex_ante_information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "target_innovation",
+     "moderated_to": "equity_usage",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 6.1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "market timing hypothesis (overvalued acquirers use equity as cheap currency)"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_innovation",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "adverse_selection"
+   ],
+   "moderators": [
+    {
+     "construct": "ex_ante_information_asymmetry",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "adverse_selection",
+     "moderated_from": "target_innovation",
+     "moderated_to": "deal_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Section 6.1"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (all U.S.-listed firms)",
+  "country_region": "United States",
+  "time_period": "1980-2006",
+  "sample_description": "all U.S.-listed firms (firm-year panel; innovation from patent data, firms larger on average than the universe of Compustat firms)",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "NBER patent citation data file (Hall, Jaffe, and Trajtenberg 2001)",
+    "category": "patents",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "all U.S.-listed firms, 1980-2006 (firm-year; N=35,433-59,822)",
+    "dv": {
+     "name": "Probability of being acquired (annual)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat firm-year panel merged with M&A deal data"
+    },
+    "key_ivs": [
+     {
+      "name": "Firm innovation (Innov) and its quadratic term",
+      "measure": "[withheld: wording matches the source]",
+      "source": "NBER patent citation data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm size (ln(Assets))",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "market-to-book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "return on assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "cash holding",
+      "source": "Compustat"
+     },
+     {
+      "name": "R&D expenditure",
+      "source": "Compustat"
+     },
+     {
+      "name": "asset tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "dividend payment dummy",
+      "source": "Compustat"
+     },
+     {
+      "name": "firm age",
+      "source": "Compustat"
+     },
+     {
+      "name": "square of firm age",
+      "source": "Compustat"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (Fama-French 48)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (Eq. 2): Firm innovation and the method of payment",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "M&A bids/offers (deal-level; N=410-605)",
+    "dv": {
+     "name": "Equity share in acquisition offer",
+     "measure": "[withheld: wording matches the source]",
+     "source": "M&A deal data"
+    },
+    "key_ivs": [
+     {
+      "name": "Target innovation (Innov_tar)",
+      "measure": "target's innovation stock: patent count ln(1+patcount) / citations ln(1+citation) / originality ln(1+originality) / breakthrough ln(1+tail innov); perpetual inventory, 6% depreciation",
+      "source": "NBER patent citation data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer innovation (Innov_acq)",
+      "source": "NBER patent citation data"
+     },
+     {
+      "name": "acquirer misvaluation (RRV_acq, Rhodes-Kropf, Robinson, and Viswanathan 2005)",
+      "source": "Compustat"
+     },
+     {
+      "name": "target misvaluation (RRV_tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size (Size_acq)",
+      "source": "Compustat"
+     },
+     {
+      "name": "target size",
+      "source": "Compustat"
+     },
+     {
+      "name": "market-to-book ratio (acq/tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "return on assets (acq/tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage (acq/tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "relative target size (RelSize_tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "diversification merger dummy",
+      "source": "M&A deal data"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (Fama-French 48)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "M&A deals conditional on receiving a bid (deal-level; N=457-678)",
+    "dv": {
+     "name": "Offer acceptance indicator (probability of deal completion)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "M&A deal data"
+    },
+    "key_ivs": [
+     {
+      "name": "Target innovation (Innov_tar)",
+      "measure": "target's innovation stock: patent count / citations / originality / breakthrough, ln(1+.) form; perpetual inventory, 6% depreciation",
+      "source": "NBER patent citation data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer innovation (Innov_acq)",
+      "source": "NBER patent citation data"
+     },
+     {
+      "name": "acquirer misvaluation (RRV_acq)",
+      "source": "Compustat"
+     },
+     {
+      "name": "target misvaluation (RRV_tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer size (Size_acq)",
+      "source": "Compustat"
+     },
+     {
+      "name": "market-to-book ratio (acq/tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "return on assets (acq/tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "leverage (acq/tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "relative target size (RelSize_tar)",
+      "source": "Compustat"
+     },
+     {
+      "name": "diversification merger dummy",
+      "source": "M&A deal data"
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "industry fixed effects (Fama-French 48)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "structural_model",
+    "shock_or_instrument": "",
+    "sample": "U.S.-listed firms, 1980-2006; SMM matching simulated panel to data moments",
+    "dv": {
+     "name": "Estimated structural parameters and matched target moments",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat, NBER patent data, and M&A deal data (moments); model simulation"
+    },
+    "key_ivs": [
+     {
+      "name": "Information asymmetry (omega)",
+      "measure": "structural parameter governing extent of information asymmetry; estimated 0.697; identified via moments on merger probability/deal completion/equity-ratio loadings on innovation",
+      "source": "estimated (SMM)"
+     },
+     {
+      "name": "Market reaction to equity usage (Lambda)",
+      "measure": "structural parameter capturing cost of equity payment; identified via negative correlation of acquirer announcement returns with equity usage",
+      "source": "estimated (SMM)"
+     },
+     {
+      "name": "Productivity persistence (rho) and innovation SD (sigma)",
+      "measure": "AR(1) persistence and standard deviation of innovation shocks; jointly determine information frictions/adverse selection risk",
+      "source": "estimated (SMM)"
+     },
+     {
+      "name": "Synergy scale (gamma) and acquirer share (alpha)",
+      "measure": "Cobb-Douglas merger-technology parameters; identified via average realized gain (combined-firm announcement CAR) and merger probability",
+      "source": "estimated (SMM)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Counterfactual: removing information frictions (perfect information about target innovation)",
+    "hypotheses": [],
+    "identification": "simulation",
+    "shock_or_instrument": "",
+    "sample": "simulated panel from the estimated structural model",
+    "dv": {
+     "name": "M&A gains / capitalized value of the M&A market under perfect information",
+     "measure": "[withheld: wording matches the source]",
+     "source": "estimated-model simulation"
+    },
+    "key_ivs": [
+     {
+      "name": "Information friction (counterfactually removed)",
+      "measure": "set full revelation of target productivity/innovation (omega counterfactual), then re-solve and simulate the estimated model",
+      "source": "estimated model"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "market reaction to the method of payment",
+    "equity usage"
+   ],
+   "mechanism_named": "market reaction to the method of payment",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "large, innovative firms",
+    "being acquired"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "value destroying mergers",
+    "other frictions",
+    "agency costs"
+   ],
+   "mechanism_named": "agency costs",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "target firms",
+    "realization of their ongoing innovation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "target-side lack of information",
+    "information asymmetry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "information frictions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

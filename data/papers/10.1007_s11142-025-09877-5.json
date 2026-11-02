@@ -1,0 +1,1352 @@
+{
+ "paper_id": "10.1007_s11142-025-09877-5",
+ "title": "The benefits of article 11 pro forma disclosure",
+ "journal": "RAS",
+ "year": 2025,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "mandatory disclosure theory",
+  "information economics",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1A",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pro_forma_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "analyst_forecast_errors",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "target historical financial information alone drives the result and market participants ignore pro formas"
+   ]
+  },
+  {
+   "hypothesis": "H1B",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pro_forma_disclosure",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "analyst_forecast_errors",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "analyst_following",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "pro_forma_disclosure",
+     "moderated_to": "analyst_forecast_errors",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1B"
+    },
+    {
+     "construct": "acquisition_conference_call",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "pro_forma_disclosure",
+     "moderated_to": "analyst_forecast_errors",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1B"
+    },
+    {
+     "construct": "public_target",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "information_asymmetry",
+     "moderated_from": "pro_forma_disclosure",
+     "moderated_to": "analyst_forecast_errors",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1B"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the pre-existing information environment already contains all information in the pro formas, so pro formas add nothing"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pro_forma_disclosure",
+      "relation": "increases",
+      "to": "transparency",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "transparency",
+      "relation": "increases",
+      "to": "acquisition_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "pro_forma_disclosure",
+      "relation": "increases",
+      "to": "ex_ante_investment_discipline",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ex_ante_investment_discipline",
+      "relation": "increases",
+      "to": "acquisition_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "transparency",
+    "ex_ante_investment_discipline"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "other monitoring mechanisms such as fairness opinions leave little role for pro forma disclosure"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pro_forma_forecasting_benefit",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "incentive_alignment_benefit",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a financial measure can be useful for valuation without addressing agency problems, implying no link between forecasting and incentive alignment benefits"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. public-firm acquisitions across industries, including a finance-industry subgroup)",
+  "country_region": "United States (U.S. public acquirers)",
+  "time_period": "2002-2016",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "2,059 acquisitions (703 hand-collected pro forma subsample)"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "SDC Platinum (Securities Data Corporation)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "IBES",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Hand-collected pro forma financial information and purchase price from SEC filings",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Intelligize (firm filings search)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 4 Panel A (Op Increase; Eq. 2, next quarter and next 12 months)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pro forma subsample (703 hand-collected pro forma observations)",
+    "dv": {
+     "name": "Op Increase",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "PF Increase",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma (SEC filings)"
+     },
+     {
+      "name": "Tgt Increase",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 Panel B (Op Increase%; Eq. 2, continuous measure)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "pro forma subsample (703 hand-collected pro forma observations)",
+    "dv": {
+     "name": "Op Increase%",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "PF Increase",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma (SEC filings)"
+     },
+     {
+      "name": "Tgt Increase",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A (AFE Change; fuzzy RD via Pro Forma IV; Eq. 1)",
+    "hypotheses": [
+     "H1A"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "20 percent investment test disclosure threshold (fuzzy RD instrument for Pro Forma; Threshold first-stage t-stat 15.12)",
+    "sample": "full acquisition sample (2,059)",
+    "dv": {
+     "name": "AFE Change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IBES"
+    },
+    "key_ivs": [
+     {
+      "name": "Pro Forma IV",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected (SEC filings)"
+     },
+     {
+      "name": "Investment Test",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected purchase price / Compustat"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B (AFE Change on pro forma attributes / pro forma detail design)",
+    "hypotheses": [
+     "H1B"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "columns 1-6 restricted to observations with pro forma disclosure; columns 7-8 full sample (col 8 narrow 15-30% bandwidth)",
+    "dv": {
+     "name": "AFE Change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IBES"
+    },
+    "key_ivs": [
+     {
+      "name": "PF Rows",
+      "measure": "the level of income statement disaggregation",
+      "source": "hand-collected pro forma"
+     },
+     {
+      "name": "PF Notes",
+      "measure": "the number of footnotes",
+      "source": "hand-collected pro forma"
+     },
+     {
+      "name": "Abs Adj Size",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma"
+     },
+     {
+      "name": "Interco Elim",
+      "measure": "the existence of any intercompany eliminations",
+      "source": "hand-collected pro forma"
+     },
+     {
+      "name": "CapStructure Change",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma"
+     },
+     {
+      "name": "PF High Detail / PF Low Detail",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel A (AFE Change cross-sectional splits; fuzzy RD / Pro Forma IV)",
+    "hypotheses": [],
+    "identification": "RDD",
+    "shock_or_instrument": "20 percent investment test disclosure threshold",
+    "sample": "subsamples: above/below median analyst following; conference call vs none; public vs non-public target",
+    "dv": {
+     "name": "AFE Change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IBES"
+    },
+    "key_ivs": [
+     {
+      "name": "Pro Forma IV",
+      "measure": "Pro Forma instrumented by the 20 percent investment test Threshold, estimated within subsamples split by acquirer analyst following (above/below median), acquisition-related conference call (yes/no), and target type (public/non-public)",
+      "source": "hand-collected (SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6 Panel B (AFE Change cross-sectional splits; pro forma detail design)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "subsamples: above/below median analyst following; conference call vs none; public vs non-public target",
+    "dv": {
+     "name": "AFE Change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "IBES"
+    },
+    "key_ivs": [
+     {
+      "name": "PF High Detail / PF Low Detail",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A (ARET; incentive alignment, fuzzy RD / Pro Forma IV)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "20 percent investment test disclosure threshold",
+    "sample": "full sample",
+    "dv": {
+     "name": "ARET",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Pro Forma IV",
+      "measure": "Pro Forma instrumented by the 20 percent investment test Threshold in a two-stage fuzzy RD",
+      "source": "hand-collected (SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A (Deal Failure; incentive alignment, fuzzy RD / Pro Forma IV)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "20 percent investment test disclosure threshold",
+    "sample": "full sample",
+    "dv": {
+     "name": "Deal Failure",
+     "measure": "[withheld: wording matches the source]",
+     "source": "hand-collected / Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Pro Forma IV",
+      "measure": "Pro Forma instrumented by the 20 percent investment test Threshold in a two-stage fuzzy RD",
+      "source": "hand-collected (SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A (ROA Change; incentive alignment, fuzzy RD / Pro Forma IV)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "20 percent investment test disclosure threshold",
+    "sample": "full sample",
+    "dv": {
+     "name": "ROA Change",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Pro Forma IV",
+      "measure": "Pro Forma instrumented by the 20 percent investment test Threshold in a two-stage fuzzy RD",
+      "source": "hand-collected (SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel A (Tgt Quality; incentive alignment, fuzzy RD / Pro Forma IV)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "RDD",
+    "shock_or_instrument": "20 percent investment test disclosure threshold",
+    "sample": "full sample",
+    "dv": {
+     "name": "Tgt Quality",
+     "measure": "a composite measure of target quality from principal component analysis retaining a single factor (eigenvalue 1.12) with loadings ARET 0.28, ROA Change 0.72, and Deal Failure -0.63",
+     "source": "CRSP / Compustat (composite)"
+    },
+    "key_ivs": [
+     {
+      "name": "Pro Forma IV",
+      "measure": "Pro Forma instrumented by the 20 percent investment test Threshold in a two-stage fuzzy RD",
+      "source": "hand-collected (SEC filings)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7 Panel B (incentive alignment; pro forma detail design)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "full sample (odd columns) and narrow bandwidth 15-30% (even columns)",
+    "dv": {
+     "name": "Transaction quality (ARET / Deal Failure / ROA Change / Tgt Quality)",
+     "measure": "the four target quality measures used as dependent variables (ARET = three-day CAR over CRSP value-weighted index; Deal Failure = material goodwill impairment or divestiture within five years; ROA Change = change in industry-adjusted ROA over three years; Tgt Quality = PCA composite)",
+     "source": "CRSP / Compustat / hand-collected"
+    },
+    "key_ivs": [
+     {
+      "name": "PF High Detail / PF Low Detail",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected pro forma"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Foreign Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Public Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Sub Tgt",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Diversify",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Advisor",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Coverage",
+      "source": "IBES"
+     },
+     {
+      "name": "Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Mgmt Guide",
+      "source": "IBES"
+     },
+     {
+      "name": "Conference Call",
+      "source": "hand-collected"
+     },
+     {
+      "name": "PreGoodwill",
+      "source": "Compustat"
+     },
+     {
+      "name": "Serial Acquirer",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Big 4 Auditor",
+      "source": "Compustat"
+     },
+     {
+      "name": "Loss Firm",
+      "source": "Compustat"
+     },
+     {
+      "name": "PreIncome",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tobin Q",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Fig. 2 (threshold manipulation / density test)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "20 percent investment test threshold",
+    "sample": "full sample; also reported for public and non-public (private or subsidiary) target subsamples",
+    "dv": {
+     "name": "Density of observations around the 20% investment test threshold",
+     "measure": "Cattaneo et al. (2020) nonparametric manipulation test statistic (-0.12, p-value 0.90)",
+     "source": "hand-collected purchase price / SDC Platinum"
+    },
+    "key_ivs": [
+     {
+      "name": "Investment Test",
+      "measure": "[withheld: wording matches the source]",
+      "source": "hand-collected purchase price / Compustat"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": []
+}

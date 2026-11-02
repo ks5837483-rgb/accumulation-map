@@ -1,0 +1,602 @@
+{
+ "paper_id": "10.1007_s11142-010-9139-y",
+ "title": "Do acquirers disclose good news or withhold bad news when they finance their acquisitions using equity?",
+ "journal": "RAS",
+ "year": 2010,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "voluntary disclosure theory",
+  "disclosure theory",
+  "litigation risk theory",
+  "market misvaluation theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "incentive_to_boost_market_valuation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_boost_market_valuation",
+      "relation": "increases",
+      "to": "withholding_of_bad_news",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_boost_market_valuation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]",
+    "[withheld: wording matches the source]",
+    "Stock swap managers overextrapolate superior pre-acquisition return momentum and become too optimistic, so they fail to disclose bad news."
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "stock_financing",
+      "relation": "increases",
+      "to": "incentive_to_boost_market_valuation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_boost_market_valuation",
+      "relation": "increases",
+      "to": "issuance_of_overly_optimistic_forecasts",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_boost_market_valuation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "Prediction (post-acquisition returns, Sect. 5.4)",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "withholding_of_bad_news",
+      "relation": "increases",
+      "to": "over_inflated_market_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "over_inflated_market_value",
+      "relation": "increases",
+      "to": "post_acquisition_underperformance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "over_inflated_market_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquiring companies across Fama and French industry classifications, with more than one third clustered in the Business Equipment sector)",
+  "country_region": "",
+  "time_period": "1995-2006",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Security Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "First Call Company Issued Guidelines",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 Panel A: Univariate news type (bad news frequency)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFBAD",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction; STOCK = one if acquisition financed with stock, zero if financed with cash; PRE = one for the pre-acquisition period [DA-90, DA-30], zero for the post-acquisition period [DE+30, DE+90]",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel A: Univariate news type (good news frequency)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFGOOD",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction; STOCK = one if acquisition financed with stock, zero if cash; PRE = one for pre-acquisition period, zero for post-acquisition period",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel B: Mean value of news magnitude (bad news)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFNEWS[-]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction (difference-in-differences treatment)",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3 Panel B: Mean value of news magnitude (good news)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFNEWS[+]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction (difference-in-differences treatment)",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 5 Panel A, Column (1): Eq. 1 issuance of bad news forecast",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "2,786 acquiring companies (951 stock, 1,835 cash); 5,572 observations (two per company)",
+    "dv": {
+     "name": "MFBAD",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction; STOCK = one if acquisition financed with stock, zero if cash; PRE = one for pre-acquisition period, zero for post-acquisition period",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "STOCK",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "PRE",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "R(FE) (rank of analyst forecast error)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SIZE (log market value of common equity)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "R(MB) (rank of market-to-book ratio)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Industry dummies (Fama-French 12)",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel A, Column (2): Eq. 2 magnitude of bad news forecast (tobit)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFNEWS[-]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction (difference-in-differences treatment)",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "STOCK",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "PRE",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "R(FE) (rank of analyst forecast error)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SIZE (log market value of common equity)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "R(MB) (rank of market-to-book ratio)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Industry dummies (Fama-French 12)",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B, Column (1): Eq. 3 issuance of good news forecast",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFGOOD",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction (difference-in-differences treatment)",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "STOCK",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "PRE",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "R(FE) (rank of analyst forecast error)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SIZE (log market value of common equity)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "R(MB) (rank of market-to-book ratio)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Industry dummies (Fama-French 12)",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 Panel B, Column (2): Eq. 4 magnitude of good news forecast (tobit)",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFNEWS[+]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction (difference-in-differences treatment)",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "STOCK",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "PRE",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "R(FE) (rank of analyst forecast error)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "SIZE (log market value of common equity)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "R(MB) (rank of market-to-book ratio)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Industry dummies (Fama-French 12)",
+      "source": ""
+     },
+     {
+      "name": "Year dummies",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.1: Self-selection robustness - matched propensity scores",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "",
+    "sample": "stock swap acquirers matched to nearest-propensity cash acquirers",
+    "dv": {
+     "name": "MFBAD / MFNEWS / MFGOOD (management forecast disclosure)",
+     "measure": "Same management-forecast dependent variables re-estimated on a sub-sample of cash acquirers matched to stock swap acquirers by the predicted probability of stock financing",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction re-estimated on propensity-matched sample",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R(MB) (matching covariate, investment opportunities)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "CASH (cash balance / amount paid for target)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "TVAL (log amount paid for target)",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "MOM (acquirer buy-and-hold return, month -6 to ~30 days pre-announcement)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Section 5.1: Self-selection robustness - Heckman model",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "MFBAD / MFNEWS / MFGOOD (management forecast disclosure)",
+     "measure": "Management-forecast dependent variables re-estimated with a Heckman (1979) two-stage correction for endogenous choice of stock vs cash financing",
+     "source": "First Call Company Issued Guidelines"
+    },
+    "key_ivs": [
+     {
+      "name": "STOCK x PRE",
+      "measure": "STOCK x PRE interaction with Heckman selection correction",
+      "source": "Security Data Company (SDC)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "R(MB)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "CASH",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "TVAL",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "MOM",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Appendix: Eq. 5 acquisition financing choice (selection / propensity model)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "acquirers with available data for CASH, TVAL, and MOM",
+    "dv": {
+     "name": "STOCK",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Security Data Company (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "R(MB)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "CASH",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "TVAL",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Security Data Company (SDC)"
+     },
+     {
+      "name": "MOM",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "conclusion",
+   "constructs": [
+    "withholding bad news"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "bad news"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "future bad earnings news",
+    "stock swap acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "return momentum",
+    "forecasting"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

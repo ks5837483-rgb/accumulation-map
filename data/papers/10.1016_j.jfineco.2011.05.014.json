@@ -1,0 +1,677 @@
+{
+ "paper_id": "10.1016_j.jfineco.2011.05.014",
+ "title": "Growth LBOs",
+ "journal": "JFE",
+ "year": 2011,
+ "field": "finance",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "financing constraints theory",
+  "credit constraints theory",
+  "agency theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "leveraged_buyout",
+      "relation": "decreases",
+      "to": "credit_constraints",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_constraints",
+      "relation": "decreases",
+      "to": "firm_growth",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credit_constraints"
+   ],
+   "moderators": [
+    {
+     "construct": "pre_buyout_ownership_structure",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "credit_constraints",
+     "moderated_from": "leveraged_buyout",
+     "moderated_to": "firm_growth",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "implication 1 (Section 4.1, Table 7)"
+    },
+    {
+     "construct": "industry_financial_dependence",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "credit_constraints",
+     "moderated_from": "leveraged_buyout",
+     "moderated_to": "firm_growth",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "implication 2 (Section 4.2, Table 8)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "cost-cutting / downsizing as the primary source of value creation",
+    "private equity funds select targets that were already growing fast before the deal (selection on pre-buyout growth)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "leveraged_buyout",
+      "relation": "decreases",
+      "to": "credit_constraints",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "credit_constraints",
+      "relation": "decreases",
+      "to": "capital_expenditures",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "credit_constraints"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "private equity funds select targets that were already growing fast before the deal (selection on pre-buyout growth)"
+   ]
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "leveraged_buyout",
+      "relation": "increases",
+      "to": "borrower_credibility",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "borrower_credibility",
+      "relation": "increases",
+      "to": "debt_issuance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "borrower_credibility"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "the rise in target leverage merely reflects acquisition (deal) debt rather than the target's own new borrowing"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (French firms across two-digit industry sectors)",
+  "country_region": "France",
+  "time_period": "1994-2004",
+  "sample_description": "French leveraged buyout (LBO) deals whose targets are mostly medium-sized, privately held firms, compared with a matched control group of non-LBO firms; transactions identified from SDC Platinum and Capital IQ, financial statements from BRN tax files (INSEE)",
+  "sample_size": "839 deals"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) Platinum",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Capital IQ",
+    "category": "capitaliq",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Benefices Reels Normaux (BRN) tax files, from INSEE",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "LIFI (Liaisons Financieres) ownership survey, from the statistical office",
+    "category": "survey",
+    "kind": "government_public"
+   },
+   {
+    "name": "REPONSE survey (1998 wave), run by the French ministry of labor",
+    "category": "survey",
+    "kind": "government_public"
+   },
+   {
+    "name": "Bankruptcy files from the statistical office",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Hand-collected identity of the target's ultimate shareholder (company Web sites, annual reports, business press)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "DIANE data set",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "839 LBO targets and their matched control firms, France, 1994-2004",
+    "dv": {
+     "name": "excess ROA (mean-adjusted change in ROA)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "years since the LBO (event time)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Figs. 3-4: Mean-adjusted employment and capital expenditure growth around the LBO",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "mean-adjusted (excess) employment and capital expenditure growth",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "years since the LBO (event time)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, col 1: impact of LBO on ROA (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "ROA (operating profitability)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, col 2: impact of LBO on log(EBITDA) (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "log(EBITDA)",
+     "measure": "log of earnings before interest, taxes, depreciation, and amortization (EBITDA)",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, col 3: impact of LBO on log(employment) (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "log(employment)",
+     "measure": "log(Empl) is the logarithm of employment (number of employees)",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, col 4: impact of LBO on log(sales) (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "log(sales)",
+     "measure": "log sales",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, col 5: impact of LBO on log(fixed assets + working capital) (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "log(FA + WC) (capital employed)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, col 6: impact of LBO on target leverage (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "target leverage",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, col 7: impact of LBO on log(capital expenditures) (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "log(CAPEX)",
+     "measure": "log capital expenditures; CAPEX is capital expenditures",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3: potential sources of value/growth (outsourcing, working capital, exports)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "share of exports in total sales (also: intermediate inputs/sales; working capital share of total assets)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel A: robustness controlling for pre-buyout growth (Eq. 2)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "same seven dependent variables as Table 2",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "post x LBO with an added interaction post x pre-LBO sales growth",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "BRN tax files (INSEE)"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Panel B: sub-period robustness (deals <=2000 vs >2000)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "deals split into year of deal <=2000 (394 deals) and >2000 (445 deals)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "same seven dependent variables as Table 2, estimated separately by sub-period",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "post x LBO estimated separately for year of deal <=2000 and >2000",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: stand-alone vs target+subsidiaries robustness (group structure)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "firms with no subsidiary (stand alones, ~316 deals) vs targets with subsidiary employment/assets added (INSEE/LIFI subsidiary data)",
+    "dv": {
+     "name": "log(employment) and log(tangible fixed assets)",
+     "measure": "log(employment) (cols 1-2) and log of tangible fixed assets (cols 3-4)",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "post x LBO estimated for stand-alone firms only and for target+subsidiaries",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: employment rigidity moderator (Eq. 3)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "sample with industry rigidity data (438 deals)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "same seven dependent variables as Table 2",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO x RIGID (industry employment rigidity moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "REPONSE survey (1998 wave)"
+     },
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "post x LBO",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "rigidity, post x rigidity, LBO x rigidity",
+      "source": "REPONSE survey (1998 wave)"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "subsamples by pre-buyout ownership: private-to-private (438), divisional (229), secondary (129), public-to-private (36) deals",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "same seven dependent variables as Table 2, plus a test of equality of the post x LBO coefficient across deal types",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO within pre-buyout ownership subsamples",
+      "measure": "post x LBO estimated separately for private-to-private (Panel A), divisional (Panel B), secondary (Panel C), and public-to-private (Panel D) buyouts",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8: industry financial dependence moderator (Eq. 4)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "by deal type: private-to-private (Panel A), divisional (Panel B), secondary (Panel C), public-to-private (Panel D)",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "same seven dependent variables as Table 2, interacted with industry financial dependence",
+     "source": "BRN tax files (INSEE)"
+    },
+    "key_ivs": [
+     {
+      "name": "post x LBO x Fin. Dep. (industry financial dependence moderator)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "BRN tax files (INSEE), industry-level (firms >100 employees, 1990-2006)"
+     },
+     {
+      "name": "post x LBO (difference-in-differences interaction)",
+      "measure": "post x LBO",
+      "source": "SDC Platinum / Capital IQ"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Fin. Dep., post x Fin. Dep., LBO x Fin. Dep.",
+      "source": "BRN tax files (INSEE)"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "growth motivation",
+    "us or the uk transactions",
+    "lbo"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

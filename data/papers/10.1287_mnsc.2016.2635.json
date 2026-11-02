@@ -1,0 +1,1008 @@
+{
+ "paper_id": "10.1287_mnsc.2016.2635",
+ "title": "Full-Stock-Payment Marginalization in Merger and Acquisition Transactions",
+ "journal": "MNSC",
+ "year": 2018,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "signaling theory",
+  "agency theory",
+  "positive accounting theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pooling_abolishment",
+      "relation": "decreases",
+      "to": "incentive_to_qualify_for_pooling",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_qualify_for_pooling",
+      "relation": "increases",
+      "to": "full_stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_qualify_for_pooling"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_variable_compensation",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "incentive_to_qualify_for_pooling",
+     "moderated_from": "pooling_abolishment",
+     "moderated_to": "full_stock_payment",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1b"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "the contemporaneous bursting of the Internet bubble drove the decline"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pooling_propensity",
+      "relation": "increases",
+      "to": "incentive_to_qualify_for_pooling",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "incentive_to_qualify_for_pooling",
+      "relation": "increases",
+      "to": "full_stock_payment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_qualify_for_pooling"
+   ],
+   "moderators": [
+    {
+     "construct": "pooling_abolishment",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "incentive_to_qualify_for_pooling",
+     "moderated_from": "pooling_propensity",
+     "moderated_to": "full_stock_payment",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "post_pooling_full_stock_payment_for_public_targets",
+      "relation": "increases",
+      "to": "value_destroying_transaction_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "value_destroying_transaction_selection",
+      "relation": "decreases",
+      "to": "acquirer_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "post_pooling_full_stock_payment_for_public_targets",
+      "relation": "increases",
+      "to": "negative_private_information_about_acquirer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "negative_private_information_about_acquirer",
+      "relation": "decreases",
+      "to": "acquirer_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "value_destroying_transaction_selection",
+    "negative_private_information_about_acquirer"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (M&A transactions, financial acquirers with SIC codes 6000-6999 excluded)",
+  "country_region": "United States and Canada (baseline; robustness uses Europe/UK as counterfactuals)",
+  "time_period": "1990-2014",
+  "sample_description": "M&A transactions from the Thomson SDC database (selection criteria similar to Betton et al. 2008: deal size > USD 1 million, public acquirers, deal value/acquirer size >= 1%, exchange offers/acquisition of (certain) assets/buybacks/recaps/acquisition of stock excluded, 50-100% of shares acquired, 100% held after, consideration reported, financial acquirers SIC 6000-6999 excluded); market data from CRSP (U.S.) and Datastream (Canada), financials from Compustat",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson SDC database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Datastream",
+    "category": "datastream",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat Merged database (U.S.) and Compustat North America database (Canada)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Execucomp database",
+    "category": "execucomp",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2, Panel B / Eq. (1) - Chow structural break test of full-stock-payment percentages",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "SFAS 141/142 pooling abolishment (June 2001); joint test of significance beta=delta=0 for a structural break in 2001",
+    "sample": "Annual time series of full-stock-payment percentages, United States and Canada, 1990-2014",
+    "dv": {
+     "name": "Fully stock-paid transaction percentage by year",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Postpool",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed"
+     },
+     {
+      "name": "Trend",
+      "measure": "linear time trend variable",
+      "source": "constructed"
+     },
+     {
+      "name": "Trend x Postpool",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "United States (5,337 obs) and Canada (786 obs) estimated separately",
+    "dv": {
+     "name": "Full stock payment dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer Size",
+      "measure": "acquirer size (USD million)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "measure": "ratio of deal value to acquirer size",
+      "source": "Thomson SDC / CRSP / Datastream"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "measure": "leverage ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "measure": "market-to-book ratio",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "measure": "asset tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "measure": "dividend payments",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Research and Development",
+      "measure": "research and development (R&D)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "measure": "cash holding",
+      "source": "Compustat"
+     },
+     {
+      "name": "Domestic",
+      "measure": "domestic deal dummy",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Horizontal",
+      "measure": "horizontal deal dummy",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Public Target",
+      "measure": "target status (public target)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "10-Year Interest Rate",
+      "measure": "10-year Treasury bond interest rate",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Sector fixed effects (SIC two-digit)",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Eqs. (2)-(3) - Baseline difference-in-differences test of pooling abolishment on full stock payment",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141/142 abolishment of pooling of interests (June 2001), with Canada as placebo/counterfactual (pooling not abolished before 2001)",
+    "sample": "Merged U.S. and Canadian M&A samples, 6,123 obs",
+    "dv": {
+     "name": "Full stock payment dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "US x Postpool (DiD interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC / constructed"
+     },
+     {
+      "name": "US",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Postpool",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP / Datastream"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Research and Development",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Domestic",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Horizontal",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Public Target",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "10-Year Interest Rate",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Sector fixed effects (SIC two-digit)",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year fixed effects (column 2 only)",
+      "source": "constructed"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panel A - CEO incentives channel (LPM of full stock payment with variable compensation)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "SFAS 141/142 pooling abolishment (June 2001)",
+    "sample": "U.S. sample only, 1,146 obs (limited by Execucomp availability)",
+    "dv": {
+     "name": "Full stock payment dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "% Variable Compensation",
+      "measure": "percentage of CEO variable compensation",
+      "source": "Execucomp"
+     },
+     {
+      "name": "% Variable Compensation x Postpool",
+      "measure": "interaction of the percentage of CEO variable compensation with the Postpool dummy variable",
+      "source": "Execucomp / constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Research and Development",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Domestic",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Horizontal",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Public Target",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "10-Year Interest Rate",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Credit Spread",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "constructed"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "SFAS 141/142 pooling abolishment (June 2001)",
+    "sample": "U.S. subsamples split at yearly median: High ROA (567), Low ROA (579), High MTB (565), Low MTB (581)",
+    "dv": {
+     "name": "Full stock payment dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "% Variable Compensation",
+      "measure": "percentage of CEO variable compensation",
+      "source": "Execucomp"
+     },
+     {
+      "name": "% Variable Compensation x Postpool",
+      "measure": "interaction of the percentage of CEO variable compensation with the Postpool dummy variable",
+      "source": "Execucomp / constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Research and Development",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Domestic",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Horizontal",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Public Target",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "10-Year Interest Rate",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Credit Spread",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "constructed"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Classic determinants' predictive power by pooling vs. post-pooling period (LPM, Boone et al. 2014 strategy; Heckman robustness)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "SFAS 141/142 pooling abolishment (June 2001); two-stage Heckman procedure run as robustness (results similar, available on request)",
+    "sample": "United States pooling period 3,231 / post-pooling 2,106; Canada pooling 165 / post-pooling 621",
+    "dv": {
+     "name": "Full stock payment dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Acquirer Size",
+      "measure": "acquirer size (USD million)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "measure": "leverage ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "measure": "market-to-book ratio",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "measure": "asset tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "measure": "dividend payments",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Research and Development",
+      "measure": "R&D",
+      "source": "Compustat"
+     },
+     {
+      "name": "Public Target",
+      "measure": "public target dummy",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Domestic",
+      "measure": "domestic deal dummy",
+      "source": "Thomson SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Horizontal",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "10-Year Interest Rate",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Panel A - First-stage probability of pooling (probit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "U.S. M&A transactions 1990-2001, public targets, 729 obs",
+    "dv": {
+     "name": "Pooling dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Step Up",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Return on Assets",
+      "measure": "target ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Leverage",
+      "measure": "target leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Target Size",
+      "measure": "target size (USD million)",
+      "source": "Compustat / Thomson SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP"
+     },
+     {
+      "name": "Acquirer Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "source": "Compustat"
+     },
+     {
+      "name": "Run Up",
+      "source": "CRSP"
+     },
+     {
+      "name": "High Tech",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Manufacturing",
+      "source": "Thomson SDC"
+     }
+    ]
+   },
+   {
+    "label": "Table 8, Panel B / Eqs. (5)-(6) - Second-stage probability of full stock payment on fitted pooling probability (LPM)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "SFAS 141/142 pooling abolishment (June 2001); Pooling Hat is a generated regressor (fitted probability of pooling from first-stage probit)",
+    "sample": "U.S. sample restricted to public targets, 1,157 obs",
+    "dv": {
+     "name": "Full stock payment dummy",
+     "measure": "full-stock-payment dummy variable (Stock_i equal to 1 if fully paid in stock)",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "Pooling Hat",
+      "measure": "fitted probability of pooling, obtained from the first-stage probit (Eq. 4)",
+      "source": "constructed (first-stage probit fitted value)"
+     },
+     {
+      "name": "Postpool x Pooling Hat",
+      "measure": "interaction between the Postpool dummy and Pooling Hat (fitted pooling probability)",
+      "source": "constructed"
+     },
+     {
+      "name": "Postpool",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Research and Development",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Domestic",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Horizontal",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Public Target",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "10-Year Interest Rate",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Credit Spread",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year fixed effects (column 2 only)",
+      "source": "constructed"
+     }
+    ]
+   },
+   {
+    "label": "Table 9 - Value effects: acquirer CAR on payment mode, target status, and pooling period",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "SFAS 141/142 pooling abolishment (June 2001); CAR via market model, three-day announcement window",
+    "sample": "U.S. sample, 5,148 obs",
+    "dv": {
+     "name": "Acquirer CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Postpool x Stock x Public Target",
+      "measure": "triple interaction of post-pooling period, full stock payment, and public target dummies",
+      "source": "constructed"
+     },
+     {
+      "name": "Stock x Public Target",
+      "measure": "interaction of full stock payment and public target dummies",
+      "source": "Thomson SDC / constructed"
+     },
+     {
+      "name": "Stock",
+      "measure": "full stock payment dummy",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Public Target",
+      "measure": "public target dummy",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Postpool",
+      "measure": "post-pooling abolishment period dummy",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP"
+     },
+     {
+      "name": "Acquirer Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Free Cash Flow",
+      "source": "Compustat"
+     },
+     {
+      "name": "Domestic",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Horizontal",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Sigma",
+      "source": "CRSP"
+     },
+     {
+      "name": "Run Up",
+      "source": "CRSP"
+     },
+     {
+      "name": "Hostile",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Tender Offer",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year fixed effects (column 1 only)",
+      "source": "constructed"
+     }
+    ]
+   },
+   {
+    "label": "Table 10 - Robustness DiD replications (exclude high-tech; exclude cross-border; constant acquirer sample)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141/142 pooling abolishment (June 2001), Canada counterfactual",
+    "sample": "Panel A excl. high-tech (3,273); Panel B excl. cross-border (5,174); Panel C constant-acquirer subsample (971)",
+    "dv": {
+     "name": "Full stock payment dummy",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson SDC database"
+    },
+    "key_ivs": [
+     {
+      "name": "US x Postpool (DiD interaction)",
+      "measure": "US_i x Postpool_i interaction term",
+      "source": "Thomson SDC / constructed"
+     },
+     {
+      "name": "US",
+      "measure": "dummy equal to 1 if acquirer is a U.S. firm",
+      "source": "Thomson SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Acquirer Size",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "Thomson SDC / CRSP / Datastream"
+     },
+     {
+      "name": "Acquirer Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Market to Book",
+      "source": "Compustat / CRSP"
+     },
+     {
+      "name": "Acquirer Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Dividend",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Research and Development",
+      "source": "Compustat"
+     },
+     {
+      "name": "Acquirer Cash",
+      "source": "Compustat"
+     },
+     {
+      "name": "Domestic",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Horizontal",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Public Target",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "10-Year Interest Rate",
+      "source": "Federal Reserve Bank of St. Louis (FRED)"
+     },
+     {
+      "name": "Sector fixed effects",
+      "source": "Thomson SDC"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": "constructed"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "discussion",
+   "constructs": [
+    "fully stock-paid transaction frequency"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "explanatory variables"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

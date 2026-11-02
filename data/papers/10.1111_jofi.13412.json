@@ -1,0 +1,936 @@
+{
+ "paper_id": "10.1111_jofi.13412",
+ "title": "Sustainability or Greenwashing: Evidence from the Asset Market for Industrial Pollution",
+ "journal": "JF",
+ "year": 2024,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "theory of the firm",
+  "information asymmetry",
+  "agency theory",
+  "greenwashing",
+  "signaling theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1_pressure_divest",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "environmental_pressure",
+      "relation": "increases",
+      "to": "environmental_cost_of_ownership",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "environmental_cost_of_ownership",
+      "relation": "increases",
+      "to": "divestment_of_pollutive_plants",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "environmental_cost_of_ownership"
+   ],
+   "moderators": [
+    {
+     "construct": "pollution_level",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "environmental_cost_of_ownership",
+     "moderated_from": "environmental_pressure",
+     "moderated_to": "divestment_of_pollutive_plants",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "Pollution x Pressure"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "P2_buyer_weak_pressure",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "environmental_pressure",
+      "relation": "decreases",
+      "to": "comparative_advantage_in_operating_pollutive_assets",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "comparative_advantage_in_operating_pollutive_assets",
+      "relation": "increases",
+      "to": "likelihood_of_buying_pollutive_assets",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "comparative_advantage_in_operating_pollutive_assets"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sellers offloading environmental liabilities to distressed firms with bankruptcy protection"
+   ]
+  },
+  {
+   "hypothesis": "P3_reallocation_reduces_pollution",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divestment_of_pollutive_plants",
+      "relation": "increases",
+      "to": "pollution_treatment_capacity_of_new_owner",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "pollution_treatment_capacity_of_new_owner",
+      "relation": "decreases",
+      "to": "pollution_level",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "pollution_treatment_capacity_of_new_owner"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "sellers keep treatable plants and divest only plants whose pollution they cannot treat"
+   ]
+  },
+  {
+   "hypothesis": "P4_information_costs",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "organizational_complexity",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "divestment_of_pollutive_plants",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "environmental_pressure",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "stakeholder_pressure_mitigation",
+     "moderated_from": "organizational_complexity",
+     "moderated_to": "divestment_of_pollutive_plants",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P4_information_costs"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5_business_ties",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "operational_relatedness",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "likelihood_of_buying_pollutive_assets",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ],
+    [
+     {
+      "from": "operational_relatedness",
+      "relation": "decreases",
+      "to": "counterparty_risk",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "counterparty_risk",
+      "relation": "decreases",
+      "to": "likelihood_of_buying_pollutive_assets",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "counterparty_risk"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a general feature of asset sales unrelated to pollutive assets"
+   ]
+  },
+  {
+   "hypothesis": "P6_connected_firm_pressure",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "connected_firm_environmental_pressure",
+      "relation": "decreases",
+      "to": "feasibility_of_transferring_to_connected_firms",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "feasibility_of_transferring_to_connected_firms",
+      "relation": "increases",
+      "to": "divestment_of_pollutive_plants",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "feasibility_of_transferring_to_connected_firms"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7_conference_call_disclosure",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divestment_of_pollutive_plants",
+      "relation": "increases",
+      "to": "opportunity_to_advertise_sustainability",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "opportunity_to_advertise_sustainability",
+      "relation": "increases",
+      "to": "positive_environmental_disclosure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "opportunity_to_advertise_sustainability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a general feature of asset sales unrelated to pollutive assets"
+   ]
+  },
+  {
+   "hypothesis": "P8_esg_ratings",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divestment_of_pollutive_plants",
+      "relation": "decreases",
+      "to": "reported_pollution_footprint",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "reported_pollution_footprint",
+      "relation": "decreases",
+      "to": "esg_rating",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "reported_pollution_footprint"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a general feature of asset sales unrelated to pollutive assets"
+   ]
+  },
+  {
+   "hypothesis": "P9_enforcement_costs",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "divestment_of_pollutive_plants",
+      "relation": "decreases",
+      "to": "regulatory_scrutiny",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "regulatory_scrutiny",
+      "relation": "increases",
+      "to": "epa_enforcement_costs",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "regulatory_scrutiny"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "a general feature of asset sales unrelated to pollutive assets"
+   ]
+  },
+  {
+   "hypothesis": "P10_divestiture_car",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pollution_of_divested_plants",
+      "relation": "increases",
+      "to": "investor_perceived_environmental_benefit",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_perceived_environmental_benefit",
+      "relation": "increases",
+      "to": "announcement_cumulative_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_perceived_environmental_benefit"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P11_disclosure_car",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "positive_environmental_disclosure",
+      "relation": "increases",
+      "to": "investor_perception_of_environmental_improvement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "investor_perception_of_environmental_improvement",
+      "relation": "increases",
+      "to": "announcement_cumulative_abnormal_returns",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_perception_of_environmental_improvement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P12_buyer_relative_gains",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "pollution_of_traded_assets",
+      "relation": "increases",
+      "to": "buyer_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "buyer_bargaining_power",
+      "relation": "increases",
+      "to": "buyer_relative_gains_from_trade",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "buyer_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "2000-2020",
+  "sample_description": "888 divestiture deals of pollutive industrial plants involving 1,105 unique plants; divestitures/spin-offs from the SDC M&A database (buyer owns >50% after the deal), excluding deals involving financial firms as buyer or seller; pollutive plants identified via the EPA Toxic Release Inventory (TRI); analyses of public firms use the panel of public firms owning TRI plants",
+  "sample_size": "888 divestiture deals (1,105 unique plants)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Securities Data Company (SDC) mergers and acquisitions (M&A) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Kinder, Lydenberg, and Domini (KLD) database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Refinitive",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "MSCI",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters' Street Events (SE) Database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factset's RepRisk ESG Business Intelligence database (Reprisk)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "MIT Election Data and Science Lab (county-level vote share)",
+    "category": "other",
+    "kind": "government_public"
+   },
+   {
+    "name": "Compustat Segment (Files)",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factset (supply chain relations)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Orbis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "13-F filings",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "EPA's Pollution Prevention (P2) database",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "EPA Enforcement and Compliance History Online (ECHO) database",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Sell (Pollutive)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC + EPA TRI (matched)"
+    },
+    "key_ivs": [
+     {
+      "name": "Rated",
+      "measure": "[withheld: wording matches the source]",
+      "source": "KLD"
+     },
+     {
+      "name": "Pension Holdings",
+      "measure": "[withheld: wording matches the source]",
+      "source": "13-F filings"
+     },
+     {
+      "name": "Democratic HQ",
+      "measure": "[withheld: wording matches the source]",
+      "source": "MIT Election Data and Science Lab"
+     },
+     {
+      "name": "Env. Event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RepRisk"
+     },
+     {
+      "name": "Pressure Index",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed from KLD, 13-F, MIT Election Lab, RepRisk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Q (Tobin's Q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry-Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "firm-year; all public firms owning TRI plants",
+    "dv": {
+     "name": "Sell (Pollutive)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC + EPA TRI (matched)"
+    },
+    "key_ivs": [
+     {
+      "name": "Pressure Index x Pollution",
+      "measure": "[withheld: wording matches the source]",
+      "source": "constructed (Pressure Index) x EPA TRI (pollution)"
+     },
+     {
+      "name": "Pollution",
+      "measure": "total toxic release (Total Pollution) or pollution intensity, in levels and quartiles",
+      "source": "EPA TRI"
+     },
+     {
+      "name": "Pressure Index",
+      "measure": "composite index averaging Rated, Pension Holdings, Democratic HQ, Env. Event",
+      "source": "constructed"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Q (Tobin's Q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Industry-Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "Reprisk environmental risk incidents (treated as quasi-shocks to environmental pressures)",
+    "sample": "firm-year; all public firms owning TRI plants (within-firm variation)",
+    "dv": {
+     "name": "Sell (Pollutive)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC + EPA TRI (matched)"
+    },
+    "key_ivs": [
+     {
+      "name": "Environmental Event",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RepRisk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Social Event",
+      "source": "RepRisk"
+     },
+     {
+      "name": "Governance Event",
+      "source": "RepRisk"
+     },
+     {
+      "name": "Q (Tobin's Q)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash Holdings",
+      "source": "Compustat"
+     },
+     {
+      "name": "Tangibility",
+      "source": "Compustat"
+     },
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry-Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Dynamic model of divestment timing around environmental risk incidents (pre-event trends test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "Reprisk environmental risk incident",
+    "sample": "",
+    "dv": {
+     "name": "Sell (Pollutive)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC + EPA TRI (matched)"
+    },
+    "key_ivs": [
+     {
+      "name": "Env. Event x year dummies",
+      "measure": "[withheld: wording matches the source]",
+      "source": "RepRisk"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Environmental pressure measures (Public, Rated, Pension Holdings, Democratic HQ, Env. Event, Pressure Index)",
+     "measure": "each column uses one pressure measure as dependent variable: Public (=1 if publicly listed), Rated, Pension Holdings, Democratic HQ, Env. Event, Pressure Index (composite average)",
+     "source": "KLD, 13-F, MIT Election Lab, RepRisk"
+    },
+    "key_ivs": [
+     {
+      "name": "Buyer",
+      "measure": "indicator equal to one for the buyer observation in a deal-firm pair (each deal = deal-seller and deal-buyer observations)",
+      "source": "SDC"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table VI, Panel A: Changes in pollution at divested plants (generalized DID and stacked event regressions)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "plant-chemical-year panel",
+    "dv": {
+     "name": "Pollution",
+     "measure": "total pollution (Total Pollution), pollution intensity, or abatement activities (source reduction, %recycling, %recovery, %treatment) at the plant-chemical-year level; Poisson used for skewed outcomes such as total pollution",
+     "source": "EPA TRI / EPA P2"
+    },
+    "key_ivs": [
+     {
+      "name": "Divested x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC + EPA TRI"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Plant-chemical fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Chemical-year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "State-year interactive fixed effects (stringent spec)",
+      "source": ""
+     },
+     {
+      "name": "Industry-year interactive fixed effects (stringent spec)",
+      "source": ""
+     },
+     {
+      "name": "Cohort-interacted fixed effects (stacked spec: cohort-plant-chemical, cohort-chemical-year, cohort-state-year, cohort-industry-year)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table VI, Panel B: Combined pollution of seller and buyer plants around divestitures",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "plant divestiture / acquisition (treatment)",
+    "sample": "plant-chemical-year panel of all sellers' and buyers' existing plants",
+    "dv": {
+     "name": "Pollution",
+     "measure": "total pollution / pollution intensity at plant-chemical-year level for all plants owned by seller and buyer (divested and nondivested)",
+     "source": "EPA TRI"
+    },
+    "key_ivs": [
+     {
+      "name": "Divested x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC + EPA TRI"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Plant-chemical fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Chemical-year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Sellers' announcement CARs and pollution (announcement returns test)",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "divestiture announcement",
+    "sample": "sellers of pollutive plants (announcement sample)",
+    "dv": {
+     "name": "CAR[-1,+1]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Pollution",
+      "measure": "pollution level / interquartile increase in pollution of the divested plant; also positive environmental disclosure",
+      "source": "EPA TRI; SE conference-call BERT classification"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "mechanism",
+   "section": "conclusion",
+   "constructs": [
+    "declines in regulatory costs",
+    "information acquisition costs",
+    "reallocation of pollutive assets",
+    "value gains from divesting pollutive assets"
+   ],
+   "mechanism_named": "channels",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "public-to-public divestitures",
+    "private firms’ advantages",
+    "buyers’ relative gains from trading pollutive assets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "decline in regulatory costs",
+    "enhanced pollution abatement",
+    "closure of pollutive plants"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "pressuring firms to divest pollutive plants",
+    "new production capacity that is greener",
+    "price of such assets",
+    "supply in the market"
+   ],
+   "mechanism_named": "pricing equilibrium effects",
+   "proposed_edge": {
+    "from": "pushing for the sale of pollutive plants",
+    "relation": "decreases",
+    "to": "the price of such assets"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "growing trend to divest pollutive assets",
+    "long-term effects",
+    "sample period"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "positive environmental disclosures",
+    "high env pressure",
+    "low env pressure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

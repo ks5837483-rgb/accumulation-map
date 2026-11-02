@@ -1,0 +1,677 @@
+{
+ "paper_id": "10.2307_2331159",
+ "title": "The Impact of Managerial Ownership on Acquisition Attempts and Target Shareholder Wealth",
+ "journal": "JFQA",
+ "year": 1993,
+ "field": "finance",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "agency theory",
+  "market for corporate control",
+  "ex post settling up",
+  "signaling theory",
+  "information disclosure theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unsuccessful_takeover_attempt",
+      "relation": "increases",
+      "to": "awareness_of_agency_problems",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "awareness_of_agency_problems",
+      "relation": "increases",
+      "to": "ceo_incentive_compensation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "unsuccessful_takeover_attempt",
+      "relation": "increases",
+      "to": "ex_post_settling_up",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ex_post_settling_up",
+      "relation": "increases",
+      "to": "ceo_incentive_compensation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "unsuccessful_takeover_attempt",
+      "relation": "increases",
+      "to": "information_disclosure",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_disclosure",
+      "relation": "increases",
+      "to": "ceo_incentive_compensation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "awareness_of_agency_problems",
+    "ex_post_settling_up",
+    "information_disclosure"
+   ],
+   "moderators": [
+    {
+     "construct": "internal_governance_quality",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "awareness_of_agency_problems",
+     "moderated_from": "unsuccessful_takeover_attempt",
+     "moderated_to": "ceo_incentive_compensation",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "governance moderation (compensation)"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "managerial entrenchment (CEOs reward themselves after thwarting the bid)",
+    "equity/severance awarded to place the CEO in a stronger bargaining position to attract better future takeover bids",
+    "mean reversion in CEO compensation"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "unsuccessful_takeover_attempt",
+      "relation": "increases",
+      "to": "internal_incentive_contract_effectiveness",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "internal_incentive_contract_effectiveness",
+      "relation": "increases",
+      "to": "pay_performance_sensitivity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "internal_incentive_contract_effectiveness"
+   ],
+   "moderators": [
+    {
+     "construct": "internal_governance_quality",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "internal_incentive_contract_effectiveness",
+     "moderated_from": "unsuccessful_takeover_attempt",
+     "moderated_to": "pay_performance_sensitivity",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "governance moderation (PPS)"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_incentive_compensation",
+      "relation": "increases",
+      "to": "managerial_incentive_to_enhance_performance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "managerial_incentive_to_enhance_performance",
+      "relation": "increases",
+      "to": "firm_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "managerial_incentive_to_enhance_performance"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: incentives raised to motivate the CEO to search for more favorable future bids rather than to improve performance"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. publicly traded takeover targets; no industry concentration, top failing sectors business services, utilities, pharmaceuticals)",
+  "country_region": "United States",
+  "time_period": "1994-2011",
+  "sample_description": "178 unsuccessful takeover targets (received by 169 firms) identified from the SDC U.S. Mergers and Acquisitions Database (transactions not labeled completed, deal value >= US$1 million), merged with COMPUSTAT, CRSP, and Standard and Poor's ExecuComp; missing compensation collected from proxy statements and 10-K forms on EDGAR",
+  "sample_size": "178 unsuccessful bids received by 169 targets"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP (Center for Research in Security Prices)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Standard and Poor's ExecuComp",
+    "category": "execucomp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "proxy statements and 10-K forms on EDGAR (compensation and severance data collected manually for non-ExecuComp firms)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "hand-collected internal governance data from proxy statements (board size, board independence, board meetings, governance committee, large shareholders, CEO duality)",
+    "category": "hand_collected",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 1: Unsuccessful takeover sample distribution, failure reasons, trading status, and CEO turnover (Panel E compares forced CEO turnover vs rejection/subsequent acquisition)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful takeover bids received by 169 targets, 1994-2011",
+    "dv": {
+     "name": "target outcome / CEO turnover",
+     "measure": "trading status (remain independent / acquired / delisted) 3 years after bid; total and forced CEO turnover within 2 years after bid withdrawal",
+     "source": "CRSP; hand-collected/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "forced CEO turnover",
+      "measure": "forced CEO departure within 2 years of bid withdrawal, cross-tabulated with target rejection and subsequent acquisition",
+      "source": "hand-collected/EDGAR"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2: Descriptive statistics of firm characteristics and CEO compensation, year TA-1 vs year TW+2 (univariate before-after)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful takeover targets",
+    "dv": {
+     "name": "firm characteristics and CEO compensation",
+     "measure": "median MV equity, MV assets, book assets, M/B, sales, leverage, ROA, sales growth, RETURN, market-adjusted RETURN, Cash Pay, Equity Pay, Total Pay, Equity ratio, and severance/parachute figures at year TA-1 and year TW+2, in constant 2011 dollars",
+     "source": "COMPUSTAT, CRSP, ExecuComp, EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "bid failure (before vs after)",
+      "measure": "comparison of year TA-1 (pre-announcement) vs year TW+2 (post-withdrawal) medians",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 3: CEO compensation comparison - unsuccessful targets vs industry/size/performance-matched control firms vs matched successful targets (difference-in-difference)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful targets, 178 matched control firms, 178 matched successful targets, 1994-2011",
+    "dv": {
+     "name": "CEO compensation (Total Pay and Equity Pay)",
+     "measure": "median Raw Total Pay (Panel A) and Equity Pay (Panel B) at TA-1 and TW+2 with percentage change and z-statistics, constant 2011 dollars",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "unsuccessful takeover attempt (treatment vs control)",
+      "measure": "unsuccessful takeover targets vs industry-, size-, and performance-matched control firms (no takeover), before-vs-after change",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "matched control-firm benchmark (industry, size, performance)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Specification (1): CEO post-bid compensation change on pre-bid abnormal compensation (Eq. 1, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful takeover targets",
+    "dv": {
+     "name": "Change in CEO Total Pay",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "pre-bid abnormal compensation (ACOMP)",
+      "measure": "residual from COMP = a0 + a1*Size + a2*(Ri-Rm) + a3*ROA + a4*Age + a5*Industry + a6*Year, estimated over all ExecuComp firms 1994-2011",
+      "source": "ExecuComp"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 4, Specification (2): ex post settling-up difference-in-difference with matched control firms (Eq. 1)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful targets + 178 matched control firms (356 obs)",
+    "dv": {
+     "name": "Change in CEO Total Pay",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "ACOMP",
+      "measure": "CEO pre-bid abnormal compensation (residual)",
+      "source": "ExecuComp"
+     },
+     {
+      "name": "ACOMP x Control",
+      "measure": "interaction of ACOMP with Control dummy (=1 for matched control firm, 0 otherwise)",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control (matched control-firm dummy)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful takeover targets, year TA-1 to TW+2 (772 obs)",
+    "dv": {
+     "name": "CEO Cash / Equity / Total Pay",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "AFTER x RETURN",
+      "measure": "interaction of AFTER (=1 for observation year following bid withdrawal) with stock RETURN - change in PPS after bids",
+      "source": "CRSP"
+     },
+     {
+      "name": "AFTER x ROA",
+      "measure": "interaction of AFTER with ROA - change in PPS after bids",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "AFTER",
+      "measure": "dummy =1 for observation year following a bid withdrawal, 0 otherwise",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "M/B",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "sROA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "sRET",
+      "source": "CRSP"
+     },
+     {
+      "name": "Shareholding",
+      "source": "ExecuComp/proxy"
+     },
+     {
+      "name": "Fired",
+      "source": "hand-collected/EDGAR"
+     },
+     {
+      "name": "Parachute",
+      "source": "EDGAR proxy"
+     },
+     {
+      "name": "Duality",
+      "source": "EDGAR proxy"
+     },
+     {
+      "name": "Board Size",
+      "source": "EDGAR proxy"
+     },
+     {
+      "name": "Shareholder",
+      "source": "EDGAR proxy"
+     },
+     {
+      "name": "RETURN",
+      "source": "CRSP"
+     },
+     {
+      "name": "ROA",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Specification (4): CEO PPS difference-in-differences, unsuccessful targets vs matched control firms (Eq. 2)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful targets + 178 matched control firms (1,544 obs)",
+    "dv": {
+     "name": "CEO Total Pay",
+     "measure": "natural logarithm of total pay in year t",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "Control x RETURN x AFTER",
+      "measure": "triple interaction - change in control-firm PPS (stock-return sensitivity) after bids",
+      "source": ""
+     },
+     {
+      "name": "Control x ROA x AFTER",
+      "measure": "triple interaction - change in control-firm PPS (ROA sensitivity) after bids",
+      "source": ""
+     },
+     {
+      "name": "AFTER x RETURN / AFTER x ROA",
+      "measure": "target-firm PPS change after bids",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Control (matched control-firm dummy)",
+      "source": ""
+     },
+     {
+      "name": "firm and governance characteristics as in Specifications (1)-(3)",
+      "source": "COMPUSTAT/CRSP/EDGAR proxy"
+     },
+     {
+      "name": "year & industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "CEO compensation change",
+     "measure": "median Cash, Equity, Total, and Abnormal Total Pay at year TA-1 and TW+2 with Wilcoxon z-statistics",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "internal governance quality",
+      "measure": "board size, board independence, CEO duality, number of large shareholders (>5% ownership), number of board meetings, governance committee, and a combined governance index; firms split above/below median",
+      "source": "hand-collected EDGAR proxy statements"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 7: Post-bid CEO compensation change on pre-bid abnormal compensation moderated by internal governance (Eq. 1 with governance proxy, OLS)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "110 unsuccessful takeover targets that survived 3 years after the bid",
+    "dv": {
+     "name": "Change in CEO Total Pay",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "ACOMP x Internal Governance",
+      "measure": "interaction of pre-bid abnormal compensation (ACOMP) with Large board / Dependent board / Low index dummies (each =1 for weaker governance)",
+      "source": "ExecuComp + EDGAR proxy"
+     },
+     {
+      "name": "ACOMP",
+      "measure": "pre-bid abnormal compensation residual",
+      "source": "ExecuComp"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Internal governance dummy (Large board / Dependent board / Low index)",
+      "source": "EDGAR proxy"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "110 surviving unsuccessful takeover targets (462 obs)",
+    "dv": {
+     "name": "CEO Total Pay",
+     "measure": "logarithm of total compensation (Total Pay)",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "triple interactions of AFTER with ROA/RETURN and Large board / Dependent board / Low index",
+      "source": ""
+     },
+     {
+      "name": "AFTER x governance",
+      "measure": "interaction of AFTER with governance proxy (Large board / Dependent board / Low index)",
+      "source": "EDGAR proxy"
+     }
+    ],
+    "controls": [
+     {
+      "name": "firm characteristics used in Table 5 (included, not reported)",
+      "source": "COMPUSTAT/CRSP/EDGAR proxy"
+     },
+     {
+      "name": "year & industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9, Panels A-B: internal governance quality and long-term abnormal performance across three response groups (univariate)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful takeover targets (Group1 N=41, Group2 N=69, Group3 N=68)",
+    "dv": {
+     "name": "governance mechanisms and abnormal performance",
+     "measure": "median board size, board independence, governance index (Panel A); median abnormal operating cash flow (AOCF) and abnormal stock return (ARETURN) from year T-1 to T+3, abnormal = target minus industry- and size-matched control firm (Panel B), with Wilcoxon z-statistics across groups",
+     "source": "hand-collected EDGAR proxy; COMPUSTAT; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "target response group (G1/G2/G3)",
+      "measure": "Group 1 = independent with comp change below median (N=41); Group 2 = independent with comp change at/above median (N=69); Group 3 = acquired or delisted within 3 years (N=68)",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 9, Panel C: regression of long-term performance change on response-group dummies (Eq. 3)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful takeover targets",
+    "dv": {
+     "name": "performance change (delta AOCF / delta ARETURN)",
+     "measure": "change in abnormal operating cash flow (delta AOCF) and change in abnormal stock return (delta ARETURN) from year T-1 to T+3; abnormal = target minus industry- and size-matched control firm's OCF/return",
+     "source": "COMPUSTAT; CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "G1 / G2 (response-group dummies)",
+      "measure": "G1 =1 if target belongs to Group 1 (independent, low comp change), 0 otherwise; G2 =1 if Group 2 (independent, high comp change), 0 otherwise",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Log(Sales)",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "M/B",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Leverage",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Sales growth",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "sROA",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "sRET",
+      "source": "CRSP"
+     },
+     {
+      "name": "year & industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Alternative explanations (supplementary appendix): subsample comparisons of compensation change by financial-leverage change (102 increase vs 76 decrease) and by CEO turnover (132 no-turnover vs 46 turnover)",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "178 unsuccessful takeover targets split into subsamples",
+    "dv": {
+     "name": "CEO compensation change",
+     "measure": "median (and abnormal) CEO compensation change from year TA-1 to TW+2 with z-statistics, compared across subsamples",
+     "source": "ExecuComp/EDGAR"
+    },
+    "key_ivs": [
+     {
+      "name": "post-bid leverage change / CEO turnover",
+      "measure": "leverage increase vs decrease subsamples; CEO-turnover vs no-turnover subsamples",
+      "source": "COMPUSTAT; hand-collected/EDGAR"
+     }
+    ],
+    "controls": []
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "weak-governance firms",
+    "ultimate failure"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "weak-governance firms do not react properly",
+    "relation": "affects",
+    "to": "ultimate failure"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "internal governance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "gompers index",
+    "governance index"
+   ],
+   "mechanism_named": "Gompers index",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

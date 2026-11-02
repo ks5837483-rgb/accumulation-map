@@ -1,0 +1,390 @@
+{
+ "paper_id": "10.1177_014920639101700111",
+ "title": "Synergies and Post-Acquisition Performance: Differences versus Similarities in Resource Allocations",
+ "journal": "JOM",
+ "year": 1991,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "resource-based view",
+  "information economics",
+  "strategic factor markets theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "resource_allocation_similarity",
+      "relation": "increases",
+      "to": "synergy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "differences in resource allocations (rather than similarities) create unique/private synergy and higher post-acquisition performance"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "resource_allocation_difference",
+      "relation": "increases",
+      "to": "asymmetric_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "asymmetric_information",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "resource_allocation_difference",
+      "relation": "increases",
+      "to": "private_synergy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "private_synergy",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "resource_allocation_difference",
+      "relation": "increases",
+      "to": "complementary_competencies",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "complementary_competencies",
+      "relation": "increases",
+      "to": "post_acquisition_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "asymmetric_information",
+    "private_synergy",
+    "complementary_competencies"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "similarities in resource allocations create valuable synergy through economies of scale and scope"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (acquisitions across a number of industries)",
+  "country_region": "",
+  "time_period": "1970-1989",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "~1,100 acquired firms matched (per-test N: 441 capital, 396 administrative, 429 debt, 198 R&D intensity)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Standard and Poor's COMPUSTAT research file",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Moody's Industrial Manual",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "~1,100 matched mergers 1970-1989; complete data 441 (capital), 396 (administrative), 429 (debt), 198 (R&D) tests",
+    "dv": {
+     "name": "Post-acquisition performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Standard and Poor's COMPUSTAT research file"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital intensity difference",
+      "measure": "Absolute value of the difference between acquiring and acquired firms in capital intensity, calculated by dividing the dollar amount of capital expenditures by total revenues; base year = year prior to merger",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "Administrative intensity difference",
+      "measure": "Absolute value of the difference between acquiring and acquired firms in administrative (selling, general, and administrative) intensity = SG&A expenditures divided by total revenues; base year = year prior to merger",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "Interest (debt) intensity difference",
+      "measure": "Absolute value of the difference between acquiring and acquired firms in debt (interest expense) intensity = interest expense divided by total revenues; base year = year prior to merger",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "R&D intensity difference",
+      "measure": "Absolute value of the difference between acquiring and acquired firms in R&D intensity = R&D expenditures divided by total revenues; base year = year prior to merger",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Mean Adjusted ROA Before (pre-acquisition industry-adjusted performance; combined income statements of both partners)",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Post-acquisition performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Standard and Poor's COMPUSTAT research file"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital intensity difference",
+      "measure": "Absolute value of the difference between acquiring and acquired firms in capital expenditures divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "Administrative intensity difference",
+      "measure": "Absolute value of the difference in SG&A expenditures divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "Interest (debt) intensity difference",
+      "measure": "Absolute value of the difference in interest expense divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "R&D intensity difference",
+      "measure": "Absolute value of the difference in R&D expenditures divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Mean Adjusted ROA Before (pre-acquisition industry-adjusted performance)",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1",
+     "H2"
+    ],
+    "identification": "OLS",
+    "shock_or_instrument": "",
+    "sample": "Unrelated acquisitions - acquiring and target firms from different 2-digit industry groups",
+    "dv": {
+     "name": "Post-acquisition performance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Standard and Poor's COMPUSTAT research file"
+    },
+    "key_ivs": [
+     {
+      "name": "Capital intensity difference",
+      "measure": "Absolute value of the difference between acquiring and acquired firms in capital expenditures divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "Administrative intensity difference",
+      "measure": "Absolute value of the difference in SG&A expenditures divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "Interest (debt) intensity difference",
+      "measure": "Absolute value of the difference in interest expense divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     },
+     {
+      "name": "R&D intensity difference",
+      "measure": "Absolute value of the difference in R&D expenditures divided by total revenues",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Mean Adjusted ROA Before (pre-acquisition industry-adjusted performance)",
+      "source": "Standard and Poor's COMPUSTAT research file"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "differences in resource allocation patterns",
+    "unique synergy"
+   ],
+   "mechanism_named": "unique synergy",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "specific resources and resource patterns",
+    "performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "different administrative capabilities",
+    "unique and complementary synergy"
+   ],
+   "mechanism_named": "complementary synergy",
+   "proposed_edge": {
+    "from": "merging of different administrative capabilities",
+    "relation": "increases",
+    "to": "unique and complementary synergy"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "financial structure",
+    "complementary combinations"
+   ],
+   "mechanism_named": "complementarity",
+   "proposed_edge": {
+    "from": "financial structure",
+    "relation": "unspecified",
+    "to": "complementary combinations"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "resources allocated to r&d",
+    "uniquely valuable synergies"
+   ],
+   "mechanism_named": "uniquely valuable synergies",
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "increases",
+    "to": "uniquely valuable synergies"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "r&d activity combinations",
+    "post-merger performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "successful r&d activity combinations",
+    "relation": "affects",
+    "to": "post-merger performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "other",
+   "section": "future_research",
+   "constructs": [
+    "post-merger integration issues"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "acquisitions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "conclusion",
+   "constructs": [
+    "competing hypotheses"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

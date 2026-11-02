@@ -1,0 +1,624 @@
+{
+ "paper_id": "10.1002_smj.2666",
+ "title": "Interorganizational Imitation and Acquisitions of High‐tech Ventures",
+ "journal": "SMJ",
+ "year": 2017,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "interorganizational imitation theory",
+  "institutional theory",
+  "information economics"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "number_of_prior_acquisitions_in_subfield",
+      "relation": "increases",
+      "to": "social_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "social_information",
+      "relation": "increases",
+      "to": "likelihood_of_being_acquired",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "number_of_prior_acquisitions_in_subfield",
+      "relation": "increases",
+      "to": "legitimacy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "legitimacy",
+      "relation": "increases",
+      "to": "likelihood_of_being_acquired",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "social_information",
+    "legitimacy"
+   ],
+   "moderators": [
+    {
+     "construct": "exogenous_technological_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "social_information",
+     "moderated_from": "number_of_prior_acquisitions_in_subfield",
+     "moderated_to": "likelihood_of_being_acquired",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H3"
+    },
+    {
+     "construct": "technological_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "social_information",
+     "moderated_from": "number_of_prior_acquisitions_in_subfield",
+     "moderated_to": "likelihood_of_being_acquired",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H5"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "homophily (similarity across acquirers producing similar acquisition decisions without social influence)",
+    "similarity in external environment / market conditions inducing similar behavior without social influence"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "prominence_of_prior_acquirers",
+      "relation": "increases",
+      "to": "social_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "social_information",
+      "relation": "increases",
+      "to": "likelihood_of_being_acquired",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "social_information"
+   ],
+   "moderators": [
+    {
+     "construct": "exogenous_technological_uncertainty",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "social_information",
+     "moderated_from": "prominence_of_prior_acquirers",
+     "moderated_to": "likelihood_of_being_acquired",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H4"
+    },
+    {
+     "construct": "technological_distance",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "social_information",
+     "moderated_from": "prominence_of_prior_acquirers",
+     "moderated_to": "likelihood_of_being_acquired",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H6"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "homophily (similarity across acquirers producing similar acquisition decisions without social influence)",
+    "similarity in external environment / market conditions inducing similar behavior without social influence"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "",
+  "time_period": "1980-2004",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Reuters' VentureXpert database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "United States Patent and Trademark Office (USPTO) database",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "IMS Health's R&D Focus database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Mergent Online",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Bloomberg Business",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2: Cox Regression Results (full sample), Models 1-6",
+    "hypotheses": [
+     "H1",
+     "H2",
+     "H3",
+     "H4"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "M&A Event (hazard of being acquired)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer Prominence-ROE",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Prominence-Total Assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Exogenous Technological Uncertainty",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Age",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "VC's Early Investment Stage",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Number of Rounds",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "IMS Health's R&D Focus database"
+     },
+     {
+      "name": "Citation-Weighted Patent Stock",
+      "source": "United States Patent and Trademark Office (USPTO) database"
+     },
+     {
+      "name": "Alliance Prominence",
+      "source": ""
+     },
+     {
+      "name": "Venture Capitalist Funding",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Venture Capitalist Prominence",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "CEO Age",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "CEO Industry Experience",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "TMT Size",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Subfield Fixed Effects",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Number of Ventures in Focal Subfield",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Industry Sales Growth Rate",
+      "source": ""
+     },
+     {
+      "name": "Change of Industry Asset Turnover Rate",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H5",
+     "H6"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "high technological distance acquisitions (M&A hazard split into competing risks at the median of technological distance)",
+    "dv": {
+     "name": "M&A Event (hazard of being acquired) - high tech-distance competing risk",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer Prominence-ROE",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Prominence-Total Assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Technological Distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "United States Patent and Trademark Office (USPTO) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Age",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "VC's Early Investment Stage",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Number of Rounds",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Venture Capitalist Funding",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Venture Capitalist Prominence",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "CEO Age",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "CEO Industry Experience",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "TMT Size",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Number of Ventures in Focal Subfield",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Subfield Fixed Effects",
+      "source": "Thomson Reuters' VentureXpert database"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H5",
+     "H6"
+    ],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "",
+    "sample": "low technological distance acquisitions (M&A hazard split into competing risks at the median of technological distance)",
+    "dv": {
+     "name": "M&A Event (hazard of being acquired) - low tech-distance competing risk",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer Prominence-ROE",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Acquirer Prominence-Total Assets",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "Technological Distance",
+      "measure": "[withheld: wording matches the source]",
+      "source": "United States Patent and Trademark Office (USPTO) database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Firm Age",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "VC's Early Investment Stage",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Number of Rounds",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Venture Capitalist Funding",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Venture Capitalist Prominence",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "CEO Age",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "CEO Industry Experience",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "TMT Size",
+      "source": "Mergent Online; Bloomberg Business; Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Number of Ventures in Focal Subfield",
+      "source": "Thomson Reuters' VentureXpert database"
+     },
+     {
+      "name": "Year Fixed Effects",
+      "source": ""
+     },
+     {
+      "name": "Subfield Fixed Effects",
+      "source": "Thomson Reuters' VentureXpert database"
+     }
+    ]
+   },
+   {
+    "label": "Robustness: robust logit regressions on acquirer-venture-year dyadic data (homophily/similarity controls)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Acquisition dummy (dyad-year)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "[withheld: wording matches the source]"
+    },
+    "key_ivs": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Acquirer Prominence (ROE / Total Assets)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Product market similarity (acquirer vs prior acquirers)",
+      "source": ""
+     },
+     {
+      "name": "Similarity in size and profitability",
+      "source": ""
+     },
+     {
+      "name": "Technological similarity",
+      "source": "United States Patent and Trademark Office (USPTO) database"
+     },
+     {
+      "name": "Prior alliances between potential acquirer and prior acquirers in the subfield",
+      "source": "Thomson Reuters' VentureXpert database"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "prior actions of other firms",
+    "likelihood of similar actions in the future"
+   ],
+   "mechanism_named": "imitation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "future_research",
+   "constructs": [
+    "imitation",
+    "social influence"
+   ],
+   "mechanism_named": "social influence",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "limitations",
+   "constructs": [
+    "[withheld: wording matches the source]",
+    "similarity in macroeconomic conditions",
+    "actions of model firms in the past",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "alternative mechanisms",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "alternative coping mechanisms",
+    "imitation",
+    "[withheld: wording matches the source]"
+   ],
+   "mechanism_named": "coping mechanisms",
+   "proposed_edge": {
+    "from": "imitation",
+    "relation": "affects",
+    "to": "[withheld: wording matches the source]"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "social influence",
+    "strategic decisions",
+    "alliances",
+    "interorganizational relationships"
+   ],
+   "mechanism_named": "social influence",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "future_research",
+   "constructs": [
+    "imitation",
+    "alliance formation"
+   ],
+   "mechanism_named": "imitation",
+   "proposed_edge": {
+    "from": "imitation",
+    "relation": "affects",
+    "to": "alliance formation"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "future_research",
+   "constructs": [
+    "imitation",
+    "technology-related uncertainty",
+    "the formation of alliances involving tech ventures"
+   ],
+   "mechanism_named": "imitation",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "technology-related uncertainty",
+    "on_path": [
+     "imitation",
+     "the formation of alliances involving tech ventures"
+    ]
+   }
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "future_research",
+   "constructs": [
+    "imitation",
+    "technological uncertainty",
+    "acquisition",
+    "alliances",
+    "strategic\ninvestment decisions"
+   ],
+   "mechanism_named": "imitation",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

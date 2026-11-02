@@ -1,0 +1,596 @@
+{
+ "paper_id": "10.2308_tar-2021-0442",
+ "title": "The Impact of M&amp;A Delistings on the Information Environment of Industry Peer Firms",
+ "journal": "AR",
+ "year": 2024,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information transfer theory",
+  "information economics",
+  "analyst information environment"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "m_and_a_delisting",
+      "relation": "decreases",
+      "to": "intraindustry_information_transfers",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "intraindustry_information_transfers",
+      "relation": "increases",
+      "to": "analyst_information_environment_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "m_and_a_delisting",
+      "relation": "decreases",
+      "to": "target_firm_public_disclosures",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_firm_public_disclosures",
+      "relation": "increases",
+      "to": "analyst_information_environment_quality",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "intraindustry_information_transfers",
+    "target_firm_public_disclosures"
+   ],
+   "moderators": [
+    {
+     "construct": "target_firm_contribution_to_industry_information_environment",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "target_firm_public_disclosures",
+     "moderated_from": "m_and_a_delisting",
+     "moderated_to": "analyst_information_environment_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    },
+    {
+     "construct": "public_target_firm",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "target_firm_public_disclosures",
+     "moderated_from": "m_and_a_delisting",
+     "moderated_to": "analyst_information_environment_quality",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H1"
+    },
+    {
+     "construct": "horizontal_merger",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "industry_structure_and_competition_change",
+     "moderated_from": "m_and_a_delisting",
+     "moderated_to": "analyst_information_environment_quality",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    },
+    {
+     "construct": "target_firm_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "target_firm_public_disclosures",
+     "moderated_from": "m_and_a_delisting",
+     "moderated_to": "analyst_information_environment_quality",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "omitted industry-wide (technology, demand, or regulatory) shock driving both the M&A and the change in peer information environment (endogeneity / omitted variable bias)",
+    "[withheld: wording matches the source]",
+    "spurious result unrelated to actual delistings (tested against randomly assigned pseudo-M&A delisting quarters)"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "analyst_prior_coverage_of_target_firm",
+      "relation": "increases",
+      "to": "loss_of_cross_firm_information_complementarities",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "loss_of_cross_firm_information_complementarities",
+      "relation": "increases",
+      "to": "individual_analyst_forecast_error",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "loss_of_cross_firm_information_complementarities"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]",
+    "spurious cross-follower difference unrelated to actual delistings (tested against randomly assigned pseudo-M&A delistings)"
+   ]
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. listed firms, industries defined by eight-digit GICS code; robust to excluding financial and utilities firms)",
+  "country_region": "United States",
+  "time_period": "2001-2015",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Security Data Corporation (SDC) database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3 (Eq. 1) H1 baseline, Dep. Var. = ForecastErr",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "M&A delisting (target firm ceases public disclosure); merger-peer and year-quarter fixed effects",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ForecastErr",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMerger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (delisting date, DLSTCD 200-399)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(avgDays) - average days between forecast issue date and earnings announcement date",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(Following) - number of analysts following the peer firm",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(MktVal) - market value of peer firm at beginning of quarter",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "log(1+MTB) - market-to-book ratio of equity",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Volume) - trading volume of peer firm during the quarter",
+      "source": "CRSP"
+     },
+     {
+      "name": "IndRet - value-weighted industry return for the eight-digit GICS industry",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 3 (Eq. 1) H1 baseline, Dep. Var. = Dispersion",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "M&A delisting; merger-peer and year-quarter fixed effects",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Dispersion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMerger",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP (delisting date)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(avgDays)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(Following)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(MktVal)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "log(1+MTB)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Volume)",
+      "source": "CRSP"
+     },
+     {
+      "name": "IndRet",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 4 (Eq. 1 + interaction) H1 cross-sectional: PostMerger x TargetInfo, Dep. Vars = ForecastErr and Dispersion",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "M&A delisting; merger-peer and year-quarter fixed effects (standalone TargetInfo subsumed by MA x Peer FE)",
+    "sample": "",
+    "dv": {
+     "name": "ForecastErr and Dispersion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMerger x log(CMS)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "PostMerger x (#TargetFollowers / #IndustryFollowers)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "PostMerger x InfoTrans",
+      "measure": "[withheld: wording matches the source]",
+      "source": "CRSP / I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(avgDays)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(Following)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(MktVal)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "log(1+MTB)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Volume)",
+      "source": "CRSP"
+     },
+     {
+      "name": "IndRet",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 5 (expanded Eq. 1) Public vs private target comparison, Dep. Vars = ForecastErr and Dispersion",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "matching_PSM",
+    "shock_or_instrument": "M&A delisting of public vs. private target (Coarsened Exact Matching and Propensity Score Matching on firm size and SIC industry)",
+    "sample": "pooled public + private target M&As matched by PSM (1,378 M&As) and CEM (1,073 M&As); industry peers defined by two-digit SIC codes; 7,385 private-target M&As pooled with baseline public delistings",
+    "dv": {
+     "name": "ForecastErr and Dispersion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMerger x PublicTarget (PubTarget)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC (public/private target status)"
+     },
+     {
+      "name": "PostMerger x TargetSize",
+      "measure": "PostMerger interacted with target firm size, added as an additional control to differentiate merger effects from the delisting effect",
+      "source": "Compustat/SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(avgDays)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(Following)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(MktVal)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "log(1+MTB)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Volume)",
+      "source": "CRSP"
+     },
+     {
+      "name": "IndRet",
+      "source": "CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Table 6 (Eq. 2) H2 individual analyst-level test: target vs nontarget followers",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "M&A delisting; merger-peer-analyst and year-quarter fixed effects (within-peer-firm staggered DiD across target vs nontarget followers)",
+    "sample": "1,211,120 individual analysts' earnings forecasts by target and nontarget followers",
+    "dv": {
+     "name": "Indiv_ForecastErr",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMerger x TargetFollower",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ],
+    "controls": [
+     {
+      "name": "log(avgDays)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(Following)",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "log(MktVal)",
+      "source": "Compustat/CRSP"
+     },
+     {
+      "name": "log(1+MTB)",
+      "source": "Compustat"
+     },
+     {
+      "name": "log(Volume)",
+      "source": "CRSP"
+     },
+     {
+      "name": "IndRet",
+      "source": "CRSP"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "I/B/E/S"
+     }
+    ]
+   },
+   {
+    "label": "Falsification test: pseudo-M&A delistings (untabulated)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "pseudo-M&A delisting (randomly assigned placebo delisting); pooled with real M&A sample provides staggered DiD test",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "ForecastErr and Dispersion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMerger (pseudo)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "randomly assigned (placebo)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control vector as Equation (1)",
+      "source": "I/B/E/S / Compustat / CRSP"
+     }
+    ]
+   },
+   {
+    "label": "Horizontal vs conglomerate mergers (untabulated)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "horizontal vs. conglomerate merger; merger-peer and year-quarter fixed effects",
+    "sample": "",
+    "dv": {
+     "name": "ForecastErr and Dispersion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "PostMerger x Horizontal",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC / Compustat (industry classification)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same control vector as Equation (1)",
+      "source": "I/B/E/S / Compustat / CRSP"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "merger effects",
+    "variability of industry peer firms’ operating results",
+    "quality of analysts’ information environment"
+   ],
+   "mechanism_named": "merger effects",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "type of M&A",
+    "on_path": [
+     "merger effects",
+     "quality of analysts’ information environment"
+    ]
+   }
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "total information externalities",
+    "delisting effect"
+   ],
+   "mechanism_named": "delisting effect",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "strategic reactions",
+    "causal peer effects"
+   ],
+   "mechanism_named": "reflection problem",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "analyst following of peer firms",
+    "mechanical re-allocation of analysts’ following"
+   ],
+   "mechanism_named": "mechanical re-allocation of analysts’ following",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "negative information externalities",
+    "M&A delistings"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "M&A delisting",
+    "industry competition",
+    "peer firms’ disclosure incentives"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "M&A delisting",
+    "relation": "affects",
+    "to": "peer firms’ disclosure incentives"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "M&A delistings",
+    "analysts’ information acquisition and processing"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "M&A delistings",
+    "relation": "affects",
+    "to": "analysts’ information\nacquisition and processing"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "bkls measures"
+   ],
+   "mechanism_named": "BKLS model",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

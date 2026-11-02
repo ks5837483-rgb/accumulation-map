@@ -1,0 +1,759 @@
+{
+ "paper_id": "10.1016/j.jfineco.2026.104240",
+ "title": "Hurdle rate buffers and bargaining power in asset acquisition",
+ "journal": "JFE",
+ "year": 2026,
+ "field": "finance",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "delegated bargaining theory",
+  "commitment theory",
+  "Nash bargaining",
+  "Tullock contest / rent-seeking theory",
+  "capital budgeting theory"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "elevated_hurdle_rate",
+      "relation": "increases",
+      "to": "commitment_to_hurdle_rate_benchmark",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "commitment_to_hurdle_rate_benchmark",
+      "relation": "increases",
+      "to": "excess_mass_of_realized_returns_above_hurdle_rate",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "commitment_to_hurdle_rate_benchmark"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "firms target the cost of capital (WACC) rather than the hurdle rate"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hurdle_rate_buffer",
+      "relation": "increases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "decreases",
+      "to": "acquisition_premium",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hurdle_rate_buffer",
+      "relation": "increases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "increases",
+      "to": "bidder_cumulative_abnormal_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [
+    {
+     "construct": "bidder_ex_ante_bargaining_power",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "bargaining_power",
+     "moderated_from": "hurdle_rate_buffer",
+     "moderated_to": "bidder_cumulative_abnormal_return",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3a"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquirers that use elevated hurdle rates are simply better at evaluating/picking targets (buffer is a project-selection proxy, so it should raise combined synergy gains)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "hurdle_rate_buffer",
+      "relation": "increases",
+      "to": "target_evaluation_ability",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_evaluation_ability",
+      "relation": "increases",
+      "to": "combined_firm_synergy_gains",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_evaluation_ability"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "supplier_concentration",
+      "relation": "decreases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "decreases",
+      "to": "hurdle_rate_buffer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [
+    {
+     "construct": "asset_redeployability",
+     "type": "boundary_condition",
+     "effect": "weakens",
+     "mechanism": "bargaining_power",
+     "moderated_from": "bargaining_power",
+     "moderated_to": "hurdle_rate_buffer",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P5a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "customer_concentration",
+      "relation": "decreases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "decreases",
+      "to": "hurdle_rate_buffer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "supplier_relative_markup",
+      "relation": "decreases",
+      "to": "bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bargaining_power",
+      "relation": "decreases",
+      "to": "hurdle_rate_buffer",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (CFO survey firms with wide variation across industry; M&A deals across Fama-French 49 industries)",
+  "country_region": "[withheld: wording matches the source]",
+  "time_period": "2011q1-2022q2 (CFO surveys; a supplementary 2024q4 survey also used)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "CFO survey main sample N=1,232; M&A deal main analysis N=736"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)",
+    "category": "survey",
+    "kind": "primary_collected"
+   },
+   {
+    "name": "Refinitiv's SDC Platinum M&A database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "fairness opinion (maximum and minimum discount rates, following Dessaint et al., 2021)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "Compustat quarterly",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "FactSet Revere (customer–supplier relationships)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "other",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Excess ROIC",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat quarterly"
+    },
+    "key_ivs": [
+     {
+      "name": "hurdle rate",
+      "measure": "CFO-reported hurdle rate, linearly interpolated between two consecutive appearances in Compustat",
+      "source": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)"
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Table 2, Panel A — Deal premium (columns 1–2)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Premium",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Refinitiv's SDC Platinum M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Implied buffer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "fairness opinion (maximum and minimum discount rates, following Dessaint et al., 2021)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target's predicted WACC",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "bidder/target log market capitalization in year prior to bid",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "bidder/target market-to-book",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "bidder/target return on assets",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "bidder/target leverage",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "bidder/target cash/assets",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "toehold (percent owned by bidder before bid)",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "deal type indicators (cash, stock, mixed)",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "hostile",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "same industry",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "tender offer",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "poison",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "target staggered board structure (Guernsey et al., 2025)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "target dual-class share structure at IPO (Loughran and Ritter, 2004)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     },
+     {
+      "name": "Bidder/target Industry FE (Fama-French 49)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel A — Bidder CAR (columns 3–4)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "public-to-public M&A deals with fairness opinion discount rates",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Refinitiv's SDC Platinum M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Implied buffer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "fairness opinion (maximum and minimum discount rates, following Dessaint et al., 2021)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "target's predicted WACC",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "bidder/target log market capitalization, market-to-book, return on assets, leverage, cash/assets",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "target staggered board structure (Guernsey et al., 2025)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "target dual-class share structure at IPO (Loughran and Ritter, 2004)",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     },
+     {
+      "name": "Bidder/target Industry FE (Fama-French 49)",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B — Target CAR (columns 1–2)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "public-to-public M&A deals with fairness opinion discount rates",
+    "dv": {
+     "name": "Target CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Refinitiv's SDC Platinum M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Implied buffer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "fairness opinion (maximum and minimum discount rates, following Dessaint et al., 2021)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bidder/target controls (log market cap, market-to-book, ROA, leverage, cash/assets)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "deal controls (relative size, toehold, deal type, hostile, same industry, tender offer, poison)",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "target staggered board; target dual-class share structure",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Year FE; Bidder/target Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B — Combined CAR (columns 3–4)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "public-to-public M&A deals with fairness opinion discount rates",
+    "dv": {
+     "name": "Combined CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Refinitiv's SDC Platinum M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Implied buffer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "fairness opinion (maximum and minimum discount rates, following Dessaint et al., 2021)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bidder/target controls (log market cap, market-to-book, ROA, leverage, cash/assets)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "deal controls (relative size, toehold, deal type, hostile, same industry, tender offer, poison)",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "target staggered board; target dual-class share structure",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Year FE; Bidder/target Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 2, Panel B — Bidder Share $CAR (columns 5–6)",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "subsample of deals in which both bidder and target abnormal returns are positive",
+    "dv": {
+     "name": "Bidder Share $CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Refinitiv's SDC Platinum M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Implied buffer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "fairness opinion (maximum and minimum discount rates, following Dessaint et al., 2021)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "bidder/target controls (log market cap, market-to-book, ROA, leverage, cash/assets)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "deal controls (relative size, toehold, deal type, hostile, same industry, tender offer, poison)",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "target staggered board; target dual-class share structure",
+      "source": "hand_collected"
+     },
+     {
+      "name": "Year FE; Bidder/target Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "public-public M&A deals where both bidder and target WACC are observed (746 observations)",
+    "dv": {
+     "name": "Bidder CAR",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Refinitiv's SDC Platinum M&A database"
+    },
+    "key_ivs": [
+     {
+      "name": "Implied buffer",
+      "measure": "[withheld: wording matches the source]",
+      "source": "fairness opinion (maximum and minimum discount rates, following Dessaint et al., 2021)"
+     },
+     {
+      "name": "Buffer × 1[Bidder WACC > Target WACC]",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Compustat quarterly"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Target WACC (standardized to zero mean, unit variance)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "Bidder WACC (standardized to zero mean, unit variance)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "bidder/target controls (log market cap, market-to-book, ROA, leverage, cash/assets)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "deal controls (relative size, toehold, deal type, hostile, same industry, tender offer, poison)",
+      "source": "Refinitiv's SDC Platinum M&A database"
+     },
+     {
+      "name": "Year FE",
+      "source": ""
+     },
+     {
+      "name": "Bidder & Target Industry FE; Bidder × Target Industry FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 — The buffer and supplier concentration",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "CFO survey firms matched to supplier concentration by industry (1066 observations)",
+    "dv": {
+     "name": "Buffer (extensive and intensive margin)",
+     "measure": "extensive margin = indicator for buffer > 0; intensive margin = buffer size (hurdle rate minus WACC)",
+     "source": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)"
+    },
+    "key_ivs": [
+     {
+      "name": "Supplier concentration",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere (customer–supplier relationships)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Cost of capital",
+      "source": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)"
+     },
+     {
+      "name": "Beta volatility (standardized)",
+      "source": ""
+     },
+     {
+      "name": "Sales volatility (standardized)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "Survey quarter FE",
+      "source": ""
+     },
+     {
+      "name": "Size FE",
+      "source": ""
+     },
+     {
+      "name": "Ownership FE",
+      "source": ""
+     },
+     {
+      "name": "Credit rating FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5 — The buffer and customer concentration",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "CFO survey firms matched to customer concentration by industry (1066 observations)",
+    "dv": {
+     "name": "Buffer (extensive and intensive margin)",
+     "measure": "extensive margin = indicator for buffer > 0; intensive margin = buffer size",
+     "source": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)"
+    },
+    "key_ivs": [
+     {
+      "name": "Customer concentration",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere (customer–supplier relationships)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Cost of capital",
+      "source": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)"
+     },
+     {
+      "name": "Beta volatility (standardized)",
+      "source": ""
+     },
+     {
+      "name": "Sales volatility (standardized)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "Survey quarter FE; Size FE; Ownership FE; Credit rating FE",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "CFO survey firms in non-consumer-facing industries matched to supplier relative markup (1066 observations)",
+    "dv": {
+     "name": "Buffer (extensive and intensive margin)",
+     "measure": "extensive margin = indicator for buffer > 0; intensive margin = buffer size",
+     "source": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)"
+    },
+    "key_ivs": [
+     {
+      "name": "Supplier relative markup",
+      "measure": "[withheld: wording matches the source]",
+      "source": "FactSet Revere (customer–supplier relationships)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Cost of capital",
+      "source": "CFO survey (six CFO surveys: 2011q1, 2012q2, 2017q2, 2017q3, 2019q1, 2022q2)"
+     },
+     {
+      "name": "Beta volatility (standardized)",
+      "source": ""
+     },
+     {
+      "name": "Sales volatility (standardized)",
+      "source": "Compustat quarterly"
+     },
+     {
+      "name": "Survey quarter FE; Size FE; Ownership FE; Credit rating FE",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "other",
+   "section": "conclusion",
+   "constructs": [
+    "project development",
+    "capital budgeting evaluation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

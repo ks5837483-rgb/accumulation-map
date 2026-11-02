@@ -1,0 +1,736 @@
+{
+ "paper_id": "10.1287_mnsc.2014.2065",
+ "title": "Do Stock Analysts Influence Merger Completion? An Examination of Postmerger Announcement Recommendations",
+ "journal": "MNSC",
+ "year": 2015,
+ "field": "management_science",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "market feedback theory",
+  "misvaluation theory of mergers",
+  "information economics",
+  "behavioral finance"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "favorable_acquirer_recommendations",
+      "relation": "increases",
+      "to": "perceived_acquirer_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_acquirer_value",
+      "relation": "increases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "favorable_acquirer_recommendations",
+      "relation": "increases",
+      "to": "perceived_merger_benefits_to_acquirer",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_merger_benefits_to_acquirer",
+      "relation": "increases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_acquirer_value",
+    "perceived_merger_benefits_to_acquirer"
+   ],
+   "moderators": [
+    {
+     "construct": "method_of_payment",
+     "type": "boundary_condition",
+     "effect": "strengthens",
+     "mechanism": "perceived_acquirer_value",
+     "moderated_from": "favorable_acquirer_recommendations",
+     "moderated_to": "merger_completion",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "P1"
+    },
+    {
+     "construct": "relative_target_size",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "perceived_merger_benefits_to_acquirer",
+     "moderated_from": "favorable_acquirer_recommendations",
+     "moderated_to": "merger_completion",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P1"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "feedback explanation (acquirer treats PMARs as feedback signals about its merger gains)",
+    "information about the value created by the merger drives both completion and PMARs (omitted variable)",
+    "reverse causality / no exogenous variation in PMARs (endogeneity)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "favorable_target_recommendations",
+      "relation": "increases",
+      "to": "perceived_target_standalone_value",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "perceived_target_standalone_value",
+      "relation": "decreases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "perceived_target_standalone_value"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "greater likelihood of a competing bid lowers completion and keeps target recommendations favorable"
+   ]
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "favorable_recommendations",
+      "relation": "increases",
+      "to": "investor_overreaction",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "investor_overreaction",
+      "relation": "decreases",
+      "to": "postresolution_stock_returns",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "investor_overreaction"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "PMARs are informative signals the market underimpounds (predicting favorable firms outperform)"
+   ]
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "acquirer_analyst_coverage",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_analyst_coverage",
+      "relation": "increases",
+      "to": "target_outside_options",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_outside_options",
+      "relation": "decreases",
+      "to": "merger_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_outside_options"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "[withheld: wording matches the source]",
+  "country_region": "United States",
+  "time_period": "1993-2008 (excluding 2002)",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "5,381 announced mergers (4,625 completed, 756 terminated); main multivariate analyses use 3,601 deals with full data"
+ },
+ "measures": {
+  "primary_data": true,
+  "data_sources": [
+   {
+    "name": "Thomson/SDC Mergers and Acquisitions database (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S database (Thomson Financial)",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Center for Research in Security Prices (CRSP)",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Thomson Reuters' Thomson ONE database",
+    "category": "thomson_refinitiv",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Security Exchange Commission (SEC) filings",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "LexisNexis",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Factiva",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Dow Jones Newswire",
+    "category": "other",
+    "kind": "other"
+   },
+   {
+    "name": "Hand-collected data (termination reasons, acquirer and target advisor fees)",
+    "category": "hand_collected",
+    "kind": "primary_collected"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model 1 (probability of completion, baseline logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Merger completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Favorable_Acq_Recs",
+      "measure": "the number of favorable PMARs (postmerger announcement recommendations) for the acquirer",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Unfavorable_Acq_Recs",
+      "measure": "the number of unfavorable PMARs for the acquirer",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Favorable_Tgt_Recs",
+      "measure": "the number of favorable PMARs for the target",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Unfavorable_Tgt_Recs",
+      "measure": "the number of unfavorable PMARs for the target",
+      "source": "I/B/E/S database (Thomson Financial)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Num_Acq_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Num_Tgt_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 2 (probability of completion, with additional controls)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Merger completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Favorable_Acq_Recs",
+      "measure": "the number of favorable PMARs for the acquirer",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Unfavorable_Acq_Recs",
+      "measure": "the number of unfavorable PMARs for the acquirer",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Favorable_Tgt_Recs",
+      "measure": "the number of favorable PMARs for the target",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Unfavorable_Tgt_Recs",
+      "measure": "the number of unfavorable PMARs for the target",
+      "source": "I/B/E/S database (Thomson Financial)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Num_Acq_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Num_Tgt_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Acquirer_Advisors (number of acquirer advisors)",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Target_Advisors (number of target advisors)",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Merger_Program",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Days_to_Resolution",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Log_Transaction_Value (deal size)",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "100%_Cash",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Cash_Tender_Offer",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "100%_Stock",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Acq_Run-up",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Acq_Ann_Return",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Tgt_Run-up",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Tgt_Ann_Return",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Average recommendation levels for acquirers and targets",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Total number of preannouncement and PMARs (nondirectional)",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Whether the same analyst covers both acquirer and target",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Fixed or floating collar indicators",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Horizontal deal indicator",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model 3 (probability of completion, base model with advisor fees)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "[withheld: wording matches the source]",
+    "dv": {
+     "name": "Merger completion",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Favorable_Acq_Recs",
+      "measure": "the number of favorable PMARs for the acquirer",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Unfavorable_Acq_Recs",
+      "measure": "the number of unfavorable PMARs for the acquirer",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Favorable_Tgt_Recs",
+      "measure": "the number of favorable PMARs for the target",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Unfavorable_Tgt_Recs",
+      "measure": "the number of unfavorable PMARs for the target",
+      "source": "I/B/E/S database (Thomson Financial)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Num_Acq_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Num_Tgt_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Acquirer_Advisors",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Target_Advisors",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Merger_Program",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Days_to_Resolution",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Log_Transaction_Value",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "100%_Cash",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Cash_Tender_Offer",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "100%_Stock",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Acq_Run-up",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Acq_Ann_Return",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Tgt_Run-up",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Tgt_Ann_Return",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Acq_Fee (acquirer advisor fee)",
+      "source": "Hand-collected data (termination reasons, acquirer and target advisor fees)"
+     },
+     {
+      "name": "Tgt_Fee (target advisor fee)",
+      "source": "Hand-collected data (termination reasons, acquirer and target advisor fees)"
+     },
+     {
+      "name": "Additional controls (recommendation levels, nondirectional PMAR counts, same-analyst indicator, collar/horizontal indicators)",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4, Instrumental Variables Approach (two-stage least squares / linear probability model)",
+    "hypotheses": [],
+    "identification": "IV",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "3,601 deals",
+    "dv": {
+     "name": "Merger completion (linear probability)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+    },
+    "key_ivs": [
+     {
+      "name": "Predicted Favorable_Acq_Recs",
+      "measure": "the predicted number of favorable acquirer PMARs from the first stage",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Predicted Unfavorable_Acq_Recs",
+      "measure": "the predicted number of unfavorable acquirer PMARs from the first stage",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Predicted Favorable_Tgt_Recs",
+      "measure": "the predicted number of favorable target PMARs from the first stage",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Predicted Unfavorable_Tgt_Recs",
+      "measure": "the predicted number of unfavorable target PMARs from the first stage",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "AA (instrument)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "BA (instrument)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "I/B/E/S database (Thomson Financial)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Num_Acq_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Num_Tgt_Analysts",
+      "source": "I/B/E/S database (Thomson Financial)"
+     },
+     {
+      "name": "Acquirer_Advisors",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Target_Advisors",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Merger_Program",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Days_to_Resolution",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Log_Transaction_Value",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "100%_Cash",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Cash_Tender_Offer",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "100%_Stock",
+      "source": "Thomson/SDC Mergers and Acquisitions database (SDC)"
+     },
+     {
+      "name": "Acq_Run-up",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Acq_Ann_Return",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Tgt_Run-up",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Tgt_Ann_Return",
+      "source": "Center for Research in Security Prices (CRSP)"
+     },
+     {
+      "name": "Acq_Fee",
+      "source": "Hand-collected data (termination reasons, acquirer and target advisor fees)"
+     },
+     {
+      "name": "Tgt_Fee",
+      "source": "Hand-collected data (termination reasons, acquirer and target advisor fees)"
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "unclassified terminations",
+    "target"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "valuation explanation",
+    "feedback explanation"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "noncausal alternative explanations",
+    "pmars",
+    "merger outcomes"
+   ],
+   "mechanism_named": "noncausal alternative explanations",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "pmars",
+    "information content"
+   ],
+   "mechanism_named": "information content of PMARs",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

@@ -1,0 +1,741 @@
+{
+ "paper_id": "10.1111_1911-3846.12508",
+ "title": "Capitalization of In‐Process Research and Development under SFAS 141R and Information Asymmetry",
+ "journal": "CAR",
+ "year": 2019,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "investors",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "disclosure theory",
+  "earnings management"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ipr_and_d_capitalization",
+      "relation": "increases",
+      "to": "disclosure_of_private_information",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "disclosure_of_private_information",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "ipr_and_d_capitalization",
+      "relation": "increases",
+      "to": "opportunistic_reporting_discretion",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "opportunistic_reporting_discretion",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "disclosure_of_private_information",
+    "opportunistic_reporting_discretion"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "[withheld: wording matches the source]"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ipr_and_d_capitalization",
+      "relation": "increases",
+      "to": "incentive_to_understate_ipr_and_d",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "incentive_to_understate_ipr_and_d",
+      "relation": "increases",
+      "to": "goodwill_allocation",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "incentive_to_understate_ipr_and_d"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "goodwill_impairment_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ipr_and_d_capitalization",
+      "relation": "increases",
+      "to": "goodwill_overstatement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "goodwill_overstatement",
+      "relation": "increases",
+      "to": "future_goodwill_impairment",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "goodwill_overstatement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "future_profitability_prediction",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "mixed",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ipr_and_d_capitalization",
+      "relation": "increases",
+      "to": "ipr_and_d_understatement",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "ipr_and_d_understatement",
+      "relation": "increases",
+      "to": "future_profitability",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "ipr_and_d_understatement"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (U.S. firms making 100% share acquisitions, spanning a range of industries)",
+  "country_region": "United States",
+  "time_period": "2006-2011",
+  "sample_description": "Firm-years in which a firm acquired 100 percent of another firm's shares outstanding (100% share acquisitions), split into IPR&D acquirers vs. non-IPR&D acquirers; firms identified using SDC Platinum, IPR&D amounts from COMPUSTAT and hand-collected from 10-Ks; firm-years without COMPUSTAT financial data, CRSP stock data, or I/B/E/S analyst forecasts excluded",
+  "sample_size": "3,501 firm-year observations (final full sample)"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "SDC Platinum database (Securities Data Corporation)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "I/B/E/S",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10-Ks (hand-collected capitalized IPR&D amounts)",
+    "category": "hand_collected",
+    "kind": "filings"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "firm-years with 100% share acquisitions in 2006-2007 (cols 1-2, n=334) or 2007-2008 (cols 3-4, n=194)",
+    "dv": {
+     "name": "Spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "I2007 / I2008",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "IPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT (pre); hand-collected 10-Ks (post)"
+     },
+     {
+      "name": "LnIPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT (pre); hand-collected 10-Ks (post)"
+     },
+     {
+      "name": "I2007xIPR&D / I2008xIPR&D (and LnIPR&D interactions)",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "matched sample of 306 IPR&D/non-IPR&D pairs matched on Size, Year, and Industry (612 firm-year obs)",
+    "dv": {
+     "name": "Spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     },
+     {
+      "name": "IPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT (pre); hand-collected 10-Ks (post)"
+     },
+     {
+      "name": "LnIPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT (pre); hand-collected 10-Ks (post)"
+     },
+     {
+      "name": "Post x IPR&D / Post x LnIPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "CRSP/COMPUSTAT"
+     },
+     {
+      "name": "RetVol",
+      "source": "CRSP"
+     },
+     {
+      "name": "Price",
+      "source": "CRSP"
+     },
+     {
+      "name": "#Analysts",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "AF Disp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "Exchange",
+      "source": "CRSP"
+     },
+     {
+      "name": "#Acquisitions",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Loss",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Industry indicators",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, cols (3)-(4) - With additional controls (Total Purchase Price, Cash Payment)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "matched sample restricted to obs with SDC transaction data (374 firm-year obs)",
+    "dv": {
+     "name": "Spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "indicator equal to one for post-SFAS 141R firm-years",
+      "source": ""
+     },
+     {
+      "name": "IPR&D / LnIPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; hand-collected 10-Ks"
+     },
+     {
+      "name": "Post x IPR&D / Post x LnIPR&D",
+      "measure": "DiD interaction isolating the incremental SFAS 141R effect for IPR&D acquirers",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "CRSP/COMPUSTAT"
+     },
+     {
+      "name": "RetVol",
+      "source": "CRSP"
+     },
+     {
+      "name": "Price",
+      "source": "CRSP"
+     },
+     {
+      "name": "#Analysts",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "AF Disp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "Exchange",
+      "source": "CRSP"
+     },
+     {
+      "name": "#Acquisitions",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Loss",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Total Purchase Price",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash Payment",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Industry indicators",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 4, cols (5)-(6) - Excluding 2008 and 2009 (financial-crisis robustness)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "matched sample excluding 2008-2009 observations (496 firm-year obs)",
+    "dv": {
+     "name": "Spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "indicator equal to one for post-SFAS 141R firm-years",
+      "source": ""
+     },
+     {
+      "name": "IPR&D / LnIPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; hand-collected 10-Ks"
+     },
+     {
+      "name": "Post x IPR&D / Post x LnIPR&D",
+      "measure": "DiD interaction isolating the incremental SFAS 141R effect for IPR&D acquirers",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "CRSP/COMPUSTAT"
+     },
+     {
+      "name": "RetVol",
+      "source": "CRSP"
+     },
+     {
+      "name": "Price",
+      "source": "CRSP"
+     },
+     {
+      "name": "#Analysts",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "AF Disp",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Volume",
+      "source": "CRSP"
+     },
+     {
+      "name": "Exchange",
+      "source": "CRSP"
+     },
+     {
+      "name": "#Acquisitions",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Loss",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Industry indicators",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Two-stage self-selection correction (Heckman inverse-Mills / fitted-LnIPR&D IV robustness for H1)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "Heckman",
+    "shock_or_instrument": "[withheld: wording matches the source]",
+    "sample": "matched sample (results reported in online Appendix)",
+    "dv": {
+     "name": "Spread",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x IPR&D / Post x LnIPR&D",
+      "measure": "DiD interaction; second stage adds the inverse Mills ratio (eq. 1) or replaces LnIPR&D with its first-stage fitted value (eq. 2)",
+      "source": ""
+     },
+     {
+      "name": "Inverse Mills ratio",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Base spread controls (Size, RetVol, Price, #Analysts, AF Disp, Volume, Exchange, #Acquisitions, Loss, industry)",
+      "source": "CRSP/COMPUSTAT/I-B-E-S/SDC"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "matched sample, 572 firm-year obs (348 with additional controls)",
+    "dv": {
+     "name": "Lead AF Disp",
+     "measure": "[withheld: wording matches the source]",
+     "source": "I/B/E/S"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "indicator equal to one for post-SFAS 141R firm-years",
+      "source": ""
+     },
+     {
+      "name": "IPR&D / LnIPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; hand-collected 10-Ks"
+     },
+     {
+      "name": "Post x IPR&D / Post x LnIPR&D",
+      "measure": "DiD interaction isolating the incremental SFAS 141R effect on forecast dispersion for IPR&D acquirers",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Size",
+      "source": "CRSP/COMPUSTAT"
+     },
+     {
+      "name": "Std EPS",
+      "source": "COMPUSTAT/I-B-E-S"
+     },
+     {
+      "name": "#Analysts",
+      "source": "I/B/E/S"
+     },
+     {
+      "name": "Exchange",
+      "source": "CRSP"
+     },
+     {
+      "name": "Loss",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "#Acquisitions",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Total Purchase Price (cols 3-4)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Cash Payment (cols 3-4)",
+      "source": "SDC Platinum"
+     },
+     {
+      "name": "Industry indicators",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 5, Panel B - Effect of SFAS 141R on the FERC (future earnings response coefficient)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "matched sample, 485 firm-year obs",
+    "dv": {
+     "name": "Returnt+1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Post x IPR&D x EPSt+2 / Post x LnIPR&D x EPSt+2",
+      "measure": "triple-interaction variables of interest capturing the extent to which year t+1 returns reflect information about year t+2 earnings for IPR&D acquirers post-SFAS 141R",
+      "source": ""
+     },
+     {
+      "name": "EPSt+1, EPSt+2, RETt+2 and their IPR&D/Post interactions",
+      "measure": "earnings-per-share and future-return terms interacted with Post, IPR&D, and LnIPR&D (FERC design)",
+      "source": "COMPUSTAT/CRSP"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Lower-order EPS and return terms (EPSt, EPSt+1, EPSt+2, RETt+2, Post, IPR&D interactions)",
+      "source": "COMPUSTAT/CRSP"
+     },
+     {
+      "name": "Industry indicators",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 6, Panels A & B - Mean differences in goodwill-to-total purchase price (GW/TPP) ratio",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "one-to-three matched sample (Panel A: full sample; Panel B: firms that made acquisitions in both pre- and post-141R periods)",
+    "dv": {
+     "name": "GW/TPP ratio",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC Platinum (TPP); COMPUSTAT / 10-Ks (goodwill)"
+    },
+    "key_ivs": [
+     {
+      "name": "IPR&D acquirer x post-SFAS 141R period",
+      "measure": "[withheld: wording matches the source]",
+      "source": ""
+     }
+    ],
+    "controls": []
+   },
+   {
+    "label": "Untabulated probit - probability of a subsequent goodwill impairment charge (implication of H2)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "",
+    "dv": {
+     "name": "Goodwill impairment indicator",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "indicator equal to one for post-SFAS 141R firm-years",
+      "source": ""
+     },
+     {
+      "name": "(Ln)IPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; hand-collected 10-Ks"
+     },
+     {
+      "name": "Post x (Ln)IPR&D",
+      "measure": "DiD interaction on the probability of a subsequent goodwill impairment",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "Industry indicators",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 7 - Effect of SFAS 141R on future profitability, ROAt+1 and CFOt+1 (eq. 5 & 6; implication of H2)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "SFAS 141R",
+    "sample": "",
+    "dv": {
+     "name": "ROAt+1 / CFOt+1",
+     "measure": "[withheld: wording matches the source]",
+     "source": "COMPUSTAT"
+    },
+    "key_ivs": [
+     {
+      "name": "Post",
+      "measure": "indicator equal to one for post-SFAS 141R firm-years",
+      "source": ""
+     },
+     {
+      "name": "IPR&D / LnIPR&D",
+      "measure": "[withheld: wording matches the source]",
+      "source": "COMPUSTAT; hand-collected 10-Ks"
+     },
+     {
+      "name": "Post x IPR&D / Post x LnIPR&D",
+      "measure": "DiD interaction isolating the incremental SFAS 141R effect on future profitability for IPR&D acquirers",
+      "source": ""
+     }
+    ],
+    "controls": [
+     {
+      "name": "CFO",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Accruals",
+      "source": "COMPUSTAT"
+     },
+     {
+      "name": "Industry indicators",
+      "source": "COMPUSTAT"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "GW/TPP",
+    "matched sample"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "limitations",
+   "constructs": [
+    "IPR&D",
+    "goodwill",
+    "strategic reporting behavior"
+   ],
+   "mechanism_named": "strategically classifying IPR&D\namounts as goodwill",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "reporting discretion",
+    "goodwill impairment",
+    "IPR&D"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

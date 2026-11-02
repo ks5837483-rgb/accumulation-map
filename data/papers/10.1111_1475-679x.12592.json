@@ -1,0 +1,1350 @@
+{
+ "paper_id": "10.1111_1475-679x.12592",
+ "title": "Does Access to Patent Information Help Technological Acquisitions? Evidence from Patent Library Openings",
+ "journal": "JAR",
+ "year": 2024,
+ "field": "accounting",
+ "selection": {
+  "evaluator": "both",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "information economics",
+  "information asymmetry",
+  "adverse selection"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "P1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "decreases",
+      "to": "information_frictions",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_frictions",
+      "relation": "decreases",
+      "to": "technological_acquisition_activity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_frictions"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causality: local demand for patent information drives library openings",
+    "results driven by unobserved shocks contemporaneous with library openings",
+    "libraries help local firms strategically develop innovation to become attractive targets (rather than aiding acquirers)"
+   ]
+  },
+  {
+   "hypothesis": "P2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "geographic_proximity",
+      "relation": "decreases",
+      "to": "information_search_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_search_costs",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_search_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "patent_library_opening",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_search_costs",
+     "moderated_from": "geographic_proximity",
+     "moderated_to": "acquisition_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P2"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "technological_proximity",
+      "relation": "decreases",
+      "to": "information_search_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_search_costs",
+      "relation": "decreases",
+      "to": "acquisition_likelihood",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_search_costs"
+   ],
+   "moderators": [
+    {
+     "construct": "patent_library_opening",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_search_costs",
+     "moderated_from": "technological_proximity",
+     "moderated_to": "acquisition_likelihood",
+     "role": "mechanism_probe",
+     "is_boundary_condition": false,
+     "source_hypothesis": "P3"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P4",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "decreases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "decreases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "decreases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "decreases",
+      "to": "deal_completion",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P5",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "synergy_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_gains",
+      "relation": "increases",
+      "to": "acquirer_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_gains"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P6",
+   "stated_direction": "nonsignificant",
+   "net_direction": "nonsignificant",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "deal_quality",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "deal_quality",
+      "relation": "increases",
+      "to": "target_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "decreases",
+      "to": "target_bargaining_power",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_bargaining_power",
+      "relation": "increases",
+      "to": "target_announcement_return",
+      "from_measured": false,
+      "to_measured": true,
+      "derived": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "deal_quality",
+    "target_bargaining_power"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P7",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "synergy_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_gains",
+      "relation": "increases",
+      "to": "combined_announcement_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_gains"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "higher CARs reflect enhanced local innovation activities (not better M&A matches)"
+   ]
+  },
+  {
+   "hypothesis": "P8",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "synergy_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_gains",
+      "relation": "increases",
+      "to": "postmerger_longterm_stock_return",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_gains"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P9",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "synergy_gains",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_gains",
+      "relation": "increases",
+      "to": "postmerger_operating_performance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_gains"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P10",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "synergy_creation",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "synergy_creation",
+      "relation": "increases",
+      "to": "innovation_output",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "synergy_creation"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "acquiring innovation is solely to preempt future competition (killer acquisitions), not for efficiency gains"
+   ]
+  },
+  {
+   "hypothesis": "P11",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "human_capital_synergy",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "human_capital_synergy",
+      "relation": "increases",
+      "to": "inventor_collaboration",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "human_capital_synergy"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P12",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "decreases",
+      "to": "information_gathering_costs",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_gathering_costs",
+      "relation": "decreases",
+      "to": "technological_complementarity",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_gathering_costs"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P13",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "bidder_awareness_of_target_technology",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "bidder_awareness_of_target_technology",
+      "relation": "increases",
+      "to": "cross_citation_of_target_patents",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "bidder_awareness_of_target_technology"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "P14",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "rejected",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "patent_library_opening",
+      "relation": "increases",
+      "to": "strategic_innovation_development",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "strategic_innovation_development",
+      "relation": "increases",
+      "to": "takeover_exposure",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "strategic_innovation_development"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "publicly traded innovative (technology/patent-holding) firms and innovative targets — technological M&As",
+  "country_region": "United States",
+  "time_period": "1985-1999",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "15,262 firm-years (baseline regression); 2,913 M&A deals in the deal-level pairing sample"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thomson Financial Securities Data Company (SDC)",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Compustat",
+    "category": "compustat",
+    "kind": "archival_database"
+   },
+   {
+    "name": "CRSP",
+    "category": "crsp",
+    "kind": "archival_database"
+   },
+   {
+    "name": "USPTO PatentsView",
+    "category": "patents",
+    "kind": "government_public"
+   },
+   {
+    "name": "Noah Stoffman's Web site (patent-to-firm identifiers)",
+    "category": "patents",
+    "kind": "archival_database"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "National Cancer Institute (county population data)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "Bureau of Economic Analysis (personal income data)",
+    "category": "census_gov",
+    "kind": "government_public"
+   },
+   {
+    "name": "LexisNexis (news articles verifying terminated deals)",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "10K and 10Q reports (web-scraped for historical headquarters)",
+    "category": "sec_edgar_filings",
+    "kind": "filings"
+   },
+   {
+    "name": "mapping file in Ewens, Peters, and Wang [2024] (SDC-GVKEY crosswalk)",
+    "category": "other",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table IA1: Determinants of Patent Library Openings (hazard model)",
+    "hypotheses": [],
+    "identification": "hazard_survival",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "county-level, reverse-causality/predictability test",
+    "dv": {
+     "name": "timing of patent library opening in a county",
+     "measure": "hazard of a patent library opening in a county (hazard ratio > 1 = faster opening)",
+     "source": "patent library lists"
+    },
+    "key_ivs": [
+     {
+      "name": "Ln(1+# of Patents)",
+      "measure": "natural log of one plus number of patents in the county",
+      "source": "USPTO PatentsView"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "natural log of one plus local M&A deals as acquirers",
+      "source": "SDC"
+     },
+     {
+      "name": "[withheld: wording matches the source]",
+      "measure": "natural log of one plus local M&A deals as targets",
+      "source": "SDC"
+     },
+     {
+      "name": "Same State Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Income Per Capita",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "Change in Unemployment Rate (%)",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "Change in # of Establishments (%)",
+      "source": "Bureau of Economic Analysis"
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "staggered patent depository library (PTDL) openings",
+    "sample": "all publicly traded innovative Compustat firms, 1985-1999, firm-year (N=15,262)",
+    "dv": {
+     "name": "Ln(1+# of M&A Deals)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Age)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Ln(Total Asset)",
+      "source": "Compustat"
+     },
+     {
+      "name": "RD/Asset",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash/Asset",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-Book ratio",
+      "source": "Compustat"
+     },
+     {
+      "name": "Sales Growth Rate",
+      "source": "Compustat"
+     },
+     {
+      "name": "NWC/Assets",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Ln(Population)",
+      "source": "National Cancer Institute"
+     },
+     {
+      "name": "Income Per Capita",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4: Dynamic Model — parallel-trends / leads-and-lags",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "staggered patent depository library (PTDL) openings",
+    "sample": "publicly traded innovative Compustat firms, 1985-1999, firm-year (N=15,262)",
+    "dv": {
+     "name": "Ln(1+# of M&A Deals)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library(<=-3)",
+      "measure": "indicator for sample years 3+ years prior to patent library opening",
+      "source": "patent library lists"
+     },
+     {
+      "name": "Pat Library(-2)",
+      "measure": "indicator for 2 years prior to opening",
+      "source": "patent library lists"
+     },
+     {
+      "name": "Pat Library(-1)",
+      "measure": "indicator for 1 year prior to opening",
+      "source": "patent library lists"
+     },
+     {
+      "name": "Pat Library(+1)",
+      "measure": "indicator for 1 year following opening",
+      "source": "patent library lists"
+     },
+     {
+      "name": "Pat Library(+2)",
+      "measure": "indicator for 2 years following opening",
+      "source": "patent library lists"
+     },
+     {
+      "name": "Pat Library(>=+3)",
+      "measure": "indicator for 3+ years following opening",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same firm-level controls as Table 3",
+      "source": "Compustat"
+     },
+     {
+      "name": "same county-level controls as Table 3",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "firm fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 5: Acquirer-Target Pairings — Geographical Proximity (conditional logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "matched deal-level sample (actual + up to 5 pseudo acquirer-target pairs), 2,913 deals, N=13,481",
+    "dv": {
+     "name": "Actual M&A Deal",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Geo Prox x Pat Library",
+      "measure": "interaction of geographical proximity and patent library presence",
+      "source": "SDC"
+     },
+     {
+      "name": "Geo Prox",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     },
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same acquirer firm controls as Table 3 (excl. matching covariates)",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 6: Acquirer-Target Pairings — Technological Proximity (conditional logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "matched deal-level sample (public innovative acquirers and innovative targets), N=13,481",
+    "dv": {
+     "name": "Actual M&A Deal",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Tech Prox x Pat Library",
+      "measure": "interaction of technological proximity and patent library presence",
+      "source": "USPTO PatentsView"
+     },
+     {
+      "name": "Tech Prox",
+      "measure": "[withheld: wording matches the source]",
+      "source": "USPTO PatentsView"
+     },
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "same acquirer firm controls as Table 3 (excl. matching covariates)",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 7: Likelihood of Deal Completion (logit)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "334 genuinely terminated deals stacked with 3,195 completed deals; deal-level, N=3,087 (terminations verified via LexisNexis)",
+    "dv": {
+     "name": "Completed Deal",
+     "measure": "[withheld: wording matches the source]",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Total Asset)",
+      "source": "Compustat"
+     },
+     {
+      "name": "Market-to-Book",
+      "source": "Compustat"
+     },
+     {
+      "name": "Return",
+      "source": "CRSP"
+     },
+     {
+      "name": "Sales Growth Rate",
+      "source": "Compustat"
+     },
+     {
+      "name": "Leverage",
+      "source": "Compustat"
+     },
+     {
+      "name": "ROA",
+      "source": "Compustat"
+     },
+     {
+      "name": "Cash/Asset",
+      "source": "Compustat"
+     },
+     {
+      "name": "RD/Asset",
+      "source": "Compustat"
+     },
+     {
+      "name": "Relative Size",
+      "source": "SDC"
+     },
+     {
+      "name": "All Cash Dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "High Tech Dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Diversify Dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Hostile Dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Challenge Dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Public Target Dummy",
+      "source": "SDC"
+     },
+     {
+      "name": "Ln(Population)",
+      "source": "National Cancer Institute"
+     },
+     {
+      "name": "Income Per Capita",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, col (1): Acquirer Announcement Returns (CARs[-3,+3])",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "completed innovative target acquisition deals, deal-level, N=2,798",
+    "dv": {
+     "name": "Acquirer CARs [-3,+3]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls (Ln(Population), Income Per Capita)",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal controls (Relative Size, All Cash, High Tech, Diversify, Hostile, Challenge, Public Target Dummy)",
+      "source": "SDC"
+     },
+     {
+      "name": "acquirer industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, col (2): Target Announcement Returns (CARs[-3,+3])",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "publicly traded targets only, deal-level, N=745",
+    "dv": {
+     "name": "Target CARs [-3,+3]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal controls",
+      "source": "SDC"
+     },
+     {
+      "name": "target firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "target industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, col (3): Combined Announcement Returns (CARs[-3,+3])",
+    "hypotheses": [],
+    "identification": "event_study",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "deals with both public acquirer and public target, deal-level, N=700",
+    "dv": {
+     "name": "Combined CARs [-3,+3]",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal controls",
+      "source": "SDC"
+     },
+     {
+      "name": "target firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "target industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, col (4): Acquirer Post-Merger Long-Term Stock Return (BHAR 5y)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "completed innovative target acquisition deals, deal-level, N=2,798",
+    "dv": {
+     "name": "Acquirer BHAR (5y)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "CRSP"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal controls",
+      "source": "SDC"
+     },
+     {
+      "name": "acquirer industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 8, col (5): Acquirer Post-Merger Operating Performance (AcqIndAdj ROA 5y)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "completed innovative target acquisition deals, deal-level, N=2,169",
+    "dv": {
+     "name": "AcqIndAdj ROA (5y)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Compustat"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal controls",
+      "source": "SDC"
+     },
+     {
+      "name": "acquirer industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 9: Post-Merger Innovation Activities (Treat x Post DiD)",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "deal-panel from 5 years before announcement to 5 years after completion, N=7,356",
+    "dv": {
+     "name": "[withheld: wording matches the source]",
+     "measure": "natural logarithm of one plus the sum of total patents (and citation-weighted patents) from acquirer and target pre-acquisition, or from the post-merger combined firm post-acquisition",
+     "source": "USPTO PatentsView"
+    },
+    "key_ivs": [
+     {
+      "name": "Treat x Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     },
+     {
+      "name": "Post",
+      "measure": "[withheld: wording matches the source]",
+      "source": "SDC"
+     }
+    ],
+    "controls": [
+     {
+      "name": "[withheld: wording matches the source]",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls (Ln(Population), Income Per Capita)",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 10: Post-Merger Co-Invention (human-capital mechanism)",
+    "hypotheses": [],
+    "identification": "OLS",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "completed innovative target acquisition deals, deal-level",
+    "dv": {
+     "name": "%Co-invented Pat / %Co-invented Cite",
+     "measure": "[withheld: wording matches the source]",
+     "source": "USPTO PatentsView"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "[withheld: wording matches the source]",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "acquirer firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer county controls",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "deal controls",
+      "source": "SDC"
+     },
+     {
+      "name": "target firm controls",
+      "source": "Compustat"
+     },
+     {
+      "name": "acquirer industry fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "[withheld: wording matches the source]",
+    "hypotheses": [],
+    "identification": "DiD",
+    "shock_or_instrument": "patent depository library (PTDL) openings",
+    "sample": "county-year observations for counties with at least one public firm headquartered",
+    "dv": {
+     "name": "Ln(1+# of Targets)",
+     "measure": "natural log of one plus the number of target firms acquired (innovative and/or all targets, by innovative and/or all acquirers)",
+     "source": "SDC"
+    },
+    "key_ivs": [
+     {
+      "name": "Pat Library",
+      "measure": "1 if the county has a patent library opening (lagged one year), 0 otherwise",
+      "source": "patent library lists"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Ln(Population)",
+      "source": "National Cancer Institute"
+     },
+     {
+      "name": "Income Per Capita",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "Unemployment Rate (%)",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "# of Establishments",
+      "source": "Bureau of Economic Analysis"
+     },
+     {
+      "name": "# of Patents",
+      "source": "USPTO PatentsView"
+     },
+     {
+      "name": "county fixed effects",
+      "source": ""
+     },
+     {
+      "name": "year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "publicly traded targets",
+    "target firms"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "pat library",
+    "target firms' stock returns",
+    "sample of public targets"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "external_validity",
+   "section": "discussion",
+   "constructs": [
+    "completed acquisitions",
+    "cross-citations",
+    "knowledge spillover"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

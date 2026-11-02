@@ -1,0 +1,445 @@
+{
+ "paper_id": "10.1177_014920630202800107",
+ "title": "Human Capital, Shared Expertise, and the Likelihood of Impasse in Corporate Acquisitions",
+ "journal": "JOM",
+ "year": 2002,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "resource-based view",
+  "information economics",
+  "human capital theory",
+  "absorptive capacity"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "target_human_capital_intensity",
+      "relation": "increases",
+      "to": "valuation_uncertainty",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "valuation_uncertainty",
+      "relation": "increases",
+      "to": "likelihood_of_impasse",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ],
+    [
+     {
+      "from": "target_human_capital_intensity",
+      "relation": "increases",
+      "to": "adverse_selection",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "adverse_selection",
+      "relation": "increases",
+      "to": "likelihood_of_impasse",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "valuation_uncertainty",
+    "adverse_selection"
+   ],
+   "moderators": [],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2a",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "related_expertise",
+      "relation": "increases",
+      "to": "target_resistance",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "target_resistance",
+      "relation": "increases",
+      "to": "likelihood_of_impasse",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "target_resistance"
+   ],
+   "moderators": [
+    {
+     "construct": "target_human_capital_intensity",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "information_dilemmas",
+     "moderated_from": "related_expertise",
+     "moderated_to": "likelihood_of_impasse",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2a"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H2b",
+   "stated_direction": "negative",
+   "net_direction": "negative",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "related_expertise",
+      "relation": "decreases",
+      "to": "information_dilemmas",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "information_dilemmas",
+      "relation": "increases",
+      "to": "likelihood_of_impasse",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_dilemmas"
+   ],
+   "moderators": [
+    {
+     "construct": "target_human_capital_intensity",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "information_dilemmas",
+     "moderated_from": "related_expertise",
+     "moderated_to": "likelihood_of_impasse",
+     "role": "mechanism_probe",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H2b"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (attempted full corporate acquisitions across industries, using industry-level human capital intensity)",
+  "country_region": "",
+  "time_period": "1988-1989",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "324"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "ADP's mergers and acquisitions database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   },
+   {
+    "name": "census data",
+    "category": "census_gov",
+    "kind": "government_public"
+   },
+   {
+    "name": "[withheld: wording matches the source]",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "COMPUSTAT",
+    "category": "compustat",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 3, Model A (controls only)",
+    "hypotheses": [],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Deal closing (p(close))",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ADP's mergers and acquisitions database"
+    },
+    "key_ivs": [],
+    "controls": [
+     {
+      "name": "Buyer experience",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Raider",
+      "source": "hand-coded from Walsh & Kosnik (1993) and 1980s hostile-acquisition history"
+     },
+     {
+      "name": "Buyer sales",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Premium (bid premium)",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Rival bidders",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Target sales",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Target sales growth",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model B (controls + main effects)",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Deal closing (p(close))",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ADP's mergers and acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "Industry human capital intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Unrelated expertise",
+      "measure": "[withheld: wording matches the source]",
+      "source": "census occupational data (Farjoun 1994 expertise-based industry profiles; Klavens 1990 relatedness measure)"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Buyer experience",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Raider",
+      "source": "hand-coded from Walsh & Kosnik (1993) and 1980s hostile-acquisition history"
+     },
+     {
+      "name": "Buyer sales",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Premium (bid premium)",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Rival bidders",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Target sales",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Target sales growth",
+      "source": "COMPUSTAT"
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Model C (controls + interaction)",
+    "hypotheses": [
+     "H2a",
+     "H2b"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Deal closing (p(close))",
+     "measure": "[withheld: wording matches the source]",
+     "source": "ADP's mergers and acquisitions database"
+    },
+    "key_ivs": [
+     {
+      "name": "Industry human capital intensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "[withheld: wording matches the source]"
+     },
+     {
+      "name": "Unrelated expertise",
+      "measure": "[withheld: wording matches the source]",
+      "source": "census occupational data (Farjoun 1994 expertise-based industry profiles; Klavens 1990 relatedness measure)"
+     },
+     {
+      "name": "Human capital x unrelated expertise (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "census data; NLSY; census occupational data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "Buyer experience",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Raider",
+      "source": "hand-coded from Walsh & Kosnik (1993) and 1980s hostile-acquisition history"
+     },
+     {
+      "name": "Buyer sales",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Premium (bid premium)",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Rival bidders",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Target sales",
+      "source": "ADP's mergers and acquisitions database"
+     },
+     {
+      "name": "Target sales growth",
+      "source": "COMPUSTAT"
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "human capital",
+    "related expertise",
+    "acquisitions that failed to close"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "human capital and related expertise",
+    "relation": "affects",
+    "to": "acquisitions that failed to close"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "human capital intensity",
+    "human capital"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "cooperative ventures",
+    "strategic capabilities",
+    "acquisitions"
+   ],
+   "mechanism_named": "measurement dilemmas",
+   "proposed_edge": {
+    "from": "cooperative ventures",
+    "relation": "affects",
+    "to": "strategic capabilities"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "human capital intensity",
+    "type of diversification",
+    "related diversification",
+    "related expertise"
+   ],
+   "mechanism_named": "contingency perspective of knowledge-based assets",
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "human capital intensity",
+    "on_path": [
+     "type of diversification",
+     "efficient"
+    ]
+   }
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "shared expertise",
+    "related expertise"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "industry-level human capital",
+    "target firm's human capital intensity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "industry-level human capital",
+    "target's human capital"
+   ],
+   "mechanism_named": "resource-based view",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}

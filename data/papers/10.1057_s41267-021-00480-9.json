@@ -1,0 +1,896 @@
+{
+ "paper_id": "10.1057_s41267-021-00480-9",
+ "title": "Taking chances? The effect of CEO risk propensity on firms’ risky internationalization decisions",
+ "journal": "JIBS",
+ "year": 2021,
+ "field": "strategy",
+ "selection": {
+  "evaluator": "firm",
+  "info_mechanism": "yes"
+ },
+ "primary_theories": [
+  "upper echelons theory",
+  "international entrepreneurship",
+  "behavioral consistency theory",
+  "uppsala internationalization model"
+ ],
+ "mechanism": [
+  {
+   "hypothesis": "H1",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_risk_propensity",
+      "relation": "increases",
+      "to": "firm_strategic_risk_taking",
+      "from_measured": true,
+      "to_measured": false
+     },
+     {
+      "from": "firm_strategic_risk_taking",
+      "relation": "increases",
+      "to": "internationalization",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "firm_strategic_risk_taking"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_board_relative_power",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "ceo_risk_propensity",
+     "moderated_to": "internationalization",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H4"
+    },
+    {
+     "construct": "firm_international_experience",
+     "type": "moderator",
+     "effect": "weakens",
+     "mechanism": "internationalization_risk",
+     "moderated_from": "ceo_risk_propensity",
+     "moderated_to": "internationalization",
+     "role": "competing_contingency",
+     "is_boundary_condition": true,
+     "source_hypothesis": "H7"
+    }
+   ],
+   "alternatives_addressed": "yes",
+   "rival_explanations": [
+    "reverse causation: firms’ internationalization drives their selection of CEOs with different risk propensities",
+    "firms’ prior international experience (a firm-level factor), rather than CEO risk propensity, drives internationalization"
+   ]
+  },
+  {
+   "hypothesis": "H2",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_risk_propensity",
+      "relation": "increases",
+      "to": "liability_of_foreignness",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "liability_of_foreignness",
+      "relation": "increases",
+      "to": "cultural_distance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "liability_of_foreignness"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_board_relative_power",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "ceo_risk_propensity",
+     "moderated_to": "cultural_distance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H5"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  },
+  {
+   "hypothesis": "H3",
+   "stated_direction": "positive",
+   "net_direction": "positive",
+   "support_status": "supported",
+   "validated": true,
+   "chains": [
+    [
+     {
+      "from": "ceo_risk_propensity",
+      "relation": "increases",
+      "to": "information_asymmetry",
+      "from_measured": true,
+      "to_measured": false,
+      "derived": true
+     },
+     {
+      "from": "information_asymmetry",
+      "relation": "increases",
+      "to": "acquisition_versus_alliance",
+      "from_measured": false,
+      "to_measured": true
+     }
+    ]
+   ],
+   "mechanisms": [
+    "information_asymmetry"
+   ],
+   "moderators": [
+    {
+     "construct": "ceo_board_relative_power",
+     "type": "moderator",
+     "effect": "strengthens",
+     "mechanism": "managerial_discretion",
+     "moderated_from": "ceo_risk_propensity",
+     "moderated_to": "acquisition_versus_alliance",
+     "role": "competing_contingency",
+     "is_boundary_condition": false,
+     "source_hypothesis": "H6"
+    }
+   ],
+   "alternatives_addressed": "no",
+   "rival_explanations": []
+  }
+ ],
+ "context": {
+  "industry_setting": "cross-industry (Norwegian firms across diverse industries incl. petroleum, manufacturing, and services)",
+  "country_region": "Norway",
+  "time_period": "2000-2013",
+  "sample_description": "[withheld: wording matches the source]",
+  "sample_size": "[withheld: wording matches the source]"
+ },
+ "measures": {
+  "primary_data": false,
+  "data_sources": [
+   {
+    "name": "Thompson–Reuters SDC Platinum database",
+    "category": "sdc",
+    "kind": "archival_database"
+   },
+   {
+    "name": "Statistics Norway (official administrative authority; individuals' assets, income, wealth, sociodemographic data)",
+    "category": "other_govt_db",
+    "kind": "government_public"
+   },
+   {
+    "name": "firms' financial, accounting, governance, and ownership data",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "cultural distance measures calculated by Berry, Guillén, and Zhou (2010), available through Wharton Resources",
+    "category": "other",
+    "kind": "archival_database"
+   },
+   {
+    "name": "LexisNexis Corporate Affiliate Database",
+    "category": "other_commercial_db",
+    "kind": "archival_database"
+   }
+  ],
+  "analyses": [
+   {
+    "label": "Table 2 - CEO risk propensity predicting internationalization",
+    "hypotheses": [
+     "H1"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Internationalization levels (acquisitions and alliances)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thompson–Reuters SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO risk propensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statistics Norway"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO married (civil status)",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO education",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO ownership",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO compensation",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO international exposure/experience",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "Log assets (firm size)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Company age",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Relative ROA (performance relative to peers)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log R&D (R&D intensity)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "ROA",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Leverage",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log PPE",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 1 - internationalization venue/location",
+    "hypotheses": [
+     "H2"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Log cultural distance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "cultural distance measures calculated by Berry, Guillén, and Zhou (2010), available through Wharton Resources"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO risk propensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statistics Norway"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO married (civil status)",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO education",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO ownership",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO compensation",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO international exposure/experience",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "Log assets (firm size)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Company age",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Relative ROA (performance relative to peers)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log R&D (R&D intensity)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "ROA",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Leverage",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log PPE",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 3, Column 2 - internationalization vehicle/entry mode (probit)",
+    "hypotheses": [
+     "H3"
+    ],
+    "identification": "logit_probit",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Prefer acquisition over alliance",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thompson–Reuters SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO risk propensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statistics Norway"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO married (civil status)",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO education",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO ownership",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO compensation",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO international exposure/experience",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "Log assets (firm size)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Company age",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Relative ROA (performance relative to peers)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log R&D (R&D intensity)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "ROA",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Leverage",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log PPE",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Table 4 - CEO/Board relative power moderation (Panels for H4-H6)",
+    "hypotheses": [
+     "H4",
+     "H5",
+     "H6"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Internationalization (levels, cultural distance, and acquisition-vs-alliance across panels)",
+     "measure": "the three internationalization DVs (internationalization levels; log cultural distance; prefer acquisition over alliance) re-estimated with the CEO power interaction",
+     "source": "Thompson–Reuters SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO risk propensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO risk propensity x CEO power (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "CEO power",
+      "measure": "three indicators used separately and as a composite index (0 to 3): (1) CEO/chair duality (1 = CEO is also chairman of the board), (2) Low board independence (1 = share of independent board members below the sample average), (3) Family CEO (1 = CEO is from the major family owner)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO married (civil status)",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO education",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO ownership",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO compensation",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO international exposure/experience",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "Log assets (firm size)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Company age",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Relative ROA (performance relative to peers)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log R&D (R&D intensity)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "ROA",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Leverage",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log PPE",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   },
+   {
+    "label": "Firm international experience moderation (Hypothesis 7)",
+    "hypotheses": [
+     "H7"
+    ],
+    "identification": "fixed_effects",
+    "shock_or_instrument": "",
+    "sample": "",
+    "dv": {
+     "name": "Internationalization levels (acquisitions and alliances)",
+     "measure": "[withheld: wording matches the source]",
+     "source": "Thompson–Reuters SDC Platinum database"
+    },
+    "key_ivs": [
+     {
+      "name": "CEO risk propensity",
+      "measure": "[withheld: wording matches the source]",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "Firm international experience",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LexisNexis Corporate Affiliate Database"
+     },
+     {
+      "name": "CEO risk propensity x Firm international experience (interaction)",
+      "measure": "[withheld: wording matches the source]",
+      "source": "LexisNexis Corporate Affiliate Database"
+     }
+    ],
+    "controls": [
+     {
+      "name": "CEO age",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO gender",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO married (civil status)",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO tenure",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO education",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO ownership",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO compensation",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "CEO international exposure/experience",
+      "source": "Statistics Norway"
+     },
+     {
+      "name": "Log assets (firm size)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Company age",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Relative ROA (performance relative to peers)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log R&D (R&D intensity)",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "ROA",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Leverage",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Log PPE",
+      "source": "firms' financial, accounting, governance, and ownership data"
+     },
+     {
+      "name": "Industry fixed effects",
+      "source": ""
+     },
+     {
+      "name": "Year fixed effects",
+      "source": ""
+     }
+    ]
+   }
+  ]
+ },
+ "future_directions": [
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "individual-level and/or firm-level factors",
+    "total firm internationalization risk",
+    "internationalization levels",
+    "locations",
+    "entry modes"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "individual-level and/or firm-level factors",
+    "relation": "affects",
+    "to": "total firm internationalization risk"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "ceo preferences",
+    "corporate strategic decisions",
+    "internationalization"
+   ],
+   "mechanism_named": "[withheld: wording matches the source]",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "method",
+   "section": "discussion",
+   "constructs": [
+    "individual-level factors",
+    "firm-level decisions"
+   ],
+   "mechanism_named": "process models",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "ceo risk propensity",
+    "intrapsychic processes",
+    "internationalization"
+   ],
+   "mechanism_named": "micro-level (i.e., intrapsychic) processes",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "opportunity recognition",
+    "opportunity beliefs",
+    "internationalization decisions"
+   ],
+   "mechanism_named": "opportunity recognition and opportunity beliefs",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ceo risk propensity",
+    "other related ceo characteristics",
+    "corporate decisions"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ceo risk propensity",
+    "relation": "unspecified",
+    "to": "other related ceo characteristics"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "mechanism",
+   "section": "discussion",
+   "constructs": [
+    "psychological attributes",
+    "intrapsychic processes",
+    "ceo risk propensity"
+   ],
+   "mechanism_named": "intrapsychic processes",
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "individual-level antecedents",
+    "internationalization",
+    "ceo-driven choices"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ceo-driven choices",
+    "relation": "affects",
+    "to": "consequences"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "internationalization choices",
+    "firm performance",
+    "ceo risk propensity internationalization relationship"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ceo risk propensity internationalization relationship",
+    "relation": "affects",
+    "to": "firm performance"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ceo-driven internationalization",
+    "firm-driven internationalization",
+    "performance differences",
+    "ceo risk propensity",
+    "prior firm experience"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ceo-driven versus firm-driven internationalization",
+    "relation": "affects",
+    "to": "performance differences"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "ceo risk propensity",
+    "internationalization exit",
+    "poor performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "ceo risk propensity",
+    "relation": "affects",
+    "to": "internationalization exit"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "untested_moderator",
+   "section": "discussion",
+   "constructs": [
+    "ceo/board power",
+    "internationalization decisions",
+    "poor performance"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": {
+    "construct": "ceo/board power",
+    "on_path": [
+     "internationalization decisions",
+     "endurance of decisions in the face of poor performance"
+    ]
+   }
+  },
+  {
+   "gap_type": "untested_relationship",
+   "section": "discussion",
+   "constructs": [
+    "internationalization choices",
+    "internationalization exit",
+    "location",
+    "mode of entry"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": {
+    "from": "[withheld: wording matches the source]",
+    "relation": "affects",
+    "to": "internationalization exit"
+   },
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "ceo risk propensity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  },
+  {
+   "gap_type": "measurement",
+   "section": "discussion",
+   "constructs": [
+    "ceo risk propensity"
+   ],
+   "mechanism_named": null,
+   "proposed_edge": null,
+   "proposed_moderator": null
+  }
+ ]
+}
